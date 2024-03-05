@@ -7,4 +7,5 @@ All information here is free for you to use at your own discretion
 ## Natives 
 Contains a list of generated natives for RedM, we all know Citizen.InvokeNative is horrible, These functions can be used as wrappers around the this.
 - If you don't want to have bloated files and don't mind not having method comments you can use the _Minified.lua version
+
 *Note they are not all guaranteed to work 100%*
