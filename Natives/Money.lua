@@ -6,13 +6,15 @@ function MoneyGetCashBalance()
 end
 
 
+
 --- 
 --- Native 0x466BC8769CF26A7A (_MONEY_DECREMENT_CASH_BALANCE)
 ---@param amount number
 ---@return boolean
 function MoneyDecrementCashBalance(amount)
-   return Citizen.InvokeNative(0x466BC8769CF26A7A,amount)
+    return Citizen.InvokeNative(0x466BC8769CF26A7A,amount)
 end
+
 
 
 --- 
@@ -21,8 +23,9 @@ end
 ---@param addReason hash
 ---@return boolean
 function MoneyIncrementCashBalance(amount,addReason)
-   return Citizen.InvokeNative(0xBC3422DC91667621,amount,addReason)
+    return Citizen.InvokeNative(0xBC3422DC91667621,amount,addReason)
 end
+
 
 
 --- 
@@ -33,14 +36,16 @@ function NetworkGetStringCashBalance()
 end
 
 
+
 --- 
 --- Native 0xAEC5F0119867E457 (_NETWORK_IS_MONEY_BALANCE_NOT_LESS_THAN)
 ---@param cashBalance number
 ---@param goldBarBalance number
 ---@return boolean
 function NetworkIsMoneyBalanceNotLessThan(cashBalance,goldBarBalance)
-   return Citizen.InvokeNative(0xAEC5F0119867E457,cashBalance,goldBarBalance)
+    return Citizen.InvokeNative(0xAEC5F0119867E457,cashBalance,goldBarBalance)
 end
+
 
 
 --- 
@@ -49,5 +54,6 @@ end
 function NetworkGetCashBalance()
    return Citizen.InvokeNative(0x8A67120DBC299525)
 end
+
 
 

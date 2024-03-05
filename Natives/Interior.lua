@@ -3,8 +3,9 @@
 ---@param interior interior
 ---@return boolean
 function IsValidInterior(interior)
-   return Citizen.InvokeNative(0x017C1B3159F79F6C,interior)
+    return Citizen.InvokeNative(0x017C1B3159F79F6C,interior)
 end
+
 
 
 --- 
@@ -17,13 +18,15 @@ function GetInteriorLocationAndNamehash(interior,position,nameHash)
 end
 
 
+
 --- 
 --- Native 0x3039BE60B3749716 (_GET_INTERIOR_MINIMAP_HASH)
 ---@param interior interior
 ---@return hash
 function GetInteriorMinimapHash(interior)
-   return Citizen.InvokeNative(0x3039BE60B3749716,interior)
+    return Citizen.InvokeNative(0x3039BE60B3749716,interior)
 end
+
 
 
 --- 
@@ -31,8 +34,9 @@ end
 ---@param interior interior
 ---@return vector3
 function GetInteriorPosition(interior)
-   return Citizen.InvokeNative(0x2C9746D0CA15BE1C,interior)
+    return Citizen.InvokeNative(0x2C9746D0CA15BE1C,interior)
 end
+
 
 
 --- 
@@ -43,12 +47,14 @@ function IsInteriorScene()
 end
 
 
+
 --- 
 --- Native 0xA1762D5BBFCA13A8 (CLEAR_ROOM_FOR_ENTITY)
 ---@param entity entity
 function ClearRoomForEntity(entity)
     Citizen.InvokeNative(0xA1762D5BBFCA13A8,entity)
 end
+
 
 
 --- 
@@ -61,13 +67,15 @@ function ForceRoomForEntity(entity,interior,roomHashKey)
 end
 
 
+
 --- Gets the room hash key from the room that the specified entity is in. Each room in every interior has a unique key. Returns 0 if the entity is outside.
 --- Native 0x076E46E0EB52AFC6 (GET_ROOM_KEY_FROM_ENTITY)
 ---@param entity entity
 ---@return hash
 function GetRoomKeyFromEntity(entity)
-   return Citizen.InvokeNative(0x076E46E0EB52AFC6,entity)
+    return Citizen.InvokeNative(0x076E46E0EB52AFC6,entity)
 end
+
 
 
 --- Seems to do the exact same as INTERIOR::GET_ROOM_KEY_FROM_ENTITY
@@ -75,8 +83,9 @@ end
 ---@param entity entity
 ---@return hash
 function GetKeyForEntityInRoom(entity)
-   return Citizen.InvokeNative(0x27D7B6F79E1F4603,entity)
+    return Citizen.InvokeNative(0x27D7B6F79E1F4603,entity)
 end
+
 
 
 --- Returns the handle of the interior that the entity is in. Returns 0 if outside.
@@ -84,8 +93,9 @@ end
 ---@param entity entity
 ---@return interior
 function GetInteriorFromEntity(entity)
-   return Citizen.InvokeNative(0xB417689857646F61,entity)
+    return Citizen.InvokeNative(0xB417689857646F61,entity)
 end
+
 
 
 --- 
@@ -97,6 +107,7 @@ function RetainEntityInInterior(entity,interior)
 end
 
 
+
 --- 
 --- Native 0x115B4AA8FB28AB43 (FORCE_ROOM_FOR_GAME_VIEWPORT)
 ---@param interiorID number
@@ -106,11 +117,13 @@ function ForceRoomForGameViewport(interiorID,roomHashKey)
 end
 
 
+
 --- 
 --- Native 0x951A049765E0D450 (CLEAR_ROOM_FOR_GAME_VIEWPORT)
 function ClearRoomForGameViewport()
     Citizen.InvokeNative(0x951A049765E0D450)
 end
+
 
 
 --- 
@@ -121,6 +134,7 @@ function GetInteriorFromPrimaryView()
 end
 
 
+
 --- 
 --- Native 0xCDD36C9E5C469070 (GET_INTERIOR_AT_COORDS)
 ---@param x float
@@ -128,8 +142,9 @@ end
 ---@param z float
 ---@return interior
 function GetInteriorAtCoords(x,y,z)
-   return Citizen.InvokeNative(0xCDD36C9E5C469070,x,y,z)
+    return Citizen.InvokeNative(0xCDD36C9E5C469070,x,y,z)
 end
+
 
 
 --- 
@@ -138,6 +153,7 @@ end
 function PinInteriorInMemory(interior)
     Citizen.InvokeNative(0xBD3D33EABF680168,interior)
 end
+
 
 
 --- Does something similar to INTERIOR::DISABLE_INTERIOR.
@@ -149,13 +165,15 @@ function UnpinInterior(interior)
 end
 
 
+
 --- 
 --- Native 0x941560D2D45DBFC8 (IS_INTERIOR_READY)
 ---@param interior interior
 ---@return boolean
 function IsInteriorReady(interior)
-   return Citizen.InvokeNative(0x941560D2D45DBFC8,interior)
+    return Citizen.InvokeNative(0x941560D2D45DBFC8,interior)
 end
+
 
 
 --- Actually returns void in IDA but the script header defines a BOOL return type
@@ -163,8 +181,9 @@ end
 ---@param interior interior
 ---@return boolean
 function SetInteriorInUse(interior)
-   return Citizen.InvokeNative(0xB5EF6FEF2DC9EBED,interior)
+    return Citizen.InvokeNative(0xB5EF6FEF2DC9EBED,interior)
 end
+
 
 
 --- 
@@ -175,8 +194,9 @@ end
 ---@param interiorType string
 ---@return interior
 function GetInteriorAtCoordsWithType(x,y,z,interiorType)
-   return Citizen.InvokeNative(0xAAD6170AA33B13C0,x,y,z,interiorType)
+    return Citizen.InvokeNative(0xAAD6170AA33B13C0,x,y,z,interiorType)
 end
+
 
 
 --- Hashed version of GET_INTERIOR_AT_COORDS_WITH_TYPE
@@ -187,8 +207,9 @@ end
 ---@param typeHash hash
 ---@return interior
 function GetInteriorAtCoordsWithTypehash(x,y,z,typeHash)
-   return Citizen.InvokeNative(0x3543AEA1816D1D2B,x,y,z,typeHash)
+    return Citizen.InvokeNative(0x3543AEA1816D1D2B,x,y,z,typeHash)
 end
+
 
 
 --- Returns true if the collision at the specified coords is marked as being outside (false if there's an interior)
@@ -198,8 +219,9 @@ end
 ---@param z float
 ---@return boolean
 function IsCollisionMarkedOutside(x,y,z)
-   return Citizen.InvokeNative(0xF291396B517E25B2,x,y,z)
+    return Citizen.InvokeNative(0xF291396B517E25B2,x,y,z)
 end
+
 
 
 --- 
@@ -209,8 +231,9 @@ end
 ---@param z float
 ---@return number
 function GetInteriorFromCollision(x,y,z)
-   return Citizen.InvokeNative(0x5054D1A5218FA696,x,y,z)
+    return Citizen.InvokeNative(0x5054D1A5218FA696,x,y,z)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/interiors/interior_sets
@@ -223,6 +246,7 @@ function ActivateInteriorEntitySet(interior,entitySetName,p2)
 end
 
 
+
 --- 
 --- Native 0x33B81A2C07A51FFF (DEACTIVATE_INTERIOR_ENTITY_SET)
 ---@param interior interior
@@ -233,14 +257,16 @@ function DeactivateInteriorEntitySet(interior,entitySetName,p2)
 end
 
 
+
 --- 
 --- Native 0x32810CA2125F5842 (IS_INTERIOR_ENTITY_SET_ACTIVE)
 ---@param interior interior
 ---@param entitySetName string
 ---@return boolean
 function IsInteriorEntitySetActive(interior,entitySetName)
-   return Citizen.InvokeNative(0x32810CA2125F5842,interior,entitySetName)
+    return Citizen.InvokeNative(0x32810CA2125F5842,interior,entitySetName)
 end
+
 
 
 --- 
@@ -249,8 +275,9 @@ end
 ---@param entitySetName string
 ---@return boolean
 function IsInteriorEntitySetValid(interior,entitySetName)
-   return Citizen.InvokeNative(0xD56FF170710FC826,interior,entitySetName)
+    return Citizen.InvokeNative(0xD56FF170710FC826,interior,entitySetName)
 end
+
 
 
 --- 
@@ -260,5 +287,6 @@ end
 function DisableInterior(interior,toggle)
     Citizen.InvokeNative(0x3C2B92A1A07D4FCE,interior,toggle)
 end
+
 
 

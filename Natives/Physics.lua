@@ -22,8 +22,9 @@
 ---@param p17 boolean
 ---@return number
 function AddRope(x,y,z,rotX,rotY,rotZ,length,ropeType,maxLength,minLength,p10,p11,p12,rigid,p14,breakWhenShot,unkPtr,p17)
-   return Citizen.InvokeNative(0xE832D760399EB220,x,y,z,rotX,rotY,rotZ,length,ropeType,maxLength,minLength,p10,p11,p12,rigid,p14,breakWhenShot,unkPtr,p17)
+    return Citizen.InvokeNative(0xE832D760399EB220,x,y,z,rotX,rotY,rotZ,length,ropeType,maxLength,minLength,p10,p11,p12,rigid,p14,breakWhenShot,unkPtr,p17)
 end
+
 
 
 --- 
@@ -41,8 +42,9 @@ end
 ---@param p10 float
 ---@return number
 function AddRope2(x,y,z,rotX,rotY,rotZ,length,ropeType,isNetworked,p9,p10)
-   return Citizen.InvokeNative(0xE9C59F6809373A99,x,y,z,rotX,rotY,rotZ,length,ropeType,isNetworked,p9,p10)
+    return Citizen.InvokeNative(0xE9C59F6809373A99,x,y,z,rotX,rotY,rotZ,length,ropeType,isNetworked,p9,p10)
 end
+
 
 
 --- 
@@ -53,6 +55,7 @@ function DeleteRope(ropeId)
 end
 
 
+
 --- 
 --- Native 0x6076213101A47B3B (_RELEASE_ROPE)
 ---@param ropeId number
@@ -61,12 +64,14 @@ function ReleaseRope(ropeId)
 end
 
 
+
 --- 
 --- Native 0xAA5D6B1888E4DB20 (DELETE_CHILD_ROPE)
 ---@param ropeId number
 function DeleteChildRope(ropeId)
     Citizen.InvokeNative(0xAA5D6B1888E4DB20,ropeId)
 end
+
 
 
 --- ropeTop returns top half of rope, ropeBottom returns bottom half of rope
@@ -83,13 +88,15 @@ function BreakRope(ropeId,ropeTop,ropeBottom,offsetX,offsetY,offsetZ,p6)
 end
 
 
+
 --- 
 --- Native 0xFD5448BE3111ED96 (DOES_ROPE_EXIST)
 ---@param ropeId number
 ---@return boolean
 function DoesRopeExist(ropeId)
-   return Citizen.InvokeNative(0xFD5448BE3111ED96,ropeId)
+    return Citizen.InvokeNative(0xFD5448BE3111ED96,ropeId)
 end
+
 
 
 --- 
@@ -97,8 +104,9 @@ end
 ---@param ropeId number
 ---@return boolean
 function IsRopeBroken(ropeId)
-   return Citizen.InvokeNative(0x79C2BEC82CFD7F7F,ropeId)
+    return Citizen.InvokeNative(0x79C2BEC82CFD7F7F,ropeId)
 end
+
 
 
 --- 
@@ -110,6 +118,7 @@ function RopeChangeVisibility(ropeId,visible)
 end
 
 
+
 --- 
 --- Native 0xF159A63806BB5BA8 (ROPE_DRAW_SHADOW_ENABLED)
 ---@param ropeId int*
@@ -119,13 +128,15 @@ function RopeDrawShadowEnabled(ropeId,toggle)
 end
 
 
+
 --- 
 --- Native 0x3655F544CD30F0B5 (GET_ROPE_VERTEX_COUNT)
 ---@param ropeId number
 ---@return number
 function GetRopeVertexCount(ropeId)
-   return Citizen.InvokeNative(0x3655F544CD30F0B5,ropeId)
+    return Citizen.InvokeNative(0x3655F544CD30F0B5,ropeId)
 end
+
 
 
 --- Attaches entity 1 to entity 2.
@@ -157,6 +168,7 @@ function AttachEntitiesToRope(ropeId,entity1,entity2,ent1X,ent1Y,ent1Z,ent2X,ent
 end
 
 
+
 --- Attaches a rope to two entities: binds two bones from two entities; one entity can be an object, i.e. a suspension point, the other an NPC bone
 --- Native 0x462FF2A432733A44 (_ATTACH_ENTITIES_TO_ROPE_2)
 ---@param ropeId number
@@ -173,6 +185,7 @@ end
 function AttachEntitiesToRope2(ropeId,entity1,entity2,ent1X,ent1Y,ent1Z,ent2X,ent2Y,ent2Z,boneName1,boneName2)
     Citizen.InvokeNative(0x462FF2A432733A44,ropeId,entity1,entity2,ent1X,ent1Y,ent1Z,ent2X,ent2Y,ent2Z,boneName1,boneName2)
 end
+
 
 
 --- 
@@ -193,14 +206,16 @@ function AttachEntitesToRope3(ropeId,entity1,entity2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0x9B4F7E3E4F9C77B3 (_IS_ROPE_ATTACHED_TO_ENTITY)
 ---@param ropeId number
 ---@param entity entity
 ---@return boolean
 function IsRopeAttachedToEntity(ropeId,entity)
-   return Citizen.InvokeNative(0x9B4F7E3E4F9C77B3,ropeId,entity)
+    return Citizen.InvokeNative(0x9B4F7E3E4F9C77B3,ropeId,entity)
 end
+
 
 
 --- 
@@ -210,6 +225,7 @@ end
 function DetachRopeFromEntity(ropeId,entity)
     Citizen.InvokeNative(0xBCF3026912A8647D,ropeId,entity)
 end
+
 
 
 --- 
@@ -223,12 +239,14 @@ function HitchHorse(horse,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x0348469DAA17576C (_UNHITCH_HORSE)
 ---@param horse number
 function UnhitchHorse(horse)
     Citizen.InvokeNative(0x0348469DAA17576C,horse)
 end
+
 
 
 --- 
@@ -238,6 +256,7 @@ end
 function RopeSetUpdateOrder(ropeId,p1)
     Citizen.InvokeNative(0xDC57A637A20006ED,ropeId,p1)
 end
+
 
 
 --- Combining this with ADD_ROPE enables winding
@@ -255,13 +274,15 @@ function CreateRopeWindingAbility(ropeId,p1,ropeModelType,length,p4)
 end
 
 
+
 --- 
 --- Native 0x21BB0FBD3E217C2D (GET_ROPE_LAST_VERTEX_COORD)
 ---@param ropeId number
 ---@return vector3
 function GetRopeLastVertexCoord(ropeId)
-   return Citizen.InvokeNative(0x21BB0FBD3E217C2D,ropeId)
+    return Citizen.InvokeNative(0x21BB0FBD3E217C2D,ropeId)
 end
+
 
 
 --- 
@@ -270,8 +291,9 @@ end
 ---@param vertex number
 ---@return vector3
 function GetRopeVertexCoord(ropeId,vertex)
-   return Citizen.InvokeNative(0xEA61CA8E80F09E4D,ropeId,vertex)
+    return Citizen.InvokeNative(0xEA61CA8E80F09E4D,ropeId,vertex)
 end
+
 
 
 --- 
@@ -282,12 +304,14 @@ function StartRopeWinding(ropeId)
 end
 
 
+
 --- 
 --- Native 0xCB2D4AB84A19AA7C (STOP_ROPE_WINDING)
 ---@param ropeId number
 function StopRopeWinding(ropeId)
     Citizen.InvokeNative(0xCB2D4AB84A19AA7C,ropeId)
 end
+
 
 
 --- 
@@ -298,12 +322,14 @@ function StartRopeUnwindingFront(ropeId)
 end
 
 
+
 --- 
 --- Native 0xFFF3A50779EFBBB3 (STOP_ROPE_UNWINDING_FRONT)
 ---@param ropeId number
 function StopRopeUnwindingFront(ropeId)
     Citizen.InvokeNative(0xFFF3A50779EFBBB3,ropeId)
 end
+
 
 
 --- 
@@ -314,6 +340,7 @@ function StartRopeUnwindingBack(ropeId)
 end
 
 
+
 --- 
 --- Native 0x10DAA76CB8A201A1 (_STOP_ROPE_UNWINDING_BACK)
 ---@param ropeId number
@@ -322,13 +349,15 @@ function StopRopeUnwindingBack(ropeId)
 end
 
 
+
 --- 
 --- Native 0x3D69537039F8D824 (_ROPE_GET_FORCED_LENGTH)
 ---@param ropeId number
 ---@return float
 function RopeGetForcedLength(ropeId)
-   return Citizen.InvokeNative(0x3D69537039F8D824,ropeId)
+    return Citizen.InvokeNative(0x3D69537039F8D824,ropeId)
 end
+
 
 
 --- Forces a rope to a certain length.
@@ -340,13 +369,15 @@ function RopeForceLength(ropeId,length)
 end
 
 
+
 --- 
 --- Native 0xEE360CFC80C8B2BC (_ROPE_GET_BREAKER_OF_ROPE)
 ---@param ropeId number
 ---@return player
 function RopeGetBreakerOfRope(ropeId)
-   return Citizen.InvokeNative(0xEE360CFC80C8B2BC,ropeId)
+    return Citizen.InvokeNative(0xEE360CFC80C8B2BC,ropeId)
 end
+
 
 
 --- 
@@ -359,12 +390,14 @@ function SetDamping(entity,vertex,value)
 end
 
 
+
 --- 
 --- Native 0x710311ADF0E20730 (ACTIVATE_PHYSICS)
 ---@param entity entity
 function ActivatePhysics(entity)
     Citizen.InvokeNative(0x710311ADF0E20730,entity)
 end
+
 
 
 --- 
@@ -385,6 +418,7 @@ function BreakEntityGlass(entity,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0x5CEC1A84620E7D5B (SET_DISABLE_BREAKING)
 ---@param object object
@@ -394,6 +428,7 @@ function SetDisableBreaking(object,toggle)
 end
 
 
+
 --- 
 --- Native 0x01BA3AED21C16CFB (SET_DISABLE_FRAG_DAMAGE)
 ---@param object object
@@ -401,5 +436,6 @@ end
 function SetDisableFragDamage(object,toggle)
     Citizen.InvokeNative(0x01BA3AED21C16CFB,object,toggle)
 end
+
 
 

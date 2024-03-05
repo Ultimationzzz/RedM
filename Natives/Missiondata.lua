@@ -3,8 +3,9 @@
 ---@param p0 any
 ---@return boolean
 function MissiondataIsValid(p0)
-   return Citizen.InvokeNative(0xE54DC27571D5EDC5,p0)
+    return Citizen.InvokeNative(0xE54DC27571D5EDC5,p0)
 end
+
 
 
 --- 
@@ -12,8 +13,9 @@ end
 ---@param missionId hash
 ---@return hash
 function MissiondataGetCatagory(missionId)
-   return Citizen.InvokeNative(0x57E798B65C45EE17,missionId)
+    return Citizen.InvokeNative(0x57E798B65C45EE17,missionId)
 end
+
 
 
 --- 
@@ -21,8 +23,9 @@ end
 ---@param missionId hash
 ---@return hash
 function MissiondataGetTextureName(missionId)
-   return Citizen.InvokeNative(0x57E798B56C45EE15,missionId)
+    return Citizen.InvokeNative(0x57E798B56C45EE15,missionId)
 end
+
 
 
 --- 
@@ -30,8 +33,9 @@ end
 ---@param missionId hash
 ---@return hash
 function MissiondataGetTextureTxd(missionId)
-   return Citizen.InvokeNative(0x57E798B57C45EE16,missionId)
+    return Citizen.InvokeNative(0x57E798B57C45EE16,missionId)
 end
+
 
 
 --- see: missions.meta
@@ -39,8 +43,9 @@ end
 ---@param missionId hash
 ---@return boolean
 function MissiondataWasCompleted(missionId)
-   return Citizen.InvokeNative(0xE54DC27571D5EDC4,missionId)
+    return Citizen.InvokeNative(0xE54DC27571D5EDC4,missionId)
 end
+
 
 
 --- 
@@ -48,8 +53,9 @@ end
 ---@param missionId hash
 ---@return number
 function MissiondataGetRating(missionId)
-   return Citizen.InvokeNative(0x57E798B54C45EE1A,missionId)
+    return Citizen.InvokeNative(0x57E798B54C45EE1A,missionId)
 end
+
 
 
 --- MISSION_RATING_INCOMPLETE = 0,
@@ -66,13 +72,15 @@ function MissiondataSetMissionRating(missionId,rating)
 end
 
 
+
 --- 
 --- Native 0xE824CE7D13FCB35E (MISSIONDATA_IS_REQUIRED_STORY_MISSION)
 ---@param missionId hash
 ---@return boolean
 function MissiondataIsRequiredStoryMission(missionId)
-   return Citizen.InvokeNative(0xE824CE7D13FCB35E,missionId)
+    return Citizen.InvokeNative(0xE824CE7D13FCB35E,missionId)
 end
+
 
 
 --- replayState: MISSIONDATA_GET_REPLAY_STATE
@@ -84,13 +92,15 @@ function MissiondataSetReplayStateLocked(missionId,replayState)
 end
 
 
+
 --- 
 --- Native 0x8C32D86E9556ED86 (MISSIONDATA_GET_REPLAY_STATE)
 ---@param p0 any
 ---@return number
 function MissiondataGetReplayState(p0)
-   return Citizen.InvokeNative(0x8C32D86E9556ED86,p0)
+    return Citizen.InvokeNative(0x8C32D86E9556ED86,p0)
 end
+
 
 
 --- 
@@ -104,6 +114,7 @@ function MissiondataSetRatingScores(missionId,bronzeScore,silverScore,goldScore)
 end
 
 
+
 --- 
 --- Native 0x3A04F0169DA87A9D (MISSIONDATA_SET_HIGH_SCORE)
 ---@param missionId hash
@@ -113,13 +124,15 @@ function MissiondataSetHighScore(missionId,score)
 end
 
 
+
 --- 
 --- Native 0x9AABABF8313C3516 (MISSIONDATA_GET_HIGH_SCORE)
 ---@param missionId hash
 ---@return number
 function MissiondataGetHighScore(missionId)
-   return Citizen.InvokeNative(0x9AABABF8313C3516,missionId)
+    return Citizen.InvokeNative(0x9AABABF8313C3516,missionId)
 end
+
 
 
 --- 
@@ -127,8 +140,9 @@ end
 ---@param category hash
 ---@return boolean
 function MissiondataIsReplayCategoryLocked(category)
-   return Citizen.InvokeNative(0xE145864DECC34219,category)
+    return Citizen.InvokeNative(0xE145864DECC34219,category)
 end
+
 
 
 --- 
@@ -140,12 +154,14 @@ function MissiondataSetReplayLockedForCategory(category,locked)
 end
 
 
+
 --- 
 --- Native 0x25855B1574BF8CD5 (_MISSIONDATA_TIMECYCLE_BOX_SET_MODIFIER)
 ---@param timecycleName string
 function MissiondataTimecycleBoxSetModifier(timecycleName)
     Citizen.InvokeNative(0x25855B1574BF8CD5,timecycleName)
 end
+
 
 
 --- 
@@ -155,11 +171,13 @@ function MissiondataTimecycleBoxDelete()
 end
 
 
+
 --- 
 --- Native 0x7E8F86A4FA33033C (_MISSIONDATA_TIMECYCLE_BOX_EXISTS)
 ---@return boolean
 function MissiondataTimecycleBoxExists()
    return Citizen.InvokeNative(0x7E8F86A4FA33033C)
 end
+
 
 

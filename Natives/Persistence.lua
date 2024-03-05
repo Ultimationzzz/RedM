@@ -9,12 +9,14 @@ function PersistenceRemoveAllEntitiesInArea(x,y,z,radius)
 end
 
 
+
 --- Only used in R* script long_update.ysc in script function REFRESH_CLOSEST_TOWN
 --- Native 0xEFB5F34CC0953B27 (_PERSISTENCE_REFRESH_TOWN_VOLUME)
 ---@param volume volume
 function PersistenceRefreshTownVolume(volume)
     Citizen.InvokeNative(0xEFB5F34CC0953B27,volume)
 end
+
 
 
 --- 
@@ -25,13 +27,15 @@ function PersistenceAddScenarioLooted(scenario)
 end
 
 
+
 --- 
 --- Native 0xFB7CF1DE938A3E22 (_PERSISTENCE_IS_SCENARIO_MARKED_AS_LOOTED)
 ---@param scenario number
 ---@return boolean
 function PersistenceIsScenarioMarkedAsLooted(scenario)
-   return Citizen.InvokeNative(0xFB7CF1DE938A3E22,scenario)
+    return Citizen.InvokeNative(0xFB7CF1DE938A3E22,scenario)
 end
+
 
 
 --- 
@@ -41,8 +45,9 @@ end
 ---@param z float
 ---@return boolean
 function PersistenceIsScenarioMarkedAsLootedAtCoords(x,y,z)
-   return Citizen.InvokeNative(0xB6E1A185C2B9319A,x,y,z)
+    return Citizen.InvokeNative(0xB6E1A185C2B9319A,x,y,z)
 end
+
 
 
 --- 
@@ -53,7 +58,8 @@ end
 ---@param model hash
 ---@return boolean
 function PersistenceIsScenarioMarkedAsLootedAtCoordsWithModel(x,y,z,model)
-   return Citizen.InvokeNative(0x188313616D184213,x,y,z,model)
+    return Citizen.InvokeNative(0x188313616D184213,x,y,z,model)
 end
+
 
 

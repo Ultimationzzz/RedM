@@ -4,8 +4,9 @@
 ---@param flag number
 ---@return boolean
 function UnlockIsUnlockFlagSet(unlockHash,flag)
-   return Citizen.InvokeNative(0x6B6369647F26F09F,unlockHash,flag)
+    return Citizen.InvokeNative(0x6B6369647F26F09F,unlockHash,flag)
 end
+
 
 
 --- 
@@ -13,8 +14,9 @@ end
 ---@param unlockHash hash
 ---@return boolean
 function UnlockIsUnlocked(unlockHash)
-   return Citizen.InvokeNative(0xC4B660C7B6040E75,unlockHash)
+    return Citizen.InvokeNative(0xC4B660C7B6040E75,unlockHash)
 end
+
 
 
 --- 
@@ -26,13 +28,15 @@ function UnlockSetUnlocked(unlockHash,toggle)
 end
 
 
+
 --- 
 --- Native 0x8588A14B75AF096B (UNLOCK_IS_VISIBLE)
 ---@param unlockHash hash
 ---@return boolean
 function UnlockIsVisible(unlockHash)
-   return Citizen.InvokeNative(0x8588A14B75AF096B,unlockHash)
+    return Citizen.InvokeNative(0x8588A14B75AF096B,unlockHash)
 end
+
 
 
 --- 
@@ -44,13 +48,15 @@ function UnlockSetVisible(unlockHash,toggle)
 end
 
 
+
 --- 
 --- Native 0x644166BA7AA49DEA (_UNLOCK_IS_NEW)
 ---@param unlockHash hash
 ---@return boolean
 function UnlockIsNew(unlockHash)
-   return Citizen.InvokeNative(0x644166BA7AA49DEA,unlockHash)
+    return Citizen.InvokeNative(0x644166BA7AA49DEA,unlockHash)
 end
+
 
 
 --- 
@@ -62,13 +68,15 @@ function UnlockSetNew(unlockHash,toggle)
 end
 
 
+
 --- 
 --- Native 0x66BF197E066050DE (_UNLOCK_IS_LOOTABLE)
 ---@param unlockHash hash
 ---@return boolean
 function UnlockIsLootable(unlockHash)
-   return Citizen.InvokeNative(0x66BF197E066050DE,unlockHash)
+    return Citizen.InvokeNative(0x66BF197E066050DE,unlockHash)
 end
+
 
 
 --- 
@@ -78,5 +86,6 @@ end
 function UnlockGetItemRoleUnlockInfo(unlockHash,outData)
     Citizen.InvokeNative(0x7C1C2062CFAD06FE,unlockHash,outData)
 end
+
 
 

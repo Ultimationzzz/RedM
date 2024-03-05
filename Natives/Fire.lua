@@ -14,8 +14,9 @@
 ---@param p8 number
 ---@return fireid
 function StartScriptFire(x,y,z,p3,p4,p5,soundsetName,p7,p8)
-   return Citizen.InvokeNative(0x6B83617E04503888,x,y,z,p3,p4,p5,soundsetName,p7,p8)
+    return Citizen.InvokeNative(0x6B83617E04503888,x,y,z,p3,p4,p5,soundsetName,p7,p8)
 end
+
 
 
 --- 
@@ -24,6 +25,7 @@ end
 function RemoveScriptFire(fireHandle)
     Citizen.InvokeNative(0x790125C36E194069,fireHandle)
 end
+
 
 
 --- 
@@ -37,6 +39,7 @@ function StartEntityFire(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x8390751DC40C1E98 (STOP_ENTITY_FIRE)
 ---@param p0 any
@@ -46,13 +49,15 @@ function StopEntityFire(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x1BD7C371CE257C3E (IS_ENTITY_ON_FIRE)
 ---@param entity entity
 ---@return boolean
 function IsEntityOnFire(entity)
-   return Citizen.InvokeNative(0x1BD7C371CE257C3E,entity)
+    return Citizen.InvokeNative(0x1BD7C371CE257C3E,entity)
 end
+
 
 
 --- 
@@ -63,8 +68,9 @@ end
 ---@param radius float
 ---@return number
 function GetNumberOfFiresInRange(x,y,z,radius)
-   return Citizen.InvokeNative(0xF9617BC6FAE61E08,x,y,z,radius)
+    return Citizen.InvokeNative(0xF9617BC6FAE61E08,x,y,z,radius)
 end
+
 
 
 --- 
@@ -76,6 +82,7 @@ end
 function StopFireInRange(x,y,z,radius)
     Citizen.InvokeNative(0xDB38F247BD421708,x,y,z,radius)
 end
+
 
 
 --- 
@@ -94,6 +101,7 @@ function StopFireInBox(posX,posY,posZ,rotX,rotY,rotZ,scaleX,scaleY,scaleZ)
 end
 
 
+
 --- 
 --- Native 0xB646FB657F448261 (GET_CLOSEST_FIRE_POS)
 ---@param outPosition vector3*
@@ -102,8 +110,9 @@ end
 ---@param z float
 ---@return boolean
 function GetClosestFirePos(outPosition,x,y,z)
-   return Citizen.InvokeNative(0xB646FB657F448261,outPosition,x,y,z)
+    return Citizen.InvokeNative(0xB646FB657F448261,outPosition,x,y,z)
 end
+
 
 
 --- 
@@ -111,8 +120,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityConsumedByFire(entity)
-   return Citizen.InvokeNative(0xCDC25355C0D65963,entity)
+    return Citizen.InvokeNative(0xCDC25355C0D65963,entity)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/graphics/explosions
@@ -171,6 +181,7 @@ function AddExplosion(x,y,z,explosionType,damageScale,isAudible,isInvisible,came
 end
 
 
+
 --- explosionType: see ADD_EXPLOSION
 --- Native 0xD84A917A64D4D016 (ADD_OWNED_EXPLOSION)
 ---@param ped number
@@ -185,6 +196,7 @@ end
 function AddOwnedExplosion(ped,x,y,z,explosionType,damageScale,isAudible,isInvisible,cameraShake)
     Citizen.InvokeNative(0xD84A917A64D4D016,ped,x,y,z,explosionType,damageScale,isAudible,isInvisible,cameraShake)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -204,6 +216,7 @@ function AddExplosionWithUserVfx(x,y,z,explosionType,explosionFx,damageScale,isA
 end
 
 
+
 --- explosionType: see ADD_EXPLOSION
 --- Native 0x8391BA4313A25AD3 (IS_EXPLOSION_IN_AREA)
 ---@param explosionType number
@@ -215,8 +228,9 @@ end
 ---@param z2 float
 ---@return boolean
 function IsExplosionInArea(explosionType,x1,y1,z1,x2,y2,z2)
-   return Citizen.InvokeNative(0x8391BA4313A25AD3,explosionType,x1,y1,z1,x2,y2,z2)
+    return Citizen.InvokeNative(0x8391BA4313A25AD3,explosionType,x1,y1,z1,x2,y2,z2)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -230,8 +244,9 @@ end
 ---@param z2 float
 ---@return boolean
 function IsExplosionActiveInArea(explosionType,x1,y1,z1,x2,y2,z2)
-   return Citizen.InvokeNative(0xD96E82AEBFFAAFF0,explosionType,x1,y1,z1,x2,y2,z2)
+    return Citizen.InvokeNative(0xD96E82AEBFFAAFF0,explosionType,x1,y1,z1,x2,y2,z2)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -243,8 +258,9 @@ end
 ---@param radius float
 ---@return boolean
 function IsExplosionInSphere(explosionType,x,y,z,radius)
-   return Citizen.InvokeNative(0xD62DD846D82CBB90,explosionType,x,y,z,radius)
+    return Citizen.InvokeNative(0xD62DD846D82CBB90,explosionType,x,y,z,radius)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -259,8 +275,9 @@ end
 ---@param angle float
 ---@return boolean
 function IsExplosionInAngledArea(explosionType,x1,y1,z1,x2,y2,z2,angle)
-   return Citizen.InvokeNative(0x5AE661ECD18524C9,explosionType,x1,y1,z1,x2,y2,z2,angle)
+    return Citizen.InvokeNative(0x5AE661ECD18524C9,explosionType,x1,y1,z1,x2,y2,z2,angle)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -269,8 +286,9 @@ end
 ---@param volume volume
 ---@return boolean
 function IsExplosionInVolume(explosionType,volume)
-   return Citizen.InvokeNative(0xE24822A4CFC9107A,explosionType,volume)
+    return Citizen.InvokeNative(0xE24822A4CFC9107A,explosionType,volume)
 end
+
 
 
 --- explosionType: see ADD_EXPLOSION
@@ -285,8 +303,9 @@ end
 ---@param radius float
 ---@return entity
 function GetOwnerOfExplosionInAngledArea(explosionType,x1,y1,z1,x2,y2,z2,radius)
-   return Citizen.InvokeNative(0x8002DDAB58594D78,explosionType,x1,y1,z1,x2,y2,z2,radius)
+    return Citizen.InvokeNative(0x8002DDAB58594D78,explosionType,x1,y1,z1,x2,y2,z2,radius)
 end
+
 
 
 --- Tested with fire & dynamite. Only returns true using value p1 = 1 and when the ped is affected by fire.
@@ -295,7 +314,8 @@ end
 ---@param p1 number
 ---@return boolean
 function IsPedShockingEventActive(ped,p1)
-   return Citizen.InvokeNative(0xAB7993BA61A4674F,ped,p1)
+    return Citizen.InvokeNative(0xAB7993BA61A4674F,ped,p1)
 end
+
 
 

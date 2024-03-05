@@ -5,8 +5,9 @@
 ---@param value boolean
 ---@return boolean
 function DecorSetBool(entity,propertyName,value)
-   return Citizen.InvokeNative(0xFE26E4609B1C3772,entity,propertyName,value)
+    return Citizen.InvokeNative(0xFE26E4609B1C3772,entity,propertyName,value)
 end
+
 
 
 --- 
@@ -16,8 +17,9 @@ end
 ---@param value float
 ---@return boolean
 function DecorSetFloat(entity,propertyName,value)
-   return Citizen.InvokeNative(0x238F8B0C1C7FE834,entity,propertyName,value)
+    return Citizen.InvokeNative(0x238F8B0C1C7FE834,entity,propertyName,value)
 end
+
 
 
 --- Sets property to int.
@@ -27,8 +29,9 @@ end
 ---@param value number
 ---@return boolean
 function DecorSetInt(entity,propertyName,value)
-   return Citizen.InvokeNative(0xE88F4D7F52A6090F,entity,propertyName,value)
+    return Citizen.InvokeNative(0xE88F4D7F52A6090F,entity,propertyName,value)
 end
+
 
 
 --- 
@@ -38,8 +41,9 @@ end
 ---@param value number
 ---@return boolean
 function DecorSetUint8(entity,propertyName,value)
-   return Citizen.InvokeNative(0x4BDC83150D43772D,entity,propertyName,value)
+    return Citizen.InvokeNative(0x4BDC83150D43772D,entity,propertyName,value)
 end
+
 
 
 --- 
@@ -49,8 +53,9 @@ end
 ---@param value string
 ---@return boolean
 function DecorSetString(entity,propertyName,value)
-   return Citizen.InvokeNative(0x0671C1A3FF7AFDFC,entity,propertyName,value)
+    return Citizen.InvokeNative(0x0671C1A3FF7AFDFC,entity,propertyName,value)
 end
+
 
 
 --- 
@@ -59,8 +64,9 @@ end
 ---@param propertyName string
 ---@return boolean
 function DecorGetBool(entity,propertyName)
-   return Citizen.InvokeNative(0xDEF3F1B071ABB197,entity,propertyName)
+    return Citizen.InvokeNative(0xDEF3F1B071ABB197,entity,propertyName)
 end
+
 
 
 --- 
@@ -69,8 +75,9 @@ end
 ---@param propertyName string
 ---@return float
 function DecorGetFloat(entity,propertyName)
-   return Citizen.InvokeNative(0xE5FF70CD842CA9D4,entity,propertyName)
+    return Citizen.InvokeNative(0xE5FF70CD842CA9D4,entity,propertyName)
 end
+
 
 
 --- 
@@ -79,8 +86,9 @@ end
 ---@param propertyName string
 ---@return number
 function DecorGetInt(entity,propertyName)
-   return Citizen.InvokeNative(0x44DB62727762FD9B,entity,propertyName)
+    return Citizen.InvokeNative(0x44DB62727762FD9B,entity,propertyName)
 end
+
 
 
 --- 
@@ -89,8 +97,9 @@ end
 ---@param propertyName string
 ---@return number
 function DecorGetUint8(entity,propertyName)
-   return Citizen.InvokeNative(0xB1682B2443F0540B,entity,propertyName)
+    return Citizen.InvokeNative(0xB1682B2443F0540B,entity,propertyName)
 end
+
 
 
 --- Returns whether or not the specified property is set for the entity.
@@ -99,8 +108,9 @@ end
 ---@param propertyName string
 ---@return boolean
 function DecorExistOn(entity,propertyName)
-   return Citizen.InvokeNative(0xD9D1CDBF3464DCDF,entity,propertyName)
+    return Citizen.InvokeNative(0xD9D1CDBF3464DCDF,entity,propertyName)
 end
+
 
 
 --- 
@@ -109,8 +119,9 @@ end
 ---@param propertyName string
 ---@return boolean
 function DecorRemove(entity,propertyName)
-   return Citizen.InvokeNative(0x2BA7F5877A088A1D,entity,propertyName)
+    return Citizen.InvokeNative(0x2BA7F5877A088A1D,entity,propertyName)
 end
+
 
 
 --- 
@@ -118,8 +129,9 @@ end
 ---@param entity entity
 ---@return boolean
 function DecorRemoveAll(entity)
-   return Citizen.InvokeNative(0x88942780E0ADEA42,entity)
+    return Citizen.InvokeNative(0x88942780E0ADEA42,entity)
 end
+
 
 
 --- 
@@ -129,6 +141,7 @@ end
 function DecorRegister(propertyName,type)
     Citizen.InvokeNative(0x0B253D644E3C36B3,propertyName,type)
 end
+
 
 
 --- 
@@ -141,13 +154,15 @@ function DecorRegister2(propertyName,type,p2)
 end
 
 
+
 --- type: see DECOR_REGISTER
 --- Native 0x72355278C069F272 (DECOR_IS_REGISTERED_AS_TYPE)
 ---@param propertyName string
 ---@param type number
 ---@return boolean
 function DecorIsRegisteredAsType(propertyName,type)
-   return Citizen.InvokeNative(0x72355278C069F272,propertyName,type)
+    return Citizen.InvokeNative(0x72355278C069F272,propertyName,type)
 end
+
 
 

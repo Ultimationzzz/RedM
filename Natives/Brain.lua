@@ -11,6 +11,7 @@ function RegisterObjectScriptBrain(scriptName,modelHash,p2,activationRange,p4,p5
 end
 
 
+
 --- Returns threadId
 --- Native 0x4E4507CC5E4DB869 (_START_PRELOADED_SCRIPT_BRAIN)
 ---@param entity entity
@@ -19,8 +20,9 @@ end
 ---@param p3 boolean
 ---@return number
 function StartPreloadedScriptBrain(entity,scriptName,scriptStackSize,p3)
-   return Citizen.InvokeNative(0x4E4507CC5E4DB869,entity,scriptName,scriptStackSize,p3)
+    return Citizen.InvokeNative(0x4E4507CC5E4DB869,entity,scriptName,scriptStackSize,p3)
 end
+
 
 
 --- Returns threadId
@@ -33,8 +35,9 @@ end
 ---@param p5 boolean
 ---@return number
 function StartScriptBrain(entity,scriptName,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0x6F62FAE266DCFC81,entity,scriptName,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0x6F62FAE266DCFC81,entity,scriptName,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -45,12 +48,14 @@ function RemoveScriptBrainEntity(entity)
 end
 
 
+
 --- 
 --- Native 0x6818D1A194E29983 (_GET_SCRIPT_BRAIN_ENTITY)
 ---@return entity
 function GetScriptBrainEntity()
    return Citizen.InvokeNative(0x6818D1A194E29983)
 end
+
 
 
 --- 
@@ -61,12 +66,14 @@ function EnableScriptBrainSet(brainSet)
 end
 
 
+
 --- 
 --- Native 0x3F44EA613A5B2676 (DISABLE_SCRIPT_BRAIN_SET)
 ---@param brainSet number
 function DisableScriptBrainSet(brainSet)
     Citizen.InvokeNative(0x3F44EA613A5B2676,brainSet)
 end
+
 
 
 --- Called before starting a new thread_monitor script thread in startup_mp/startup_tlg
@@ -78,11 +85,13 @@ function ReactivateAllObjectBrainsThatAreWaitingTillOutOfRange()
 end
 
 
+
 --- 
 --- Native 0x74C333E34DF74E8A (REACTIVATE_NAMED_OBJECT_BRAINS_WAITING_TILL_OUT_OF_RANGE)
 ---@param scriptName string
 function ReactivateNamedObjectBrainsWaitingTillOutOfRange(scriptName)
     Citizen.InvokeNative(0x74C333E34DF74E8A,scriptName)
 end
+
 
 

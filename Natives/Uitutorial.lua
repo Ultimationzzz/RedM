@@ -6,12 +6,14 @@ function UitutorialGetIsThreatIndicatorCapableRadarShown()
 end
 
 
+
 --- 
 --- Native 0xFC2E0A5E9ED4E1B4 (_UITUTORIAL_GET_IS_THREAT_INDICATOR_ON)
 ---@return boolean
 function UitutorialGetIsThreatIndicatorOn()
    return Citizen.InvokeNative(0xFC2E0A5E9ED4E1B4)
 end
+
 
 
 --- enum eRpgIcons
@@ -42,5 +44,6 @@ end
 function UitutorialSetRpgIconVisibility(rpgIcon,visibility)
     Citizen.InvokeNative(0xC116E6DF68DCE667,rpgIcon,visibility)
 end
+
 
 

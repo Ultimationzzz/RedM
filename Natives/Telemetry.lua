@@ -6,6 +6,7 @@ function TelemetrySetIsFlow(toggle)
 end
 
 
+
 --- 
 --- Native 0x15B0CC1B36F1DE29 (_TELEMETRY_MISSION_STARTED)
 ---@param p0 any
@@ -17,6 +18,7 @@ function TelemetryMissionStarted(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xD894437E12C17AEC (_TELEMETRY_MISSION_OVER)
 ---@param p0 any
@@ -24,6 +26,7 @@ end
 function TelemetryMissionOver(p0,p1)
     Citizen.InvokeNative(0xD894437E12C17AEC,p0,p1)
 end
+
 
 
 --- 
@@ -36,6 +39,7 @@ function TelemetryMissionCheckpoint(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x5DA4718DF897EB25 (_TELEMETRY_PLAYER_SPAWNED)
 ---@param ped number
@@ -44,13 +48,15 @@ function TelemetryPlayerSpawned(ped)
 end
 
 
+
 --- Works in MP only.
 --- Native 0xE692D336F8A2A97F (_TELEMETRY_CREATE_UUID)
 ---@param uuid any*
 ---@return boolean
 function TelemetryCreateUuid(uuid)
-   return Citizen.InvokeNative(0xE692D336F8A2A97F,uuid)
+    return Citizen.InvokeNative(0xE692D336F8A2A97F,uuid)
 end
+
 
 
 --- 
@@ -67,6 +73,7 @@ function TelemetryMatchQueue(p0,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xF620F47B4F4A78C4 (_TELEMETRY_MATCH_STARTED)
 ---@param p0 any*
@@ -74,6 +81,7 @@ end
 function TelemetryMatchStarted(p0,p1)
     Citizen.InvokeNative(0xF620F47B4F4A78C4,p0,p1)
 end
+
 
 
 --- 
@@ -88,6 +96,7 @@ function TelemetryMatchOver(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0xEF3C68F56BAD7B69 (_TELEMETRY_MATCH_VOTE)
 ---@param p0 any*
@@ -95,6 +104,7 @@ end
 function TelemetryMatchVote(p0,p1)
     Citizen.InvokeNative(0xEF3C68F56BAD7B69,p0,p1)
 end
+
 
 
 --- 
@@ -108,6 +118,7 @@ function TelemetryLobbyProgression(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x51EC204A6E5B5A1A (_TELEMETRY_GAME_PROGRESS)
 ---@param p0 any
@@ -117,12 +128,14 @@ function TelemetryGameProgress(p0,p1)
 end
 
 
+
 --- 
 --- Native 0xAE693EC3A178F6C2 (_TELEMETRY_HERB_PICKED)
 ---@param herbType hash
 function TelemetryHerbPicked(herbType)
     Citizen.InvokeNative(0xAE693EC3A178F6C2,herbType)
 end
+
 
 
 --- 
@@ -134,12 +147,14 @@ function TelemetryAnimalSkinned(type,items)
 end
 
 
+
 --- 
 --- Native 0x565EAA726B2CE3B7 (_TELEMETRY_CAMP_CREATED)
 ---@param p0 any
 function TelemetryCampCreated(p0)
     Citizen.InvokeNative(0x565EAA726B2CE3B7,p0)
 end
+
 
 
 --- 
@@ -154,12 +169,14 @@ function TelemetryCampSupplies(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0xCD6F8A0335D821F9 (_TELEMETRY_REGION)
 ---@param regionHash hash
 function TelemetryRegion(regionHash)
     Citizen.InvokeNative(0xCD6F8A0335D821F9,regionHash)
 end
+
 
 
 --- 
@@ -175,6 +192,7 @@ function TelemetryShopEntry(shopType,shopRegion,region,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xF78E669FDC202E73 (_TELEMETRY_SHOP_EXIT)
 ---@param p0 any
@@ -182,6 +200,7 @@ end
 function TelemetryShopExit(p0,p1)
     Citizen.InvokeNative(0xF78E669FDC202E73,p0,p1)
 end
+
 
 
 --- 
@@ -192,6 +211,7 @@ end
 function TelemetrySetShopForTransaction(transactionId,p1,p2)
     Citizen.InvokeNative(0xCA9E42F437625A85,transactionId,p1,p2)
 end
+
 
 
 --- 
@@ -206,6 +226,7 @@ function TelemetryShopPurchase(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x9BD8A9D0A774A6F8 (_TELEMETRY_SHOP_SELL)
 ---@param p0 any
@@ -216,6 +237,7 @@ end
 function TelemetryShopSell(p0,p1,p2,p3,centSalePrice)
     Citizen.InvokeNative(0x9BD8A9D0A774A6F8,p0,p1,p2,p3,centSalePrice)
 end
+
 
 
 --- 
@@ -229,11 +251,13 @@ function TelemetryGoldStore(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x32D5898C4898CD95 (_CLEAR_TELEMETRY_SHOP_UI)
 function ClearTelemetryShopUi()
     Citizen.InvokeNative(0x32D5898C4898CD95)
 end
+
 
 
 --- 
@@ -245,6 +269,7 @@ end
 function TelemetryShopCutscene(p0,p1,p2,p3)
     Citizen.InvokeNative(0xB0B19B56697836F5,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -261,12 +286,14 @@ function TelemetryAmbientVignette(p0,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xF5EAD898EF387E73 (_TELEMETRY_DISCOVERABLE)
 ---@param p0 any
 function TelemetryDiscoverable(p0)
     Citizen.InvokeNative(0xF5EAD898EF387E73,p0)
 end
+
 
 
 --- 
@@ -278,6 +305,7 @@ function TelemetryHonor(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x78C2E029DB205A3A (_TELEMETRY_CRAFT_ITEM)
 ---@param p0 any
@@ -287,6 +315,7 @@ end
 function TelemetryCraftItem(p0,p1,p2,quantity)
     Citizen.InvokeNative(0x78C2E029DB205A3A,p0,p1,p2,quantity)
 end
+
 
 
 --- 
@@ -303,6 +332,7 @@ end
 function TelemetryCampDonate(transactionId,p1,p2,p3,p4,slotId,p6,p7,p8)
     Citizen.InvokeNative(0xDF516E598D966D06,transactionId,p1,p2,p3,p4,slotId,p6,p7,p8)
 end
+
 
 
 --- 
@@ -323,6 +353,7 @@ function TelemetryMoonshineBrew(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0xD6CB05DDAEE43AFD (_TELEMETRY_COLLECT)
 ---@param transactionId any
@@ -337,6 +368,7 @@ function TelemetryCollect(transactionId,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xEA323F5E1A4DA2F1 (_TELEMETRY_MISSION_ILO_OPTION)
 ---@param p0 any
@@ -344,6 +376,7 @@ end
 function TelemetryMissionIloOption(p0,p1)
     Citizen.InvokeNative(0xEA323F5E1A4DA2F1,p0,p1)
 end
+
 
 
 --- _TELEMETRY_C* - _TELEMETRY_G*
@@ -359,6 +392,7 @@ function TelemetryMissionFailedToLaunch(p0,p1,x,y,z,reason)
 end
 
 
+
 --- 
 --- Native 0xE6DC9B21AC7A8729 (_TELEMETRY_GANG_SHARES)
 ---@param p0 any
@@ -368,6 +402,7 @@ end
 function TelemetryGangShares(p0,p1,p2,p3)
     Citizen.InvokeNative(0xE6DC9B21AC7A8729,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -380,6 +415,7 @@ end
 function TelemetryFastTravel(p0,p1,p2,p3,p4)
     Citizen.InvokeNative(0x7CEF4AC79F7E7FAD,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -396,6 +432,7 @@ function TelemetryNetCamp(p0,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- Creation of the metric is related to attribute filling, i. e. at camp fires, when the ped is resting.
 ---_TELEMETRY_C* - _TELEMETRY_P*
 --- Native 0x7E002A36AEFCFB55 (_TELEMETRY_RPG_GLOBAL_CALCULATE_ATTRIBUTE_CORE_DELTA)
@@ -404,12 +441,14 @@ function TelemetryRpgGlobalCalculateAttributeCoreDelta()
 end
 
 
+
 --- 
 --- Native 0xF9F14080D80937BD (_TELEMETRY_SLEEP)
 ---@param p0 any
 function TelemetrySleep(p0)
     Citizen.InvokeNative(0xF9F14080D80937BD,p0)
 end
+
 
 
 --- 
@@ -424,6 +463,7 @@ function TelemetryParleyFeud(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x076C5843371EB889 (TELEMETRY_PLAYER_MENU_PIN)
 ---@param p0 any
@@ -433,6 +473,7 @@ end
 function TelemetryPlayerMenuPin(p0,p1,p2,p3)
     Citizen.InvokeNative(0x076C5843371EB889,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -446,6 +487,7 @@ function TelemetryNotoriety(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xE57529D23541D2DD (_TELEMETRY_DEFENSIVE)
 ---@param p0 any
@@ -454,6 +496,7 @@ end
 function TelemetryDefensive(p0,p1,p2)
     Citizen.InvokeNative(0xE57529D23541D2DD,p0,p1,p2)
 end
+
 
 
 --- 
@@ -467,6 +510,7 @@ function TelemetryLoot(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x2C24AF8EEEEF8A55 (_TELEMETRY_EMOTE_ADD_CATEGORY_TO_SAVE)
 ---@param p0 any
@@ -477,6 +521,7 @@ function TelemetryEmoteAddCategoryToSave(p0,p1,emote)
 end
 
 
+
 --- 
 --- Native 0x16B23D4F7A1F50D9 (_TELEMETRY_FAVOR_EMOTE)
 ---@param p0 any
@@ -485,6 +530,7 @@ end
 function TelemetryFavorEmote(p0,p1,p2)
     Citizen.InvokeNative(0x16B23D4F7A1F50D9,p0,p1,p2)
 end
+
 
 
 --- 
@@ -504,14 +550,16 @@ function TelemetryPokerOver(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- Returns false when transaction request is failing
 --- Native 0x80A02D9F948A8BCA (_TELEMETRY_TRIGGER_TRANSACTION_REQUEST)
 ---@param requestId any*
 ---@param transactionId any*
 ---@return boolean
 function TelemetryTriggerTransactionRequest(requestId,transactionId)
-   return Citizen.InvokeNative(0x80A02D9F948A8BCA,requestId,transactionId)
+    return Citizen.InvokeNative(0x80A02D9F948A8BCA,requestId,transactionId)
 end
+
 
 
 --- 
@@ -520,8 +568,9 @@ end
 ---@param requestId any*
 ---@return boolean
 function TryGetTelemetryIdFromTransactionId(transactionId,requestId)
-   return Citizen.InvokeNative(0xF184B3ECE36219CF,transactionId,requestId)
+    return Citizen.InvokeNative(0xF184B3ECE36219CF,transactionId,requestId)
 end
+
 
 
 --- 
@@ -532,12 +581,14 @@ function TelemetryRoleBounty(p0)
 end
 
 
+
 --- 
 --- Native 0x52FA31DB8F3AD25D (_TELEMETRY_BOUNTY_TARGET)
 ---@param data any*
 function TelemetryBountyTarget(data)
     Citizen.InvokeNative(0x52FA31DB8F3AD25D,data)
 end
+
 
 
 --- 
@@ -554,6 +605,7 @@ function TelemetryPrison(transactionId,bountyAmount,ped,completionType,jailTimeS
 end
 
 
+
 --- 
 --- Native 0x476038B5A0734C10 (_TELEMETRY_ROLE_TRADER)
 ---@param p0 any
@@ -563,6 +615,7 @@ function TelemetryRoleTrader(p0,transactionId)
 end
 
 
+
 --- 
 --- Native 0x99D40C5D74BC88E9 (_TELEMETRY_ROLE_MOONSHINER)
 ---@param p0 any
@@ -570,6 +623,7 @@ end
 function TelemetryRoleMoonshiner(p0,transactionId)
     Citizen.InvokeNative(0x99D40C5D74BC88E9,p0,transactionId)
 end
+
 
 
 --- 
@@ -586,6 +640,7 @@ function TelemetryRoleCollector(transactionId,collectible,category,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xED22BE4C5A399E63 (_TELEMETRY_PHOTO)
 ---@param p0 any
@@ -597,6 +652,7 @@ function TelemetryPhoto(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xF0D54E0651DD7E07 (_TELEMETRY_START_GUN_LOCKER_INTERACTION)
 function TelemetryStartGunLockerInteraction()
@@ -604,11 +660,13 @@ function TelemetryStartGunLockerInteraction()
 end
 
 
+
 --- 
 --- Native 0x415FE28ED44BFF14 (_TELEMETRY_GUN_LOCKER)
 function TelemetryGunLocker()
     Citizen.InvokeNative(0x415FE28ED44BFF14)
 end
+
 
 
 --- 
@@ -619,12 +677,14 @@ function TelemetryGunLockerWeaponStored(p0)
 end
 
 
+
 --- 
 --- Native 0x317D9C9560529CC2 (_TELEMETRY_GUN_LOCKER_WEAPON_REMOVED)
 ---@param p0 hash
 function TelemetryGunLockerWeaponRemoved(p0)
     Citizen.InvokeNative(0x317D9C9560529CC2,p0)
 end
+
 
 
 --- 
@@ -640,6 +700,7 @@ function TelemetryRoleTokenTransaction(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x621D719C4836292B (_TELEMETRY_COUPON)
 ---@param p0 any
@@ -653,6 +714,7 @@ function TelemetryCoupon(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xFF9052BC7A3B7D33 (TELEMETRY_PERSONAL_VEHICLE_MOUNT)
 ---@param p0 any
@@ -664,6 +726,7 @@ function TelemetryPersonalVehicleMount(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xE67AF24C5A3B6058 (_TELEMETRY_PERSONAL_VEHICLE_WAGON)
 ---@param p0 any
@@ -672,6 +735,7 @@ end
 function TelemetryPersonalVehicleWagon(p0,p1,p2)
     Citizen.InvokeNative(0xE67AF24C5A3B6058,p0,p1,p2)
 end
+
 
 
 --- 
@@ -685,6 +749,7 @@ function TelemetryMenuNavigation(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x25CC50EC1A6F3A96 (_TELEMETRY_HUB_NAVIGATION)
 ---@param p0 any
@@ -696,6 +761,7 @@ function TelemetryHubNavigation(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x37AA282163B0D2C4 (_TELEMETRY_HUB_OFFERS)
 ---@param couponItem any
@@ -703,6 +769,7 @@ end
 function TelemetryHubOffers(couponItem,p1)
     Citizen.InvokeNative(0x37AA282163B0D2C4,couponItem,p1)
 end
+
 
 
 --- 
@@ -715,6 +782,7 @@ end
 function TelemetrySample(transactionId,animal,p2,bSampled,bTranq)
     Citizen.InvokeNative(0x61559675D23D8BD1,transactionId,animal,p2,bSampled,bTranq)
 end
+
 
 
 --- 
@@ -734,6 +802,7 @@ function TelemetryRoleNaturalist(transactionId,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- 
 --- Native 0x0777D65EE8A17517 (_TELEMETRY_PHOTO_CAM)
 ---@param p0 any
@@ -750,6 +819,7 @@ function TelemetryPhotoCam(p0,p1,p2,p3,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x1B554723799245F4 (_TELEMETRY_INTRO_SKIP)
 ---@param p0 any
@@ -760,6 +830,7 @@ function TelemetryIntroSkip(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xE9F24081D84931B8 (ANALYTICS_PLAYTIME_FREEMODE_START)
 function AnalyticsPlaytimeFreemodeStart()
@@ -767,11 +838,13 @@ function AnalyticsPlaytimeFreemodeStart()
 end
 
 
+
 --- 
 --- Native 0x3180E991D4B8F248 (ANALYTICS_PLAYTIME_FREEMODE_END)
 function AnalyticsPlaytimeFreemodeEnd()
     Citizen.InvokeNative(0x3180E991D4B8F248)
 end
+
 
 
 --- 
@@ -782,12 +855,14 @@ function TelemetryCustom(args)
 end
 
 
+
 --- 
 --- Native 0x330029E121380CEB (_TELEMETRY_MATCH_NOMINATION)
 ---@param args any*
 function TelemetryMatchNomination(args)
     Citizen.InvokeNative(0x330029E121380CEB,args)
 end
+
 
 
 --- 
@@ -802,5 +877,6 @@ end
 function TelemetryCharCreator(p0,p1,p2,p3,p4,p5,p6)
     Citizen.InvokeNative(0x7207AD471BC9278C,p0,p1,p2,p3,p4,p5,p6)
 end
+
 
 

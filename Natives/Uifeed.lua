@@ -5,8 +5,9 @@
 ---@param p2 boolean
 ---@return number
 function UiFeedPostHelpText(p0,p1,p2)
-   return Citizen.InvokeNative(0x049D5C615BD38BAD,p0,p1,p2)
+    return Citizen.InvokeNative(0x049D5C615BD38BAD,p0,p1,p2)
 end
+
 
 
 --- Example : https://pastebin.com/h1YzycuR
@@ -17,8 +18,9 @@ end
 ---@param p3 boolean
 ---@return number
 function UiFeedPostLocationShard(duration,data,p2,p3)
-   return Citizen.InvokeNative(0xD05590C1AB38F068,duration,data,p2,p3)
+    return Citizen.InvokeNative(0xD05590C1AB38F068,duration,data,p2,p3)
 end
+
 
 
 --- Example : https://pastebin.com/13tuRa63
@@ -28,8 +30,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostObjective(p0,p1,p2)
-   return Citizen.InvokeNative(0xCEDBF17EFCC0E4A4,p0,p1,p2)
+    return Citizen.InvokeNative(0xCEDBF17EFCC0E4A4,p0,p1,p2)
 end
+
 
 
 --- Display text on right of the screen, Example : https://pastebin.com/n1YmNe25
@@ -39,8 +42,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostFeedTicker(p0,p1,p2)
-   return Citizen.InvokeNative(0xB2920B9760F0F36B,p0,p1,p2)
+    return Citizen.InvokeNative(0xB2920B9760F0F36B,p0,p1,p2)
 end
+
 
 
 --- Example : https://pastebin.com/YZMBkAmW
@@ -51,8 +55,9 @@ end
 ---@param p3 boolean
 ---@return number
 function UiFeedPostSampleToast(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x26E87218390E6729,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x26E87218390E6729,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -64,8 +69,9 @@ end
 ---@param p4 boolean
 ---@return number
 function UiFeedPostSampleToastWithAppLink(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0x38838A646FB30AAE,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0x38838A646FB30AAE,p0,p1,p2,p3,p4)
 end
+
 
 
 --- Example : https://pastebin.com/kAtEMQTD
@@ -76,8 +82,9 @@ end
 ---@param p3 number
 ---@return number
 function UiFeedPostSampleNotification(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xC927890AA64E9661,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xC927890AA64E9661,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -88,8 +95,9 @@ end
 ---@param p3 number
 ---@return number
 function UiFeedPostRankupToast(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x3F9FDDBA79117C69,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x3F9FDDBA79117C69,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -99,8 +107,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostSampleToastRight(p0,p1,p2)
-   return Citizen.InvokeNative(0xB249EBCB30DD88E0,p0,p1,p2)
+    return Citizen.InvokeNative(0xB249EBCB30DD88E0,p0,p1,p2)
 end
+
 
 
 --- 
@@ -110,8 +119,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostMissionName(p0,p1,p2)
-   return Citizen.InvokeNative(0x2024F4F333095FB1,p0,p1,p2)
+    return Citizen.InvokeNative(0x2024F4F333095FB1,p0,p1,p2)
 end
+
 
 
 --- 
@@ -121,8 +131,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostReticleMessage(p0,p1,p2)
-   return Citizen.InvokeNative(0x893128CDB4B81FBB,p0,p1,p2)
+    return Citizen.InvokeNative(0x893128CDB4B81FBB,p0,p1,p2)
 end
+
 
 
 --- 
@@ -132,8 +143,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostOneTextShard(p0,p1,p2)
-   return Citizen.InvokeNative(0x860DDFE97CC94DF0,p0,p1,p2)
+    return Citizen.InvokeNative(0x860DDFE97CC94DF0,p0,p1,p2)
 end
+
 
 
 --- 
@@ -144,8 +156,9 @@ end
 ---@param p3 boolean
 ---@return number
 function UiFeedPostTwoTextShard(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xA6F4216AB10EB08E,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xA6F4216AB10EB08E,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -157,8 +170,9 @@ end
 ---@param p4 boolean
 ---@return number
 function UiFeedPostThreeTextShard(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0x02BCC0FE9EBA3529,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0x02BCC0FE9EBA3529,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -168,8 +182,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostGameUpdateShard(p0,p1,p2)
-   return Citizen.InvokeNative(0x8D1249BD28791878,p0,p1,p2)
+    return Citizen.InvokeNative(0x8D1249BD28791878,p0,p1,p2)
 end
+
 
 
 --- 
@@ -179,8 +194,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiFeedPostVoiceChatFeed(p0,p1,p2)
-   return Citizen.InvokeNative(0xC48152BC6B3E821C,p0,p1,p2)
+    return Citizen.InvokeNative(0xC48152BC6B3E821C,p0,p1,p2)
 end
+
 
 
 --- feedChannel: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eUIFeedChannel
@@ -193,11 +209,13 @@ function UiFeedClearChannel(feedChannel,p1,p2)
 end
 
 
+
 --- Hides Toast Notifications
 --- Native 0x6035E8FBCA32AC5E (_UI_FEED_CLEAR_ALL_CHANNELS)
 function UiFeedClearAllChannels()
     Citizen.InvokeNative(0x6035E8FBCA32AC5E)
 end
+
 
 
 --- Clears help text
@@ -209,13 +227,15 @@ function UiFeedClearHelpTextFeed(feedMessage,p1)
 end
 
 
+
 --- Returns messageState, see https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eUIMessageState
 --- Native 0x59FA676177DBE4C9 (_UI_FEED_GET_MESSAGE_STATE)
 ---@param feedMessage number
 ---@return number
 function UiFeedGetMessageState(feedMessage)
-   return Citizen.InvokeNative(0x59FA676177DBE4C9,feedMessage)
+    return Citizen.InvokeNative(0x59FA676177DBE4C9,feedMessage)
 end
+
 
 
 --- feedChannel: see UI_FEED_CLEAR_CHANNEL
@@ -224,7 +244,8 @@ end
 ---@param feedChannel number
 ---@return number
 function UiFeedGetCurrentMessage(feedChannel)
-   return Citizen.InvokeNative(0xC17F69E1418CD11F,feedChannel)
+    return Citizen.InvokeNative(0xC17F69E1418CD11F,feedChannel)
 end
+
 
 

@@ -4,8 +4,9 @@
 ---@param subType number
 ---@return number
 function ScFeedSubmitPresetMessage(type,subType)
-   return Citizen.InvokeNative(0xEFB64240F6B17817,type,subType)
+    return Citizen.InvokeNative(0xEFB64240F6B17817,type,subType)
 end
+
 
 
 --- 
@@ -14,5 +15,6 @@ end
 function ScFeedHubHasNewData()
    return Citizen.InvokeNative(0x068332D20CB6F897)
 end
+
 
 

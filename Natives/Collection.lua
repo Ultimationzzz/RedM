@@ -4,8 +4,9 @@
 ---@param collectableItem hash
 ---@return hash
 function CollectableGetCategory(collectableItem)
-   return Citizen.InvokeNative(0x725D52F21A5E9EF6,collectableItem)
+    return Citizen.InvokeNative(0x725D52F21A5E9EF6,collectableItem)
 end
+
 
 
 --- 
@@ -13,8 +14,9 @@ end
 ---@param collectableItem hash
 ---@return hash
 function CollectableGetSubcategory(collectableItem)
-   return Citizen.InvokeNative(0x6052B4DE6657684F,collectableItem)
+    return Citizen.InvokeNative(0x6052B4DE6657684F,collectableItem)
 end
+
 
 
 --- 
@@ -22,8 +24,9 @@ end
 ---@param collectableItem hash
 ---@return hash
 function CollectableGetIpl(collectableItem)
-   return Citizen.InvokeNative(0x922A79CD4A033B8B,collectableItem)
+    return Citizen.InvokeNative(0x922A79CD4A033B8B,collectableItem)
 end
+
 
 
 --- 
@@ -31,8 +34,9 @@ end
 ---@param collectableItem hash
 ---@return vector3
 function CollectableGetPlacementLocation(collectableItem)
-   return Citizen.InvokeNative(0x1F1DD794908C2BFA,collectableItem)
+    return Citizen.InvokeNative(0x1F1DD794908C2BFA,collectableItem)
 end
+
 
 
 --- 
@@ -40,8 +44,9 @@ end
 ---@param collectableItem hash
 ---@return number
 function CollectableGetNumFound(collectableItem)
-   return Citizen.InvokeNative(0xF83D3DDA4D3C8169,collectableItem)
+    return Citizen.InvokeNative(0xF83D3DDA4D3C8169,collectableItem)
 end
+
 
 
 --- 
@@ -49,8 +54,9 @@ end
 ---@param collectableItem hash
 ---@return number
 function CollectableGetNumTurnedIn(collectableItem)
-   return Citizen.InvokeNative(0x9A03F22AD446EEAC,collectableItem)
+    return Citizen.InvokeNative(0x9A03F22AD446EEAC,collectableItem)
 end
+
 
 
 --- 
@@ -62,6 +68,7 @@ function CollectableIncrementNumFound(collectableItem,amount)
 end
 
 
+
 --- 
 --- Native 0x398FAB9C96A81924 (_COLLECTABLE_INCREMENT_NUM_TURNED_IN)
 ---@param collectableItem hash
@@ -71,14 +78,16 @@ function CollectableIncrementNumTurnedIn(collectableItem,amount)
 end
 
 
+
 --- 
 --- Native 0x62CAB7DB62EAD434 (_COLLECTABLE_CATEGORY_GET_NUM_COLLECTABLES)
 ---@param collectableCategory hash
 ---@param collectableSubcategory hash
 ---@return number
 function CollectableCategoryGetNumCollectables(collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0x62CAB7DB62EAD434,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0x62CAB7DB62EAD434,collectableCategory,collectableSubcategory)
 end
+
 
 
 --- 
@@ -88,8 +97,9 @@ end
 ---@param collectableSubcategory hash
 ---@return hash
 function CollectableGetCollectableItemHash(index,collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0x126CBEBBA46693CF,index,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0x126CBEBBA46693CF,index,collectableCategory,collectableSubcategory)
 end
+
 
 
 --- 
@@ -98,8 +108,9 @@ end
 ---@param collectableSubcategory hash
 ---@return number
 function CollectableCategoryGetNumFound(collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0x5461C821D00FE15A,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0x5461C821D00FE15A,collectableCategory,collectableSubcategory)
 end
+
 
 
 --- 
@@ -108,8 +119,9 @@ end
 ---@param collectableSubcategory hash
 ---@return number
 function CollectableCategoryGetNumTurnedIn(collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0x3A65F4844913A047,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0x3A65F4844913A047,collectableCategory,collectableSubcategory)
 end
+
 
 
 --- 
@@ -122,14 +134,16 @@ function CollectableCategorySetHasReceivedList(p0,p1,p2)
 end
 
 
+
 --- collectableCategory: ANTIQUE_BOTTLES, BIRD_EGGS, ARROWHEADS, FAMILY_HEIRLOOMS, WILD_FLOWERS, COINS, LOST_JEWELRY_RINGS, LOST_JEWELRY_BRACELETS, LOST_JEWELRY_EARRINGS, LOST_JEWELRY_NECKLACES, TAROT_CARDS_CUPS, TAROT_CARDS_PENTACLES, TAROT_CARDS_SWORDS, TAROT_CARDS_WANDS, FOSSILS_COMMON, FOSSILS_UNCOMMON, FOSSILS_RARE
 --- Native 0xCC644BC1DD655269 (COLLECTABLE_GET_CATEGORY_ITEM_SET_BUY_AWARD)
 ---@param collectableCategory hash
 ---@param p1 hash
 ---@return hash
 function CollectableGetCategoryItemSetBuyAward(collectableCategory,p1)
-   return Citizen.InvokeNative(0xCC644BC1DD655269,collectableCategory,p1)
+    return Citizen.InvokeNative(0xCC644BC1DD655269,collectableCategory,p1)
 end
+
 
 
 --- 
@@ -138,8 +152,9 @@ end
 ---@param collectableSubcategory hash
 ---@return hash
 function CollectableCategoryGetToastTextureName(collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0xD52D20B0C76BB26D,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0xD52D20B0C76BB26D,collectableCategory,collectableSubcategory)
 end
+
 
 
 --- 
@@ -148,7 +163,8 @@ end
 ---@param collectableSubcategory hash
 ---@return hash
 function CollectableCategoryGetToastTextureDictionary(collectableCategory,collectableSubcategory)
-   return Citizen.InvokeNative(0x13AAECDA43318BFE,collectableCategory,collectableSubcategory)
+    return Citizen.InvokeNative(0x13AAECDA43318BFE,collectableCategory,collectableSubcategory)
 end
+
 
 

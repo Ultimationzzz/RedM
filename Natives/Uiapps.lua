@@ -3,8 +3,9 @@
 ---@param appNameHash hash
 ---@return boolean
 function IsUiappActiveByHash(appNameHash)
-   return Citizen.InvokeNative(0x25B7A0206BDFAC76,appNameHash)
+    return Citizen.InvokeNative(0x25B7A0206BDFAC76,appNameHash)
 end
+
 
 
 --- 
@@ -15,13 +16,15 @@ function IsAnyUiappActive()
 end
 
 
+
 --- 
 --- Native 0x4E511D093A86AD49 (IS_UIAPP_RUNNING_BY_HASH)
 ---@param appNameHash hash
 ---@return boolean
 function IsUiappRunningByHash(appNameHash)
-   return Citizen.InvokeNative(0x4E511D093A86AD49,appNameHash)
+    return Citizen.InvokeNative(0x4E511D093A86AD49,appNameHash)
 end
+
 
 
 --- 
@@ -29,8 +32,9 @@ end
 ---@param appName string
 ---@return boolean
 function IsUiappRunning(appName)
-   return Citizen.InvokeNative(0xDE4A9B35D028979F,appName)
+    return Citizen.InvokeNative(0xDE4A9B35D028979F,appName)
 end
+
 
 
 --- 
@@ -41,13 +45,15 @@ function IsAnyUiappRunning()
 end
 
 
+
 --- 
 --- Native 0x96FD694FE5BE55DC (_GET_UIAPP_CURRENT_ACTIVITY_BY_HASH)
 ---@param appNameHash hash
 ---@return hash
 function GetUiappCurrentActivityByHash(appNameHash)
-   return Citizen.InvokeNative(0x96FD694FE5BE55DC,appNameHash)
+    return Citizen.InvokeNative(0x96FD694FE5BE55DC,appNameHash)
 end
+
 
 
 --- 
@@ -58,12 +64,14 @@ function CloseUiappByHash(appNameHash)
 end
 
 
+
 --- 
 --- Native 0x04428420A248A354 (_CLOSE_UIAPP_BY_HASH_IMMEDIATE)
 ---@param appNameHash hash
 function CloseUiappByHashImmediate(appNameHash)
     Citizen.InvokeNative(0x04428420A248A354,appNameHash)
 end
+
 
 
 --- 
@@ -74,12 +82,14 @@ function CloseUiapp(appName)
 end
 
 
+
 --- 
 --- Native 0x3015635426D1B17C (_CLOSE_UIAPP_IMMEDIATE)
 ---@param appName string
 function CloseUiappImmediate(appName)
     Citizen.InvokeNative(0x3015635426D1B17C,appName)
 end
+
 
 
 --- 
@@ -89,11 +99,13 @@ function CloseAllUiapps()
 end
 
 
+
 --- 
 --- Native 0x12769EEB8DBD7A7B (_CLOSE_ALL_UIAPPS_IMMEDIATE)
 function CloseAllUiappsImmediate()
     Citizen.InvokeNative(0x12769EEB8DBD7A7B)
 end
+
 
 
 --- 
@@ -102,8 +114,9 @@ end
 ---@param entryHash hash
 ---@return number
 function LaunchUiappByHashWithEntry(appNameHash,entryHash)
-   return Citizen.InvokeNative(0xC1BCF31E975B3195,appNameHash,entryHash)
+    return Citizen.InvokeNative(0xC1BCF31E975B3195,appNameHash,entryHash)
 end
+
 
 
 --- 
@@ -111,8 +124,9 @@ end
 ---@param appNameHash hash
 ---@return number
 function LaunchUiappByHash(appNameHash)
-   return Citizen.InvokeNative(0xC8FC7F4E4CF4F581,appNameHash)
+    return Citizen.InvokeNative(0xC8FC7F4E4CF4F581,appNameHash)
 end
+
 
 
 --- 
@@ -121,8 +135,9 @@ end
 ---@param entry string
 ---@return number
 function LaunchUiappWithEntry(appName,entry)
-   return Citizen.InvokeNative(0x7B2027BAC5C8EC89,appName,entry)
+    return Citizen.InvokeNative(0x7B2027BAC5C8EC89,appName,entry)
 end
+
 
 
 --- 
@@ -131,8 +146,9 @@ end
 ---@param entryHash hash
 ---@return boolean
 function CanLaunchUiappByHashWithEntry(appNameHash,entryHash)
-   return Citizen.InvokeNative(0x16F47D434B6086BF,appNameHash,entryHash)
+    return Citizen.InvokeNative(0x16F47D434B6086BF,appNameHash,entryHash)
 end
+
 
 
 --- 
@@ -140,8 +156,9 @@ end
 ---@param appNameHash hash
 ---@return boolean
 function CanLaunchUiappByHash(appNameHash)
-   return Citizen.InvokeNative(0xE555EC27D65EDE80,appNameHash)
+    return Citizen.InvokeNative(0xE555EC27D65EDE80,appNameHash)
 end
+
 
 
 --- 
@@ -150,8 +167,9 @@ end
 ---@param transitionHash hash
 ---@return boolean
 function RequestUiappTransitionByHash(appNameHash,transitionHash)
-   return Citizen.InvokeNative(0x7689CD255655BFD7,appNameHash,transitionHash)
+    return Citizen.InvokeNative(0x7689CD255655BFD7,appNameHash,transitionHash)
 end
+
 
 
 --- 
@@ -159,7 +177,8 @@ end
 ---@param appNameHash hash
 ---@return boolean
 function IsUiappTransitioningByHash(appNameHash)
-   return Citizen.InvokeNative(0x42095B886D30DE66,appNameHash)
+    return Citizen.InvokeNative(0x42095B886D30DE66,appNameHash)
 end
+
 
 

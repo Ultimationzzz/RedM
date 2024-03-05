@@ -3,8 +3,9 @@
 ---@param hash hash
 ---@return boolean
 function EventQueueIsEmpty(hash)
-   return Citizen.InvokeNative(0x402B5D7D269FF796,hash)
+    return Citizen.InvokeNative(0x402B5D7D269FF796,hash)
 end
+
 
 
 --- 
@@ -13,5 +14,6 @@ end
 function EventQueuePop(hash)
     Citizen.InvokeNative(0xD87DF294B049211D,hash)
 end
+
 
 

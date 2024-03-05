@@ -5,6 +5,7 @@ function FreeMemoryForMissionCreatorPhoto()
 end
 
 
+
 --- 
 --- Native 0x84F0BA7462FF8D58 (LOAD_MISSION_CREATOR_PHOTO)
 ---@param p0 any*
@@ -13,8 +14,9 @@ end
 ---@param p3 any
 ---@return boolean
 function LoadMissionCreatorPhoto(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x84F0BA7462FF8D58,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x84F0BA7462FF8D58,p0,p1,p2,p3)
 end
+
 
 
 --- contentId: returned by NETWORK::_UGC_QUERY_GET_CREATOR_PHOTO(uVar0, 0, sParam3)
@@ -22,8 +24,9 @@ end
 ---@param contentId string
 ---@return number
 function GetStatusOfLoadMissionCreatorPhoto(contentId)
-   return Citizen.InvokeNative(0xC71B50AE58D07369,contentId)
+    return Citizen.InvokeNative(0xC71B50AE58D07369,contentId)
 end
+
 
 
 --- 
@@ -34,6 +37,7 @@ function BeginTakeHighQualityPhoto()
 end
 
 
+
 --- 
 --- Native 0x4A3DA74C3CCB1725 (GET_STATUS_OF_TAKE_HIGH_QUALITY_PHOTO)
 ---@return number
@@ -42,11 +46,13 @@ function GetStatusOfTakeHighQualityPhoto()
 end
 
 
+
 --- 
 --- Native 0xD45547D8396F002A (FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO)
 function FreeMemoryForHighQualityPhoto()
     Citizen.InvokeNative(0xD45547D8396F002A)
 end
+
 
 
 --- 
@@ -57,12 +63,14 @@ function SetPhotoSelfStat(p0)
 end
 
 
+
 --- 
 --- Native 0x8E6AFF353C09652E (_SET_PHOTO_STUDIO_STAT)
 ---@param p0 number
 function SetPhotoStudioStat(p0)
     Citizen.InvokeNative(0x8E6AFF353C09652E,p0)
 end
+
 
 
 --- 
@@ -73,12 +81,14 @@ function SetPosseIdForPhoto(posseId)
 end
 
 
+
 --- 
 --- Native 0x86076AE35CBBE55F (IS_PHOTO_FRAME)
 ---@return boolean
 function IsPhotoFrame()
    return Citizen.InvokeNative(0x86076AE35CBBE55F)
 end
+
 
 
 --- 
@@ -89,12 +99,14 @@ function SetPhotoInPhotomodeStat(p0)
 end
 
 
+
 --- 
 --- Native 0x8B3296278328B5EB (_SET_PHOTO_OVERLAY_EFFECT_STAT)
 ---@param p0 number
 function SetPhotoOverlayEffectStat(p0)
     Citizen.InvokeNative(0x8B3296278328B5EB,p0)
 end
+
 
 
 --- 
@@ -105,12 +117,14 @@ function SetPlayerAppearInPhoto(player)
 end
 
 
+
 --- 
 --- Native 0xD1031B83AC093BC7 (_SET_REGION_PHOTO_TAKEN_STAT)
 ---@param p0 string
 function SetRegionPhotoTakenStat(p0)
     Citizen.InvokeNative(0xD1031B83AC093BC7,p0)
 end
+
 
 
 --- 
@@ -121,6 +135,7 @@ function SetDistrictPhotoTakenStat(p0)
 end
 
 
+
 --- 
 --- Native 0x8952E857696B8A79 (_SET_STATE_PHOTO_TAKEN_STAT)
 ---@param p0 string
@@ -129,13 +144,15 @@ function SetStatePhotoTakenStat(p0)
 end
 
 
+
 --- 
 --- Native 0x57639FD876B68A91 (SAVE_HIGH_QUALITY_PHOTO)
 ---@param unused number
 ---@return boolean
 function SaveHighQualityPhoto(unused)
-   return Citizen.InvokeNative(0x57639FD876B68A91,unused)
+    return Citizen.InvokeNative(0x57639FD876B68A91,unused)
 end
+
 
 
 --- 0 = succeeded
@@ -148,13 +165,15 @@ function GetStatusOfSaveHighQualityPhoto()
 end
 
 
+
 --- Called together with FREE_MEMORY_FOR_LOW_QUALITY_PHOTO
 --- Native 0x494A9874F17A7D50 (BEGIN_CREATE_LOW_QUALITY_COPY_OF_PHOTO)
 ---@param p0 number
 ---@return boolean
 function BeginCreateLowQualityCopyOfPhoto(p0)
-   return Citizen.InvokeNative(0x494A9874F17A7D50,p0)
+    return Citizen.InvokeNative(0x494A9874F17A7D50,p0)
 end
+
 
 
 --- Old name: _GET_STATUS_OF_DRAW_LOW_QUALITY_PHOTO
@@ -162,8 +181,9 @@ end
 ---@param p0 any
 ---@return number
 function GetStatusOfCreateLowQualityCopyOfPhoto(p0)
-   return Citizen.InvokeNative(0x13430D3D5A45F14B,p0)
+    return Citizen.InvokeNative(0x13430D3D5A45F14B,p0)
 end
+
 
 
 --- 
@@ -171,6 +191,7 @@ end
 function FreeMemoryForLowQualityPhoto()
     Citizen.InvokeNative(0x614682E715ADBAAC)
 end
+
 
 
 --- nullsub, doesn't do anything (GTA5 leftover, there is no phone in RDR3)
@@ -182,12 +203,14 @@ function DrawLowQualityPhotoToPhone(p0,photoRotation)
 end
 
 
+
 --- Always returns 200.
 --- Native 0x8E587FCD30E05592 (_GET_MAX_NUMBER_OF_LOCAL_PHOTOS)
 ---@return number
 function GetMaxNumberOfLocalPhotos()
    return Citizen.InvokeNative(0x8E587FCD30E05592)
 end
+
 
 
 --- 
@@ -198,12 +221,14 @@ function GetCurrentNumberOfLocalPhotos()
 end
 
 
+
 --- 
 --- Native 0xA42EDF1E88734A7E (QUEUE_OPERATION_TO_CREATE_SORTED_LIST_OF_PHOTOS)
 ---@return any
 function QueueOperationToCreateSortedListOfPhotos()
    return Citizen.InvokeNative(0xA42EDF1E88734A7E)
 end
+
 
 
 --- 0 = succeeded
@@ -214,6 +239,7 @@ end
 function GetStatusOfSortedListOperation()
    return Citizen.InvokeNative(0xB28894CD7408BD0C)
 end
+
 
 
 --- 
@@ -231,12 +257,14 @@ function DrawLightWithRange(posX,posY,posZ,colorR,colorG,colorB,range,intensity)
 end
 
 
+
 --- 
 --- Native 0xBDBACB52A03CC760 (UPDATE_LIGHTS_ON_ENTITY)
 ---@param entity entity
 function UpdateLightsOnEntity(entity)
     Citizen.InvokeNative(0xBDBACB52A03CC760,entity)
 end
+
 
 
 --- https://gfycat.com/meagerfaireyra
@@ -250,6 +278,7 @@ function SetLightsColorForEntity(entity,red,green,blue)
 end
 
 
+
 --- 
 --- Native 0x07C0F87AAC57F2E4 (_SET_LIGHTS_INTENSITY_FOR_ENTITY)
 ---@param entity entity
@@ -259,6 +288,7 @@ function SetLightsIntensityForEntity(entity,intensity)
 end
 
 
+
 --- type must be less than or equal to 20
 --- Native 0xAB72C67163DC4DB4 (_SET_LIGHTS_TYPE_FOR_ENTITY)
 ---@param entity entity
@@ -266,6 +296,7 @@ end
 function SetLightsTypeForEntity(entity,type)
     Citizen.InvokeNative(0xAB72C67163DC4DB4,entity,type)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/markers/marker_types.lua
@@ -299,6 +330,7 @@ function DrawMarker(type,posX,posY,posZ,dirX,dirY,dirZ,rotX,rotY,rotZ,scaleX,sca
 end
 
 
+
 --- 
 --- Native 0x175668836B44CBB0 (CREATE_CHECKPOINT_WITH_NAMEHASH)
 ---@param typeHash hash
@@ -316,8 +348,9 @@ end
 ---@param reserved number
 ---@return number
 function CreateCheckpointWithNamehash(typeHash,posX1,posY1,posZ1,posX2,posY2,posZ2,radius,red,green,blue,alpha,reserved)
-   return Citizen.InvokeNative(0x175668836B44CBB0,typeHash,posX1,posY1,posZ1,posX2,posY2,posZ2,radius,red,green,blue,alpha,reserved)
+    return Citizen.InvokeNative(0x175668836B44CBB0,typeHash,posX1,posY1,posZ1,posX2,posY2,posZ2,radius,red,green,blue,alpha,reserved)
 end
+
 
 
 --- 
@@ -325,8 +358,9 @@ end
 ---@param checkpoint number
 ---@return boolean
 function DoesCheckpointHaveFx(checkpoint)
-   return Citizen.InvokeNative(0x4C11CCACB7C02B6E,checkpoint)
+    return Citizen.InvokeNative(0x4C11CCACB7C02B6E,checkpoint)
 end
+
 
 
 --- Sets the checkpoint color.
@@ -341,6 +375,7 @@ function SetCheckpointRgba(checkpoint,red,green,blue,alpha)
 end
 
 
+
 --- Sets the checkpoint icon color.
 --- Native 0x99AFF17222D4DEB4 (SET_CHECKPOINT_RGBA2)
 ---@param checkpoint number
@@ -353,12 +388,14 @@ function SetCheckpointRgba2(checkpoint,red,green,blue,alpha)
 end
 
 
+
 --- 
 --- Native 0x0DED5B0C8EBAAE12 (DELETE_CHECKPOINT)
 ---@param checkpoint number
 function DeleteCheckpoint(checkpoint)
     Citizen.InvokeNative(0x0DED5B0C8EBAAE12,checkpoint)
 end
+
 
 
 --- Draws a rectangle on the screen.
@@ -386,6 +423,7 @@ function DrawRect(x,y,width,height,red,green,blue,alpha,p8,p9)
 end
 
 
+
 --- Sets a flag defining whether or not script draw commands should continue being drawn behind the pause menu. This is usually used for draw commands that are used with a world render target.
 --- Native 0x906B86E6D7896B9E (SET_SCRIPT_GFX_DRAW_BEHIND_PAUSEMENU)
 ---@param toggle boolean
@@ -394,12 +432,14 @@ function SetScriptGfxDrawBehindPausemenu(toggle)
 end
 
 
+
 --- Sets the draw order for script draw commands.
 --- Native 0xCFCC78391C8B3814 (SET_SCRIPT_GFX_DRAW_ORDER)
 ---@param drawOrder number
 function SetScriptGfxDrawOrder(drawOrder)
     Citizen.InvokeNative(0xCFCC78391C8B3814,drawOrder)
 end
+
 
 
 --- Draws a 2D sprite on the screen.
@@ -430,6 +470,7 @@ function DrawSprite(textureDict,textureName,screenX,screenY,width,height,heading
 end
 
 
+
 --- 
 --- Native 0x40866A418EB8EFDE (ATTACH_TV_AUDIO_TO_ENTITY)
 ---@param entity entity
@@ -438,12 +479,14 @@ function AttachTvAudioToEntity(entity)
 end
 
 
+
 --- Probably changes tvs from being a 3d audio to being "global" audio
 --- Native 0x64437C98FCC5F291 (SET_TV_AUDIO_FRONTEND)
 ---@param toggle boolean
 function SetTvAudioFrontend(toggle)
     Citizen.InvokeNative(0x64437C98FCC5F291,toggle)
 end
+
 
 
 --- Hardcoded to always set x to 1280 and y to 720.
@@ -455,6 +498,7 @@ function GetScreenResolution(x,y)
 end
 
 
+
 --- 
 --- Native 0xCB50D7AFCC8B0EC6 (GET_SCREEN_COORD_FROM_WORLD_COORD)
 ---@param worldX float
@@ -464,8 +508,9 @@ end
 ---@param screenY float*
 ---@return boolean
 function GetScreenCoordFromWorldCoord(worldX,worldY,worldZ,screenX,screenY)
-   return Citizen.InvokeNative(0xCB50D7AFCC8B0EC6,worldX,worldY,worldZ,screenX,screenY)
+    return Citizen.InvokeNative(0xCB50D7AFCC8B0EC6,worldX,worldY,worldZ,screenX,screenY)
 end
+
 
 
 --- 
@@ -474,8 +519,9 @@ end
 ---@param dict hash
 ---@return boolean
 function IsTextureInDict(txdHash,dict)
-   return Citizen.InvokeNative(0xA2A51869BDED733B,txdHash,dict)
+    return Citizen.InvokeNative(0xA2A51869BDED733B,txdHash,dict)
 end
+
 
 
 --- Does not affect weapons, particles, fire/explosions, flashlights or the sun.
@@ -488,11 +534,13 @@ function SetArtificialLightsState(state)
 end
 
 
+
 --- 
 --- Native 0x98A7CD5EA379A854 (DISABLE_HDTEX_THIS_FRAME)
 function DisableHdtexThisFrame()
     Citizen.InvokeNative(0x98A7CD5EA379A854)
 end
+
 
 
 --- Creates a tracked point, useful for checking the visibility of a 3D point on screen.
@@ -501,6 +549,7 @@ end
 function CreateTrackedPoint()
    return Citizen.InvokeNative(0xFB405CB357C69CB9)
 end
+
 
 
 --- 
@@ -515,13 +564,15 @@ function SetTrackedPointInfo(point,x,y,z,radius)
 end
 
 
+
 --- 
 --- Native 0xCBB056BA159FB48D (IS_TRACKED_POINT_VISIBLE)
 ---@param point number
 ---@return boolean
 function IsTrackedPointVisible(point)
-   return Citizen.InvokeNative(0xCBB056BA159FB48D,point)
+    return Citizen.InvokeNative(0xCBB056BA159FB48D,point)
 end
+
 
 
 --- 
@@ -532,13 +583,15 @@ function DestroyTrackedPoint(point)
 end
 
 
+
 --- 
 --- Native 0xF2FDDCC8C6BAE1B3 (_IS_TRACKED_POINT_VALID)
 ---@param point number
 ---@return boolean
 function IsTrackedPointValid(point)
-   return Citizen.InvokeNative(0xF2FDDCC8C6BAE1B3,point)
+    return Citizen.InvokeNative(0xF2FDDCC8C6BAE1B3,point)
 end
+
 
 
 --- Returns handle to be used with REMOVE_GRASS_CULL_SPHERE
@@ -550,8 +603,9 @@ end
 ---@param p4 number
 ---@return number
 function SetGrassCullSphere(x,y,z,p3,p4)
-   return Citizen.InvokeNative(0x27219300C36A8D40,x,y,z,p3,p4)
+    return Citizen.InvokeNative(0x27219300C36A8D40,x,y,z,p3,p4)
 end
+
 
 
 --- 
@@ -560,6 +614,7 @@ end
 function RemoveGrassCullSphere(handle)
     Citizen.InvokeNative(0xAE7BF7CA9E4BA48D,handle)
 end
+
 
 
 --- Adds Vegetation Blocking Zone, Added Snow Flattening veg mod Zone
@@ -571,8 +626,9 @@ end
 ---@param p3 number
 ---@return number
 function AddVegModifierZone(volume,p1,flags,p3)
-   return Citizen.InvokeNative(0xBD3324281E8B9933,volume,p1,flags,p3)
+    return Citizen.InvokeNative(0xBD3324281E8B9933,volume,p1,flags,p3)
 end
+
 
 
 --- Returns veg modifier handle
@@ -586,8 +642,9 @@ end
 ---@param p6 number
 ---@return number
 function AddVegModifierSphere(x,y,z,radius,modType,flags,p6)
-   return Citizen.InvokeNative(0xFA50F79257745E74,x,y,z,radius,modType,flags,p6)
+    return Citizen.InvokeNative(0xFA50F79257745E74,x,y,z,radius,modType,flags,p6)
 end
+
 
 
 --- 
@@ -599,12 +656,14 @@ function RemoveVegModifierSphere(vegModifierHandle,p1)
 end
 
 
+
 --- 
 --- Native 0xDFEA23EC90113657 (_ENABLE_STATIC_VEG_MODIFIER)
 ---@param p0 hash
 function EnableStaticVegModifier(p0)
     Citizen.InvokeNative(0xDFEA23EC90113657,p0)
 end
+
 
 
 --- 
@@ -615,13 +674,15 @@ function DisableStaticVegModifier(p0)
 end
 
 
+
 --- 
 --- Native 0xDE9BAD3292AA6D5E (_IS_STATIC_VEG_MODIFIER_ENABLED)
 ---@param p0 hash
 ---@return boolean
 function IsStaticVegModifierEnabled(p0)
-   return Citizen.InvokeNative(0xDE9BAD3292AA6D5E,p0)
+    return Citizen.InvokeNative(0xDE9BAD3292AA6D5E,p0)
 end
+
 
 
 --- 
@@ -629,8 +690,9 @@ end
 ---@param slots number
 ---@return boolean
 function CreateSwatchTextureDict(slots)
-   return Citizen.InvokeNative(0x3D084D5568FB4028,slots)
+    return Citizen.InvokeNative(0x3D084D5568FB4028,slots)
 end
+
 
 
 --- 
@@ -640,6 +702,7 @@ function DestroySwatchTextureDict()
 end
 
 
+
 --- Example: https://pastebin.com/tTgpER9A
 --- Native 0x646ED1A1D28487DF (_GENERATE_SWATCH_TEXTURE_DIRECTLY)
 ---@param slot number
@@ -647,6 +710,7 @@ end
 function GenerateSwatchTextureDirectly(slot,p1)
     Citizen.InvokeNative(0x646ED1A1D28487DF,slot,p1)
 end
+
 
 
 --- Example:
@@ -661,6 +725,7 @@ end
 function GenerateSwatchTexture(slotId,componentHash,metapedType,p3)
     Citizen.InvokeNative(0x160921255327C591,slotId,componentHash,metapedType,p3)
 end
+
 
 
 --- 
@@ -678,6 +743,7 @@ function CascadeShadowsSetCascadeBounds(p0,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- When this is set to ON, shadows only draw as you get nearer.
 ---When OFF, they draw from a further distance.
 --- Native 0x8FBFD2AEB196B369 (CASCADE_SHADOWS_ENABLE_ENTITY_TRACKER)
@@ -685,6 +751,7 @@ end
 function CascadeShadowsEnableEntityTracker(toggle)
     Citizen.InvokeNative(0x8FBFD2AEB196B369,toggle)
 end
+
 
 
 --- Possible values:
@@ -709,11 +776,13 @@ function CascadeShadowsSetShadowSampleType(type)
 end
 
 
+
 --- 
 --- Native 0xF7C29D7C12C36F03 (CASCADE_SHADOWS_CLEAR_SHADOW_SAMPLE_TYPE)
 function CascadeShadowsClearShadowSampleType()
     Citizen.InvokeNative(0xF7C29D7C12C36F03)
 end
+
 
 
 --- Sets an unknown value related to timecycles.
@@ -724,12 +793,14 @@ function ResetAdaptation(unk)
 end
 
 
+
 --- 
 --- Native 0xEF9E1C45732F55FA (TOGGLE_PAUSED_RENDERPHASES)
 ---@param toggle boolean
 function TogglePausedRenderphases(toggle)
     Citizen.InvokeNative(0xEF9E1C45732F55FA,toggle)
 end
+
 
 
 --- 
@@ -740,11 +811,13 @@ function GetTogglePausedRenderphasesStatus()
 end
 
 
+
 --- 
 --- Native 0xCCD9AAD85E1B559E (RESET_PAUSED_RENDERPHASES)
 function ResetPausedRenderphases()
     Citizen.InvokeNative(0xCCD9AAD85E1B559E)
 end
+
 
 
 --- Old name: _SET_HIDOF_ENV_BLUR_PARAMS
@@ -760,6 +833,7 @@ function SetHidofOverride(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x06C0D8BB6B04A709 (_GET_PHOTO_MODE_EXPOSURE)
 ---@return float
@@ -768,12 +842,14 @@ function GetPhotoModeExposure()
 end
 
 
+
 --- 
 --- Native 0x98F4154989B81EC6 (_GET_PHOTO_MODE_CONTRAST)
 ---@return float
 function GetPhotoModeContrast()
    return Citizen.InvokeNative(0x98F4154989B81EC6)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/ptfx/ptfx_assets_non_looped.lua
@@ -791,8 +867,9 @@ end
 ---@param zAxis boolean
 ---@return boolean
 function StartParticleFxNonLoopedAtCoord(effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0x2E80BF72EF7C87AC,effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0x2E80BF72EF7C87AC,effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -810,8 +887,9 @@ end
 ---@param zAxis boolean
 ---@return boolean
 function StartNetworkedParticleFxNonLoopedAtCoord(effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0xFB97618457994A62,effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0xFB97618457994A62,effectName,xPos,yPos,zPos,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -831,8 +909,9 @@ end
 ---@param axisZ boolean
 ---@return boolean
 function StartParticleFxNonLoopedOnPedBone(effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
-   return Citizen.InvokeNative(0x3FAA72BD940C3AC0,effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
+    return Citizen.InvokeNative(0x3FAA72BD940C3AC0,effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
 end
+
 
 
 --- 
@@ -851,8 +930,9 @@ end
 ---@param axisZ boolean
 ---@return boolean
 function StartParticleFxNonLoopedOnEntity(effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
-   return Citizen.InvokeNative(0xFF4C64C513388C12,effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
+    return Citizen.InvokeNative(0xFF4C64C513388C12,effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
 end
+
 
 
 --- 
@@ -871,8 +951,9 @@ end
 ---@param axisZ boolean
 ---@return boolean
 function StartNetworkedParticleFxNonLoopedOnEntity(effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
-   return Citizen.InvokeNative(0xE6CFE43937061143,effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
+    return Citizen.InvokeNative(0xE6CFE43937061143,effectName,entity,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,scale,axisX,axisY,axisZ)
 end
+
 
 
 --- 
@@ -892,8 +973,9 @@ end
 ---@param axisZ boolean
 ---@return boolean
 function StartParticleFxNonLoopedOnPedBone2(effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
-   return Citizen.InvokeNative(0xC695870B8A149B96,effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
+    return Citizen.InvokeNative(0xC695870B8A149B96,effectName,ped,offsetX,offsetY,offsetZ,rotX,rotY,rotZ,boneIndex,scale,axisX,axisY,axisZ)
 end
+
 
 
 --- 
@@ -906,12 +988,14 @@ function SetParticleFxNonLoopedColour(r,g,b)
 end
 
 
+
 --- 
 --- Native 0xE8A35938A7026CEA (SET_PARTICLE_FX_NON_LOOPED_ALPHA)
 ---@param alpha float
 function SetParticleFxNonLoopedAlpha(alpha)
     Citizen.InvokeNative(0xE8A35938A7026CEA,alpha)
 end
+
 
 
 --- 
@@ -922,6 +1006,7 @@ end
 function SetParticleFxNonLoopedEmitterScale(p0,p1,p2)
     Citizen.InvokeNative(0x56C392C2BD78B024,p0,p1,p2)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/ptfx/ptfx_assets_looped.lua
@@ -940,8 +1025,9 @@ end
 ---@param p11 boolean
 ---@return number
 function StartParticleFxLoopedAtCoord(effectName,x,y,z,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis,p11)
-   return Citizen.InvokeNative(0xBA32867E86125D3A,effectName,x,y,z,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis,p11)
+    return Citizen.InvokeNative(0xBA32867E86125D3A,effectName,x,y,z,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis,p11)
 end
+
 
 
 --- 
@@ -961,8 +1047,9 @@ end
 ---@param zAxis boolean
 ---@return number
 function StartParticleFxLoopedOnPedBone(effectName,ped,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0xE689C1B1432BB8AF,effectName,ped,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0xE689C1B1432BB8AF,effectName,ped,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -981,8 +1068,9 @@ end
 ---@param zAxis boolean
 ---@return number
 function StartParticleFxLoopedOnEntity(effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0xBD41E1440CE39800,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0xBD41E1440CE39800,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -1002,8 +1090,9 @@ end
 ---@param zAxis boolean
 ---@return number
 function StartParticleFxLoopedOnEntityBone(effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0xD3BA6EC7F2FBD5E9,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0xD3BA6EC7F2FBD5E9,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -1022,8 +1111,9 @@ end
 ---@param zAxis boolean
 ---@return number
 function StartNetworkedParticleFxLoopedOnEntity(effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0x8F90AB32E1944BDE,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0x8F90AB32E1944BDE,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -1043,8 +1133,9 @@ end
 ---@param zAxis boolean
 ---@return number
 function StartNetworkedParticleFxLoopedOnEntityBone(effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
-   return Citizen.InvokeNative(0x9C56621462FFE7A6,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
+    return Citizen.InvokeNative(0x9C56621462FFE7A6,effectName,entity,xOffset,yOffset,zOffset,xRot,yRot,zRot,boneIndex,scale,xAxis,yAxis,zAxis)
 end
+
 
 
 --- 
@@ -1056,13 +1147,15 @@ function StopParticleFxLooped(ptfxHandle,p1)
 end
 
 
+
 --- 
 --- Native 0x9DD5AFF561E88F2A (DOES_PARTICLE_FX_LOOPED_EXIST)
 ---@param ptfxHandle number
 ---@return boolean
 function DoesParticleFxLoopedExist(ptfxHandle)
-   return Citizen.InvokeNative(0x9DD5AFF561E88F2A,ptfxHandle)
+    return Citizen.InvokeNative(0x9DD5AFF561E88F2A,ptfxHandle)
 end
+
 
 
 --- 
@@ -1079,6 +1172,7 @@ function SetParticleFxLoopedOffsets(ptfxHandle,x,y,z,rotX,rotY,rotZ)
 end
 
 
+
 --- 
 --- Native 0x3674F389B0FACD80 (SET_PARTICLE_FX_LOOPED_EVOLUTION)
 ---@param ptfxHandle number
@@ -1088,6 +1182,7 @@ end
 function SetParticleFxLoopedEvolution(ptfxHandle,propertyName,amount,noNetwork)
     Citizen.InvokeNative(0x3674F389B0FACD80,ptfxHandle,propertyName,amount,noNetwork)
 end
+
 
 
 --- 
@@ -1102,6 +1197,7 @@ function SetParticleFxLoopedColour(ptfxHandle,r,g,b,p4)
 end
 
 
+
 --- 
 --- Native 0x88786E76234F7054 (SET_PARTICLE_FX_LOOPED_ALPHA)
 ---@param ptfxHandle number
@@ -1109,6 +1205,7 @@ end
 function SetParticleFxLoopedAlpha(ptfxHandle,alpha)
     Citizen.InvokeNative(0x88786E76234F7054,ptfxHandle,alpha)
 end
+
 
 
 --- 
@@ -1120,6 +1217,7 @@ function SetParticleFxLoopedScale(ptfxHandle,scale)
 end
 
 
+
 --- 
 --- Native 0x9B04D471DA0AD7AA (SET_PARTICLE_FX_LOOPED_FAR_CLIP_DIST)
 ---@param ptfxHandle number
@@ -1127,6 +1225,7 @@ end
 function SetParticleFxLoopedFarClipDist(ptfxHandle,range)
     Citizen.InvokeNative(0x9B04D471DA0AD7AA,ptfxHandle,range)
 end
+
 
 
 --- _SET_PARTICLE_FX_LOOPED_FA* - _SET_PARTICLE_FX_LOOPED_OF*
@@ -1138,6 +1237,7 @@ function SetParticleFxLoopedUpdateDistantSmoke(ptfxHandle,scalar)
 end
 
 
+
 --- 
 --- Native 0x459598F579C98929 (REMOVE_PARTICLE_FX)
 ---@param ptfxHandle number
@@ -1147,12 +1247,14 @@ function RemoveParticleFx(ptfxHandle,p1)
 end
 
 
+
 --- 
 --- Native 0x92884B4A49D81325 (REMOVE_PARTICLE_FX_FROM_ENTITY)
 ---@param entity entity
 function RemoveParticleFxFromEntity(entity)
     Citizen.InvokeNative(0x92884B4A49D81325,entity)
 end
+
 
 
 --- 
@@ -1166,12 +1268,14 @@ function RemoveParticleFxInRange(X,Y,Z,radius)
 end
 
 
+
 --- fxName: see data_0/data/effects/ptfx/fxlists/
 --- Native 0xA10DB07FC234DD12 (USE_PARTICLE_FX_ASSET)
 ---@param fxName string
 function UseParticleFxAsset(fxName)
     Citizen.InvokeNative(0xA10DB07FC234DD12,fxName)
 end
+
 
 
 --- 
@@ -1183,12 +1287,14 @@ function SetParticleFxOverride(oldAsset,newAsset)
 end
 
 
+
 --- Resets the effect of SET_PARTICLE_FX_OVERRIDE
 --- Native 0x274B3DABF7E72DEF (RESET_PARTICLE_FX_OVERRIDE)
 ---@param name string
 function ResetParticleFxOverride(name)
     Citizen.InvokeNative(0x274B3DABF7E72DEF,name)
 end
+
 
 
 --- Related to Campfires.
@@ -1204,12 +1310,14 @@ function SetParticleFxAmbientColour(entity,p1,r,g,b)
 end
 
 
+
 --- 
 --- Native 0xA53C8D7D0F8C74D0 (SET_PARTICLE_FX_BULLET_IMPACT_SCALE)
 ---@param scale float
 function SetParticleFxBulletImpactScale(scale)
     Citizen.InvokeNative(0xA53C8D7D0F8C74D0,scale)
 end
+
 
 
 --- 
@@ -1220,6 +1328,7 @@ function SetParticleFxBulletImpactLodrangeScale(p0)
 end
 
 
+
 --- 
 --- Native 0x6E8EB45A4F4460EB (_SET_SNIPER_GLINTS_ENABLED)
 ---@param enabled boolean
@@ -1228,12 +1337,14 @@ function SetSniperGlintsEnabled(enabled)
 end
 
 
+
 --- 
 --- Native 0x2A1625858887D4E6 (SET_PARTICLE_FX_FOOT_LODRANGE_SCALE)
 ---@param p0 float
 function SetParticleFxFootLodrangeScale(p0)
     Citizen.InvokeNative(0x2A1625858887D4E6,p0)
 end
+
 
 
 --- https://imgur.com/a/I2swSDJ
@@ -1246,6 +1357,7 @@ function SetPickupLight(object,toggle)
 end
 
 
+
 --- 
 --- Native 0x50C14328119E1DD1 (_BLOCK_PICKUP_OBJECT_LIGHT)
 ---@param pickupObject object
@@ -1253,6 +1365,7 @@ end
 function BlockPickupObjectLight(pickupObject,toggle)
     Citizen.InvokeNative(0x50C14328119E1DD1,pickupObject,toggle)
 end
+
 
 
 --- 
@@ -1264,6 +1377,7 @@ function BlockPickupPlacementLight(pickup,toggle)
 end
 
 
+
 --- 
 --- Native 0x7C348310A6E2FB91 (ALLOW_PICKUP_LIGHT_SYNC)
 ---@param pickupObject object
@@ -1273,6 +1387,7 @@ function AllowPickupLightSync(pickupObject,allow)
 end
 
 
+
 --- Enables/disables a kind of 'shiny' effect on metals.
 --- Native 0x72E30372E7CC4415 (_SET_PEARLESCENT_FX_ENABLED)
 ---@param object object
@@ -1280,6 +1395,7 @@ end
 function SetPearlescentFxEnabled(object,toggle)
     Citizen.InvokeNative(0x72E30372E7CC4415,object,toggle)
 end
+
 
 
 --- Removes all decals in range from a position, it includes the bullet holes, blood pools, petrol...
@@ -1293,12 +1409,14 @@ function RemoveDecalsInRange(x,y,z,range)
 end
 
 
+
 --- 
 --- Native 0xFB8972BAE0013140 (REMOVE_DECALS_FROM_OBJECT)
 ---@param obj object
 function RemoveDecalsFromObject(obj)
     Citizen.InvokeNative(0xFB8972BAE0013140,obj)
 end
+
 
 
 --- 
@@ -1327,8 +1445,9 @@ end
 ---@param p21 any
 ---@return number
 function AddDecal(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21)
-   return Citizen.InvokeNative(0x57CB267624EF85C0,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21)
+    return Citizen.InvokeNative(0x57CB267624EF85C0,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21)
 end
+
 
 
 --- https://i.imgur.com/ULQU9US.jpg
@@ -1341,6 +1460,7 @@ end
 function AddBloodPool(x,y,z,unused)
     Citizen.InvokeNative(0xFA2ECC78A6014D4F,x,y,z,unused)
 end
+
 
 
 --- https://i.imgur.com/rPITUCV.jpg
@@ -1360,12 +1480,14 @@ function AddBloodPool2(x,y,z,p3,size,p5,permanent,p7,p8)
 end
 
 
+
 --- Creates blood pools for the given ped in some interval for a few seconds.
 --- Native 0xDFCE8CE9F3EBE93F (_ADD_BLOOD_POOLS_FOR_PED)
 ---@param ped number
 function AddBloodPoolsForPed(ped)
     Citizen.InvokeNative(0xDFCE8CE9F3EBE93F,ped)
 end
+
 
 
 --- 
@@ -1379,6 +1501,7 @@ function AddBloodPoolsForPedWithParams(ped,p1,size,p3)
 end
 
 
+
 --- 
 --- Native 0x46F246D6504F0031 (START_PETROL_TRAIL_DECALS)
 ---@param p0 any
@@ -1386,6 +1509,7 @@ end
 function StartPetrolTrailDecals(p0,p1)
     Citizen.InvokeNative(0x46F246D6504F0031,p0,p1)
 end
+
 
 
 --- 
@@ -1399,11 +1523,13 @@ function AddPetrolTrailDecalInfo(x,y,z,p3)
 end
 
 
+
 --- 
 --- Native 0x0E126AAE933F3B56 (END_PETROL_TRAIL_DECALS)
 function EndPetrolTrailDecals()
     Citizen.InvokeNative(0x0E126AAE933F3B56)
 end
+
 
 
 --- 
@@ -1414,13 +1540,15 @@ function RemoveDecal(decal)
 end
 
 
+
 --- 
 --- Native 0x3E4B4E5CF5D3EEB5 (IS_DECAL_ALIVE)
 ---@param decal number
 ---@return boolean
 function IsDecalAlive(decal)
-   return Citizen.InvokeNative(0x3E4B4E5CF5D3EEB5,decal)
+    return Citizen.InvokeNative(0x3E4B4E5CF5D3EEB5,decal)
 end
+
 
 
 --- 
@@ -1430,6 +1558,7 @@ function SetDisablePetrolDecalsIgnitingThisFrame()
 end
 
 
+
 --- p1: 0.3f in R* Scripts
 --- Native 0xB9C92616929CC25D (_BLOOD_TRAIL_FOR_WAYPOINT)
 ---@param waypointRecording string
@@ -1437,6 +1566,7 @@ end
 function BloodTrailForWaypoint(waypointRecording,p1)
     Citizen.InvokeNative(0xB9C92616929CC25D,waypointRecording,p1)
 end
+
 
 
 --- 
@@ -1449,6 +1579,7 @@ function AddBloodTrailPoint(x,y,z)
 end
 
 
+
 --- 
 --- Native 0xF5E45CB1CF965D2D (_ADD_BLOOD_TRAIL_SPLAT)
 ---@param x float
@@ -1457,6 +1588,7 @@ end
 function AddBloodTrailSplat(x,y,z)
     Citizen.InvokeNative(0xF5E45CB1CF965D2D,x,y,z)
 end
+
 
 
 --- Only used in guama1 R* Script
@@ -1468,6 +1600,7 @@ function DisableFarArtificialLights(disable)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/timecycles
 --- Native 0xFA08722A5EA82DA7 (SET_TIMECYCLE_MODIFIER)
 ---@param modifierName string
@@ -1476,12 +1609,14 @@ function SetTimecycleModifier(modifierName)
 end
 
 
+
 --- 
 --- Native 0xFDB74C9CC54C3F37 (SET_TIMECYCLE_MODIFIER_STRENGTH)
 ---@param strength float
 function SetTimecycleModifierStrength(strength)
     Citizen.InvokeNative(0xFDB74C9CC54C3F37,strength)
 end
+
 
 
 --- 
@@ -1493,6 +1628,7 @@ function SetTransitionTimecycleModifier(modifierName,transitionBlend)
 end
 
 
+
 --- 
 --- Native 0xBB6C707F20D955D4 (SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER)
 ---@param strength float
@@ -1501,11 +1637,13 @@ function SetTransitionOutOfTimecycleModifier(strength)
 end
 
 
+
 --- 
 --- Native 0x0E3F4AF2D63491FB (CLEAR_TIMECYCLE_MODIFIER)
 function ClearTimecycleModifier()
     Citizen.InvokeNative(0x0E3F4AF2D63491FB)
 end
+
 
 
 --- 
@@ -1516,12 +1654,14 @@ function GetTimecycleModifierIndex()
 end
 
 
+
 --- 
 --- Native 0x2DA67BA3C8A6755D (GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX)
 ---@return number
 function GetTimecycleTransitionModifierIndex()
    return Citizen.InvokeNative(0x2DA67BA3C8A6755D)
 end
+
 
 
 --- _GET_C* - _GET_E*
@@ -1532,12 +1672,14 @@ function GetModifiedVisibilityDistance()
 end
 
 
+
 --- Old name: _ENABLE_EXTRA_TIMECYCLE_MODIFIER_STRENGTH
 --- Native 0x6FE93BCC7BF12B63 (ENABLE_MOON_CYCLE_OVERRIDE)
 ---@param strength float
 function EnableMoonCycleOverride(strength)
     Citizen.InvokeNative(0x6FE93BCC7BF12B63,strength)
 end
+
 
 
 --- 
@@ -1548,6 +1690,7 @@ function SetTvChannel(channel)
 end
 
 
+
 --- 
 --- Native 0xF90FBFD68F3C59AE (GET_TV_CHANNEL)
 ---@return number
@@ -1556,12 +1699,14 @@ function GetTvChannel()
 end
 
 
+
 --- 
 --- Native 0x73A97068787D7231 (SET_TV_VOLUME)
 ---@param volume float
 function SetTvVolume(volume)
     Citizen.InvokeNative(0x73A97068787D7231,volume)
 end
+
 
 
 --- 
@@ -1580,6 +1725,7 @@ function DrawTvChannel(xPos,yPos,xScale,yScale,rotation,red,green,blue,alpha)
 end
 
 
+
 --- 
 --- Native 0xDEC6B25F5DC8925B (SET_TV_CHANNEL_PLAYLIST)
 ---@param tvChannel number
@@ -1590,13 +1736,15 @@ function SetTvChannelPlaylist(tvChannel,playlistName,restart)
 end
 
 
+
 --- Old name: _IS_TV_PLAYLIST_ITEM_PLAYING
 --- Native 0x4D562223E0EB65F3 (IS_TVSHOW_CURRENTLY_PLAYING)
 ---@param videoCliphash hash
 ---@return boolean
 function IsTvshowCurrentlyPlaying(videoCliphash)
-   return Citizen.InvokeNative(0x4D562223E0EB65F3,videoCliphash)
+    return Citizen.InvokeNative(0x4D562223E0EB65F3,videoCliphash)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -1607,6 +1755,7 @@ function EnableMovieSubtitles(toggle)
 end
 
 
+
 --- 
 --- Native 0x5199405EABFBD7F0 (_ANIMPOSTFX_PRELOAD_POSTFX)
 ---@param effectName string
@@ -1615,13 +1764,15 @@ function AnimpostfxPreloadPostfx(effectName)
 end
 
 
+
 --- 
 --- Native 0xBF2DD155B2ADCD0A (_ANIMPOSTFX_HAS_LOADED)
 ---@param effectName string
 ---@return boolean
 function AnimpostfxHasLoaded(effectName)
-   return Citizen.InvokeNative(0xBF2DD155B2ADCD0A,effectName)
+    return Citizen.InvokeNative(0xBF2DD155B2ADCD0A,effectName)
 end
+
 
 
 --- 
@@ -1632,12 +1783,14 @@ function AnimpostfxSetToUnload(effectName)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/animpostfx
 --- Native 0x4102732DF6B4005F (ANIMPOSTFX_PLAY)
 ---@param effectName string
 function AnimpostfxPlay(effectName)
     Citizen.InvokeNative(0x4102732DF6B4005F,effectName)
 end
+
 
 
 --- 
@@ -1649,12 +1802,14 @@ function AnimpostfxPlayTimed(effectName,duration)
 end
 
 
+
 --- 
 --- Native 0xB4FD7446BAB2F394 (ANIMPOSTFX_STOP)
 ---@param effectName string
 function AnimpostfxStop(effectName)
     Citizen.InvokeNative(0xB4FD7446BAB2F394,effectName)
 end
+
 
 
 --- 
@@ -1665,13 +1820,15 @@ function AnimpostfxClearEffect(effectName)
 end
 
 
+
 --- 
 --- Native 0x4A123E85D7C4CA0B (ANIMPOSTFX_IS_RUNNING)
 ---@param effectName string
 ---@return boolean
 function AnimpostfxIsRunning(effectName)
-   return Citizen.InvokeNative(0x4A123E85D7C4CA0B,effectName)
+    return Citizen.InvokeNative(0x4A123E85D7C4CA0B,effectName)
 end
+
 
 
 --- 
@@ -1679,8 +1836,9 @@ end
 ---@param effectName string
 ---@return boolean
 function AnimpostfxIsTagPlaying(effectName)
-   return Citizen.InvokeNative(0x2D4F9C852CE8A253,effectName)
+    return Citizen.InvokeNative(0x2D4F9C852CE8A253,effectName)
 end
+
 
 
 --- 
@@ -1688,6 +1846,7 @@ end
 function AnimpostfxStopAll()
     Citizen.InvokeNative(0x66560A0D4C64FD21)
 end
+
 
 
 --- 
@@ -1698,6 +1857,7 @@ function AnimpostfxStopTag(effectName)
 end
 
 
+
 --- must be called after ANIMPOSTFX_PLAY, strength 0.0f - 1.0f
 --- Native 0xCAB4DD2D5B2B7246 (_ANIMPOSTFX_SET_STRENGTH)
 ---@param effectName string
@@ -1705,6 +1865,7 @@ end
 function AnimpostfxSetStrength(effectName,strength)
     Citizen.InvokeNative(0xCAB4DD2D5B2B7246,effectName,strength)
 end
+
 
 
 --- Health Core Effect Filter Potency: p1 = 1
@@ -1717,6 +1878,7 @@ end
 function AnimpostfxSetPotency(effectName,p1,potency)
     Citizen.InvokeNative(0xF972F0AB16DC5260,effectName,p1,potency)
 end
+
 
 
 --- 
@@ -1732,6 +1894,7 @@ function AnimpostfxSetPostfxColor(effectName,p1,red,green,blue,alpha)
 end
 
 
+
 --- Known effects: MP_Trans_SceneToPhoto
 ---MP_Trans_WinLose
 ---SpectateFilter
@@ -1742,8 +1905,9 @@ end
 ---@param effectName string
 ---@return hash
 function AnimpostfxGetStackhash(effectName)
-   return Citizen.InvokeNative(0x842CCC9491FFCD9B,effectName)
+    return Citizen.InvokeNative(0x842CCC9491FFCD9B,effectName)
 end
+
 
 
 --- 
@@ -1754,13 +1918,15 @@ function AnimpostfxPreloadPostfxByStackhash(effectNameHash)
 end
 
 
+
 --- 
 --- Native 0x59EA80079B86D8C7 (ANIMPOSTFX_IS_PRELOADING_BY_STACKHASH)
 ---@param effectNameHash hash
 ---@return boolean
 function AnimpostfxIsPreloadingByStackhash(effectNameHash)
-   return Citizen.InvokeNative(0x59EA80079B86D8C7,effectNameHash)
+    return Citizen.InvokeNative(0x59EA80079B86D8C7,effectNameHash)
 end
+
 
 
 --- 
@@ -1771,6 +1937,7 @@ function AnimpostfxPlayTag(effectNameHash)
 end
 
 
+
 --- 
 --- Native 0xEDA5CBECF56E1386 (_ANIMPOSTFX_STOP_STACKHASH_POSTFX)
 ---@param effectNameHash hash
@@ -1779,13 +1946,15 @@ function AnimpostfxStopStackhashPostfx(effectNameHash)
 end
 
 
+
 --- 
 --- Native 0xEEF83A759AE06A27 (_ANIMPOSTFX_IS_STACKHASH_PLAYING)
 ---@param effectNameHash hash
 ---@return boolean
 function AnimpostfxIsStackhashPlaying(effectNameHash)
-   return Citizen.InvokeNative(0xEEF83A759AE06A27,effectNameHash)
+    return Citizen.InvokeNative(0xEEF83A759AE06A27,effectNameHash)
 end
+
 
 
 --- 
@@ -1796,8 +1965,9 @@ end
 ---@param p3 bool*
 ---@return boolean
 function AnimpostfxHasEventTriggeredByStackhash(effectNameHash,p1,p2,p3)
-   return Citizen.InvokeNative(0x9AB192A9EF980EED,effectNameHash,p1,p2,p3)
+    return Citizen.InvokeNative(0x9AB192A9EF980EED,effectNameHash,p1,p2,p3)
 end
+
 
 
 --- Only used in guama1 R* SP Script while spawning the ship
@@ -1810,12 +1980,14 @@ function SetEntityRenderGuarmaShip(vehicle,toggle)
 end
 
 
+
 --- 
 --- Native 0xAF6E67D073D2DCE2 (PEDSHOT_IS_AVAILABLE)
 ---@return boolean
 function PedshotIsAvailable()
    return Citizen.InvokeNative(0xAF6E67D073D2DCE2)
 end
+
 
 
 --- 
@@ -1825,11 +1997,13 @@ function PedshotFinishCleanupData()
 end
 
 
+
 --- 
 --- Native 0x3E2FDDBE435A8787 (_PEDSHOT_PREVIOUS_PERSONA_PHOTO_DATA_CLEANUP)
 function PedshotPreviousPersonaPhotoDataCleanup()
     Citizen.InvokeNative(0x3E2FDDBE435A8787)
 end
+
 
 
 --- 
@@ -1839,6 +2013,7 @@ function PedshotInitCleanupData()
 end
 
 
+
 --- 
 --- Native 0xD9C24F53631F2372 (_PEDSHOT_GENERATE_PERSONA_PHOTO)
 ---@param texture string
@@ -1846,8 +2021,9 @@ end
 ---@param playerSlot number
 ---@return boolean
 function PedshotGeneratePersonaPhoto(texture,ped,playerSlot)
-   return Citizen.InvokeNative(0xD9C24F53631F2372,texture,ped,playerSlot)
+    return Citizen.InvokeNative(0xD9C24F53631F2372,texture,ped,playerSlot)
 end
+
 
 
 --- 
@@ -1856,6 +2032,7 @@ end
 function PedshotSetPersonaPhotoType(personaPhotoLocalCacheType)
     Citizen.InvokeNative(0x196D3ACBEBA4A44B,personaPhotoLocalCacheType)
 end
+
 
 
 --- state: false disables artificial interior light sources for specific proxyInteriorIndex
@@ -1867,13 +2044,15 @@ function SetProxyInteriorIndexArtificialLightsState(proxyInteriorIndex,state)
 end
 
 
+
 --- 
 --- Native 0x113857D66A9CABE6 (_IS_PROXY_INTERIOR_INDEX_ARTIFICIAL_LIGHTS_ENABLED)
 ---@param proxyInteriorIndex number
 ---@return boolean
 function IsProxyInteriorIndexArtificialLightsEnabled(proxyInteriorIndex)
-   return Citizen.InvokeNative(0x113857D66A9CABE6,proxyInteriorIndex)
+    return Citizen.InvokeNative(0x113857D66A9CABE6,proxyInteriorIndex)
 end
+
 
 
 --- Returns proxyInteriorIndex
@@ -1881,8 +2060,9 @@ end
 ---@param interiorId number
 ---@return number
 function GetProxyInteriorIndex(interiorId)
-   return Citizen.InvokeNative(0x5D1C5D8E62E8EE1C,interiorId)
+    return Citizen.InvokeNative(0x5D1C5D8E62E8EE1C,interiorId)
 end
+
 
 
 --- 
@@ -1895,6 +2075,7 @@ function SetCloudLayer(x,y,p2)
 end
 
 
+
 --- 
 --- Native 0xFE7966DF01452F32 (_SET_CLOUD_NOISE)
 ---@param x float
@@ -1903,6 +2084,7 @@ end
 function SetCloudNoise(x,y,z)
     Citizen.InvokeNative(0xFE7966DF01452F32,x,y,z)
 end
+
 
 
 --- Only used in finale2, smuggler2, winter4
@@ -1916,12 +2098,14 @@ function SetCloudPosition(x,y,z)
 end
 
 
+
 --- 
 --- Native 0xC332C91388F5580B (_SET_CLOUD_HEIGHT)
 ---@param height float
 function SetCloudHeight(height)
     Citizen.InvokeNative(0xC332C91388F5580B,height)
 end
+
 
 
 --- 
@@ -1931,11 +2115,13 @@ function EnableEntitymask()
 end
 
 
+
 --- 
 --- Native 0x5C9978A2A3DC3D0D (DISABLE_ENTITYMASK)
 function DisableEntitymask()
     Citizen.InvokeNative(0x5C9978A2A3DC3D0D)
 end
+
 
 
 --- 
@@ -1945,6 +2131,7 @@ end
 function AddEntityToEntityMask(entity,mask)
     Citizen.InvokeNative(0xC6F81FCD15350323,entity,mask)
 end
+
 
 
 --- 
@@ -1957,12 +2144,14 @@ function AddEntityToEntityMaskWithIntensity(entity,mask,intensity)
 end
 
 
+
 --- 
 --- Native 0x56A786E87FF53478 (_REMOVE_ENTITY_FROM_ENTITY_MASK)
 ---@param entity entity
 function RemoveEntityFromEntityMask(entity)
     Citizen.InvokeNative(0x56A786E87FF53478,entity)
 end
+
 
 
 --- 
@@ -1974,8 +2163,9 @@ end
 ---@param layer3 float*
 ---@return boolean
 function GetEntityMaskLayers(entity,layer0,layer1,layer2,layer3)
-   return Citizen.InvokeNative(0xE8A8378BF651079C,entity,layer0,layer1,layer2,layer3)
+    return Citizen.InvokeNative(0xE8A8378BF651079C,entity,layer0,layer1,layer2,layer3)
 end
+
 
 
 --- 
@@ -1990,6 +2180,7 @@ function SetEntityMaskLayers(entity,layer0,layer1,layer2,layer3)
 end
 
 
+
 --- Used for script function RPG_GLOBAL_STATS__PRIVATE__ACTIVATE_STAT_FLAG - Quite and Inspiration Aura equip
 ---Params: 0f, 2f, 2f
 --- Native 0x249CD6B7285536F2 (_SET_ENTITY_AURA)
@@ -2001,11 +2192,13 @@ function SetEntityAura(p0,p1,p2)
 end
 
 
+
 --- Used for script function RPG_GLOBAL_STATS__PRIVATE__DEACTIVATE_STAT_FLAG - Inspiration Aura unequip
 --- Native 0xAF4D239B8903FCBE (_RESET_ENTITY_AURA)
 function ResetEntityAura()
     Citizen.InvokeNative(0xAF4D239B8903FCBE)
 end
+
 
 
 --- enum class eSnowCoverageType
@@ -2020,5 +2213,6 @@ end
 function SetSnowCoverageType(type)
     Citizen.InvokeNative(0xF02A9C330BBFC5C7,type)
 end
+
 
 

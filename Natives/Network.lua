@@ -6,6 +6,7 @@ function NetworkIsSignedOnline()
 end
 
 
+
 --- Hardcoded to return zero.
 ---==== PS4 specific info ====
 ---Returns some sort of unavailable reason:
@@ -24,12 +25,14 @@ function NetworkGetNpUnavailableReason()
 end
 
 
+
 --- Returns whether the signed-in user has valid Rockstar Online Services (ROS) credentials.
 --- Native 0x85443FF4C328F53B (NETWORK_HAS_VALID_ROS_CREDENTIALS)
 ---@return boolean
 function NetworkHasValidRosCredentials()
    return Citizen.InvokeNative(0x85443FF4C328F53B)
 end
+
 
 
 --- 
@@ -40,12 +43,14 @@ function NetworkIsCloudAvailable()
 end
 
 
+
 --- 
 --- Native 0x67A5589628E0CFF6 (NETWORK_HAS_SOCIAL_CLUB_ACCOUNT)
 ---@return boolean
 function NetworkHasSocialClubAccount()
    return Citizen.InvokeNative(0x67A5589628E0CFF6)
 end
+
 
 
 --- If you are host, returns true else returns false.
@@ -56,6 +61,7 @@ function NetworkIsHost()
 end
 
 
+
 --- 
 --- Native 0x25CB5A9F37BFD063 (NETWORK_HAVE_ONLINE_PRIVILEGES)
 ---@return boolean
@@ -64,13 +70,15 @@ function NetworkHaveOnlinePrivileges()
 end
 
 
+
 --- 
 --- Native 0x595F028698072DD9 (NETWORK_CHECK_USER_CONTENT_PRIVILEGES)
 ---@param p0 number
 ---@return boolean
 function NetworkCheckUserContentPrivileges(p0)
-   return Citizen.InvokeNative(0x595F028698072DD9,p0)
+    return Citizen.InvokeNative(0x595F028698072DD9,p0)
 end
+
 
 
 --- 
@@ -78,8 +86,9 @@ end
 ---@param p0 number
 ---@return boolean
 function NetworkCheckCommunicationPrivileges(p0)
-   return Citizen.InvokeNative(0x83F28CE49FBBFFBA,p0)
+    return Citizen.InvokeNative(0x83F28CE49FBBFFBA,p0)
 end
+
 
 
 --- 
@@ -87,8 +96,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkCanViewGamerUserContent(gamerHandle)
-   return Citizen.InvokeNative(0x246545C37C27A717,gamerHandle)
+    return Citizen.InvokeNative(0x246545C37C27A717,gamerHandle)
 end
+
 
 
 --- 
@@ -96,6 +106,7 @@ end
 function NetworkShowAccountUpgradeUi()
     Citizen.InvokeNative(0x83FE8D7229593017)
 end
+
 
 
 --- Hardcoded to return false.
@@ -106,12 +117,14 @@ function NetworkIsPromotionEnabled()
 end
 
 
+
 --- Hardcoded to return false.
 --- Native 0x78A9535AF83715C6 (NETWORK_IS_CUSTOM_UPSELL_ENABLED)
 ---@return boolean
 function NetworkIsCustomUpsellEnabled()
    return Citizen.InvokeNative(0x78A9535AF83715C6)
 end
+
 
 
 --- Hardcoded to return false.
@@ -122,6 +135,7 @@ function NetworkShouldShowPromotionDlg()
 end
 
 
+
 --- Hardcoded to return zero.
 --- Native 0x2FB53C631A49BE92 (NETWORK_GET_PROMOTION_DLG_SEEN_COUNT)
 ---@return number
@@ -130,13 +144,15 @@ function NetworkGetPromotionDlgSeenCount()
 end
 
 
+
 --- 
 --- Native 0xAF50DA1A3F8B1BA4 (NETWORK_CAN_ACCESS_MULTIPLAYER)
 ---@param loadingState int*
 ---@return boolean
 function NetworkCanAccessMultiplayer(loadingState)
-   return Citizen.InvokeNative(0xAF50DA1A3F8B1BA4,loadingState)
+    return Citizen.InvokeNative(0xAF50DA1A3F8B1BA4,loadingState)
 end
+
 
 
 --- 
@@ -147,13 +163,15 @@ function NetworkCheckAccessAndAlertIfFail()
 end
 
 
+
 --- 
 --- Native 0xDD7806FD0543BC3D (_NETWORK_GET_GLOBAL_ENTITY_FLAGS)
 ---@param entity entity
 ---@return number
 function NetworkGetGlobalEntityFlags(entity)
-   return Citizen.InvokeNative(0xDD7806FD0543BC3D,entity)
+    return Citizen.InvokeNative(0xDD7806FD0543BC3D,entity)
 end
+
 
 
 --- 
@@ -164,13 +182,15 @@ function NetworkHasCompletedMpIntroFlowOnCurrentSlot()
 end
 
 
+
 --- 
 --- Native 0x2C5BD9A43987AA27 (NETWORK_SET_COMPLETED_MP_INTRO_FLOW_ON_CURRENT_SLOT)
 ---@param completed boolean
 ---@return boolean
 function NetworkSetCompletedMpIntroFlowOnCurrentSlot(completed)
-   return Citizen.InvokeNative(0x2C5BD9A43987AA27,completed)
+    return Citizen.InvokeNative(0x2C5BD9A43987AA27,completed)
 end
+
 
 
 --- 
@@ -179,8 +199,9 @@ end
 ---@param flagIndex number
 ---@return boolean
 function NetworkSetMpMissionFlagOnCurrentSlot(enabled,flagIndex)
-   return Citizen.InvokeNative(0x86FD10251A7118A4,enabled,flagIndex)
+    return Citizen.InvokeNative(0x86FD10251A7118A4,enabled,flagIndex)
 end
+
 
 
 --- Checks for session flag 'SF_PRIVATE'
@@ -191,6 +212,7 @@ function NetworkSessionIsPrivate()
 end
 
 
+
 --- Note: this native was added in build 1311.23
 --- Native 0xE9B356C330C0A806 (_NETWORK_SESSION_GET_SESSION_ID)
 ---@param sessionId any*
@@ -199,14 +221,16 @@ function NetworkSessionGetSessionId(sessionId)
 end
 
 
+
 --- Note: this native was added in build 1311.23
 --- Native 0x4DEC5000F7B508F0 (_NETWORK_SESSION_ARE_SESSION_IDS_EQUAL)
 ---@param sessionId1 any*
 ---@param sessionId2 any*
 ---@return boolean
 function NetworkSessionAreSessionIdsEqual(sessionId1,sessionId2)
-   return Citizen.InvokeNative(0x4DEC5000F7B508F0,sessionId1,sessionId2)
+    return Citizen.InvokeNative(0x4DEC5000F7B508F0,sessionId1,sessionId2)
 end
+
 
 
 --- flags:
@@ -229,8 +253,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkRequestSessionSeamless(flags,seamlessType,sessionRequestId)
-   return Citizen.InvokeNative(0x04019AE4956D4393,flags,seamlessType,sessionRequestId)
+    return Citizen.InvokeNative(0x04019AE4956D4393,flags,seamlessType,sessionRequestId)
 end
+
 
 
 --- Equivalent to NETWORK_REQUEST_SESSION_SEAMLESS if userHash == 0.
@@ -243,8 +268,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionRequestSessionSeamless(flags,seamlessType,userHash,sessionRequestId)
-   return Citizen.InvokeNative(0x2989E131FDE37E97,flags,seamlessType,userHash,sessionRequestId)
+    return Citizen.InvokeNative(0x2989E131FDE37E97,flags,seamlessType,userHash,sessionRequestId)
 end
+
 
 
 --- matchType:
@@ -265,8 +291,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionRequestSessionCompetitive(flags,matchType,userHash,p3,sessionRequestId)
-   return Citizen.InvokeNative(0x309BBEBEA8A3986C,flags,matchType,userHash,p3,sessionRequestId)
+    return Citizen.InvokeNative(0x309BBEBEA8A3986C,flags,matchType,userHash,p3,sessionRequestId)
 end
+
 
 
 --- Session flag 'SF_PRIVATE' is set internally
@@ -278,8 +305,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionRequestSessionPrivate(flags,numPlayers,userHash,sessionRequestId)
-   return Citizen.InvokeNative(0x39A8EF7AF29A192C,flags,numPlayers,userHash,sessionRequestId)
+    return Citizen.InvokeNative(0x39A8EF7AF29A192C,flags,numPlayers,userHash,sessionRequestId)
 end
+
 
 
 --- category:
@@ -296,8 +324,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionRequestSessionOnCall(flags,category,p2,userHash,sessionRequestId)
-   return Citizen.InvokeNative(0x23D9C1F2E4098EDC,flags,category,p2,userHash,sessionRequestId)
+    return Citizen.InvokeNative(0x23D9C1F2E4098EDC,flags,category,p2,userHash,sessionRequestId)
 end
+
 
 
 --- 
@@ -308,8 +337,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionRequestSessionNominated(flags,userHash,p2,sessionRequestId)
-   return Citizen.InvokeNative(0x4F4672457FF597D1,flags,userHash,p2,sessionRequestId)
+    return Citizen.InvokeNative(0x4F4672457FF597D1,flags,userHash,p2,sessionRequestId)
 end
+
 
 
 --- 
@@ -317,8 +347,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionIsSessionRequestIdValid(sessionRequestId)
-   return Citizen.InvokeNative(0x2F54B146D3EDCE4D,sessionRequestId)
+    return Citizen.InvokeNative(0x2F54B146D3EDCE4D,sessionRequestId)
 end
+
 
 
 --- 
@@ -329,6 +360,7 @@ function NetworkSessionGetSessionType()
 end
 
 
+
 --- 
 --- Native 0xBAFFDE5F953720D9 (NETWORK_SESSION_IS_ANY_REQUEST_IN_PROGRESS)
 ---@return boolean
@@ -337,13 +369,15 @@ function NetworkSessionIsAnyRequestInProgress()
 end
 
 
+
 --- 
 --- Native 0x8FB7C254CFCBF78E (NETWORK_SESSION_IS_REQUEST_IN_PROGRESS)
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionIsRequestInProgress(sessionRequestId)
-   return Citizen.InvokeNative(0x8FB7C254CFCBF78E,sessionRequestId)
+    return Citizen.InvokeNative(0x8FB7C254CFCBF78E,sessionRequestId)
 end
+
 
 
 --- 
@@ -351,8 +385,9 @@ end
 ---@param queueGroup number
 ---@return boolean
 function NetworkSessionIsRequestInProgressByQueueGroup(queueGroup)
-   return Citizen.InvokeNative(0x9E762A595CF88E4A,queueGroup)
+    return Citizen.InvokeNative(0x9E762A595CF88E4A,queueGroup)
 end
+
 
 
 --- 
@@ -360,8 +395,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionCancelRequest(sessionRequestId)
-   return Citizen.InvokeNative(0xE72E5C1289BD1F40,sessionRequestId)
+    return Citizen.InvokeNative(0xE72E5C1289BD1F40,sessionRequestId)
 end
+
 
 
 --- Returns result of session request:
@@ -379,8 +415,9 @@ end
 ---@param p1 int*
 ---@return number
 function NetworkSessionGetSessionRequestResult(sessionRequestId,p1)
-   return Citizen.InvokeNative(0x0DD051B1BF4B8BD6,sessionRequestId,p1)
+    return Citizen.InvokeNative(0x0DD051B1BF4B8BD6,sessionRequestId,p1)
 end
+
 
 
 --- 
@@ -388,8 +425,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionIsRequestPendingTransition(sessionRequestId)
-   return Citizen.InvokeNative(0xCCF878D50F8AB10D,sessionRequestId)
+    return Citizen.InvokeNative(0xCCF878D50F8AB10D,sessionRequestId)
 end
+
 
 
 --- 
@@ -397,8 +435,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionTransitionToSession(sessionRequestId)
-   return Citizen.InvokeNative(0xF20B18A330E6DB5C,sessionRequestId)
+    return Citizen.InvokeNative(0xF20B18A330E6DB5C,sessionRequestId)
 end
+
 
 
 --- 
@@ -406,8 +445,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionIsNsrrSuccess(sessionRequestId)
-   return Citizen.InvokeNative(0x0F44A5C78D114922,sessionRequestId)
+    return Citizen.InvokeNative(0x0F44A5C78D114922,sessionRequestId)
 end
+
 
 
 --- 
@@ -415,8 +455,9 @@ end
 ---@param sessionRequestId any*
 ---@return boolean
 function NetworkSessionLeftQueueOrRequestedSession(sessionRequestId)
-   return Citizen.InvokeNative(0xECE6A0C1B59CD8BE,sessionRequestId)
+    return Citizen.InvokeNative(0xECE6A0C1B59CD8BE,sessionRequestId)
 end
+
 
 
 --- 
@@ -427,12 +468,14 @@ function NetworkSessionLeaveSession()
 end
 
 
+
 --- 
 --- Native 0xF2CBC969C4F090C7 (NETWORK_SESSION_IS_TRANSITIONING)
 ---@return boolean
 function NetworkSessionIsTransitioning()
    return Citizen.InvokeNative(0xF2CBC969C4F090C7)
 end
+
 
 
 --- Only used in R* Script net_rolling_playlist
@@ -442,6 +485,7 @@ function NetworkSessionPlaylistGoToNextContent()
 end
 
 
+
 --- Only used in R* Script net_rolling_playlist
 --- Native 0x8F9DB6CD03B42B58 (_NETWORK_SESSION_PLAYLIST_GET_UPCOMING_CONTENT)
 function NetworkSessionPlaylistGetUpcomingContent()
@@ -449,11 +493,13 @@ function NetworkSessionPlaylistGetUpcomingContent()
 end
 
 
+
 --- 
 --- Native 0x236905C700FDB54D (NETWORK_DISABLE_REALTIME_MULTIPLAYER)
 function NetworkDisableRealtimeMultiplayer()
     Citizen.InvokeNative(0x236905C700FDB54D)
 end
+
 
 
 --- 
@@ -466,11 +512,13 @@ function NetworkGetGlobalMultiplayerClock(hours,minutes,seconds)
 end
 
 
+
 --- 
 --- Native 0xD972DF67326F966E (NETWORK_CLEAR_CLOCK_TIME_OVERRIDE)
 function NetworkClearClockTimeOverride()
     Citizen.InvokeNative(0xD972DF67326F966E)
 end
+
 
 
 --- 
@@ -481,6 +529,7 @@ function NetworkIsClockTimeOverridden()
 end
 
 
+
 --- 
 --- Native 0x11A7ADCD629E170F (NETWORK_GET_GLOBAL_CLOCK)
 ---@param hour int*
@@ -488,8 +537,9 @@ end
 ---@param second int*
 ---@return boolean
 function NetworkGetGlobalClock(hour,minute,second)
-   return Citizen.InvokeNative(0x11A7ADCD629E170F,hour,minute,second)
+    return Citizen.InvokeNative(0x11A7ADCD629E170F,hour,minute,second)
 end
+
 
 
 --- 
@@ -502,6 +552,7 @@ end
 function NetworkClockTimeOverride(hour,minute,second,transitionTime,pauseClock)
     Citizen.InvokeNative(0x669E223E64B1903C,hour,minute,second,transitionTime,pauseClock)
 end
+
 
 
 --- 
@@ -517,12 +568,14 @@ function NetworkClockTimeOverride2(hour,minute,second,transitionTime,pauseClock,
 end
 
 
+
 --- 
 --- Native 0x65F040D91001ED4B (_NETWORK_CLEAR_CLOCK_OVERRIDE_OVERTIME)
 ---@param milliseconds number
 function NetworkClearClockOverrideOvertime(milliseconds)
     Citizen.InvokeNative(0x65F040D91001ED4B,milliseconds)
 end
+
 
 
 --- 
@@ -533,12 +586,14 @@ function NetworkIsFindingGamers()
 end
 
 
+
 --- 
 --- Native 0xF9B83B77929D8863 (NETWORK_DID_FIND_GAMERS_SUCCEED)
 ---@return boolean
 function NetworkDidFindGamersSucceed()
    return Citizen.InvokeNative(0xF9B83B77929D8863)
 end
+
 
 
 --- 
@@ -548,14 +603,16 @@ function NetworkClearFoundGamers()
 end
 
 
+
 --- 
 --- Native 0xFBDFE1C1356E12E8 (_NETWORK_GET_GAMER_SESSION_FROM_HANDLE)
 ---@param data any*
 ---@param count number
 ---@return boolean
 function NetworkGetGamerSessionFromHandle(data,count)
-   return Citizen.InvokeNative(0xFBDFE1C1356E12E8,data,count)
+    return Citizen.InvokeNative(0xFBDFE1C1356E12E8,data,count)
 end
+
 
 
 --- 
@@ -566,6 +623,7 @@ function NetworkHasCurrentGetGamerStatusStarted()
 end
 
 
+
 --- 
 --- Native 0x5AE17C6B0134B7F1 (NETWORK_DID_GET_GAMER_STATUS_SUCCEED)
 ---@return boolean
@@ -574,14 +632,16 @@ function NetworkDidGetGamerStatusSucceed()
 end
 
 
+
 --- 
 --- Native 0xDDAEB478E58F8DEA (_NETWORK_GET_GAMER_STATUS)
 ---@param gamerHandle any*
 ---@param p1 number
 ---@return number
 function NetworkGetGamerStatus(gamerHandle,p1)
-   return Citizen.InvokeNative(0xDDAEB478E58F8DEA,gamerHandle,p1)
+    return Citizen.InvokeNative(0xDDAEB478E58F8DEA,gamerHandle,p1)
 end
+
 
 
 --- 
@@ -589,6 +649,7 @@ end
 function NetworkClearGetGamerStatus()
     Citizen.InvokeNative(0x86E0660E4F5C956D)
 end
+
 
 
 --- 
@@ -599,12 +660,14 @@ function NetworkSetScriptReadyForEvents(toggle)
 end
 
 
+
 --- 
 --- Native 0x10FAB35428CCC9D7 (NETWORK_IS_GAME_IN_PROGRESS)
 ---@return boolean
 function NetworkIsGameInProgress()
    return Citizen.InvokeNative(0x10FAB35428CCC9D7)
 end
+
 
 
 --- 
@@ -615,12 +678,14 @@ function NetworkIsSessionActive()
 end
 
 
+
 --- 
 --- Native 0xCA97246103B63917 (NETWORK_IS_IN_SESSION)
 ---@return boolean
 function NetworkIsInSession()
    return Citizen.InvokeNative(0xCA97246103B63917)
 end
+
 
 
 --- Hardcoded to return false.
@@ -631,12 +696,14 @@ function NetworkIsInSessionLobby()
 end
 
 
+
 --- 
 --- Native 0x9DE624D2FC4B603F (NETWORK_IS_SESSION_STARTED)
 ---@return boolean
 function NetworkIsSessionStarted()
    return Citizen.InvokeNative(0x9DE624D2FC4B603F)
 end
+
 
 
 --- 
@@ -647,12 +714,14 @@ function NetworkCanSessionEnd()
 end
 
 
+
 --- 
 --- Native 0x225640E09EFFDC3F (NETWORK_GET_GAME_MODE)
 ---@return number
 function NetworkGetGameMode()
    return Citizen.InvokeNative(0x225640E09EFFDC3F)
 end
+
 
 
 --- enum eSessionFlags
@@ -675,8 +744,9 @@ end
 ---@param flags number
 ---@return boolean
 function NetworkSessionAddSessionFlags(flags)
-   return Citizen.InvokeNative(0xE546BDA1B3E288EE,flags)
+    return Citizen.InvokeNative(0xE546BDA1B3E288EE,flags)
 end
+
 
 
 --- See _NETWORK_SESSION_ADD_SESSION_FLAGS
@@ -684,8 +754,9 @@ end
 ---@param flags number
 ---@return boolean
 function NetworkSessionRemoveSessionFlags(flags)
-   return Citizen.InvokeNative(0x78335E12DB0BF961,flags)
+    return Citizen.InvokeNative(0x78335E12DB0BF961,flags)
 end
+
 
 
 --- 
@@ -696,13 +767,15 @@ function NetworkSessionGetSessionFlags()
 end
 
 
+
 --- 
 --- Native 0x0AE241A4A9ADEEEC (_NETWORK_SESSION_SET_PLAYER_FLAGS)
 ---@param flags number
 ---@return boolean
 function NetworkSessionSetPlayerFlags(flags)
-   return Citizen.InvokeNative(0x0AE241A4A9ADEEEC,flags)
+    return Citizen.InvokeNative(0x0AE241A4A9ADEEEC,flags)
 end
+
 
 
 --- 
@@ -710,8 +783,9 @@ end
 ---@param flags number
 ---@return boolean
 function NetworkSessionRemovePlayerFlags(flags)
-   return Citizen.InvokeNative(0x3215BBE34D3418C5,flags)
+    return Citizen.InvokeNative(0x3215BBE34D3418C5,flags)
 end
+
 
 
 --- 
@@ -722,6 +796,7 @@ function NetworkGetSessionHost()
 end
 
 
+
 --- 
 --- Native 0xD0498AD30E16B6BD (NETWORK_HAS_PENDING_INVITE_FAILURE)
 ---@return boolean
@@ -730,13 +805,15 @@ function NetworkHasPendingInviteFailure()
 end
 
 
+
 --- 
 --- Native 0xF23D6475640D29EB (_NETWORK_CAN_RECEIVE_INVITE_FROM_HANDLE)
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkCanReceiveInviteFromHandle(gamerHandle)
-   return Citizen.InvokeNative(0xF23D6475640D29EB,gamerHandle)
+    return Citizen.InvokeNative(0xF23D6475640D29EB,gamerHandle)
 end
+
 
 
 --- 
@@ -749,8 +826,9 @@ end
 ---@param flags number
 ---@return boolean
 function NetworkSendSessionInvite(gamerHandle,contentId,data,dataSize,p4,flags)
-   return Citizen.InvokeNative(0xE47001B7CB8B98AE,gamerHandle,contentId,data,dataSize,p4,flags)
+    return Citizen.InvokeNative(0xE47001B7CB8B98AE,gamerHandle,contentId,data,dataSize,p4,flags)
 end
+
 
 
 --- 
@@ -758,8 +836,9 @@ end
 ---@param p0 number
 ---@return boolean
 function NetworkAcceptRsInvite(p0)
-   return Citizen.InvokeNative(0xB2CEA5105AAC8DDE,p0)
+    return Citizen.InvokeNative(0xB2CEA5105AAC8DDE,p0)
 end
+
 
 
 --- 
@@ -767,8 +846,9 @@ end
 ---@param p0 any
 ---@return number
 function NetworkRequestJoin(p0)
-   return Citizen.InvokeNative(0xE483BB6BE686F632,p0)
+    return Citizen.InvokeNative(0xE483BB6BE686F632,p0)
 end
+
 
 
 --- 
@@ -779,12 +859,14 @@ function NetworkIsPlatformInvitePending()
 end
 
 
+
 --- 
 --- Native 0x9BCF28FB5D65A9BE (_NETWORK_GET_PLATFORM_INVITE_ID)
 ---@return number
 function NetworkGetPlatformInviteId()
    return Citizen.InvokeNative(0x9BCF28FB5D65A9BE)
 end
+
 
 
 --- 
@@ -795,11 +877,13 @@ function NetworkActionPlatformInvite()
 end
 
 
+
 --- 
 --- Native 0xA4484173759749B1 (NETWORK_CLEAR_PLATFORM_INVITE)
 function NetworkClearPlatformInvite()
     Citizen.InvokeNative(0xA4484173759749B1)
 end
+
 
 
 --- Returns value of fwuiCachedSetting "general.onlineNotificationsInStoryMode"
@@ -810,6 +894,7 @@ function NetworkAreOnlineNotificationsShownInStoryMode()
 end
 
 
+
 --- Hardcoded to return false.
 --- Native 0x2FC5650B0271CB57 (NETWORK_IS_IN_PLATFORM_PARTY)
 ---@return boolean
@@ -818,14 +903,16 @@ function NetworkIsInPlatformParty()
 end
 
 
+
 --- 
 --- Native 0x11820D1AE80DEA39 (_NETWORK_ARE_PLAYERS_IN_SAME_PLATFORM_PARTY)
 ---@param gamerHandle1 any*
 ---@param gamerHandle2 any*
 ---@return boolean
 function NetworkArePlayersInSamePlatformParty(gamerHandle1,gamerHandle2)
-   return Citizen.InvokeNative(0x11820D1AE80DEA39,gamerHandle1,gamerHandle2)
+    return Citizen.InvokeNative(0x11820D1AE80DEA39,gamerHandle1,gamerHandle2)
 end
+
 
 
 --- Hardcoded to return false.
@@ -836,6 +923,7 @@ function NetworkIsInPlatformPartyChat()
 end
 
 
+
 --- 
 --- Native 0xF1B84178F8674195 (NETWORK_SEED_RANDOM_NUMBER_GENERATOR)
 ---@param seed number
@@ -844,14 +932,16 @@ function NetworkSeedRandomNumberGenerator(seed)
 end
 
 
+
 --- 
 --- Native 0xE30CF56F1EFA5F43 (NETWORK_GET_RANDOM_INT_RANGED)
 ---@param rangeStart number
 ---@param rangeEnd number
 ---@return number
 function NetworkGetRandomIntRanged(rangeStart,rangeEnd)
-   return Citizen.InvokeNative(0xE30CF56F1EFA5F43,rangeStart,rangeEnd)
+    return Citizen.InvokeNative(0xE30CF56F1EFA5F43,rangeStart,rangeEnd)
 end
+
 
 
 --- 
@@ -864,12 +954,14 @@ function NetworkSetThisScriptIsNetworkScript(maxNumMissionParticipants,p1,instan
 end
 
 
+
 --- 
 --- Native 0x2910669969E9535E (NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT)
 ---@return boolean
 function NetworkGetThisScriptIsNetworkScript()
    return Citizen.InvokeNative(0x2910669969E9535E)
 end
+
 
 
 --- Seems to always return 0, but it's used in quite a few loops.
@@ -885,6 +977,7 @@ function NetworkGetMaxNumParticipants()
 end
 
 
+
 --- 
 --- Native 0x18D0456E86604654 (NETWORK_GET_NUM_PARTICIPANTS)
 ---@return number
@@ -893,12 +986,14 @@ function NetworkGetNumParticipants()
 end
 
 
+
 --- 
 --- Native 0x57D158647A6BFABF (NETWORK_GET_SCRIPT_STATUS)
 ---@return number
 function NetworkGetScriptStatus()
    return Citizen.InvokeNative(0x57D158647A6BFABF)
 end
+
 
 
 --- 
@@ -911,13 +1006,15 @@ function NetworkRegisterHostBroadcastVariables(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xBA24095EA96DFE17 (_NETWORK_GET_SIZE_OF_HOST_BROADCAST_DATA_STORAGE)
 ---@param p0 int*
 ---@return number
 function NetworkGetSizeOfHostBroadcastDataStorage(p0)
-   return Citizen.InvokeNative(0xBA24095EA96DFE17,p0)
+    return Citizen.InvokeNative(0xBA24095EA96DFE17,p0)
 end
+
 
 
 --- 
@@ -930,13 +1027,15 @@ function NetworkRegisterPlayerBroadcastVariables(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x690806BC83BC8CA2 (_NETWORK_GET_SIZE_OF_PLAYER_BROADCAST_DATA_STORAGE)
 ---@param p0 int*
 ---@return number
 function NetworkGetSizeOfPlayerBroadcastDataStorage(p0)
-   return Citizen.InvokeNative(0x690806BC83BC8CA2,p0)
+    return Citizen.InvokeNative(0x690806BC83BC8CA2,p0)
 end
+
 
 
 --- 
@@ -947,13 +1046,15 @@ function NetworkHasReceivedHostBroadcastData()
 end
 
 
+
 --- 
 --- Native 0x24FB80D107371267 (NETWORK_GET_PLAYER_INDEX)
 ---@param player player
 ---@return number
 function NetworkGetPlayerIndex(player)
-   return Citizen.InvokeNative(0x24FB80D107371267,player)
+    return Citizen.InvokeNative(0x24FB80D107371267,player)
 end
+
 
 
 --- 
@@ -961,8 +1062,9 @@ end
 ---@param index number
 ---@return number
 function NetworkGetParticipantIndex(index)
-   return Citizen.InvokeNative(0x1B84DF6AF2A46938,index)
+    return Citizen.InvokeNative(0x1B84DF6AF2A46938,index)
 end
+
 
 
 --- Returns the Player associated to a given Ped when in an online session.
@@ -970,8 +1072,9 @@ end
 ---@param ped number
 ---@return player
 function NetworkGetPlayerIndexFromPed(ped)
-   return Citizen.InvokeNative(0x6C0E2E0125610278,ped)
+    return Citizen.InvokeNative(0x6C0E2E0125610278,ped)
 end
+
 
 
 --- Returns the amount of players connected in the current session. Only works when connected to a session/server.
@@ -982,13 +1085,15 @@ function NetworkGetNumConnectedPlayers()
 end
 
 
+
 --- 
 --- Native 0x93DC1BE4E1ABE9D1 (NETWORK_IS_PLAYER_CONNECTED)
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerConnected(player)
-   return Citizen.InvokeNative(0x93DC1BE4E1ABE9D1,player)
+    return Citizen.InvokeNative(0x93DC1BE4E1ABE9D1,player)
 end
+
 
 
 --- 
@@ -999,13 +1104,15 @@ function NetworkGetTotalNumPlayers()
 end
 
 
+
 --- 
 --- Native 0x6FF8FF40B6357D45 (NETWORK_IS_PARTICIPANT_ACTIVE)
 ---@param p0 number
 ---@return boolean
 function NetworkIsParticipantActive(p0)
-   return Citizen.InvokeNative(0x6FF8FF40B6357D45,p0)
+    return Citizen.InvokeNative(0x6FF8FF40B6357D45,p0)
 end
+
 
 
 --- 
@@ -1013,8 +1120,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerActive(player)
-   return Citizen.InvokeNative(0xB8DFD30D6973E135,player)
+    return Citizen.InvokeNative(0xB8DFD30D6973E135,player)
 end
+
 
 
 --- 
@@ -1022,8 +1130,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerAParticipant(player)
-   return Citizen.InvokeNative(0x3CA58F6CB7CBD784,player)
+    return Citizen.InvokeNative(0x3CA58F6CB7CBD784,player)
 end
+
 
 
 --- 
@@ -1034,12 +1143,14 @@ function NetworkIsHostOfThisScript()
 end
 
 
+
 --- 
 --- Native 0xC7B4D79B01FA7A5C (NETWORK_GET_HOST_OF_THIS_SCRIPT)
 ---@return player
 function NetworkGetHostOfThisScript()
    return Citizen.InvokeNative(0xC7B4D79B01FA7A5C)
 end
+
 
 
 --- 
@@ -1049,8 +1160,9 @@ end
 ---@param p2 number
 ---@return player
 function NetworkGetHostOfScript(scriptName,p1,p2)
-   return Citizen.InvokeNative(0x1D6A14F1F9A736FC,scriptName,p1,p2)
+    return Citizen.InvokeNative(0x1D6A14F1F9A736FC,scriptName,p1,p2)
 end
+
 
 
 --- 
@@ -1058,8 +1170,9 @@ end
 ---@param threadId number
 ---@return player
 function NetworkGetHostOfThread(threadId)
-   return Citizen.InvokeNative(0xB4A25351D79B444C,threadId)
+    return Citizen.InvokeNative(0xB4A25351D79B444C,threadId)
 end
+
 
 
 --- 
@@ -1067,6 +1180,7 @@ end
 function NetworkSetMissionFinished()
     Citizen.InvokeNative(0x3B3D11CD9FFCDFC9)
 end
+
 
 
 --- 
@@ -1077,8 +1191,9 @@ end
 ---@param p3 number
 ---@return boolean
 function NetworkIsScriptActive(scriptName,p1,p2,p3)
-   return Citizen.InvokeNative(0x9D40DF90FAD26098,scriptName,p1,p2,p3)
+    return Citizen.InvokeNative(0x9D40DF90FAD26098,scriptName,p1,p2,p3)
 end
+
 
 
 --- 
@@ -1089,8 +1204,9 @@ end
 ---@param p3 number
 ---@return boolean
 function NetworkIsScriptActiveByHash(scriptHash,p1,p2,p3)
-   return Citizen.InvokeNative(0x1B89BC43B6E69107,scriptHash,p1,p2,p3)
+    return Citizen.InvokeNative(0x1B89BC43B6E69107,scriptHash,p1,p2,p3)
 end
+
 
 
 --- 
@@ -1098,8 +1214,9 @@ end
 ---@param threadId number
 ---@return boolean
 function NetworkIsThreadActive(threadId)
-   return Citizen.InvokeNative(0x31DAD2CD6D49546E,threadId)
+    return Citizen.InvokeNative(0x31DAD2CD6D49546E,threadId)
 end
+
 
 
 --- 
@@ -1107,8 +1224,9 @@ end
 ---@param threadId number
 ---@return number
 function NetworkGetInstanceIdOfThread(threadId)
-   return Citizen.InvokeNative(0xFB9ECED5B68F3B78,threadId)
+    return Citizen.InvokeNative(0xFB9ECED5B68F3B78,threadId)
 end
+
 
 
 --- 
@@ -1118,8 +1236,9 @@ end
 ---@param position hash
 ---@return number
 function NetworkGetNumScriptParticipants(scriptName,instanceId,position)
-   return Citizen.InvokeNative(0x3658E8CD94FC121A,scriptName,instanceId,position)
+    return Citizen.InvokeNative(0x3658E8CD94FC121A,scriptName,instanceId,position)
 end
+
 
 
 --- 
@@ -1130,6 +1249,7 @@ function NetworkGetInstanceIdOfThisScript()
 end
 
 
+
 --- 
 --- Native 0x1AD5B71586B94820 (NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT)
 ---@param p0 player
@@ -1137,8 +1257,9 @@ end
 ---@param p2 any
 ---@return boolean
 function NetworkIsPlayerAParticipantOnScript(p0,p1,p2)
-   return Citizen.InvokeNative(0x1AD5B71586B94820,p0,p1,p2)
+    return Citizen.InvokeNative(0x1AD5B71586B94820,p0,p1,p2)
 end
+
 
 
 --- 
@@ -1148,13 +1269,15 @@ function NetworkPreventScriptHostMigration()
 end
 
 
+
 --- 
 --- Native 0x9C725D149622BFDE (NETWORK_IS_FEATURE_SUPPORTED)
 ---@param featureId number
 ---@return boolean
 function NetworkIsFeatureSupported(featureId)
-   return Citizen.InvokeNative(0x9C725D149622BFDE,featureId)
+    return Citizen.InvokeNative(0x9C725D149622BFDE,featureId)
 end
+
 
 
 --- Return the local Participant ID
@@ -1163,6 +1286,7 @@ end
 function ParticipantId()
    return Citizen.InvokeNative(0x90986E8876CE0A83)
 end
+
 
 
 --- Return the local Participant ID.
@@ -1174,14 +1298,16 @@ function ParticipantIdToInt()
 end
 
 
+
 --- 
 --- Native 0x7A1ADEEF01740A24 (NETWORK_GET_DESTROYER_OF_NETWORK_ID)
 ---@param netId number
 ---@param weaponHash hash*
 ---@return number
 function NetworkGetDestroyerOfNetworkId(netId,weaponHash)
-   return Citizen.InvokeNative(0x7A1ADEEF01740A24,netId,weaponHash)
+    return Citizen.InvokeNative(0x7A1ADEEF01740A24,netId,weaponHash)
 end
+
 
 
 --- 
@@ -1191,8 +1317,9 @@ end
 ---@param p2 int*
 ---@return boolean
 function NetworkGetAssistedDamageOfEntity(player,entity,p2)
-   return Citizen.InvokeNative(0x4CACA84440FA26F6,player,entity,p2)
+    return Citizen.InvokeNative(0x4CACA84440FA26F6,player,entity,p2)
 end
+
 
 
 --- 
@@ -1201,8 +1328,9 @@ end
 ---@param weaponHash hash*
 ---@return entity
 function NetworkGetEntityKillerOfPlayer(player,weaponHash)
-   return Citizen.InvokeNative(0x42B2DAA6B596F5F8,player,weaponHash)
+    return Citizen.InvokeNative(0x42B2DAA6B596F5F8,player,weaponHash)
 end
+
 
 
 --- 
@@ -1220,12 +1348,14 @@ function NetworkResurrectLocalPlayer(x,y,z,heading,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x4154B7D8C75E5DCF (_NETWORK_RESURRECT_LOCAL_PLAYER_2)
 ---@param args any*
 function NetworkResurrectLocalPlayer2(args)
     Citizen.InvokeNative(0x4154B7D8C75E5DCF,args)
 end
+
 
 
 --- 
@@ -1236,6 +1366,7 @@ function NetworkSetLocalPlayerInvincibleTime(time)
 end
 
 
+
 --- 
 --- Native 0x524FF0AEFF9C3973 (NETWORK_SET_LOCAL_PLAYER_SYNC_LOOK_AT)
 ---@param toggle boolean
@@ -1244,13 +1375,15 @@ function NetworkSetLocalPlayerSyncLookAt(toggle)
 end
 
 
+
 --- 
 --- Native 0xB07D3185E11657A5 (NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD)
 ---@param entity entity
 ---@return boolean
 function NetworkHasEntityBeenRegisteredWithThisThread(entity)
-   return Citizen.InvokeNative(0xB07D3185E11657A5,entity)
+    return Citizen.InvokeNative(0xB07D3185E11657A5,entity)
 end
+
 
 
 --- 
@@ -1258,8 +1391,9 @@ end
 ---@param entity entity
 ---@return number
 function NetworkGetNetworkIdFromEntity(entity)
-   return Citizen.InvokeNative(0xA11700682F3AD45C,entity)
+    return Citizen.InvokeNative(0xA11700682F3AD45C,entity)
 end
+
 
 
 --- 
@@ -1267,8 +1401,9 @@ end
 ---@param netId number
 ---@return entity
 function NetworkGetEntityFromNetworkId(netId)
-   return Citizen.InvokeNative(0xCE4E5D9B0A4FF560,netId)
+    return Citizen.InvokeNative(0xCE4E5D9B0A4FF560,netId)
 end
+
 
 
 --- 
@@ -1276,8 +1411,9 @@ end
 ---@param entity entity
 ---@return boolean
 function NetworkGetEntityIsNetworked(entity)
-   return Citizen.InvokeNative(0xC7827959479DCC78,entity)
+    return Citizen.InvokeNative(0xC7827959479DCC78,entity)
 end
+
 
 
 --- 
@@ -1288,13 +1424,15 @@ function NetworkRegisterEntityAsNetworked(entity)
 end
 
 
+
 --- 
 --- Native 0x38CE16C96BD11344 (NETWORK_DOES_NETWORK_ID_EXIST)
 ---@param netID number
 ---@return boolean
 function NetworkDoesNetworkIdExist(netID)
-   return Citizen.InvokeNative(0x38CE16C96BD11344,netID)
+    return Citizen.InvokeNative(0x38CE16C96BD11344,netID)
 end
+
 
 
 --- 
@@ -1302,8 +1440,9 @@ end
 ---@param netId number
 ---@return boolean
 function NetworkRequestControlOfNetworkId(netId)
-   return Citizen.InvokeNative(0xA670B3662FAFFBD0,netId)
+    return Citizen.InvokeNative(0xA670B3662FAFFBD0,netId)
 end
+
 
 
 --- 
@@ -1311,8 +1450,9 @@ end
 ---@param netId number
 ---@return boolean
 function NetworkHasControlOfNetworkId(netId)
-   return Citizen.InvokeNative(0x4D36070FE0215186,netId)
+    return Citizen.InvokeNative(0x4D36070FE0215186,netId)
 end
+
 
 
 --- 
@@ -1320,8 +1460,9 @@ end
 ---@param entity entity
 ---@return boolean
 function NetworkRequestControlOfEntity(entity)
-   return Citizen.InvokeNative(0xB69317BF5E782347,entity)
+    return Citizen.InvokeNative(0xB69317BF5E782347,entity)
 end
+
 
 
 --- 
@@ -1329,8 +1470,9 @@ end
 ---@param animScene animscene
 ---@return boolean
 function NetworkRequestControlOfAnimScene(animScene)
-   return Citizen.InvokeNative(0xAAA92B631B13F614,animScene)
+    return Citizen.InvokeNative(0xAAA92B631B13F614,animScene)
 end
+
 
 
 --- 
@@ -1338,8 +1480,9 @@ end
 ---@param p0 any
 ---@return boolean
 function NetworkRequestControlOfPickupPlacement(p0)
-   return Citizen.InvokeNative(0x56ED2C48558DAB78,p0)
+    return Citizen.InvokeNative(0x56ED2C48558DAB78,p0)
 end
+
 
 
 --- 
@@ -1347,8 +1490,9 @@ end
 ---@param entity entity
 ---@return boolean
 function NetworkHasControlOfEntity(entity)
-   return Citizen.InvokeNative(0x01BF60A500E28887,entity)
+    return Citizen.InvokeNative(0x01BF60A500E28887,entity)
 end
+
 
 
 --- 
@@ -1356,8 +1500,9 @@ end
 ---@param pickup pickup
 ---@return boolean
 function NetworkHasControlOfPickup(pickup)
-   return Citizen.InvokeNative(0x5BC9495F0B3B6FA6,pickup)
+    return Citizen.InvokeNative(0x5BC9495F0B3B6FA6,pickup)
 end
+
 
 
 --- 
@@ -1365,8 +1510,9 @@ end
 ---@param animScene animscene
 ---@return boolean
 function NetworkHasControlOfAnimScene(animScene)
-   return Citizen.InvokeNative(0x26A5C12FACFF8724,animScene)
+    return Citizen.InvokeNative(0x26A5C12FACFF8724,animScene)
 end
+
 
 
 --- 
@@ -1374,8 +1520,9 @@ end
 ---@param p0 any
 ---@return boolean
 function NetworkHasControlOfPickupPlacement(p0)
-   return Citizen.InvokeNative(0x51EABCF2786515AB,p0)
+    return Citizen.InvokeNative(0x51EABCF2786515AB,p0)
 end
+
 
 
 --- Returns the network ID of the given vehicle.
@@ -1383,8 +1530,9 @@ end
 ---@param vehicle vehicle
 ---@return number
 function VehToNet(vehicle)
-   return Citizen.InvokeNative(0xB4C94523F023419C,vehicle)
+    return Citizen.InvokeNative(0xB4C94523F023419C,vehicle)
 end
+
 
 
 --- Returns the network ID of the given ped.
@@ -1392,8 +1540,9 @@ end
 ---@param ped number
 ---@return number
 function PedToNet(ped)
-   return Citizen.InvokeNative(0x0EDEC3C276198689,ped)
+    return Citizen.InvokeNative(0x0EDEC3C276198689,ped)
 end
+
 
 
 --- Returns the network ID of the given object.
@@ -1401,8 +1550,9 @@ end
 ---@param object object
 ---@return number
 function ObjToNet(object)
-   return Citizen.InvokeNative(0x99BFDC94A603E541,object)
+    return Citizen.InvokeNative(0x99BFDC94A603E541,object)
 end
+
 
 
 --- 
@@ -1410,8 +1560,9 @@ end
 ---@param animScene animscene
 ---@return number
 function AnimSceneToNet(animScene)
-   return Citizen.InvokeNative(0xE0D73CDDEA79DDCD,animScene)
+    return Citizen.InvokeNative(0xE0D73CDDEA79DDCD,animScene)
 end
+
 
 
 --- 
@@ -1419,8 +1570,9 @@ end
 ---@param netHandle number
 ---@return vehicle
 function NetToVeh(netHandle)
-   return Citizen.InvokeNative(0x367B936610BA360C,netHandle)
+    return Citizen.InvokeNative(0x367B936610BA360C,netHandle)
 end
+
 
 
 --- gets the ped id of a network id
@@ -1428,8 +1580,9 @@ end
 ---@param netHandle number
 ---@return number
 function NetToPed(netHandle)
-   return Citizen.InvokeNative(0xBDCD95FC216A8B3E,netHandle)
+    return Citizen.InvokeNative(0xBDCD95FC216A8B3E,netHandle)
 end
+
 
 
 --- gets the object id of a network id
@@ -1437,8 +1590,9 @@ end
 ---@param netHandle number
 ---@return object
 function NetToObj(netHandle)
-   return Citizen.InvokeNative(0xD8515F5FEA14CB3F,netHandle)
+    return Citizen.InvokeNative(0xD8515F5FEA14CB3F,netHandle)
 end
+
 
 
 --- gets the entity id of a network id
@@ -1446,8 +1600,9 @@ end
 ---@param netHandle number
 ---@return entity
 function NetToEnt(netHandle)
-   return Citizen.InvokeNative(0xBFFEAB45A9A9094A,netHandle)
+    return Citizen.InvokeNative(0xBFFEAB45A9A9094A,netHandle)
 end
+
 
 
 --- 
@@ -1455,8 +1610,9 @@ end
 ---@param netId number
 ---@return animscene
 function NetToAnimScene(netId)
-   return Citizen.InvokeNative(0xD7F6781A0ABAF6FB,netId)
+    return Citizen.InvokeNative(0xD7F6781A0ABAF6FB,netId)
 end
+
 
 
 --- 
@@ -1464,8 +1620,9 @@ end
 ---@param propSet propset
 ---@return number
 function PropsetToNet(propSet)
-   return Citizen.InvokeNative(0x74F99EF7EF503398,propSet)
+    return Citizen.InvokeNative(0x74F99EF7EF503398,propSet)
 end
+
 
 
 --- 
@@ -1473,8 +1630,9 @@ end
 ---@param netId number
 ---@return propset
 function NetToPropset(netId)
-   return Citizen.InvokeNative(0xD08066E00D26C448,netId)
+    return Citizen.InvokeNative(0xD08066E00D26C448,netId)
 end
+
 
 
 --- 
@@ -1483,6 +1641,7 @@ end
 function NetworkGetLocalHandle(gamerHandle)
     Citizen.InvokeNative(0xE86051786B66CD8E,gamerHandle)
 end
+
 
 
 --- 
@@ -1494,13 +1653,15 @@ function NetworkHandleFromPlayer(player,gamerHandle)
 end
 
 
+
 --- 
 --- Native 0xBC1D768F2F5D6C05 (NETWORK_HASH_FROM_PLAYER_HANDLE)
 ---@param player player
 ---@return hash
 function NetworkHashFromPlayerHandle(player)
-   return Citizen.InvokeNative(0xBC1D768F2F5D6C05,player)
+    return Citizen.InvokeNative(0xBC1D768F2F5D6C05,player)
 end
+
 
 
 --- 
@@ -1512,13 +1673,15 @@ function NetworkHandleFromFriend(friendIndex,gamerHandle)
 end
 
 
+
 --- Always returns a null string.
 --- Native 0x426141162EBE5CDB (NETWORK_GET_GAMERTAG_FROM_HANDLE)
 ---@param gamerHandle any*
 ---@return string
 function NetworkGetGamertagFromHandle(gamerHandle)
-   return Citizen.InvokeNative(0x426141162EBE5CDB,gamerHandle)
+    return Citizen.InvokeNative(0x426141162EBE5CDB,gamerHandle)
 end
+
 
 
 --- Hardcoded to return -1.
@@ -1527,8 +1690,9 @@ end
 ---@param p1 any
 ---@return number
 function NetworkDisplaynamesFromHandlesStart(p0,p1)
-   return Citizen.InvokeNative(0xD66C9E72B3CC4982,p0,p1)
+    return Citizen.InvokeNative(0xD66C9E72B3CC4982,p0,p1)
 end
+
 
 
 --- Hardcoded to return zero.
@@ -1538,8 +1702,9 @@ end
 ---@param p2 any
 ---@return number
 function NetworkGetDisplaynamesFromHandles(p0,p1,p2)
-   return Citizen.InvokeNative(0x58CC181719256197,p0,p1,p2)
+    return Citizen.InvokeNative(0x58CC181719256197,p0,p1,p2)
 end
+
 
 
 --- Example:
@@ -1553,8 +1718,9 @@ end
 ---@param displayName string
 ---@return boolean
 function NetworkGetDisplayNameFromHandle(gamerHandle,displayName)
-   return Citizen.InvokeNative(0x7FEE4F07C54B6B3C,gamerHandle,displayName)
+    return Citizen.InvokeNative(0x7FEE4F07C54B6B3C,gamerHandle,displayName)
 end
+
 
 
 --- 
@@ -1563,8 +1729,9 @@ end
 ---@param gamerHandle2 any*
 ---@return boolean
 function NetworkAreHandlesTheSame(gamerHandle1,gamerHandle2)
-   return Citizen.InvokeNative(0x57DBA049E110F217,gamerHandle1,gamerHandle2)
+    return Citizen.InvokeNative(0x57DBA049E110F217,gamerHandle1,gamerHandle2)
 end
+
 
 
 --- 
@@ -1572,8 +1739,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsHandleValid(gamerHandle)
-   return Citizen.InvokeNative(0x6F79B93B0A8E4133,gamerHandle)
+    return Citizen.InvokeNative(0x6F79B93B0A8E4133,gamerHandle)
 end
+
 
 
 --- 
@@ -1581,8 +1749,9 @@ end
 ---@param gamerHandle any*
 ---@return player
 function NetworkGetPlayerFromGamerHandle(gamerHandle)
-   return Citizen.InvokeNative(0xCE5F689CF5A0A49D,gamerHandle)
+    return Citizen.InvokeNative(0xCE5F689CF5A0A49D,gamerHandle)
 end
+
 
 
 --- 
@@ -1590,8 +1759,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsGamerInMySession(gamerHandle)
-   return Citizen.InvokeNative(0x0F10B05DDF8D16E9,gamerHandle)
+    return Citizen.InvokeNative(0x0F10B05DDF8D16E9,gamerHandle)
 end
+
 
 
 --- 
@@ -1602,6 +1772,7 @@ function NetworkShowProfileUi(gamerHandle)
 end
 
 
+
 --- 
 --- Native 0xDB7ABDD203FA3704 (NETWORK_GET_TOTAL_NUM_FRIENDS)
 ---@return number
@@ -1610,13 +1781,15 @@ function NetworkGetTotalNumFriends()
 end
 
 
+
 --- 
 --- Native 0xA3EEC0A5AFF3FC5B (_NETWORK_GET_CURRENT_FRIEND_PAGE_DATA)
 ---@param p0 any*
 ---@return boolean
 function NetworkGetCurrentFriendPageData(p0)
-   return Citizen.InvokeNative(0xA3EEC0A5AFF3FC5B,p0)
+    return Citizen.InvokeNative(0xA3EEC0A5AFF3FC5B,p0)
 end
+
 
 
 --- 
@@ -1627,6 +1800,7 @@ function NetworkCanRefreshFriendPage()
 end
 
 
+
 --- 
 --- Native 0x1F51F367B710A832 (NETWORK_REFRESH_CURRENT_FRIEND_PAGE)
 ---@return boolean
@@ -1635,13 +1809,15 @@ function NetworkRefreshCurrentFriendPage()
 end
 
 
+
 --- 
 --- Native 0xE348D1404BD80146 (_NETWORK_IS_FRIEND_HANDLE_ONLINE)
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsFriendHandleOnline(gamerHandle)
-   return Citizen.InvokeNative(0xE348D1404BD80146,gamerHandle)
+    return Citizen.InvokeNative(0xE348D1404BD80146,gamerHandle)
 end
+
 
 
 --- 
@@ -1649,8 +1825,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsFriendHandleInSameTitle(gamerHandle)
-   return Citizen.InvokeNative(0x665161D250850A9F,gamerHandle)
+    return Citizen.InvokeNative(0x665161D250850A9F,gamerHandle)
 end
+
 
 
 --- 
@@ -1658,8 +1835,9 @@ end
 ---@param gamerHandle any*
 ---@return string
 function NetworkGetGamertagFromFriend(gamerHandle)
-   return Citizen.InvokeNative(0x5659D87BE674AB17,gamerHandle)
+    return Citizen.InvokeNative(0x5659D87BE674AB17,gamerHandle)
 end
+
 
 
 --- 
@@ -1667,8 +1845,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsFriend(gamerHandle)
-   return Citizen.InvokeNative(0x1A24A179F9B31654,gamerHandle)
+    return Citizen.InvokeNative(0x1A24A179F9B31654,gamerHandle)
 end
+
 
 
 --- Hardcoded to return false.
@@ -1676,8 +1855,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkIsPendingFriend(gamerHandle)
-   return Citizen.InvokeNative(0x0BE73DA6984A6E33,gamerHandle)
+    return Citizen.InvokeNative(0x0BE73DA6984A6E33,gamerHandle)
 end
+
 
 
 --- 
@@ -1686,8 +1866,9 @@ end
 ---@param message string
 ---@return boolean
 function NetworkAddFriend(gamerHandle,message)
-   return Citizen.InvokeNative(0x8E02D73914064223,gamerHandle,message)
+    return Citizen.InvokeNative(0x8E02D73914064223,gamerHandle,message)
 end
+
 
 
 --- 
@@ -1695,8 +1876,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkRemoveFriend(gamerHandle)
-   return Citizen.InvokeNative(0x55F618F68AB854D3,gamerHandle)
+    return Citizen.InvokeNative(0x55F618F68AB854D3,gamerHandle)
 end
+
 
 
 --- On PC this returns true if gamerHandle is a valid handle.
@@ -1704,8 +1886,9 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkCanAddFriend(gamerHandle)
-   return Citizen.InvokeNative(0x99ABE9BF9DADA162,gamerHandle)
+    return Citizen.InvokeNative(0x99ABE9BF9DADA162,gamerHandle)
 end
+
 
 
 --- Old name: _NETWORK_SET_PASSIVE_MODE_OPTION
@@ -1716,12 +1899,14 @@ function NetworkSetPlayerIsPassive(toggle)
 end
 
 
+
 --- 
 --- Native 0xF808475FA571D823 (NETWORK_SET_FRIENDLY_FIRE_OPTION)
 ---@param toggle boolean
 function NetworkSetFriendlyFireOption(toggle)
     Citizen.InvokeNative(0xF808475FA571D823,toggle)
 end
+
 
 
 --- 
@@ -1735,6 +1920,7 @@ function NetworkSetRichPresence(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x5ED0356A0CE3A34F (NETWORK_GET_TIMEOUT_TIME)
 ---@return number
@@ -1743,12 +1929,14 @@ function NetworkGetTimeoutTime()
 end
 
 
+
 --- 
 --- Native 0x7182EDDA1EE7DB5A (PREVENT_NETWORK_ID_MIGRATION)
 ---@param netId number
 function PreventNetworkIdMigration(netId)
     Citizen.InvokeNative(0x7182EDDA1EE7DB5A,netId)
 end
+
 
 
 --- 
@@ -1761,6 +1949,7 @@ function KeepNetworkIdInFastInstance(netId,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xE05E81A888FA63C8 (SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES)
 ---@param netId number
@@ -1768,6 +1957,7 @@ end
 function SetNetworkIdExistsOnAllMachines(netId,toggle)
     Citizen.InvokeNative(0xE05E81A888FA63C8,netId,toggle)
 end
+
 
 
 --- 
@@ -1780,6 +1970,7 @@ function SetNetworkIdAlwaysExistsForPlayer(netId,player,toggle)
 end
 
 
+
 --- 
 --- Native 0x9ED3108D6847760A (SET_NETWORK_ID_STOP_CLONING)
 ---@param networkId number
@@ -1789,6 +1980,7 @@ function SetNetworkIdStopCloning(networkId,bStopCloning)
 end
 
 
+
 --- 
 --- Native 0xD785864798258032 (NETWORK_SET_ENTITY_REMAINS_WHEN_UNNETWORKED)
 ---@param entity entity
@@ -1796,6 +1988,7 @@ end
 function NetworkSetEntityRemainsWhenUnnetworked(entity,toggle)
     Citizen.InvokeNative(0xD785864798258032,entity,toggle)
 end
+
 
 
 --- if set to true other network players can't see it
@@ -1813,6 +2006,7 @@ function NetworkSetEntityOnlyExistsForParticipants(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0xA6928482543022B4 (SET_NETWORK_ID_VISIBLE_IN_CUTSCENE)
 ---@param p0 any
@@ -1824,13 +2018,15 @@ function SetNetworkIdVisibleInCutscene(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xA1607996431332DF (IS_NETWORK_ID_OWNED_BY_PARTICIPANT)
 ---@param netId number
 ---@return boolean
 function IsNetworkIdOwnedByParticipant(netId)
-   return Citizen.InvokeNative(0xA1607996431332DF,netId)
+    return Citizen.InvokeNative(0xA1607996431332DF,netId)
 end
+
 
 
 --- 
@@ -1838,8 +2034,9 @@ end
 ---@param netId number
 ---@return player
 function NetworkGetPlayerOwnerOfNetworkId(netId)
-   return Citizen.InvokeNative(0xA6C0787443C9583E,netId)
+    return Citizen.InvokeNative(0xA6C0787443C9583E,netId)
 end
+
 
 
 --- 
@@ -1847,9 +2044,10 @@ end
 ---@param local boolean
 ---@param remote boolean
 ---@param instanceId number
-function SetLocalPlayerVisibleInCutscene(local,remote,instanceId)
-    Citizen.InvokeNative(0xD1065D68947E7B6E,local,remote,instanceId)
+function SetLocalPlayerVisibleInCutscene(local_,remote,instanceId)
+    Citizen.InvokeNative(0xD1065D68947E7B6E,local_,remote,instanceId)
 end
+
 
 
 --- 
@@ -1860,12 +2058,14 @@ function PreventMigrationOfEntitiesInFastInstanceForLocalPlayer(toggle)
 end
 
 
+
 --- 
 --- Native 0xE5F773C1A1D9D168 (SET_LOCAL_PLAYER_INVISIBLE_LOCALLY)
 ---@param p0 boolean
 function SetLocalPlayerInvisibleLocally(p0)
     Citizen.InvokeNative(0xE5F773C1A1D9D168,p0)
 end
+
 
 
 --- 
@@ -1877,6 +2077,7 @@ function SetPlayerInvisibleLocally(player,toggle)
 end
 
 
+
 --- 
 --- Native 0xFAA10F1FAFB11AF2 (SET_PLAYER_VISIBLE_LOCALLY)
 ---@param player player
@@ -1884,6 +2085,7 @@ end
 function SetPlayerVisibleLocally(player,toggle)
     Citizen.InvokeNative(0xFAA10F1FAFB11AF2,player,toggle)
 end
+
 
 
 --- 
@@ -1897,12 +2099,14 @@ function SetEntityVisibleInCutscene(entity,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x51D99497ABF3F451 (_SET_DOOR_NETWORKED)
 ---@param doorHash hash
 function SetDoorNetworked(doorHash)
     Citizen.InvokeNative(0x51D99497ABF3F451,doorHash)
 end
+
 
 
 --- 
@@ -1914,13 +2118,15 @@ function SetDoorUnnetworked(p0,toggle)
 end
 
 
+
 --- 
 --- Native 0x6E192E33AD436366 (IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID)
 ---@param netID number
 ---@return boolean
 function IsDamageTrackerActiveOnNetworkId(netID)
-   return Citizen.InvokeNative(0x6E192E33AD436366,netID)
+    return Citizen.InvokeNative(0x6E192E33AD436366,netID)
 end
+
 
 
 --- 
@@ -1932,6 +2138,7 @@ function ActivateDamageTrackerOnNetworkId(netID,toggle)
 end
 
 
+
 --- 
 --- Native 0xD82CF8E64C8729D8 (IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE)
 ---@param p0 any
@@ -1941,8 +2148,9 @@ end
 ---@param p4 any
 ---@return boolean
 function IsSphereVisibleToAnotherMachine(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0xD82CF8E64C8729D8,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0xD82CF8E64C8729D8,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -1955,8 +2163,9 @@ end
 ---@param p5 any
 ---@return boolean
 function IsSphereVisibleToPlayer(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0xDC3A310219E5DA62,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0xDC3A310219E5DA62,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1967,12 +2176,14 @@ function ReserveNetworkMissionObjects(amount)
 end
 
 
+
 --- 
 --- Native 0xE7DDA8BD3BCF751C (RESERVE_NETWORK_CLIENT_MISSION_OBJECTS)
 ---@param amount number
 function ReserveNetworkClientMissionObjects(amount)
     Citizen.InvokeNative(0xE7DDA8BD3BCF751C,amount)
 end
+
 
 
 --- 
@@ -1983,12 +2194,14 @@ function ReserveNetworkMissionPeds(amount)
 end
 
 
+
 --- 
 --- Native 0x807E119F80231732 (RESERVE_NETWORK_CLIENT_MISSION_PEDS)
 ---@param amount number
 function ReserveNetworkClientMissionPeds(amount)
     Citizen.InvokeNative(0x807E119F80231732,amount)
 end
+
 
 
 --- 
@@ -1999,6 +2212,7 @@ function ReserveNetworkMissionVehicles(amount)
 end
 
 
+
 --- 
 --- Native 0x4D40E7D749BC6E6D (RESERVE_NETWORK_MISSION_PICKUPS)
 ---@param amount number
@@ -2007,13 +2221,15 @@ function ReserveNetworkMissionPickups(amount)
 end
 
 
+
 --- 
 --- Native 0x800DD4721A8B008B (CAN_REGISTER_MISSION_OBJECTS)
 ---@param amount number
 ---@return boolean
 function CanRegisterMissionObjects(amount)
-   return Citizen.InvokeNative(0x800DD4721A8B008B,amount)
+    return Citizen.InvokeNative(0x800DD4721A8B008B,amount)
 end
+
 
 
 --- 
@@ -2021,8 +2237,9 @@ end
 ---@param amount number
 ---@return boolean
 function CanRegisterMissionPeds(amount)
-   return Citizen.InvokeNative(0xBCBF4FEF9FA5D781,amount)
+    return Citizen.InvokeNative(0xBCBF4FEF9FA5D781,amount)
 end
+
 
 
 --- 
@@ -2030,8 +2247,9 @@ end
 ---@param amount number
 ---@return boolean
 function CanRegisterMissionVehicles(amount)
-   return Citizen.InvokeNative(0x7277F1F2E085EE74,amount)
+    return Citizen.InvokeNative(0x7277F1F2E085EE74,amount)
 end
+
 
 
 --- 
@@ -2039,8 +2257,9 @@ end
 ---@param amount number
 ---@return boolean
 function CanRegisterMissionPickups(amount)
-   return Citizen.InvokeNative(0xF0460C7BF80011EA,amount)
+    return Citizen.InvokeNative(0xF0460C7BF80011EA,amount)
 end
+
 
 
 --- 
@@ -2051,8 +2270,9 @@ end
 ---@param pickup_amt number
 ---@return boolean
 function CanRegisterMissionEntities(ped_amt,vehicle_amt,object_amt,pickup_amt)
-   return Citizen.InvokeNative(0x69778E7564BADE6D,ped_amt,vehicle_amt,object_amt,pickup_amt)
+    return Citizen.InvokeNative(0x69778E7564BADE6D,ped_amt,vehicle_amt,object_amt,pickup_amt)
 end
+
 
 
 --- p0 appears to be for MP
@@ -2060,8 +2280,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumReservedMissionObjects(p0)
-   return Citizen.InvokeNative(0xAA81B5F10BC43AC2,p0)
+    return Citizen.InvokeNative(0xAA81B5F10BC43AC2,p0)
 end
+
 
 
 --- p0 appears to be for MP
@@ -2069,8 +2290,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumReservedMissionPeds(p0)
-   return Citizen.InvokeNative(0x1F13D5AE5CB17E17,p0)
+    return Citizen.InvokeNative(0x1F13D5AE5CB17E17,p0)
 end
+
 
 
 --- p0 appears to be for MP
@@ -2078,8 +2300,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumReservedMissionVehicles(p0)
-   return Citizen.InvokeNative(0xCF3A965906452031,p0)
+    return Citizen.InvokeNative(0xCF3A965906452031,p0)
 end
+
 
 
 --- 
@@ -2087,8 +2310,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumReservedMissionPickups(p0)
-   return Citizen.InvokeNative(0x62BE3ECC79FBD004,p0)
+    return Citizen.InvokeNative(0x62BE3ECC79FBD004,p0)
 end
+
 
 
 --- 
@@ -2096,8 +2320,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumCreatedMissionObjects(p0)
-   return Citizen.InvokeNative(0x12B6281B6C6706C0,p0)
+    return Citizen.InvokeNative(0x12B6281B6C6706C0,p0)
 end
+
 
 
 --- 
@@ -2105,8 +2330,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumCreatedMissionPeds(p0)
-   return Citizen.InvokeNative(0xCB215C4B56A7FAE7,p0)
+    return Citizen.InvokeNative(0xCB215C4B56A7FAE7,p0)
 end
+
 
 
 --- 
@@ -2114,8 +2340,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumCreatedMissionVehicles(p0)
-   return Citizen.InvokeNative(0x0CD9AB83489430EA,p0)
+    return Citizen.InvokeNative(0x0CD9AB83489430EA,p0)
 end
+
 
 
 --- 
@@ -2123,8 +2350,9 @@ end
 ---@param p0 boolean
 ---@return number
 function GetNumCreatedMissionPickups(p0)
-   return Citizen.InvokeNative(0xD2BA051B94CA9BCC,p0)
+    return Citizen.InvokeNative(0xD2BA051B94CA9BCC,p0)
 end
+
 
 
 --- Only used in R* Script net_stable_manager
@@ -2139,6 +2367,7 @@ end
 function GetReservedMissionEntitiesForThread(threadId,pedMax,vehicleMax,unkMax,pedMin,vehicleMin,unkMin)
     Citizen.InvokeNative(0x99AAC89C510DEB0D,threadId,pedMax,vehicleMax,unkMax,pedMin,vehicleMin,unkMin)
 end
+
 
 
 --- Used in Script Function NET_ACE_CLIENT_VERIFY_ENTITY_RESERVATIONS
@@ -2158,12 +2387,14 @@ function GetReservedMissionEntitiesInArea(x,y,z,p3,peds,vehicles,objects,pickups
 end
 
 
+
 --- Always returns 60
 --- Native 0xC7BE335216B5EC7C (GET_MAX_NUM_NETWORK_OBJECTS)
 ---@return number
 function GetMaxNumNetworkObjects()
    return Citizen.InvokeNative(0xC7BE335216B5EC7C)
 end
+
 
 
 --- Always returns 110
@@ -2174,12 +2405,14 @@ function GetMaxNumNetworkPeds()
 end
 
 
+
 --- Always returns 40
 --- Native 0x0AFCE529F69B21FF (GET_MAX_NUM_NETWORK_VEHICLES)
 ---@return number
 function GetMaxNumNetworkVehicles()
    return Citizen.InvokeNative(0x0AFCE529F69B21FF)
 end
+
 
 
 --- Always returns 80
@@ -2190,12 +2423,14 @@ function GetMaxNumNetworkPickups()
 end
 
 
+
 --- 
 --- Native 0x7A5487FE9FAA6B48 (GET_NETWORK_TIME)
 ---@return number
 function GetNetworkTime()
    return Citizen.InvokeNative(0x7A5487FE9FAA6B48)
 end
+
 
 
 --- 
@@ -2206,6 +2441,7 @@ function GetNetworkTimeAccurate()
 end
 
 
+
 --- 
 --- Native 0x46718ACEEDEAFC84 (HAS_NETWORK_TIME_STARTED)
 ---@return boolean
@@ -2214,14 +2450,16 @@ function HasNetworkTimeStarted()
 end
 
 
+
 --- Adds the first argument to the second.
 --- Native 0x017008CCDAD48503 (GET_TIME_OFFSET)
 ---@param timeA number
 ---@param timeB number
 ---@return number
 function GetTimeOffset(timeA,timeB)
-   return Citizen.InvokeNative(0x017008CCDAD48503,timeA,timeB)
+    return Citizen.InvokeNative(0x017008CCDAD48503,timeA,timeB)
 end
+
 
 
 --- Subtracts the second argument from the first, then returns whether the result is negative.
@@ -2230,8 +2468,9 @@ end
 ---@param timeB number
 ---@return boolean
 function IsTimeLessThan(timeA,timeB)
-   return Citizen.InvokeNative(0xCB2CF5148012C8D0,timeA,timeB)
+    return Citizen.InvokeNative(0xCB2CF5148012C8D0,timeA,timeB)
 end
+
 
 
 --- Subtracts the first argument from the second, then returns whether the result is negative.
@@ -2240,8 +2479,9 @@ end
 ---@param timeB number
 ---@return boolean
 function IsTimeMoreThan(timeA,timeB)
-   return Citizen.InvokeNative(0xDE350F8651E4346C,timeA,timeB)
+    return Citizen.InvokeNative(0xDE350F8651E4346C,timeA,timeB)
 end
+
 
 
 --- Subtracts the second argument from the first.
@@ -2250,8 +2490,9 @@ end
 ---@param timeB number
 ---@return number
 function GetTimeDifference(timeA,timeB)
-   return Citizen.InvokeNative(0xA2C6FC031D46FFF0,timeA,timeB)
+    return Citizen.InvokeNative(0xA2C6FC031D46FFF0,timeA,timeB)
 end
+
 
 
 --- 
@@ -2260,6 +2501,7 @@ end
 function GetCloudTimeAsInt()
    return Citizen.InvokeNative(0x9A73240B49945C76)
 end
+
 
 
 --- Takes the specified time and writes it to the structure specified in the second argument.
@@ -2286,6 +2528,7 @@ function ConvertPosixTime(posixTime,timeStructure)
 end
 
 
+
 --- 
 --- Native 0x423DE3854BB50894 (NETWORK_SET_IN_SPECTATOR_MODE)
 ---@param toggle boolean
@@ -2293,6 +2536,7 @@ end
 function NetworkSetInSpectatorMode(toggle,playerPed)
     Citizen.InvokeNative(0x423DE3854BB50894,toggle,playerPed)
 end
+
 
 
 --- 
@@ -2306,6 +2550,7 @@ function NetworkSetInStaticSpectatorMode(toggle,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x048746E388762E11 (NETWORK_IS_IN_SPECTATOR_MODE)
 ---@return boolean
@@ -2314,13 +2559,15 @@ function NetworkIsInSpectatorMode()
 end
 
 
+
 --- 
 --- Native 0x5B709519997ECF0F (_NETWORK_IS_PLAYER_IN_SPECTATOR_MODE)
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerInSpectatorMode(player)
-   return Citizen.InvokeNative(0x5B709519997ECF0F,player)
+    return Citizen.InvokeNative(0x5B709519997ECF0F,player)
 end
+
 
 
 --- 
@@ -2334,6 +2581,7 @@ function NetworkSetInMpCutscene(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x6CC27C9FA2040220 (NETWORK_IS_IN_MP_CUTSCENE)
 ---@return boolean
@@ -2342,13 +2590,15 @@ function NetworkIsInMpCutscene()
 end
 
 
+
 --- Note: scripts seem to indicate that this was renamed to NETWORK_IS_PLAYER_IN_MP_FAST_INSTANCE
 --- Native 0x63F9EE203C3619F2 (NETWORK_IS_PLAYER_IN_MP_CUTSCENE)
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerInMpCutscene(player)
-   return Citizen.InvokeNative(0x63F9EE203C3619F2,player)
+    return Citizen.InvokeNative(0x63F9EE203C3619F2,player)
 end
+
 
 
 --- 
@@ -2361,6 +2611,7 @@ function SetNetworkRespotTimer(entity,timer,p2)
 end
 
 
+
 --- Old name: _SET_LOCAL_PLAYER_AS_GHOST
 --- Native 0x5FFE9B4144F9712F (SET_LOCAL_PLAYER_AS_GHOST)
 ---@param toggle boolean
@@ -2369,13 +2620,15 @@ function SetLocalPlayerAsGhost(toggle)
 end
 
 
+
 --- Old name: _IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER
 --- Native 0x21D04D7BC538C146 (IS_ENTITY_A_GHOST)
 ---@param entity entity
 ---@return boolean
 function IsEntityAGhost(entity)
-   return Citizen.InvokeNative(0x21D04D7BC538C146,entity)
+    return Citizen.InvokeNative(0x21D04D7BC538C146,entity)
 end
+
 
 
 --- _SET_PLAYER_V* - _SET_S*
@@ -2387,6 +2640,7 @@ function SetPlayerVisibilityToLocalPlayerDisabled(player,disabled)
 end
 
 
+
 --- 
 --- Native 0xEE5AE9956743BA20 (_SET_ENTITY_GHOSTED_TO_LOCAL_PLAYER)
 ---@param entity entity
@@ -2394,6 +2648,7 @@ end
 function SetEntityGhostedToLocalPlayer(entity,toggle)
     Citizen.InvokeNative(0xEE5AE9956743BA20,entity,toggle)
 end
+
 
 
 --- Note: this native was added in build 1311.16
@@ -2404,12 +2659,14 @@ function IsObjectReassignmentInProgress()
 end
 
 
+
 --- Note: this native was added in build 1311.16
 --- Native 0x4FE932E84FE932E8 (_GET_NUM_PEER_NEGOTIATION_RESPONSES)
 ---@return number
 function GetNumPeerNegotiationResponses()
    return Citizen.InvokeNative(0x4FE932E84FE932E8)
 end
+
 
 
 --- Must be called from a background script, otherwise it will do nothing.
@@ -2420,13 +2677,15 @@ function NetworkDebugRequestEntityPosition(p0)
 end
 
 
+
 --- 
 --- Native 0x42871327315EDAE8 (NETWORK_GET_NETWORK_ID_FROM_ROPE_ID)
 ---@param ropeId number
 ---@return number
 function NetworkGetNetworkIdFromRopeId(ropeId)
-   return Citizen.InvokeNative(0x42871327315EDAE8,ropeId)
+    return Citizen.InvokeNative(0x42871327315EDAE8,ropeId)
 end
+
 
 
 --- 
@@ -2434,8 +2693,9 @@ end
 ---@param netId number
 ---@return number
 function NetworkGetRopeIdFromNetworkId(netId)
-   return Citizen.InvokeNative(0xEB1A4DD8352EC828,netId)
+    return Citizen.InvokeNative(0xEB1A4DD8352EC828,netId)
 end
+
 
 
 --- 
@@ -2449,12 +2709,14 @@ function NetworkSpawnConfigAddSpawnPoint(x,y,z,heading)
 end
 
 
+
 --- 
 --- Native 0xEEB7818B1D307212 (_NETWORK_SPAWN_CONFIG_ADD_EXCLUSION_VOLUME)
 ---@param volume volume
 function NetworkSpawnConfigAddExclusionVolume(volume)
     Citizen.InvokeNative(0xEEB7818B1D307212,volume)
 end
+
 
 
 --- 
@@ -2465,12 +2727,14 @@ function NetworkSpawnConfigRemoveExclusionVolume(volume)
 end
 
 
+
 --- 
 --- Native 0xF94A0D5B254375DF (NETWORK_SPAWN_CONFIG_SET_FLAGS)
 ---@param flags number
 function NetworkSpawnConfigSetFlags(flags)
     Citizen.InvokeNative(0xF94A0D5B254375DF,flags)
 end
+
 
 
 --- 
@@ -2480,6 +2744,7 @@ end
 function NetworkSpawnConfigAddPropertyScripted(configProperty,include)
     Citizen.InvokeNative(0x44D59EC597BBF348,configProperty,include)
 end
+
 
 
 --- 
@@ -2492,6 +2757,7 @@ function NetworkSpawnConfigAddPropertyPreference(configProperty,include,weight)
 end
 
 
+
 --- 
 --- Native 0x59577799F6AE2F34 (NETWORK_SPAWN_CONFIG_SET_GROUND_TO_ROOT_OFFSET)
 ---@param offset float
@@ -2500,12 +2766,14 @@ function NetworkSpawnConfigSetGroundToRootOffset(offset)
 end
 
 
+
 --- 
 --- Native 0xBDCC671B911040F9 (_NETWORK_SPAWN_CONFIG_SET_LEVEL_WATER_DEPTH)
 ---@param waterDepthLevel number
 function NetworkSpawnConfigSetLevelWaterDepth(waterDepthLevel)
     Citizen.InvokeNative(0xBDCC671B911040F9,waterDepthLevel)
 end
+
 
 
 --- 
@@ -2517,12 +2785,14 @@ function NetworkSpawnConfigSetTuningFloat(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x89EC2FC89ECB1005 (_NETWORK_SPAWN_CONFIG_SEARCH_IN_PROGRESS)
 ---@return boolean
 function NetworkSpawnConfigSearchInProgress()
    return Citizen.InvokeNative(0x89EC2FC89ECB1005)
 end
+
 
 
 --- 
@@ -2532,6 +2802,7 @@ function NetworkSpawnConfigSetCancelSearch()
 end
 
 
+
 --- 
 --- Native 0x17E0198B3882C2CB (NETWORK_START_SOLO_TUTORIAL_SESSION)
 function NetworkStartSoloTutorialSession()
@@ -2539,11 +2810,13 @@ function NetworkStartSoloTutorialSession()
 end
 
 
+
 --- 
 --- Native 0xD0AFAFF5A51D72F7 (NETWORK_END_TUTORIAL_SESSION)
 function NetworkEndTutorialSession()
     Citizen.InvokeNative(0xD0AFAFF5A51D72F7)
 end
+
 
 
 --- 
@@ -2554,6 +2827,7 @@ function NetworkIsInTutorialSession()
 end
 
 
+
 --- 
 --- Native 0x35F0B98A8387274D (NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING)
 ---@return boolean
@@ -2562,14 +2836,16 @@ function NetworkIsTutorialSessionChangePending()
 end
 
 
+
 --- Old name: _NETWORK_IS_PLAYER_EQUAL_TO_INDEX
 --- Native 0x9DE986FC9A87C474 (NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION)
 ---@param player player
 ---@param index number
 ---@return boolean
 function NetworkArePlayersInSameTutorialSession(player,index)
-   return Citizen.InvokeNative(0x9DE986FC9A87C474,player,index)
+    return Citizen.InvokeNative(0x9DE986FC9A87C474,player,index)
 end
+
 
 
 --- 
@@ -2578,6 +2854,7 @@ end
 function NetworkAllowAllEntityFadingForInstances(toggle)
     Citizen.InvokeNative(0x4B05B97BA46F419D,toggle)
 end
+
 
 
 --- 
@@ -2589,6 +2866,7 @@ function NetworkAllowEntityFadingForInstances(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x007FF852DCF49DA4 (NETWORK_SET_LOCAL_PLAYER_PENDING_FAST_INSTANCE_ID)
 ---@param instanceId number
@@ -2597,13 +2875,15 @@ function NetworkSetLocalPlayerPendingFastInstanceId(instanceId)
 end
 
 
+
 --- 
 --- Native 0xD9267375834C5EAB (_NETWORK_GET_PLAYER_FAST_INSTANCE_ID)
 ---@param player player
 ---@return number
 function NetworkGetPlayerFastInstanceId(player)
-   return Citizen.InvokeNative(0xD9267375834C5EAB,player)
+    return Citizen.InvokeNative(0xD9267375834C5EAB,player)
 end
+
 
 
 --- 
@@ -2615,13 +2895,15 @@ function NetworkConcealPlayer(player,toggle)
 end
 
 
+
 --- 
 --- Native 0x919B3C98ED8292F9 (NETWORK_IS_PLAYER_CONCEALED)
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerConcealed(player)
-   return Citizen.InvokeNative(0x919B3C98ED8292F9,player)
+    return Citizen.InvokeNative(0x919B3C98ED8292F9,player)
 end
+
 
 
 --- Note: this native was added in build 1311.23, but was only used after build 1436.25
@@ -2629,6 +2911,7 @@ end
 function NetworkRequestCloudTunables()
     Citizen.InvokeNative(0x42FB3B532D526E6C)
 end
+
 
 
 --- 
@@ -2639,6 +2922,7 @@ function NetworkIsTunableCloudRequestPending()
 end
 
 
+
 --- 
 --- Native 0x10BD227A753B0D84 (NETWORK_GET_TUNABLE_CLOUD_CRC)
 ---@return number
@@ -2647,14 +2931,16 @@ function NetworkGetTunableCloudCrc()
 end
 
 
+
 --- 
 --- Native 0x85E5F8B9B898B20A (NETWORK_DOES_TUNABLE_EXIST)
 ---@param tunableContext hash
 ---@param tunableName hash
 ---@return boolean
 function NetworkDoesTunableExist(tunableContext,tunableName)
-   return Citizen.InvokeNative(0x85E5F8B9B898B20A,tunableContext,tunableName)
+    return Citizen.InvokeNative(0x85E5F8B9B898B20A,tunableContext,tunableName)
 end
+
 
 
 --- 
@@ -2664,8 +2950,9 @@ end
 ---@param value int*
 ---@return boolean
 function NetworkAccessTunableInt(tunableContext,tunableName,value)
-   return Citizen.InvokeNative(0x8BE1146DFD5D4468,tunableContext,tunableName,value)
+    return Citizen.InvokeNative(0x8BE1146DFD5D4468,tunableContext,tunableName,value)
 end
+
 
 
 --- 
@@ -2674,8 +2961,9 @@ end
 ---@param tunableName hash
 ---@return boolean
 function NetworkAccessTunableBool(tunableContext,tunableName)
-   return Citizen.InvokeNative(0xAA6A47A573ABB75A,tunableContext,tunableName)
+    return Citizen.InvokeNative(0xAA6A47A573ABB75A,tunableContext,tunableName)
 end
+
 
 
 --- 
@@ -2685,8 +2973,9 @@ end
 ---@param defaultValue number
 ---@return number
 function NetworkTryAccessTunableIntHash(tunableContext,tunableName,defaultValue)
-   return Citizen.InvokeNative(0xA25E006B36719774,tunableContext,tunableName,defaultValue)
+    return Citizen.InvokeNative(0xA25E006B36719774,tunableContext,tunableName,defaultValue)
 end
+
 
 
 --- 
@@ -2696,8 +2985,9 @@ end
 ---@param defaultValue float
 ---@return float
 function NetworkTryAccessTunableFloatHash(tunableContext,tunableName,defaultValue)
-   return Citizen.InvokeNative(0xA18393089C05E49C,tunableContext,tunableName,defaultValue)
+    return Citizen.InvokeNative(0xA18393089C05E49C,tunableContext,tunableName,defaultValue)
 end
+
 
 
 --- 
@@ -2707,8 +2997,9 @@ end
 ---@param defaultValue boolean
 ---@return boolean
 function NetworkTryAccessTunableBoolHash(tunableContext,tunableName,defaultValue)
-   return Citizen.InvokeNative(0xB2AD5D29A99D4B26,tunableContext,tunableName,defaultValue)
+    return Citizen.InvokeNative(0xB2AD5D29A99D4B26,tunableContext,tunableName,defaultValue)
 end
+
 
 
 --- 
@@ -2719,12 +3010,14 @@ function NetworkDisableProximityMigration(netID)
 end
 
 
+
 --- 
 --- Native 0xCE5E79D9E303628E (_COMMERCE_STORE_IS_OPEN)
 ---@return boolean
 function CommerceStoreIsOpen()
    return Citizen.InvokeNative(0xCE5E79D9E303628E)
 end
+
 
 
 --- 
@@ -2735,13 +3028,15 @@ function CommerceStoreIsEnabled()
 end
 
 
+
 --- 
 --- Native 0x4C61B39930D045DA (CLOUD_HAS_REQUEST_COMPLETED)
 ---@param id number
 ---@return boolean
 function CloudHasRequestCompleted(id)
-   return Citizen.InvokeNative(0x4C61B39930D045DA,id)
+    return Citizen.InvokeNative(0x4C61B39930D045DA,id)
 end
+
 
 
 --- 
@@ -2749,8 +3044,9 @@ end
 ---@param id number
 ---@return boolean
 function CloudDidRequestSucceed(id)
-   return Citizen.InvokeNative(0x3A3D5568AF297CD5,id)
+    return Citizen.InvokeNative(0x3A3D5568AF297CD5,id)
 end
+
 
 
 --- 
@@ -2758,8 +3054,9 @@ end
 ---@param paramName string
 ---@return boolean
 function GetLaunchParamExists(paramName)
-   return Citizen.InvokeNative(0x02E97CE283648CD9,paramName)
+    return Citizen.InvokeNative(0x02E97CE283648CD9,paramName)
 end
+
 
 
 --- 
@@ -2767,8 +3064,9 @@ end
 ---@param paramName string
 ---@return string
 function GetLaunchParamValue(paramName)
-   return Citizen.InvokeNative(0x65E65CA6A0FE59D4,paramName)
+    return Citizen.InvokeNative(0x65E65CA6A0FE59D4,paramName)
 end
+
 
 
 --- 
@@ -2780,12 +3078,14 @@ function SetLaunchParamValue(paramName,value)
 end
 
 
+
 --- 
 --- Native 0x782C94DB6469634D (_CLEAR_LAUNCH_PARAM)
 ---@param paramName string
 function ClearLaunchParam(paramName)
     Citizen.InvokeNative(0x782C94DB6469634D,paramName)
 end
+
 
 
 --- 
@@ -2796,12 +3096,14 @@ function GetLaunchParamString()
 end
 
 
+
 --- 
 --- Native 0xDFFC15AA63D04AAB (_SET_LAUNCH_PARAM_STRING)
 ---@param params string
 function SetLaunchParamString(params)
     Citizen.InvokeNative(0xDFFC15AA63D04AAB,params)
 end
+
 
 
 --- Old name: _CLEAR_LAUNCH_PARAMS
@@ -2811,13 +3113,15 @@ function ClearServiceEventArguments()
 end
 
 
+
 --- 
 --- Native 0xF4AC4FA844FD559A (UGC_IS_REQUEST_PENDING)
 ---@param ugcRequestId number
 ---@return boolean
 function UgcIsRequestPending(ugcRequestId)
-   return Citizen.InvokeNative(0xF4AC4FA844FD559A,ugcRequestId)
+    return Citizen.InvokeNative(0xF4AC4FA844FD559A,ugcRequestId)
 end
+
 
 
 --- 
@@ -2825,8 +3129,9 @@ end
 ---@param ugcRequestId number
 ---@return boolean
 function UgcHasRequestFinished(ugcRequestId)
-   return Citizen.InvokeNative(0xA9EB4D606076615D,ugcRequestId)
+    return Citizen.InvokeNative(0xA9EB4D606076615D,ugcRequestId)
 end
+
 
 
 --- 
@@ -2834,8 +3139,9 @@ end
 ---@param ugcRequestId number
 ---@return boolean
 function UgcDidRequestSucceed(ugcRequestId)
-   return Citizen.InvokeNative(0x0B6009A90B8495F1,ugcRequestId)
+    return Citizen.InvokeNative(0x0B6009A90B8495F1,ugcRequestId)
 end
+
 
 
 --- Returns ugcRequestId
@@ -2848,8 +3154,9 @@ end
 ---@param p5 number
 ---@return number
 function UgcQueryByContentType(p0,maxGet,contentTypeName,p3,p4,p5)
-   return Citizen.InvokeNative(0xF40EF49B3099E98E,p0,maxGet,contentTypeName,p3,p4,p5)
+    return Citizen.InvokeNative(0xF40EF49B3099E98E,p0,maxGet,contentTypeName,p3,p4,p5)
 end
+
 
 
 --- Returns ugcRequestId
@@ -2862,8 +3169,9 @@ end
 ---@param p5 boolean
 ---@return number
 function UgcQueryByCategory(categoryType,p1,maxGet,contentTypeName,p4,p5)
-   return Citizen.InvokeNative(0x8C109958C9BB559D,categoryType,p1,maxGet,contentTypeName,p4,p5)
+    return Citizen.InvokeNative(0x8C109958C9BB559D,categoryType,p1,maxGet,contentTypeName,p4,p5)
 end
+
 
 
 --- Returns ugcRequestId
@@ -2873,8 +3181,9 @@ end
 ---@param contentTypeName string
 ---@return number
 function UgcQueryByContentId(contentId,latestVersion,contentTypeName)
-   return Citizen.InvokeNative(0x69D22E183580113F,contentId,latestVersion,contentTypeName)
+    return Citizen.InvokeNative(0x69D22E183580113F,contentId,latestVersion,contentTypeName)
 end
+
 
 
 --- 
@@ -2882,8 +3191,9 @@ end
 ---@param contentId string
 ---@return boolean
 function UgcIsBookMarked(contentId)
-   return Citizen.InvokeNative(0xE42D1042F09865FE,contentId)
+    return Citizen.InvokeNative(0xE42D1042F09865FE,contentId)
 end
+
 
 
 --- 
@@ -2894,13 +3204,15 @@ function UgcClearQueryResults(ugcRequestId)
 end
 
 
+
 --- 
 --- Native 0xF8F0705E77A0E705 (UGC_QUERY_WAS_FORCE_CANCELLED)
 ---@param ugcRequestId number
 ---@return boolean
 function UgcQueryWasForceCancelled(ugcRequestId)
-   return Citizen.InvokeNative(0xF8F0705E77A0E705,ugcRequestId)
+    return Citizen.InvokeNative(0xF8F0705E77A0E705,ugcRequestId)
 end
+
 
 
 --- 
@@ -2908,8 +3220,9 @@ end
 ---@param ugcRequestId number
 ---@return number
 function UgcQueryGetContentNum(ugcRequestId)
-   return Citizen.InvokeNative(0x76160E0396142765,ugcRequestId)
+    return Citizen.InvokeNative(0x76160E0396142765,ugcRequestId)
 end
+
 
 
 --- 
@@ -2919,8 +3232,9 @@ end
 ---@param gamerHandle any*
 ---@return any
 function UgcQueryGetCreatorHandle(p0,index,gamerHandle)
-   return Citizen.InvokeNative(0xADB56322EEDFBDC9,p0,index,gamerHandle)
+    return Citizen.InvokeNative(0xADB56322EEDFBDC9,p0,index,gamerHandle)
 end
+
 
 
 --- 
@@ -2929,8 +3243,9 @@ end
 ---@param index number
 ---@return string
 function UgcQueryGetOwnerId(p0,index)
-   return Citizen.InvokeNative(0xF9F0B3028431967B,p0,index)
+    return Citizen.InvokeNative(0xF9F0B3028431967B,p0,index)
 end
+
 
 
 --- 
@@ -2939,8 +3254,9 @@ end
 ---@param index number
 ---@return string
 function UgcQueryGetName(p0,index)
-   return Citizen.InvokeNative(0x2D053EA815702DD1,p0,index)
+    return Citizen.InvokeNative(0x2D053EA815702DD1,p0,index)
 end
+
 
 
 --- 
@@ -2949,8 +3265,9 @@ end
 ---@param index number
 ---@return string
 function UgcQueryGetRootContentId(p0,index)
-   return Citizen.InvokeNative(0x566CEB0542EF5ECF,p0,index)
+    return Citizen.InvokeNative(0x566CEB0542EF5ECF,p0,index)
 end
+
 
 
 --- 
@@ -2959,8 +3276,9 @@ end
 ---@param index number
 ---@return string
 function UgcQueryGetPlaylistName(p0,index)
-   return Citizen.InvokeNative(0xCAF50048C8D0FBA0,p0,index)
+    return Citizen.InvokeNative(0xCAF50048C8D0FBA0,p0,index)
 end
+
 
 
 --- 
@@ -2969,8 +3287,9 @@ end
 ---@param index number
 ---@return hash
 function UgcQueryGetMissionDescHash(p0,index)
-   return Citizen.InvokeNative(0xA6BF569956C60A60,p0,index)
+    return Citizen.InvokeNative(0xA6BF569956C60A60,p0,index)
 end
+
 
 
 --- Returns string for GET_STATUS_OF_LOAD_MISSION_CREATOR_PHOTO
@@ -2980,8 +3299,9 @@ end
 ---@param p2 any
 ---@return string
 function UgcQueryGetCreatorPhoto(p0,p1,p2)
-   return Citizen.InvokeNative(0x409FE0CA6A4D1D49,p0,p1,p2)
+    return Citizen.InvokeNative(0x409FE0CA6A4D1D49,p0,p1,p2)
 end
+
 
 
 --- 
@@ -2994,14 +3314,16 @@ function UgcQueryGetDate(p0,index,p2)
 end
 
 
+
 --- 
 --- Native 0x21A99A72B00D8002 (_UGC_QUERY_GET_POSIX_UPDATED_DATE)
 ---@param p0 any
 ---@param p1 any
 ---@return number
 function UgcQueryGetPosixUpdatedDate(p0,p1)
-   return Citizen.InvokeNative(0x21A99A72B00D8002,p0,p1)
+    return Citizen.InvokeNative(0x21A99A72B00D8002,p0,p1)
 end
+
 
 
 --- 
@@ -3010,8 +3332,9 @@ end
 ---@param p1 any
 ---@return number
 function UgcQueryGetPosixPublishedDate(p0,p1)
-   return Citizen.InvokeNative(0x104080CA9E519B00,p0,p1)
+    return Citizen.InvokeNative(0x104080CA9E519B00,p0,p1)
 end
+
 
 
 --- 
@@ -3021,8 +3344,9 @@ end
 ---@param p2 number
 ---@return number
 function UgcQueryGetVersion(p0,index,p2)
-   return Citizen.InvokeNative(0x63E9DCBC8B0931ED,p0,index,p2)
+    return Citizen.InvokeNative(0x63E9DCBC8B0931ED,p0,index,p2)
 end
+
 
 
 --- 
@@ -3031,8 +3355,9 @@ end
 ---@param index number
 ---@return number
 function UgcQueryGetLanguage(p0,index)
-   return Citizen.InvokeNative(0x97764E8AC6487A9A,p0,index)
+    return Citizen.InvokeNative(0x97764E8AC6487A9A,p0,index)
 end
+
 
 
 --- 
@@ -3041,8 +3366,9 @@ end
 ---@param p1 any
 ---@return boolean
 function UgcQueryGetPublished(p0,p1)
-   return Citizen.InvokeNative(0x9993F1E11944A3DD,p0,p1)
+    return Citizen.InvokeNative(0x9993F1E11944A3DD,p0,p1)
 end
+
 
 
 --- 
@@ -3052,8 +3378,9 @@ end
 ---@param p2 number
 ---@return float
 function UgcQueryGetRating(p0,index,p2)
-   return Citizen.InvokeNative(0x24CD8FAEA1368379,p0,index,p2)
+    return Citizen.InvokeNative(0x24CD8FAEA1368379,p0,index,p2)
 end
+
 
 
 --- 
@@ -3062,8 +3389,9 @@ end
 ---@param index number
 ---@return boolean
 function UgcQueryGetContentHasPlayerRecord(p0,index)
-   return Citizen.InvokeNative(0xF794765390A6DCA5,p0,index)
+    return Citizen.InvokeNative(0xF794765390A6DCA5,p0,index)
 end
+
 
 
 --- 
@@ -3072,8 +3400,9 @@ end
 ---@param index number
 ---@return boolean
 function UgcQueryGetBookMarked(p0,index)
-   return Citizen.InvokeNative(0x98539FC453AEA639,p0,index)
+    return Citizen.InvokeNative(0x98539FC453AEA639,p0,index)
 end
+
 
 
 --- Checks if the user has ROS privilege 14.
@@ -3082,6 +3411,7 @@ end
 function UgcHasPrivilege()
    return Citizen.InvokeNative(0x6506BFA755FB209C)
 end
+
 
 
 --- 
@@ -3093,8 +3423,9 @@ end
 ---@param languageId number
 ---@return number
 function UgcRequestContentDataFromParams(contentTypeName,contentId,fileId,fileVersion,languageId)
-   return Citizen.InvokeNative(0x7FD2990AF016795E,contentTypeName,contentId,fileId,fileVersion,languageId)
+    return Citizen.InvokeNative(0x7FD2990AF016795E,contentTypeName,contentId,fileId,fileVersion,languageId)
 end
+
 
 
 --- 
@@ -3102,8 +3433,9 @@ end
 ---@param description hash
 ---@return number
 function UgcRequestCachedDescription(description)
-   return Citizen.InvokeNative(0x5E0165278F6339EE,description)
+    return Citizen.InvokeNative(0x5E0165278F6339EE,description)
 end
+
 
 
 --- 
@@ -3111,8 +3443,9 @@ end
 ---@param description hash
 ---@return boolean
 function UgcIsDescriptionRequestInProgress(description)
-   return Citizen.InvokeNative(0x2D5DC831176D0114,description)
+    return Citizen.InvokeNative(0x2D5DC831176D0114,description)
 end
+
 
 
 --- 
@@ -3120,8 +3453,9 @@ end
 ---@param description hash
 ---@return boolean
 function UgcHasDescriptionRequestFinished(description)
-   return Citizen.InvokeNative(0xEBFA8D50ADDC54C4,description)
+    return Citizen.InvokeNative(0xEBFA8D50ADDC54C4,description)
 end
+
 
 
 --- 
@@ -3129,8 +3463,9 @@ end
 ---@param description hash
 ---@return boolean
 function UgcDidDescriptionRequestSucceed(description)
-   return Citizen.InvokeNative(0x162C23CA83ED0A62,description)
+    return Citizen.InvokeNative(0x162C23CA83ED0A62,description)
 end
+
 
 
 --- 
@@ -3139,8 +3474,9 @@ end
 ---@param length number
 ---@return string
 function UgcGetCachedDescription(description,length)
-   return Citizen.InvokeNative(0x40F7E66472DF3E5C,description,length)
+    return Citizen.InvokeNative(0x40F7E66472DF3E5C,description,length)
 end
+
 
 
 --- 
@@ -3148,8 +3484,9 @@ end
 ---@param description hash
 ---@return boolean
 function UgcReleaseCachedDescription(description)
-   return Citizen.InvokeNative(0x5A34CD9C3C5BEC44,description)
+    return Citizen.InvokeNative(0x5A34CD9C3C5BEC44,description)
 end
+
 
 
 --- 
@@ -3157,6 +3494,7 @@ end
 function UgcReleaseAllCachedDescriptions()
     Citizen.InvokeNative(0x68103E2247887242)
 end
+
 
 
 --- 
@@ -3167,13 +3505,15 @@ function UgcSetQueryDataFromOffline(p0)
 end
 
 
+
 --- 
 --- Native 0xF53E48461B71EECB (UGC_IS_LANGUAGE_SUPPORTED)
 ---@param languageId number
 ---@return boolean
 function UgcIsLanguageSupported(languageId)
-   return Citizen.InvokeNative(0xF53E48461B71EECB,languageId)
+    return Citizen.InvokeNative(0xF53E48461B71EECB,languageId)
 end
+
 
 
 --- Returns false if pedshot push failed
@@ -3183,8 +3523,9 @@ end
 ---@param formatIndex number
 ---@return boolean
 function NetworkPersonaPhotoWriteScProfile(texture,personaPhotoType,formatIndex)
-   return Citizen.InvokeNative(0xB72999D3120599DF,texture,personaPhotoType,formatIndex)
+    return Citizen.InvokeNative(0xB72999D3120599DF,texture,personaPhotoType,formatIndex)
 end
+
 
 
 --- Returns false if pedshot push failed
@@ -3195,8 +3536,9 @@ end
 ---@param personaPhotoLocalCacheType number
 ---@return boolean
 function NetworkPersonaPhotoWriteLocal(texture,playerSlot,p2,personaPhotoLocalCacheType)
-   return Citizen.InvokeNative(0x2A48D9567940598F,texture,playerSlot,p2,personaPhotoLocalCacheType)
+    return Citizen.InvokeNative(0x2A48D9567940598F,texture,playerSlot,p2,personaPhotoLocalCacheType)
 end
+
 
 
 --- _NETWORK_IS_T* - _NETWORK_RE*
@@ -3207,14 +3549,16 @@ function NetworkIsPreviousUploadPending()
 end
 
 
+
 --- Only used in R* SP Scripts
 --- Native 0x356F9FB0698C1FEB (_REQUEST_PEDSHOT_TEXTURE_LOCAL_BACKUP_DOWNLOAD)
 ---@param player number
 ---@param personaPhotoLocalCacheType number
 ---@return string
 function RequestPedshotTextureLocalBackupDownload(player,personaPhotoLocalCacheType)
-   return Citizen.InvokeNative(0x356F9FB0698C1FEB,player,personaPhotoLocalCacheType)
+    return Citizen.InvokeNative(0x356F9FB0698C1FEB,player,personaPhotoLocalCacheType)
 end
+
 
 
 --- Only used in R* SP Script map_app_event_handler
@@ -3223,8 +3567,9 @@ end
 ---@param p1 number
 ---@return string
 function RequestPedshotTextureLocalDownload(gamerHandle,p1)
-   return Citizen.InvokeNative(0xCAF4CA2F87779F8F,gamerHandle,p1)
+    return Citizen.InvokeNative(0xCAF4CA2F87779F8F,gamerHandle,p1)
 end
+
 
 
 --- 
@@ -3233,8 +3578,9 @@ end
 ---@param p1 number
 ---@return string
 function RequestPedshotTextureMultiplayerDownload(gamerHandle,p1)
-   return Citizen.InvokeNative(0xB5C4B18B12A2AF23,gamerHandle,p1)
+    return Citizen.InvokeNative(0xB5C4B18B12A2AF23,gamerHandle,p1)
 end
+
 
 
 --- 
@@ -3242,8 +3588,9 @@ end
 ---@param name string
 ---@return boolean
 function TextureDownloadTextureNameIsValid(name)
-   return Citizen.InvokeNative(0xE2C3CEC3C0903A00,name)
+    return Citizen.InvokeNative(0xE2C3CEC3C0903A00,name)
 end
+
 
 
 --- Returns textureDownloadId
@@ -3254,8 +3601,9 @@ end
 ---@param p3 boolean
 ---@return number
 function TextureDownloadRequest(gamerHandle,filePath,name,p3)
-   return Citizen.InvokeNative(0x16160DA74A8E74A2,gamerHandle,filePath,name,p3)
+    return Citizen.InvokeNative(0x16160DA74A8E74A2,gamerHandle,filePath,name,p3)
 end
+
 
 
 --- Returns textureDownloadId
@@ -3266,8 +3614,9 @@ end
 ---@param p3 boolean
 ---@return number
 function MugshotTextureDownloadRequest(gamerHandle,p1,name,p3)
-   return Citizen.InvokeNative(0x9B5DB6CEAFAA10BB,gamerHandle,p1,name,p3)
+    return Citizen.InvokeNative(0x9B5DB6CEAFAA10BB,gamerHandle,p1,name,p3)
 end
+
 
 
 --- 
@@ -3280,8 +3629,9 @@ end
 ---@param p5 boolean
 ---@return number
 function UgcTextureDownloadRequest(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0x308F96458B7087CC,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0x308F96458B7087CC,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -3290,8 +3640,9 @@ end
 ---@param personaPhotoLocalCacheType number
 ---@return number
 function LocalPlayerPedshotTextureDownloadRequest(playerSlot,personaPhotoLocalCacheType)
-   return Citizen.InvokeNative(0x6E2FD8CF7EB10E53,playerSlot,personaPhotoLocalCacheType)
+    return Citizen.InvokeNative(0x6E2FD8CF7EB10E53,playerSlot,personaPhotoLocalCacheType)
 end
+
 
 
 --- 
@@ -3302,6 +3653,7 @@ function TextureDownloadRelease(textureDownloadId)
 end
 
 
+
 --- 
 --- Native 0x7A17B7981560FFA5 (_TEXTURE_DOWNLOAD_RELEASE_BY_NAME)
 ---@param name string
@@ -3310,13 +3662,15 @@ function TextureDownloadReleaseByName(name)
 end
 
 
+
 --- 
 --- Native 0x3448505B6E35262D (TEXTURE_DOWNLOAD_GET_NAME)
 ---@param textureDownloadId number
 ---@return string
 function TextureDownloadGetName(textureDownloadId)
-   return Citizen.InvokeNative(0x3448505B6E35262D,textureDownloadId)
+    return Citizen.InvokeNative(0x3448505B6E35262D,textureDownloadId)
 end
+
 
 
 --- 0 = succeeded
@@ -3326,8 +3680,9 @@ end
 ---@param textureDownloadId number
 ---@return number
 function GetStatusOfTextureDownload(textureDownloadId)
-   return Citizen.InvokeNative(0x8BD6C6DEA20E82C6,textureDownloadId)
+    return Citizen.InvokeNative(0x8BD6C6DEA20E82C6,textureDownloadId)
 end
+
 
 
 --- 
@@ -3338,12 +3693,14 @@ function PedmugshotGetStatus()
 end
 
 
+
 --- 
 --- Native 0xCD954F330693F5F2 (_PEDMUGSHOT_TAKE)
 ---@return boolean
 function PedmugshotTake()
    return Citizen.InvokeNative(0xCD954F330693F5F2)
 end
+
 
 
 --- 
@@ -3354,6 +3711,7 @@ function PedmugshotRequestSend()
 end
 
 
+
 --- 
 --- Native 0x8020A73847E0CA7D (NETWORK_HAVE_ROS_BANNED_PRIV)
 ---@return boolean
@@ -3362,13 +3720,15 @@ function NetworkHaveRosBannedPriv()
 end
 
 
+
 --- 
 --- Native 0xA699957E60D80214 (NETWORK_HAS_ROS_PRIVILEGE)
 ---@param index number
 ---@return boolean
 function NetworkHasRosPrivilege(index)
-   return Citizen.InvokeNative(0xA699957E60D80214,index)
+    return Citizen.InvokeNative(0xA699957E60D80214,index)
 end
+
 
 
 --- Always returns -1. Seems to be XB1 specific.
@@ -3376,8 +3736,9 @@ end
 ---@param gamerHandle any*
 ---@return number
 function NetworkStartUserContentPermissionsCheck(gamerHandle)
-   return Citizen.InvokeNative(0xDEB2B99A1AF1A2A6,gamerHandle)
+    return Citizen.InvokeNative(0xDEB2B99A1AF1A2A6,gamerHandle)
 end
+
 
 
 --- 
@@ -3388,12 +3749,14 @@ function NetworkAutoSessionSetAllowedToSplit(toggle)
 end
 
 
+
 --- 
 --- Native 0xAADED99A6B268A27 (NETWORK_AUTO_SESSION_IS_ALLOWED_TO_MERGE)
 ---@return boolean
 function NetworkAutoSessionIsAllowedToMerge()
    return Citizen.InvokeNative(0xAADED99A6B268A27)
 end
+
 
 
 --- 
@@ -3406,12 +3769,14 @@ function NetworkAutoSessionSetAllowedToMerge(toggle,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xE258570E0C116A66 (_NETWORK_AUTO_SESSION_IS_AUTO_WARP_DISABLED)
 ---@return boolean
 function NetworkAutoSessionIsAutoWarpDisabled()
    return Citizen.InvokeNative(0xE258570E0C116A66)
 end
+
 
 
 --- 
@@ -3422,13 +3787,15 @@ function NetworkAutoSessionSetAutoWarpEnabled(toggle)
 end
 
 
+
 --- 
 --- Native 0xE404BFF0ABA23CDC (NETWORK_AUTO_SESSION_CAN_SPLIT_SESSION)
 ---@param p0 int*
 ---@return boolean
 function NetworkAutoSessionCanSplitSession(p0)
-   return Citizen.InvokeNative(0xE404BFF0ABA23CDC,p0)
+    return Citizen.InvokeNative(0xE404BFF0ABA23CDC,p0)
 end
+
 
 
 --- 
@@ -3439,8 +3806,9 @@ end
 ---@param bucketId number
 ---@return boolean
 function NetworkAutoSessionSplitSession(playersToTake,maxInstancePlayers,sessionFlags,bucketId)
-   return Citizen.InvokeNative(0xC223D299C670413D,playersToTake,maxInstancePlayers,sessionFlags,bucketId)
+    return Citizen.InvokeNative(0xC223D299C670413D,playersToTake,maxInstancePlayers,sessionFlags,bucketId)
 end
+
 
 
 --- 
@@ -3451,12 +3819,14 @@ function NetworkAutoSessionIsProcessingSessionSplit()
 end
 
 
+
 --- 
 --- Native 0x6D87BA8EF15226CD (_NETWORK_AUTO_SESSION_SPLIT_SESSION_SUCCESSFUL)
 ---@return boolean
 function NetworkAutoSessionSplitSessionSuccessful()
    return Citizen.InvokeNative(0x6D87BA8EF15226CD)
 end
+
 
 
 --- 
@@ -3467,11 +3837,13 @@ function NetworkAutoSessionIsInstancedSession()
 end
 
 
+
 --- 
 --- Native 0xBB51299166B844F3 (NETWORK_AUTO_SESSION_FINISH_INSTANCE)
 function NetworkAutoSessionFinishInstance()
     Citizen.InvokeNative(0xBB51299166B844F3)
 end
+
 
 
 --- 
@@ -3482,6 +3854,7 @@ function NetworkAutoSessionIsObjectCreationPaused()
 end
 
 
+
 --- 
 --- Native 0x1BB50CD340A996E6 (NETWORK_IS_RESETTING_POPULATION)
 ---@return boolean
@@ -3490,14 +3863,16 @@ function NetworkIsResettingPopulation()
 end
 
 
+
 --- 
 --- Native 0x101F538C25ABB39A (NETWORK_RESET_POPULATION)
 ---@param p0 boolean
 ---@param p1 number
 ---@return boolean
 function NetworkResetPopulation(p0,p1)
-   return Citizen.InvokeNative(0x101F538C25ABB39A,p0,p1)
+    return Citizen.InvokeNative(0x101F538C25ABB39A,p0,p1)
 end
+
 
 
 --- 
@@ -3506,6 +3881,7 @@ end
 function NetworkDisableLeaveRemotePedBehind(toggle)
     Citizen.InvokeNative(0xC505036A35AFD01B,toggle)
 end
+
 
 
 --- Old name: _NETWORK_ALLOW_LOCAL_ENTITY_ATTACHMENT
@@ -3517,12 +3893,14 @@ function NetworkAllowRemoteAttachmentModification(entity,toggle)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x6BFF5F84102DF80A (NETWORK_SHOW_CHAT_RESTRICTION_MSC)
 ---@param player player
 function NetworkShowChatRestrictionMsc(player)
     Citizen.InvokeNative(0x6BFF5F84102DF80A,player)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -3532,13 +3910,15 @@ function NetworkShowPsnUgcRestriction()
 end
 
 
+
 --- Old name: _NETWORK_IS_CONNECTION_ENDPOINT_RELAY_SERVER
 --- Native 0x16D3D49902F697BB (NETWORK_IS_CONNECTED_VIA_RELAY)
 ---@param player player
 ---@return boolean
 function NetworkIsConnectedViaRelay(player)
-   return Citizen.InvokeNative(0x16D3D49902F697BB,player)
+    return Citizen.InvokeNative(0x16D3D49902F697BB,player)
 end
+
 
 
 --- Old name: _NETWORK_GET_AVERAGE_LATENCY_FOR_PLAYER
@@ -3546,8 +3926,9 @@ end
 ---@param player player
 ---@return float
 function NetworkGetAverageLatency(player)
-   return Citizen.InvokeNative(0xD414BE129BB81B32,player)
+    return Citizen.InvokeNative(0xD414BE129BB81B32,player)
 end
+
 
 
 --- Same as NETWORK_GET_AVERAGE_LATENCY (0xD414BE129BB81B32)
@@ -3556,8 +3937,9 @@ end
 ---@param player player
 ---@return float
 function NetworkGetAveragePing(player)
-   return Citizen.InvokeNative(0x0E3A041ED6AC2B45,player)
+    return Citizen.InvokeNative(0x0E3A041ED6AC2B45,player)
 end
+
 
 
 --- Old name: _NETWORK_GET_AVERAGE_PACKET_LOSS_FOR_PLAYER
@@ -3565,8 +3947,9 @@ end
 ---@param player player
 ---@return float
 function NetworkGetAveragePacketLoss(player)
-   return Citizen.InvokeNative(0x350C23949E43686C,player)
+    return Citizen.InvokeNative(0x350C23949E43686C,player)
 end
+
 
 
 --- Old name: _NETWORK_GET_NUM_UNACKED_FOR_PLAYER
@@ -3574,8 +3957,9 @@ end
 ---@param player player
 ---@return number
 function NetworkGetNumUnackedReliables(player)
-   return Citizen.InvokeNative(0xFF8FCF9FFC458A1C,player)
+    return Citizen.InvokeNative(0xFF8FCF9FFC458A1C,player)
 end
+
 
 
 --- Old name: _NETWORK_GET_UNRELIABLE_RESEND_COUNT_FOR_PLAYER
@@ -3583,8 +3967,9 @@ end
 ---@param player player
 ---@return number
 function NetworkGetUnreliableResendCount(player)
-   return Citizen.InvokeNative(0x3765C3A3E8192E10,player)
+    return Citizen.InvokeNative(0x3765C3A3E8192E10,player)
 end
+
 
 
 --- Old name: _NETWORK_GET_OLDEST_RESEND_COUNT_FOR_PLAYER
@@ -3592,8 +3977,9 @@ end
 ---@param player player
 ---@return number
 function NetworkGetHighestReliableResendCount(player)
-   return Citizen.InvokeNative(0x52C1EADAF7B10302,player)
+    return Citizen.InvokeNative(0x52C1EADAF7B10302,player)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -3603,6 +3989,7 @@ function NetworkDumpNetIfConfig()
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x6FD992C4A1C1B986 (NETWORK_GET_NET_STATISTICS_INFO)
 function NetworkGetNetStatisticsInfo()
@@ -3610,13 +3997,15 @@ function NetworkGetNetStatisticsInfo()
 end
 
 
+
 --- Returns true if the passed value is less than 32.
 --- Native 0x255A5EF65EDA9167 (NETWORK_IS_PLAYER_INDEX_VALID)
 ---@param player player
 ---@return boolean
 function NetworkIsPlayerIndexValid(player)
-   return Citizen.InvokeNative(0x255A5EF65EDA9167,player)
+    return Citizen.InvokeNative(0x255A5EF65EDA9167,player)
 end
+
 
 
 --- 
@@ -3624,8 +4013,9 @@ end
 ---@param player player
 ---@return boolean
 function GetPlayerWaypointIsActive(player)
-   return Citizen.InvokeNative(0xDCC4B7F7112E8AB7,player)
+    return Citizen.InvokeNative(0xDCC4B7F7112E8AB7,player)
 end
+
 
 
 --- 
@@ -3637,6 +4027,7 @@ function SetLocalPlayerDamageMultiplierForPlayer(player,damageMultiplier)
 end
 
 
+
 --- Old name: _NETWORK_SET_VEHICLE_WHEELS_DESTRUCTIBLE
 --- Native 0x0C8BC052AE87D744 (NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_DAMAGE)
 ---@param entity entity
@@ -3646,13 +4037,15 @@ function NetworkTriggerDamageEventForZeroDamage(entity,p1)
 end
 
 
+
 --- 
 --- Native 0x07F723401B9D921C (GET_UNIQUE_INT_FOR_PLAYER)
 ---@param player player
 ---@return number
 function GetUniqueIntForPlayer(player)
-   return Citizen.InvokeNative(0x07F723401B9D921C,player)
+    return Citizen.InvokeNative(0x07F723401B9D921C,player)
 end
+
 
 
 --- 
@@ -3661,8 +4054,9 @@ end
 ---@param trackedPlayer player
 ---@return boolean
 function NetworkIsTrackedPlayerVisible(player,trackedPlayer)
-   return Citizen.InvokeNative(0xE525878A35B9EEBD,player,trackedPlayer)
+    return Citizen.InvokeNative(0xE525878A35B9EEBD,player,trackedPlayer)
 end
+
 
 
 --- 
@@ -3670,8 +4064,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsAimCamActive(player)
-   return Citizen.InvokeNative(0x8E7CE19219669AEB,player)
+    return Citizen.InvokeNative(0x8E7CE19219669AEB,player)
 end
+
 
 
 --- 
@@ -3685,12 +4080,14 @@ function NetworkAlert(ctx,lh,ec,h)
 end
 
 
+
 --- 
 --- Native 0x777D0571A466B520 (_SET_SOCIAL_MATCHMAKING_ALLOWED)
 ---@param toggle boolean
 function SetSocialMatchmakingAllowed(toggle)
     Citizen.InvokeNative(0x777D0571A466B520,toggle)
 end
+
 
 
 --- 
@@ -3701,13 +4098,15 @@ function GetSocialMatchmakingAllowed()
 end
 
 
+
 --- 
 --- Native 0xFBE782B3165AC8EC (NETWORK_AWARD_HAS_REACHED_MAXCLAIM)
 ---@param p0 any
 ---@return boolean
 function NetworkAwardHasReachedMaxclaim(p0)
-   return Citizen.InvokeNative(0xFBE782B3165AC8EC,p0)
+    return Citizen.InvokeNative(0xFBE782B3165AC8EC,p0)
 end
+
 
 
 --- 
@@ -3718,6 +4117,7 @@ function NetworkGetXp()
 end
 
 
+
 --- 
 --- Native 0x32C90CDFAF40514C (_NETWORK_GET_RANK)
 ---@return number
@@ -3726,12 +4126,14 @@ function NetworkGetRank()
 end
 
 
+
 --- 
 --- Native 0x29FE035D35B8589C (NETWORK_SET_RECENT_GAMERS_ENABLED)
 ---@param toggle boolean
 function NetworkSetRecentGamersEnabled(toggle)
     Citizen.InvokeNative(0x29FE035D35B8589C,toggle)
 end
+
 
 
 --- 
@@ -3743,14 +4145,16 @@ function NetworkAddPlayerToRecentGamersList(player,p1)
 end
 
 
+
 --- 
 --- Native 0x6D206D383BB5F6B1 (NETWORK_REQUEST_RECENT_GAMER_NAMES)
 ---@param p0 number
 ---@param playerCount number
 ---@return boolean
 function NetworkRequestRecentGamerNames(p0,playerCount)
-   return Citizen.InvokeNative(0x6D206D383BB5F6B1,p0,playerCount)
+    return Citizen.InvokeNative(0x6D206D383BB5F6B1,p0,playerCount)
 end
+
 
 
 --- 
@@ -3761,12 +4165,14 @@ function NetworkIsRecentGamerNamesRequestInProgress()
 end
 
 
+
 --- 
 --- Native 0x12AEB56B489415C5 (_NETWORK_DID_RECENT_GAMER_NAMES_REQUEST_SUCCEED)
 ---@return boolean
 function NetworkDidRecentGamerNamesRequestSucceed()
    return Citizen.InvokeNative(0x12AEB56B489415C5)
 end
+
 
 
 --- 
@@ -3777,6 +4183,7 @@ function NetworkGetNumRecentGamers()
 end
 
 
+
 --- 
 --- Native 0xFEFCC345CE357453 (NETWORK_GET_RECENT_GAMER_NAMES)
 ---@param p0 number
@@ -3785,8 +4192,9 @@ end
 ---@param dataSize number
 ---@return boolean
 function NetworkGetRecentGamerNames(p0,p1,outData,dataSize)
-   return Citizen.InvokeNative(0xFEFCC345CE357453,p0,p1,outData,dataSize)
+    return Citizen.InvokeNative(0xFEFCC345CE357453,p0,p1,outData,dataSize)
 end
+
 
 
 --- 
@@ -3794,6 +4202,7 @@ end
 function NetworkActivityResetToIdle()
     Citizen.InvokeNative(0x3FE141FDB990E3D1)
 end
+
 
 
 --- 
@@ -3804,12 +4213,14 @@ function NetworkActivitySetCurrent(netPlaylistActivity)
 end
 
 
+
 --- Returns CGameConfig->ConfigOnlineServices->RosTitleName (see gameconfig.xml)
 --- Native 0xAC6153A0722F524C (_NETWORK_GET_ROS_TITLE_NAME)
 ---@return string
 function NetworkGetRosTitleName()
    return Citizen.InvokeNative(0xAC6153A0722F524C)
 end
+
 
 
 --- 
@@ -3821,5 +4232,6 @@ end
 function ReportPlayer(player,reportType,description,horseName)
     Citizen.InvokeNative(0xA197C35F73AC0F12,player,reportType,description,horseName)
 end
+
 
 

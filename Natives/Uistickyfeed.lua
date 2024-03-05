@@ -5,8 +5,9 @@
 ---@param p2 boolean
 ---@return number
 function UiStickyFeedCreateErrorMessage(p0,p1,p2)
-   return Citizen.InvokeNative(0x9F2CC2439A04E7BA,p0,p1,p2)
+    return Citizen.InvokeNative(0x9F2CC2439A04E7BA,p0,p1,p2)
 end
+
 
 
 --- Example: https://pastebin.com/JygJShNU
@@ -16,8 +17,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiStickyFeedCreateDeathFailMessage(p0,p1,p2)
-   return Citizen.InvokeNative(0x815C4065AE6E6071,p0,p1,p2)
+    return Citizen.InvokeNative(0x815C4065AE6E6071,p0,p1,p2)
 end
+
 
 
 --- Example: https://pastebin.com/6mLtee2S
@@ -27,8 +29,9 @@ end
 ---@param p2 boolean
 ---@return number
 function UiStickyFeedCreateWarningMessage(p0,p1,p2)
-   return Citizen.InvokeNative(0x339E16B41780FC35,p0,p1,p2)
+    return Citizen.InvokeNative(0x339E16B41780FC35,p0,p1,p2)
 end
+
 
 
 --- Seems to only update _UI_STICKY_FEED_CREATE_ERROR_MESSAGE(0x9F2CC2439A04E7BA) and _UI_STICKY_FEED_CREATE_DEATH_FAIL_MESSAGE(0x815C4065AE6E6071) message.
@@ -42,6 +45,7 @@ function UiStickyFeedUpdateMessage(msgId,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x00A15B94CBA4F76F (_UI_STICKY_FEED_CLEAR_MESSAGE)
 ---@param msgId number
@@ -50,13 +54,15 @@ function UiStickyFeedClearMessage(msgId)
 end
 
 
+
 --- stickyFeedChannel: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eUIStickyFeedChannel
 --- Native 0xC5C395C60B542A3C (_UI_STICKY_FEED_IS_CHANNEL_ACTIVE)
 ---@param stickyFeedChannel number
 ---@return boolean
 function UiStickyFeedIsChannelActive(stickyFeedChannel)
-   return Citizen.InvokeNative(0xC5C395C60B542A3C,stickyFeedChannel)
+    return Citizen.InvokeNative(0xC5C395C60B542A3C,stickyFeedChannel)
 end
+
 
 
 --- 
@@ -67,12 +73,14 @@ function UiStickyFeedIsAlertScreenActive()
 end
 
 
+
 --- Returns state of sticky feed message, see 0x59FA676177DBE4C9
 --- Native 0x07954320D77F6A3D (_UI_STICKY_FEED_GET_MESSAGE_STATE)
 ---@param msgId number
 ---@return number
 function UiStickyFeedGetMessageState(msgId)
-   return Citizen.InvokeNative(0x07954320D77F6A3D,msgId)
+    return Citizen.InvokeNative(0x07954320D77F6A3D,msgId)
 end
+
 
 

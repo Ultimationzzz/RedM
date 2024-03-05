@@ -3,8 +3,9 @@
 ---@param popSetHash hash
 ---@return number
 function GetNumModelsInPopulationSet(popSetHash)
-   return Citizen.InvokeNative(0xA1E3171ED0E47564,popSetHash)
+    return Citizen.InvokeNative(0xA1E3171ED0E47564,popSetHash)
 end
+
 
 
 --- 
@@ -13,8 +14,9 @@ end
 ---@param index number
 ---@return hash
 function GetPedModelNameInPopulationSet(popSetHash,index)
-   return Citizen.InvokeNative(0x3EAFA1C533B7139E,popSetHash,index)
+    return Citizen.InvokeNative(0x3EAFA1C533B7139E,popSetHash,index)
 end
+
 
 
 --- 
@@ -29,8 +31,9 @@ end
 ---@param z float
 ---@return hash
 function GetRandomModelFromPopulationSet(popSetHash,flags,p2,p3,p4,x,y,z)
-   return Citizen.InvokeNative(0x6B12ED8C77E8567B,popSetHash,flags,p2,p3,p4,x,y,z)
+    return Citizen.InvokeNative(0x6B12ED8C77E8567B,popSetHash,flags,p2,p3,p4,x,y,z)
 end
+
 
 
 --- 
@@ -38,8 +41,9 @@ end
 ---@param volume volume
 ---@return popzone
 function CreatePopzoneFromVolume(volume)
-   return Citizen.InvokeNative(0x9AC1C64FE46B6D09,volume)
+    return Citizen.InvokeNative(0x9AC1C64FE46B6D09,volume)
 end
+
 
 
 --- 
@@ -50,13 +54,15 @@ function DeleteScriptPopzone(popZone)
 end
 
 
+
 --- 
 --- Native 0xA5BD585005EFCAD4 (_IS_POPZONE_VALID)
 ---@param popZone popzone
 ---@return boolean
 function IsPopzoneValid(popZone)
-   return Citizen.InvokeNative(0xA5BD585005EFCAD4,popZone)
+    return Citizen.InvokeNative(0xA5BD585005EFCAD4,popZone)
 end
+
 
 
 --- 
@@ -66,6 +72,7 @@ end
 function SetPopzonePopulationSet(popZone,populationSetHash)
     Citizen.InvokeNative(0x3E6A49D9B519E85C,popZone,populationSetHash)
 end
+
 
 
 --- 
@@ -78,6 +85,7 @@ function SetSpawnerInfoPriority(p0,p1,priority)
 end
 
 
+
 --- 
 --- Native 0x217A54DE2D200305 (CLEAR_SPAWNER_INFO_PRIORITY)
 ---@param p0 hash
@@ -85,6 +93,7 @@ end
 function ClearSpawnerInfoPriority(p0,p1)
     Citizen.InvokeNative(0x217A54DE2D200305,p0,p1)
 end
+
 
 
 --- flags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/PedFilterFlags
@@ -101,12 +110,14 @@ function AddAmbientAvoidanceRestriction(volume,includeFlags,excludeFlags,p3,p4,p
 end
 
 
+
 --- flags: see 0xB56D41A694E42E86
 --- Native 0x74C2B3DC0B294102 (_REMOVE_AMBIENT_AVOIDANCE_RESTRICTION)
 ---@param volume volume
 function RemoveAmbientAvoidanceRestriction(volume)
     Citizen.InvokeNative(0x74C2B3DC0B294102,volume)
 end
+
 
 
 --- flags: see 0xB56D41A694E42E86
@@ -123,12 +134,14 @@ function AddAmbientSpawnRestriction(volume,includeFlags,excludeFlags,p3,p4,p5,p6
 end
 
 
+
 --- 
 --- Native 0xA1CFB35069D23C23 (_REMOVE_AMBIENT_SPAWN_RESTRICTION)
 ---@param volume volume
 function RemoveAmbientSpawnRestriction(volume)
     Citizen.InvokeNative(0xA1CFB35069D23C23,volume)
 end
+
 
 
 --- Params: p1 = 1 & 2 in R* Scripts, 0 = Disable avoidance, 1 = Enabled avoidance, 2 = Enabled avoidance (?)
@@ -140,12 +153,14 @@ function SetPedShouldIgnoreAvoidanceVolumes(ped,p1)
 end
 
 
+
 --- 
 --- Native 0xC6DCC2A3A8825C85 (DISABLE_AMBIENT_ROAD_POPULATION)
 ---@param unk boolean
 function DisableAmbientRoadPopulation(unk)
     Citizen.InvokeNative(0xC6DCC2A3A8825C85,unk)
 end
+
 
 
 --- 
@@ -155,11 +170,13 @@ function EnableAmbientRoadPopulation()
 end
 
 
+
 --- Returns model hash of the closest fish
 --- Native 0x595478B3BBC3076D (_GET_RANDOM_FISH_TYPE_FOR_LOCATION)
 ---@return hash
 function GetRandomFishTypeForLocation()
    return Citizen.InvokeNative(0x595478B3BBC3076D)
 end
+
 
 

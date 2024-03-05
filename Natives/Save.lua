@@ -18,8 +18,9 @@
 ---@param savegameType hash
 ---@return boolean
 function SavegameSaveSp(savegameType)
-   return Citizen.InvokeNative(0x62C9EB51656D68CE,savegameType)
+    return Citizen.InvokeNative(0x62C9EB51656D68CE,savegameType)
 end
+
 
 
 --- See SAVEGAME_SAVE_SP
@@ -27,8 +28,9 @@ end
 ---@param savegameType hash
 ---@return boolean
 function SavegameSaveMp(savegameType)
-   return Citizen.InvokeNative(0x1840F3B30ED0105F,savegameType)
+    return Citizen.InvokeNative(0x1840F3B30ED0105F,savegameType)
 end
+
 
 
 --- 
@@ -37,6 +39,7 @@ end
 function SavegameIsSavePending()
    return Citizen.InvokeNative(0x3CF46F55C6585590)
 end
+
 
 
 --- Does the exact same as 0x529B9CCD0972AF4E
@@ -49,6 +52,7 @@ function SavegameGetInt2(p0,variableName)
 end
 
 
+
 --- 
 --- Native 0x529B9CCD0972AF4E (_SAVEGAME_GET_INT)
 ---@param p0 any*
@@ -56,6 +60,7 @@ end
 function SavegameGetInt(p0,variableName)
     Citizen.InvokeNative(0x529B9CCD0972AF4E,p0,variableName)
 end
+
 
 
 --- Does the exact same as 0x529B9CCD0972AF4E
@@ -68,6 +73,7 @@ function SavegameGetInt3(p0,variableName)
 end
 
 
+
 --- 
 --- Native 0x35DEFECAE36D4FAE (_SAVEGAME_GET_FLOAT)
 ---@param p0 any*
@@ -75,6 +81,7 @@ end
 function SavegameGetFloat(p0,variableName)
     Citizen.InvokeNative(0x35DEFECAE36D4FAE,p0,variableName)
 end
+
 
 
 --- Does the exact same as 0x529B9CCD0972AF4E
@@ -86,6 +93,7 @@ function SavegameGetBool(p0,variableName)
 end
 
 
+
 --- 
 --- Native 0x5A10D6506B2F2C63 (_SAVEGAME_GET_TEXT_LABEL_23)
 ---@param p0 any*
@@ -93,6 +101,7 @@ end
 function SavegameGetTextLabel23(p0,variableName)
     Citizen.InvokeNative(0x5A10D6506B2F2C63,p0,variableName)
 end
+
 
 
 --- 
@@ -104,6 +113,7 @@ function SavegameGetTextLabel31(p0,variableName)
 end
 
 
+
 --- 
 --- Native 0x186608A2AC6F9E88 (_SAVEGAME_GET_TEXT_LABEL_63)
 ---@param p0 any*
@@ -111,5 +121,6 @@ end
 function SavegameGetTextLabel63(p0,variableName)
     Citizen.InvokeNative(0x186608A2AC6F9E88,p0,variableName)
 end
+
 
 

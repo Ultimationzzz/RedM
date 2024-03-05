@@ -6,13 +6,15 @@ function DatafileWatchRequestId(id)
 end
 
 
+
 --- 
 --- Native 0x17279C820464CEE0 (DATAFILE_HAS_LOADED_FILE_DATA)
 ---@param p0 any
 ---@return boolean
 function DatafileHasLoadedFileData(p0)
-   return Citizen.InvokeNative(0x17279C820464CEE0,p0)
+    return Citizen.InvokeNative(0x17279C820464CEE0,p0)
 end
+
 
 
 --- 
@@ -20,8 +22,9 @@ end
 ---@param p0 any
 ---@return boolean
 function DatafileHasValidFileData(p0)
-   return Citizen.InvokeNative(0xE60100389E50EADE,p0)
+    return Citizen.InvokeNative(0xE60100389E50EADE,p0)
 end
+
 
 
 --- 
@@ -30,8 +33,9 @@ end
 ---@param p1 any
 ---@return boolean
 function DatafileSelectActiveFile(p0,p1)
-   return Citizen.InvokeNative(0x46102A0989AD80B5,p0,p1)
+    return Citizen.InvokeNative(0x46102A0989AD80B5,p0,p1)
 end
+
 
 
 --- 
@@ -39,8 +43,9 @@ end
 ---@param p0 any
 ---@return boolean
 function DatafileDeleteRequestedFile(p0)
-   return Citizen.InvokeNative(0x604B8ED1A482F9DF,p0)
+    return Citizen.InvokeNative(0x604B8ED1A482F9DF,p0)
 end
+
 
 
 --- 
@@ -51,8 +56,9 @@ end
 ---@param p3 any
 ---@return any
 function Ugc2SetPlayerData(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xE79C70E77E0973C7,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xE79C70E77E0973C7,p0,p1,p2,p3)
 end
+
 
 
 --- Reloops value returned by UGC_QUERY_GET_CONTENT_NUM
@@ -62,8 +68,9 @@ end
 ---@param p2 any
 ---@return any
 function DatafileUgcSelectData(ugcRequestId,index,p2)
-   return Citizen.InvokeNative(0x790EC421078F5C4E,ugcRequestId,index,p2)
+    return Citizen.InvokeNative(0x790EC421078F5C4E,ugcRequestId,index,p2)
 end
+
 
 
 --- 
@@ -74,6 +81,7 @@ function DatafileCreate(index)
 end
 
 
+
 --- 
 --- Native 0x9FB90EEDEA9F2D5C (DATAFILE_DELETE)
 ---@param index number
@@ -82,13 +90,15 @@ function DatafileDelete(index)
 end
 
 
+
 --- 
 --- Native 0xBBD8CF823CAE557C (DATAFILE_GET_FILE_DICT)
 ---@param index number
 ---@return any*
 function DatafileGetFileDict(index)
-   return Citizen.InvokeNative(0xBBD8CF823CAE557C,index)
+    return Citizen.InvokeNative(0xBBD8CF823CAE557C,index)
 end
+
 
 
 --- 
@@ -96,8 +106,9 @@ end
 ---@param fileDict any*
 ---@return boolean
 function DatadictIsDictValid(fileDict)
-   return Citizen.InvokeNative(0x4607D57C5F7D332A,fileDict)
+    return Citizen.InvokeNative(0x4607D57C5F7D332A,fileDict)
 end
+
 
 
 --- 
@@ -105,8 +116,9 @@ end
 ---@param fileDict any*
 ---@return boolean
 function DatadictIsArrayValid(fileDict)
-   return Citizen.InvokeNative(0xB04B69CF277D15C0,fileDict)
+    return Citizen.InvokeNative(0xB04B69CF277D15C0,fileDict)
 end
+
 
 
 --- 
@@ -119,14 +131,16 @@ function DatadictSetInt(objectData,key,value)
 end
 
 
+
 --- 
 --- Native 0x175E915A486EE548 (DATADICT_GET_BOOL)
 ---@param objectData any*
 ---@param key string
 ---@return boolean
 function DatadictGetBool(objectData,key)
-   return Citizen.InvokeNative(0x175E915A486EE548,objectData,key)
+    return Citizen.InvokeNative(0x175E915A486EE548,objectData,key)
 end
+
 
 
 --- 
@@ -135,8 +149,9 @@ end
 ---@param key string
 ---@return number
 function DatadictGetInt(objectData,key)
-   return Citizen.InvokeNative(0x9D896A3B87D96E2B,objectData,key)
+    return Citizen.InvokeNative(0x9D896A3B87D96E2B,objectData,key)
 end
+
 
 
 --- 
@@ -145,8 +160,9 @@ end
 ---@param key string
 ---@return float
 function DatadictGetFloat(objectData,key)
-   return Citizen.InvokeNative(0x814643ECA258ADF5,objectData,key)
+    return Citizen.InvokeNative(0x814643ECA258ADF5,objectData,key)
 end
+
 
 
 --- 
@@ -155,8 +171,9 @@ end
 ---@param key string
 ---@return string
 function DatadictGetString(objectData,key)
-   return Citizen.InvokeNative(0xE37B38C0B4E95DFA,objectData,key)
+    return Citizen.InvokeNative(0xE37B38C0B4E95DFA,objectData,key)
 end
+
 
 
 --- 
@@ -165,8 +182,9 @@ end
 ---@param key string
 ---@return vector3
 function DatadictGetVector(objectData,key)
-   return Citizen.InvokeNative(0xE459C941431E0FFA,objectData,key)
+    return Citizen.InvokeNative(0xE459C941431E0FFA,objectData,key)
 end
+
 
 
 --- 
@@ -175,8 +193,9 @@ end
 ---@param key string
 ---@return any*
 function DatadictGetDict(objectData,key)
-   return Citizen.InvokeNative(0x4D7A30130F46AC9C,objectData,key)
+    return Citizen.InvokeNative(0x4D7A30130F46AC9C,objectData,key)
 end
+
 
 
 --- 
@@ -185,8 +204,9 @@ end
 ---@param key string
 ---@return any*
 function DatadictGetArray(objectData,key)
-   return Citizen.InvokeNative(0x1B5447CF18544B18,objectData,key)
+    return Citizen.InvokeNative(0x1B5447CF18544B18,objectData,key)
 end
+
 
 
 --- Types:
@@ -202,8 +222,9 @@ end
 ---@param key string
 ---@return number
 function DatadictGetType(objectData,key)
-   return Citizen.InvokeNative(0x92E11E3CA4C7CDF0,objectData,key)
+    return Citizen.InvokeNative(0x92E11E3CA4C7CDF0,objectData,key)
 end
+
 
 
 --- 
@@ -212,8 +233,9 @@ end
 ---@param arrayIndex number
 ---@return boolean
 function DataarrayGetBool(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0xAB1231D2DE52F2D3,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0xAB1231D2DE52F2D3,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -222,8 +244,9 @@ end
 ---@param arrayIndex number
 ---@return number
 function DataarrayGetInt(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0x96DEA500B6EBBE53,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0x96DEA500B6EBBE53,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -232,8 +255,9 @@ end
 ---@param arrayIndex number
 ---@return float
 function DataarrayGetFloat(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0xA9D003CF419CB81E,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0xA9D003CF419CB81E,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -242,8 +266,9 @@ end
 ---@param arrayIndex number
 ---@return string
 function DataarrayGetString(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0xB6790A8FF80F889F,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0xB6790A8FF80F889F,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -252,8 +277,9 @@ end
 ---@param arrayIndex number
 ---@return vector3
 function DataarrayGetVector(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0x850DA2750DA14E9A,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0x850DA2750DA14E9A,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -262,8 +288,9 @@ end
 ---@param arrayIndex number
 ---@return any*
 function DataarrayGetDict(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0xA010655985853485,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0xA010655985853485,arrayData,arrayIndex)
 end
+
 
 
 --- 
@@ -271,8 +298,9 @@ end
 ---@param arrayData any*
 ---@return number
 function DataarrayGetCount(arrayData)
-   return Citizen.InvokeNative(0x6A885BF69239E539,arrayData)
+    return Citizen.InvokeNative(0x6A885BF69239E539,arrayData)
 end
+
 
 
 --- Types:
@@ -288,8 +316,9 @@ end
 ---@param arrayIndex number
 ---@return number
 function DataarrayGetType(arrayData,arrayIndex)
-   return Citizen.InvokeNative(0x151DAFE6B3B9888F,arrayData,arrayIndex)
+    return Citizen.InvokeNative(0x151DAFE6B3B9888F,arrayData,arrayIndex)
 end
+
 
 
 --- LOAD_PARSEDDATA_FILE_FAILSAFE_HASH
@@ -298,8 +327,9 @@ end
 ---@param p0 hash
 ---@return number
 function ParseddataLoadFileHash(p0)
-   return Citizen.InvokeNative(0xD97D8D905F1562F2,p0)
+    return Citizen.InvokeNative(0xD97D8D905F1562F2,p0)
 end
+
 
 
 --- 
@@ -310,13 +340,15 @@ function ParseddataUnloadFile(fileHandle)
 end
 
 
+
 --- 
 --- Native 0x7907969497EA92F5 (PARSEDDATA_IS_FILE_VALID)
 ---@param fileHandle number
 ---@return boolean
 function ParseddataIsFileValid(fileHandle)
-   return Citizen.InvokeNative(0x7907969497EA92F5,fileHandle)
+    return Citizen.InvokeNative(0x7907969497EA92F5,fileHandle)
 end
+
 
 
 --- 
@@ -324,8 +356,9 @@ end
 ---@param fileHandle number
 ---@return boolean
 function ParseddataIsFileLoaded(fileHandle)
-   return Citizen.InvokeNative(0x603AC35FD4602C76,fileHandle)
+    return Citizen.InvokeNative(0x603AC35FD4602C76,fileHandle)
 end
+
 
 
 --- 
@@ -335,8 +368,9 @@ end
 ---@param p2 any
 ---@return any
 function ParseddataRegisterQuery(p0,p1,p2)
-   return Citizen.InvokeNative(0xAE156A747C39A741,p0,p1,p2)
+    return Citizen.InvokeNative(0xAE156A747C39A741,p0,p1,p2)
 end
+
 
 
 --- Old name: _DATAFILE_GET_DATA_NODE_INDEX
@@ -345,8 +379,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutNode(p0,p1)
-   return Citizen.InvokeNative(0x83C3ED532B6E5D07,p0,p1)
+    return Citizen.InvokeNative(0x83C3ED532B6E5D07,p0,p1)
 end
+
 
 
 --- 
@@ -354,8 +389,9 @@ end
 ---@param p0 any
 ---@return any
 function ParseddataRqGetNumNodes(p0)
-   return Citizen.InvokeNative(0xDF01B1F7A886B42D,p0)
+    return Citizen.InvokeNative(0xDF01B1F7A886B42D,p0)
 end
+
 
 
 --- 
@@ -364,8 +400,9 @@ end
 ---@param p1 any
 ---@return any
 function ParseddataGetNumChildren(p0,p1)
-   return Citizen.InvokeNative(0x6BEB168D5195E7AB,p0,p1)
+    return Citizen.InvokeNative(0x6BEB168D5195E7AB,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_HASH
@@ -374,8 +411,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutHash(p0,p1)
-   return Citizen.InvokeNative(0xFBFF3FF2F5E80C0B,p0,p1)
+    return Citizen.InvokeNative(0xFBFF3FF2F5E80C0B,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_STRING
@@ -384,8 +422,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutString63(p0,p1)
-   return Citizen.InvokeNative(0x08EAF8E9F2EB7B2E,p0,p1)
+    return Citizen.InvokeNative(0x08EAF8E9F2EB7B2E,p0,p1)
 end
+
 
 
 --- 
@@ -394,8 +433,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutString127(p0,p1)
-   return Citizen.InvokeNative(0x951327435DC5164B,p0,p1)
+    return Citizen.InvokeNative(0x951327435DC5164B,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_VECTOR
@@ -404,8 +444,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutVector(p0,p1)
-   return Citizen.InvokeNative(0x06FBF89B12DA279C,p0,p1)
+    return Citizen.InvokeNative(0x06FBF89B12DA279C,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_FLOAT
@@ -414,8 +455,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutFloat(p0,p1)
-   return Citizen.InvokeNative(0x7F034FC3E891B57A,p0,p1)
+    return Citizen.InvokeNative(0x7F034FC3E891B57A,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_INT
@@ -424,8 +466,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutInt(p0,p1)
-   return Citizen.InvokeNative(0xEF44ACC657352A35,p0,p1)
+    return Citizen.InvokeNative(0xEF44ACC657352A35,p0,p1)
 end
+
 
 
 --- Old name: _DATAFILE_GET_BOOL
@@ -434,8 +477,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutBool(p0,p1)
-   return Citizen.InvokeNative(0x0D9138F3F8261DF7,p0,p1)
+    return Citizen.InvokeNative(0x0D9138F3F8261DF7,p0,p1)
 end
+
 
 
 --- Opens file.
@@ -446,13 +490,15 @@ function ParseddataGetFile(p0)
 end
 
 
+
 --- Returns false when there are no entries.
 --- Native 0xED4413CEE1BF142C (_PARSEDDATA_GET_ENTRIES)
 ---@param p0 any*
 ---@return boolean
 function ParseddataGetEntries(p0)
-   return Citizen.InvokeNative(0xED4413CEE1BF142C,p0)
+    return Citizen.InvokeNative(0xED4413CEE1BF142C,p0)
 end
+
 
 
 --- 
@@ -462,8 +508,9 @@ end
 ---@param p2 hash
 ---@return boolean
 function ParseddataGetFloat(p0,p1,p2)
-   return Citizen.InvokeNative(0xB2B42607F7867576,p0,p1,p2)
+    return Citizen.InvokeNative(0xB2B42607F7867576,p0,p1,p2)
 end
+
 
 
 --- 
@@ -473,8 +520,9 @@ end
 ---@param p2 hash
 ---@return boolean
 function ParseddataGetInt(p0,p1,p2)
-   return Citizen.InvokeNative(0x52FC26D2D2FC2987,p0,p1,p2)
+    return Citizen.InvokeNative(0x52FC26D2D2FC2987,p0,p1,p2)
 end
+
 
 
 --- 
@@ -484,8 +532,9 @@ end
 ---@param section hash
 ---@return boolean
 function ParseddataGetSection(p0,p1,section)
-   return Citizen.InvokeNative(0x44B3A36933AC009C,p0,p1,section)
+    return Citizen.InvokeNative(0x44B3A36933AC009C,p0,p1,section)
 end
+
 
 
 --- 
@@ -495,7 +544,8 @@ end
 ---@param p2 hash
 ---@return boolean
 function ParseddataGetBool(p0,p1,p2)
-   return Citizen.InvokeNative(0xA63CD20F19B961AB,p0,p1,p2)
+    return Citizen.InvokeNative(0xA63CD20F19B961AB,p0,p1,p2)
 end
+
 
 

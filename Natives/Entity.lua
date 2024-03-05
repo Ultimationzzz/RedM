@@ -3,8 +3,9 @@
 ---@param entity entity
 ---@return boolean
 function DoesEntityExist(entity)
-   return Citizen.InvokeNative(0xD42BD6EB2E0F1677,entity)
+    return Citizen.InvokeNative(0xD42BD6EB2E0F1677,entity)
 end
+
 
 
 --- 
@@ -13,8 +14,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function DoesEntityBelongToThisScript(entity,p1)
-   return Citizen.InvokeNative(0x622B1980CBE13332,entity,p1)
+    return Citizen.InvokeNative(0x622B1980CBE13332,entity,p1)
 end
+
 
 
 --- 
@@ -22,8 +24,9 @@ end
 ---@param entity entity
 ---@return boolean
 function DoesEntityHaveDrawable(entity)
-   return Citizen.InvokeNative(0x20487F0DA9AF164A,entity)
+    return Citizen.InvokeNative(0x20487F0DA9AF164A,entity)
 end
+
 
 
 --- 
@@ -31,8 +34,9 @@ end
 ---@param entity entity
 ---@return boolean
 function DoesEntityHavePhysics(entity)
-   return Citizen.InvokeNative(0xA512B3F1B2A0B51C,entity)
+    return Citizen.InvokeNative(0xA512B3F1B2A0B51C,entity)
 end
+
 
 
 --- 
@@ -40,8 +44,9 @@ end
 ---@param entity entity
 ---@return boolean
 function HasEntityBeenDamagedByAnyObject(entity)
-   return Citizen.InvokeNative(0x73BB763880CD23A6,entity)
+    return Citizen.InvokeNative(0x73BB763880CD23A6,entity)
 end
+
 
 
 --- 
@@ -49,8 +54,9 @@ end
 ---@param entity entity
 ---@return boolean
 function HasEntityBeenDamagedByAnyPed(entity)
-   return Citizen.InvokeNative(0x9934E9C42D52D87E,entity)
+    return Citizen.InvokeNative(0x9934E9C42D52D87E,entity)
 end
+
 
 
 --- 
@@ -58,8 +64,9 @@ end
 ---@param entity entity
 ---@return boolean
 function HasEntityBeenDamagedByAnyVehicle(entity)
-   return Citizen.InvokeNative(0x695D7C26DE65C423,entity)
+    return Citizen.InvokeNative(0x695D7C26DE65C423,entity)
 end
+
 
 
 --- 
@@ -70,8 +77,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function HasEntityBeenDamagedByEntity(entity1,entity2,p2,p3)
-   return Citizen.InvokeNative(0x7B6E7BEC1143AC86,entity1,entity2,p2,p3)
+    return Citizen.InvokeNative(0x7B6E7BEC1143AC86,entity1,entity2,p2,p3)
 end
+
 
 
 --- 
@@ -81,8 +89,9 @@ end
 ---@param traceType number
 ---@return boolean
 function HasEntityClearLosToEntity(entity1,entity2,traceType)
-   return Citizen.InvokeNative(0xFCDFF7B72D23A1AC,entity1,entity2,traceType)
+    return Citizen.InvokeNative(0xFCDFF7B72D23A1AC,entity1,entity2,traceType)
 end
+
 
 
 --- 
@@ -94,8 +103,9 @@ end
 ---@param flags number
 ---@return boolean
 function HasEntityClearLosToCoord(entity,x,y,z,flags)
-   return Citizen.InvokeNative(0x0C9DBF48C6BA6E4C,entity,x,y,z,flags)
+    return Citizen.InvokeNative(0x0C9DBF48C6BA6E4C,entity,x,y,z,flags)
 end
+
 
 
 --- Has the entity1 got a clear line of sight to the other entity2 from the direction entity1 is facing.
@@ -105,8 +115,9 @@ end
 ---@param traceType number
 ---@return boolean
 function HasEntityClearLosToEntityInFront(entity1,entity2,traceType)
-   return Citizen.InvokeNative(0xE88F19660651D566,entity1,entity2,traceType)
+    return Citizen.InvokeNative(0xE88F19660651D566,entity1,entity2,traceType)
 end
+
 
 
 --- 
@@ -114,8 +125,9 @@ end
 ---@param entity entity
 ---@return boolean
 function HasEntityCollidedWithAnything(entity)
-   return Citizen.InvokeNative(0xDF18751EC74F90FF,entity)
+    return Citizen.InvokeNative(0xDF18751EC74F90FF,entity)
 end
+
 
 
 --- 
@@ -124,8 +136,9 @@ end
 ---@param animName string
 ---@return float
 function GetAnimDuration(animDict,animName)
-   return Citizen.InvokeNative(0x9FFAF4940A54CC09,animDict,animName)
+    return Citizen.InvokeNative(0x9FFAF4940A54CC09,animDict,animName)
 end
+
 
 
 --- 
@@ -133,8 +146,9 @@ end
 ---@param entity entity
 ---@return entity
 function GetEntityAttachedTo(entity)
-   return Citizen.InvokeNative(0x56D713888A566481,entity)
+    return Citizen.InvokeNative(0x56D713888A566481,entity)
 end
+
 
 
 --- Gets the current coordinates for a specified entity.
@@ -147,8 +161,9 @@ end
 ---@param realCoords boolean
 ---@return vector3
 function GetEntityCoords(entity,alive,realCoords)
-   return Citizen.InvokeNative(0xA86D5F069399F44D,entity,alive,realCoords)
+    return Citizen.InvokeNative(0xA86D5F069399F44D,entity,alive,realCoords)
 end
+
 
 
 --- Gets the entity's forward vector in XY(Z) eulers.
@@ -156,8 +171,9 @@ end
 ---@param entity entity
 ---@return vector3
 function GetEntityForwardVector(entity)
-   return Citizen.InvokeNative(0x2412D9C05BB09B97,entity)
+    return Citizen.InvokeNative(0x2412D9C05BB09B97,entity)
 end
+
 
 
 --- Gets the X-component of the entity's forward vector.
@@ -165,8 +181,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityForwardX(entity)
-   return Citizen.InvokeNative(0xDB0954E9960F6457,entity)
+    return Citizen.InvokeNative(0xDB0954E9960F6457,entity)
 end
+
 
 
 --- Gets the Y-component of the entity's forward vector.
@@ -174,8 +191,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityForwardY(entity)
-   return Citizen.InvokeNative(0x9A5C073ECBDA7EE7,entity)
+    return Citizen.InvokeNative(0x9A5C073ECBDA7EE7,entity)
 end
+
 
 
 --- Gets the entity's forward vector in YX(Z) eulers. Similar to GET_ENTITY_FORWARD_VECTOR
@@ -183,8 +201,9 @@ end
 ---@param entity entity
 ---@return vector3
 function GetEntityForwardVectorYx(entity)
-   return Citizen.InvokeNative(0x935A30AA88FB1014,entity)
+    return Citizen.InvokeNative(0x935A30AA88FB1014,entity)
 end
+
 
 
 --- Returns the heading of the entity in degrees. Also know as the "Yaw" of an entity.
@@ -192,8 +211,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityHeading(entity)
-   return Citizen.InvokeNative(0xC230DD956E2F5507,entity)
+    return Citizen.InvokeNative(0xC230DD956E2F5507,entity)
 end
+
 
 
 --- 
@@ -201,8 +221,9 @@ end
 ---@param entity entity
 ---@return number
 function GetEntityHealth(entity)
-   return Citizen.InvokeNative(0x82368787EA73C0F7,entity)
+    return Citizen.InvokeNative(0x82368787EA73C0F7,entity)
 end
+
 
 
 --- Returns (CUR_HEALTH / MAX_HEALTH)
@@ -210,8 +231,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityHealthFloat(entity)
-   return Citizen.InvokeNative(0x96C638784DB4C815,entity)
+    return Citizen.InvokeNative(0x96C638784DB4C815,entity)
 end
+
 
 
 --- Alters entity's health by 'amount'. Can be negative (to drain health).
@@ -223,8 +245,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function ChangeEntityHealth(entity,amount,entity2,weaponHash)
-   return Citizen.InvokeNative(0x835F131E7DC8F97A,entity,amount,entity2,weaponHash)
+    return Citizen.InvokeNative(0x835F131E7DC8F97A,entity,amount,entity2,weaponHash)
 end
+
 
 
 --- 
@@ -233,8 +256,9 @@ end
 ---@param p1 boolean
 ---@return number
 function GetEntityMaxHealth(entity,p1)
-   return Citizen.InvokeNative(0x15D757606D170C3C,entity,p1)
+    return Citizen.InvokeNative(0x15D757606D170C3C,entity,p1)
 end
+
 
 
 --- 
@@ -244,6 +268,7 @@ end
 function SetEntityMaxHealth(entity,value)
     Citizen.InvokeNative(0x166E7CF68597D8B5,entity,value)
 end
+
 
 
 --- 
@@ -256,8 +281,9 @@ end
 ---@param inWorldCoords boolean
 ---@return float
 function GetEntityHeight(entity,X,Y,Z,atTop,inWorldCoords)
-   return Citizen.InvokeNative(0x296DEBC84474B375,entity,X,Y,Z,atTop,inWorldCoords)
+    return Citizen.InvokeNative(0x296DEBC84474B375,entity,X,Y,Z,atTop,inWorldCoords)
 end
+
 
 
 --- 
@@ -265,8 +291,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityHeightAboveGround(entity)
-   return Citizen.InvokeNative(0x0D3B5BAEA08F63E9,entity)
+    return Citizen.InvokeNative(0x0D3B5BAEA08F63E9,entity)
 end
+
 
 
 --- 
@@ -277,6 +304,7 @@ end
 function GetEntityWorldPositionOfDimensions(entity,minimum,maximum)
     Citizen.InvokeNative(0xF3FDA9A617A15145,entity,minimum,maximum)
 end
+
 
 
 --- 
@@ -291,13 +319,15 @@ function GetEntityMatrix(entity,rightVector,forwardVector,upVector,position)
 end
 
 
+
 --- Returns the model hash from the entity
 --- Native 0xDA76A9F39210D365 (GET_ENTITY_MODEL)
 ---@param entity entity
 ---@return hash
 function GetEntityModel(entity)
-   return Citizen.InvokeNative(0xDA76A9F39210D365,entity)
+    return Citizen.InvokeNative(0xDA76A9F39210D365,entity)
 end
+
 
 
 --- Returns the ped's animal type hash: https://alloc8or.re/rdr3/doc/enums/eAnimalType.txt
@@ -306,8 +336,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedAnimalType(ped)
-   return Citizen.InvokeNative(0x964000D355219FC0,ped)
+    return Citizen.InvokeNative(0x964000D355219FC0,ped)
 end
+
 
 
 --- 
@@ -315,8 +346,9 @@ end
 ---@param entity entity
 ---@return boolean
 function GetIsAnimal(entity)
-   return Citizen.InvokeNative(0x9A100F1CF4546629,entity)
+    return Citizen.InvokeNative(0x9A100F1CF4546629,entity)
 end
+
 
 
 --- 
@@ -324,8 +356,9 @@ end
 ---@param entity entity
 ---@return boolean
 function GetIsBird(entity)
-   return Citizen.InvokeNative(0xC346A546612C49A9,entity)
+    return Citizen.InvokeNative(0xC346A546612C49A9,entity)
 end
+
 
 
 --- 
@@ -333,8 +366,9 @@ end
 ---@param entity entity
 ---@return boolean
 function GetIsPredator(entity)
-   return Citizen.InvokeNative(0x5594AFE9DE0C01B7,entity)
+    return Citizen.InvokeNative(0x5594AFE9DE0C01B7,entity)
 end
+
 
 
 --- 
@@ -345,8 +379,9 @@ end
 ---@param posZ float
 ---@return vector3
 function GetOffsetFromEntityGivenWorldCoords(entity,posX,posY,posZ)
-   return Citizen.InvokeNative(0x497C6B1A2C9AE69C,entity,posX,posY,posZ)
+    return Citizen.InvokeNative(0x497C6B1A2C9AE69C,entity,posX,posY,posZ)
 end
+
 
 
 --- Offset values are relative to the entity.
@@ -360,8 +395,9 @@ end
 ---@param offsetZ float
 ---@return vector3
 function GetOffsetFromEntityInWorldCoords(entity,offsetX,offsetY,offsetZ)
-   return Citizen.InvokeNative(0x1899F328B0E12848,entity,offsetX,offsetY,offsetZ)
+    return Citizen.InvokeNative(0x1899F328B0E12848,entity,offsetX,offsetY,offsetZ)
 end
+
 
 
 --- 
@@ -369,8 +405,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityPitch(entity)
-   return Citizen.InvokeNative(0xEF355ABEFF7F5005,entity)
+    return Citizen.InvokeNative(0xEF355ABEFF7F5005,entity)
 end
+
 
 
 --- Displays the current ROLL axis of the entity [-180.0000/180.0000+]
@@ -379,8 +416,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityRoll(entity)
-   return Citizen.InvokeNative(0xBF966536FA8B6879,entity)
+    return Citizen.InvokeNative(0xBF966536FA8B6879,entity)
 end
+
 
 
 --- 
@@ -389,8 +427,9 @@ end
 ---@param rotationOrder number
 ---@return vector3
 function GetEntityRotation(entity,rotationOrder)
-   return Citizen.InvokeNative(0xE09CAF86C32CB48F,entity,rotationOrder)
+    return Citizen.InvokeNative(0xE09CAF86C32CB48F,entity,rotationOrder)
 end
+
 
 
 --- 
@@ -399,8 +438,9 @@ end
 ---@param argStruct any*
 ---@return hash
 function GetEntityScript(entity,argStruct)
-   return Citizen.InvokeNative(0x2A08A32B6D49906F,entity,argStruct)
+    return Citizen.InvokeNative(0x2A08A32B6D49906F,entity,argStruct)
 end
+
 
 
 --- Result is in meters per second (m/s)
@@ -408,8 +448,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntitySpeed(entity)
-   return Citizen.InvokeNative(0xFB6BA510A533DF81,entity)
+    return Citizen.InvokeNative(0xFB6BA510A533DF81,entity)
 end
+
 
 
 --- 
@@ -418,8 +459,9 @@ end
 ---@param relative boolean
 ---@return vector3
 function GetEntitySpeedVector(entity,relative)
-   return Citizen.InvokeNative(0xF2DB09816A419DC5,entity,relative)
+    return Citizen.InvokeNative(0xF2DB09816A419DC5,entity,relative)
 end
+
 
 
 --- 
@@ -427,8 +469,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntityUprightValue(entity)
-   return Citizen.InvokeNative(0x56398BE65160C3BE,entity)
+    return Citizen.InvokeNative(0x56398BE65160C3BE,entity)
 end
+
 
 
 --- 
@@ -437,8 +480,9 @@ end
 ---@param p1 number
 ---@return vector3
 function GetEntityVelocity(entity,p1)
-   return Citizen.InvokeNative(0x4805D2B1D8CF94A9,entity,p1)
+    return Citizen.InvokeNative(0x4805D2B1D8CF94A9,entity,p1)
 end
+
 
 
 --- Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -446,8 +490,9 @@ end
 ---@param entity entity
 ---@return object
 function GetObjectIndexFromEntityIndex(entity)
-   return Citizen.InvokeNative(0x280BBE5601EAA983,entity)
+    return Citizen.InvokeNative(0x280BBE5601EAA983,entity)
 end
+
 
 
 --- Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -455,8 +500,9 @@ end
 ---@param entity entity
 ---@return number
 function GetPedIndexFromEntityIndex(entity)
-   return Citizen.InvokeNative(0x0F16D042BD640EA3,entity)
+    return Citizen.InvokeNative(0x0F16D042BD640EA3,entity)
 end
+
 
 
 --- Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -464,8 +510,9 @@ end
 ---@param entity entity
 ---@return vehicle
 function GetVehicleIndexFromEntityIndex(entity)
-   return Citizen.InvokeNative(0xDF1E5AAC561AFC59,entity)
+    return Citizen.InvokeNative(0xDF1E5AAC561AFC59,entity)
 end
+
 
 
 --- Returns the coordinates of an entity-bone.
@@ -475,8 +522,9 @@ end
 ---@param boneIndex number
 ---@return vector3
 function GetWorldPositionOfEntityBone(entity,boneIndex)
-   return Citizen.InvokeNative(0x82CFA50E34681CA5,entity,boneIndex)
+    return Citizen.InvokeNative(0x82CFA50E34681CA5,entity,boneIndex)
 end
+
 
 
 --- 
@@ -486,8 +534,9 @@ end
 ---@param flags number
 ---@return player
 function GetNearestPlayerToEntity(entity,playerPedToIgnore,flags)
-   return Citizen.InvokeNative(0x990E294FC387FB88,entity,playerPedToIgnore,flags)
+    return Citizen.InvokeNative(0x990E294FC387FB88,entity,playerPedToIgnore,flags)
 end
+
 
 
 --- 
@@ -498,8 +547,9 @@ end
 ---@param flags number
 ---@return player
 function GetNearestPlayerToEntityOnTeam(entity,team,playerPedToIgnore,flags)
-   return Citizen.InvokeNative(0xB2C30C3B4AFF718C,entity,team,playerPedToIgnore,flags)
+    return Citizen.InvokeNative(0xB2C30C3B4AFF718C,entity,team,playerPedToIgnore,flags)
 end
+
 
 
 --- 
@@ -507,8 +557,9 @@ end
 ---@param entity entity
 ---@return player
 function GetNearestParticipantToEntity(entity)
-   return Citizen.InvokeNative(0x6888A43C35A5F630,entity)
+    return Citizen.InvokeNative(0x6888A43C35A5F630,entity)
 end
+
 
 
 --- 
@@ -517,8 +568,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function PlaceEntityOnGroundProperly(entity,p1)
-   return Citizen.InvokeNative(0x9587913B9E772D29,entity,p1)
+    return Citizen.InvokeNative(0x9587913B9E772D29,entity,p1)
 end
+
 
 
 --- Returns entityType: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eEntityType
@@ -526,8 +578,9 @@ end
 ---@param entity entity
 ---@return number
 function GetEntityType(entity)
-   return Citizen.InvokeNative(0x97F696ACA466B4E0,entity)
+    return Citizen.InvokeNative(0x97F696ACA466B4E0,entity)
 end
+
 
 
 --- 
@@ -535,8 +588,9 @@ end
 ---@param entity entity
 ---@return number
 function GetEntityPopulationType(entity)
-   return Citizen.InvokeNative(0xADE28862B6D7B85B,entity)
+    return Citizen.InvokeNative(0xADE28862B6D7B85B,entity)
 end
+
 
 
 --- 
@@ -544,8 +598,9 @@ end
 ---@param handle scrhandle
 ---@return boolean
 function IsAnEntity(handle)
-   return Citizen.InvokeNative(0x27CFF3E5A286D3DF,handle)
+    return Citizen.InvokeNative(0x27CFF3E5A286D3DF,handle)
 end
+
 
 
 --- 
@@ -553,8 +608,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAPed(entity)
-   return Citizen.InvokeNative(0xCF8176912DDA4EA5,entity)
+    return Citizen.InvokeNative(0xCF8176912DDA4EA5,entity)
 end
+
 
 
 --- 
@@ -562,8 +618,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAMissionEntity(entity)
-   return Citizen.InvokeNative(0x138190F64DB4BBD1,entity)
+    return Citizen.InvokeNative(0x138190F64DB4BBD1,entity)
 end
+
 
 
 --- 
@@ -571,8 +628,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAVehicle(entity)
-   return Citizen.InvokeNative(0xC3D96AF45FCCEC4C,entity)
+    return Citizen.InvokeNative(0xC3D96AF45FCCEC4C,entity)
 end
+
 
 
 --- 
@@ -580,8 +638,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAnObject(entity)
-   return Citizen.InvokeNative(0x0A27A546A375FDEF,entity)
+    return Citizen.InvokeNative(0x0A27A546A375FDEF,entity)
 end
+
 
 
 --- Checks if entity is within x/y/zSize distance of x/y/z. 
@@ -599,8 +658,9 @@ end
 ---@param p9 number
 ---@return boolean
 function IsEntityAtCoord(entity,xPos,yPos,zPos,xSize,ySize,zSize,p7,p8,p9)
-   return Citizen.InvokeNative(0x5E58342602E94718,entity,xPos,yPos,zPos,xSize,ySize,zSize,p7,p8,p9)
+    return Citizen.InvokeNative(0x5E58342602E94718,entity,xPos,yPos,zPos,xSize,ySize,zSize,p7,p8,p9)
 end
+
 
 
 --- Checks if entity1 is within the box defined by x/y/zSize of entity2.
@@ -616,8 +676,9 @@ end
 ---@param p7 number
 ---@return boolean
 function IsEntityAtEntity(entity1,entity2,xSize,ySize,zSize,p5,p6,p7)
-   return Citizen.InvokeNative(0xC057F02B837A27F6,entity1,entity2,xSize,ySize,zSize,p5,p6,p7)
+    return Citizen.InvokeNative(0xC057F02B837A27F6,entity1,entity2,xSize,ySize,zSize,p5,p6,p7)
 end
+
 
 
 --- 
@@ -625,8 +686,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAttached(entity)
-   return Citizen.InvokeNative(0xEE6AD63ABF59C0B7,entity)
+    return Citizen.InvokeNative(0xEE6AD63ABF59C0B7,entity)
 end
+
 
 
 --- 
@@ -634,8 +696,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAttachedToAnyObject(entity)
-   return Citizen.InvokeNative(0x306C1F6178F01AB3,entity)
+    return Citizen.InvokeNative(0x306C1F6178F01AB3,entity)
 end
+
 
 
 --- 
@@ -643,8 +706,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAttachedToAnyPed(entity)
-   return Citizen.InvokeNative(0xC841153DED2CA89A,entity)
+    return Citizen.InvokeNative(0xC841153DED2CA89A,entity)
 end
+
 
 
 --- 
@@ -652,8 +716,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityAttachedToAnyVehicle(entity)
-   return Citizen.InvokeNative(0x12DF6E0D2E736749,entity)
+    return Citizen.InvokeNative(0x12DF6E0D2E736749,entity)
 end
+
 
 
 --- 
@@ -662,8 +727,9 @@ end
 ---@param to entity
 ---@return boolean
 function IsEntityAttachedToEntity(from,to)
-   return Citizen.InvokeNative(0x154A3C529497053E,from,to)
+    return Citizen.InvokeNative(0x154A3C529497053E,from,to)
 end
+
 
 
 --- 
@@ -671,8 +737,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityOwnedByPersistenceSystem(entity)
-   return Citizen.InvokeNative(0xA7E51B53309EAC97,entity)
+    return Citizen.InvokeNative(0xA7E51B53309EAC97,entity)
 end
+
 
 
 --- 
@@ -680,8 +747,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityDead(entity)
-   return Citizen.InvokeNative(0x7D5B1F88E7504BBA,entity)
+    return Citizen.InvokeNative(0x7D5B1F88E7504BBA,entity)
 end
+
 
 
 --- 
@@ -690,8 +758,9 @@ end
 ---@param p1 any
 ---@return boolean
 function IsEntityInAir(entity,p1)
-   return Citizen.InvokeNative(0x886E37EC497200B6,entity,p1)
+    return Citizen.InvokeNative(0x886E37EC497200B6,entity,p1)
 end
+
 
 
 --- Creates a spherical cone at origin that extends to surface with the angle specified. Then returns true if the entity is inside the spherical cone
@@ -710,8 +779,9 @@ end
 ---@param p10 any
 ---@return boolean
 function IsEntityInAngledArea(entity,originX,originY,originZ,edgeX,edgeY,edgeZ,angle,p8,p9,p10)
-   return Citizen.InvokeNative(0xD3151E53134595E5,entity,originX,originY,originZ,edgeX,edgeY,edgeZ,angle,p8,p9,p10)
+    return Citizen.InvokeNative(0xD3151E53134595E5,entity,originX,originY,originZ,edgeX,edgeY,edgeZ,angle,p8,p9,p10)
 end
+
 
 
 --- 
@@ -728,8 +798,9 @@ end
 ---@param p9 any
 ---@return boolean
 function IsEntityInArea(entity,x1,y1,z1,x2,y2,z2,p7,p8,p9)
-   return Citizen.InvokeNative(0x0C2634C40A16193E,entity,x1,y1,z1,x2,y2,z2,p7,p8,p9)
+    return Citizen.InvokeNative(0x0C2634C40A16193E,entity,x1,y1,z1,x2,y2,z2,p7,p8,p9)
 end
+
 
 
 --- 
@@ -740,8 +811,9 @@ end
 ---@param p3 number
 ---@return boolean
 function IsEntityInVolume(entity,volume,p2,p3)
-   return Citizen.InvokeNative(0x5A5526BC09C06623,entity,volume,p2,p3)
+    return Citizen.InvokeNative(0x5A5526BC09C06623,entity,volume,p2,p3)
 end
+
 
 
 --- 
@@ -749,8 +821,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityInWater(entity)
-   return Citizen.InvokeNative(0xDDE5C125AC446723,entity)
+    return Citizen.InvokeNative(0xDDE5C125AC446723,entity)
 end
+
 
 
 --- 
@@ -759,8 +832,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsEntityUnderwater(entity,p1)
-   return Citizen.InvokeNative(0xD4E5C1E93C466127,entity,p1)
+    return Citizen.InvokeNative(0xD4E5C1E93C466127,entity,p1)
 end
+
 
 
 --- Get how much of the entity is submerged.  1.0f is whole entity.
@@ -768,8 +842,9 @@ end
 ---@param entity entity
 ---@return float
 function GetEntitySubmergedLevel(entity)
-   return Citizen.InvokeNative(0x4A77C3F73FD9E831,entity)
+    return Citizen.InvokeNative(0x4A77C3F73FD9E831,entity)
 end
+
 
 
 --- 
@@ -781,13 +856,15 @@ function SetEntityRequiresMoreExpensiveRiverCheck(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x613C15D5D8DB781F (IS_ENTITY_ON_SCREEN)
 ---@param entity entity
 ---@return boolean
 function IsEntityOnScreen(entity)
-   return Citizen.InvokeNative(0x613C15D5D8DB781F,entity)
+    return Citizen.InvokeNative(0x613C15D5D8DB781F,entity)
 end
+
 
 
 --- 
@@ -798,8 +875,9 @@ end
 ---@param animType number
 ---@return boolean
 function IsEntityPlayingAnim(entity,animDict,animName,animType)
-   return Citizen.InvokeNative(0xDEE49D5CA6C49148,entity,animDict,animName,animType)
+    return Citizen.InvokeNative(0xDEE49D5CA6C49148,entity,animDict,animName,animType)
 end
+
 
 
 --- Params: p1 (probably animType) = 1, 0
@@ -808,8 +886,9 @@ end
 ---@param p1 number
 ---@return boolean
 function IsEntityPlayingAnyAnim(entity,p1)
-   return Citizen.InvokeNative(0x0B7CB1300CBFE19C,entity,p1)
+    return Citizen.InvokeNative(0x0B7CB1300CBFE19C,entity,p1)
 end
+
 
 
 --- 
@@ -817,8 +896,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityStatic(entity)
-   return Citizen.InvokeNative(0x86468ADFA0F6B861,entity)
+    return Citizen.InvokeNative(0x86468ADFA0F6B861,entity)
 end
+
 
 
 --- 
@@ -827,8 +907,9 @@ end
 ---@param targetEntity entity
 ---@return boolean
 function IsEntityTouchingEntity(entity,targetEntity)
-   return Citizen.InvokeNative(0x9A2304A64C3C8423,entity,targetEntity)
+    return Citizen.InvokeNative(0x9A2304A64C3C8423,entity,targetEntity)
 end
+
 
 
 --- 
@@ -837,8 +918,9 @@ end
 ---@param modelHash hash
 ---@return boolean
 function IsEntityTouchingModel(entity,modelHash)
-   return Citizen.InvokeNative(0x2AE3EBC8DEB9768B,entity,modelHash)
+    return Citizen.InvokeNative(0x2AE3EBC8DEB9768B,entity,modelHash)
 end
+
 
 
 --- 
@@ -847,8 +929,9 @@ end
 ---@param angle float
 ---@return boolean
 function IsEntityUpright(entity,angle)
-   return Citizen.InvokeNative(0xF6F6AFD8D4FB2658,entity,angle)
+    return Citizen.InvokeNative(0xF6F6AFD8D4FB2658,entity,angle)
 end
+
 
 
 --- 
@@ -856,8 +939,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityUpsidedown(entity)
-   return Citizen.InvokeNative(0x109DE3DA41AAD94A,entity)
+    return Citizen.InvokeNative(0x109DE3DA41AAD94A,entity)
 end
+
 
 
 --- 
@@ -865,8 +949,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityVisible(entity)
-   return Citizen.InvokeNative(0xFFC96ECB7FA404CA,entity)
+    return Citizen.InvokeNative(0xFFC96ECB7FA404CA,entity)
 end
+
 
 
 --- 
@@ -874,8 +959,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityVisibleToScript(entity)
-   return Citizen.InvokeNative(0xF213C724E77F321A,entity)
+    return Citizen.InvokeNative(0xF213C724E77F321A,entity)
 end
+
 
 
 --- 
@@ -883,8 +969,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsTrackedEntityVisible(entity)
-   return Citizen.InvokeNative(0xC8CCDB712FBCBA92,entity)
+    return Citizen.InvokeNative(0xC8CCDB712FBCBA92,entity)
 end
+
 
 
 --- 
@@ -892,8 +979,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityOccluded(entity)
-   return Citizen.InvokeNative(0x140188E884645624,entity)
+    return Citizen.InvokeNative(0x140188E884645624,entity)
 end
+
 
 
 --- 
@@ -905,8 +993,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function WouldEntityBeOccluded(entityModelHash,x,y,z,p4)
-   return Citizen.InvokeNative(0x3546FAB293FF2981,entityModelHash,x,y,z,p4)
+    return Citizen.InvokeNative(0x3546FAB293FF2981,entityModelHash,x,y,z,p4)
 end
+
 
 
 --- 
@@ -914,8 +1003,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityWaitingForWorldCollision(entity)
-   return Citizen.InvokeNative(0x5E1CC2E8DC3111DD,entity)
+    return Citizen.InvokeNative(0x5E1CC2E8DC3111DD,entity)
 end
+
 
 
 --- 
@@ -923,8 +1013,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsEntityOnTrainTrack(entity)
-   return Citizen.InvokeNative(0x857ACB0AB4BD0D55,entity)
+    return Citizen.InvokeNative(0x857ACB0AB4BD0D55,entity)
 end
+
 
 
 --- Sets the loot table an entity will carry. Returns true if loot table has been successfully set. Returns false if entity is not a ped or object.
@@ -934,8 +1025,9 @@ end
 ---@param lootTable hash
 ---@return boolean
 function ScriptOverrideEntityLootTablePermanent(entity,lootTable)
-   return Citizen.InvokeNative(0x8C03CD6B5E0E85E8,entity,lootTable)
+    return Citizen.InvokeNative(0x8C03CD6B5E0E85E8,entity,lootTable)
 end
+
 
 
 --- Returns false if entity is not a ped or object.
@@ -944,8 +1036,9 @@ end
 ---@param lootTable hash*
 ---@return boolean
 function GetScriptOverrideEntityLootTablePermanent(entity,lootTable)
-   return Citizen.InvokeNative(0x1E804EA9B12030A4,entity,lootTable)
+    return Citizen.InvokeNative(0x1E804EA9B12030A4,entity,lootTable)
 end
+
 
 
 --- 
@@ -958,8 +1051,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function RequestEntityLootList(mount,argStruct,visiblelootslotrequestType,flag,p4,p5)
-   return Citizen.InvokeNative(0xA88E215CEB0435C0,mount,argStruct,visiblelootslotrequestType,flag,p4,p5)
+    return Citizen.InvokeNative(0xA88E215CEB0435C0,mount,argStruct,visiblelootslotrequestType,flag,p4,p5)
 end
+
 
 
 --- enum eCarriableState
@@ -982,8 +1076,9 @@ end
 ---@param entity entity
 ---@return number
 function GetCarriableEntityState(entity)
-   return Citizen.InvokeNative(0x61914209C36EFDDB,entity)
+    return Citizen.InvokeNative(0x61914209C36EFDDB,entity)
 end
+
 
 
 --- Valid indices: 0 - 3
@@ -994,8 +1089,9 @@ end
 ---@param index number
 ---@return hash
 function GetOptimalCarryConfig(entity,index)
-   return Citizen.InvokeNative(0x34F008A7E48C496B,entity,index)
+    return Citizen.InvokeNative(0x34F008A7E48C496B,entity,index)
 end
+
 
 
 --- Returns zero if the entity is not a carriable
@@ -1003,8 +1099,9 @@ end
 ---@param entity entity
 ---@return hash
 function GetEntityCarryConfig(entity)
-   return Citizen.InvokeNative(0x0FD25587BB306C86,entity)
+    return Citizen.InvokeNative(0x0FD25587BB306C86,entity)
 end
+
 
 
 --- 
@@ -1012,8 +1109,9 @@ end
 ---@param model hash
 ---@return boolean
 function IsCarriableModel(model)
-   return Citizen.InvokeNative(0x5AFFA9DDC87846F8,model)
+    return Citizen.InvokeNative(0x5AFFA9DDC87846F8,model)
 end
+
 
 
 --- Returns a hash of an entity's name. (Alternative Name: _GET_ENTITY_PROMPT_NAME_HASH)
@@ -1021,8 +1119,9 @@ end
 ---@param entity entity
 ---@return hash
 function GetCarriableFromEntity(entity)
-   return Citizen.InvokeNative(0x31FEF6A20F00B963,entity)
+    return Citizen.InvokeNative(0x31FEF6A20F00B963,entity)
 end
+
 
 
 --- Changes type and quality of skins
@@ -1035,6 +1134,7 @@ function SetEntityCarcassType(entity,type)
 end
 
 
+
 --- 
 --- Native 0x0D0DB2B6AF19A987 (_DELETE_CARRIABLE)
 ---@param entity entity*
@@ -1043,13 +1143,15 @@ function DeleteCarriable(entity)
 end
 
 
+
 --- 
 --- Native 0x8DE41E9902E85756 (_IS_ENTITY_FULLY_LOOTED)
 ---@param entity entity
 ---@return boolean
 function IsEntityFullyLooted(entity)
-   return Citizen.InvokeNative(0x8DE41E9902E85756,entity)
+    return Citizen.InvokeNative(0x8DE41E9902E85756,entity)
 end
+
 
 
 --- 
@@ -1061,14 +1163,16 @@ function SetEntityFullyLooted(entity,looted)
 end
 
 
+
 --- flagId: see _SET_ENTITY_CARRYING_FLAG
 --- Native 0x808077647856DE62 (_GET_ENTITY_CARRYING_FLAG)
 ---@param entity entity
 ---@param flagId number
 ---@return boolean
 function GetEntityCarryingFlag(entity,flagId)
-   return Citizen.InvokeNative(0x808077647856DE62,entity,flagId)
+    return Citizen.InvokeNative(0x808077647856DE62,entity,flagId)
 end
+
 
 
 --- flagId: https://github.com/femga/rdr3_discoveries/tree/master/AI/CARRYING_FLAGS
@@ -1098,13 +1202,15 @@ function SetEntityCarryingFlag(entity,flagId,value)
 end
 
 
+
 --- 
 --- Native 0x255B6DB4E3AD3C3E (_GET_IS_CARRIABLE_PELT)
 ---@param entity entity
 ---@return boolean
 function GetIsCarriablePelt(entity)
-   return Citizen.InvokeNative(0x255B6DB4E3AD3C3E,entity)
+    return Citizen.InvokeNative(0x255B6DB4E3AD3C3E,entity)
 end
+
 
 
 --- 
@@ -1114,6 +1220,7 @@ end
 function SetEntityCustomPickupRadius(entity,radius)
     Citizen.InvokeNative(0x482D17E45665DA44,entity,radius)
 end
+
 
 
 --- p6/relative - makes the xyz force not relative to world coords, but to something else
@@ -1131,6 +1238,7 @@ end
 function ApplyForceToEntityCenterOfMass(entity,forceType,x,y,z,component,isDirectionRel,isForceRel,p8)
     Citizen.InvokeNative(0x31DA7CEC5334DB37,entity,forceType,x,y,z,component,isDirectionRel,isForceRel,p8)
 end
+
 
 
 --- 
@@ -1152,6 +1260,7 @@ end
 function ApplyForceToEntity(entity,forceFlags,x,y,z,offX,offY,offZ,boneIndex,isDirectionRel,ignoreUpVec,isForceRel,p12,p13)
     Citizen.InvokeNative(0xF15E8F5D333F09C4,entity,forceFlags,x,y,z,offX,offY,offZ,boneIndex,isDirectionRel,ignoreUpVec,isForceRel,p12,p13)
 end
+
 
 
 --- Attaches entity1 to bone (boneIndex) of entity2.
@@ -1185,6 +1294,7 @@ function AttachEntityToEntity(entity1,entity2,boneIndex,xPos,yPos,zPos,xRot,yRot
 end
 
 
+
 --- 
 --- Native 0xB629A43CA1643481 (ATTACH_ENTITY_TO_ENTITY_PHYSICALLY)
 ---@param entity1 entity
@@ -1214,14 +1324,16 @@ function AttachEntityToEntityPhysically(entity1,entity2,p2,boneIndex,offsetX,off
 end
 
 
+
 --- 
 --- Native 0xBACA8FE9C76C124E (GET_ENTITY_BONE_INDEX_BY_NAME)
 ---@param entity entity
 ---@param boneName string
 ---@return number
 function GetEntityBoneIndexByName(entity,boneName)
-   return Citizen.InvokeNative(0xBACA8FE9C76C124E,entity,boneName)
+    return Citizen.InvokeNative(0xBACA8FE9C76C124E,entity,boneName)
 end
+
 
 
 --- 
@@ -1232,6 +1344,7 @@ function ClearEntityLastDamageEntity(entity)
 end
 
 
+
 --- Deletes the specified entity, then sets the handle pointed to by the pointer to NULL.
 --- Native 0x4CD38C78BD19A497 (DELETE_ENTITY)
 ---@param entity entity*
@@ -1240,12 +1353,14 @@ function DeleteEntity(entity)
 end
 
 
+
 --- Must be called from a background script, otherwise it will do nothing.
 --- Native 0x5E94EA09E7207C16 (_DELETE_ENTITY_2)
 ---@param entity entity*
 function DeleteEntity2(entity)
     Citizen.InvokeNative(0x5E94EA09E7207C16,entity)
 end
+
 
 
 --- 
@@ -1258,13 +1373,15 @@ function DetachEntity(entity,p1,collision)
 end
 
 
+
 --- Getter for FREEZE_ENTITY_POSITION
 --- Native 0x083D497D57B7400F (_IS_ENTITY_FROZEN)
 ---@param entity entity
 ---@return boolean
 function IsEntityFrozen(entity)
-   return Citizen.InvokeNative(0x083D497D57B7400F,entity)
+    return Citizen.InvokeNative(0x083D497D57B7400F,entity)
 end
+
 
 
 --- 
@@ -1276,6 +1393,7 @@ function FreezeEntityPosition(entity,toggle)
 end
 
 
+
 --- Old name: _SET_ENTITY_CLEANUP_BY_ENGINE
 --- Native 0x740CB4F3F602C9F4 (SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION)
 ---@param entity entity
@@ -1283,6 +1401,7 @@ end
 function SetEntityShouldFreezeWaitingOnCollision(entity,toggle)
     Citizen.InvokeNative(0x740CB4F3F602C9F4,entity,toggle)
 end
+
 
 
 --- Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.
@@ -1295,6 +1414,7 @@ function SetEntityAsMissionEntity(entity,p1,p2)
 end
 
 
+
 --- Marks the specified entity (ped, vehicle or object) as no longer needed.
 ---Entities marked as no longer needed, will be deleted as the engine sees fit.
 --- Native 0x4971D2F8162B9674 (SET_ENTITY_AS_NO_LONGER_NEEDED)
@@ -1302,6 +1422,7 @@ end
 function SetEntityAsNoLongerNeeded(entity)
     Citizen.InvokeNative(0x4971D2F8162B9674,entity)
 end
+
 
 
 --- This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
@@ -1312,12 +1433,14 @@ function SetPedAsNoLongerNeeded(ped)
 end
 
 
+
 --- This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
 --- Native 0x629BFA74418D6239 (SET_VEHICLE_AS_NO_LONGER_NEEDED)
 ---@param vehicle vehicle*
 function SetVehicleAsNoLongerNeeded(vehicle)
     Citizen.InvokeNative(0x629BFA74418D6239,vehicle)
 end
+
 
 
 --- This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
@@ -1328,13 +1451,15 @@ function SetObjectAsNoLongerNeeded(object)
 end
 
 
+
 --- Returns true if calling script owns specified entity
 --- Native 0x88AD6CC10D8D35B2 (_DOES_THREAD_OWN_THIS_ENTITY)
 ---@param entity entity
 ---@return boolean
 function DoesThreadOwnThisEntity(entity)
-   return Citizen.InvokeNative(0x88AD6CC10D8D35B2,entity)
+    return Citizen.InvokeNative(0x88AD6CC10D8D35B2,entity)
 end
+
 
 
 --- 
@@ -1346,13 +1471,15 @@ function SetEntityCanBeDamaged(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x75DF9E73F2F005FD (_GET_ENTITY_CAN_BE_DAMAGED)
 ---@param entity entity
 ---@return boolean
 function GetEntityCanBeDamaged(entity)
-   return Citizen.InvokeNative(0x75DF9E73F2F005FD,entity)
+    return Citizen.InvokeNative(0x75DF9E73F2F005FD,entity)
 end
+
 
 
 --- 
@@ -1365,6 +1492,7 @@ function SetEntityCanBeDamagedByRelationshipGroup(entity,bCanBeDamaged,relGroup)
 end
 
 
+
 --- Sets whether the entity can be targeted without being in line-of-sight.
 --- Native 0x6D09F32E284D0FB7 (SET_ENTITY_CAN_BE_TARGETED_WITHOUT_LOS)
 ---@param entity entity
@@ -1374,13 +1502,15 @@ function SetEntityCanBeTargetedWithoutLos(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0xAA2FADD30F45A9DA (GET_ENTITY_COLLISION_DISABLED)
 ---@param entity entity
 ---@return boolean
 function GetEntityCollisionDisabled(entity)
-   return Citizen.InvokeNative(0xAA2FADD30F45A9DA,entity)
+    return Citizen.InvokeNative(0xAA2FADD30F45A9DA,entity)
 end
+
 
 
 --- 
@@ -1393,6 +1523,7 @@ function SetEntityCollision(entity,toggle,keepPhysics)
 end
 
 
+
 --- 
 --- Native 0xE0580EC84813875A (SET_ENTITY_COMPLETELY_DISABLE_COLLISION)
 ---@param entity entity
@@ -1401,6 +1532,7 @@ end
 function SetEntityCompletelyDisableCollision(entity,toggle,keepPhysics)
     Citizen.InvokeNative(0xE0580EC84813875A,entity,toggle,keepPhysics)
 end
+
 
 
 --- 
@@ -1418,6 +1550,7 @@ function SetEntityCoords(entity,xPos,yPos,zPos,xAxis,yAxis,zAxis,clearArea)
 end
 
 
+
 --- Axis - Invert Axis Flags
 --- Native 0x239A3351AC1DA385 (SET_ENTITY_COORDS_NO_OFFSET)
 ---@param entity entity
@@ -1432,6 +1565,7 @@ function SetEntityCoordsNoOffset(entity,xPos,yPos,zPos,xAxis,yAxis,zAxis)
 end
 
 
+
 --- 
 --- Native 0xFBFC4473F66CE344 (SET_ENTITY_DYNAMIC)
 ---@param entity entity
@@ -1441,6 +1575,7 @@ function SetEntityDynamic(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0xCF2B9C0645C4651B (SET_ENTITY_HEADING)
 ---@param entity entity
@@ -1448,6 +1583,7 @@ end
 function SetEntityHeading(entity,heading)
     Citizen.InvokeNative(0xCF2B9C0645C4651B,entity,heading)
 end
+
 
 
 --- 
@@ -1465,6 +1601,7 @@ function SetEntityCoordsAndHeading(entity,xPos,yPos,zPos,heading,xAxis,yAxis,zAx
 end
 
 
+
 --- 
 --- Native 0x0918E3565C20F03C (_SET_ENTITY_COORDS_AND_HEADING_NO_OFFSET)
 ---@param entity entity
@@ -1479,6 +1616,7 @@ function SetEntityCoordsAndHeadingNoOffset(entity,xPos,yPos,zPos,heading,p5,p6)
 end
 
 
+
 --- Sets the entity's health. healthAmount sets the health value to that, and sets the maximum health core value. Setting healthAmount to 0 will kill the entity. entityKilledBy parameter can also be 0
 --- Native 0xAC2767ED8BDFAB15 (SET_ENTITY_HEALTH)
 ---@param entity entity
@@ -1489,6 +1627,7 @@ function SetEntityHealth(entity,healthAmount,entityKilledBy)
 end
 
 
+
 --- Sets a ped or an object totally invincible. It doesn't take any kind of damage. Peds will not ragdoll on explosions.
 --- Native 0xA5C38736C426FCB8 (SET_ENTITY_INVINCIBLE)
 ---@param entity entity
@@ -1496,6 +1635,7 @@ end
 function SetEntityInvincible(entity,toggle)
     Citizen.InvokeNative(0xA5C38736C426FCB8,entity,toggle)
 end
+
 
 
 --- 
@@ -1508,6 +1648,7 @@ function SetEntityIsTargetPriority(entity,p1,p2)
 end
 
 
+
 --- tier: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eEntityThreatTier
 --- Native 0x4B436BAC8CBE9B07 (_SET_ENTITY_THREAT_TIER)
 ---@param entity entity
@@ -1518,13 +1659,15 @@ function SetEntityThreatTier(entity,tier,p2)
 end
 
 
+
 --- 
 --- Native 0xE12F56CB25D9CE23 (_GET_ENTITY_THREAT_TIER)
 ---@param entity entity
 ---@return number
 function GetEntityThreatTier(entity)
-   return Citizen.InvokeNative(0xE12F56CB25D9CE23,entity)
+    return Citizen.InvokeNative(0xE12F56CB25D9CE23,entity)
 end
+
 
 
 --- 
@@ -1536,6 +1679,7 @@ function SetEntityLightsEnabled(entity,enabled)
 end
 
 
+
 --- 
 --- Native 0x9B9EE31AED48072E (SET_ENTITY_LOAD_COLLISION_FLAG)
 ---@param entity entity
@@ -1545,13 +1689,15 @@ function SetEntityLoadCollisionFlag(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0xBEB1600952B9CF5C (HAS_COLLISION_LOADED_AROUND_ENTITY)
 ---@param entity entity
 ---@return boolean
 function HasCollisionLoadedAroundEntity(entity)
-   return Citizen.InvokeNative(0xBEB1600952B9CF5C,entity)
+    return Citizen.InvokeNative(0xBEB1600952B9CF5C,entity)
 end
+
 
 
 --- Old name: _HAS_COLLISION_LOADED_AT_COORDS
@@ -1561,8 +1707,9 @@ end
 ---@param zPos float
 ---@return boolean
 function HasCollisionLoadedAroundPosition(xPos,yPos,zPos)
-   return Citizen.InvokeNative(0x6BFBDC46139C45AB,xPos,yPos,zPos)
+    return Citizen.InvokeNative(0x6BFBDC46139C45AB,xPos,yPos,zPos)
 end
+
 
 
 --- 
@@ -1574,6 +1721,7 @@ function SetEntityOnlyDamagedByPlayer(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x6C1F6AA2F0ADD104 (SET_ENTITY_ONLY_DAMAGED_BY_RELATIONSHIP_GROUP)
 ---@param entity entity
@@ -1582,6 +1730,7 @@ end
 function SetEntityOnlyDamagedByRelationshipGroup(entity,p1,relationshipGroup)
     Citizen.InvokeNative(0x6C1F6AA2F0ADD104,entity,p1,relationshipGroup)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/ENTITY_PROOFS
@@ -1595,13 +1744,15 @@ function SetEntityProofs(entity,proofsBitset,specialFlag)
 end
 
 
+
 --- Note: this native was removed in 1232 but added back in 1311
 --- Native 0x6CF0DAD7FA1088EA (_GET_ENTITY_PROOFS)
 ---@param entity entity
 ---@return number
 function GetEntityProofs(entity)
-   return Citizen.InvokeNative(0x6CF0DAD7FA1088EA,entity)
+    return Citizen.InvokeNative(0x6CF0DAD7FA1088EA,entity)
 end
+
 
 
 --- 
@@ -1614,6 +1765,7 @@ end
 function SetEntityQuaternion(entity,x,y,z,w)
     Citizen.InvokeNative(0x100E7007D13E3687,entity,x,y,z,w)
 end
+
 
 
 --- 
@@ -1629,6 +1781,7 @@ function SetEntityRotation(entity,pitch,roll,yaw,rotationOrder,p5)
 end
 
 
+
 --- 
 --- Native 0x1794B4FCC84D812F (SET_ENTITY_VISIBLE)
 ---@param entity entity
@@ -1636,6 +1789,7 @@ end
 function SetEntityVisible(entity,toggle)
     Citizen.InvokeNative(0x1794B4FCC84D812F,entity,toggle)
 end
+
 
 
 --- Note that the third parameter(denoted as z) is "up and down" with positive numbers encouraging upwards movement.
@@ -1649,6 +1803,7 @@ function SetEntityVelocity(entity,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x0CEDB728A1083FA7 (SET_ENTITY_HAS_GRAVITY)
 ---@param entity entity
@@ -1656,6 +1811,7 @@ end
 function SetEntityHasGravity(entity,toggle)
     Citizen.InvokeNative(0x0CEDB728A1083FA7,entity,toggle)
 end
+
 
 
 --- LOD distance can be 0 to 0xFFFF (higher values will result in 0xFFFF) as it is actually stored as a 16-bit value (aka uint16_t).
@@ -1667,13 +1823,15 @@ function SetEntityLodDist(entity,value)
 end
 
 
+
 --- Returns the LOD distance of an entity.
 --- Native 0xDF240D0C2A948683 (GET_ENTITY_LOD_DIST)
 ---@param entity entity
 ---@return number
 function GetEntityLodDist(entity)
-   return Citizen.InvokeNative(0xDF240D0C2A948683,entity)
+    return Citizen.InvokeNative(0xDF240D0C2A948683,entity)
 end
+
 
 
 --- skin - everything alpha except skin
@@ -1687,13 +1845,15 @@ function SetEntityAlpha(entity,alphaLevel,skin)
 end
 
 
+
 --- 
 --- Native 0x1BB501624FAF2BEA (GET_ENTITY_ALPHA)
 ---@param entity entity
 ---@return number
 function GetEntityAlpha(entity)
-   return Citizen.InvokeNative(0x1BB501624FAF2BEA,entity)
+    return Citizen.InvokeNative(0x1BB501624FAF2BEA,entity)
 end
+
 
 
 --- 
@@ -1704,12 +1864,14 @@ function ResetEntityAlpha(entity)
 end
 
 
+
 --- 
 --- Native 0xA91E6CF94404E8C9 (_SET_ENTITY_FADE_IN)
 ---@param entity entity
 function SetEntityFadeIn(entity)
     Citizen.InvokeNative(0xA91E6CF94404E8C9,entity)
 end
+
 
 
 --- 
@@ -1721,6 +1883,7 @@ function SetEntityAlwaysPrerender(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x85B8A7534E44BC23 (SET_ENTITY_RENDER_SCORCHED)
 ---@param entity entity
@@ -1728,6 +1891,7 @@ end
 function SetEntityRenderScorched(entity,toggle)
     Citizen.InvokeNative(0x85B8A7534E44BC23,entity,toggle)
 end
+
 
 
 --- Only works with objects!
@@ -1744,6 +1908,7 @@ function CreateModelSwap(x,y,z,radius,originalModel,newModel,p6)
 end
 
 
+
 --- 
 --- Native 0x824E1C26A14CB817 (REMOVE_MODEL_SWAP)
 ---@param x float
@@ -1756,6 +1921,7 @@ end
 function RemoveModelSwap(x,y,z,radius,originalModel,newModel,p6)
     Citizen.InvokeNative(0x824E1C26A14CB817,x,y,z,radius,originalModel,newModel,p6)
 end
+
 
 
 --- 
@@ -1771,6 +1937,7 @@ function CreateModelHide(x,y,z,radius,model,p5)
 end
 
 
+
 --- 
 --- Native 0xD136090A9AAAB17D (CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS)
 ---@param x float
@@ -1782,6 +1949,7 @@ end
 function CreateModelHideExcludingScriptObjects(x,y,z,radius,model,p5)
     Citizen.InvokeNative(0xD136090A9AAAB17D,x,y,z,radius,model,p5)
 end
+
 
 
 --- 
@@ -1797,6 +1965,7 @@ function RemoveModelHide(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x0961A905AFBC34C7 (CREATE_FORCED_OBJECT)
 ---@param x float
@@ -1808,6 +1977,7 @@ end
 function CreateForcedObject(x,y,z,p3,modelHash,p5)
     Citizen.InvokeNative(0x0961A905AFBC34C7,x,y,z,p3,modelHash,p5)
 end
+
 
 
 --- 
@@ -1822,6 +1992,7 @@ function RemoveForcedObject(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0xE037BF068223C38D (SET_ENTITY_NO_COLLISION_ENTITY)
 ---@param entity1 entity
@@ -1830,6 +2001,7 @@ end
 function SetEntityNoCollisionEntity(entity1,entity2,thisFrameOnly)
     Citizen.InvokeNative(0xE037BF068223C38D,entity1,entity2,thisFrameOnly)
 end
+
 
 
 --- 
@@ -1841,6 +2013,7 @@ function SetEntityMotionBlur(entity,toggle)
 end
 
 
+
 --- 
 --- Native 0x80646744FA88F9D7 (SET_CAN_AUTO_VAULT_ON_ENTITY)
 ---@param entity entity
@@ -1848,6 +2021,7 @@ end
 function SetCanAutoVaultOnEntity(entity,toggle)
     Citizen.InvokeNative(0x80646744FA88F9D7,entity,toggle)
 end
+
 
 
 --- 
@@ -1859,6 +2033,7 @@ function SetCanClimbOnEntity(entity,toggle)
 end
 
 
+
 --- Old name: _SET_ENTITY_DECALS_DISABLED
 --- Native 0xC64E597783BE9A1D (SET_ENTITY_NOWEAPONDECALS)
 ---@param entity entity
@@ -1866,6 +2041,7 @@ end
 function SetEntityNoweapondecals(entity,toggle)
     Citizen.InvokeNative(0xC64E597783BE9A1D,entity,toggle)
 end
+
 
 
 --- 
@@ -1878,8 +2054,9 @@ end
 ---@param p5 number
 ---@return number
 function GetEntitiesNearPoint(x,y,z,radius,itemSet,p5)
-   return Citizen.InvokeNative(0x59B57C4B06531E1E,x,y,z,radius,itemSet,p5)
+    return Citizen.InvokeNative(0x59B57C4B06531E1E,x,y,z,radius,itemSet,p5)
 end
+
 
 
 --- 
@@ -1892,8 +2069,9 @@ end
 ---@param p5 string
 ---@return number
 function GetMatchingEntities(volume,itemSet,entityType,p3,p4,p5)
-   return Citizen.InvokeNative(0x84CCF9A12942C83D,volume,itemSet,entityType,p3,p4,p5)
+    return Citizen.InvokeNative(0x84CCF9A12942C83D,volume,itemSet,entityType,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1903,8 +2081,9 @@ end
 ---@param entityType number
 ---@return number
 function GetEntitiesInVolume(volume,itemSet,entityType)
-   return Citizen.InvokeNative(0x886171A12F400B89,volume,itemSet,entityType)
+    return Citizen.InvokeNative(0x886171A12F400B89,volume,itemSet,entityType)
 end
+
 
 
 --- Alternative Name: _GET_ENTITY_FROM_MAP_OBJECT; You can get existing objects and manipulate them using this native.
@@ -1912,8 +2091,9 @@ end
 ---@param modelHash hash
 ---@return entity
 function SearchBuildingPoolForEntityWithThisModel(modelHash)
-   return Citizen.InvokeNative(0x66B2B83B94B22458,modelHash)
+    return Citizen.InvokeNative(0x66B2B83B94B22458,modelHash)
 end
+
 
 
 --- Params: p1 = 0 in R* Scripts (GET_DOOR_ENTITY_FROM_ID)
@@ -1923,8 +2103,9 @@ end
 ---@param p1 number
 ---@return entity
 function GetEntityByDoorhash(doorHash,p1)
-   return Citizen.InvokeNative(0xF7424890E4A094C0,doorHash,p1)
+    return Citizen.InvokeNative(0xF7424890E4A094C0,doorHash,p1)
 end
+
 
 
 --- 
@@ -1936,8 +2117,9 @@ end
 ---@param p4 any*
 ---@return boolean
 function FindAnimEventPhase(animDictionary,animName,p2,p3,p4)
-   return Citizen.InvokeNative(0x42718CC559BD7776,animDictionary,animName,p2,p3,p4)
+    return Citizen.InvokeNative(0x42718CC559BD7776,animDictionary,animName,p2,p3,p4)
 end
+
 
 
 --- 
@@ -1949,6 +2131,7 @@ function ForceEntityAiAndAnimationUpdate(entity,p1)
 end
 
 
+
 --- 
 --- Native 0x627520389E288A73 (_GET_ENTITY_ANIM_CURRENT_TIME)
 ---@param entity entity
@@ -1956,8 +2139,9 @@ end
 ---@param animName string
 ---@return float
 function GetEntityAnimCurrentTime(entity,animDict,animName)
-   return Citizen.InvokeNative(0x627520389E288A73,entity,animDict,animName)
+    return Citizen.InvokeNative(0x627520389E288A73,entity,animDict,animName)
 end
+
 
 
 --- 
@@ -1966,8 +2150,9 @@ end
 ---@param actionHash hash
 ---@return boolean
 function HasAnimEventFired(entity,actionHash)
-   return Citizen.InvokeNative(0x5851CC48405F4A07,entity,actionHash)
+    return Citizen.InvokeNative(0x5851CC48405F4A07,entity,actionHash)
 end
+
 
 
 --- 
@@ -1978,8 +2163,9 @@ end
 ---@param p3 number
 ---@return boolean
 function HasEntityAnimFinished(entity,animDict,animName,p3)
-   return Citizen.InvokeNative(0xAEB40615337EF1E3,entity,animDict,animName,p3)
+    return Citizen.InvokeNative(0xAEB40615337EF1E3,entity,animDict,animName,p3)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/animations
@@ -1995,8 +2181,9 @@ end
 ---@param bitset any
 ---@return boolean
 function PlayEntityAnim(entity,animName,animDict,p3,loop,stayInAnim,p6,delta,bitset)
-   return Citizen.InvokeNative(0xDC6D22FAB76D4874,entity,animName,animDict,p3,loop,stayInAnim,p6,delta,bitset)
+    return Citizen.InvokeNative(0xDC6D22FAB76D4874,entity,animName,animDict,p3,loop,stayInAnim,p6,delta,bitset)
 end
+
 
 
 --- https://gfycat.com/amazingmiserlyamericanquarterhorse
@@ -2010,6 +2197,7 @@ function SetEntityAnimCurrentTime(entity,animDict,animName,time)
 end
 
 
+
 --- 
 --- Native 0xEAA885BA3CEA4E4A (_SET_ENTITY_ANIM_SPEED)
 ---@param entity entity
@@ -2021,6 +2209,7 @@ function SetEntityAnimSpeed(entity,animDict,animName,speedMultiplier)
 end
 
 
+
 --- 
 --- Native 0x786591D986DE9159 (STOP_ENTITY_ANIM)
 ---@param entity entity
@@ -2029,8 +2218,9 @@ end
 ---@param p3 float
 ---@return any
 function StopEntityAnim(entity,animation,animGroup,p3)
-   return Citizen.InvokeNative(0x786591D986DE9159,entity,animation,animGroup,p3)
+    return Citizen.InvokeNative(0x786591D986DE9159,entity,animation,animGroup,p3)
 end
+
 
 
 --- 
@@ -2041,6 +2231,7 @@ function AddEntityTrackingTrails(entity)
 end
 
 
+
 --- 
 --- Native 0x36EB4D34D4A092C5 (_PAUSE_ENTITY_TRACKING)
 ---@param entity entity
@@ -2048,6 +2239,7 @@ end
 function PauseEntityTracking(entity,pause)
     Citizen.InvokeNative(0x36EB4D34D4A092C5,entity,pause)
 end
+
 
 
 --- 
@@ -2066,8 +2258,9 @@ end
 ---@param bInit boolean
 ---@return any
 function CreateFootpathTrail(p0,waypointRecord,bUseSnowOffset,p3,p4,p5,p6,p7,p8,p9,p10,bInit)
-   return Citizen.InvokeNative(0x29BA9F78321E5A6C,p0,waypointRecord,bUseSnowOffset,p3,p4,p5,p6,p7,p8,p9,p10,bInit)
+    return Citizen.InvokeNative(0x29BA9F78321E5A6C,p0,waypointRecord,bUseSnowOffset,p3,p4,p5,p6,p7,p8,p9,p10,bInit)
 end
+
 
 
 --- 
@@ -2079,8 +2272,9 @@ end
 ---@param flags number
 ---@return any
 function PinClosestMapEntity(modelHash,x,y,z,flags)
-   return Citizen.InvokeNative(0x6F3068258A499E52,modelHash,x,y,z,flags)
+    return Citizen.InvokeNative(0x6F3068258A499E52,modelHash,x,y,z,flags)
 end
+
 
 
 --- 
@@ -2091,13 +2285,15 @@ function UnpinMapEntity(entity)
 end
 
 
+
 --- 
 --- Native 0x1FF441D7954F8709 (IS_MAP_ENTITY_PINNED)
 ---@param p0 any
 ---@return boolean
 function IsMapEntityPinned(p0)
-   return Citizen.InvokeNative(0x1FF441D7954F8709,p0)
+    return Citizen.InvokeNative(0x1FF441D7954F8709,p0)
 end
+
 
 
 --- 
@@ -2105,7 +2301,8 @@ end
 ---@param p0 any
 ---@return entity
 function GetPinnedMapEntity(p0)
-   return Citizen.InvokeNative(0x4735E2A4BB83D9DA,p0)
+    return Citizen.InvokeNative(0x4735E2A4BB83D9DA,p0)
 end
+
 
 

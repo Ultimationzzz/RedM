@@ -6,6 +6,7 @@ function LocalizationGetSystemLanguage()
 end
 
 
+
 --- 0 = american (en-US)
 ---1 = french (fr-FR)
 ---2 = german (de-DE)
@@ -26,6 +27,7 @@ function GetCurrentLanguage()
 end
 
 
+
 --- Returns true if the current language is american, french, german, italian, spanish, brazilian or mexican.
 ---_DOES_*
 --- Native 0x45D50415E4D885FF (_DOES_CURRENT_LANGUAGE_SUPPORT_CONDENSED_STYLE)
@@ -33,6 +35,7 @@ end
 function DoesCurrentLanguageSupportCondensedStyle()
    return Citizen.InvokeNative(0x45D50415E4D885FF)
 end
+
 
 
 --- 0 = DATE_FORMAT_DMY
@@ -44,5 +47,6 @@ end
 function LocalizationGetSystemDateType()
    return Citizen.InvokeNative(0x76E30B799EBEEA0F)
 end
+
 
 

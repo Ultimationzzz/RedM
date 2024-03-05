@@ -3,8 +3,9 @@
 ---@param txdHash hash
 ---@return boolean
 function DoesStreamedTxdExist(txdHash)
-   return Citizen.InvokeNative(0xBA0163B277C2D2D0,txdHash)
+    return Citizen.InvokeNative(0xBA0163B277C2D2D0,txdHash)
 end
+
 
 
 --- 
@@ -16,13 +17,15 @@ function RequestStreamedTxd(txdHash,p1)
 end
 
 
+
 --- 
 --- Native 0xBE72591D1509FFE4 (HAS_STREAMED_TXD_LOADED)
 ---@param txdHash hash
 ---@return boolean
 function HasStreamedTxdLoaded(txdHash)
-   return Citizen.InvokeNative(0xBE72591D1509FFE4,txdHash)
+    return Citizen.InvokeNative(0xBE72591D1509FFE4,txdHash)
 end
+
 
 
 --- 
@@ -33,13 +36,15 @@ function SetStreamedTxdAsNoLongerNeeded(txdHash)
 end
 
 
+
 --- 
 --- Native 0x7332461FC59EB7EC (DOES_STREAMED_TEXTURE_DICT_EXIST)
 ---@param textureDict string
 ---@return boolean
 function DoesStreamedTextureDictExist(textureDict)
-   return Citizen.InvokeNative(0x7332461FC59EB7EC,textureDict)
+    return Citizen.InvokeNative(0x7332461FC59EB7EC,textureDict)
 end
+
 
 
 --- 
@@ -51,13 +56,15 @@ function RequestStreamedTextureDict(textureDict,p1)
 end
 
 
+
 --- 
 --- Native 0x54D6900929CCF162 (HAS_STREAMED_TEXTURE_DICT_LOADED)
 ---@param textureDict string
 ---@return boolean
 function HasStreamedTextureDictLoaded(textureDict)
-   return Citizen.InvokeNative(0x54D6900929CCF162,textureDict)
+    return Citizen.InvokeNative(0x54D6900929CCF162,textureDict)
 end
+
 
 
 --- 
@@ -66,5 +73,6 @@ end
 function SetStreamedTextureDictAsNoLongerNeeded(textureDict)
     Citizen.InvokeNative(0x4ACA10A91F66F1E2,textureDict)
 end
+
 
 

@@ -3,8 +3,9 @@
 ---@param player player
 ---@return number
 function GetPlayerPed(player)
-   return Citizen.InvokeNative(0x275F255ED201B937,player)
+    return Citizen.InvokeNative(0x275F255ED201B937,player)
 end
+
 
 
 --- 
@@ -12,8 +13,9 @@ end
 ---@param player player
 ---@return number
 function GetPlayerPed2(player)
-   return Citizen.InvokeNative(0x5EBE38A20BC51C27,player)
+    return Citizen.InvokeNative(0x5EBE38A20BC51C27,player)
 end
+
 
 
 --- Does the same like PLAYER::GET_PLAYER_PED
@@ -21,8 +23,9 @@ end
 ---@param player player
 ---@return number
 function GetPlayerPedScriptIndex(player)
-   return Citizen.InvokeNative(0x5C880F9056D784C8,player)
+    return Citizen.InvokeNative(0x5C880F9056D784C8,player)
 end
+
 
 
 --- Make sure to request the model first and wait until it has loaded.
@@ -35,13 +38,15 @@ function SetPlayerModel(player,modelHash,p2)
 end
 
 
+
 --- Returns true if the given player has a valid ped.
 --- Native 0x0760D6F70EBCC05C (_NETWORK_HAS_PLAYER_VALID_PED)
 ---@param player player
 ---@return boolean
 function NetworkHasPlayerValidPed(player)
-   return Citizen.InvokeNative(0x0760D6F70EBCC05C,player)
+    return Citizen.InvokeNative(0x0760D6F70EBCC05C,player)
 end
+
 
 
 --- Gets the player's team.
@@ -50,8 +55,9 @@ end
 ---@param player player
 ---@return number
 function GetPlayerTeam(player)
-   return Citizen.InvokeNative(0xB464EB6A40C7975B,player)
+    return Citizen.InvokeNative(0xB464EB6A40C7975B,player)
 end
+
 
 
 --- Sets the player's team.
@@ -64,13 +70,15 @@ function SetPlayerTeam(player,team,bRestrictToThisScript)
 end
 
 
+
 --- 
 --- Native 0x7124FD9AC0E01BA0 (GET_PLAYER_NAME)
 ---@param player player
 ---@return string
 function GetPlayerName(player)
-   return Citizen.InvokeNative(0x7124FD9AC0E01BA0,player)
+    return Citizen.InvokeNative(0x7124FD9AC0E01BA0,player)
 end
+
 
 
 --- 
@@ -78,8 +86,9 @@ end
 ---@param string string
 ---@return string
 function FormatPlayerNameString(string)
-   return Citizen.InvokeNative(0x5B6193813E03E4E9,string)
+    return Citizen.InvokeNative(0x5B6193813E03E4E9,string)
 end
+
 
 
 --- 
@@ -87,8 +96,9 @@ end
 ---@param p0 number
 ---@return float
 function GetWantedLevelRadius(p0)
-   return Citizen.InvokeNative(0x80B00EB26D9521C7,p0)
+    return Citizen.InvokeNative(0x80B00EB26D9521C7,p0)
 end
+
 
 
 --- 
@@ -96,8 +106,9 @@ end
 ---@param wantedLevel number
 ---@return number
 function GetWantedLevelThreshold(wantedLevel)
-   return Citizen.InvokeNative(0x1B1A3B358F7D8F07,wantedLevel)
+    return Citizen.InvokeNative(0x1B1A3B358F7D8F07,wantedLevel)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -110,14 +121,16 @@ function SetPlayerWantedLevel(player,wantedLevel,disableNoMission)
 end
 
 
+
 --- 
 --- Native 0xE1C0AD4C24324C36 (IS_PLAYER_WANTED_LEVEL_GREATER)
 ---@param player player
 ---@param wantedLevel number
 ---@return boolean
 function IsPlayerWantedLevelGreater(player,wantedLevel)
-   return Citizen.InvokeNative(0xE1C0AD4C24324C36,player,wantedLevel)
+    return Citizen.InvokeNative(0xE1C0AD4C24324C36,player,wantedLevel)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -128,13 +141,15 @@ function ClearPlayerWantedLevel(player)
 end
 
 
+
 --- 
 --- Native 0x2E9C3FCB6798F397 (IS_PLAYER_DEAD)
 ---@param player player
 ---@return boolean
 function IsPlayerDead(player)
-   return Citizen.InvokeNative(0x2E9C3FCB6798F397,player)
+    return Citizen.InvokeNative(0x2E9C3FCB6798F397,player)
 end
+
 
 
 --- flags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eSetPlayerControlFlags
@@ -148,13 +163,15 @@ function SetPlayerControl(player,toggle,flags,bPreventHeadingChange)
 end
 
 
+
 --- 
 --- Native 0xABC532F9098BFD9D (GET_PLAYER_WANTED_LEVEL)
 ---@param player player
 ---@return number
 function GetPlayerWantedLevel(player)
-   return Citizen.InvokeNative(0xABC532F9098BFD9D,player)
+    return Citizen.InvokeNative(0xABC532F9098BFD9D,player)
 end
+
 
 
 --- 
@@ -165,12 +182,14 @@ function SetMaxWantedLevel(maxWantedLevel)
 end
 
 
+
 --- 
 --- Native 0xEA6DE0CD15AECBE2 (_SET_MAX_WANTED_LEVEL_2)
 ---@param maxWantedLevel number
 function SetMaxWantedLevel2(maxWantedLevel)
     Citizen.InvokeNative(0xEA6DE0CD15AECBE2,maxWantedLevel)
 end
+
 
 
 --- If toggle is set to false:
@@ -184,13 +203,15 @@ function SetPoliceRadarBlips(toggle)
 end
 
 
+
 --- Checks whether the specified player has a Ped, the Ped is not dead, is not injured and is not arrested.
 --- Native 0xBFFB35986CAAE58C (IS_PLAYER_PLAYING)
 ---@param player player
 ---@return boolean
 function IsPlayerPlaying(player)
-   return Citizen.InvokeNative(0xBFFB35986CAAE58C,player)
+    return Citizen.InvokeNative(0xBFFB35986CAAE58C,player)
 end
+
 
 
 --- 
@@ -202,14 +223,16 @@ function SetEveryoneIgnorePlayer(player,toggle)
 end
 
 
+
 --- 
 --- Native 0x51BEA356B1C60225 (GET_IS_PLAYER_UI_PROMPT_ACTIVE)
 ---@param player player
 ---@param p1 number
 ---@return boolean
 function GetIsPlayerUiPromptActive(player,p1)
-   return Citizen.InvokeNative(0x51BEA356B1C60225,player,p1)
+    return Citizen.InvokeNative(0x51BEA356B1C60225,player,p1)
 end
+
 
 
 --- Params: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePromptType
@@ -224,6 +247,7 @@ function ModifyPlayerUiPrompt(player,promptType,promptMode,disabled)
 end
 
 
+
 --- Returns false if PromptType is enabled
 ---Params: See 0x0751D461F06E41CE
 --- Native 0x6614F9039BD31931 (_GET_PLAYER_UI_PROMPT_IS_DISABLED)
@@ -232,8 +256,9 @@ end
 ---@param promptMode number
 ---@return boolean
 function GetPlayerUiPromptIsDisabled(player,promptType,promptMode)
-   return Citizen.InvokeNative(0x6614F9039BD31931,player,promptType,promptMode)
+    return Citizen.InvokeNative(0x6614F9039BD31931,player,promptType,promptMode)
 end
+
 
 
 --- Params: See 0x0751D461F06E41CE
@@ -248,6 +273,7 @@ function ModifyPlayerUiPromptForPed(player,ped,promptType,promptMode,enabled)
 end
 
 
+
 --- Returns true if PromptType is enabled for ped (mount)
 ---Params: See 0x0751D461F06E41CE
 --- Native 0xEA8F168A76A0B9BC (_GET_PLAYER_UI_PROMPT_FOR_PED_IS_ENABLED)
@@ -257,8 +283,9 @@ end
 ---@param promptMode number
 ---@return boolean
 function GetPlayerUiPromptForPedIsEnabled(player,ped,promptType,promptMode)
-   return Citizen.InvokeNative(0xEA8F168A76A0B9BC,player,ped,promptType,promptMode)
+    return Citizen.InvokeNative(0xEA8F168A76A0B9BC,player,ped,promptType,promptMode)
 end
+
 
 
 --- Sets whether all random peds will run away from player if they are agitated (threatened) (bool=true), or some peds can stand up for themselves (bool=false).
@@ -270,6 +297,7 @@ function SetAllRandomPedsFlee(player,toggle)
 end
 
 
+
 --- 
 --- Native 0xD5C198A62F1DEB0A (SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME)
 ---@param player player
@@ -278,12 +306,14 @@ function SetAllRandomPedsFleeThisFrame(player)
 end
 
 
+
 --- 
 --- Native 0x16752DAA7E6D3F72 (SET_ALL_NEUTRAL_RANDOM_PEDS_FLEE_THIS_FRAME)
 ---@param player player
 function SetAllNeutralRandomPedsFleeThisFrame(player)
     Citizen.InvokeNative(0x16752DAA7E6D3F72,player)
 end
+
 
 
 --- Disables the players ability to be wanted by lawmen
@@ -295,12 +325,14 @@ function SetDisablePlayerWantedLevel(player,disable)
 end
 
 
+
 --- Returns -1.0f if no multiplier has been set
 --- Native 0xA82964B9D8D6A983 (_GET_WANTED_LEVEL_MULTIPLIER)
 ---@return float
 function GetWantedLevelMultiplier()
    return Citizen.InvokeNative(0xA82964B9D8D6A983)
 end
+
 
 
 --- 
@@ -311,12 +343,14 @@ function SetWantedLevelMultiplier(multiplier)
 end
 
 
+
 --- 
 --- Native 0x062D14F18E8B0CAE (RESET_WANTED_LEVEL_DIFFICULTY)
 ---@param player player
 function ResetWantedLevelDifficulty(player)
     Citizen.InvokeNative(0x062D14F18E8B0CAE,player)
 end
+
 
 
 --- 
@@ -327,12 +361,14 @@ function UpdateWantedPositionThisFrame(player)
 end
 
 
+
 --- 
 --- Native 0x96722257E5381E00 (SUPPRESS_WITNESSES_CALLING_POLICE_THIS_FRAME)
 ---@param player player
 function SuppressWitnessesCallingPoliceThisFrame(player)
     Citizen.InvokeNative(0x96722257E5381E00,player)
 end
+
 
 
 --- 
@@ -343,12 +379,14 @@ function ReportPoliceSpottedPlayer(player)
 end
 
 
+
 --- 
 --- Native 0xD2DFC9CCA5596A11 (SET_LAW_RESPONSE_DELAY_OVERRIDE)
 ---@param p0 float
 function SetLawResponseDelayOverride(p0)
     Citizen.InvokeNative(0xD2DFC9CCA5596A11,p0)
 end
+
 
 
 --- 
@@ -358,13 +396,15 @@ function ResetLawResponseDelayOverride()
 end
 
 
+
 --- 
 --- Native 0x2DF170B1185AF777 (CAN_PLAYER_START_MISSION)
 ---@param player player
 ---@return boolean
 function CanPlayerStartMission(player)
-   return Citizen.InvokeNative(0x2DF170B1185AF777,player)
+    return Citizen.InvokeNative(0x2DF170B1185AF777,player)
 end
+
 
 
 --- 
@@ -372,8 +412,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerReadyForCutscene(player)
-   return Citizen.InvokeNative(0xAA67BCB0097F2FA3,player)
+    return Citizen.InvokeNative(0xAA67BCB0097F2FA3,player)
 end
+
 
 
 --- 
@@ -383,8 +424,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function IsPlayerTargettingEntity(player,entity,p2)
-   return Citizen.InvokeNative(0x27F89FDC16688A7A,player,entity,p2)
+    return Citizen.InvokeNative(0x27F89FDC16688A7A,player,entity,p2)
 end
+
 
 
 --- 
@@ -393,8 +435,9 @@ end
 ---@param entity entity*
 ---@return boolean
 function GetPlayerTargetEntity(player,entity)
-   return Citizen.InvokeNative(0xAE663DDD99C8A670,player,entity)
+    return Citizen.InvokeNative(0xAE663DDD99C8A670,player,entity)
 end
+
 
 
 --- Checks if player is focused on any entity
@@ -402,8 +445,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerFreeFocusing(player)
-   return Citizen.InvokeNative(0x1A51BFE60708E482,player)
+    return Citizen.InvokeNative(0x1A51BFE60708E482,player)
 end
+
 
 
 --- 
@@ -414,8 +458,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function GetPlayerInteractionTargetEntity(player,outEntity,p2,p3)
-   return Citizen.InvokeNative(0x3EE1F7A8C32F24E1,player,outEntity,p2,p3)
+    return Citizen.InvokeNative(0x3EE1F7A8C32F24E1,player,outEntity,p2,p3)
 end
+
 
 
 --- 
@@ -423,8 +468,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerInScope(player)
-   return Citizen.InvokeNative(0x04D7F33640662FA2,player)
+    return Citizen.InvokeNative(0x04D7F33640662FA2,player)
 end
+
 
 
 --- Gets a value indicating whether the specified player is currently aiming freely.
@@ -432,8 +478,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerFreeAiming(player)
-   return Citizen.InvokeNative(0x936F967D4BE1CE9D,player)
+    return Citizen.InvokeNative(0x936F967D4BE1CE9D,player)
 end
+
 
 
 --- Gets a value indicating whether the specified player is currently aiming freely at the specified entity.
@@ -442,8 +489,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsPlayerFreeAimingAtEntity(player,entity)
-   return Citizen.InvokeNative(0x8C67C11C68713D25,player,entity)
+    return Citizen.InvokeNative(0x8C67C11C68713D25,player,entity)
 end
+
 
 
 --- 
@@ -452,8 +500,9 @@ end
 ---@param entity entity*
 ---@return boolean
 function GetEntityPlayerIsFreeAimingAt(player,entity)
-   return Citizen.InvokeNative(0xA6817C110B830EAD,player,entity)
+    return Citizen.InvokeNative(0xA6817C110B830EAD,player,entity)
 end
+
 
 
 --- Affects the range of auto aim target.
@@ -465,6 +514,7 @@ function SetPlayerLockonRangeOverride(player,range)
 end
 
 
+
 --- Sets whether this player can be hassled by gangs.
 --- Native 0xC7FE774412046825 (SET_PLAYER_CAN_BE_HASSLED_BY_GANGS)
 ---@param player player
@@ -472,6 +522,7 @@ end
 function SetPlayerCanBeHassledByGangs(player,toggle)
     Citizen.InvokeNative(0xC7FE774412046825,player,toggle)
 end
+
 
 
 --- Sets whether this player can take cover.
@@ -483,6 +534,7 @@ function SetPlayerCanUseCover(player,toggle)
 end
 
 
+
 --- 
 --- Native 0x39363DFD04E91496 (_SET_PLAYER_CAN_MERCY_KILL)
 ---@param player player
@@ -490,6 +542,7 @@ end
 function SetPlayerCanMercyKill(player,toggle)
     Citizen.InvokeNative(0x39363DFD04E91496,player,toggle)
 end
+
 
 
 --- Gets the maximum wanted level the player can get.
@@ -501,13 +554,15 @@ function GetMaxWantedLevel()
 end
 
 
+
 --- 
 --- Native 0x4605C66E0F935F83 (IS_PLAYER_TARGETTING_ANYTHING)
 ---@param player player
 ---@return boolean
 function IsPlayerTargettingAnything(player)
-   return Citizen.InvokeNative(0x4605C66E0F935F83,player)
+    return Citizen.InvokeNative(0x4605C66E0F935F83,player)
 end
+
 
 
 --- 
@@ -519,13 +574,15 @@ function RestorePlayerStamina(player,p1)
 end
 
 
+
 --- Returns the group ID the player is member of.
 --- Native 0x9BAB31815159ABCF (GET_PLAYER_GROUP)
 ---@param player player
 ---@return number
 function GetPlayerGroup(player)
-   return Citizen.InvokeNative(0x9BAB31815159ABCF,player)
+    return Citizen.InvokeNative(0x9BAB31815159ABCF,player)
 end
+
 
 
 --- Used in script function: NET_AUTO_FOLLOW_UPDATE_LEADER_VALUES
@@ -553,6 +610,7 @@ function AddPlayerAsFollowTarget(player,ped,p2,p3,followMode,followPriority,p6)
 end
 
 
+
 --- 
 --- Native 0x0C6B89876262A99D (_REMOVE_PLAYER_AS_FOLLOW_TARGET)
 ---@param player player
@@ -562,14 +620,16 @@ function RemovePlayerAsFollowTarget(player,ped)
 end
 
 
+
 --- 
 --- Native 0xE24C64D9ADED2EF5 (_IS_PLAYER_FOLLOWING_TARGET)
 ---@param player player
 ---@param ped number
 ---@return boolean
 function IsPlayerFollowingTarget(player,ped)
-   return Citizen.InvokeNative(0xE24C64D9ADED2EF5,player,ped)
+    return Citizen.InvokeNative(0xE24C64D9ADED2EF5,player,ped)
 end
+
 
 
 --- Returns whether the player can control himself.
@@ -577,8 +637,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerControlOn(player)
-   return Citizen.InvokeNative(0x7964097FCE4C244B,player)
+    return Citizen.InvokeNative(0x7964097FCE4C244B,player)
 end
+
 
 
 --- 
@@ -586,8 +647,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerScriptControlOn(player)
-   return Citizen.InvokeNative(0xB78350754157C00F,player)
+    return Citizen.InvokeNative(0xB78350754157C00F,player)
 end
+
 
 
 --- Returns TRUE if the player ('s ped) is climbing at the moment.
@@ -595,8 +657,9 @@ end
 ---@param player player
 ---@return boolean
 function IsPlayerClimbing(player)
-   return Citizen.InvokeNative(0xB8A70C22FD48197A,player)
+    return Citizen.InvokeNative(0xB8A70C22FD48197A,player)
 end
+
 
 
 --- Return true while player is being arrested / busted.
@@ -607,8 +670,9 @@ end
 ---@param atArresting boolean
 ---@return boolean
 function IsPlayerBeingArrested(player,atArresting)
-   return Citizen.InvokeNative(0xC8183AE963C58374,player,atArresting)
+    return Citizen.InvokeNative(0xC8183AE963C58374,player,atArresting)
 end
+
 
 
 --- 
@@ -617,6 +681,7 @@ end
 function ResetPlayerArrestState(player)
     Citizen.InvokeNative(0x12917931C31F1750,player)
 end
+
 
 
 --- 
@@ -628,12 +693,14 @@ function SetBountyTarget(player,target)
 end
 
 
+
 --- 
 --- Native 0x8F2A81C09DA9124A (_CLEAR_BOUNTY_TARGET)
 ---@param player player
 function ClearBountyTarget(player)
     Citizen.InvokeNative(0x8F2A81C09DA9124A,player)
 end
+
 
 
 --- 
@@ -644,6 +711,7 @@ function GetPlayersLastVehicle()
 end
 
 
+
 --- Returns the same as PLAYER_ID and NETWORK_PLAYER_ID_TO_INT
 --- Native 0x47E385B0D957C8D4 (GET_PLAYER_INDEX)
 ---@return player
@@ -652,13 +720,15 @@ function GetPlayerIndex()
 end
 
 
+
 --- Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
 --- Native 0x748B3A65C2604C33 (INT_TO_PLAYERINDEX)
 ---@param value number
 ---@return player
 function IntToPlayerindex(value)
-   return Citizen.InvokeNative(0x748B3A65C2604C33,value)
+    return Citizen.InvokeNative(0x748B3A65C2604C33,value)
 end
+
 
 
 --- Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -666,8 +736,9 @@ end
 ---@param value number
 ---@return number
 function IntToParticipantindex(value)
-   return Citizen.InvokeNative(0x58FF971FC8F2702C,value)
+    return Citizen.InvokeNative(0x58FF971FC8F2702C,value)
 end
+
 
 
 --- This returns YOUR 'identity' as a Player type.
@@ -679,12 +750,14 @@ function PlayerId()
 end
 
 
+
 --- Returns current player ped
 --- Native 0x096275889B8E0EE0 (PLAYER_PED_ID)
 ---@return number
 function PlayerPedId()
    return Citizen.InvokeNative(0x096275889B8E0EE0)
 end
+
 
 
 --- Does exactly the same thing as PLAYER_ID()
@@ -695,13 +768,15 @@ function NetworkPlayerIdToInt()
 end
 
 
+
 --- 
 --- Native 0xC11469DCA6FC3BB5 (HAS_FORCE_CLEANUP_OCCURRED)
 ---@param cleanupFlags number
 ---@return boolean
 function HasForceCleanupOccurred(cleanupFlags)
-   return Citizen.InvokeNative(0xC11469DCA6FC3BB5,cleanupFlags)
+    return Citizen.InvokeNative(0xC11469DCA6FC3BB5,cleanupFlags)
 end
+
 
 
 --- 
@@ -710,6 +785,7 @@ end
 function ForceCleanup(cleanupFlags)
     Citizen.InvokeNative(0x768C017FB878E4F4,cleanupFlags)
 end
+
 
 
 --- 
@@ -721,6 +797,7 @@ function ForceCleanupForAllThreadsWithThisName(name,cleanupFlags)
 end
 
 
+
 --- 
 --- Native 0xF4C9512A2F0A3031 (FORCE_CLEANUP_FOR_THREAD_WITH_THIS_ID)
 ---@param id number
@@ -730,12 +807,14 @@ function ForceCleanupForThreadWithThisId(id,cleanupFlags)
 end
 
 
+
 --- 
 --- Native 0x84E8E29EBD4A46D2 (GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP)
 ---@return number
 function GetCauseOfMostRecentForceCleanup()
    return Citizen.InvokeNative(0x84E8E29EBD4A46D2)
 end
+
 
 
 --- mood: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePedMood
@@ -747,13 +826,15 @@ function SetPlayerMood(player,mood)
 end
 
 
+
 --- See _SET_PLAYER_MOOD
 --- Native 0x054473164C012699 (_GET_PLAYER_MOOD)
 ---@param player player
 ---@return number
 function GetPlayerMood(player)
-   return Citizen.InvokeNative(0x054473164C012699,player)
+    return Citizen.InvokeNative(0x054473164C012699,player)
 end
+
 
 
 --- 
@@ -765,6 +846,7 @@ function SetPlayerMayOnlyEnterThisVehicle(player,vehicle)
 end
 
 
+
 --- 
 --- Native 0xBEC463B3A11C909E (SET_PLAYER_MAY_NOT_ENTER_ANY_VEHICLE)
 ---@param player player
@@ -773,12 +855,14 @@ function SetPlayerMayNotEnterAnyVehicle(player)
 end
 
 
+
 --- 
 --- Native 0x908258B6209E71F7 (IS_SYSTEM_UI_BEING_DISPLAYED)
 ---@return boolean
 function IsSystemUiBeingDisplayed()
    return Citizen.InvokeNative(0x908258B6209E71F7)
 end
+
 
 
 --- Simply sets you as invincible (Health will not deplete).
@@ -790,13 +874,15 @@ function SetPlayerInvincible(player,toggle)
 end
 
 
+
 --- Returns the player's invincibility status.
 --- Native 0x0CBBCB2CCFA7DC4E (GET_PLAYER_INVINCIBLE)
 ---@param player player
 ---@return boolean
 function GetPlayerInvincible(player)
-   return Citizen.InvokeNative(0x0CBBCB2CCFA7DC4E,player)
+    return Citizen.InvokeNative(0x0CBBCB2CCFA7DC4E,player)
 end
+
 
 
 --- 
@@ -808,6 +894,7 @@ function SetPlayerLockon(player,toggle)
 end
 
 
+
 --- 
 --- Native 0x4A056257802DD3E5 (SET_LOCKON_TO_FRIENDLY_PLAYERS)
 ---@param player player
@@ -815,6 +902,7 @@ end
 function SetLockonToFriendlyPlayers(player,toggle)
     Citizen.InvokeNative(0x4A056257802DD3E5,player,toggle)
 end
+
 
 
 --- Sets your targeting mode for when you're on foot.
@@ -833,6 +921,7 @@ function SetPlayerTargetingMode(targetMode)
 end
 
 
+
 --- Sets your targeting mode for when you're in a vehicle (perhaps a mount/horse).
 ---see SET_PLAYER_TARGETING_MODE for eTargetingMode
 --- Native 0x19B4F71703902238 (_SET_PLAYER_IN_VEHICLE_TARGETING_MODE)
@@ -840,6 +929,7 @@ end
 function SetPlayerInVehicleTargetingMode(targetMode)
     Citizen.InvokeNative(0x19B4F71703902238,targetMode)
 end
+
 
 
 --- 
@@ -850,13 +940,15 @@ function ClearPlayerHasDamagedAtLeastOnePed(player)
 end
 
 
+
 --- 
 --- Native 0xDA4A4B9B96E20092 (HAS_PLAYER_DAMAGED_AT_LEAST_ONE_PED)
 ---@param player player
 ---@return boolean
 function HasPlayerDamagedAtLeastOnePed(player)
-   return Citizen.InvokeNative(0xDA4A4B9B96E20092,player)
+    return Citizen.InvokeNative(0xDA4A4B9B96E20092,player)
 end
+
 
 
 --- 
@@ -867,13 +959,15 @@ function ClearPlayerHasDamagedAtLeastOneNonAnimalPed(player)
 end
 
 
+
 --- 
 --- Native 0x16C8D205DD5A2E90 (HAS_PLAYER_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED)
 ---@param player player
 ---@return boolean
 function HasPlayerDamagedAtLeastOneNonAnimalPed(player)
-   return Citizen.InvokeNative(0x16C8D205DD5A2E90,player)
+    return Citizen.InvokeNative(0x16C8D205DD5A2E90,player)
 end
+
 
 
 --- damageInfo: STANDARD_PED_DAMAGE, STANDARD_FEMALE_PED_DAMAGE, STANDARD_PLAYER_PED_DAMAGE_MP, STANDARD_FEMALE_PLAYER_PED_DAMAGE_MP
@@ -885,6 +979,7 @@ function SetPlayerDamageInfoOverride(player,damageInfo)
 end
 
 
+
 --- This can be between 1.0f - 50.0f
 --- Native 0x5DA6500FE849DA16 (SET_AIR_DRAG_MULTIPLIER_FOR_PLAYERS_VEHICLE)
 ---@param player player
@@ -892,6 +987,7 @@ end
 function SetAirDragMultiplierForPlayersVehicle(player,multiplier)
     Citizen.InvokeNative(0x5DA6500FE849DA16,player,multiplier)
 end
+
 
 
 --- Swim speed multiplier.
@@ -902,6 +998,7 @@ end
 function SetSwimMultiplierForPlayer(player,multiplier)
     Citizen.InvokeNative(0xBFCEABDE34DA5085,player,multiplier)
 end
+
 
 
 --- 
@@ -916,6 +1013,7 @@ function SetPlayerForcedAim(player,toggle,ped,p3,p4)
 end
 
 
+
 --- Inhibits the player from using any method of combat including melee and firearms.
 ---NOTE: Only disables the firing for one frame
 --- Native 0x2970929FD5F9FC89 (DISABLE_PLAYER_FIRING)
@@ -924,6 +1022,7 @@ end
 function DisablePlayerFiring(player,toggle)
     Citizen.InvokeNative(0x2970929FD5F9FC89,player,toggle)
 end
+
 
 
 --- 
@@ -935,6 +1034,7 @@ function EnableCustomDeadeyeAbility(player,enable)
 end
 
 
+
 --- 
 --- Native 0xAE637BB8EF017875 (_SPECIAL_ABILITY_SET_DISABLED)
 ---@param player player
@@ -944,13 +1044,15 @@ function SpecialAbilitySetDisabled(player,disabled)
 end
 
 
+
 --- 
 --- Native 0xB16223CB7DA965F0 (_IS_SPECIAL_ABILITY_ACTIVE)
 ---@param player player
 ---@return boolean
 function IsSpecialAbilityActive(player)
-   return Citizen.InvokeNative(0xB16223CB7DA965F0,player)
+    return Citizen.InvokeNative(0xB16223CB7DA965F0,player)
 end
+
 
 
 --- Toggle handles wether Deadeye and Eagleeye are infinite or not.
@@ -962,12 +1064,14 @@ function ModifyInfiniteTrailVision(player,toggle)
 end
 
 
+
 --- 
 --- Native 0xC0B21F235C02139C (_SPECIAL_ABILITY_SET_EAGLE_EYE_DISABLED)
 ---@param player player
 function SpecialAbilitySetEagleEyeDisabled(player)
     Citizen.InvokeNative(0xC0B21F235C02139C,player)
 end
+
 
 
 --- Restores Deadeye by given amount.
@@ -983,6 +1087,7 @@ function SpecialAbilityRestoreByAmount(player,amount,p2,p3,p4)
 end
 
 
+
 --- Only used in R* SP Script short_update
 ---Restores Deadeye Outer Ring
 --- Native 0x2498035289B5688F (_SPECIAL_ABILITY_RESTORE_OUTER_RING)
@@ -993,13 +1098,15 @@ function SpecialAbilityRestoreOuterRing(player,amount)
 end
 
 
+
 --- If player has less Dead Eye than required, Dead Eye cant be triggered.
 --- Native 0x811A748B1BE231BA (_GET_PLAYER_REQUIRED_DEAD_EYE_AMOUNT)
 ---@param player player
 ---@return float
 function GetPlayerRequiredDeadEyeAmount(player)
-   return Citizen.InvokeNative(0x811A748B1BE231BA,player)
+    return Citizen.InvokeNative(0x811A748B1BE231BA,player)
 end
+
 
 
 --- Returns Deadeye value from player
@@ -1007,8 +1114,9 @@ end
 ---@param player player
 ---@return float
 function SpecialAbilityGetAmountCached(player)
-   return Citizen.InvokeNative(0x029884FB65821B07,player)
+    return Citizen.InvokeNative(0x029884FB65821B07,player)
 end
+
 
 
 --- Drains Deadeye by given amount.
@@ -1021,6 +1129,7 @@ function SpecialAbilityDrainByAmount(player,amount,p2)
 end
 
 
+
 --- Params: p1 = -1 in R* Scripts
 --- Native 0x1D77B47AFA584E90 (_SPECIAL_ABILITY_START_RESTORE)
 ---@param player player
@@ -1029,6 +1138,7 @@ end
 function SpecialAbilityStartRestore(player,p1,p2)
     Citizen.InvokeNative(0x1D77B47AFA584E90,player,p1,p2)
 end
+
 
 
 --- 
@@ -1040,13 +1150,15 @@ function SetSpecialAbilityMultiplier(player,multiplier)
 end
 
 
+
 --- 
 --- Native 0xAB3773E7AA1E9DCC (_GET_PLAYER_SPECIAL_ABILITY_MULTIPLIER)
 ---@param player player
 ---@return float
 function GetPlayerSpecialAbilityMultiplier(player)
-   return Citizen.InvokeNative(0xAB3773E7AA1E9DCC,player)
+    return Citizen.InvokeNative(0xAB3773E7AA1E9DCC,player)
 end
+
 
 
 --- SPECIAL_ABILITY_NONE = -1,
@@ -1065,6 +1177,7 @@ function SetSpecialAbilityType(player,type)
 end
 
 
+
 --- durationCost: per second
 --- Native 0xB783F75940B23014 (_SET_SPECIAL_ABILITY_DURATION_COST)
 ---@param player player
@@ -1074,6 +1187,7 @@ function SetSpecialAbilityDurationCost(player,durationCost)
 end
 
 
+
 --- Only used in R* SP Script short_update
 --- Native 0xC0B1C05B313693D1 (_SET_SPECIAL_ABILITY_DISABLE_TIMER)
 ---@param player player
@@ -1081,6 +1195,7 @@ end
 function SetSpecialAbilityDisableTimer(player,timer)
     Citizen.InvokeNative(0xC0B1C05B313693D1,player,timer)
 end
+
 
 
 --- 
@@ -1093,14 +1208,16 @@ function SetSpecialAbilityActivationCost(player,activationCost,p2)
 end
 
 
+
 --- 
 --- Native 0x3A6AE4EEE30370FE (_GET_PLAYER_DEAD_EYE_METER_LEVEL)
 ---@param player player
 ---@param p1 boolean
 ---@return float
 function GetPlayerDeadEyeMeterLevel(player,p1)
-   return Citizen.InvokeNative(0x3A6AE4EEE30370FE,player,p1)
+    return Citizen.InvokeNative(0x3A6AE4EEE30370FE,player,p1)
 end
+
 
 
 --- 
@@ -1108,8 +1225,9 @@ end
 ---@param player player
 ---@return float
 function GetPlayerDeadEye(player)
-   return Citizen.InvokeNative(0xA81D24AE0AF99A5E,player)
+    return Citizen.InvokeNative(0xA81D24AE0AF99A5E,player)
 end
+
 
 
 --- 
@@ -1117,8 +1235,9 @@ end
 ---@param player player
 ---@return float
 function GetPlayerCachedDeadEyeAmount(player)
-   return Citizen.InvokeNative(0xDF66A37936D5F3D9,player)
+    return Citizen.InvokeNative(0xDF66A37936D5F3D9,player)
 end
+
 
 
 --- 
@@ -1127,8 +1246,9 @@ end
 ---@param p1 any
 ---@return float
 function GetPlayerMaxDeadEye(player,p1)
-   return Citizen.InvokeNative(0x592F58BC4D2A2CF3,player,p1)
+    return Citizen.InvokeNative(0x592F58BC4D2A2CF3,player,p1)
 end
+
 
 
 --- 
@@ -1136,8 +1256,9 @@ end
 ---@param player player
 ---@return float
 function GetPlayerHealth(player)
-   return Citizen.InvokeNative(0x0317C947D062854E,player)
+    return Citizen.InvokeNative(0x0317C947D062854E,player)
 end
+
 
 
 --- 
@@ -1145,8 +1266,9 @@ end
 ---@param player player
 ---@return float
 function GetPlayerStamina(player)
-   return Citizen.InvokeNative(0x0FF421E467373FCF,player)
+    return Citizen.InvokeNative(0x0FF421E467373FCF,player)
 end
+
 
 
 --- _N*, _O* or _PE*
@@ -1156,6 +1278,7 @@ end
 function SetPlayerStatFlagHash(player,p1)
     Citizen.InvokeNative(0x768E81AE285A4B67,player,p1)
 end
+
 
 
 --- 
@@ -1171,6 +1294,7 @@ function SetUsedItemEffect(health,stamina,deadeye,healthCore,staminaCore,deadeye
 end
 
 
+
 --- (Un)lock Eagle Eye functionality
 --- Native 0xA63FCAD3A6FEC6D2 (_ENABLE_EAGLEEYE)
 ---@param player player
@@ -1180,13 +1304,15 @@ function EnableEagleeye(player,enable)
 end
 
 
+
 --- Returns true if eagle eye is enabled for the player
 --- Native 0xE022CC1B545F1D9F (_IS_SECONDARY_SPECIAL_ABILITY_ENABLED)
 ---@param player player
 ---@return boolean
 function IsSecondarySpecialAbilityEnabled(player)
-   return Citizen.InvokeNative(0xE022CC1B545F1D9F,player)
+    return Citizen.InvokeNative(0xE022CC1B545F1D9F,player)
 end
+
 
 
 --- Activates EagleEye, called together with 0x28A13BF6B05C3D83
@@ -1195,6 +1321,7 @@ end
 function SecondarySpecialAbilitySetActive(player)
     Citizen.InvokeNative(0x1710BC33CFB83634,player)
 end
+
 
 
 --- Deactivates EagleEye, called together with 0xC0B21F235C02139C
@@ -1206,13 +1333,15 @@ function SecondarySpecialAbilitySetDisabled(player,disabled)
 end
 
 
+
 --- 
 --- Native 0x45AB66D02B601FA7 (_IS_SECONDARY_SPECIAL_ABILITY_ACTIVE)
 ---@param player player
 ---@return boolean
 function IsSecondarySpecialAbilityActive(player)
-   return Citizen.InvokeNative(0x45AB66D02B601FA7,player)
+    return Citizen.InvokeNative(0x45AB66D02B601FA7,player)
 end
+
 
 
 --- 
@@ -1231,13 +1360,15 @@ function StartPlayerTeleport(player,x,y,z,heading,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0xC39DCE4672CBFBC1 (UPDATE_PLAYER_TELEPORT)
 ---@param player player
 ---@return boolean
 function UpdatePlayerTeleport(player)
-   return Citizen.InvokeNative(0xC39DCE4672CBFBC1,player)
+    return Citizen.InvokeNative(0xC39DCE4672CBFBC1,player)
 end
+
 
 
 --- Disables the player's teleportation
@@ -1245,6 +1376,7 @@ end
 function StopPlayerTeleport()
     Citizen.InvokeNative(0x0858B86146601BE8)
 end
+
 
 
 --- 
@@ -1255,13 +1387,15 @@ function IsPlayerTeleportActive()
 end
 
 
+
 --- 
 --- Native 0xD7ECC25E176ECBA5 (GET_PLAYER_CURRENT_STEALTH_NOISE)
 ---@param player player
 ---@return float
 function GetPlayerCurrentStealthNoise(player)
-   return Citizen.InvokeNative(0xD7ECC25E176ECBA5,player)
+    return Citizen.InvokeNative(0xD7ECC25E176ECBA5,player)
 end
+
 
 
 --- 
@@ -1273,13 +1407,15 @@ function SetPlayerHealthRechargeMultiplier(player,regenRate)
 end
 
 
+
 --- 
 --- Native 0x22CD23BB0C45E0CD (_GET_PLAYER_HEALTH_RECHARGE_MULTIPLIER)
 ---@param player player
 ---@return float
 function GetPlayerHealthRechargeMultiplier(player)
-   return Citizen.InvokeNative(0x22CD23BB0C45E0CD,player)
+    return Citizen.InvokeNative(0x22CD23BB0C45E0CD,player)
 end
+
 
 
 --- Setting player's Health recharge time to zero forces immediate health regen
@@ -1291,6 +1427,7 @@ function SetPlayerHealthRechargeTimeModifier(player,modifier)
 end
 
 
+
 --- 
 --- Native 0xFECA17CF3343694B (SET_PLAYER_STAMINA_RECHARGE_MULTIPLIER)
 ---@param player player
@@ -1300,13 +1437,15 @@ function SetPlayerStaminaRechargeMultiplier(player,multiplier)
 end
 
 
+
 --- 
 --- Native 0x617D3494AD58200F (_GET_PLAYER_STAMINA_RECHARGE_MULTIPLIER)
 ---@param player player
 ---@return float
 function GetPlayerStaminaRechargeMultiplier(player)
-   return Citizen.InvokeNative(0x617D3494AD58200F,player)
+    return Citizen.InvokeNative(0x617D3494AD58200F,player)
 end
+
 
 
 --- 
@@ -1318,13 +1457,15 @@ function SetPlayerStaminaSprintDepletionMultiplier(player,multiplier)
 end
 
 
+
 --- 
 --- Native 0x68A0389E0718AC8F (_GET_PLAYER_STAMINA_DEPLETION_MULTIPLIER)
 ---@param player player
 ---@return float
 function GetPlayerStaminaDepletionMultiplier(player)
-   return Citizen.InvokeNative(0x68A0389E0718AC8F,player)
+    return Citizen.InvokeNative(0x68A0389E0718AC8F,player)
 end
+
 
 
 --- Seems to work similar to 0xD2CB0FB0FDCB473D
@@ -1336,13 +1477,15 @@ function SetPedActivePlayerHorse(player,horse)
 end
 
 
+
 --- 
 --- Native 0x46FA0AE18F4C7FA9 (_GET_ACTIVE_HORSE_FOR_PLAYER)
 ---@param player player
 ---@return number
 function GetActiveHorseForPlayer(player)
-   return Citizen.InvokeNative(0x46FA0AE18F4C7FA9,player)
+    return Citizen.InvokeNative(0x46FA0AE18F4C7FA9,player)
 end
+
 
 
 --- 
@@ -1354,13 +1497,15 @@ function SetPedAsSaddleHorseForPlayer(player,mount)
 end
 
 
+
 --- 
 --- Native 0xB48050D326E9A2F3 (_GET_SADDLE_HORSE_FOR_PLAYER)
 ---@param player player
 ---@return number
 function GetSaddleHorseForPlayer(player)
-   return Citizen.InvokeNative(0xB48050D326E9A2F3,player)
+    return Citizen.InvokeNative(0xB48050D326E9A2F3,player)
 end
+
 
 
 --- 
@@ -1369,8 +1514,9 @@ end
 ---@param horse number
 ---@return boolean
 function SetPedAsTempPlayerHorse(player,horse)
-   return Citizen.InvokeNative(0x227B06324234FB09,player,horse)
+    return Citizen.InvokeNative(0x227B06324234FB09,player,horse)
 end
+
 
 
 --- 
@@ -1378,8 +1524,9 @@ end
 ---@param player player
 ---@return number
 function GetTempPlayerHorse(player)
-   return Citizen.InvokeNative(0xD3F7445CEA2E5035,player)
+    return Citizen.InvokeNative(0xD3F7445CEA2E5035,player)
 end
+
 
 
 --- Name could potentially be inaccurate.
@@ -1393,6 +1540,7 @@ function SetPlayerMountStateActive(player,active)
 end
 
 
+
 --- 
 --- Native 0x09C28F828EE674FA (BOOST_PLAYER_HORSE_SPEED_FOR_TIME)
 ---@param player player
@@ -1401,6 +1549,7 @@ end
 function BoostPlayerHorseSpeedForTime(player,speedBoost,duration)
     Citizen.InvokeNative(0x09C28F828EE674FA,player,speedBoost,duration)
 end
+
 
 
 --- This modifies the damage value of your weapon. Whether it is a multiplier or base damage is unknown.
@@ -1412,6 +1561,7 @@ function SetPlayerWeaponDamageModifier(player,modifier)
 end
 
 
+
 --- 
 --- Native 0xD15CC2D493160BE3 (SET_PLAYER_WEAPON_DEFENSE_MODIFIER)
 ---@param player player
@@ -1419,6 +1569,7 @@ end
 function SetPlayerWeaponDefenseModifier(player,modifier)
     Citizen.InvokeNative(0xD15CC2D493160BE3,player,modifier)
 end
+
 
 
 --- 
@@ -1430,6 +1581,7 @@ function SetPlayerMeleeWeaponDamageModifier(player,modifier)
 end
 
 
+
 --- 
 --- Native 0x2D3ACE3DE0A2B622 (_SET_PLAYER_EXPLOSIVE_WEAPON_DAMAGE_MODIFIER)
 ---@param player player
@@ -1437,6 +1589,7 @@ end
 function SetPlayerExplosiveWeaponDamageModifier(player,modifier)
     Citizen.InvokeNative(0x2D3ACE3DE0A2B622,player,modifier)
 end
+
 
 
 --- Decreases the damage the player receives while on horseback
@@ -1448,6 +1601,7 @@ function SetReceivedHorsebackDamageDecrease(player,damageDecrease)
 end
 
 
+
 --- Sets Player's Defense against AI modifier
 --- Native 0x914071FF93AF2692 (_SET_AI_PLAYER_DEFENSE_MODIFIER_AGAINST_AI)
 ---@param player player
@@ -1457,13 +1611,15 @@ function SetAiPlayerDefenseModifierAgainstAi(player,modifier)
 end
 
 
+
 --- 
 --- Native 0x2E78D822208E740A (_GET_AI_PLAYER_DEFENSE_MODIFIER_AGAINST_AI)
 ---@param player player
 ---@return float
 function GetAiPlayerDefenseModifierAgainstAi(player)
-   return Citizen.InvokeNative(0x2E78D822208E740A,player)
+    return Citizen.InvokeNative(0x2E78D822208E740A,player)
 end
+
 
 
 --- Sets stamina core drains peed using ranged damage scale and melee damage scale
@@ -1474,6 +1630,7 @@ end
 function SetPlayerDefenseModifier(player,weaponDefenseMod,meleeDefenseMod)
     Citizen.InvokeNative(0x497A6539BB0E8787,player,weaponDefenseMod,meleeDefenseMod)
 end
+
 
 
 --- bullet damage modifier: type = 4
@@ -1488,6 +1645,7 @@ function SetPlayerDefenseTypeModifier(player,type,defenseModifier)
 end
 
 
+
 --- 
 --- Native 0xD04AD186CE8BB129 (SET_PLAYER_WEAPON_TYPE_DAMAGE_MODIFIER)
 ---@param player player
@@ -1498,14 +1656,16 @@ function SetPlayerWeaponTypeDamageModifier(player,weaponHash,damageModifier)
 end
 
 
+
 --- 
 --- Native 0xFE0304050261442C (_GET_PLAYER_WEAPON_DAMAGE)
 ---@param player player
 ---@param weaponHash hash
 ---@return float
 function GetPlayerWeaponDamage(player,weaponHash)
-   return Citizen.InvokeNative(0xFE0304050261442C,player,weaponHash)
+    return Citizen.InvokeNative(0xFE0304050261442C,player,weaponHash)
 end
+
 
 
 --- 
@@ -1518,6 +1678,7 @@ function SetPlayerWeaponGroupDamageModifier(player,weaponGroup,modifier)
 end
 
 
+
 --- 
 --- Native 0x59F0AFF3E0A1B019 (_SET_PLAYER_WEAPON_GROUP_AS_INSTANT_KILL)
 ---@param player player
@@ -1526,6 +1687,7 @@ end
 function SetPlayerWeaponGroupAsInstantKill(player,weaponGroup,toggle)
     Citizen.InvokeNative(0x59F0AFF3E0A1B019,player,weaponGroup,toggle)
 end
+
 
 
 --- 
@@ -1537,6 +1699,7 @@ function SetPlayerTrampleDamageModifier(player,modifier)
 end
 
 
+
 --- _SET_PLAYER_A* - _SET_PLAYER_C*
 --- Native 0x43F50A7CD2482156 (_SET_PLAYER_LASSO_DAMAGE_PER_SECOND)
 ---@param player player
@@ -1544,6 +1707,7 @@ end
 function SetPlayerLassoDamagePerSecond(player,damage)
     Citizen.InvokeNative(0x43F50A7CD2482156,player,damage)
 end
+
 
 
 --- 
@@ -1555,6 +1719,7 @@ function SetPlayerTotalAccuracyModifier(player,accuracy)
 end
 
 
+
 --- 
 --- Native 0x4EA69188FBCE6A7D (_SET_PLAYER_LOCAL_ACCURACY_FLOOR_MODIFIER)
 ---@param player player
@@ -1562,6 +1727,7 @@ end
 function SetPlayerLocalAccuracyFloorModifier(player,accuracy)
     Citizen.InvokeNative(0x4EA69188FBCE6A7D,player,accuracy)
 end
+
 
 
 --- 
@@ -1573,6 +1739,7 @@ function SetPlayerRemoteAccuracyFloorModifier(player,accuracy)
 end
 
 
+
 --- 
 --- Native 0xB5EC6BDAEBCA454C (SET_PLAYER_NOISE_MULTIPLIER)
 ---@param player player
@@ -1582,6 +1749,7 @@ function SetPlayerNoiseMultiplier(player,multiplier)
 end
 
 
+
 --- 
 --- Native 0x4DE44FA389DCA565 (SET_PLAYER_SNEAKING_NOISE_MULTIPLIER)
 ---@param player player
@@ -1589,6 +1757,7 @@ end
 function SetPlayerSneakingNoiseMultiplier(player,multiplier)
     Citizen.InvokeNative(0x4DE44FA389DCA565,player,multiplier)
 end
+
 
 
 --- 
@@ -1604,12 +1773,14 @@ function SimulatePlayerInputGait(player,speed,duration,heading,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x61A2EECAB274829B (RESET_PLAYER_INPUT_GAIT)
 ---@param player player
 function ResetPlayerInputGait(player)
     Citizen.InvokeNative(0x61A2EECAB274829B,player)
 end
+
 
 
 --- 
@@ -1621,6 +1792,7 @@ function SetPlayerSimulateAiming(player,toggle)
 end
 
 
+
 --- 
 --- Native 0xD0D9317DFEEF9A66 (SET_PLAYER_CLOTH_PIN_FRAMES)
 ---@param ped number
@@ -1630,13 +1802,15 @@ function SetPlayerClothPinFrames(ped,p1)
 end
 
 
+
 --- 
 --- Native 0xC932F57F31EA9152 (HAS_PLAYER_BEEN_SPOTTED_IN_STOLEN_VEHICLE)
 ---@param player player
 ---@return boolean
 function HasPlayerBeenSpottedInStolenVehicle(player)
-   return Citizen.InvokeNative(0xC932F57F31EA9152,player)
+    return Citizen.InvokeNative(0xC932F57F31EA9152,player)
 end
+
 
 
 --- 
@@ -1646,8 +1820,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function GetPlayerReceivedBattleEventRecently(player,p1,p2)
-   return Citizen.InvokeNative(0xFB6EB8785F808551,player,p1,p2)
+    return Citizen.InvokeNative(0xFB6EB8785F808551,player,p1,p2)
 end
+
 
 
 --- 
@@ -1658,13 +1833,15 @@ function SetMountPromptDisabled(disabled)
 end
 
 
+
 --- Returns true if the player is riding a train.
 --- Native 0x2FB0ACADA6A238DD (IS_PLAYER_RIDING_TRAIN)
 ---@param player player
 ---@return boolean
 function IsPlayerRidingTrain(player)
-   return Citizen.InvokeNative(0x2FB0ACADA6A238DD,player)
+    return Citizen.InvokeNative(0x2FB0ACADA6A238DD,player)
 end
+
 
 
 --- 
@@ -1672,8 +1849,9 @@ end
 ---@param player player
 ---@return number
 function GetDeadeyeAbilityLevel(player)
-   return Citizen.InvokeNative(0xCCE7C695C164C35F,player)
+    return Citizen.InvokeNative(0xCCE7C695C164C35F,player)
 end
+
 
 
 --- Max level is 5.
@@ -1685,14 +1863,16 @@ function SetDeadeyeAbilityLevel(player,level)
 end
 
 
+
 --- 
 --- Native 0x8A0643B0B4CA276B (_IS_DEADEYE_ABILITY_LOCKED)
 ---@param player player
 ---@param abilityType number
 ---@return boolean
 function IsDeadeyeAbilityLocked(player,abilityType)
-   return Citizen.InvokeNative(0x8A0643B0B4CA276B,player,abilityType)
+    return Citizen.InvokeNative(0x8A0643B0B4CA276B,player,abilityType)
 end
+
 
 
 --- 
@@ -1705,6 +1885,7 @@ function SetDeadeyeAbilityLocked(player,abilityType,toggle)
 end
 
 
+
 --- 
 --- Native 0x6B5DDFB967E5073D (_SET_DEADEYE_TAGGING_ENABLED)
 ---@param player player
@@ -1714,13 +1895,15 @@ function SetDeadeyeTaggingEnabled(player,toggle)
 end
 
 
+
 --- 
 --- Native 0x32348719DCED2969 (_GET_IS_DEADEYE_TAGGING_ENABLED)
 ---@param player player
 ---@return boolean
 function GetIsDeadeyeTaggingEnabled(player)
-   return Citizen.InvokeNative(0x32348719DCED2969,player)
+    return Citizen.InvokeNative(0x32348719DCED2969,player)
 end
+
 
 
 --- 
@@ -1732,6 +1915,7 @@ function SetDeadeyeTaggingConfig(player,filter)
 end
 
 
+
 --- Only used in R* SP Script short_update
 --- Native 0x870634493CB4372C (_SET_DEADEYE_ABILITY_DEPLETION_DELAY)
 ---@param player player
@@ -1741,13 +1925,15 @@ function SetDeadeyeAbilityDepletionDelay(player,delay)
 end
 
 
+
 --- 
 --- Native 0xCCD9B77F70D31C9D (_GET_NUM_MARKED_DEADEYE_TARGETS)
 ---@param player player
 ---@return number
 function GetNumMarkedDeadeyeTargets(player)
-   return Citizen.InvokeNative(0xCCD9B77F70D31C9D,player)
+    return Citizen.InvokeNative(0xCCD9B77F70D31C9D,player)
 end
+
 
 
 --- Used for setting up eagle eye for entity
@@ -1761,6 +1947,7 @@ function RegisterEagleEyeForEntity(player,entity,p2)
 end
 
 
+
 --- 
 --- Native 0xAC67098A1E54ABB0 (_REGISTER_EAGLE_EYE_TRAILS_FOR_ENTITY)
 ---@param player player
@@ -1771,6 +1958,7 @@ function RegisterEagleEyeTrailsForEntity(player,entity,p2)
 end
 
 
+
 --- 
 --- Native 0x9DAE1380CC5C6451 (_UNREGISTER_EAGLE_EYE_FOR_ENTITY)
 ---@param player player
@@ -1778,6 +1966,7 @@ end
 function UnregisterEagleEyeForEntity(player,entity)
     Citizen.InvokeNative(0x9DAE1380CC5C6451,player,entity)
 end
+
 
 
 --- 
@@ -1790,14 +1979,16 @@ function UnregisterEagleEyeTrailsForEntity(player,entity,p2)
 end
 
 
+
 --- 
 --- Native 0x0E6846476906C9DD (_IS_EAGLE_EYE_REGISTERED_FOR_ENTITY)
 ---@param player player
 ---@param entity entity
 ---@return boolean
 function IsEagleEyeRegisteredForEntity(player,entity)
-   return Citizen.InvokeNative(0x0E6846476906C9DD,player,entity)
+    return Citizen.InvokeNative(0x0E6846476906C9DD,player,entity)
 end
+
 
 
 --- 
@@ -1811,6 +2002,7 @@ function EagleEyeDisableTrackingTrail(entity,trail,p2,p3)
 end
 
 
+
 --- false: default eagleeye color
 ---true: green eagleeye color
 --- Native 0x2C41D93F550D5E37 (_EAGLE_EYE_SET_COLOR)
@@ -1822,6 +2014,7 @@ function EagleEyeSetColor(player,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xE0D6C2A146A5C993 (_EAGLE_EYE_SET_DRAIN_RATE_MODIFIER)
 ---@param player player
@@ -1829,6 +2022,7 @@ end
 function EagleEyeSetDrainRateModifier(player,modifier)
     Citizen.InvokeNative(0xE0D6C2A146A5C993,player,modifier)
 end
+
 
 
 --- 
@@ -1840,6 +2034,7 @@ function EagleEyeSetPlusFlagDisabled(ped,disabled)
 end
 
 
+
 --- 
 --- Native 0x2AF423D6ECB2C485 (_EAGLE_EYE_SET_FOCUS_ON_ASSOCIATED_CLUE_TRAIL)
 ---@param player player
@@ -1847,6 +2042,7 @@ end
 function EagleEyeSetFocusOnAssociatedClueTrail(player,linkedWaypointPed)
     Citizen.InvokeNative(0x2AF423D6ECB2C485,player,linkedWaypointPed)
 end
+
 
 
 --- 
@@ -1858,6 +2054,7 @@ function EagleEyeSetTrackingUpgrade(player,p1)
 end
 
 
+
 --- 
 --- Native 0x6FA957D1B55941C1 (_EAGLE_EYE_SET_TRACKING_UPGRADE_2)
 ---@param player player
@@ -1865,6 +2062,7 @@ end
 function EagleEyeSetTrackingUpgrade2(player,p1)
     Citizen.InvokeNative(0x6FA957D1B55941C1,player,p1)
 end
+
 
 
 --- 
@@ -1878,6 +2076,7 @@ function EagleEyeSetCustomEntityTint(entity,red,green,blue)
 end
 
 
+
 --- 
 --- Native 0x907B16B3834C69E2 (_EAGLE_EYE_SET_CUSTOM_DISTANCE)
 ---@param entity entity
@@ -1887,6 +2086,7 @@ function EagleEyeSetCustomDistance(entity,distance)
 end
 
 
+
 --- 
 --- Native 0x292F0B6EDC82E3A4 (_SET_PLAYER_MANAGE_BUFF_SUPER_JUMP)
 ---@param player player
@@ -1894,6 +2094,7 @@ end
 function SetPlayerManageBuffSuperJump(player,p1)
     Citizen.InvokeNative(0x292F0B6EDC82E3A4,player,p1)
 end
+
 
 
 --- see personaabilities.meta
@@ -1938,6 +2139,7 @@ function SetLocalPlayerPersonaAbilityFlag(flagId,toggle)
 end
 
 
+
 --- 
 --- Native 0xE133C1EC5300F740 (_SET_PLAYER_MAX_AMMO_OVERRIDE_FOR_AMMO_TYPE)
 ---@param player player
@@ -1946,6 +2148,7 @@ end
 function SetPlayerMaxAmmoOverrideForAmmoType(player,ammoType,amount)
     Citizen.InvokeNative(0xE133C1EC5300F740,player,ammoType,amount)
 end
+
 
 
 --- 
@@ -1957,6 +2160,7 @@ function SetWeaponDegradationModifier(player,modifier)
 end
 
 
+
 --- 
 --- Native 0xBE0C524970892D41 (_SET_BOW_DRAW_REDUCTION_TIME_IN_DEADEYE)
 ---@param player player
@@ -1966,6 +2170,7 @@ function SetBowDrawReductionTimeInDeadeye(player,drawReductionTime)
 end
 
 
+
 --- Decreases Stamina bar drain speed by % when drawing a bow.
 --- Native 0xFE7C9CF376D23342 (_SET_BOW_STAMINA_DRAIN_SPEED)
 ---@param player player
@@ -1973,6 +2178,7 @@ end
 function SetBowStaminaDrainSpeed(player,staminaDrain)
     Citizen.InvokeNative(0xFE7C9CF376D23342,player,staminaDrain)
 end
+
 
 
 --- 
@@ -1985,6 +2191,7 @@ function SetDamageCloseDistanceBonus(player,closeRangeLowerBound,closeRangeUpper
 end
 
 
+
 --- 
 --- Native 0x5006C36652D6EC56 (_SET_DAMAGE_CLOSE_DISTANCE_BONUS_TOTAL)
 ---@param player player
@@ -1992,6 +2199,7 @@ end
 function SetDamageCloseDistanceBonusTotal(player,closeDamageBonus)
     Citizen.InvokeNative(0x5006C36652D6EC56,player,closeDamageBonus)
 end
+
 
 
 --- 
@@ -2004,6 +2212,7 @@ function SetDamageFarDistanceBonus(player,farRangeLowerBound,farRangeUpperBound)
 end
 
 
+
 --- 
 --- Native 0x1F0E3A4434565F8F (_SET_DAMAGE_FAR_DISTANCE_BONUS_TOTAL)
 ---@param player player
@@ -2011,6 +2220,7 @@ end
 function SetDamageFarDistanceBonusTotal(player,farDamageBonus)
     Citizen.InvokeNative(0x1F0E3A4434565F8F,player,farDamageBonus)
 end
+
 
 
 --- 
@@ -2022,6 +2232,7 @@ function SetPlayerInteractionPositiveResponse(player,speech)
 end
 
 
+
 --- 
 --- Native 0x98CD760DE43B612E (_SET_PLAYER_INTERACTION_NEGATIVE_RESPONSE)
 ---@param player player
@@ -2029,6 +2240,7 @@ end
 function SetPlayerInteractionNegativeResponse(player,speech)
     Citizen.InvokeNative(0x98CD760DE43B612E,player,speech)
 end
+
 
 
 --- https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePlayerResetFlags
@@ -2042,14 +2254,16 @@ function SetPlayerResetFlag(player,playerResetFlag,p2)
 end
 
 
+
 --- playerResetFlag: See 0x9F9A829C6751F3C7
 --- Native 0xFE691E89C08937B6 (_GET_PLAYER_RESET_FLAG)
 ---@param player player
 ---@param playerResetFlag number
 ---@return boolean
 function GetPlayerResetFlag(player,playerResetFlag)
-   return Citizen.InvokeNative(0xFE691E89C08937B6,player,playerResetFlag)
+    return Citizen.InvokeNative(0xFE691E89C08937B6,player,playerResetFlag)
 end
+
 
 
 --- 
@@ -2057,8 +2271,9 @@ end
 ---@param player player
 ---@return number
 function GetMountOwnedByPlayer(player)
-   return Citizen.InvokeNative(0xF49F14462F0AE27C,player)
+    return Citizen.InvokeNative(0xF49F14462F0AE27C,player)
 end
+
 
 
 --- 
@@ -2066,8 +2281,9 @@ end
 ---@param mount number
 ---@return player
 function GetPlayerOwnerOfMount(mount)
-   return Citizen.InvokeNative(0xAD03B03737CE6810,mount)
+    return Citizen.InvokeNative(0xAD03B03737CE6810,mount)
 end
+
 
 
 --- Seems to enable active horse equipment prompt when being near it and enables the control that opens the inventory as well
@@ -2079,13 +2295,15 @@ function SetPlayerOwnsMount(player,mount)
 end
 
 
+
 --- 
 --- Native 0xB9050A97594C8832 (_GET_VEHICLE_OWNED_BY_PLAYER)
 ---@param player player
 ---@return vehicle
 function GetVehicleOwnedByPlayer(player)
-   return Citizen.InvokeNative(0xB9050A97594C8832,player)
+    return Citizen.InvokeNative(0xB9050A97594C8832,player)
 end
+
 
 
 --- 
@@ -2093,8 +2311,9 @@ end
 ---@param vehicle vehicle
 ---@return player
 function GetPlayerOwnerOfVehicle(vehicle)
-   return Citizen.InvokeNative(0x7C803BDC8343228D,vehicle)
+    return Citizen.InvokeNative(0x7C803BDC8343228D,vehicle)
 end
+
 
 
 --- 
@@ -2106,13 +2325,15 @@ function SetPlayerOwnsVehicle(player,vehicle)
 end
 
 
+
 --- 
 --- Native 0x5CA6BBD4A7D8145E (_GET_PLAYER_HUNTING_WAGON)
 ---@param player player
 ---@return vehicle
 function GetPlayerHuntingWagon(player)
-   return Citizen.InvokeNative(0x5CA6BBD4A7D8145E,player)
+    return Citizen.InvokeNative(0x5CA6BBD4A7D8145E,player)
 end
+
 
 
 --- Only applies to HUNTERCART01
@@ -2124,14 +2345,16 @@ function SetPlayerHuntingWagon(player,wagon)
 end
 
 
+
 --- Returns name hash (name) and outHash includes the type.
 --- Native 0x0139637A3BFF8B6D (GET_DISCOVERABLE_NAME_HASH_AND_TYPE_FOR_ENTITY)
 ---@param entity entity
 ---@param type hash*
 ---@return hash
 function GetDiscoverableNameHashAndTypeForEntity(entity,type)
-   return Citizen.InvokeNative(0x0139637A3BFF8B6D,entity,type)
+    return Citizen.InvokeNative(0x0139637A3BFF8B6D,entity,type)
 end
+
 
 
 --- p0: mostly Ped Hashes
@@ -2141,8 +2364,9 @@ end
 ---@param outfit boolean
 ---@return hash
 function GetConstructedDiscoveredCharacterName(p0,model,outfit)
-   return Citizen.InvokeNative(0x8E84119A23C16623,p0,model,outfit)
+    return Citizen.InvokeNative(0x8E84119A23C16623,p0,model,outfit)
 end
+
 
 
 --- 
@@ -2150,8 +2374,9 @@ end
 ---@param ped number
 ---@return hash
 function GetTargetCharacterNameScriptOverrideHash(ped)
-   return Citizen.InvokeNative(0x0335106F3ACABBED,ped)
+    return Citizen.InvokeNative(0x0335106F3ACABBED,ped)
 end
+
 
 
 --- 
@@ -2159,8 +2384,9 @@ end
 ---@param ped number
 ---@return string
 function GetTargetCharacterNameScriptOverrideRawString(ped)
-   return Citizen.InvokeNative(0x755E08680F21EF30,ped)
+    return Citizen.InvokeNative(0x755E08680F21EF30,ped)
 end
+
 
 
 --- 
@@ -2168,8 +2394,9 @@ end
 ---@param ped number
 ---@return hash
 function GetTargetCharacterNameForLocalPlayer(ped)
-   return Citizen.InvokeNative(0x36E3D8B5A6552FE8,ped)
+    return Citizen.InvokeNative(0x36E3D8B5A6552FE8,ped)
 end
+
 
 
 --- 
@@ -2182,6 +2409,7 @@ function SetPlayerHasDiscoveredCharacterNameSp(player,p1,discoveryHash)
 end
 
 
+
 --- 
 --- Native 0x0772F87D7B07719A (_GET_HAS_PLAYER_DISCOVERED_CHARACTER_NAME_SP)
 ---@param player player
@@ -2189,8 +2417,9 @@ end
 ---@param discoveryHash hash
 ---@return boolean
 function GetHasPlayerDiscoveredCharacterNameSp(player,p1,discoveryHash)
-   return Citizen.InvokeNative(0x0772F87D7B07719A,player,p1,discoveryHash)
+    return Citizen.InvokeNative(0x0772F87D7B07719A,player,p1,discoveryHash)
 end
+
 
 
 --- 
@@ -2201,13 +2430,15 @@ function SetPlayerHasDiscoveredCharacterNameMp(discoveryHash)
 end
 
 
+
 --- 
 --- Native 0x354F689C4FFAAB37 (GET_HAS_PLAYER_DISCOVERED_CHARACTER_NAME_MP)
 ---@param discoveryHash hash
 ---@return boolean
 function GetHasPlayerDiscoveredCharacterNameMp(discoveryHash)
-   return Citizen.InvokeNative(0x354F689C4FFAAB37,discoveryHash)
+    return Citizen.InvokeNative(0x354F689C4FFAAB37,discoveryHash)
 end
+
 
 
 --- 
@@ -2216,6 +2447,7 @@ end
 function ModifyPlayerDiscoveredCharacterNameMpSetUndiscovered(discoveryHash)
     Citizen.InvokeNative(0xFB0E622B401884D3,discoveryHash)
 end
+
 
 
 --- 
@@ -2227,6 +2459,7 @@ function SetShowInfoCard(player,showingInfoCard)
 end
 
 
+
 --- Focus Fire VFX start for player: p1 = focusfire
 --- Native 0x5F8E0303C229C84B (_SET_LOCKON_FOCUS_FIRE_VFX)
 ---@param player player
@@ -2234,6 +2467,7 @@ end
 function SetLockonFocusFireVfx(player,p1)
     Citizen.InvokeNative(0x5F8E0303C229C84B,player,p1)
 end
+
 
 
 --- 
@@ -2245,11 +2479,13 @@ function SetMinTimeBeforeHorseBucking(mount,iMinBuckTime)
 end
 
 
+
 --- 
 --- Native 0xE5A3DD2FF84E1A4B (_FORCE_REST_SCENARIO)
 ---@param toggle boolean
 function ForceRestScenario(toggle)
     Citizen.InvokeNative(0xE5A3DD2FF84E1A4B,toggle)
 end
+
 
 

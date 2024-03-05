@@ -3,7 +3,8 @@
 ---@param hash hash
 ---@return string
 function UipinningGetTooltipText(hash)
-   return Citizen.InvokeNative(0x3138582E0A13BFAB,hash)
+    return Citizen.InvokeNative(0x3138582E0A13BFAB,hash)
 end
+
 
 

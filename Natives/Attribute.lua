@@ -34,14 +34,16 @@ function SetAttributeBaseRank(ped,attributeIndex,newValue)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0xA4C8E23E29040DE0 (GET_ATTRIBUTE_RANK)
 ---@param ped number
 ---@param attributeIndex number
 ---@return number
 function GetAttributeRank(ped,attributeIndex)
-   return Citizen.InvokeNative(0xA4C8E23E29040DE0,ped,attributeIndex)
+    return Citizen.InvokeNative(0xA4C8E23E29040DE0,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -50,8 +52,9 @@ end
 ---@param attributeIndex number
 ---@return number
 function GetAttributeBaseRank(ped,attributeIndex)
-   return Citizen.InvokeNative(0x147149F2E909323C,ped,attributeIndex)
+    return Citizen.InvokeNative(0x147149F2E909323C,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -60,8 +63,9 @@ end
 ---@param coreIndex number
 ---@return number
 function GetAttributeBonusRank(ped,coreIndex)
-   return Citizen.InvokeNative(0x0EFA71F4B4330E04,ped,coreIndex)
+    return Citizen.InvokeNative(0x0EFA71F4B4330E04,ped,coreIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -70,8 +74,9 @@ end
 ---@param attributeIndex number
 ---@return number
 function GetMaxAttributeRank(ped,attributeIndex)
-   return Citizen.InvokeNative(0x704674A0535A471D,ped,attributeIndex)
+    return Citizen.InvokeNative(0x704674A0535A471D,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -84,14 +89,16 @@ function SetAttributeBonusRank(ped,attributeIndex,newValue)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0x958DD43D41F89A47 (GET_DEFAULT_ATTRIBUTE_RANK)
 ---@param ped number
 ---@param attributeIndex number
 ---@return number
 function GetDefaultAttributeRank(ped,attributeIndex)
-   return Citizen.InvokeNative(0x958DD43D41F89A47,ped,attributeIndex)
+    return Citizen.InvokeNative(0x958DD43D41F89A47,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -100,8 +107,9 @@ end
 ---@param attributeIndex number
 ---@return number
 function GetDefaultMaxAttributeRank(ped,attributeIndex)
-   return Citizen.InvokeNative(0x7C059C55AD940CB4,ped,attributeIndex)
+    return Citizen.InvokeNative(0x7C059C55AD940CB4,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -114,6 +122,7 @@ function AddAttributePoints(ped,attributeIndex,p2)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0x09A59688C26D88DF (SET_ATTRIBUTE_POINTS)
 ---@param ped number
@@ -124,14 +133,16 @@ function SetAttributePoints(ped,attributeIndex,p2)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0x219DA04BAA9CB065 (GET_ATTRIBUTE_POINTS)
 ---@param ped number
 ---@param attributeIndex number
 ---@return number
 function GetAttributePoints(ped,attributeIndex)
-   return Citizen.InvokeNative(0x219DA04BAA9CB065,ped,attributeIndex)
+    return Citizen.InvokeNative(0x219DA04BAA9CB065,ped,attributeIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -140,8 +151,9 @@ end
 ---@param attributeIndex number
 ---@return number
 function GetMaxAttributePoints(ped,attributeIndex)
-   return Citizen.InvokeNative(0x223BF310F854871C,ped,attributeIndex)
+    return Citizen.InvokeNative(0x223BF310F854871C,ped,attributeIndex)
 end
+
 
 
 --- coreIndex:
@@ -160,6 +172,7 @@ function SetAttributeCoreValue(ped,coreIndex,value)
 end
 
 
+
 --- Gets the ped's core value on a scale of 0 to 100.
 ---coreIndex: see _SET_ATTRIBUTE_CORE_VALUE
 --- Native 0x36731AC041289BB1 (_GET_ATTRIBUTE_CORE_VALUE)
@@ -167,8 +180,9 @@ end
 ---@param coreIndex number
 ---@return number
 function GetAttributeCoreValue(ped,coreIndex)
-   return Citizen.InvokeNative(0x36731AC041289BB1,ped,coreIndex)
+    return Citizen.InvokeNative(0x36731AC041289BB1,ped,coreIndex)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -178,8 +192,9 @@ end
 ---@param rank number
 ---@return number
 function GetDefaultAttributePointsNeededForRank(modelHash,attributeIndex,rank)
-   return Citizen.InvokeNative(0x94A7F191DB49A44D,modelHash,attributeIndex,rank)
+    return Citizen.InvokeNative(0x94A7F191DB49A44D,modelHash,attributeIndex,rank)
 end
+
 
 
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
@@ -194,6 +209,7 @@ function EnableAttributeOverpower(ped,attributeIndex,value,makeSound)
 end
 
 
+
 --- coreIndex: see _SET_ATTRIBUTE_CORE_VALUE
 ---Previously incorrectly named ENABLE_ATTRIBUTE_OVERPOWER
 --- Native 0x4AF5A4C7B9157D14 (_ENABLE_ATTRIBUTE_CORE_OVERPOWER)
@@ -206,6 +222,7 @@ function EnableAttributeCoreOverpower(ped,coreIndex,value,makeSound)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0xF8DAC3D85636C241 (DISABLE_ATTRIBUTE_OVERPOWER)
 ---@param ped number
@@ -215,14 +232,16 @@ function DisableAttributeOverpower(ped,attributeIndex)
 end
 
 
+
 --- attributeIndex: see SET_ATTRIBUTE_BASE_RANK
 --- Native 0x103C2F885ABEB00B (_IS_ATTRIBUTE_OVERPOWERED)
 ---@param ped number
 ---@param attributeIndex number
 ---@return boolean
 function IsAttributeOverpowered(ped,attributeIndex)
-   return Citizen.InvokeNative(0x103C2F885ABEB00B,ped,attributeIndex)
+    return Citizen.InvokeNative(0x103C2F885ABEB00B,ped,attributeIndex)
 end
+
 
 
 --- 
@@ -231,8 +250,9 @@ end
 ---@param coreIndex number
 ---@return boolean
 function IsAttributeCoreOverpowered(ped,coreIndex)
-   return Citizen.InvokeNative(0x200373A8DF081F22,ped,coreIndex)
+    return Citizen.InvokeNative(0x200373A8DF081F22,ped,coreIndex)
 end
+
 
 
 --- 
@@ -241,8 +261,9 @@ end
 ---@param attributeIndex number
 ---@return float
 function GetAttributeOverpowerSecondsLeft(ped,attributeIndex)
-   return Citizen.InvokeNative(0x4C9F782180712742,ped,attributeIndex)
+    return Citizen.InvokeNative(0x4C9F782180712742,ped,attributeIndex)
 end
+
 
 
 --- 
@@ -251,8 +272,9 @@ end
 ---@param coreIndex number
 ---@return float
 function GetAttributeCoreOverpowerSecondsLeft(ped,coreIndex)
-   return Citizen.InvokeNative(0xB429F58803D285B1,ped,coreIndex)
+    return Citizen.InvokeNative(0xB429F58803D285B1,ped,coreIndex)
 end
+
 
 
 --- Params: p1 is related to satchel_category
@@ -264,11 +286,13 @@ function StartItemPreview(p0,p1)
 end
 
 
+
 --- 
 --- Native 0xD962F8579D702DB5 (STOP_ITEM_PREVIEW)
 function StopItemPreview()
     Citizen.InvokeNative(0xD962F8579D702DB5)
 end
+
 
 
 --- Displays status effects on core icons (includes warnings).
@@ -298,6 +322,7 @@ function SetStatusEffectCoreIcon(statusEffectType)
 end
 
 
+
 --- Starts core periodic icon.
 ---statusEffectType: see 0xA4D3A1C008F250DF
 --- Native 0xFB6E111908502871 (_SET_STATUS_EFFECT_PERIODIC_ICON)
@@ -307,6 +332,7 @@ function SetStatusEffectPeriodicIcon(statusEffectType)
 end
 
 
+
 --- Stops periodic icon.
 ---statusEffectType: see 0xA4D3A1C008F250DF
 --- Native 0x3FC4C027FD0936F4 (_STOP_STATUS_EFFECT_PERIODIC_ICON)
@@ -314,5 +340,6 @@ end
 function StopStatusEffectPeriodicIcon(statusEffectType)
     Citizen.InvokeNative(0x3FC4C027FD0936F4,statusEffectType)
 end
+
 
 

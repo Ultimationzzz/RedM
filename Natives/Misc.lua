@@ -3,8 +3,9 @@
 ---@param stackSize number
 ---@return number
 function GetNumberOfFreeStacksOfThisSize(stackSize)
-   return Citizen.InvokeNative(0x40DC2907A9697EF7,stackSize)
+    return Citizen.InvokeNative(0x40DC2907A9697EF7,stackSize)
 end
+
 
 
 --- 
@@ -15,12 +16,14 @@ function GetNumberOfInstructions()
 end
 
 
+
 --- 
 --- Native 0xC43CD2668B204419 (_GET_MAX_NUM_INSTRUCTIONS)
 ---@return number
 function GetMaxNumInstructions()
    return Citizen.InvokeNative(0xC43CD2668B204419)
 end
+
 
 
 --- magdemo = magazine demo, i. e. for magazines such as IGN, pre play phases to prepare articles etc. - example 2012 builds for V
@@ -32,12 +35,14 @@ function IsMagDemo1Active()
 end
 
 
+
 --- 
 --- Native 0x5CD7A49104AFCB6B (SET_RANDOM_SEED)
 ---@param seed number
 function SetRandomSeed(seed)
     Citizen.InvokeNative(0x5CD7A49104AFCB6B,seed)
 end
+
 
 
 --- Maximum value is 1.0f
@@ -49,6 +54,7 @@ function SetTimeScale(timeScale)
 end
 
 
+
 --- If true, the player can't save the game.
 --- Native 0x36694B456BE80D0A (SET_MISSION_FLAG)
 ---@param toggle boolean
@@ -57,12 +63,14 @@ function SetMissionFlag(toggle)
 end
 
 
+
 --- 
 --- Native 0xB15CD1CF58771DE1 (GET_MISSION_FLAG)
 ---@return boolean
 function GetMissionFlag()
    return Citizen.InvokeNative(0xB15CD1CF58771DE1)
 end
+
 
 
 --- If the parameter is true, sets the random event flag to true, if the parameter is false, the function does nothing at all.
@@ -74,12 +82,14 @@ function SetRandomEventFlag(toggle)
 end
 
 
+
 --- 
 --- Native 0x924D54E5698AE3E0 (GET_RANDOM_EVENT_FLAG)
 ---@return boolean
 function GetRandomEventFlag()
    return Citizen.InvokeNative(0x924D54E5698AE3E0)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -91,12 +101,14 @@ function ActivityFeedCreate(p0,p1)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x9935F76407C32539 (ACTIVITY_FEED_ADD_SUBSTRING_TO_CAPTION)
 ---@param p0 string
 function ActivityFeedAddSubstringToCaption(p0)
     Citizen.InvokeNative(0x9935F76407C32539,p0)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -108,6 +120,7 @@ function ActivityFeedActionStartWithCommandLine(p0,p1)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x1694A053DFB61A34 (ACTIVITY_FEED_ACTION_START_WITH_COMMAND_LINE_ADD)
 ---@param p0 string
@@ -116,11 +129,13 @@ function ActivityFeedActionStartWithCommandLineAdd(p0)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0xB16FC7B364D86585 (ACTIVITY_FEED_POST)
 function ActivityFeedPost()
     Citizen.InvokeNative(0xB16FC7B364D86585)
 end
+
 
 
 --- 
@@ -131,6 +146,7 @@ function InformCodeOfContentIdOfCurrentUgcMission(p0)
 end
 
 
+
 --- 
 --- Native 0x4BEB42AEBCA732E9 (_GET_PREV_WEATHER_TYPE_HASH_NAME)
 ---@return hash
@@ -139,12 +155,14 @@ function GetPrevWeatherTypeHashName()
 end
 
 
+
 --- 
 --- Native 0x51021D36F62AAA83 (_GET_NEXT_WEATHER_TYPE_HASH_NAME)
 ---@return hash
 function GetNextWeatherTypeHashName()
    return Citizen.InvokeNative(0x51021D36F62AAA83)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/weather/weather_types.lua
@@ -160,6 +178,7 @@ function SetWeatherType(weatherType,p1,p2,transition,transitionTime,p5)
 end
 
 
+
 --- 
 --- Native 0x2C6A07AF9AEDABD8 (_SET_WEATHER_TYPE_2)
 ---@param weatherType hash
@@ -172,6 +191,7 @@ function SetWeatherType2(weatherType,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x7F4CE164D9A11DFE (_GET_RANDOM_WEATHER_TYPE_INDEX)
 ---@return number
@@ -180,12 +200,14 @@ function GetRandomWeatherTypeIndex()
 end
 
 
+
 --- 
 --- Native 0x1359C181BC625503 (_GET_RANDOM_WEATHER_TYPE)
 ---@return hash
 function GetRandomWeatherType()
    return Citizen.InvokeNative(0x1359C181BC625503)
 end
+
 
 
 --- 
@@ -197,11 +219,13 @@ function SetRandomWeatherType(p0,p1)
 end
 
 
+
 --- 
 --- Native 0xD85DFE5C131E4AE9 (CLEAR_WEATHER_TYPE_PERSIST)
 function ClearWeatherTypePersist()
     Citizen.InvokeNative(0xD85DFE5C131E4AE9)
 end
+
 
 
 --- 
@@ -210,6 +234,7 @@ end
 function ClearWeatherTypePersistOvertime(milliseconds)
     Citizen.InvokeNative(0xCE7690C0A0D1C36D,milliseconds)
 end
+
 
 
 --- Params: percentWeather2: 0f - 0.75f in R* Scripts
@@ -221,6 +246,7 @@ end
 function GetCurrWeatherState(weatherType1,weatherType2,percentWeather2)
     Citizen.InvokeNative(0x0AC679B2342F14F2,weatherType1,weatherType2,percentWeather2)
 end
+
 
 
 --- Params: BOOL p3 is always true
@@ -235,12 +261,14 @@ function SetCurrWeatherState(weatherType1,weatherType2,percentWeather2,enabled)
 end
 
 
+
 --- 
 --- Native 0xD74ACDF7DB8114AF (_SET_WEATHER_TYPE_FROZEN)
 ---@param toggle boolean
 function SetWeatherTypeFrozen(toggle)
     Citizen.InvokeNative(0xD74ACDF7DB8114AF,toggle)
 end
+
 
 
 --- Returns the weather type that has been set by a script
@@ -252,6 +280,7 @@ function GetForcedWeather(weather,p1)
 end
 
 
+
 --- 
 --- Native 0xBE83CAE8ED77A94F (_SET_OVERRIDE_WEATHER)
 ---@param weatherType hash
@@ -260,11 +289,13 @@ function SetOverrideWeather(weatherType)
 end
 
 
+
 --- 
 --- Native 0x80A398F16FFE3CC3 (CLEAR_OVERRIDE_WEATHER)
 function ClearOverrideWeather()
     Citizen.InvokeNative(0x80A398F16FFE3CC3)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/weather/weather_variations.lua
@@ -276,6 +307,7 @@ function SetWeatherVariation(weatherType,variation)
 end
 
 
+
 --- 
 --- Native 0x0E71C80FA4EC8147 (_CLEAR_WEATHER_VARIATION)
 ---@param weatherType string
@@ -283,6 +315,7 @@ end
 function ClearWeatherVariation(weatherType,p1)
     Citizen.InvokeNative(0x0E71C80FA4EC8147,weatherType,p1)
 end
+
 
 
 --- Only used in smuggler2 script
@@ -293,12 +326,14 @@ function WaterOverrideSetShorewaveamplitude(amplitude)
 end
 
 
+
 --- Only used in smuggler2 script
 --- Native 0xF06C5B66DE20B2B8 (WATER_OVERRIDE_SET_OCEANWAVEMAXAMPLITUDE)
 ---@param maxAmplitude float
 function WaterOverrideSetOceanwavemaxamplitude(maxAmplitude)
     Citizen.InvokeNative(0xF06C5B66DE20B2B8,maxAmplitude)
 end
+
 
 
 --- 
@@ -308,8 +343,9 @@ end
 ---@param z float
 ---@return float
 function GetTemperatureAtCoords(x,y,z)
-   return Citizen.InvokeNative(0xB98B78C3768AF6E0,x,y,z)
+    return Citizen.InvokeNative(0xB98B78C3768AF6E0,x,y,z)
 end
+
 
 
 --- 
@@ -320,12 +356,14 @@ function SetWindSpeed(speed)
 end
 
 
+
 --- 
 --- Native 0xFFB7E74E041150A4 (GET_WIND_SPEED)
 ---@return float
 function GetWindSpeed()
    return Citizen.InvokeNative(0xFFB7E74E041150A4)
 end
+
 
 
 --- 
@@ -336,12 +374,14 @@ function SetWindDirection(direction)
 end
 
 
+
 --- 
 --- Native 0xF703E82F3FE14A5F (GET_WIND_DIRECTION)
 ---@return vector3
 function GetWindDirection()
    return Citizen.InvokeNative(0xF703E82F3FE14A5F)
 end
+
 
 
 --- Old name: _SET_RAIN_LEVEL
@@ -352,12 +392,14 @@ function SetRain(intensity)
 end
 
 
+
 --- 
 --- Native 0x931B5F4CC130224B (GET_RAIN_LEVEL)
 ---@return float
 function GetRainLevel()
    return Citizen.InvokeNative(0x931B5F4CC130224B)
 end
+
 
 
 --- 
@@ -368,6 +410,7 @@ function SetSnowLevel(level)
 end
 
 
+
 --- 
 --- Native 0x1E5D727041BE1709 (GET_SNOW_LEVEL)
 ---@return float
@@ -376,11 +419,13 @@ function GetSnowLevel()
 end
 
 
+
 --- creates single lightning+thunder at random position
 --- Native 0x369DB5B2510FA080 (FORCE_LIGHTNING_FLASH)
 function ForceLightningFlash()
     Citizen.InvokeNative(0x369DB5B2510FA080)
 end
+
 
 
 --- p3 is always -1.0f in the scripts
@@ -394,12 +439,14 @@ function ForceLightningFlashAtCoords(x,y,z,p3)
 end
 
 
+
 --- 
 --- Native 0x4F67E8ECA7D3F667 (GET_GAME_TIMER)
 ---@return number
 function GetGameTimer()
    return Citizen.InvokeNative(0x4F67E8ECA7D3F667)
 end
+
 
 
 --- Returns rage::fwTimer::sm_nonScaledClippedTime
@@ -410,12 +457,14 @@ function GetGameTimerNonScaledClipped()
 end
 
 
+
 --- 
 --- Native 0xBE7F225417E35A7C (GET_SYSTEM_TIME)
 ---@return number
 function GetSystemTime()
    return Citizen.InvokeNative(0xBE7F225417E35A7C)
 end
+
 
 
 --- 
@@ -426,6 +475,7 @@ function GetNumberOfMicrosecondsSinceLastCall()
 end
 
 
+
 --- 
 --- Native 0x63219768C586667C (GET_SCRIPT_TIME_WITHIN_FRAME_IN_MICROSECONDS)
 ---@return number
@@ -434,11 +484,13 @@ function GetScriptTimeWithinFrameInMicroseconds()
 end
 
 
+
 --- 
 --- Native 0x1411A7CBC3A6EB7B (RESET_SCRIPT_TIME_WITHIN_FRAME)
 function ResetScriptTimeWithinFrame()
     Citizen.InvokeNative(0x1411A7CBC3A6EB7B)
 end
+
 
 
 --- 
@@ -449,12 +501,14 @@ function GetFrameTime()
 end
 
 
+
 --- Old name: _GET_BENCHMARK_TIME
 --- Native 0x3F3172FEAE3AFE1C (GET_SYSTEM_TIME_STEP)
 ---@return float
 function GetSystemTimeStep()
    return Citizen.InvokeNative(0x3F3172FEAE3AFE1C)
 end
+
 
 
 --- 
@@ -465,14 +519,16 @@ function GetFrameCount()
 end
 
 
+
 --- Reads the passed value as floating point value and returns it.
 ---Example: _READ_INT_AS_FLOAT(0x3F800000) returns 1.0f because 0x3F800000 is the hexadecimal representation of 1.0f.
 --- Native 0xD2C9126410DFA1B2 (_READ_INT_AS_FLOAT)
 ---@param value number
 ---@return float
 function ReadIntAsFloat(value)
-   return Citizen.InvokeNative(0xD2C9126410DFA1B2,value)
+    return Citizen.InvokeNative(0xD2C9126410DFA1B2,value)
 end
+
 
 
 --- 
@@ -481,8 +537,9 @@ end
 ---@param endRange float
 ---@return float
 function GetRandomFloatInRange(startRange,endRange)
-   return Citizen.InvokeNative(0xE29F927A961F8AAA,startRange,endRange)
+    return Citizen.InvokeNative(0xE29F927A961F8AAA,startRange,endRange)
 end
+
 
 
 --- 
@@ -491,8 +548,9 @@ end
 ---@param endRange number
 ---@return number
 function GetRandomIntInRange(startRange,endRange)
-   return Citizen.InvokeNative(0xD53343AA4FB7DD28,startRange,endRange)
+    return Citizen.InvokeNative(0xD53343AA4FB7DD28,startRange,endRange)
 end
+
 
 
 --- 
@@ -504,8 +562,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function GetGroundZFor3DCoord(x,y,z,groundZ,p4)
-   return Citizen.InvokeNative(0x24FA4267BB8D2431,x,y,z,groundZ,p4)
+    return Citizen.InvokeNative(0x24FA4267BB8D2431,x,y,z,groundZ,p4)
 end
+
 
 
 --- 
@@ -517,8 +576,9 @@ end
 ---@param normal vector3*
 ---@return boolean
 function GetGroundZAndNormalFor3DCoord(x,y,z,groundZ,normal)
-   return Citizen.InvokeNative(0x2A29CA9A6319E6AB,x,y,z,groundZ,normal)
+    return Citizen.InvokeNative(0x2A29CA9A6319E6AB,x,y,z,groundZ,normal)
 end
+
 
 
 --- 
@@ -526,8 +586,9 @@ end
 ---@param p0 float
 ---@return float
 function Asin(p0)
-   return Citizen.InvokeNative(0x6E3C15D296C15583,p0)
+    return Citizen.InvokeNative(0x6E3C15D296C15583,p0)
 end
+
 
 
 --- 
@@ -535,8 +596,9 @@ end
 ---@param p0 float
 ---@return float
 function Acos(p0)
-   return Citizen.InvokeNative(0x586690F0176DC575,p0)
+    return Citizen.InvokeNative(0x586690F0176DC575,p0)
 end
+
 
 
 --- 
@@ -544,8 +606,9 @@ end
 ---@param p0 float
 ---@return float
 function Tan(p0)
-   return Citizen.InvokeNative(0x8C13DB96497B7ABF,p0)
+    return Citizen.InvokeNative(0x8C13DB96497B7ABF,p0)
 end
+
 
 
 --- 
@@ -553,8 +616,9 @@ end
 ---@param p0 float
 ---@return float
 function Atan(p0)
-   return Citizen.InvokeNative(0x503054DED0B78027,p0)
+    return Citizen.InvokeNative(0x503054DED0B78027,p0)
 end
+
 
 
 --- 
@@ -563,8 +627,9 @@ end
 ---@param p1 float
 ---@return float
 function Atan2(p0,p1)
-   return Citizen.InvokeNative(0x965B220A066E3F07,p0,p1)
+    return Citizen.InvokeNative(0x965B220A066E3F07,p0,p1)
 end
+
 
 
 --- If useZ is false, only the 2D plane (X-Y) will be considered for calculating the distance.
@@ -579,8 +644,9 @@ end
 ---@param useZ boolean
 ---@return float
 function GetDistanceBetweenCoords(x1,y1,z1,x2,y2,z2,useZ)
-   return Citizen.InvokeNative(0x0BE7F4E3CDBAFB28,x1,y1,z1,x2,y2,z2,useZ)
+    return Citizen.InvokeNative(0x0BE7F4E3CDBAFB28,x1,y1,z1,x2,y2,z2,useZ)
 end
+
 
 
 --- 
@@ -591,8 +657,9 @@ end
 ---@param y2 float
 ---@return float
 function GetAngleBetween2DVectors(x1,y1,x2,y2)
-   return Citizen.InvokeNative(0xD0DFE1C486097BBB,x1,y1,x2,y2)
+    return Citizen.InvokeNative(0xD0DFE1C486097BBB,x1,y1,x2,y2)
 end
+
 
 
 --- dx = x1 - x2
@@ -602,8 +669,9 @@ end
 ---@param dy float
 ---@return float
 function GetHeadingFromVector2D(dx,dy)
-   return Citizen.InvokeNative(0x38D5202FF9271C62,dx,dy)
+    return Citizen.InvokeNative(0x38D5202FF9271C62,dx,dy)
 end
+
 
 
 --- 
@@ -620,8 +688,9 @@ end
 ---@param p9 boolean
 ---@return vector3
 function GetClosestPointOnLine(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
-   return Citizen.InvokeNative(0x83ACC65D9ACEC5EF,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
+    return Citizen.InvokeNative(0x83ACC65D9ACEC5EF,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
+
 
 
 --- 
@@ -641,8 +710,9 @@ end
 ---@param p12 float*
 ---@return boolean
 function GetLinePlaneIntersection(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)
-   return Citizen.InvokeNative(0xAB6A04CEC428258B,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)
+    return Citizen.InvokeNative(0xAB6A04CEC428258B,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12)
 end
+
 
 
 --- 
@@ -654,6 +724,7 @@ function SetBit(address,offset)
 end
 
 
+
 --- 
 --- Native 0x7D1D4A3602B6AD4E (CLEAR_BIT)
 ---@param address int*
@@ -663,14 +734,16 @@ function ClearBit(address,offset)
 end
 
 
+
 --- 
 --- Native 0x8F4F050054005C27 (_IS_BIT_FLAG_SET)
 ---@param bitFlags any*
 ---@param flag number
 ---@return boolean
 function IsBitFlagSet(bitFlags,flag)
-   return Citizen.InvokeNative(0x8F4F050054005C27,bitFlags,flag)
+    return Citizen.InvokeNative(0x8F4F050054005C27,bitFlags,flag)
 end
+
 
 
 --- 
@@ -678,8 +751,9 @@ end
 ---@param bitFlags any*
 ---@return boolean
 function IsAnyBitFlagSet(bitFlags)
-   return Citizen.InvokeNative(0x80E9C316EF84DD81,bitFlags)
+    return Citizen.InvokeNative(0x80E9C316EF84DD81,bitFlags)
 end
+
 
 
 --- 
@@ -687,8 +761,9 @@ end
 ---@param bitFlags any*
 ---@return number
 function CountBitFlags(bitFlags)
-   return Citizen.InvokeNative(0xE704838F36F93B7B,bitFlags)
+    return Citizen.InvokeNative(0xE704838F36F93B7B,bitFlags)
 end
+
 
 
 --- Similar to SET_BIT but specifically designed for large (>32 flags) bit flag sets.
@@ -702,6 +777,7 @@ function SetBitFlag(bitFlags,flag)
 end
 
 
+
 --- 
 --- Native 0xB909149F2BB5F6DA (_CLEAR_BIT_FLAG)
 ---@param bitFlags any*
@@ -709,6 +785,7 @@ end
 function ClearBitFlag(bitFlags,flag)
     Citizen.InvokeNative(0xB909149F2BB5F6DA,bitFlags,flag)
 end
+
 
 
 --- 
@@ -719,14 +796,16 @@ function ClearAllBitFlags(bitFlags)
 end
 
 
+
 --- Computes a hash for the given string. It is hashed using Jenkins' One-at-a-Time hash algorithm (https://en.wikipedia.org/wiki/Jenkins_hash_function)
 ---Note: this implementation is case-insensitive.
 --- Native 0xFD340785ADF8CFB7 (GET_HASH_KEY)
 ---@param string string
 ---@return hash
 function GetHashKey(string)
-   return Citizen.InvokeNative(0xFD340785ADF8CFB7,string)
+    return Citizen.InvokeNative(0xFD340785ADF8CFB7,string)
 end
+
 
 
 --- https://easings.net/
@@ -766,8 +845,9 @@ end
 ---@param easingCurveType number
 ---@return float
 function GetEasingCurveValue(t,b,d,easingCurveType)
-   return Citizen.InvokeNative(0xEF50E344A8F93784,t,b,d,easingCurveType)
+    return Citizen.InvokeNative(0xEF50E344A8F93784,t,b,d,easingCurveType)
 end
+
 
 
 --- 
@@ -785,8 +865,9 @@ end
 ---@param p10 boolean
 ---@return boolean
 function IsPositionOccupied(x,y,z,range,p4,p5,p6,p7,p8,p9,p10)
-   return Citizen.InvokeNative(0x825CA3ED43831015,x,y,z,range,p4,p5,p6,p7,p8,p9,p10)
+    return Citizen.InvokeNative(0x825CA3ED43831015,x,y,z,range,p4,p5,p6,p7,p8,p9,p10)
 end
+
 
 
 --- flag |= 1 | 1048576 | 524288
@@ -802,6 +883,7 @@ function ClearArea(x,y,z,radius,flag)
 end
 
 
+
 --- 
 --- Native 0x2FCD528A397E5C88 (_CLEAR_VOLUME_AREA)
 ---@param volume volume
@@ -809,6 +891,7 @@ end
 function ClearVolumeArea(volume,flag)
     Citizen.InvokeNative(0x2FCD528A397E5C88,volume,flag)
 end
+
 
 
 --- 
@@ -826,6 +909,7 @@ function ClearAngledAreaOfVehicles(p0,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0xD37BECF862DA726F (SET_CREDITS_ACTIVE)
 ---@param toggle boolean
@@ -834,11 +918,13 @@ function SetCreditsActive(toggle)
 end
 
 
+
 --- 
 --- Native 0x3D0EAC6385DD6100 (NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME)
 function NetworkSetScriptIsSafeForNetworkGame()
     Citizen.InvokeNative(0x3D0EAC6385DD6100)
 end
+
 
 
 --- 
@@ -849,12 +935,14 @@ function PauseDeathArrestRestart(toggle)
 end
 
 
+
 --- 
 --- Native 0x6C9FF40FF1B69F8F (IGNORE_NEXT_RESTART)
 ---@param toggle boolean
 function IgnoreNextRestart(toggle)
     Citizen.InvokeNative(0x6C9FF40FF1B69F8F,toggle)
 end
+
 
 
 --- Sets whether the game should fade in after the player dies or is arrested.
@@ -865,12 +953,14 @@ function SetFadeInAfterDeathArrest(toggle)
 end
 
 
+
 --- 
 --- Native 0xAC806C4CAB973517 (SET_FADE_IN_AFTER_LOAD)
 ---@param toggle boolean
 function SetFadeInAfterLoad(toggle)
     Citizen.InvokeNative(0xAC806C4CAB973517,toggle)
 end
+
 
 
 --- 
@@ -885,8 +975,9 @@ end
 ---@param returnHeading float*
 ---@return boolean
 function OverrideSaveHouse(override,x,y,z,heading,isAutosave,returnCoords,returnHeading)
-   return Citizen.InvokeNative(0xB2C69E11A37B5AF0,override,x,y,z,heading,isAutosave,returnCoords,returnHeading)
+    return Citizen.InvokeNative(0xB2C69E11A37B5AF0,override,x,y,z,heading,isAutosave,returnCoords,returnHeading)
 end
+
 
 
 --- 
@@ -910,12 +1001,14 @@ function ShootSingleBulletBetweenCoords(x1,y1,z1,x2,y2,z2,damage,p7,weaponHash,o
 end
 
 
+
 --- 
 --- Native 0xCBC9A21F6A2A679C (FIRE_SINGLE_BULLET)
 ---@param args any*
 function FireSingleBullet(args)
     Citizen.InvokeNative(0xCBC9A21F6A2A679C,args)
 end
+
 
 
 --- 
@@ -928,14 +1021,16 @@ function GetModelDimensions(modelHash,minimum,maximum)
 end
 
 
+
 --- 
 --- Native 0x4ED6CFDFE8D4131A (IS_BIT_SET)
 ---@param address number
 ---@param offset number
 ---@return boolean
 function IsBitSet(address,offset)
-   return Citizen.InvokeNative(0x4ED6CFDFE8D4131A,address,offset)
+    return Citizen.InvokeNative(0x4ED6CFDFE8D4131A,address,offset)
 end
+
 
 
 --- 
@@ -946,12 +1041,14 @@ function IsMinigameInProgress()
 end
 
 
+
 --- Returns whether the game's measurement system is set to metric.
 --- Native 0x4FB556ACEFA93098 (SHOULD_USE_METRIC_MEASUREMENTS)
 ---@return boolean
 function ShouldUseMetricMeasurements()
    return Citizen.InvokeNative(0x4FB556ACEFA93098)
 end
+
 
 
 --- Same as SHOULD_USE_METRIC_MEASUREMENTS
@@ -962,12 +1059,14 @@ function ShouldUseMetricMeasurements2()
 end
 
 
+
 --- 
 --- Native 0xFF4AAF3275BAAB4F (_SHOULD_USE_METRIC_TEMPERATURE)
 ---@return boolean
 function ShouldUseMetricTemperature()
    return Citizen.InvokeNative(0xFF4AAF3275BAAB4F)
 end
+
 
 
 --- 
@@ -978,12 +1077,14 @@ function ShouldUseMetricWeight()
 end
 
 
+
 --- 
 --- Native 0x0177CF20345F44DD (_SHOULD_USE_24_HOUR_CLOCK)
 ---@return boolean
 function ShouldUse24HourClock()
    return Citizen.InvokeNative(0x0177CF20345F44DD)
 end
+
 
 
 --- 
@@ -994,8 +1095,9 @@ end
 ---@param maxLength number
 ---@return number
 function CompareStrings(str1,str2,matchCase,maxLength)
-   return Citizen.InvokeNative(0xBFBB74A15EFC149B,str1,str2,matchCase,maxLength)
+    return Citizen.InvokeNative(0xBFBB74A15EFC149B,str1,str2,matchCase,maxLength)
 end
+
 
 
 --- 
@@ -1003,8 +1105,9 @@ end
 ---@param value number
 ---@return number
 function Absi(value)
-   return Citizen.InvokeNative(0x0C214D5B8A38C828,value)
+    return Citizen.InvokeNative(0x0C214D5B8A38C828,value)
 end
+
 
 
 --- 
@@ -1012,8 +1115,9 @@ end
 ---@param value float
 ---@return float
 function Absf(value)
-   return Citizen.InvokeNative(0x134549B388167CBF,value)
+    return Citizen.InvokeNative(0x134549B388167CBF,value)
 end
+
 
 
 --- Determines whether there is a projectile within the specified coordinates. The coordinates form a rectangle.
@@ -1028,8 +1132,9 @@ end
 ---@param ownedByPlayer boolean
 ---@return boolean
 function IsProjectileInArea(x1,y1,z1,x2,y2,z2,ownedByPlayer)
-   return Citizen.InvokeNative(0x05B0061EFDFC8941,x1,y1,z1,x2,y2,z2,ownedByPlayer)
+    return Citizen.InvokeNative(0x05B0061EFDFC8941,x1,y1,z1,x2,y2,z2,ownedByPlayer)
 end
+
 
 
 --- Determines whether there is a projectile of a specific type within the specified coordinates. The coordinates form a rectangle.
@@ -1044,8 +1149,9 @@ end
 ---@param isPlayer boolean
 ---@return boolean
 function IsProjectileTypeInArea(xMin,yMin,zMin,xMax,yMax,zMax,weaponType,isPlayer)
-   return Citizen.InvokeNative(0x04965FB9E14235C7,xMin,yMin,zMin,xMax,yMax,zMax,weaponType,isPlayer)
+    return Citizen.InvokeNative(0x04965FB9E14235C7,xMin,yMin,zMin,xMax,yMax,zMax,weaponType,isPlayer)
 end
+
 
 
 --- 
@@ -1061,8 +1167,9 @@ end
 ---@param p8 boolean
 ---@return boolean
 function IsProjectileTypeInAngledArea(p0,p1,p2,p3,p4,p5,p6,p7,p8)
-   return Citizen.InvokeNative(0x928431F4133CD3D4,p0,p1,p2,p3,p4,p5,p6,p7,p8)
+    return Citizen.InvokeNative(0x928431F4133CD3D4,p0,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -1075,8 +1182,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function IsProjectileTypeWithinDistance(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0xF51C9BAAD9ED64C4,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0xF51C9BAAD9ED64C4,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1089,8 +1197,9 @@ end
 ---@param mustBeOwnedByThisPed boolean
 ---@return boolean
 function GetCoordsOfProjectileTypeWithinDistance(ped,weaponHash,distance,outCoords,p4,mustBeOwnedByThisPed)
-   return Citizen.InvokeNative(0xD73C960A681052DF,ped,weaponHash,distance,outCoords,p4,mustBeOwnedByThisPed)
+    return Citizen.InvokeNative(0xD73C960A681052DF,ped,weaponHash,distance,outCoords,p4,mustBeOwnedByThisPed)
 end
+
 
 
 --- 
@@ -1104,8 +1213,9 @@ end
 ---@param mustBeOwnedByThisPed boolean
 ---@return boolean
 function GetProjectileOfProjectileTypeWithinDistance(ped,weaponHash,distance,outCoords,outProjectile,p5,mustBeOwnedByThisPed)
-   return Citizen.InvokeNative(0x9578986A6105A6AD,ped,weaponHash,distance,outCoords,outProjectile,p5,mustBeOwnedByThisPed)
+    return Citizen.InvokeNative(0x9578986A6105A6AD,ped,weaponHash,distance,outCoords,outProjectile,p5,mustBeOwnedByThisPed)
 end
+
 
 
 --- 
@@ -1120,8 +1230,9 @@ end
 ---@param p7 boolean
 ---@return boolean
 function IsBulletInAngledArea(p0,p1,p2,p3,p4,p5,p6,p7)
-   return Citizen.InvokeNative(0x9D09D8493747CF02,p0,p1,p2,p3,p4,p5,p6,p7)
+    return Citizen.InvokeNative(0x9D09D8493747CF02,p0,p1,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- 
@@ -1133,8 +1244,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function IsBulletInArea(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0xC652FD308772D79E,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0xC652FD308772D79E,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -1148,8 +1260,9 @@ end
 ---@param p6 boolean
 ---@return boolean
 function IsBulletInBox(p0,p1,p2,p3,p4,p5,p6)
-   return Citizen.InvokeNative(0xC128137C52152741,p0,p1,p2,p3,p4,p5,p6)
+    return Citizen.InvokeNative(0xC128137C52152741,p0,p1,p2,p3,p4,p5,p6)
 end
+
 
 
 --- p3 - possibly radius?
@@ -1162,8 +1275,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function HasBulletImpactedInArea(x,y,z,p3,p4,p5)
-   return Citizen.InvokeNative(0xC153E5BCCF411814,x,y,z,p3,p4,p5)
+    return Citizen.InvokeNative(0xC153E5BCCF411814,x,y,z,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1178,8 +1292,9 @@ end
 ---@param p7 boolean
 ---@return boolean
 function HasBulletImpactedInBox(p0,p1,p2,p3,p4,p5,p6,p7)
-   return Citizen.InvokeNative(0x3B6A4C05FB2B33AC,p0,p1,p2,p3,p4,p5,p6,p7)
+    return Citizen.InvokeNative(0x3B6A4C05FB2B33AC,p0,p1,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- Hardcoded to return false.
@@ -1191,6 +1306,7 @@ function IsOrbisVersion()
 end
 
 
+
 --- Hardcoded to return false.
 ---Checks for XBOXONE Game Build.
 --- Native 0xD1CCC2A2639D325F (IS_DURANGO_VERSION)
@@ -1198,6 +1314,7 @@ end
 function IsDurangoVersion()
    return Citizen.InvokeNative(0xD1CCC2A2639D325F)
 end
+
 
 
 --- Hardcoded to return true.
@@ -1208,6 +1325,7 @@ function IsPcVersion()
 end
 
 
+
 --- Hardcoded to return false.
 --- Native 0x268AB8420A9E4ED7 (IS_STADIA_VERSION)
 ---@return boolean
@@ -1216,13 +1334,15 @@ function IsStadiaVersion()
 end
 
 
+
 --- 
 --- Native 0x602102324604D96B (IS_STRING_NULL)
 ---@param string string
 ---@return boolean
 function IsStringNull(string)
-   return Citizen.InvokeNative(0x602102324604D96B,string)
+    return Citizen.InvokeNative(0x602102324604D96B,string)
 end
+
 
 
 --- 
@@ -1230,8 +1350,9 @@ end
 ---@param string string
 ---@return boolean
 function IsStringNullOrEmpty(string)
-   return Citizen.InvokeNative(0x2CF12F9ACF18F048,string)
+    return Citizen.InvokeNative(0x2CF12F9ACF18F048,string)
 end
+
 
 
 --- Returns true if the entire string consists only of space characters.
@@ -1239,8 +1360,9 @@ end
 ---@param string string
 ---@return boolean
 function IsStringNullOrEmptyOrSpaces(string)
-   return Citizen.InvokeNative(0x375F5870A7B8BEC1,string)
+    return Citizen.InvokeNative(0x375F5870A7B8BEC1,string)
 end
+
 
 
 --- 
@@ -1249,8 +1371,9 @@ end
 ---@param string2 string
 ---@return boolean
 function AreStringsEqual(string1,string2)
-   return Citizen.InvokeNative(0xD3852F22AB713A1F,string1,string2)
+    return Citizen.InvokeNative(0xD3852F22AB713A1F,string1,string2)
 end
+
 
 
 --- 
@@ -1259,8 +1382,9 @@ end
 ---@param string2 string
 ---@return boolean
 function DoesStringExistInString(string1,string2)
-   return Citizen.InvokeNative(0x9382D5D43D2AA6FF,string1,string2)
+    return Citizen.InvokeNative(0x9382D5D43D2AA6FF,string1,string2)
 end
+
 
 
 --- Returns false if it's a null or empty string or if the string is too long. outInteger will be set to -999 in that case.
@@ -1269,8 +1393,9 @@ end
 ---@param outInteger int*
 ---@return boolean
 function StringToInt(string,outInteger)
-   return Citizen.InvokeNative(0xF2DD2298B3AF23E2,string,outInteger)
+    return Citizen.InvokeNative(0xF2DD2298B3AF23E2,string,outInteger)
 end
+
 
 
 --- Note: the buffer should be exactly 32 bytes long
@@ -1283,14 +1408,16 @@ function IntToString(value,format,buffer)
 end
 
 
+
 --- 
 --- Native 0x2B6846401D68E563 (_GET_STRING_FROM_FLOAT)
 ---@param value float
 ---@param digits number
 ---@return string
 function GetStringFromFloat(value,digits)
-   return Citizen.InvokeNative(0x2B6846401D68E563,value,digits)
+    return Citizen.InvokeNative(0x2B6846401D68E563,value,digits)
 end
+
 
 
 --- Returns a string in the following format: <<%.4f,%.4f,%.4f>>
@@ -1300,8 +1427,9 @@ end
 ---@param z float
 ---@return string
 function GetStringFromVector(x,y,z)
-   return Citizen.InvokeNative(0x6C4DBF553885F9EB,x,y,z)
+    return Citizen.InvokeNative(0x6C4DBF553885F9EB,x,y,z)
 end
+
 
 
 --- 
@@ -1309,8 +1437,9 @@ end
 ---@param value boolean
 ---@return string
 function GetStringFromBool(value)
-   return Citizen.InvokeNative(0xF216F74101968DB0,value)
+    return Citizen.InvokeNative(0xF216F74101968DB0,value)
 end
+
 
 
 --- Note: The first bit in 'flags' must not be set.
@@ -1321,8 +1450,9 @@ end
 ---@param ... 
 ---@return string
 function VarString(flags,...)
-   return Citizen.InvokeNative(0xFA925AC00EB830B9,flags,...)
+    return Citizen.InvokeNative(0xFA925AC00EB830B9,flags,...)
 end
+
 
 
 --- Returns a formatted string (0x%x)
@@ -1330,8 +1460,9 @@ end
 ---@param rgb number
 ---@return string
 function CreateColorString(rgb)
-   return Citizen.InvokeNative(0xBCC2CFADEA1AEA6C,rgb)
+    return Citizen.InvokeNative(0xBCC2CFADEA1AEA6C,rgb)
 end
+
 
 
 --- 
@@ -1345,6 +1476,7 @@ function SetBitsInRange(var,rangeStart,rangeEnd,p3)
 end
 
 
+
 --- 
 --- Native 0x68E1352AF48F905D (GET_BITS_IN_RANGE)
 ---@param var number
@@ -1352,8 +1484,9 @@ end
 ---@param rangeEnd number
 ---@return number
 function GetBitsInRange(var,rangeStart,rangeEnd)
-   return Citizen.InvokeNative(0x68E1352AF48F905D,var,rangeStart,rangeEnd)
+    return Citizen.InvokeNative(0x68E1352AF48F905D,var,rangeStart,rangeEnd)
 end
+
 
 
 --- Make sure to call this from the correct thread if you're using multiple threads because all other threads except the one which is calling SET_GAME_PAUSED will be paused.
@@ -1364,6 +1497,7 @@ function SetGamePaused(toggle)
 end
 
 
+
 --- 
 --- Native 0x3215376E79F6EA18 (SET_THIS_SCRIPT_CAN_BE_PAUSED)
 ---@param toggle boolean
@@ -1372,12 +1506,14 @@ function SetThisScriptCanBePaused(toggle)
 end
 
 
+
 --- 
 --- Native 0x8ABD939C2E5D00ED (SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT)
 ---@param toggle boolean
 function SetThisScriptCanRemoveBlipsCreatedByAnyScript(toggle)
     Citizen.InvokeNative(0x8ABD939C2E5D00ED,toggle)
 end
+
 
 
 --- Cheats are GTA IV cheats:
@@ -1405,11 +1541,13 @@ function SetCheatActive(cheatId)
 end
 
 
+
 --- spawns a few distant/out-of-sight peds, vehicles, animals etc each time it is called
 --- Native 0xEA6DC3A8ADD2005F (POPULATE_NOW)
 function PopulateNow()
     Citizen.InvokeNative(0xEA6DC3A8ADD2005F)
 end
+
 
 
 --- 
@@ -1420,13 +1558,15 @@ function IsGameSessionStateMachineIdle()
 end
 
 
+
 --- p0 must be < 2
 --- Native 0x279B0696DA4657EB (_QUEUE_SAVEGAME_OPERATION)
 ---@param p0 number
 ---@return boolean
 function QueueSavegameOperation(p0)
-   return Citizen.InvokeNative(0x279B0696DA4657EB,p0)
+    return Citizen.InvokeNative(0x279B0696DA4657EB,p0)
 end
+
 
 
 --- Only 0 and 1 are valid for p0, higher values causes the native to return 2.
@@ -1434,8 +1574,9 @@ end
 ---@param p0 number
 ---@return number
 function GetStatusOfSavegameOperation(p0)
-   return Citizen.InvokeNative(0x1B065A2BF7953815,p0)
+    return Citizen.InvokeNative(0x1B065A2BF7953815,p0)
 end
+
 
 
 --- Old name: _COPY_MEMORY
@@ -1446,6 +1587,7 @@ end
 function CopyScriptStruct(dst,src,size)
     Citizen.InvokeNative(0xF7AC7DC0DEE7C9BE,dst,src,size)
 end
+
 
 
 --- enum DispatchType
@@ -1476,6 +1618,7 @@ function EnableDispatchService(dispatchService,toggle)
 end
 
 
+
 --- dispatchService: see ENABLE_DISPATCH_SERVICE
 --- Native 0x66947E61A44DE2C6 (BLOCK_DISPATCH_SERVICE_RESOURCE_CREATION)
 ---@param dispatchService number
@@ -1483,6 +1626,7 @@ end
 function BlockDispatchServiceResourceCreation(dispatchService,toggle)
     Citizen.InvokeNative(0x66947E61A44DE2C6,dispatchService,toggle)
 end
+
 
 
 --- dispatchService: see ENABLE_DISPATCH_SERVICE
@@ -1498,8 +1642,9 @@ end
 ---@param p8 any
 ---@return boolean
 function CreateIncident(dispatchService,x,y,z,numUnits,radius,outIncidentID,p7,p8)
-   return Citizen.InvokeNative(0x3F892CAF67444AE7,dispatchService,x,y,z,numUnits,radius,outIncidentID,p7,p8)
+    return Citizen.InvokeNative(0x3F892CAF67444AE7,dispatchService,x,y,z,numUnits,radius,outIncidentID,p7,p8)
 end
+
 
 
 --- dispatchService: see ENABLE_DISPATCH_SERVICE
@@ -1514,8 +1659,9 @@ end
 ---@param outIncidentID int*
 ---@return boolean
 function CreateIncidentWithEntities(dispatchService,x,y,z,itemSet,radius,outIncidentID)
-   return Citizen.InvokeNative(0xAB3D3F45436DB1D8,dispatchService,x,y,z,itemSet,radius,outIncidentID)
+    return Citizen.InvokeNative(0xAB3D3F45436DB1D8,dispatchService,x,y,z,itemSet,radius,outIncidentID)
 end
+
 
 
 --- Delete an incident with a given id.
@@ -1526,13 +1672,15 @@ function DeleteIncident(incidentId)
 end
 
 
+
 --- 
 --- Native 0x39F2B1BAD412246A (IS_INCIDENT_VALID)
 ---@param incidentId number
 ---@return boolean
 function IsIncidentValid(incidentId)
-   return Citizen.InvokeNative(0x39F2B1BAD412246A,incidentId)
+    return Citizen.InvokeNative(0x39F2B1BAD412246A,incidentId)
 end
+
 
 
 --- 
@@ -1541,6 +1689,7 @@ end
 function SetIncidentUnk(incidentId)
     Citizen.InvokeNative(0x9617B6E5F6537B63,incidentId)
 end
+
 
 
 --- 
@@ -1557,8 +1706,9 @@ end
 ---@param p9 boolean
 ---@return number
 function AddPopMultiplierArea(x1,y1,z1,x2,y2,z2,pedDensity,trafficDensity,p8,p9)
-   return Citizen.InvokeNative(0x5EBDA1A3B8CB5EF7,x1,y1,z1,x2,y2,z2,pedDensity,trafficDensity,p8,p9)
+    return Citizen.InvokeNative(0x5EBDA1A3B8CB5EF7,x1,y1,z1,x2,y2,z2,pedDensity,trafficDensity,p8,p9)
 end
+
 
 
 --- 
@@ -1566,8 +1716,9 @@ end
 ---@param id number
 ---@return boolean
 function DoesPopMultiplierAreaExist(id)
-   return Citizen.InvokeNative(0x03BA619C81A646B3,id)
+    return Citizen.InvokeNative(0x03BA619C81A646B3,id)
 end
+
 
 
 --- 
@@ -1577,6 +1728,7 @@ end
 function RemovePopMultiplierArea(id,p1)
     Citizen.InvokeNative(0x88CB484364EFB37A,id,p1)
 end
+
 
 
 --- Only used in script function PROCESS_ZONE_CREATION
@@ -1589,8 +1741,9 @@ end
 ---@param p4 boolean
 ---@return number
 function AddPopMultiplierVolume(volume,pedDensity,vehicleDensity,p3,p4)
-   return Citizen.InvokeNative(0x3233C4EC0514C7EC,volume,pedDensity,vehicleDensity,p3,p4)
+    return Citizen.InvokeNative(0x3233C4EC0514C7EC,volume,pedDensity,vehicleDensity,p3,p4)
 end
+
 
 
 --- 
@@ -1598,8 +1751,9 @@ end
 ---@param volume volume
 ---@return boolean
 function DoesPopMultiplierAreaExistForVolume(volume)
-   return Citizen.InvokeNative(0x39D6DACE323A20B6,volume)
+    return Citizen.InvokeNative(0x39D6DACE323A20B6,volume)
 end
+
 
 
 --- 
@@ -1611,11 +1765,13 @@ function RemovePopMultiplierAreaForVolume(volume,p1)
 end
 
 
+
 --- 
 --- Native 0xC7817264BC4B6377 (RESET_DISPATCH_IDEAL_SPAWN_DISTANCE)
 function ResetDispatchIdealSpawnDistance()
     Citizen.InvokeNative(0xC7817264BC4B6377)
 end
+
 
 
 --- 
@@ -1626,11 +1782,13 @@ function SetDispatchIdealSpawnDistance(fIdealSpawnDistance)
 end
 
 
+
 --- 
 --- Native 0x96498D922D8D0D0A (_RESET_DISPATCH_MIN_SPAWN_DISTANCE)
 function ResetDispatchMinSpawnDistance()
     Citizen.InvokeNative(0x96498D922D8D0D0A)
 end
+
 
 
 --- 
@@ -1641,11 +1799,13 @@ function SetDispatchMinSpawnDistance(minSpawnDistance)
 end
 
 
+
 --- 
 --- Native 0x54EC7B6BC72BAD69 (_RESET_DISPATCH_MAX_SPAWN_DISTANCE)
 function ResetDispatchMaxSpawnDistance()
     Citizen.InvokeNative(0x54EC7B6BC72BAD69)
 end
+
 
 
 --- 
@@ -1656,13 +1816,15 @@ function SetDispatchMaxSpawnDistance(maxSpawnDistance)
 end
 
 
+
 --- 
 --- Native 0xA2D5A26208421426 (_ADD_DISPATCH_SPAWN_BLOCKING_AREA)
 ---@param volume volume
 ---@return any
 function AddDispatchSpawnBlockingArea(volume)
-   return Citizen.InvokeNative(0xA2D5A26208421426,volume)
+    return Citizen.InvokeNative(0xA2D5A26208421426,volume)
 end
+
 
 
 --- 
@@ -1673,11 +1835,13 @@ function RemoveDispatchSpawnBlockingArea(p0)
 end
 
 
+
 --- 
 --- Native 0xEF42F56F69877125 (RESET_WANTED_RESPONSE_NUM_PEDS_TO_SPAWN)
 function ResetWantedResponseNumPedsToSpawn()
     Citizen.InvokeNative(0xEF42F56F69877125)
 end
+
 
 
 --- Params: p3 is 0 in R* Script utopia2
@@ -1691,11 +1855,13 @@ function AddTacticalNavMeshPoint(x,y,z,p3)
 end
 
 
+
 --- 
 --- Native 0xD93B6516C6878267 (CLEAR_TACTICAL_NAV_MESH_POINTS)
 function ClearTacticalNavMeshPoints()
     Citizen.InvokeNative(0xD93B6516C6878267)
 end
+
 
 
 --- enum eOnscreenKeyboardTextType
@@ -1724,6 +1890,7 @@ function DisplayOnscreenKeyboard(textType,windowTitle,p2,defaultText,defaultConc
 end
 
 
+
 --- Returns the current status of the onscreen keyboard, and updates the output.
 ---Status Codes:
 ---0 - User still editing
@@ -1737,12 +1904,14 @@ function UpdateOnscreenKeyboard()
 end
 
 
+
 --- Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.
 --- Native 0xAFB4CF58A4A292B1 (GET_ONSCREEN_KEYBOARD_RESULT)
 ---@return string
 function GetOnscreenKeyboardResult()
    return Citizen.InvokeNative(0xAFB4CF58A4A292B1)
 end
+
 
 
 --- Old name: _CANCEL_ONSCREEN_KEYBOARD
@@ -1752,12 +1921,14 @@ function CancelOnscreenKeyboard()
 end
 
 
+
 --- 
 --- Native 0x5CB71EAA1429A358 (NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS)
 ---@param fontBitField number
 function NextOnscreenKeyboardResultWillDisplayUsingTheseFonts(fontBitField)
     Citizen.InvokeNative(0x5CB71EAA1429A358,fontBitField)
 end
+
 
 
 --- Appears to remove stealth kill action from memory (?)
@@ -1769,13 +1940,15 @@ function ActionManagerEnableAction(hash,enable)
 end
 
 
+
 --- 
 --- Native 0xFD0759658268FD8E (ACTION_MANAGER_IS_ACTION_ENABLED)
 ---@param hash hash
 ---@return boolean
 function ActionManagerIsActionEnabled(hash)
-   return Citizen.InvokeNative(0xFD0759658268FD8E,hash)
+    return Citizen.InvokeNative(0xFD0759658268FD8E,hash)
 end
+
 
 
 --- Returns GET_GAME_TIMER() / 1000
@@ -1787,12 +1960,14 @@ function GetRealWorldTime()
 end
 
 
+
 --- 
 --- Native 0xB3E9BE963F10C445 (SET_SUPER_JUMP_THIS_FRAME)
 ---@param player player
 function SetSuperJumpThisFrame(player)
     Citizen.InvokeNative(0xB3E9BE963F10C445,player)
 end
+
 
 
 --- 
@@ -1806,11 +1981,13 @@ function ScriptRaceInit(numCheckpoints,numLaps,numPlayers,p3)
 end
 
 
+
 --- 
 --- Native 0x334CE0DA4FAF330C (SCRIPT_RACE_SHUTDOWN)
 function ScriptRaceShutdown()
     Citizen.InvokeNative(0x334CE0DA4FAF330C)
 end
+
 
 
 --- 
@@ -1824,6 +2001,7 @@ function ScriptRacePlayerHitCheckpoint(part,checkpoint,lap,time)
 end
 
 
+
 --- 
 --- Native 0x769E848C66E3C2BB (SCRIPT_RACE_GET_PLAYER_SPLIT_TIME)
 ---@param p0 any
@@ -1831,8 +2009,9 @@ end
 ---@param p2 any*
 ---@return boolean
 function ScriptRaceGetPlayerSplitTime(p0,p1,p2)
-   return Citizen.InvokeNative(0x769E848C66E3C2BB,p0,p1,p2)
+    return Citizen.InvokeNative(0x769E848C66E3C2BB,p0,p1,p2)
 end
+
 
 
 --- Begins with START_*. Next character in the name is either D or E.
@@ -1843,12 +2022,14 @@ function StartEndUserBenchmark()
 end
 
 
+
 --- Begins with STOP_*. Next character in the name is either D or E.
 ---Old name: _STOP_BENCHMARK_RECORDING
 --- Native 0xB89AEC71AFF2B599 (STOP_END_USER_BENCHMARK)
 function StopEndUserBenchmark()
     Citizen.InvokeNative(0xB89AEC71AFF2B599)
 end
+
 
 
 --- Begins with RESET_*. Next character in the name is either D or E.
@@ -1859,12 +2040,14 @@ function ResetEndUserBenchmark()
 end
 
 
+
 --- Saves the benchmark recording to %USERPROFILE%\Documents\Rockstar Games\Red Dead Redemption 2\Benchmarks and submits some metrics.
 ---Old name: _SAVE_BENCHMARK_RECORDING
 --- Native 0xF4743E2ECC02B3DA (SAVE_END_USER_BENCHMARK)
 function SaveEndUserBenchmark()
     Citizen.InvokeNative(0xF4743E2ECC02B3DA)
 end
+
 
 
 --- Hardcoded to return false.
@@ -1876,6 +2059,7 @@ function UiStartedEndUserBenchmark()
 end
 
 
+
 --- Returns value of the '-benchmarkIterations' command line option.
 ---Old name: _GET_BENCHMARK_ITERATIONS_FROM_COMMAND_LINE
 --- Native 0x22FC52CF470CC98D (GET_BENCHMARK_ITERATIONS)
@@ -1883,6 +2067,7 @@ end
 function GetBenchmarkIterations()
    return Citizen.InvokeNative(0x22FC52CF470CC98D)
 end
+
 
 
 --- Returns value of the '-benchmarkPass' command line option.
@@ -1894,13 +2079,15 @@ function GetBenchmarkPass()
 end
 
 
+
 --- 
 --- Native 0xBDC6E364C9C78178 (_DOES_ITEM_HAVE_VALID_BASE)
 ---@param item scrhandle
 ---@return boolean
 function DoesItemHaveValidBase(item)
-   return Citizen.InvokeNative(0xBDC6E364C9C78178,item)
+    return Citizen.InvokeNative(0xBDC6E364C9C78178,item)
 end
+
 
 
 --- 0 = invalid
@@ -1921,8 +2108,9 @@ end
 ---@param handle scrhandle
 ---@return number
 function GetItemType(handle)
-   return Citizen.InvokeNative(0xDC8D2FF478DF9553,handle)
+    return Citizen.InvokeNative(0xDC8D2FF478DF9553,handle)
 end
+
 
 
 --- 
@@ -1930,8 +2118,9 @@ end
 ---@param handle scrhandle
 ---@return boolean
 function IsBaseAPersistentCharacter(handle)
-   return Citizen.InvokeNative(0x716F17F8A0419F95,handle)
+    return Citizen.InvokeNative(0x716F17F8A0419F95,handle)
 end
+
 
 
 --- 
@@ -1939,8 +2128,9 @@ end
 ---@param handle scrhandle
 ---@return boolean
 function IsBaseACoverPoint(handle)
-   return Citizen.InvokeNative(0xFEC1D4B5C82C176F,handle)
+    return Citizen.InvokeNative(0xFEC1D4B5C82C176F,handle)
 end
+
 
 
 --- 
@@ -1948,8 +2138,9 @@ end
 ---@param item scrhandle
 ---@return volume
 function GetVolumeFromIndexedItem(item)
-   return Citizen.InvokeNative(0xF18AF483DF70BBDE,item)
+    return Citizen.InvokeNative(0xF18AF483DF70BBDE,item)
 end
+
 
 
 --- 
@@ -1957,8 +2148,9 @@ end
 ---@param item scrhandle
 ---@return entity
 function GetEntityFromItem(item)
-   return Citizen.InvokeNative(0xEE04C0AFD4EFAF0E,item)
+    return Citizen.InvokeNative(0xEE04C0AFD4EFAF0E,item)
 end
+
 
 
 --- 
@@ -1966,8 +2158,9 @@ end
 ---@param item scrhandle
 ---@return number
 function GetPedFromIndexedItem(item)
-   return Citizen.InvokeNative(0x3FFB15534067DCD4,item)
+    return Citizen.InvokeNative(0x3FFB15534067DCD4,item)
 end
+
 
 
 --- 
@@ -1975,8 +2168,9 @@ end
 ---@param item scrhandle
 ---@return vehicle
 function GetVehicleFromIndexedItem(item)
-   return Citizen.InvokeNative(0xE578C8AE173719B3,item)
+    return Citizen.InvokeNative(0xE578C8AE173719B3,item)
 end
+
 
 
 --- 
@@ -1984,8 +2178,9 @@ end
 ---@param item scrhandle
 ---@return object
 function GetObjectFromIndexedItem(item)
-   return Citizen.InvokeNative(0x18013392501CE5DC,item)
+    return Citizen.InvokeNative(0x18013392501CE5DC,item)
 end
+
 
 
 --- p3 is usually the same value of radius
@@ -2003,8 +2198,9 @@ end
 ---@param p9 number
 ---@return boolean
 function RegisterInteractionLockonPrompt(entity,text,radius,p3,flag,p5,p6,prompt,p8,p9)
-   return Citizen.InvokeNative(0x870708A6E147A9AD,entity,text,radius,p3,flag,p5,p6,prompt,p8,p9)
+    return Citizen.InvokeNative(0x870708A6E147A9AD,entity,text,radius,p3,flag,p5,p6,prompt,p8,p9)
 end
+
 
 
 --- 
@@ -2012,8 +2208,9 @@ end
 ---@param entity entity
 ---@return boolean
 function UnregisterInteractionLockonPrompt(entity)
-   return Citizen.InvokeNative(0xE98D55C5983F2509,entity)
+    return Citizen.InvokeNative(0xE98D55C5983F2509,entity)
 end
+
 
 
 --- 
@@ -2022,6 +2219,7 @@ end
 function IsMissionCreatorActive()
    return Citizen.InvokeNative(0xF236C84C6ADFCB2F)
 end
+
 
 
 --- aiMemoryType: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/_CREATE_AI_MEMORY
@@ -2033,14 +2231,16 @@ function CreateAiMemory(args,aiMemoryType)
 end
 
 
+
 --- 
 --- Native 0xFDF38E2B711BF78E (_GET_AI_PED_DOES_HAVE_EVENT_MEMORY)
 ---@param args any*
 ---@param p1 number
 ---@return boolean
 function GetAiPedDoesHaveEventMemory(args,p1)
-   return Citizen.InvokeNative(0xFDF38E2B711BF78E,args,p1)
+    return Citizen.InvokeNative(0xFDF38E2B711BF78E,args,p1)
 end
+
 
 
 --- Used in CAIConditionAmbientAIMemoryReactionsEnabled
@@ -2049,6 +2249,7 @@ end
 function SetAiMemoryReactionsEnabled(enabled)
     Citizen.InvokeNative(0x6AC4AF46A6B8DFB2,enabled)
 end
+
 
 
 --- 
@@ -2064,13 +2265,15 @@ function LootTablesGetInfo(ped,p1,p2,lootTableKey,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x5170DDA6D63ACAAA (_IS_PED_DECOMPOSED)
 ---@param ped number
 ---@return boolean
 function IsPedDecomposed(ped)
-   return Citizen.InvokeNative(0x5170DDA6D63ACAAA,ped)
+    return Citizen.InvokeNative(0x5170DDA6D63ACAAA,ped)
 end
+
 
 
 --- 
@@ -2082,6 +2285,7 @@ function SetPedDecomposed(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x40D72189F46D2E15 (DISABLE_LOOTING_COMPOSITE_LOOTABLE_THIS_FRAME)
 ---@param compositeId number
@@ -2091,14 +2295,16 @@ function DisableLootingCompositeLootableThisFrame(compositeId,p1)
 end
 
 
+
 --- Event names in the scripts: MGBegin, MGEnd, ReadyForCut
 --- Native 0xF9B91C5129EABC08 (_GET_LOOTING_EVENT_HAS_FIRED)
 ---@param ped number
 ---@param eventName string
 ---@return boolean
 function GetLootingEventHasFired(ped,eventName)
-   return Citizen.InvokeNative(0xF9B91C5129EABC08,ped,eventName)
+    return Citizen.InvokeNative(0xF9B91C5129EABC08,ped,eventName)
 end
+
 
 
 --- 
@@ -2110,13 +2316,15 @@ function SetLootPeltSatchelItem(ped,item)
 end
 
 
+
 --- 
 --- Native 0xACB7E1418A8B6E32 (_IS_GLOBAL_BLOCK_VALID)
 ---@param index number
 ---@return boolean
 function IsGlobalBlockValid(index)
-   return Citizen.InvokeNative(0xACB7E1418A8B6E32,index)
+    return Citizen.InvokeNative(0xACB7E1418A8B6E32,index)
 end
+
 
 
 --- 
@@ -2128,13 +2336,15 @@ function SetGlobalBlockIsLoaded(index,toggle)
 end
 
 
+
 --- 
 --- Native 0x4CABE596D632E4B0 (GAME_FRAMEWORK_MANAGER_INIT)
 ---@param transitionMode hash
 ---@return boolean
 function GameFrameworkManagerInit(transitionMode)
-   return Citizen.InvokeNative(0x4CABE596D632E4B0,transitionMode)
+    return Citizen.InvokeNative(0x4CABE596D632E4B0,transitionMode)
 end
+
 
 
 --- 
@@ -2142,6 +2352,7 @@ end
 function GameFrameworkManagerShutdown()
     Citizen.InvokeNative(0xAFF2FD8ADD927585)
 end
+
 
 
 --- 
@@ -2152,12 +2363,14 @@ function GameFrameworkManagerGetMode()
 end
 
 
+
 --- 
 --- Native 0x36040772DF5E59A0 (_IS_PLAYER_OWNING_STANDALONE_SP)
 ---@return boolean
 function IsPlayerOwningStandaloneSp()
    return Citizen.InvokeNative(0x36040772DF5E59A0)
 end
+
 
 
 --- Note: this native was added in build 1232.56
@@ -2167,10 +2380,12 @@ function SetGameLogicPaused()
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0xA565FAC215CBC77D (STOP_CURRENT_LOADING_PROGRESS_TIMER)
 function StopCurrentLoadingProgressTimer()
     Citizen.InvokeNative(0xA565FAC215CBC77D)
 end
+
 
 

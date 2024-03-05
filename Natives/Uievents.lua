@@ -3,8 +3,9 @@
 ---@param hash hash
 ---@return boolean
 function EventsUiIsPending(hash)
-   return Citizen.InvokeNative(0x67ED5A7963F2F722,hash)
+    return Citizen.InvokeNative(0x67ED5A7963F2F722,hash)
 end
+
 
 
 --- eventData:
@@ -21,8 +22,9 @@ end
 ---@param eventData any*
 ---@return boolean
 function EventsUiGetMessage(hash,eventData)
-   return Citizen.InvokeNative(0xE24E957294241444,hash,eventData)
+    return Citizen.InvokeNative(0xE24E957294241444,hash,eventData)
 end
+
 
 
 --- eventData: see EVENTS_UI_GET_MESSAGE
@@ -32,8 +34,9 @@ end
 ---@param eventData any*
 ---@return boolean
 function EventsUiPeekMessage(hash,eventData)
-   return Citizen.InvokeNative(0x90237103F27F7937,hash,eventData)
+    return Citizen.InvokeNative(0x90237103F27F7937,hash,eventData)
 end
+
 
 
 --- Old name: _EVENT_MANAGER_POP_EVENT
@@ -42,5 +45,6 @@ end
 function EventsUiPopMessage(hash)
     Citizen.InvokeNative(0x8E8A2369F48EC839,hash)
 end
+
 
 

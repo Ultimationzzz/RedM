@@ -11,8 +11,9 @@
 ---@param p8 boolean
 ---@return object
 function CreateObject(modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7,p8)
-   return Citizen.InvokeNative(0x509D5878EB39E842,modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7,p8)
+    return Citizen.InvokeNative(0x509D5878EB39E842,modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7,p8)
 end
+
 
 
 --- 
@@ -27,8 +28,9 @@ end
 ---@param p7 boolean
 ---@return object
 function CreateObjectNoOffset(modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7)
-   return Citizen.InvokeNative(0x9A294B2138ABB884,modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7)
+    return Citizen.InvokeNative(0x9A294B2138ABB884,modelHash,x,y,z,isNetwork,bScriptHostObj,dynamic,p7)
 end
+
 
 
 --- Deletes the specified object, then sets the handle pointed to by the pointer to NULL.
@@ -39,14 +41,16 @@ function DeleteObject(object)
 end
 
 
+
 --- 
 --- Native 0x58A850EAEE20FAA3 (PLACE_OBJECT_ON_GROUND_PROPERLY)
 ---@param object object
 ---@param p1 boolean
 ---@return boolean
 function PlaceObjectOnGroundProperly(object,p1)
-   return Citizen.InvokeNative(0x58A850EAEE20FAA3,object,p1)
+    return Citizen.InvokeNative(0x58A850EAEE20FAA3,object,p1)
 end
+
 
 
 --- 
@@ -61,8 +65,9 @@ end
 ---@param collision boolean
 ---@return boolean
 function SlideObject(object,toX,toY,toZ,speedX,speedY,speedZ,collision)
-   return Citizen.InvokeNative(0x2FDFF4107B8C1147,object,toX,toY,toZ,speedX,speedY,speedZ,collision)
+    return Citizen.InvokeNative(0x2FDFF4107B8C1147,object,toX,toY,toZ,speedX,speedY,speedZ,collision)
 end
+
 
 
 --- 
@@ -74,6 +79,7 @@ function SetObjectTargettable(object,targettable)
 end
 
 
+
 --- 
 --- Native 0x581EDBE56E8D62C9 (_SET_OBJECT_TARGETTABLE_2)
 ---@param object object
@@ -81,6 +87,7 @@ end
 function SetObjectTargettable2(object,targettable)
     Citizen.InvokeNative(0x581EDBE56E8D62C9,object,targettable)
 end
+
 
 
 --- When p1 and p2 are true you can focus on the object (similar to when you focus a ped)
@@ -91,6 +98,7 @@ end
 function SetObjectTargettableFocus(object,p1,p2)
     Citizen.InvokeNative(0xA22712E8471AA08E,object,p1,p2)
 end
+
 
 
 --- missionScriptObject - if true won't return mission script objects
@@ -107,8 +115,9 @@ end
 ---@param networkObject boolean
 ---@return object
 function GetClosestObjectOfType(x,y,z,radius,modelHash,missionScriptObject,scriptHostObject,networkObject)
-   return Citizen.InvokeNative(0xE143FA2249364369,x,y,z,radius,modelHash,missionScriptObject,scriptHostObject,networkObject)
+    return Citizen.InvokeNative(0xE143FA2249364369,x,y,z,radius,modelHash,missionScriptObject,scriptHostObject,networkObject)
 end
+
 
 
 --- 
@@ -116,8 +125,9 @@ end
 ---@param p0 any
 ---@return boolean
 function HasObjectBeenBroken(p0)
-   return Citizen.InvokeNative(0x8ABFB70C49CC43E2,p0)
+    return Citizen.InvokeNative(0x8ABFB70C49CC43E2,p0)
 end
+
 
 
 --- 
@@ -130,8 +140,9 @@ end
 ---@param p5 any
 ---@return boolean
 function HasClosestObjectOfTypeBeenBroken(p0,p1,p2,p3,modelHash,p5)
-   return Citizen.InvokeNative(0x761B0E69AC4D007E,p0,p1,p2,p3,modelHash,p5)
+    return Citizen.InvokeNative(0x761B0E69AC4D007E,p0,p1,p2,p3,modelHash,p5)
 end
+
 
 
 --- Old name: _GET_OBJECT_OFFSET_FROM_COORDS
@@ -145,8 +156,9 @@ end
 ---@param zOffset float
 ---@return vector3
 function GetOffsetFromCoordAndHeadingInWorldCoords(xPos,yPos,zPos,heading,xOffset,yOffset,zOffset)
-   return Citizen.InvokeNative(0x163E252DE035A133,xPos,yPos,zPos,heading,xOffset,yOffset,zOffset)
+    return Citizen.InvokeNative(0x163E252DE035A133,xPos,yPos,zPos,heading,xOffset,yOffset,zOffset)
 end
+
 
 
 --- Registers a door, hashes: https://github.com/femga/rdr3_discoveries/tree/master/doorHashes
@@ -163,13 +175,15 @@ function AddDoorToSystemNew(doorHash,p1,p2,p3,threadId,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xB5DED7B65C604FDF (_IS_DOOR_REGISTERED_WITH_NETWORK)
 ---@param doorHash hash
 ---@return boolean
 function IsDoorRegisteredWithNetwork(doorHash)
-   return Citizen.InvokeNative(0xB5DED7B65C604FDF,doorHash)
+    return Citizen.InvokeNative(0xB5DED7B65C604FDF,doorHash)
 end
+
 
 
 --- 
@@ -178,6 +192,7 @@ end
 function RemoveDoorFromSystem(doorHash)
     Citizen.InvokeNative(0x464D8E1427156FE4,doorHash)
 end
+
 
 
 --- Door lock states:
@@ -198,13 +213,15 @@ function DoorSystemSetDoorState(doorHash,state)
 end
 
 
+
 --- 
 --- Native 0x160AA1B32F6139B8 (DOOR_SYSTEM_GET_DOOR_STATE)
 ---@param doorHash hash
 ---@return number
 function DoorSystemGetDoorState(doorHash)
-   return Citizen.InvokeNative(0x160AA1B32F6139B8,doorHash)
+    return Citizen.InvokeNative(0x160AA1B32F6139B8,doorHash)
 end
+
 
 
 --- 
@@ -216,6 +233,7 @@ function DoorSystemSetAutomaticRate(doorHash,rate)
 end
 
 
+
 --- 
 --- Native 0x9BA001CB45CBF627 (DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE)
 ---@param doorHash hash
@@ -223,6 +241,7 @@ end
 function DoorSystemSetAutomaticDistance(doorHash,distance)
     Citizen.InvokeNative(0x9BA001CB45CBF627,doorHash,distance)
 end
+
 
 
 --- Sets the ajar angle of a door.
@@ -236,6 +255,7 @@ function DoorSystemSetOpenRatio(doorHash,ajar,forceUpdate)
 end
 
 
+
 --- 
 --- Native 0x1F1FABFE9B2A1254 (_DOOR_SYSTEM_SET_ABLE_TO_CHANGE_OPEN_RATIO_WHILE_LOCKED)
 ---@param doorHash hash
@@ -245,13 +265,15 @@ function DoorSystemSetAbleToChangeOpenRatioWhileLocked(doorHash,p1)
 end
 
 
+
 --- Returns true if door is alredy registered with owner
 --- Native 0x4F89DAD4156BA145 (_IS_DOOR_REGISTERED_WITH_OWNER)
 ---@param doorHash hash
 ---@return boolean
 function IsDoorRegisteredWithOwner(doorHash)
-   return Citizen.InvokeNative(0x4F89DAD4156BA145,doorHash)
+    return Citizen.InvokeNative(0x4F89DAD4156BA145,doorHash)
 end
+
 
 
 --- 
@@ -262,13 +284,15 @@ function DoorSystemChangeScriptOwner(doorHash)
 end
 
 
+
 --- 
 --- Native 0x8433E1954BE323FC (_DOOR_SYSTEM_GET_AUTOMATIC_RATE)
 ---@param doorHash hash
 ---@return float
 function DoorSystemGetAutomaticRate(doorHash)
-   return Citizen.InvokeNative(0x8433E1954BE323FC,doorHash)
+    return Citizen.InvokeNative(0x8433E1954BE323FC,doorHash)
 end
+
 
 
 --- _ALLOW_* - _ATTACH_*
@@ -280,13 +304,15 @@ function DoorSystemSetAutomaticState(doorHash,disable)
 end
 
 
+
 --- 
 --- Native 0x65499865FCA6E5EC (DOOR_SYSTEM_GET_OPEN_RATIO)
 ---@param doorHash hash
 ---@return float
 function DoorSystemGetOpenRatio(doorHash)
-   return Citizen.InvokeNative(0x65499865FCA6E5EC,doorHash)
+    return Citizen.InvokeNative(0x65499865FCA6E5EC,doorHash)
 end
+
 
 
 --- 
@@ -294,8 +320,9 @@ end
 ---@param doorHash hash
 ---@return boolean
 function IsDoorRegisteredWithSystem(doorHash)
-   return Citizen.InvokeNative(0xC153C43EA202C8C1,doorHash)
+    return Citizen.InvokeNative(0xC153C43EA202C8C1,doorHash)
 end
+
 
 
 --- 
@@ -303,8 +330,9 @@ end
 ---@param doorHash hash
 ---@return boolean
 function IsDoorClosed(doorHash)
-   return Citizen.InvokeNative(0xC531EE8A1145A149,doorHash)
+    return Citizen.InvokeNative(0xC531EE8A1145A149,doorHash)
 end
+
 
 
 --- 
@@ -314,6 +342,7 @@ end
 function DoorSystemForceShut(doorHash,p1)
     Citizen.InvokeNative(0x276AAF0F1C7F2494,doorHash,p1)
 end
+
 
 
 --- 
@@ -326,8 +355,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function DoesObjectOfTypeExistAtCoords(x,y,z,radius,hash,p5)
-   return Citizen.InvokeNative(0xBFA48E2FF417213F,x,y,z,radius,hash,p5)
+    return Citizen.InvokeNative(0xBFA48E2FF417213F,x,y,z,radius,hash,p5)
 end
+
 
 
 --- 
@@ -346,8 +376,9 @@ end
 ---@param p11 boolean
 ---@return boolean
 function IsPointInAngledArea(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
-   return Citizen.InvokeNative(0x2A70BAE8883E4C81,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
+    return Citizen.InvokeNative(0x2A70BAE8883E4C81,p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
 end
+
 
 
 --- 
@@ -357,6 +388,7 @@ end
 function SetObjectAllowLowLodBuoyancy(object,toggle)
     Citizen.InvokeNative(0x4D89D607CB3DD1D2,object,toggle)
 end
+
 
 
 --- Adjust the physics parameters of a prop, or otherwise known as "object". This is useful for simulated gravity.
@@ -383,14 +415,16 @@ function SetObjectPhysicsParams(object,weight,p2,p3,p4,p5,gravity,p7,p8,p9,p10,b
 end
 
 
+
 --- 
 --- Native 0xB6FBFD079B8D0596 (GET_OBJECT_FRAGMENT_DAMAGE_HEALTH)
 ---@param p0 any
 ---@param p1 boolean
 ---@return float
 function GetObjectFragmentDamageHealth(p0,p1)
-   return Citizen.InvokeNative(0xB6FBFD079B8D0596,p0,p1)
+    return Citizen.InvokeNative(0xB6FBFD079B8D0596,p0,p1)
 end
+
 
 
 --- 
@@ -400,6 +434,7 @@ end
 function SetActivateObjectPhysicsAsSoonAsItIsUnfrozen(object,toggle)
     Citizen.InvokeNative(0x406137F8EF90EAF5,object,toggle)
 end
+
 
 
 --- 
@@ -412,12 +447,14 @@ function BreakObjectFragmentChild(object,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x8462BE2341A55B6F (BREAK_ALL_OBJECT_FRAGMENT_BONES)
 ---@param object object
 function BreakAllObjectFragmentBones(object)
     Citizen.InvokeNative(0x8462BE2341A55B6F,object)
 end
+
 
 
 --- 
@@ -429,12 +466,14 @@ function DamageBoneOnProp(object,bone)
 end
 
 
+
 --- 
 --- Native 0xF9C1681347C8BD15 (FIX_OBJECT_FRAGMENT)
 ---@param object object
 function FixObjectFragment(object)
     Citizen.InvokeNative(0xF9C1681347C8BD15,object)
 end
+
 
 
 --- 
@@ -446,6 +485,7 @@ function SetObjectBreakScale(object,scale)
 end
 
 
+
 --- 
 --- Native 0xB252BC036B525623 (TRACK_OBJECT_VISIBILITY)
 ---@param object object
@@ -454,13 +494,15 @@ function TrackObjectVisibility(object)
 end
 
 
+
 --- 
 --- Native 0x8B32ACE6326A7546 (IS_OBJECT_VISIBLE)
 ---@param object object
 ---@return boolean
 function IsObjectVisible(object)
-   return Citizen.InvokeNative(0x8B32ACE6326A7546,object)
+    return Citizen.InvokeNative(0x8B32ACE6326A7546,object)
 end
+
 
 
 --- 
@@ -472,6 +514,7 @@ function SetObjectTakesDamageFromCollidingWithBuildings(object,enabled)
 end
 
 
+
 --- 
 --- Native 0xE2B3B852B537C398 (ALLOW_DAMAGE_EVENTS_FOR_NON_NETWORKED_OBJECTS)
 ---@param enabled boolean
@@ -480,13 +523,15 @@ function AllowDamageEventsForNonNetworkedObjects(enabled)
 end
 
 
+
 --- 
 --- Native 0xFA3B61EC249B4674 (_GET_LIGHT_INTENSITY_FROM_OBJECT)
 ---@param object object
 ---@return float
 function GetLightIntensityFromObject(object)
-   return Citizen.InvokeNative(0xFA3B61EC249B4674,object)
+    return Citizen.InvokeNative(0xFA3B61EC249B4674,object)
 end
+
 
 
 --- 
@@ -498,6 +543,7 @@ function SetLightIntensityForObject(object,lightIntensity)
 end
 
 
+
 --- Params: value = 0.0 - 586.67 (?)
 --- Native 0x63E39F09310F481F (_SET_LIGHT_TRANSLUCENCY_FOR_OBJECT)
 ---@param object object
@@ -505,6 +551,7 @@ end
 function SetLightTranslucencyForObject(object,value)
     Citizen.InvokeNative(0x63E39F09310F481F,object,value)
 end
+
 
 
 --- 
@@ -516,6 +563,7 @@ function SetLightScatteringDisabledForObject(object,disable)
 end
 
 
+
 --- 
 --- Native 0xB48FCED898292E52 (GET_RAYFIRE_MAP_OBJECT)
 ---@param x float
@@ -525,8 +573,9 @@ end
 ---@param name string
 ---@return object
 function GetRayfireMapObject(x,y,z,radius,name)
-   return Citizen.InvokeNative(0xB48FCED898292E52,x,y,z,radius,name)
+    return Citizen.InvokeNative(0xB48FCED898292E52,x,y,z,radius,name)
 end
+
 
 
 --- 
@@ -538,13 +587,15 @@ function SetStateOfRayfireMapObject(object,state)
 end
 
 
+
 --- 
 --- Native 0x899BA936634A322E (GET_STATE_OF_RAYFIRE_MAP_OBJECT)
 ---@param object object
 ---@return number
 function GetStateOfRayfireMapObject(object)
-   return Citizen.InvokeNative(0x899BA936634A322E,object)
+    return Citizen.InvokeNative(0x899BA936634A322E,object)
 end
+
 
 
 --- 
@@ -552,8 +603,9 @@ end
 ---@param object object
 ---@return boolean
 function DoesRayfireMapObjectExist(object)
-   return Citizen.InvokeNative(0x52AF537A0C5B8AAD,object)
+    return Citizen.InvokeNative(0x52AF537A0C5B8AAD,object)
 end
+
 
 
 --- 
@@ -561,8 +613,9 @@ end
 ---@param object object
 ---@return float
 function GetRayfireMapObjectAnimPhase(object)
-   return Citizen.InvokeNative(0x260EE4FDBDF4DB01,object)
+    return Citizen.InvokeNative(0x260EE4FDBDF4DB01,object)
 end
+
 
 
 --- https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/Placement%20Flags
@@ -581,8 +634,9 @@ end
 ---@param p10 any
 ---@return pickup
 function CreatePickup(pickupHash,x,y,z,flags,p5,p6,modelHash,p8,p9,p10)
-   return Citizen.InvokeNative(0xFBA08C503DD5FA58,pickupHash,x,y,z,flags,p5,p6,modelHash,p8,p9,p10)
+    return Citizen.InvokeNative(0xFBA08C503DD5FA58,pickupHash,x,y,z,flags,p5,p6,modelHash,p8,p9,p10)
 end
+
 
 
 --- flags: see CREATE_PICKUP
@@ -604,8 +658,9 @@ end
 ---@param p14 any
 ---@return pickup
 function CreatePickupRotate(pickupHash,posX,posY,posZ,rotX,rotY,rotZ,flags,p8,p9,p10,modelHash,p12,p13,p14)
-   return Citizen.InvokeNative(0x891804727E0A98B7,pickupHash,posX,posY,posZ,rotX,rotY,rotZ,flags,p8,p9,p10,modelHash,p12,p13,p14)
+    return Citizen.InvokeNative(0x891804727E0A98B7,pickupHash,posX,posY,posZ,rotX,rotY,rotZ,flags,p8,p9,p10,modelHash,p12,p13,p14)
 end
+
 
 
 --- flags: see CREATE_PICKUP
@@ -623,8 +678,9 @@ end
 ---@param p10 float
 ---@return object
 function CreateAmbientPickup(pickupHash,x,y,z,flags,value,modelHash,p7,p8,p9,p10)
-   return Citizen.InvokeNative(0x673966A0C0FD7171,pickupHash,x,y,z,flags,value,modelHash,p7,p8,p9,p10)
+    return Citizen.InvokeNative(0x673966A0C0FD7171,pickupHash,x,y,z,flags,value,modelHash,p7,p8,p9,p10)
 end
+
 
 
 --- 
@@ -637,8 +693,9 @@ end
 ---@param modelHash hash
 ---@return object
 function CreatePortablePickup(pickupHash,x,y,z,placeOnGround,modelHash)
-   return Citizen.InvokeNative(0x2EAF1FDB2FB55698,pickupHash,x,y,z,placeOnGround,modelHash)
+    return Citizen.InvokeNative(0x2EAF1FDB2FB55698,pickupHash,x,y,z,placeOnGround,modelHash)
 end
+
 
 
 --- 
@@ -650,12 +707,14 @@ function AttachPortablePickupToPed(pickupObject,ped)
 end
 
 
+
 --- 
 --- Native 0xCF463D1E9A0AECB1 (DETACH_PORTABLE_PICKUP_FROM_PED)
 ---@param pickupObject object
 function DetachPortablePickupFromPed(pickupObject)
     Citizen.InvokeNative(0xCF463D1E9A0AECB1,pickupObject)
 end
+
 
 
 --- 
@@ -667,6 +726,7 @@ function HidePickupObject(pickupObject,toggle)
 end
 
 
+
 --- 
 --- Native 0x0BF3B3BD47D79C08 (SET_MAX_NUM_PORTABLE_PICKUPS_CARRIED_BY_PLAYER)
 ---@param modelHash hash
@@ -676,12 +736,14 @@ function SetMaxNumPortablePickupsCarriedByPlayer(modelHash,p1)
 end
 
 
+
 --- 
 --- Native 0x78857FC65CADB909 (SET_LOCAL_PLAYER_CAN_COLLECT_PORTABLE_PICKUPS)
 ---@param toggle boolean
 function SetLocalPlayerCanCollectPortablePickups(toggle)
     Citizen.InvokeNative(0x78857FC65CADB909,toggle)
 end
+
 
 
 --- 
@@ -694,8 +756,9 @@ end
 ---@param p5 any
 ---@return vector3
 function GetSafePickupCoords(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0x6E16BC2503FF1FF0,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0x6E16BC2503FF1FF0,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -703,8 +766,9 @@ end
 ---@param pickup pickup
 ---@return vector3
 function GetPickupCoords(pickup)
-   return Citizen.InvokeNative(0x225B8B35C88029B3,pickup)
+    return Citizen.InvokeNative(0x225B8B35C88029B3,pickup)
 end
+
 
 
 --- 
@@ -715,13 +779,15 @@ function RemoveAllPickupsOfType(pickupHash)
 end
 
 
+
 --- 
 --- Native 0x80EC48E6679313F9 (HAS_PICKUP_BEEN_COLLECTED)
 ---@param pickup pickup
 ---@return boolean
 function HasPickupBeenCollected(pickup)
-   return Citizen.InvokeNative(0x80EC48E6679313F9,pickup)
+    return Citizen.InvokeNative(0x80EC48E6679313F9,pickup)
 end
+
 
 
 --- 
@@ -732,6 +798,7 @@ function RemovePickup(pickup)
 end
 
 
+
 --- 
 --- Native 0x634C19521485AB25 (SET_PICKUP_DO_NOT_AUTO_PLACE_ON_GROUND)
 ---@param pickupObject object
@@ -740,13 +807,15 @@ function SetPickupDoNotAutoPlaceOnGround(pickupObject)
 end
 
 
+
 --- 
 --- Native 0xAFC1CA75AD4074D1 (DOES_PICKUP_EXIST)
 ---@param pickup pickup
 ---@return boolean
 function DoesPickupExist(pickup)
-   return Citizen.InvokeNative(0xAFC1CA75AD4074D1,pickup)
+    return Citizen.InvokeNative(0xAFC1CA75AD4074D1,pickup)
 end
+
 
 
 --- 
@@ -754,8 +823,9 @@ end
 ---@param pickupObject object
 ---@return boolean
 function DoesPickupObjectExist(pickupObject)
-   return Citizen.InvokeNative(0xD9EFB6DBF7DAAEA3,pickupObject)
+    return Citizen.InvokeNative(0xD9EFB6DBF7DAAEA3,pickupObject)
 end
+
 
 
 --- 
@@ -763,8 +833,9 @@ end
 ---@param pickup pickup
 ---@return object
 function GetPickupObject(pickup)
-   return Citizen.InvokeNative(0x5099BC55630B25AE,pickup)
+    return Citizen.InvokeNative(0x5099BC55630B25AE,pickup)
 end
+
 
 
 --- 
@@ -772,8 +843,9 @@ end
 ---@param object object
 ---@return boolean
 function IsObjectAPortablePickup(object)
-   return Citizen.InvokeNative(0x0378C08504160D0D,object)
+    return Citizen.InvokeNative(0x0378C08504160D0D,object)
 end
+
 
 
 --- 
@@ -781,8 +853,9 @@ end
 ---@param pickupHash hash
 ---@return boolean
 function IsPickupTypeValid(pickupHash)
-   return Citizen.InvokeNative(0x007BD043587F7C82,pickupHash)
+    return Citizen.InvokeNative(0x007BD043587F7C82,pickupHash)
 end
+
 
 
 --- 
@@ -794,8 +867,9 @@ end
 ---@param radius float
 ---@return boolean
 function DoesPickupOfTypeExistInArea(pickupHash,x,y,z,radius)
-   return Citizen.InvokeNative(0xF9C36251F6E48E33,pickupHash,x,y,z,radius)
+    return Citizen.InvokeNative(0xF9C36251F6E48E33,pickupHash,x,y,z,radius)
 end
+
 
 
 --- 
@@ -807,12 +881,14 @@ function SetPickupRegenerationTime(pickup,duration)
 end
 
 
+
 --- 
 --- Native 0x758A5C1B3B1E1990 (FORCE_PICKUP_REGENERATE)
 ---@param p0 any
 function ForcePickupRegenerate(p0)
     Citizen.InvokeNative(0x758A5C1B3B1E1990,p0)
 end
+
 
 
 --- Params: p2 controls whether to make pickups usable/collectable or not in networked games
@@ -825,6 +901,7 @@ function SetNetworkPickupUsableForPlayer(player,pickupHash,isUsable)
 end
 
 
+
 --- Maximum amount of pickup models that can be disallowed is 10.
 ---Old name: _SET_LOCAL_PLAYER_CAN_USE_PICKUPS_WITH_THIS_MODEL
 --- Native 0x88EAEC617CD26926 (SET_LOCAL_PLAYER_PERMITTED_TO_COLLECT_PICKUPS_WITH_MODEL)
@@ -833,6 +910,7 @@ end
 function SetLocalPlayerPermittedToCollectPickupsWithModel(modelHash,toggle)
     Citizen.InvokeNative(0x88EAEC617CD26926,modelHash,toggle)
 end
+
 
 
 --- 
@@ -844,6 +922,7 @@ function BlockPickupFromPlayerCollection(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x92E87F60F21A0C3A (SET_PICKUP_NOT_LOOTABLE)
 ---@param p0 any
@@ -851,6 +930,7 @@ end
 function SetPickupNotLootable(p0,p1)
     Citizen.InvokeNative(0x92E87F60F21A0C3A,p0,p1)
 end
+
 
 
 --- 
@@ -863,6 +943,7 @@ function SetTeamPickupObject(object,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x92AEFB5F6E294023 (PREVENT_COLLECTION_OF_PORTABLE_PICKUP)
 ---@param object object
@@ -873,12 +954,14 @@ function PreventCollectionOfPortablePickup(object,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x318516E02DE3ECE2 (SET_PICKUP_GENERATION_RANGE_MULTIPLIER)
 ---@param multiplier float
 function SetPickupGenerationRangeMultiplier(multiplier)
     Citizen.InvokeNative(0x318516E02DE3ECE2,multiplier)
 end
+
 
 
 --- 
@@ -890,6 +973,7 @@ function SetPickupUncollectable(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x81218CE01B672219 (SET_PICKUP_HIDDEN_WHEN_UNCOLLECTABLE)
 ---@param p0 any
@@ -899,12 +983,14 @@ function SetPickupHiddenWhenUncollectable(p0,p1)
 end
 
 
+
 --- 
 --- Native 0xAC9AE68F0A463752 (_SET_AMBIENT_PICKUP_LIFETIME)
 ---@param lifetime number
 function SetAmbientPickupLifetime(lifetime)
     Citizen.InvokeNative(0xAC9AE68F0A463752,lifetime)
 end
+
 
 
 --- 
@@ -916,6 +1002,7 @@ function SetPickupParticleFxSpawn(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x1607C7D9B3021DF5 (SET_PICKUP_PARTICLE_FX_HIGHLIGHT)
 ---@param p0 any
@@ -923,6 +1010,7 @@ end
 function SetPickupParticleFxHighlight(p0,p1)
     Citizen.InvokeNative(0x1607C7D9B3021DF5,p0,p1)
 end
+
 
 
 --- 
@@ -934,6 +1022,7 @@ function SuppressPickupRewardType(rewardType,suppress)
 end
 
 
+
 --- 
 --- Native 0x00EE08603EADEE92 (_SET_PICKUP_COLLECTABLE_ON_MOUNT)
 ---@param object object
@@ -942,13 +1031,15 @@ function SetPickupCollectableOnMount(object)
 end
 
 
+
 --- 
 --- Native 0x08F96CA6C551AD51 (GET_WEAPON_TYPE_FROM_PICKUP_TYPE)
 ---@param pickupHash hash
 ---@return hash
 function GetWeaponTypeFromPickupType(pickupHash)
-   return Citizen.InvokeNative(0x08F96CA6C551AD51,pickupHash)
+    return Citizen.InvokeNative(0x08F96CA6C551AD51,pickupHash)
 end
+
 
 
 --- 
@@ -956,8 +1047,9 @@ end
 ---@param pickupHash hash
 ---@return hash
 function GetAmmoTypeFromPickupType(pickupHash)
-   return Citizen.InvokeNative(0x44B09A23D728045A,pickupHash)
+    return Citizen.InvokeNative(0x44B09A23D728045A,pickupHash)
 end
+
 
 
 --- Alt name: _SET_OBJECT_TINT
@@ -970,13 +1062,15 @@ function SetObjectTintIndex(object,textureVariation)
 end
 
 
+
 --- Returns float value to be used with _SET_LIGHT_INTENSITY_FOR_OBJECT
 --- Native 0x3397CD4E0353DFBA (_GET_OBJECT_LIGHT_INTENSITY)
 ---@param object object
 ---@return float
 function GetObjectLightIntensity(object)
-   return Citizen.InvokeNative(0x3397CD4E0353DFBA,object)
+    return Citizen.InvokeNative(0x3397CD4E0353DFBA,object)
 end
+
 
 
 --- 
@@ -988,6 +1082,7 @@ function SetObjectBurnOpacity(object,opacity)
 end
 
 
+
 --- 
 --- Native 0xC8E21C1677DC5E6F (_SET_OBJECT_BURN_INTENSITY)
 ---@param object object
@@ -995,6 +1090,7 @@ end
 function SetObjectBurnIntensity(object,intensity)
     Citizen.InvokeNative(0xC8E21C1677DC5E6F,object,intensity)
 end
+
 
 
 --- Seems to mostly have effect on wood-made objects https://imgur.com/a/32oQvOn
@@ -1007,12 +1103,14 @@ function SetObjectBurnLevel(object,burnLevel,affectAsh)
 end
 
 
+
 --- 
 --- Native 0xF40AB58D83C35027 (_RESET_OBJECT_VELOCITY)
 ---@param object object
 function ResetObjectVelocity(object)
     Citizen.InvokeNative(0xF40AB58D83C35027,object)
 end
+
 
 
 --- p2 is usually the same as speed parameter
@@ -1025,13 +1123,15 @@ function SetObjectBurnSpeed(object,speed,p2)
 end
 
 
+
 --- Old name: _GET_PICKUP_HASH
 --- Native 0x5EAAD83F8CFB4575 (CONVERT_OLD_PICKUP_TYPE_TO_NEW)
 ---@param pickupHash hash
 ---@return hash
 function ConvertOldPickupTypeToNew(pickupHash)
-   return Citizen.InvokeNative(0x5EAAD83F8CFB4575,pickupHash)
+    return Citizen.InvokeNative(0x5EAAD83F8CFB4575,pickupHash)
 end
+
 
 
 --- 
@@ -1045,6 +1145,7 @@ function SetForceObjectThisFrame(x,y,z,p3)
 end
 
 
+
 --- Old name: _MARK_OBJECT_FOR_DELETION
 --- Native 0xADBE4809F19F927A (ONLY_CLEAN_UP_OBJECT_WHEN_OUT_OF_RANGE)
 ---@param object object
@@ -1053,13 +1154,15 @@ function OnlyCleanUpObjectWhenOutOfRange(object)
 end
 
 
+
 --- 
 --- Native 0xB6CBD40F8EA69E8A (CREATE_OBJECT_SKELETON)
 ---@param object object
 ---@return boolean
 function CreateObjectSkeleton(object)
-   return Citizen.InvokeNative(0xB6CBD40F8EA69E8A,object)
+    return Citizen.InvokeNative(0xB6CBD40F8EA69E8A,object)
 end
+
 
 
 --- _PRE* or _Q* or _RE*
@@ -1068,6 +1171,7 @@ end
 function MakeItemCarriable(object)
     Citizen.InvokeNative(0x1461DF6DB886BE3F,object)
 end
+
 
 
 --- Sets object as auto-jumpable by horse.
@@ -1079,6 +1183,7 @@ function SetAutoJumpableByHorse(object,p1)
 end
 
 
+
 --- Sets object as not jumpable by horse.
 --- Native 0xE1C708BA4885796B (_SET_NOT_JUMPABLE_BY_HORSE)
 ---@param object object
@@ -1086,6 +1191,7 @@ end
 function SetNotJumpableByHorse(object,p1)
     Citizen.InvokeNative(0xE1C708BA4885796B,object,p1)
 end
+
 
 
 --- 
@@ -1097,6 +1203,7 @@ function SetObjectKickable(object,kickable)
 end
 
 
+
 --- 
 --- Native 0xE124889AE0521FCF (SET_CUSTOM_TEXTURES_ON_OBJECT)
 ---@param object object
@@ -1106,5 +1213,6 @@ end
 function SetCustomTexturesOnObject(object,txdHash,p2,p3)
     Citizen.InvokeNative(0xE124889AE0521FCF,object,txdHash,p2,p3)
 end
+
 
 

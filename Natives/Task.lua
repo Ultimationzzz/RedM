@@ -8,6 +8,7 @@ function TaskPause(ped,ms)
 end
 
 
+
 --- Makes the specified ped stand still for (time) milliseconds.
 --- Native 0x919BE13EED931959 (TASK_STAND_STILL)
 ---@param ped number
@@ -17,6 +18,7 @@ function TaskStandStill(ped,time)
 end
 
 
+
 --- 
 --- Native 0x0AE4086104E067B1 (TASK_JUMP)
 ---@param ped number
@@ -24,6 +26,7 @@ end
 function TaskJump(ped,unused)
     Citizen.InvokeNative(0x0AE4086104E067B1,ped,unused)
 end
+
 
 
 --- 
@@ -38,6 +41,7 @@ function TaskJump2(ped,x,y,z,entity)
 end
 
 
+
 --- 
 --- Native 0x3EB1FE9E8E908E15 (TASK_COWER)
 ---@param ped number
@@ -47,6 +51,7 @@ end
 function TaskCower(ped,duration,pedToCowerFrom,p3)
     Citizen.InvokeNative(0x3EB1FE9E8E908E15,ped,duration,pedToCowerFrom,p3)
 end
+
 
 
 --- flags: 0 = HANDS_UP_NOTHING; 1 = HANDS_UP_STRAIGHT_TO_LOOP
@@ -61,6 +66,7 @@ function TaskHandsUp(ped,duration,facingPed,timeToFacePed,flags)
 end
 
 
+
 --- 
 --- Native 0xF90427F00A495A28 (TASK_KNOCKED_OUT)
 ---@param ped number
@@ -69,6 +75,7 @@ end
 function TaskKnockedOut(ped,p1,permanently)
     Citizen.InvokeNative(0xF90427F00A495A28,ped,p1,permanently)
 end
+
 
 
 --- 
@@ -81,6 +88,7 @@ function TaskKnockedOutAndHogtied(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xA98FCAFD7893C834 (UPDATE_TASK_HANDS_UP_DURATION)
 ---@param ped number
@@ -90,6 +98,7 @@ function UpdateTaskHandsUpDuration(ped,duration)
 end
 
 
+
 --- 
 --- Native 0xA14B5FBF986BAC23 (TASK_DUCK)
 ---@param ped number
@@ -97,6 +106,7 @@ end
 function TaskDuck(ped,p1)
     Citizen.InvokeNative(0xA14B5FBF986BAC23,ped,p1)
 end
+
 
 
 --- 
@@ -112,6 +122,7 @@ function TaskBoardVehicle(ped,vehicle,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xA7C6854BB5A4192A (_TASK_DISEMBARK_VEHICLE)
 ---@param p0 any
@@ -123,6 +134,7 @@ end
 function TaskDisembarkVehicle(p0,vehicle,p2,p3,p4,p5)
     Citizen.InvokeNative(0xA7C6854BB5A4192A,p0,vehicle,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -137,6 +149,7 @@ function TaskBoardVehicle2(ped,p1,p2,p3,flags)
 end
 
 
+
 --- flags: See TASK_ENTER_VEHICLE
 --- Native 0x0A11F3BDEC03ED5F (TASK_DISEMBARK_NEAREST_TRAIN_CARRIAGE)
 ---@param ped number
@@ -145,6 +158,7 @@ end
 function TaskDisembarkNearestTrainCarriage(ped,p1,flags)
     Citizen.InvokeNative(0x0A11F3BDEC03ED5F,ped,p1,flags)
 end
+
 
 
 --- flags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eEnterExitVehicleFlags
@@ -161,6 +175,7 @@ function TaskEnterVehicle(ped,vehicle,timeout,seat,speed,flag,p6)
 end
 
 
+
 --- flags: See TASK_ENTER_VEHICLE
 --- Native 0xD3DBCE61A490BE02 (TASK_LEAVE_VEHICLE)
 ---@param ped number
@@ -170,6 +185,7 @@ end
 function TaskLeaveVehicle(ped,vehicle,flags,unkPed)
     Citizen.InvokeNative(0xD3DBCE61A490BE02,ped,vehicle,flags,unkPed)
 end
+
 
 
 --- timer: in ms, if it reaches 0 it will auto warp the ped on the horse
@@ -189,6 +205,7 @@ function TaskMountAnimal(ped,mount,timer,seatIndex,pedSpeed,mountStyle,p6,p7)
 end
 
 
+
 --- Dismounts the ped from the animal it's mounted on. taskFlag affects what side the rider gets off. p2-p5 are almost always 0.
 ---flags: See TASK_ENTER_VEHICLE
 --- Native 0x48E92D3DDE23C23A (TASK_DISMOUNT_ANIMAL)
@@ -203,6 +220,7 @@ function TaskDismountAnimal(rider,taskFlag,p2,p3,p4,targetPed)
 end
 
 
+
 --- 
 --- Native 0x9030AD4B6207BFE8 (TASK_HITCH_ANIMAL)
 ---@param ped number
@@ -211,6 +229,7 @@ end
 function TaskHitchAnimal(ped,scenarioPoint,flag)
     Citizen.InvokeNative(0x9030AD4B6207BFE8,ped,scenarioPoint,flag)
 end
+
 
 
 --- stopRange: how close vehicle will get to destination before stopping, default 4.0
@@ -232,6 +251,7 @@ function TaskVehicleDriveToCoord(ped,vehicle,x,y,z,speed,style,vehicleModel,driv
 end
 
 
+
 --- 
 --- Native 0xF0108F01FB105DA2 (_TASK_VEHICLE_DRIVE_TO_COORD_2)
 ---@param ped number
@@ -248,6 +268,7 @@ function TaskVehicleDriveToCoord2(ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x480142959D337D00 (TASK_VEHICLE_DRIVE_WANDER)
 ---@param ped number
@@ -257,6 +278,7 @@ end
 function TaskVehicleDriveWander(ped,vehicle,speed,drivingStyle)
     Citizen.InvokeNative(0x480142959D337D00,ped,vehicle,speed,drivingStyle)
 end
+
 
 
 --- 
@@ -278,6 +300,7 @@ end
 function TaskFollowToOffsetOfEntity(ped,entity,offsetX,offsetY,offsetZ,movementSpeed,timeout,stoppingRange,persistFollowing,p9,walkOnly,p11,p12,p13)
     Citizen.InvokeNative(0x304AE42E357B8C7E,ped,entity,offsetX,offsetY,offsetZ,movementSpeed,timeout,stoppingRange,persistFollowing,p9,walkOnly,p11,p12,p13)
 end
+
 
 
 --- 
@@ -302,6 +325,7 @@ function TaskFollowToOffsetOfCoord(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p1
 end
 
 
+
 --- 
 --- Native 0xD76B57B44F1E6F8B (TASK_GO_STRAIGHT_TO_COORD)
 ---@param ped number
@@ -316,6 +340,7 @@ end
 function TaskGoStraightToCoord(ped,x,y,z,moveBlendSpeedY,p5,p6,p7,p8)
     Citizen.InvokeNative(0xD76B57B44F1E6F8B,ped,x,y,z,moveBlendSpeedY,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -333,6 +358,7 @@ function TaskGoStraightToCoordRelativeToEntity(ped,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x8AA1593AEC087A29 (TASK_MOVE_IN_TRAFFIC)
 ---@param ped number
@@ -342,6 +368,7 @@ end
 function TaskMoveInTraffic(ped,p1,p2,p3)
     Citizen.InvokeNative(0x8AA1593AEC087A29,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -359,6 +386,7 @@ function TaskMoveInTrafficToDestination(ped,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x13DED0BC45600FE1 (TASK_MOVE_IN_TRAFFIC_AWAY_FROM_ENTITY)
 ---@param ped number
@@ -369,6 +397,7 @@ end
 function TaskMoveInTrafficAwayFromEntity(ped,p1,p2,p3,p4)
     Citizen.InvokeNative(0x13DED0BC45600FE1,ped,p1,p2,p3,p4)
 end
+
 
 
 --- Params: moveBlendRatio commonly 1.25f, p5 is always 0 in R* Scripts
@@ -384,6 +413,7 @@ function TaskMoveFollowRoadUsingNavmesh(ped,moveBlendRatio,x,y,z,p5)
 end
 
 
+
 --- Makes the specified ped achieve the specified heading.
 ---pedHandle: The handle of the ped to assign the task to.
 ---heading: The desired heading.
@@ -397,11 +427,13 @@ function TaskAchieveHeading(ped,heading,timeout)
 end
 
 
+
 --- Clears the current point route. Call this before TASK_EXTEND_ROUTE and TASK_FOLLOW_POINT_ROUTE.
 --- Native 0x841142A1376E9006 (TASK_FLUSH_ROUTE)
 function TaskFlushRoute()
     Citizen.InvokeNative(0x841142A1376E9006)
 end
+
 
 
 --- Adds a new point to the current point route. Call TASK_FLUSH_ROUTE before the first call to this. Call TASK_FOLLOW_POINT_ROUTE to make the Ped go the route.
@@ -415,6 +447,7 @@ function TaskExtendRoute(x,y,z)
 end
 
 
+
 --- 
 --- Native 0x0E14C5550DC3CD1D (TASK_FOLLOW_POINT_ROUTE)
 ---@param ped number
@@ -426,6 +459,7 @@ end
 function TaskFollowPointRoute(ped,p1,p2,p3,p4,p5)
     Citizen.InvokeNative(0x0E14C5550DC3CD1D,ped,p1,p2,p3,p4,p5)
 end
+
 
 
 --- flags:
@@ -450,6 +484,7 @@ function TaskEnterAnimScene(ped,animScene,entityName,playbackListName,enterSpeed
 end
 
 
+
 --- 
 --- Native 0x4AA5AA97C65E4A2F (TASK_MOVE_BE_IN_FORMATION)
 ---@param ped number
@@ -464,6 +499,7 @@ function TaskMoveBeInFormation(ped,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x6A071245EB0D1882 (TASK_GO_TO_ENTITY)
 ---@param ped number
@@ -476,6 +512,7 @@ end
 function TaskGoToEntity(ped,target,duration,distance,speed,p5,p6)
     Citizen.InvokeNative(0x6A071245EB0D1882,ped,target,duration,distance,speed,p5,p6)
 end
+
 
 
 --- 
@@ -496,6 +533,7 @@ function TaskFollowAndConverseWithPed(ped,targetPed,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0x8AC76D1408731732 (TASK_WANDER_AND_CONVERSE_WITH_PED)
 ---@param ped number
@@ -505,6 +543,7 @@ end
 function TaskWanderAndConverseWithPed(ped,p1,p2,p3)
     Citizen.InvokeNative(0x8AC76D1408731732,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -523,6 +562,7 @@ function TaskLeadAndConverse(ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x8D7F2A63688C20A4 (TASK_SEEK_CLEAR_LOS_TO_ENTITY)
 ---@param ped number
@@ -533,6 +573,7 @@ end
 function TaskSeekClearLosToEntity(ped,entity,p2,p3,p4)
     Citizen.InvokeNative(0x8D7F2A63688C20A4,ped,entity,p2,p3,p4)
 end
+
 
 
 --- enum eWhistleType
@@ -552,6 +593,7 @@ function TaskGoToWhistle(ped,p1,whistleType)
 end
 
 
+
 --- 
 --- Native 0x9A7A4A54596FE09D (TASK_LEAD_HORSE)
 ---@param ped number
@@ -561,12 +603,14 @@ function TaskLeadHorse(ped,horse)
 end
 
 
+
 --- 
 --- Native 0xED27560703F37258 (TASK_STOP_LEADING_HORSE)
 ---@param ped number
 function TaskStopLeadingHorse(ped)
     Citizen.InvokeNative(0xED27560703F37258,ped)
 end
+
 
 
 --- fleeType: see TASK_FLEE_COORD
@@ -588,6 +632,7 @@ function TaskFleeFromCoord(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
 end
 
 
+
 --- fleeType: see TASK_FLEE_COORD
 --- Native 0x7B74D8EEDE9B5727 (_TASK_FLEE_FROM_PED)
 ---@param ped number
@@ -605,6 +650,7 @@ function TaskFleeFromPed(ped,fleeFromTarget,x,y,z,distance,p6,p7,p8,targetPed)
 end
 
 
+
 --- Makes the specified ped flee the specified distance from the specified position.
 ---fleeType: see TASK_FLEE_COORD
 --- Native 0x94587F17E9C365D5 (TASK_SMART_FLEE_COORD)
@@ -619,6 +665,7 @@ end
 function TaskSmartFleeCoord(ped,x,y,z,distance,time,fleeType,fleeSpeed)
     Citizen.InvokeNative(0x94587F17E9C365D5,ped,x,y,z,distance,time,fleeType,fleeSpeed)
 end
+
 
 
 --- Makes a ped run away from another ped (fleeFromTarget)
@@ -639,6 +686,7 @@ function TaskSmartFleePed(ped,fleeFromTarget,fleeDistance,fleeTime,fleeType,flee
 end
 
 
+
 --- Params: p5 = some flag?, p6 = -1.0f, p8 = 0 in R* Scripts
 ---fleeStyle: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eFleeStyle
 --- Native 0x58428248BF4B64E4 (TASK_FLEE_COORD)
@@ -656,6 +704,7 @@ function TaskFleeCoord(ped,x,y,z,fleeStyle,p5,p6,duration,p8)
 end
 
 
+
 --- Params: p4 = -1.0f, p5 = -1, p6 = 0 in R* Scripts
 ---fleeStyle: see TASK_FLEE_COORD
 --- Native 0xFD45175A6DFD7CE9 (TASK_FLEE_PED)
@@ -669,6 +718,7 @@ end
 function TaskFleePed(ped,fleeFromTarget,fleeStyle,flag,p4,p5,p6)
     Citizen.InvokeNative(0xFD45175A6DFD7CE9,ped,fleeFromTarget,fleeStyle,flag,p4,p5,p6)
 end
+
 
 
 --- 
@@ -690,6 +740,7 @@ function TaskFleeCoordVia(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
 end
 
 
+
 --- 
 --- Native 0x5802E0F910E4CF1D (TASK_FLEE_PED_VIA)
 ---@param p0 any
@@ -707,6 +758,7 @@ function TaskFleePedVia(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- 
 --- Native 0xE8F1A5B4CED3725A (_ADD_FLEE_TARGET_COORDS)
 ---@param ped number
@@ -719,6 +771,7 @@ function AddFleeTargetCoords(ped,x,y,z,p4)
 end
 
 
+
 --- Params: p2 is always -1.f in R* Scripts
 --- Native 0x3923EC958249657D (ADD_FLEE_TARGET_PED)
 ---@param ped number
@@ -729,6 +782,7 @@ function AddFleeTargetPed(ped,targetPed,p2)
 end
 
 
+
 --- 
 --- Native 0xE86A537B5A3C297C (TASK_FLY_AWAY)
 ---@param ped number
@@ -736,6 +790,7 @@ end
 function TaskFlyAway(ped,fleeFromTarget)
     Citizen.InvokeNative(0xE86A537B5A3C297C,ped,fleeFromTarget)
 end
+
 
 
 --- 
@@ -752,6 +807,7 @@ function TaskFlyToCoord(ped,travelMbr,x,y,z,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x72997893BFB8ECCC (TASK_FLYING_CIRCLE)
 ---@param ped number
@@ -766,6 +822,7 @@ function TaskFlyingCircle(ped,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x04ACFAC71E6858F9 (TASK_WALK_AWAY)
 ---@param ped number
@@ -773,6 +830,7 @@ end
 function TaskWalkAway(ped,entity)
     Citizen.InvokeNative(0x04ACFAC71E6858F9,ped,entity)
 end
+
 
 
 --- 
@@ -783,6 +841,7 @@ end
 function TaskShockingEventReact(ped,p1,p2)
     Citizen.InvokeNative(0x452419CBD838065B,ped,p1,p2)
 end
+
 
 
 --- Makes a ped react to an entity.
@@ -802,6 +861,7 @@ function TaskReact(ped,reactingTo,x,y,z,reactionName,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0xE054346CA3A0F315 (TASK_WANDER_IN_AREA)
 ---@param ped number
@@ -817,6 +877,7 @@ function TaskWanderInArea(ped,x,y,z,radius,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x9FDA168777B28424 (TASK_WANDER_IN_VOLUME)
 ---@param ped number
@@ -827,6 +888,7 @@ end
 function TaskWanderInVolume(ped,volume,p2,p3,p4)
     Citizen.InvokeNative(0x9FDA168777B28424,ped,volume,p2,p3,p4)
 end
+
 
 
 --- Makes ped walk around the area.
@@ -840,6 +902,7 @@ function TaskWanderStandard(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x527EA3DB8BC7F03B (TASK_WANDER_SWIM)
 ---@param ped number
@@ -847,6 +910,7 @@ end
 function TaskWanderSwim(ped,p1)
     Citizen.InvokeNative(0x527EA3DB8BC7F03B,ped,p1)
 end
+
 
 
 --- 
@@ -861,6 +925,7 @@ function TaskPlantBomb(ped,x,y,z,heading)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/tree/master/tasks/TASK_HORSE_ACTION
 ---Params: p2, p3 are set to 0 in R* Scripts
 --- Native 0xA09CFD29100F06C3 (TASK_HORSE_ACTION)
@@ -871,6 +936,7 @@ end
 function TaskHorseAction(ped,action,targetPed,p3)
     Citizen.InvokeNative(0xA09CFD29100F06C3,ped,action,targetPed,p3)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/tasks/TASK_ANIMAL_INTERACTION
@@ -885,6 +951,7 @@ function TaskAnimalInteraction(ped,targetPed,interactionType,interactionModel,sk
 end
 
 
+
 --- 
 --- Native 0xF960F3D57B660E96 (TASK_COMBAT_ANIMAL_WARN)
 ---@param ped number
@@ -893,6 +960,7 @@ end
 function TaskCombatAnimalWarn(ped,p1,p2)
     Citizen.InvokeNative(0xF960F3D57B660E96,ped,p1,p2)
 end
+
 
 
 --- 
@@ -909,6 +977,7 @@ function TaskCombatAnimalChargePed(ped,targetPed,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x37C13863ABA1B4A3 (TASK_AMBIENT_ANIMAL_STALK)
 ---@param ped number
@@ -919,6 +988,7 @@ function TaskAmbientAnimalStalk(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x4B39D8F9D0FE7749 (TASK_AMBIENT_ANIMAL_HUNT)
 ---@param ped number
@@ -927,6 +997,7 @@ end
 function TaskAmbientAnimalHunt(ped,p1,p2)
     Citizen.InvokeNative(0x4B39D8F9D0FE7749,ped,p1,p2)
 end
+
 
 
 --- 
@@ -941,6 +1012,7 @@ function TaskAnimalUnalerted(ped,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x979D93372FC8C565 (TASK_ANIMAL_ALERTED)
 ---@param ped number
@@ -949,6 +1021,7 @@ end
 function TaskAnimalAlerted(ped,p1,p2)
     Citizen.InvokeNative(0x979D93372FC8C565,ped,p1,p2)
 end
+
 
 
 --- 
@@ -961,6 +1034,7 @@ function TaskAnimalFlee(ped,targetPed,p2)
 end
 
 
+
 --- 
 --- Native 0xBD7949BD07299672 (TASK_EAT)
 ---@param ped number
@@ -969,6 +1043,7 @@ end
 function TaskEat(ped,p1,p2)
     Citizen.InvokeNative(0xBD7949BD07299672,ped,p1,p2)
 end
+
 
 
 --- 
@@ -981,6 +1056,7 @@ function TaskBark(ped,barkAtTarget,mood)
 end
 
 
+
 --- 
 --- Native 0x1B1475414E70DD8E (TASK_FOLLOW_PAVEMENT_TO_COORD)
 ---@param ped number
@@ -988,6 +1064,7 @@ end
 function TaskFollowPavementToCoord(ped,args)
     Citizen.InvokeNative(0x1B1475414E70DD8E,ped,args)
 end
+
 
 
 --- If no timeout, set timeout to -1.
@@ -1004,6 +1081,7 @@ end
 function TaskFollowNavMeshToCoord(ped,x,y,z,speedMultiplier,timeout,stoppingRange,flags,heading)
     Citizen.InvokeNative(0x15D3A79D4E44B913,ped,x,y,z,speedMultiplier,timeout,stoppingRange,flags,heading)
 end
+
 
 
 --- 
@@ -1026,6 +1104,7 @@ function TaskFollowNavMeshToCoordAdvanced(ped,x,y,z,speedMultiplier,timeout,stop
 end
 
 
+
 --- 
 --- Native 0x8E06A6FE76C9EFF4 (SET_PED_PATH_CAN_USE_CLIMBOVERS)
 ---@param ped number
@@ -1033,6 +1112,7 @@ end
 function SetPedPathCanUseClimbovers(ped,toggle)
     Citizen.InvokeNative(0x8E06A6FE76C9EFF4,ped,toggle)
 end
+
 
 
 --- 
@@ -1044,6 +1124,7 @@ function SetPedPathCanUseLadders(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xE361C5C71C431A4F (SET_PED_PATH_CAN_DROP_FROM_HEIGHT)
 ---@param ped number
@@ -1051,6 +1132,7 @@ end
 function SetPedPathCanDropFromHeight(ped,toggle)
     Citizen.InvokeNative(0xE361C5C71C431A4F,ped,toggle)
 end
+
 
 
 --- 
@@ -1062,6 +1144,7 @@ function SetPedPathClimbCostModifier(ped,modifier)
 end
 
 
+
 --- 
 --- Native 0xE8C296B75EACC357 (SET_PED_PATH_DEEP_SNOW_COST_MODIFIER)
 ---@param ped number
@@ -1069,6 +1152,7 @@ end
 function SetPedPathDeepSnowCostModifier(ped,modifier)
     Citizen.InvokeNative(0xE8C296B75EACC357,ped,modifier)
 end
+
 
 
 --- 
@@ -1080,13 +1164,15 @@ function SetPedPathFoliageCostModifier(ped,modifier)
 end
 
 
+
 --- 
 --- Native 0x1948BBE561A2375A (_GET_PED_IS_IGNORING_DEAD_BODIES)
 ---@param ped number
 ---@return boolean
 function GetPedIsIgnoringDeadBodies(ped)
-   return Citizen.InvokeNative(0x1948BBE561A2375A,ped)
+    return Citizen.InvokeNative(0x1948BBE561A2375A,ped)
 end
+
 
 
 --- 
@@ -1098,6 +1184,7 @@ function SetPedIgnoreDeadBodies(ped,toggle)
 end
 
 
+
 --- _SET_PED_PATH_P*
 --- Native 0x70F7A1EAB1AE3AA8 (_SET_PED_PATH_LADDER_COST_MODIFIER)
 ---@param ped number
@@ -1105,6 +1192,7 @@ end
 function SetPedPathLadderCostModifier(ped,modifier)
     Citizen.InvokeNative(0x70F7A1EAB1AE3AA8,ped,modifier)
 end
+
 
 
 --- 
@@ -1116,6 +1204,7 @@ function SetPedPathMayEnterWater(ped,mayEnterWater)
 end
 
 
+
 --- 
 --- Native 0x9DE63896B176EA94 (_SET_PED_PATH_MAY_ENTER_DEEP_WATER)
 ---@param ped number
@@ -1123,6 +1212,7 @@ end
 function SetPedPathMayEnterDeepWater(ped,mayEnterDeepWater)
     Citizen.InvokeNative(0x9DE63896B176EA94,ped,mayEnterDeepWater)
 end
+
 
 
 --- 
@@ -1135,6 +1225,7 @@ function SetPedPathPreferToAvoidWater(ped,avoidWater,p2)
 end
 
 
+
 --- 
 --- Native 0x4455517B28441E60 (SET_PED_PATH_AVOID_FIRE)
 ---@param ped number
@@ -1142,6 +1233,7 @@ end
 function SetPedPathAvoidFire(ped,avoidFire)
     Citizen.InvokeNative(0x4455517B28441E60,ped,avoidFire)
 end
+
 
 
 --- 
@@ -1158,6 +1250,7 @@ end
 function TaskGoToCoordAnyMeans(ped,x,y,z,speed,entity,p6,walkingStyle,p8)
     Citizen.InvokeNative(0x5BC448CB78FA3E88,ped,x,y,z,speed,entity,p6,walkingStyle,p8)
 end
+
 
 
 --- 
@@ -1178,6 +1271,7 @@ end
 function TaskGoToCoordAnyMeansExtraParams(ped,x,y,z,speed,p5,p6,walkingStyle,p8,p9,p10,p11,p12)
     Citizen.InvokeNative(0x1DD45F9ECFDB1BC9,ped,x,y,z,speed,p5,p6,walkingStyle,p8,p9,p10,p11,p12)
 end
+
 
 
 --- 
@@ -1202,6 +1296,7 @@ function TaskGoToCoordAnyMeansExtraParamsWithCruiseSpeed(ped,p1,p2,p3,p4,p5,p6,p
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/tree/master/animations
 ---flags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eScriptedAnimFlags
 ---ikFlags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eIkControlFlags 
@@ -1222,6 +1317,7 @@ end
 function TaskPlayAnim(ped,animDict,animName,speed,speedMultiplier,duration,flags,playbackRate,p8,ikFlags,p10,taskFilter,p12)
     Citizen.InvokeNative(0xEA47FE3719165B94,ped,animDict,animName,speed,speedMultiplier,duration,flags,playbackRate,p8,ikFlags,p10,taskFilter,p12)
 end
+
 
 
 --- flags: see TASK_PLAY_ANIM
@@ -1249,6 +1345,7 @@ function TaskPlayAnimAdvanced(ped,animDict,animName,posX,posY,posZ,rotX,rotY,rot
 end
 
 
+
 --- 
 --- Native 0xAD67214236AB1CFE (TASK_PLAY_UPPER_ANIM_FACING_ENTITY)
 ---@param ped number
@@ -1271,6 +1368,7 @@ function TaskPlayUpperAnimFacingEntity(ped,animDict,animName,entity,p4,p5,p6,p7,
 end
 
 
+
 --- 
 --- Native 0x97FF36A1D40EA00A (STOP_ANIM_TASK)
 ---@param ped number
@@ -1282,6 +1380,7 @@ function StopAnimTask(ped,animDictionary,animationName,p3)
 end
 
 
+
 --- 
 --- Native 0x126EF75F1E17ABE5 (TASK_SCRIPTED_ANIMATION)
 ---@param ped number
@@ -1289,6 +1388,7 @@ end
 function TaskScriptedAnimation(ped,args)
     Citizen.InvokeNative(0x126EF75F1E17ABE5,ped,args)
 end
+
 
 
 --- 
@@ -1300,6 +1400,7 @@ function PlayEntityScriptedAnim(entity,args)
 end
 
 
+
 --- 
 --- Native 0xEE08C992D238C5D1 (STOP_ANIM_PLAYBACK)
 ---@param ped number
@@ -1308,6 +1409,7 @@ end
 function StopAnimPlayback(ped,p1,p2)
     Citizen.InvokeNative(0xEE08C992D238C5D1,ped,p1,p2)
 end
+
 
 
 --- 
@@ -1321,6 +1423,7 @@ function SetAnimFilter(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x032D49C5E359C847 (SET_ANIM_RATE)
 ---@param p0 any
@@ -1332,6 +1435,7 @@ function SetAnimRate(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x2D19BC4DF626CBE7 (CAN_START_ITEM_INTERACTION)
 ---@param ped number
@@ -1340,8 +1444,9 @@ end
 ---@param p3 number
 ---@return boolean
 function CanStartItemInteraction(ped,itemHash,interactionAnimHash,p3)
-   return Citizen.InvokeNative(0x2D19BC4DF626CBE7,ped,itemHash,interactionAnimHash,p3)
+    return Citizen.InvokeNative(0x2D19BC4DF626CBE7,ped,itemHash,interactionAnimHash,p3)
 end
+
 
 
 --- Params: p3 = 0, 1; p5 = 0.0f, -1.0f
@@ -1356,6 +1461,7 @@ end
 function StartTaskItemInteraction(ped,itemHash,interactionAnimHash,p3,flag,p5)
     Citizen.InvokeNative(0xAE72E7DF013AAA61,ped,itemHash,interactionAnimHash,p3,flag,p5)
 end
+
 
 
 --- 
@@ -1373,6 +1479,7 @@ function TaskItemInteraction2(ped,propNameGxt,prop,propId,itemInteractionState,p
 end
 
 
+
 --- Params: p3, p4, p5, p6: 0, 0, 0, -1.0f in R* Scripts
 --- Native 0xD61D5E1AD9876DEB (_TASK_ITEM_INTERACTION_3)
 ---@param ped number
@@ -1387,13 +1494,15 @@ function TaskItemInteraction3(ped,item,guid,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x6AA3DCA2C6F5EB6D (GET_ITEM_INTERACTION_STATE)
 ---@param ped number
 ---@return hash
 function GetItemInteractionState(ped)
-   return Citizen.InvokeNative(0x6AA3DCA2C6F5EB6D,ped)
+    return Citizen.InvokeNative(0x6AA3DCA2C6F5EB6D,ped)
 end
+
 
 
 --- 
@@ -1401,8 +1510,9 @@ end
 ---@param ped number
 ---@return hash
 function GetItemInteractionItemId(ped)
-   return Citizen.InvokeNative(0x804425C4BBD00883,ped)
+    return Citizen.InvokeNative(0x804425C4BBD00883,ped)
 end
+
 
 
 --- 
@@ -1410,8 +1520,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedRunningInspectionTask(ped)
-   return Citizen.InvokeNative(0x038B1F1674F0E242,ped)
+    return Citizen.InvokeNative(0x038B1F1674F0E242,ped)
 end
+
 
 
 --- 
@@ -1419,8 +1530,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedRunningTaskItemInteraction(ped)
-   return Citizen.InvokeNative(0xEC7E480FF8BD0BED,ped)
+    return Citizen.InvokeNative(0xEC7E480FF8BD0BED,ped)
 end
+
 
 
 --- item hashes: PRIMARYITEM, P_MUGCOFFEE01X_PH_R_HAND, P_BOTTLEBEER01X_PH_R_HAND
@@ -1431,8 +1543,9 @@ end
 ---@param item hash
 ---@return entity
 function GetItemInteractionEntityFromPed(ped,item)
-   return Citizen.InvokeNative(0x05A0100EA714DB68,ped,item)
+    return Citizen.InvokeNative(0x05A0100EA714DB68,ped,item)
 end
+
 
 
 --- 
@@ -1441,8 +1554,9 @@ end
 ---@param inputContext hash
 ---@return float
 function GetItemInteractionPromptProgress(ped,inputContext)
-   return Citizen.InvokeNative(0xBC864A70AD55E0C1,ped,inputContext)
+    return Citizen.InvokeNative(0xBC864A70AD55E0C1,ped,inputContext)
 end
+
 
 
 --- Params: p2 is returned by BUILTIN::SHIFT_LEFT
@@ -1453,6 +1567,7 @@ end
 function TaskEvasiveAnim(ped1,ped2,p2)
     Citizen.InvokeNative(0x5F22926E1BCE9B08,ped1,ped2,p2)
 end
+
 
 
 --- 
@@ -1470,6 +1585,7 @@ function TaskLookAtCoord(ped,x,y,z,duration,flags,p6,p7)
 end
 
 
+
 --- param3: duration in ms, use -1 to look forever
 ---param4: using 2048 is fine
 ---param5: using 3 is fine
@@ -1485,12 +1601,14 @@ function TaskLookAtEntity(ped,lookAtTarget,duration,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x0F804F1DB19B9689 (TASK_CLEAR_LOOK_AT)
 ---@param ped number
 function TaskClearLookAt(ped)
     Citizen.InvokeNative(0x0F804F1DB19B9689,ped)
 end
+
 
 
 --- 
@@ -1501,12 +1619,14 @@ function OpenSequenceTask(taskSequenceId)
 end
 
 
+
 --- 
 --- Native 0x39E72BC99E6360CB (CLOSE_SEQUENCE_TASK)
 ---@param taskSequenceId number
 function CloseSequenceTask(taskSequenceId)
     Citizen.InvokeNative(0x39E72BC99E6360CB,taskSequenceId)
 end
+
 
 
 --- 
@@ -1516,6 +1636,7 @@ end
 function TaskPerformSequence(ped,taskSequenceId)
     Citizen.InvokeNative(0x5ABA3986D90D8A3B,ped,taskSequenceId)
 end
+
 
 
 --- 
@@ -1529,12 +1650,14 @@ function TaskPerformSequence2(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x3841422E9C488D8C (CLEAR_SEQUENCE_TASK)
 ---@param taskSequenceId int*
 function ClearSequenceTask(taskSequenceId)
     Citizen.InvokeNative(0x3841422E9C488D8C,taskSequenceId)
 end
+
 
 
 --- repeatMode: 0 = REPEAT_NOT; 1 = REPEAT_FOREVER
@@ -1546,6 +1669,7 @@ function SetSequenceToRepeat(taskSequenceId,repeatMode)
 end
 
 
+
 --- returned values:
 ---0 to 7 = task that's currently in progress, 0 meaning the first one.
 ----1 no task sequence in progress.
@@ -1553,8 +1677,9 @@ end
 ---@param ped number
 ---@return number
 function GetSequenceProgress(ped)
-   return Citizen.InvokeNative(0x00A9010CFE1E3533,ped)
+    return Citizen.InvokeNative(0x00A9010CFE1E3533,ped)
 end
+
 
 
 --- 
@@ -1563,8 +1688,9 @@ end
 ---@param taskIndex number
 ---@return boolean
 function GetIsTaskActive(ped,taskIndex)
-   return Citizen.InvokeNative(0xB0760331C7AA4155,ped,taskIndex)
+    return Citizen.InvokeNative(0xB0760331C7AA4155,ped,taskIndex)
 end
+
 
 
 --- Gets the status of a script-assigned task, and returns an int between 0-8
@@ -1584,8 +1710,9 @@ end
 ---@param p2 boolean
 ---@return number
 function GetScriptTaskStatus(ped,taskHash,p2)
-   return Citizen.InvokeNative(0x77F1BEB8863288D5,ped,taskHash,p2)
+    return Citizen.InvokeNative(0x77F1BEB8863288D5,ped,taskHash,p2)
 end
+
 
 
 --- 
@@ -1594,8 +1721,9 @@ end
 ---@param task hash
 ---@return float
 function GetScriptTaskActionTime(ped,task)
-   return Citizen.InvokeNative(0xA710DC5D25F8B942,ped,task)
+    return Citizen.InvokeNative(0xA710DC5D25F8B942,ped,task)
 end
+
 
 
 --- lookIntensity: see SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT
@@ -1617,6 +1745,7 @@ function ReactLookAt(ped,targetPed,lookIntensity,exitAnimation,duration,p5,targe
 end
 
 
+
 --- 
 --- Native 0x541E5B41DCA45828 (REACT_LOOK_AT_END)
 ---@param ped number
@@ -1627,14 +1756,16 @@ function ReactLookAtEnd(ped,exitAnimation,p2)
 end
 
 
+
 --- 
 --- Native 0x916B8E075ABC8B4E (IS_PED_SCENARIO_REACT_LOOKING)
 ---@param ped number
 ---@param p1 boolean
 ---@return boolean
 function IsPedScenarioReactLooking(ped,p1)
-   return Citizen.InvokeNative(0x916B8E075ABC8B4E,ped,p1)
+    return Citizen.InvokeNative(0x916B8E075ABC8B4E,ped,p1)
 end
+
 
 
 --- 
@@ -1642,8 +1773,9 @@ end
 ---@param vehicle vehicle
 ---@return number
 function GetActiveVehicleMissionType(vehicle)
-   return Citizen.InvokeNative(0x534AEBA6E5ED4CAB,vehicle)
+    return Citizen.InvokeNative(0x534AEBA6E5ED4CAB,vehicle)
 end
+
 
 
 --- flags: See TASK_ENTER_VEHICLE
@@ -1654,6 +1786,7 @@ end
 function TaskLeaveAnyVehicle(ped,p1,taskFlag)
     Citizen.InvokeNative(0x504D54DF3F6F2247,ped,p1,taskFlag)
 end
+
 
 
 --- 
@@ -1668,6 +1801,7 @@ function TaskUseRandomScenarioInGroup(ped,p1,p2,p3,p4)
 end
 
 
+
 --- duration: the amount of time in milliseconds to do the task.  -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
 --- Native 0x9B53BB6E8943AF53 (TASK_AIM_GUN_AT_ENTITY)
 ---@param ped number
@@ -1678,6 +1812,7 @@ end
 function TaskAimGunAtEntity(ped,targetEntity,duration,p3,p4)
     Citizen.InvokeNative(0x9B53BB6E8943AF53,ped,targetEntity,duration,p3,p4)
 end
+
 
 
 --- duration: the amount of time in milliseconds to do the task. -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
@@ -1691,6 +1826,7 @@ end
 function TaskTurnPedToFaceEntity(ped,targetEntity,duration,p3,p4,p5)
     Citizen.InvokeNative(0x5AD23D40115353AC,ped,targetEntity,duration,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1707,6 +1843,7 @@ function TaskAimGunAtCoord(ped,x,y,z,time,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x4AF1D73861212F52 (TASK_AIM_AT_COORD)
 ---@param ped number
@@ -1721,6 +1858,7 @@ function TaskAimAtCoord(ped,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0xCF7569BD0FB480A0 (TASK_AIM_AT_ENTITY)
 ---@param ped number
@@ -1731,6 +1869,7 @@ end
 function TaskAimAtEntity(ped,p1,p2,p3,p4)
     Citizen.InvokeNative(0xCF7569BD0FB480A0,ped,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -1747,6 +1886,7 @@ function TaskShootAtCoord(ped,x,y,z,duration,firingPattern,p6)
 end
 
 
+
 --- Makes the specified ped shuffle to the next vehicle seat.
 ---The ped MUST be in a vehicle and the vehicle parameter MUST be the ped's current vehicle.
 --- Native 0x7AA80209BDA643EB (TASK_SHUFFLE_TO_NEXT_VEHICLE_SEAT)
@@ -1755,6 +1895,7 @@ end
 function TaskShuffleToNextVehicleSeat(ped,vehicle)
     Citizen.InvokeNative(0x7AA80209BDA643EB,ped,vehicle)
 end
+
 
 
 --- 
@@ -1767,12 +1908,14 @@ function ClearPedTasks(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x176CECF6F920D707 (CLEAR_PED_SECONDARY_TASK)
 ---@param ped number
 function ClearPedSecondaryTask(ped)
     Citizen.InvokeNative(0x176CECF6F920D707,ped)
 end
+
 
 
 --- 
@@ -1782,6 +1925,7 @@ end
 function TaskEveryoneLeaveVehicleInOrder(vehicle,p1)
     Citizen.InvokeNative(0x6F1C49F275BD25B3,vehicle,p1)
 end
+
 
 
 --- 
@@ -1795,6 +1939,7 @@ end
 function TaskInvestigate(ped,p1,p2,p3,p4,p5)
     Citizen.InvokeNative(0x5C8514540D27FBFB,ped,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1811,6 +1956,7 @@ function TaskGotoEntityOffset(ped,entity,p2,x,y,z,duration)
 end
 
 
+
 --- 
 --- Native 0x338E7EF52B6095A9 (TASK_GOTO_ENTITY_OFFSET_XY)
 ---@param ped number
@@ -1824,6 +1970,7 @@ end
 function TaskGotoEntityOffsetXy(ped,entity,duration,targetRadius,xOffset,yOffset,moveBlendRatio,offsetFlags)
     Citizen.InvokeNative(0x338E7EF52B6095A9,ped,entity,duration,targetRadius,xOffset,yOffset,moveBlendRatio,offsetFlags)
 end
+
 
 
 --- 
@@ -1842,6 +1989,7 @@ function TaskGotoEntityOffsetXyz(ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x901BD69984400F62 (TASK_GOTO_ENTITY_OFFSET_XY_AIMING)
 ---@param ped number
@@ -1856,6 +2004,7 @@ end
 function TaskGotoEntityOffsetXyAiming(ped,p1,p2,p3,p4,p5,p6,p7,p8)
     Citizen.InvokeNative(0x901BD69984400F62,ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -1875,6 +2024,7 @@ function TaskGotoEntityOffsetXyzAiming(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- 
 --- Native 0x2D532EAA142CF83F (TASK_FOLLOW_ENTITY_WHILE_AIMING_AT_ENTITY)
 ---@param ped number
@@ -1890,6 +2040,7 @@ function TaskFollowEntityWhileAimingAtEntity(ped,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- duration in milliseconds
 --- Native 0x1DDA930A0AC38571 (TASK_TURN_PED_TO_FACE_COORD)
 ---@param ped number
@@ -1900,6 +2051,7 @@ end
 function TaskTurnPedToFaceCoord(ped,x,y,z,duration)
     Citizen.InvokeNative(0x1DDA930A0AC38571,ped,x,y,z,duration)
 end
+
 
 
 --- Documentation from GTA V, might be the same in RDR:
@@ -1943,6 +2095,7 @@ function TaskVehicleTempAction(driver,vehicle,action,time)
 end
 
 
+
 --- 
 --- Native 0x659427E0EF36BCDE (TASK_VEHICLE_MISSION)
 ---@param driver number
@@ -1957,6 +2110,7 @@ end
 function TaskVehicleMission(driver,vehicle,vehicleTarget,missionType,p4,p5,p6,p7,DriveAgainstTraffic)
     Citizen.InvokeNative(0x659427E0EF36BCDE,driver,vehicle,vehicleTarget,missionType,p4,p5,p6,p7,DriveAgainstTraffic)
 end
+
 
 
 --- flags: 67108864, 2097152, 524564, 524675 (eDrivingFlags)
@@ -1981,6 +2135,7 @@ function TaskVehicleDriveToDestination(driver,vehicle,x,y,z,speed,drivingFlags,p
 end
 
 
+
 --- Tasks vehicle towards owner
 --- Native 0x391073B9D3CCE2BA (_TASK_VEHICLE_DRIVE_TO_DESTINATION_2)
 ---@param vehicle vehicle
@@ -1995,6 +2150,7 @@ end
 function TaskVehicleDriveToDestination2(vehicle,x,y,z,speed,p5,p6,p7,p8)
     Citizen.InvokeNative(0x391073B9D3CCE2BA,vehicle,x,y,z,speed,p5,p6,p7,p8)
 end
+
 
 
 --- Vehicle Auto Drive (?)
@@ -2013,6 +2169,7 @@ function TaskVehicleFleeOnCleanup(vehicle,p1,p2,p3,speed,type)
 end
 
 
+
 --- Old name: _TASK_VEHICLE_DRIVE_TO_POINT
 ---flag: 524419 and 0 in shop_horse_shop R* Script
 --- Native 0x089FF2FB965F0A29 (TASK_VEHICLE_DRIVE_STRAIGHT_TO_POINT)
@@ -2029,6 +2186,7 @@ function TaskVehicleDriveStraightToPoint(driver,vehicle,x,y,z,p5,p6,flag)
 end
 
 
+
 --- Params: p4 = 3.f or 8.f, p5 = 0.25f, p6 = 0 in R* Scripts
 --- Native 0x6524A8981E8BE7C9 (_TASK_VEHICLE_DRIVE_TO_POINT_2)
 ---@param vehicle vehicle
@@ -2041,6 +2199,7 @@ end
 function TaskVehicleDriveToPoint2(vehicle,x,y,z,p4,p5,p6)
     Citizen.InvokeNative(0x6524A8981E8BE7C9,vehicle,x,y,z,p4,p5,p6)
 end
+
 
 
 --- See TASK_VEHICLE_MISSION
@@ -2059,6 +2218,7 @@ function TaskVehicleMissionPedTarget(ped,vehicle,pedTarget,mode,maxSpeed,driving
 end
 
 
+
 --- 
 --- Native 0x0FA6E4B75F302400 (TASK_VEHICLE_ESCORT)
 ---@param ped number
@@ -2073,6 +2233,7 @@ end
 function TaskVehicleEscort(ped,vehicle,targetVehicle,mode,speed,drivingStyle,minDistance,p7,noRoadsDistance)
     Citizen.InvokeNative(0x0FA6E4B75F302400,ped,vehicle,targetVehicle,mode,speed,drivingStyle,minDistance,p7,noRoadsDistance)
 end
+
 
 
 --- 
@@ -2094,12 +2255,14 @@ function TaskBoatMission(pedDriver,boat,p2,p3,x,y,z,p7,maxSpeed,drivingStyle,p10
 end
 
 
+
 --- 
 --- Native 0x7157B82D60E4BC46 (TASK_WEAPON)
 ---@param ped number
 function TaskWeapon(ped)
     Citizen.InvokeNative(0x7157B82D60E4BC46,ped)
 end
+
 
 
 --- 
@@ -2119,6 +2282,7 @@ function TaskDriveBy(driverPed,targetPed,targetVehicle,targetX,targetY,targetZ,d
 end
 
 
+
 --- 
 --- Native 0xE5B302114D8162EE (SET_DRIVEBY_TASK_TARGET)
 ---@param shootingPed number
@@ -2132,6 +2296,7 @@ function SetDrivebyTaskTarget(shootingPed,targetPed,targetVehicle,x,y,z)
 end
 
 
+
 --- 
 --- Native 0xC35B5CDB2824CF69 (CLEAR_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK)
 ---@param ped number
@@ -2140,13 +2305,15 @@ function ClearDrivebyTaskUnderneathDrivingTask(ped)
 end
 
 
+
 --- 
 --- Native 0x8785E6E40C7A8818 (IS_DRIVEBY_TASK_UNDERNEATH_DRIVING_TASK)
 ---@param ped number
 ---@return boolean
 function IsDrivebyTaskUnderneathDrivingTask(ped)
-   return Citizen.InvokeNative(0x8785E6E40C7A8818,ped)
+    return Citizen.InvokeNative(0x8785E6E40C7A8818,ped)
 end
+
 
 
 --- 
@@ -2154,8 +2321,9 @@ end
 ---@param ped number
 ---@return boolean
 function GetIsPedAimingInTheAir(ped)
-   return Citizen.InvokeNative(0x8785E6E40C7A8819,ped)
+    return Citizen.InvokeNative(0x8785E6E40C7A8819,ped)
 end
+
 
 
 --- 
@@ -2167,13 +2335,15 @@ function SetPedClearAimingInTheAir(ped,p1)
 end
 
 
+
 --- 
 --- Native 0xA320EF046186FA3B (IS_MOUNTED_WEAPON_TASK_UNDERNEATH_DRIVING_TASK)
 ---@param ped number
 ---@return boolean
 function IsMountedWeaponTaskUnderneathDrivingTask(ped)
-   return Citizen.InvokeNative(0xA320EF046186FA3B,ped)
+    return Citizen.InvokeNative(0xA320EF046186FA3B,ped)
 end
+
 
 
 --- 
@@ -2184,6 +2354,7 @@ end
 function TaskWarpPedIntoVehicle(ped,vehicle,seat)
     Citizen.InvokeNative(0x9A7D091411C5F684,ped,vehicle,seat)
 end
+
 
 
 --- 
@@ -2198,6 +2369,7 @@ function TaskShootAtEntity(entity,targetEntity,duration,firingPattern,affectCock
 end
 
 
+
 --- 
 --- Native 0x08AA95E8298AE772 (TASK_SHOOT_WITH_WEAPON)
 ---@param ped number
@@ -2205,6 +2377,7 @@ end
 function TaskShootWithWeapon(ped,args)
     Citizen.InvokeNative(0x08AA95E8298AE772,ped,args)
 end
+
 
 
 --- Climbs or vaults the nearest thing.
@@ -2216,6 +2389,7 @@ function TaskClimb(ped,unused)
 end
 
 
+
 --- 
 --- Native 0xDF1D85BCAF60D537 (_TASK_CLIMB_2)
 ---@param ped number
@@ -2223,6 +2397,7 @@ end
 function TaskClimb2(ped,heading)
     Citizen.InvokeNative(0xDF1D85BCAF60D537,ped,heading)
 end
+
 
 
 --- 
@@ -2236,6 +2411,7 @@ function TaskClimbLadder(ped,p1,p2,p3)
 end
 
 
+
 --- Immediately stops the pedestrian from whatever it's doing. They stop fighting, animations, etc. they forget what they were doing.
 ---resetCrouch TRUE = ped will stand up if crouching, FALSE = ped will remain crouching if crouched
 --- Native 0xAAA34F8A7CB32098 (CLEAR_PED_TASKS_IMMEDIATELY)
@@ -2245,6 +2421,7 @@ end
 function ClearPedTasksImmediately(ped,p1,resetCrouch)
     Citizen.InvokeNative(0xAAA34F8A7CB32098,ped,p1,resetCrouch)
 end
+
 
 
 --- 
@@ -2258,6 +2435,7 @@ function TaskPerformSequenceFromProgress(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x1E982AC8716912C5 (SET_PED_DESIRED_MOVE_BLEND_RATIO)
 ---@param ped number
@@ -2267,13 +2445,15 @@ function SetPedDesiredMoveBlendRatio(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x8517D4A6CA8513ED (GET_PED_DESIRED_MOVE_BLEND_RATIO)
 ---@param ped number
 ---@return float
 function GetPedDesiredMoveBlendRatio(ped)
-   return Citizen.InvokeNative(0x8517D4A6CA8513ED,ped)
+    return Citizen.InvokeNative(0x8517D4A6CA8513ED,ped)
 end
+
 
 
 --- ped = Ped you want to perform this task.
@@ -2290,6 +2470,7 @@ function TaskGotoEntityAiming(ped,target,distanceToStopAt,StartAimingDist)
 end
 
 
+
 --- 
 --- Native 0x933C06518B52A9A4 (TASK_SET_SPHERE_DEFENSIVE_AREA)
 ---@param ped number
@@ -2302,12 +2483,14 @@ function TaskSetSphereDefensiveArea(ped,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x95A6C46A31D1917D (TASK_CLEAR_DEFENSIVE_AREA)
 ---@param ped number
 function TaskClearDefensiveArea(ped)
     Citizen.InvokeNative(0x95A6C46A31D1917D,ped)
 end
+
 
 
 --- 
@@ -2323,6 +2506,7 @@ function TaskPedSlideToCoord(ped,x,y,z,heading,p5)
 end
 
 
+
 --- 
 --- Native 0xD5C12A75C7B9497F (ADD_COVER_POINT)
 ---@param p0 float
@@ -2335,8 +2519,9 @@ end
 ---@param p7 boolean
 ---@return scrhandle
 function AddCoverPoint(p0,p1,p2,p3,p4,p5,p6,p7)
-   return Citizen.InvokeNative(0xD5C12A75C7B9497F,p0,p1,p2,p3,p4,p5,p6,p7)
+    return Citizen.InvokeNative(0xD5C12A75C7B9497F,p0,p1,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- 
@@ -2347,6 +2532,7 @@ function RemoveCoverPoint(coverpoint)
 end
 
 
+
 --- Checks if there is a cover point at position
 --- Native 0xA98B8E3C088E5A31 (DOES_SCRIPTED_COVER_POINT_EXIST_AT_COORDS)
 ---@param p0 any
@@ -2355,8 +2541,9 @@ end
 ---@param p3 any
 ---@return boolean
 function DoesScriptedCoverPointExistAtCoords(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xA98B8E3C088E5A31,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xA98B8E3C088E5A31,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -2364,8 +2551,9 @@ end
 ---@param coverpoint scrhandle
 ---@return vector3
 function GetScriptedCoverPointCoords(coverpoint)
-   return Citizen.InvokeNative(0x594A1028FC2A3E85,coverpoint)
+    return Citizen.InvokeNative(0x594A1028FC2A3E85,coverpoint)
 end
+
 
 
 --- 
@@ -2379,6 +2567,7 @@ function TaskCombatPed(ped,targetPed,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x944F30DCB7096BDE (TASK_COMBAT_PED_TIMED)
 ---@param ped number
@@ -2388,6 +2577,7 @@ end
 function TaskCombatPedTimed(ped,targetPed,p2,p3)
     Citizen.InvokeNative(0x944F30DCB7096BDE,ped,targetPed,p2,p3)
 end
+
 
 
 --- 
@@ -2401,6 +2591,7 @@ end
 function TaskCombatPed3(p0,p1,p2,p3,p4,p5)
     Citizen.InvokeNative(0xC624414FA748B9BA,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -2418,6 +2609,7 @@ function TaskSeekCoverFromPos(ped,x,y,z,duration,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x84D32B3BEC531324 (TASK_SEEK_COVER_FROM_PED)
 ---@param ped number
@@ -2429,6 +2621,7 @@ end
 function TaskSeekCoverFromPed(ped,fromPed,duration,p3,p4,p5)
     Citizen.InvokeNative(0x84D32B3BEC531324,ped,fromPed,duration,p3,p4,p5)
 end
+
 
 
 --- 
@@ -2445,6 +2638,7 @@ end
 function TaskSeekCoverToCoverPoint(ped,p1,p2,p3,p4,p5,p6,p7,p8)
     Citizen.InvokeNative(0xD43D95C7A869447F,ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -2465,6 +2659,7 @@ function TaskSeekCoverToCoords(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0x4172393E6BE1FECE (TASK_PUT_PED_DIRECTLY_INTO_COVER)
 ---@param ped number
@@ -2483,6 +2678,7 @@ end
 function TaskPutPedDirectlyIntoCover(ped,x,y,z,timeout,p5,p6,p7,p8,coverpoint,p10,p11,p12)
     Citizen.InvokeNative(0x4172393E6BE1FECE,ped,x,y,z,timeout,p5,p6,p7,p8,coverpoint,p10,p11,p12)
 end
+
 
 
 --- 
@@ -2510,6 +2706,7 @@ function TaskPutPedDirectlyIntoCoverFromCoords(ped,x,y,z,fromX,fromY,fromZ,timeo
 end
 
 
+
 --- meleeStyles: AR_GRAPPLE_BACK_FROM_BACK, AR_GRAPPLE_MOUNT_FACEDOWN_FROM_FRONT, AR_ALLIGATOR_LEAPKILL, AR_ALLIGATOR_WAIST_AUTOKILL_FRONT
 --- Native 0x1C6CD14A876FFE39 (TASK_PUT_PED_DIRECTLY_INTO_MELEE)
 ---@param ped number
@@ -2522,6 +2719,7 @@ end
 function TaskPutPedDirectlyIntoMelee(ped,meleeTarget,meleeStyle,p3,animBlendRatio,p5,p6)
     Citizen.InvokeNative(0x1C6CD14A876FFE39,ped,meleeTarget,meleeStyle,p3,animBlendRatio,p5,p6)
 end
+
 
 
 --- grappleStyle: AR_GRAPPLE_STRUGGLE, AR_ALLIGATOR_LEG_GRAB_CHALLENGE_FAIL, AR_GRAPPLE_BACK_FROM_BACK, AR_GRAPPLE_BACK_DEFEND, AR_GRAPPLE_FRONT_FROM_FRONT
@@ -2538,6 +2736,7 @@ function TaskPutPedDirectlyIntoGrapple(ped,grappleTarget,grappleStyle,p3,p4,p5,p
 end
 
 
+
 --- 
 --- Native 0xE017CF6E2527FE4F (TASK_COMPANION_AMBIENT)
 ---@param ped number
@@ -2545,6 +2744,7 @@ end
 function TaskCompanionAmbient(ped,p1)
     Citizen.InvokeNative(0xE017CF6E2527FE4F,ped,p1)
 end
+
 
 
 --- 
@@ -2557,6 +2757,7 @@ function TaskGuard(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x4A58A47A72E3FCB4 (TASK_GUARD_CURRENT_POSITION)
 ---@param ped number
@@ -2566,6 +2767,7 @@ end
 function TaskGuardCurrentPosition(ped,p1,p2,p3)
     Citizen.InvokeNative(0x4A58A47A72E3FCB4,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -2583,6 +2785,7 @@ function TaskGuardAssignedDefensiveArea2(ped,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0xD2A207EEBDF9889B (TASK_GUARD_ASSIGNED_DEFENSIVE_AREA)
 ---@param ped number
@@ -2595,6 +2798,7 @@ end
 function TaskGuardAssignedDefensiveArea(ped,p1,p2,p3,p4,p5,p6)
     Citizen.InvokeNative(0xD2A207EEBDF9889B,ped,p1,p2,p3,p4,p5,p6)
 end
+
 
 
 --- 
@@ -2610,6 +2814,7 @@ function TaskStandGuard(ped,x,y,z,heading,scenarioName)
 end
 
 
+
 --- 
 --- Native 0x5C9B84BD7D31D908 (SET_DRIVE_TASK_CRUISE_SPEED)
 ---@param driver number
@@ -2619,6 +2824,7 @@ function SetDriveTaskCruiseSpeed(driver,cruiseSpeed)
 end
 
 
+
 --- Not implemented.
 --- Native 0x404A5AA9B9F0B746 (SET_DRIVE_TASK_MAX_CRUISE_SPEED)
 ---@param ped number
@@ -2626,6 +2832,7 @@ end
 function SetDriveTaskMaxCruiseSpeed(ped,maxCruiseSpeed)
     Citizen.InvokeNative(0x404A5AA9B9F0B746,ped,maxCruiseSpeed)
 end
+
 
 
 --- 
@@ -2645,6 +2852,7 @@ function AddCoverBlockingArea(playerX,playerY,playerZ,radiusX,radiusY,radiusZ,p6
 end
 
 
+
 --- 
 --- Native 0xEB2ED1DC3AEC0654 (_ADD_COVER_BLOCKING_VOLUME)
 ---@param volume volume
@@ -2657,11 +2865,13 @@ function AddCoverBlockingVolume(volume,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0xDB6708C0B46F56D8 (REMOVE_ALL_COVER_BLOCKING_AREAS)
 function RemoveAllCoverBlockingAreas()
     Citizen.InvokeNative(0xDB6708C0B46F56D8)
 end
+
 
 
 --- 
@@ -2676,6 +2886,7 @@ function TaskRobPed(ped,p1,p2,p3,p4)
 end
 
 
+
 --- Returns scenario
 --- Native 0x94B745CE41DB58A1 (CREATE_SCENARIO_POINT_HASH)
 ---@param scenarioHash hash
@@ -2688,8 +2899,9 @@ end
 ---@param p7 boolean
 ---@return number
 function CreateScenarioPointHash(scenarioHash,x,y,z,heading,p5,p6,p7)
-   return Citizen.InvokeNative(0x94B745CE41DB58A1,scenarioHash,x,y,z,heading,p5,p6,p7)
+    return Citizen.InvokeNative(0x94B745CE41DB58A1,scenarioHash,x,y,z,heading,p5,p6,p7)
 end
+
 
 
 --- Returns scenario
@@ -2705,8 +2917,9 @@ end
 ---@param p8 boolean
 ---@return number
 function CreateScenarioPointHashAttachedToEntity(entity,scenarioHash,x,y,z,heading,p6,p7,p8)
-   return Citizen.InvokeNative(0x794AB1379A74064D,entity,scenarioHash,x,y,z,heading,p6,p7,p8)
+    return Citizen.InvokeNative(0x794AB1379A74064D,entity,scenarioHash,x,y,z,heading,p6,p7,p8)
 end
+
 
 
 --- 
@@ -2714,8 +2927,9 @@ end
 ---@param scenario number
 ---@return boolean
 function DoesScenarioPointHaveProps(scenario)
-   return Citizen.InvokeNative(0xEA31F199A73801D3,scenario)
+    return Citizen.InvokeNative(0xEA31F199A73801D3,scenario)
 end
+
 
 
 --- Old name: _GET_SCENARIO_POINT_ENTITY
@@ -2724,8 +2938,9 @@ end
 ---@param name string
 ---@return entity
 function GetPropForScenarioPoint(scenarioPoint,name)
-   return Citizen.InvokeNative(0x295514F198EFD0CA,scenarioPoint,name)
+    return Citizen.InvokeNative(0x295514F198EFD0CA,scenarioPoint,name)
 end
+
 
 
 --- 
@@ -2736,8 +2951,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function AssociatePropWithScenario(scenario,entity,propName,p3)
-   return Citizen.InvokeNative(0x8360C47380B6F351,scenario,entity,propName,p3)
+    return Citizen.InvokeNative(0x8360C47380B6F351,scenario,entity,propName,p3)
 end
+
 
 
 --- flag: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/CScenarioPointFlags__Flags
@@ -2750,14 +2966,16 @@ function SetScenarioPointFlag(scenario,flag,value)
 end
 
 
+
 --- 
 --- Native 0x8569C38D2FB80650 (_IS_SCENARIO_POINT_FLAG_SET)
 ---@param scenario number
 ---@param flag number
 ---@return boolean
 function IsScenarioPointFlagSet(scenario,flag)
-   return Citizen.InvokeNative(0x8569C38D2FB80650,scenario,flag)
+    return Citizen.InvokeNative(0x8569C38D2FB80650,scenario,flag)
 end
+
 
 
 --- 
@@ -2766,8 +2984,9 @@ end
 ---@param propName string
 ---@return boolean
 function DisassociatePropFromScenario(scenario,propName)
-   return Citizen.InvokeNative(0x6EF4E31B4D5D2DA0,scenario,propName)
+    return Citizen.InvokeNative(0x6EF4E31B4D5D2DA0,scenario,propName)
 end
+
 
 
 --- 
@@ -2775,8 +2994,9 @@ end
 ---@param scenario number
 ---@return boolean
 function DoesScenarioPointExist(scenario)
-   return Citizen.InvokeNative(0x841475AC96E794D1,scenario)
+    return Citizen.InvokeNative(0x841475AC96E794D1,scenario)
 end
+
 
 
 --- Note: The current name for this native is the old name of 0x295514F198EFD0CA
@@ -2785,8 +3005,9 @@ end
 ---@param scenario number
 ---@return entity
 function GetScenarioPointEntity(scenario)
-   return Citizen.InvokeNative(0x7467165EE97D3C68,scenario)
+    return Citizen.InvokeNative(0x7467165EE97D3C68,scenario)
 end
+
 
 
 --- 
@@ -2794,8 +3015,9 @@ end
 ---@param scenario number
 ---@return number
 function GetPedUsingScenarioPoint(scenario)
-   return Citizen.InvokeNative(0x5BA659955369B0E2,scenario)
+    return Citizen.InvokeNative(0x5BA659955369B0E2,scenario)
 end
+
 
 
 --- Params: p1 is always true in R* Scripts
@@ -2804,8 +3026,9 @@ end
 ---@param p1 boolean
 ---@return vector3
 function GetScenarioPointCoords(scenario,p1)
-   return Citizen.InvokeNative(0xA8452DD321607029,scenario,p1)
+    return Citizen.InvokeNative(0xA8452DD321607029,scenario,p1)
 end
+
 
 
 --- Params: p1 is always true in R* Scripts
@@ -2814,8 +3037,9 @@ end
 ---@param p1 boolean
 ---@return float
 function GetScenarioPointHeading(scenario,p1)
-   return Citizen.InvokeNative(0xB93EA7184BAA85C3,scenario,p1)
+    return Citizen.InvokeNative(0xB93EA7184BAA85C3,scenario,p1)
 end
+
 
 
 --- 
@@ -2823,8 +3047,9 @@ end
 ---@param scenario number
 ---@return float
 function GetScenarioPointRadius(scenario)
-   return Citizen.InvokeNative(0x6718F40313A2B5A6,scenario)
+    return Citizen.InvokeNative(0x6718F40313A2B5A6,scenario)
 end
+
 
 
 --- 
@@ -2839,6 +3064,7 @@ function SetScenarioPointCoords(scenario,xPos,yPos,zPos,p4)
 end
 
 
+
 --- 
 --- Native 0xD3A0DA8F91612C6E (_SET_SCENARIO_POINT_HEADING)
 ---@param scenario number
@@ -2849,6 +3075,7 @@ function SetScenarioPointHeading(scenario,heading,p2)
 end
 
 
+
 --- 
 --- Native 0xC47D9080A9A8856A (_SET_SCENARIO_POINT_RADIUS)
 ---@param scenario number
@@ -2856,6 +3083,7 @@ end
 function SetScenarioPointRadius(scenario,radius)
     Citizen.InvokeNative(0xC47D9080A9A8856A,scenario,radius)
 end
+
 
 
 --- Note: scenariosInRadius is an array, and its size and values should be aligned to 8 bytes.
@@ -2868,8 +3096,9 @@ end
 ---@param size number
 ---@return number
 function GetScenarioPointsInArea(posX,posY,posZ,radius,scenariosInRadius,size)
-   return Citizen.InvokeNative(0x345EC3B7EBDE1CB5,posX,posY,posZ,radius,scenariosInRadius,size)
+    return Citizen.InvokeNative(0x345EC3B7EBDE1CB5,posX,posY,posZ,radius,scenariosInRadius,size)
 end
+
 
 
 --- 
@@ -2878,8 +3107,9 @@ end
 ---@param p1 boolean
 ---@return number
 function GetScenarioPointPedIsUsing(ped,p1)
-   return Citizen.InvokeNative(0xDF7993356F52359A,ped,p1)
+    return Citizen.InvokeNative(0xDF7993356F52359A,ped,p1)
 end
+
 
 
 --- 
@@ -2887,8 +3117,9 @@ end
 ---@param ped number
 ---@return any
 function GetRansackScenarioPointPedIsUsing(ped)
-   return Citizen.InvokeNative(0xD04241BBF6D03A5E,ped)
+    return Citizen.InvokeNative(0xD04241BBF6D03A5E,ped)
 end
+
 
 
 --- Opens/closes containers: ChestDugUp
@@ -2900,13 +3131,15 @@ function SetScenarioContainerOpeningState(entity,open)
 end
 
 
+
 --- Returns m_eContainerState
 --- Native 0xB219612B5568E9EC (_GET_SCENARIO_CONTAINER_OPENING_STATE)
 ---@param entity entity
 ---@return boolean
 function GetScenarioContainerOpeningState(entity)
-   return Citizen.InvokeNative(0xB219612B5568E9EC,entity)
+    return Citizen.InvokeNative(0xB219612B5568E9EC,entity)
 end
+
 
 
 --- 
@@ -2918,12 +3151,14 @@ function ResetScenarioForEntity(scenario,entity)
 end
 
 
+
 --- 
 --- Native 0x81948DFE4F5A0283 (_DELETE_SCENARIO_POINT)
 ---@param scenario number
 function DeleteScenarioPoint(scenario)
     Citizen.InvokeNative(0x81948DFE4F5A0283,scenario)
 end
+
 
 
 --- 
@@ -2943,6 +3178,7 @@ function TaskUseScenarioPoint(ped,scenario,conditionalAnim,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- 
 --- Native 0x0F6641449DD86FBE (_TASK_USE_SCENARIO_POINT_2)
 ---@param ped number
@@ -2956,6 +3192,7 @@ end
 function TaskUseScenarioPoint2(ped,ped2,p2,p3,p4,p5,p6,p7)
     Citizen.InvokeNative(0x0F6641449DD86FBE,ped,ped2,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/animations/scenarios
@@ -2978,6 +3215,7 @@ function TaskStartScenarioInPlaceHash(ped,scenarioHash,duration,playEnterAnim,co
 end
 
 
+
 --- Takes scenario point handle instead of hash
 --- Native 0xA917E39F2CEFD215 (_TASK_START_SCENARIO_IN_PLACE_2)
 ---@param ped number
@@ -2990,6 +3228,7 @@ end
 function TaskStartScenarioInPlace2(ped,p1,p2,p3,p4,p5,p6)
     Citizen.InvokeNative(0xA917E39F2CEFD215,ped,p1,p2,p3,p4,p5,p6)
 end
+
 
 
 --- 
@@ -3011,6 +3250,7 @@ function TaskStartScenarioAtPosition(ped,scenarioHash,x,y,z,heading,duration,sit
 end
 
 
+
 --- 
 --- Native 0x322BFDEA666E2B0E (_TASK_USE_NEAREST_SCENARIO_TO_COORD)
 ---@param ped number
@@ -3026,6 +3266,7 @@ end
 function TaskUseNearestScenarioToCoord(ped,x,y,z,distance,duration,p6,p7,p8,p9)
     Citizen.InvokeNative(0x322BFDEA666E2B0E,ped,x,y,z,distance,duration,p6,p7,p8,p9)
 end
+
 
 
 --- 
@@ -3045,6 +3286,7 @@ function TaskUseNearestScenarioToCoordWarp(ped,x,y,z,distance,duration,p6,p7,p8,
 end
 
 
+
 --- 
 --- Native 0x3774B03456DD6106 (TASK_USE_NEAREST_TRAIN_SCENARIO_TO_COORD_WARP)
 ---@param ped number
@@ -3055,6 +3297,7 @@ end
 function TaskUseNearestTrainScenarioToCoordWarp(ped,x,y,z,distance)
     Citizen.InvokeNative(0x3774B03456DD6106,ped,x,y,z,distance)
 end
+
 
 
 --- 
@@ -3073,6 +3316,7 @@ function TaskUseNearestScenarioChainToCoord(ped,x,y,z,distance,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x97A28E63F0BA5631 (TASK_USE_NEAREST_SCENARIO_CHAIN_TO_COORD_WARP)
 ---@param ped number
@@ -3089,6 +3333,7 @@ function TaskUseNearestScenarioChainToCoordWarp(ped,x,y,z,distance,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x37FB1C870E2EC2C6 (TASK_RIDE_TRAIN)
 ---@param ped number
@@ -3098,6 +3343,7 @@ end
 function TaskRideTrain(ped,train,scenarioPoint,scenarioHash)
     Citizen.InvokeNative(0x37FB1C870E2EC2C6,ped,train,scenarioPoint,scenarioHash)
 end
+
 
 
 --- 
@@ -3111,8 +3357,9 @@ end
 ---@param p6 boolean
 ---@return boolean
 function DoesScenarioExistInArea(x,y,z,radius,p4,p5,p6)
-   return Citizen.InvokeNative(0x5A59271FFADD33C1,x,y,z,radius,p4,p5,p6)
+    return Citizen.InvokeNative(0x5A59271FFADD33C1,x,y,z,radius,p4,p5,p6)
 end
+
 
 
 --- 
@@ -3125,8 +3372,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function DoesScenarioOfTypeExistInAreaHash(x,y,z,typeHash,radius,p5)
-   return Citizen.InvokeNative(0x6EEAD6AF637DA752,x,y,z,typeHash,radius,p5)
+    return Citizen.InvokeNative(0x6EEAD6AF637DA752,x,y,z,typeHash,radius,p5)
 end
+
 
 
 --- 
@@ -3140,8 +3388,9 @@ end
 ---@param p6 boolean
 ---@return number
 function FindScenarioOfTypeHash(xPos,yPos,zPos,scenarioType,distance,p5,p6)
-   return Citizen.InvokeNative(0xF533D68FF970D190,xPos,yPos,zPos,scenarioType,distance,p5,p6)
+    return Citizen.InvokeNative(0xF533D68FF970D190,xPos,yPos,zPos,scenarioType,distance,p5,p6)
 end
+
 
 
 --- 
@@ -3153,8 +3402,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function IsScenarioOccupied(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0x788756D73AC2E07C,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0x788756D73AC2E07C,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -3162,8 +3412,9 @@ end
 ---@param ped number
 ---@return boolean
 function PedHasUseScenarioTask(ped)
-   return Citizen.InvokeNative(0x295E3CCEC879CCD7,ped)
+    return Citizen.InvokeNative(0x295E3CCEC879CCD7,ped)
 end
+
 
 
 --- 
@@ -3171,8 +3422,9 @@ end
 ---@param ped number
 ---@return boolean
 function PedIsInScenarioBase(ped)
-   return Citizen.InvokeNative(0x02EBBB3989B7E695,ped)
+    return Citizen.InvokeNative(0x02EBBB3989B7E695,ped)
 end
+
 
 
 --- 
@@ -3185,13 +3437,15 @@ function PlayAnimOnRunningScenario(ped,animDict,animName)
 end
 
 
+
 --- 
 --- Native 0xF9034C136C9E00D3 (DOES_SCENARIO_GROUP_EXIST)
 ---@param scenarioGroup string
 ---@return boolean
 function DoesScenarioGroupExist(scenarioGroup)
-   return Citizen.InvokeNative(0xF9034C136C9E00D3,scenarioGroup)
+    return Citizen.InvokeNative(0xF9034C136C9E00D3,scenarioGroup)
 end
+
 
 
 --- 
@@ -3199,8 +3453,9 @@ end
 ---@param scenarioGroup hash
 ---@return boolean
 function DoesScenarioGroupExistHash(scenarioGroup)
-   return Citizen.InvokeNative(0x76E98B52369A289C,scenarioGroup)
+    return Citizen.InvokeNative(0x76E98B52369A289C,scenarioGroup)
 end
+
 
 
 --- 
@@ -3208,8 +3463,9 @@ end
 ---@param scenarioGroup string
 ---@return boolean
 function IsScenarioGroupEnabled(scenarioGroup)
-   return Citizen.InvokeNative(0x367A09DED4E05B99,scenarioGroup)
+    return Citizen.InvokeNative(0x367A09DED4E05B99,scenarioGroup)
 end
+
 
 
 --- 
@@ -3217,8 +3473,9 @@ end
 ---@param scenarioGroup hash
 ---@return boolean
 function IsScenarioGroupEnabledHash(scenarioGroup)
-   return Citizen.InvokeNative(0xDCC374913DE6AAA6,scenarioGroup)
+    return Citizen.InvokeNative(0xDCC374913DE6AAA6,scenarioGroup)
 end
+
 
 
 --- 
@@ -3230,6 +3487,7 @@ function SetScenarioGroupEnabled(scenarioGroup,toggle)
 end
 
 
+
 --- 
 --- Native 0x9925EDDB6EAB88CD (_SET_SCENARIO_GROUP_ENABLED_HASH)
 ---@param scenarioGroup hash
@@ -3239,11 +3497,13 @@ function SetScenarioGroupEnabledHash(scenarioGroup,toggle)
 end
 
 
+
 --- 
 --- Native 0xDD902D0349AFAD3A (RESET_SCENARIO_GROUPS_ENABLED)
 function ResetScenarioGroupsEnabled()
     Citizen.InvokeNative(0xDD902D0349AFAD3A)
 end
+
 
 
 --- 
@@ -3255,13 +3515,15 @@ function ForceScenarioGroupPriority(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x0CC36D4156006509 (_IS_SCENARIO_POINT_ACTIVE)
 ---@param scenario number
 ---@return boolean
 function IsScenarioPointActive(scenario)
-   return Citizen.InvokeNative(0x0CC36D4156006509,scenario)
+    return Citizen.InvokeNative(0x0CC36D4156006509,scenario)
 end
+
 
 
 --- 
@@ -3273,6 +3535,7 @@ function SetScenarioPointActive(scenario,active)
 end
 
 
+
 --- 
 --- Native 0x5A40040BB5AE3EA2 (_RESET_SCENARIO_SCRIPT)
 ---@param scenario number
@@ -3281,13 +3544,15 @@ function ResetScenarioScript(scenario)
 end
 
 
+
 --- 
 --- Native 0x3A815DB3EA088722 (IS_SCENARIO_TYPE_ENABLED)
 ---@param scenarioType string
 ---@return boolean
 function IsScenarioTypeEnabled(scenarioType)
-   return Citizen.InvokeNative(0x3A815DB3EA088722,scenarioType)
+    return Citizen.InvokeNative(0x3A815DB3EA088722,scenarioType)
 end
+
 
 
 --- 
@@ -3299,6 +3564,7 @@ function SetScenarioTypeEnabled(scenarioType,toggle)
 end
 
 
+
 --- 
 --- Native 0xD00E50E673802D71 (_SET_SCENARIO_TYPE_ENABLED_HASH)
 ---@param scenarioType hash
@@ -3308,6 +3574,7 @@ function SetScenarioTypeEnabledHash(scenarioType,toggle)
 end
 
 
+
 --- 
 --- Native 0x0D40EE2A7F2B2D6D (RESET_SCENARIO_TYPES_ENABLED)
 function ResetScenarioTypesEnabled()
@@ -3315,13 +3582,15 @@ function ResetScenarioTypesEnabled()
 end
 
 
+
 --- 
 --- Native 0x2D0571BB55879DA2 (_GET_SCENARIO_POINT_TYPE_PED_IS_USING)
 ---@param ped number
 ---@return number
 function GetScenarioPointTypePedIsUsing(ped)
-   return Citizen.InvokeNative(0x2D0571BB55879DA2,ped)
+    return Citizen.InvokeNative(0x2D0571BB55879DA2,ped)
 end
+
 
 
 --- 
@@ -3329,8 +3598,9 @@ end
 ---@param scenario number
 ---@return hash
 function GetScenarioPointType(scenario)
-   return Citizen.InvokeNative(0xA92450B5AE687AAF,scenario)
+    return Citizen.InvokeNative(0xA92450B5AE687AAF,scenario)
 end
+
 
 
 --- 
@@ -3339,8 +3609,9 @@ end
 ---@param scenario number
 ---@return boolean
 function IsPedActiveInScenario(ped,scenario)
-   return Citizen.InvokeNative(0xAA135F9482C82CC3,ped,scenario)
+    return Citizen.InvokeNative(0xAA135F9482C82CC3,ped,scenario)
 end
+
 
 
 --- 
@@ -3349,8 +3620,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedExitingScenario(ped,p1)
-   return Citizen.InvokeNative(0x0C3CB2E600C8977D,ped,p1)
+    return Citizen.InvokeNative(0x0C3CB2E600C8977D,ped,p1)
 end
+
 
 
 --- Despite its name, it only attacks ONE hated target. The one closest to the specified position.
@@ -3367,6 +3639,7 @@ function TaskCombatHatedTargetsInArea(ped,x,y,z,radius,flags,p6)
 end
 
 
+
 --- 
 --- Native 0xB5BC69D9C4060BC3 (TASK_COMBAT_HATED_TARGETS_NO_LOS_TEST)
 ---@param ped number
@@ -3374,6 +3647,7 @@ end
 function TaskCombatHatedTargetsNoLosTest(ped,radius)
     Citizen.InvokeNative(0xB5BC69D9C4060BC3,ped,radius)
 end
+
 
 
 --- Despite its name, it only attacks ONE hated target. The one closest hated target.
@@ -3387,6 +3661,7 @@ function TaskCombatHatedTargetsAroundPed(ped,radius,flags,p3)
 end
 
 
+
 --- 
 --- Native 0x2BBA30B854534A0C (TASK_COMBAT_HATED_TARGETS_AROUND_PED_TIMED)
 ---@param ped number
@@ -3398,6 +3673,7 @@ function TaskCombatHatedTargetsAroundPedTimed(ped,radius,time,flags)
 end
 
 
+
 --- 
 --- Native 0x8182B561A29BD597 (TASK_COMBAT_HATED_TARGETS)
 ---@param ped number
@@ -3405,6 +3681,7 @@ end
 function TaskCombatHatedTargets(ped,radius)
     Citizen.InvokeNative(0x8182B561A29BD597,ped,radius)
 end
+
 
 
 --- 
@@ -3418,6 +3695,7 @@ function TaskThrowProjectile(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x7282356DFF6B5A51 (_TASK_THROW_PROJECTILE_2)
 ---@param p0 any
@@ -3429,6 +3707,7 @@ function TaskThrowProjectile2(p0,p1,p2,p3)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/blob/master/AI/EVENTS/aud_ped_whistle_types.lua
 ---p2: UNSPECIFIED
 --- Native 0xD6401A1B2F63BED6 (TASK_WHISTLE_ANIM)
@@ -3438,6 +3717,7 @@ end
 function TaskWhistleAnim(ped,audPedWhistleType,p2)
     Citizen.InvokeNative(0xD6401A1B2F63BED6,ped,audPedWhistleType,p2)
 end
+
 
 
 --- 
@@ -3452,6 +3732,7 @@ function TaskSwapWeapon(ped,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x62D2916F56B9CD2D (TASK_RELOAD_WEAPON)
 ---@param ped number
@@ -3459,6 +3740,7 @@ end
 function TaskReloadWeapon(ped,unused)
     Citizen.InvokeNative(0x62D2916F56B9CD2D,ped,unused)
 end
+
 
 
 --- 
@@ -3470,13 +3752,15 @@ function TaskPickUpWeapon(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x2A74E1D5F2F00EEC (IS_PED_GETTING_UP)
 ---@param ped number
 ---@return boolean
 function IsPedGettingUp(ped)
-   return Citizen.InvokeNative(0x2A74E1D5F2F00EEC,ped)
+    return Citizen.InvokeNative(0x2A74E1D5F2F00EEC,ped)
 end
+
 
 
 --- 
@@ -3487,6 +3771,7 @@ end
 function TaskAnimalWrithe(ped,p1,p2)
     Citizen.InvokeNative(0x8C038A39C4A4B6D6,ped,p1,p2)
 end
+
 
 
 --- 
@@ -3502,13 +3787,15 @@ function TaskAnimalBleedOut(ped,killer,p2,weaponHash,p4,p5)
 end
 
 
+
 --- This native checks if a ped is on the ground, in pain from a (gunshot) wound.
 --- Native 0xDEB6D52126E7D640 (IS_PED_IN_WRITHE)
 ---@param ped number
 ---@return boolean
 function IsPedInWrithe(ped)
-   return Citizen.InvokeNative(0xDEB6D52126E7D640,ped)
+    return Citizen.InvokeNative(0xDEB6D52126E7D640,ped)
 end
+
 
 
 --- 
@@ -3521,6 +3808,7 @@ function TaskReviveTarget(ped,reviver,tool)
 end
 
 
+
 --- Note: patrolRoute must be prefixed with 'miss_' for it to be valid
 --- Native 0xA36BFB5EE89F3D82 (OPEN_PATROL_ROUTE)
 ---@param patrolRoute string
@@ -3529,11 +3817,13 @@ function OpenPatrolRoute(patrolRoute)
 end
 
 
+
 --- 
 --- Native 0xB043ECA801B8CBC1 (CLOSE_PATROL_ROUTE)
 function ClosePatrolRoute()
     Citizen.InvokeNative(0xB043ECA801B8CBC1)
 end
+
 
 
 --- 
@@ -3553,6 +3843,7 @@ function AddPatrolRouteNode(nodeId,scenarioName,x,y,z,lookPosX,lookPosY,lookPosZ
 end
 
 
+
 --- 
 --- Native 0x23083260DEC3A551 (ADD_PATROL_ROUTE_LINK)
 ---@param node1 number
@@ -3562,11 +3853,13 @@ function AddPatrolRouteLink(node1,node2)
 end
 
 
+
 --- 
 --- Native 0xAF8A443CCC8018DC (CREATE_PATROL_ROUTE)
 function CreatePatrolRoute()
     Citizen.InvokeNative(0xAF8A443CCC8018DC)
 end
+
 
 
 --- 
@@ -3575,6 +3868,7 @@ end
 function DeletePatrolRoute(patrolRoute)
     Citizen.InvokeNative(0x7767DD9D65E91319,patrolRoute)
 end
+
 
 
 --- 
@@ -3587,6 +3881,7 @@ end
 function TaskPatrol(ped,patrolRoute,p2,p3,p4)
     Citizen.InvokeNative(0xBDA5DF49D080FE4E,ped,patrolRoute,p2,p3,p4)
 end
+
 
 
 --- 
@@ -3604,12 +3899,14 @@ function TaskPatrol2(p0,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- Makes the ped run to take cover
 --- Native 0xE5DA8615A6180789 (TASK_STAY_IN_COVER)
 ---@param ped number
 function TaskStayInCover(ped)
     Citizen.InvokeNative(0xE5DA8615A6180789,ped)
 end
+
 
 
 --- 
@@ -3622,6 +3919,7 @@ function TaskVehicleShootAtPed(ped,target,p2)
 end
 
 
+
 --- 
 --- Native 0xE41885592B08B097 (TASK_VEHICLE_AIM_AT_PED)
 ---@param ped number
@@ -3629,6 +3927,7 @@ end
 function TaskVehicleAimAtPed(ped,target)
     Citizen.InvokeNative(0xE41885592B08B097,ped,target)
 end
+
 
 
 --- 
@@ -3643,6 +3942,7 @@ function TaskVehicleShootAtCoord(ped,x,y,z,p4)
 end
 
 
+
 --- 
 --- Native 0x447C1E9EF844BC0F (TASK_VEHICLE_AIM_AT_COORD)
 ---@param ped number
@@ -3652,6 +3952,7 @@ end
 function TaskVehicleAimAtCoord(ped,x,y,z)
     Citizen.InvokeNative(0x447C1E9EF844BC0F,ped,x,y,z)
 end
+
 
 
 --- 
@@ -3667,6 +3968,7 @@ end
 function TaskVehicleGotoNavmesh(ped,vehicle,x,y,z,speed,behaviorFlag,stoppingRange)
     Citizen.InvokeNative(0x195AEEB13CEFE2EE,ped,vehicle,x,y,z,speed,behaviorFlag,stoppingRange)
 end
+
 
 
 --- 
@@ -3692,6 +3994,7 @@ function TaskGoToCoordWhileAimingAtCoord(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,
 end
 
 
+
 --- 
 --- Native 0x639C0425A0B4E77E (TASK_GO_TO_COORD_WHILE_AIMING_AT_COORD_USING_COMBAT_STYLE)
 ---@param ped number
@@ -3713,6 +4016,7 @@ end
 function TaskGoToCoordWhileAimingAtCoordUsingCombatStyle(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15)
     Citizen.InvokeNative(0x639C0425A0B4E77E,ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15)
 end
+
 
 
 --- 
@@ -3737,6 +4041,7 @@ function TaskGoToCoordWhileAimingAtEntity(ped1,x,y,z,ped2,p5,p6,p7,p8,p9,p10,p11
 end
 
 
+
 --- 
 --- Native 0x78426D0982D083C9 (TASK_GO_TO_COORD_WHILE_AIMING_AT_ENTITY_USING_COMBAT_STYLE)
 ---@param ped number
@@ -3759,6 +4064,7 @@ function TaskGoToCoordWhileAimingAtEntityUsingCombatStyle(ped,p1,p2,p3,p4,p5,p6,
 end
 
 
+
 --- shootatEntity:
 ---If true, peds will shoot at Entity till it is dead.
 ---If false, peds will just walk till they reach the entity and will cease shooting.
@@ -3779,6 +4085,7 @@ function TaskGoToEntityWhileAimingAtEntity(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0xCEF0117C233026AD (TASK_GO_TO_ENTITY_WHILE_AIMING_AT_ENTITY_USING_COMBAT_STYLE)
 ---@param ped number
@@ -3795,6 +4102,7 @@ end
 function TaskGoToEntityWhileAimingAtEntityUsingCombatStyle(ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
     Citizen.InvokeNative(0xCEF0117C233026AD,ped,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
+
 
 
 --- 
@@ -3819,6 +4127,7 @@ function TaskGoToCoordAndAimAtHatedEntitiesNearCoord(ped,goToLocationX,goToLocat
 end
 
 
+
 --- 
 --- Native 0x87BD711FC31EA273 (TASK_GO_TO_COORD_AND_AIM_AT_HATED_ENTITIES_NEAR_COORD_USING_COMBAT_STYLE)
 ---@param ped number
@@ -3841,6 +4150,7 @@ function TaskGoToCoordAndAimAtHatedEntitiesNearCoordUsingCombatStyle(ped,p1,p2,p
 end
 
 
+
 --- Makes the ped ragdoll like when falling from a great height
 --- Native 0x8C825BDC7741D37C (SET_HIGH_FALL_TASK)
 ---@param ped number
@@ -3852,6 +4162,7 @@ function SetHighFallTask(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x9EEFB62EB27B5792 (REQUEST_WAYPOINT_RECORDING)
 ---@param waypointRecording string
@@ -3860,13 +4171,15 @@ function RequestWaypointRecording(waypointRecording)
 end
 
 
+
 --- 
 --- Native 0xCB4E8BE8A0063C5D (GET_IS_WAYPOINT_RECORDING_LOADED)
 ---@param waypointRecording string
 ---@return boolean
 function GetIsWaypointRecordingLoaded(waypointRecording)
-   return Citizen.InvokeNative(0xCB4E8BE8A0063C5D,waypointRecording)
+    return Citizen.InvokeNative(0xCB4E8BE8A0063C5D,waypointRecording)
 end
+
 
 
 --- 
@@ -3877,14 +4190,16 @@ function RemoveWaypointRecording(waypointRecording)
 end
 
 
+
 --- 
 --- Native 0x5343532C01A07234 (WAYPOINT_RECORDING_GET_NUM_POINTS)
 ---@param waypointRecording string
 ---@param points int*
 ---@return boolean
 function WaypointRecordingGetNumPoints(waypointRecording,points)
-   return Citizen.InvokeNative(0x5343532C01A07234,waypointRecording,points)
+    return Citizen.InvokeNative(0x5343532C01A07234,waypointRecording,points)
 end
+
 
 
 --- 
@@ -3894,8 +4209,9 @@ end
 ---@param coord vector3*
 ---@return boolean
 function WaypointRecordingGetCoord(waypointRecording,point,coord)
-   return Citizen.InvokeNative(0x2FB897405C90B361,waypointRecording,point,coord)
+    return Citizen.InvokeNative(0x2FB897405C90B361,waypointRecording,point,coord)
 end
+
 
 
 --- 
@@ -3904,8 +4220,9 @@ end
 ---@param point number
 ---@return float
 function WaypointRecordingGetSpeedAtPoint(waypointRecording,point)
-   return Citizen.InvokeNative(0x005622AEBC33ACA9,waypointRecording,point)
+    return Citizen.InvokeNative(0x005622AEBC33ACA9,waypointRecording,point)
 end
+
 
 
 --- 
@@ -3917,8 +4234,9 @@ end
 ---@param point int*
 ---@return boolean
 function WaypointRecordingGetClosestWaypoint(waypointRecording,x,y,z,point)
-   return Citizen.InvokeNative(0xB629A298081F876F,waypointRecording,x,y,z,point)
+    return Citizen.InvokeNative(0xB629A298081F876F,waypointRecording,x,y,z,point)
 end
+
 
 
 --- 
@@ -3928,6 +4246,7 @@ end
 function TaskFollowWaypointRecordingAdvanced(ped,p1)
     Citizen.InvokeNative(0x0CFC13EBC19BCA52,ped,p1)
 end
+
 
 
 --- 
@@ -3945,6 +4264,7 @@ function TaskFollowWaypointRecording(ped,waypointRecording,p2,flag,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0xBE9B0520BD7C445B (TASK_FOLLOW_WAYPOINT_RECORDING_AT_OFFSET)
 ---@param ped number
@@ -3957,6 +4277,7 @@ end
 function TaskFollowWaypointRecordingAtOffset(ped,waypointRecording,p2,p3,p4,p5,p6)
     Citizen.InvokeNative(0xBE9B0520BD7C445B,ped,waypointRecording,p2,p3,p4,p5,p6)
 end
+
 
 
 --- 
@@ -3975,14 +4296,16 @@ function TaskFollowEntityAlongWaypointRecordingAtOffset(ped0,ped1,waypointRecord
 end
 
 
+
 --- 
 --- Native 0xE03B3F2D3DC59B64 (IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED)
 ---@param ped number
 ---@param waypointRecording string
 ---@return boolean
 function IsWaypointPlaybackGoingOnForPed(ped,waypointRecording)
-   return Citizen.InvokeNative(0xE03B3F2D3DC59B64,ped,waypointRecording)
+    return Citizen.InvokeNative(0xE03B3F2D3DC59B64,ped,waypointRecording)
 end
+
 
 
 --- 
@@ -3990,8 +4313,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedWaypointProgress(ped)
-   return Citizen.InvokeNative(0x2720AAA75001E094,ped)
+    return Citizen.InvokeNative(0x2720AAA75001E094,ped)
 end
+
 
 
 --- 
@@ -3999,8 +4323,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedWaypointDistance(ped)
-   return Citizen.InvokeNative(0xE6A877C64CAF1BC5,ped)
+    return Citizen.InvokeNative(0xE6A877C64CAF1BC5,ped)
 end
+
 
 
 --- 
@@ -4011,8 +4336,9 @@ end
 ---@param p3 float
 ---@return any
 function SetPedWaypointRouteOffset(ped,p1,p2,p3)
-   return Citizen.InvokeNative(0xED98E10B0AFCE4B4,ped,p1,p2,p3)
+    return Citizen.InvokeNative(0xED98E10B0AFCE4B4,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -4021,8 +4347,9 @@ end
 ---@param p1 number
 ---@return float
 function GetWaypointDistanceAlongRoute(waypointRecording,p1)
-   return Citizen.InvokeNative(0xA5B769058763E497,waypointRecording,p1)
+    return Citizen.InvokeNative(0xA5B769058763E497,waypointRecording,p1)
 end
+
 
 
 --- 
@@ -4030,8 +4357,9 @@ end
 ---@param ped number
 ---@return boolean
 function WaypointPlaybackGetIsPaused(ped)
-   return Citizen.InvokeNative(0x701375A7D43F01CB,ped)
+    return Citizen.InvokeNative(0x701375A7D43F01CB,ped)
 end
+
 
 
 --- 
@@ -4039,8 +4367,9 @@ end
 ---@param ped number
 ---@return boolean
 function WaypointPlaybackGetIsAiming(ped)
-   return Citizen.InvokeNative(0xD73A5D1F0325C71C,ped)
+    return Citizen.InvokeNative(0xD73A5D1F0325C71C,ped)
 end
+
 
 
 --- 
@@ -4048,8 +4377,9 @@ end
 ---@param ped number
 ---@return boolean
 function WaypointPlaybackGetIsShooting(ped)
-   return Citizen.InvokeNative(0xA5B94DF8AF058F46,ped)
+    return Citizen.InvokeNative(0xA5B94DF8AF058F46,ped)
 end
+
 
 
 --- 
@@ -4063,6 +4393,7 @@ function WaypointPlaybackPause(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x244F70C84C547D2D (WAYPOINT_PLAYBACK_RESUME)
 ---@param ped number
@@ -4072,6 +4403,7 @@ end
 function WaypointPlaybackResume(ped,p1,p2,p3)
     Citizen.InvokeNative(0x244F70C84C547D2D,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -4086,6 +4418,7 @@ function WaypointPlaybackOverrideSpeed(ped,speed,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x6599D834B12D0800 (WAYPOINT_PLAYBACK_USE_DEFAULT_SPEED)
 ---@param ped number
@@ -4094,13 +4427,15 @@ function WaypointPlaybackUseDefaultSpeed(ped)
 end
 
 
+
 --- 
 --- Native 0xD39A2F3E7FCAFF08 (GET_PED_WAYPOINT_OVERRIDE_SPEED)
 ---@param ped number
 ---@return float
 function GetPedWaypointOverrideSpeed(ped)
-   return Citizen.InvokeNative(0xD39A2F3E7FCAFF08,ped)
+    return Citizen.InvokeNative(0xD39A2F3E7FCAFF08,ped)
 end
+
 
 
 --- 
@@ -4115,6 +4450,7 @@ function UseWaypointRecordingAsAssistedMovementRoute(waypointRecording,p1,p2,p3,
 end
 
 
+
 --- 
 --- Native 0x20E330937C399D29 (WAYPOINT_PLAYBACK_START_AIMING_AT_PED)
 ---@param p0 any
@@ -4126,6 +4462,7 @@ function WaypointPlaybackStartAimingAtPed(p0,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x4F158205E0C74385 (WAYPOINT_PLAYBACK_START_AIMING_AT_ENTITY)
 ---@param p0 any
@@ -4135,6 +4472,7 @@ end
 function WaypointPlaybackStartAimingAtEntity(p0,p1,p2,p3)
     Citizen.InvokeNative(0x4F158205E0C74385,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -4150,6 +4488,7 @@ function WaypointPlaybackStartAimingAtCoord(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xE70BA7B90F8390DC (WAYPOINT_PLAYBACK_START_SHOOTING_AT_PED)
 ---@param p0 any
@@ -4162,6 +4501,7 @@ function WaypointPlaybackStartShootingAtPed(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x4AF458F71C1196D2 (WAYPOINT_PLAYBACK_START_SHOOTING_AT_ENTITY)
 ---@param p0 any
@@ -4172,6 +4512,7 @@ end
 function WaypointPlaybackStartShootingAtEntity(p0,p1,p2,p3,p4)
     Citizen.InvokeNative(0x4AF458F71C1196D2,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -4188,12 +4529,14 @@ function WaypointPlaybackStartShootingAtCoord(p0,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x47EFA040EBB8E2EA (WAYPOINT_PLAYBACK_STOP_AIMING_OR_SHOOTING)
 ---@param p0 any
 function WaypointPlaybackStopAimingOrShooting(p0)
     Citizen.InvokeNative(0x47EFA040EBB8E2EA,p0)
 end
+
 
 
 --- 
@@ -4204,6 +4547,7 @@ function AssistedMovementRemoveRoute(route)
 end
 
 
+
 --- 
 --- Native 0x5C885E0978B6AD60 (_CREATE_WAYPOINT_PATH)
 ---@param pathName string
@@ -4212,8 +4556,9 @@ end
 ---@param p3 number
 ---@return boolean
 function CreateWaypointPath(pathName,p1,nodes,p3)
-   return Citizen.InvokeNative(0x5C885E0978B6AD60,pathName,p1,nodes,p3)
+    return Citizen.InvokeNative(0x5C885E0978B6AD60,pathName,p1,nodes,p3)
 end
+
 
 
 --- 
@@ -4221,8 +4566,9 @@ end
 ---@param route string
 ---@return boolean
 function AssistedMovementIsRouteLoaded(route)
-   return Citizen.InvokeNative(0x60F9A4393A21F741,route)
+    return Citizen.InvokeNative(0x60F9A4393A21F741,route)
 end
+
 
 
 --- 
@@ -4234,6 +4580,7 @@ function AssistedMovementSetRouteProperties(route,props)
 end
 
 
+
 --- 
 --- Native 0x295F03DC97BEEBC1 (SET_ENABLE_SPEED_RESTRAIN_FOR_WAYPOINT_RECORDING_LEADER)
 ---@param p0 any
@@ -4241,6 +4588,7 @@ end
 function SetEnableSpeedRestrainForWaypointRecordingLeader(p0,p1)
     Citizen.InvokeNative(0x295F03DC97BEEBC1,p0,p1)
 end
+
 
 
 --- 
@@ -4257,6 +4605,7 @@ end
 function SetUpSpeedRestrainInformationForPlayerFollower(p0,p1,p2,p3,p4,p5,p6,p7,p8)
     Citizen.InvokeNative(0xB5C51DD544F14F58,p0,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -4277,6 +4626,7 @@ function TaskVehicleFollowWaypointRecording(ped,vehicle,waypointRecording,drivin
 end
 
 
+
 --- 
 --- Native 0x041D17A9E221AE30 (_TASK_VEHICLE_FOLLOW_WAYPOINT_RECORDING_2)
 ---@param p0 any
@@ -4294,14 +4644,16 @@ function TaskVehicleFollowWaypointRecording2(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9)
 end
 
 
+
 --- 
 --- Native 0xF5134943EA29868C (IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_VEHICLE)
 ---@param p0 any
 ---@param p1 any
 ---@return boolean
 function IsWaypointPlaybackGoingOnForVehicle(p0,p1)
-   return Citizen.InvokeNative(0xF5134943EA29868C,p0,p1)
+    return Citizen.InvokeNative(0xF5134943EA29868C,p0,p1)
 end
+
 
 
 --- 
@@ -4309,8 +4661,9 @@ end
 ---@param vehicle vehicle
 ---@return number
 function GetVehicleWaypointProgress(vehicle)
-   return Citizen.InvokeNative(0x9824CFF8FC66E159,vehicle)
+    return Citizen.InvokeNative(0x9824CFF8FC66E159,vehicle)
 end
+
 
 
 --- 
@@ -4318,8 +4671,9 @@ end
 ---@param vehicle vehicle
 ---@return number
 function GetVehicleWaypointTargetPoint(vehicle)
-   return Citizen.InvokeNative(0x416B62AC8B9E5BBD,vehicle)
+    return Citizen.InvokeNative(0x416B62AC8B9E5BBD,vehicle)
 end
+
 
 
 --- 
@@ -4330,13 +4684,15 @@ function VehicleWaypointPlaybackPause(vehicle)
 end
 
 
+
 --- 
 --- Native 0x4D6D30AB18B0B089 (VEHICLE_WAYPOINT_PLAYBACK_GET_IS_PAUSED)
 ---@param p0 any
 ---@return any
 function VehicleWaypointPlaybackGetIsPaused(p0)
-   return Citizen.InvokeNative(0x4D6D30AB18B0B089,p0)
+    return Citizen.InvokeNative(0x4D6D30AB18B0B089,p0)
 end
+
 
 
 --- 
@@ -4347,12 +4703,14 @@ function VehicleWaypointPlaybackResume(vehicle)
 end
 
 
+
 --- 
 --- Native 0x5CEB25A7D2848963 (VEHICLE_WAYPOINT_PLAYBACK_USE_DEFAULT_SPEED)
 ---@param vehicle vehicle
 function VehicleWaypointPlaybackUseDefaultSpeed(vehicle)
     Citizen.InvokeNative(0x5CEB25A7D2848963,vehicle)
 end
+
 
 
 --- 
@@ -4364,13 +4722,15 @@ function VehicleWaypointPlaybackOverrideSpeed(vehicle,speed)
 end
 
 
+
 --- 
 --- Native 0x3DC971EB22F73447 (GET_VEHICLE_WAYPOINT_PLAYBACK_OVERRIDE_SPEED)
 ---@param p0 any
 ---@return any
 function GetVehicleWaypointPlaybackOverrideSpeed(p0)
-   return Citizen.InvokeNative(0x3DC971EB22F73447,p0)
+    return Citizen.InvokeNative(0x3DC971EB22F73447,p0)
 end
+
 
 
 --- 
@@ -4380,6 +4740,7 @@ end
 function TaskSetBlockingOfNonTemporaryEvents(ped,toggle)
     Citizen.InvokeNative(0x90D2156198831D69,ped,toggle)
 end
+
 
 
 --- 
@@ -4393,6 +4754,7 @@ function TaskSetStealthMovement(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x17293C633C8AC019 (TASK_SET_CROUCH_MOVEMENT)
 ---@param ped number
@@ -4404,6 +4766,7 @@ function TaskSetCrouchMovement(ped,p1,p2,p3)
 end
 
 
+
 --- motionStateHash: see FORCE_PED_MOTION_STATE
 --- Native 0x4F056E1AFFEF17AB (TASK_FORCE_MOTION_STATE)
 ---@param ped number
@@ -4412,6 +4775,7 @@ end
 function TaskForceMotionState(ped,motionStateHash,p2)
     Citizen.InvokeNative(0x4F056E1AFFEF17AB,ped,motionStateHash,p2)
 end
+
 
 
 --- 
@@ -4427,6 +4791,7 @@ function TaskMoveNetworkByName(ped,task,multiplier,p3,animDict,flags)
 end
 
 
+
 --- 
 --- Native 0x139805C2A67C4795 (TASK_MOVE_NETWORK_BY_NAME_WITH_INIT_PARAMS)
 ---@param ped number
@@ -4439,6 +4804,7 @@ end
 function TaskMoveNetworkByNameWithInitParams(ped,moveNetworkDefName,taskData,p3,p4,animDict,flags)
     Citizen.InvokeNative(0x139805C2A67C4795,ped,moveNetworkDefName,taskData,p3,p4,animDict,flags)
 end
+
 
 
 --- 
@@ -4461,6 +4827,7 @@ end
 function TaskMoveNetworkAdvancedByNameWithInitParams(ped,moveNetworkDefName,taskData,xPos,yPos,zPos,xRot,yRot,zRot,p9,p10,p11,p12,flag,p14)
     Citizen.InvokeNative(0x7B6A04F98BBAFB2C,ped,moveNetworkDefName,taskData,xPos,yPos,zPos,xRot,yRot,zRot,p9,p10,p11,p12,flag,p14)
 end
+
 
 
 --- 
@@ -4488,13 +4855,15 @@ function TaskMoveNetworkAdvancedByNameWithInitParamsAttached(ped,p1,p2,p3,p4,p5,
 end
 
 
+
 --- 
 --- Native 0x921CE12C489C4C41 (IS_TASK_MOVE_NETWORK_ACTIVE)
 ---@param ped number
 ---@return boolean
 function IsTaskMoveNetworkActive(ped)
-   return Citizen.InvokeNative(0x921CE12C489C4C41,ped)
+    return Citizen.InvokeNative(0x921CE12C489C4C41,ped)
 end
+
 
 
 --- Returns hash of the underlying move network def, see move_networks.xml
@@ -4503,8 +4872,9 @@ end
 ---@param ped number
 ---@return hash
 function GetTaskMoveNetworkId(ped)
-   return Citizen.InvokeNative(0xCACC2F9D994504B7,ped)
+    return Citizen.InvokeNative(0xCACC2F9D994504B7,ped)
 end
+
 
 
 --- 
@@ -4512,8 +4882,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsTaskMoveNetworkReadyForTransition(ped)
-   return Citizen.InvokeNative(0x30ED88D5E0C56A37,ped)
+    return Citizen.InvokeNative(0x30ED88D5E0C56A37,ped)
 end
+
 
 
 --- 
@@ -4525,13 +4896,15 @@ function RequestTaskMoveNetworkStateTransition(ped,name)
 end
 
 
+
 --- 
 --- Native 0x717E4D1F2048376D (GET_TASK_MOVE_NETWORK_STATE)
 ---@param ped number
 ---@return string
 function GetTaskMoveNetworkState(ped)
-   return Citizen.InvokeNative(0x717E4D1F2048376D,ped)
+    return Citizen.InvokeNative(0x717E4D1F2048376D,ped)
 end
+
 
 
 --- 
@@ -4544,6 +4917,7 @@ function SetTaskMoveNetworkSignalFloat(ped,signalName,value)
 end
 
 
+
 --- 
 --- Native 0x099D4A855D53B03B (_SET_TASK_MOVE_NETWORK_SIGNAL_FLOAT_2)
 ---@param ped number
@@ -4554,6 +4928,7 @@ function SetTaskMoveNetworkSignalFloat2(ped,signalName,value)
 end
 
 
+
 --- 
 --- Native 0xB0A6CFD2C69C1088 (SET_TASK_MOVE_NETWORK_SIGNAL_BOOL)
 ---@param ped number
@@ -4562,6 +4937,7 @@ end
 function SetTaskMoveNetworkSignalBool(ped,signalName,value)
     Citizen.InvokeNative(0xB0A6CFD2C69C1088,ped,signalName,value)
 end
+
 
 
 --- 
@@ -4576,14 +4952,16 @@ function SetTaskMoveNetworkSignalVector(ped,signalName,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x844CEEE428EA35B0 (_GET_TASK_MOVE_NETWORK_PHASE_FLOAT)
 ---@param ped number
 ---@param phaseName string
 ---@return float
 function GetTaskMoveNetworkPhaseFloat(ped,phaseName)
-   return Citizen.InvokeNative(0x844CEEE428EA35B0,ped,phaseName)
+    return Citizen.InvokeNative(0x844CEEE428EA35B0,ped,phaseName)
 end
+
 
 
 --- 
@@ -4592,8 +4970,9 @@ end
 ---@param eventName string
 ---@return boolean
 function GetTaskMoveNetworkEvent(ped,eventName)
-   return Citizen.InvokeNative(0xB4F47213DF45A64C,ped,eventName)
+    return Citizen.InvokeNative(0xB4F47213DF45A64C,ped,eventName)
 end
+
 
 
 --- 
@@ -4601,8 +4980,9 @@ end
 ---@param moveBlendRatio float
 ---@return boolean
 function IsMoveBlendRatioStill(moveBlendRatio)
-   return Citizen.InvokeNative(0x349CE7B56DAFD95C,moveBlendRatio)
+    return Citizen.InvokeNative(0x349CE7B56DAFD95C,moveBlendRatio)
 end
+
 
 
 --- 
@@ -4610,8 +4990,9 @@ end
 ---@param moveBlendRatio float
 ---@return boolean
 function IsMoveBlendRatioWalking(moveBlendRatio)
-   return Citizen.InvokeNative(0xF133BBBE91E1691F,moveBlendRatio)
+    return Citizen.InvokeNative(0xF133BBBE91E1691F,moveBlendRatio)
 end
+
 
 
 --- 
@@ -4619,8 +5000,9 @@ end
 ---@param moveBlendRatio float
 ---@return boolean
 function IsMoveBlendRatioRunning(moveBlendRatio)
-   return Citizen.InvokeNative(0xD4D8636C0199A939,moveBlendRatio)
+    return Citizen.InvokeNative(0xD4D8636C0199A939,moveBlendRatio)
 end
+
 
 
 --- 
@@ -4628,8 +5010,9 @@ end
 ---@param moveBlendRatio float
 ---@return boolean
 function IsMoveBlendRatioSprinting(moveBlendRatio)
-   return Citizen.InvokeNative(0x24A2AD74FA9814E2,moveBlendRatio)
+    return Citizen.InvokeNative(0x24A2AD74FA9814E2,moveBlendRatio)
 end
+
 
 
 --- 
@@ -4637,8 +5020,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedStill(ped)
-   return Citizen.InvokeNative(0xAC29253EEF8F0180,ped)
+    return Citizen.InvokeNative(0xAC29253EEF8F0180,ped)
 end
+
 
 
 --- 
@@ -4646,8 +5030,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedWalking(ped)
-   return Citizen.InvokeNative(0xDE4C184B2B9B071A,ped)
+    return Citizen.InvokeNative(0xDE4C184B2B9B071A,ped)
 end
+
 
 
 --- 
@@ -4655,8 +5040,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedRunning(ped)
-   return Citizen.InvokeNative(0xC5286FFC176F28A2,ped)
+    return Citizen.InvokeNative(0xC5286FFC176F28A2,ped)
 end
+
 
 
 --- 
@@ -4664,8 +5050,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedSprinting(ped)
-   return Citizen.InvokeNative(0x57E457CD2C0FC168,ped)
+    return Citizen.InvokeNative(0x57E457CD2C0FC168,ped)
 end
+
 
 
 --- 
@@ -4673,8 +5060,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInHitReact(ped)
-   return Citizen.InvokeNative(0xF330A5C062B29BED,ped)
+    return Citizen.InvokeNative(0xF330A5C062B29BED,ped)
 end
+
 
 
 --- 
@@ -4686,13 +5074,15 @@ function TaskArrestPed(ped,target)
 end
 
 
+
 --- This function is hard-coded to always return false.
 --- Native 0x90A09F3A45FED688 (IS_PED_BEING_ARRESTED)
 ---@param ped number
 ---@return boolean
 function IsPedBeingArrested(ped)
-   return Citizen.InvokeNative(0x90A09F3A45FED688,ped)
+    return Citizen.InvokeNative(0x90A09F3A45FED688,ped)
 end
+
 
 
 --- 
@@ -4700,8 +5090,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedArrestingAnyPed(ped)
-   return Citizen.InvokeNative(0xA9CC7856D52DBD25,ped)
+    return Citizen.InvokeNative(0xA9CC7856D52DBD25,ped)
 end
+
 
 
 --- 
@@ -4712,6 +5103,7 @@ function CuffPed(ped)
 end
 
 
+
 --- 
 --- Native 0x67406F2C8F87FC4F (UNCUFF_PED)
 ---@param ped number
@@ -4720,13 +5112,15 @@ function UncuffPed(ped)
 end
 
 
+
 --- 
 --- Native 0x74E559B3BC910685 (IS_PED_CUFFED)
 ---@param ped number
 ---@return boolean
 function IsPedCuffed(ped)
-   return Citizen.InvokeNative(0x74E559B3BC910685,ped)
+    return Citizen.InvokeNative(0x74E559B3BC910685,ped)
 end
+
 
 
 --- 
@@ -4734,8 +5128,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedDuelling(ped)
-   return Citizen.InvokeNative(0xC8B29D18022EA2B7,ped)
+    return Citizen.InvokeNative(0xC8B29D18022EA2B7,ped)
 end
+
 
 
 --- Params: p4 either 0.2f, 0.25f, 0.31f, 0.4f
@@ -4756,6 +5151,7 @@ function TaskDuel(ped,p1,p2,entity,p4,p5,vPosOpponentX,vPosOpponentY,vPosOpponen
 end
 
 
+
 --- 
 --- Native 0xEED08A3A98B847E2 (END_DUEL)
 ---@param ped number
@@ -4764,6 +5160,7 @@ end
 function EndDuel(ped,p1,p2)
     Citizen.InvokeNative(0xEED08A3A98B847E2,ped,p1,p2)
 end
+
 
 
 --- carriableSlot:
@@ -4783,13 +5180,15 @@ function TaskCarriable(entity,carryConfig,carrier,carriableSlot,flags)
 end
 
 
+
 --- 
 --- Native 0x0CCFE72B43C9CF96 (GET_IS_CARRIABLE_ENTITY)
 ---@param entity entity
 ---@return boolean
 function GetIsCarriableEntity(entity)
-   return Citizen.InvokeNative(0x0CCFE72B43C9CF96,entity)
+    return Citizen.InvokeNative(0x0CCFE72B43C9CF96,entity)
 end
+
 
 
 --- 
@@ -4806,6 +5205,7 @@ function TaskPlaceCarriedEntityAtCoord(ped,entity,x,y,z,p5,flags)
 end
 
 
+
 --- 
 --- Native 0x6D3D87C57B3D52C7 (TASK_PLACE_CARRIED_ENTITY_ON_MOUNT)
 ---@param ped number
@@ -4815,6 +5215,7 @@ end
 function TaskPlaceCarriedEntityOnMount(ped,entity,mount,p3)
     Citizen.InvokeNative(0x6D3D87C57B3D52C7,ped,entity,mount,p3)
 end
+
 
 
 --- 
@@ -4827,12 +5228,14 @@ function TaskDumpCarriableFromParent(ped,ped2,entity)
 end
 
 
+
 --- 
 --- Native 0x36D188AECB26094B (_DETACH_CARRIABLE_PED)
 ---@param ped number
 function DetachCarriablePed(ped)
     Citizen.InvokeNative(0x36D188AECB26094B,ped)
 end
+
 
 
 --- 
@@ -4844,6 +5247,7 @@ function TaskPickupCarriableEntity(ped,entity)
 end
 
 
+
 --- 
 --- Native 0x27829AFD3E03AC1A (TASK_HOGTIE_TARGET_PED)
 ---@param ped number
@@ -4853,6 +5257,7 @@ function TaskHogtieTargetPed(ped,targetPed)
 end
 
 
+
 --- 
 --- Native 0x81D16C4FF3A77ADF (_TASK_CUT_FREE_HOGTIED_TARGET_PED)
 ---@param ped number
@@ -4860,6 +5265,7 @@ end
 function TaskCutFreeHogtiedTargetPed(ped,targetPed)
     Citizen.InvokeNative(0x81D16C4FF3A77ADF,ped,targetPed)
 end
+
 
 
 --- 
@@ -4872,6 +5278,7 @@ function TaskCutFreeHogtiedTargetPed2(ped,targetPed,p2)
 end
 
 
+
 --- Sets the time it takes for a hogtied ped to escape
 ----1.0f for ped to never escape
 --- Native 0xAB591AE6B48B913E (_SET_HOGTIE_ESCAPE_TIMER)
@@ -4882,13 +5289,15 @@ function SetHogtieEscapeTimer(ped,time)
 end
 
 
+
 --- 
 --- Native 0x4687E69D258BBE41 (_GET_HOGTIE_ESCAPE_TIMER)
 ---@param ped number
 ---@return float
 function GetHogtieEscapeTimer(ped)
-   return Citizen.InvokeNative(0x4687E69D258BBE41,ped)
+    return Citizen.InvokeNative(0x4687E69D258BBE41,ped)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/objects/composites
@@ -4896,8 +5305,9 @@ end
 ---@param asset hash
 ---@return boolean
 function RequestHerbCompositeAsset(asset)
-   return Citizen.InvokeNative(0x73F0D0327BFA0812,asset)
+    return Citizen.InvokeNative(0x73F0D0327BFA0812,asset)
 end
+
 
 
 --- Returns true when requested asset is loaded
@@ -4905,8 +5315,9 @@ end
 ---@param asset hash
 ---@return boolean
 function AreCompositeLootableEntityDefAssetsLoaded(asset)
-   return Citizen.InvokeNative(0x5E5D96BE25E9DF68,asset)
+    return Citizen.InvokeNative(0x5E5D96BE25E9DF68,asset)
 end
+
 
 
 --- groundSetting: 0: spawn on ground, 2 (1?): do not spawn on ground
@@ -4923,8 +5334,9 @@ end
 ---@param p7 number
 ---@return number
 function CreateHerbComposites(asset,x,y,z,heading,groundSetting,p6,p7)
-   return Citizen.InvokeNative(0x5B4BBE80AD5972DC,asset,x,y,z,heading,groundSetting,p6,p7)
+    return Citizen.InvokeNative(0x5B4BBE80AD5972DC,asset,x,y,z,heading,groundSetting,p6,p7)
 end
+
 
 
 --- Params: p1 is always false except in script nb_egg_protector
@@ -4936,14 +5348,16 @@ function DeletePatchObjectsFromHerbComposites(compositeId,p1)
 end
 
 
+
 --- Flowers, Stalks or whatever the composite has
 --- Native 0x96C6ED22FB742C3E (_GET_HERB_COMPOSITE_NUM_ENTITIES)
 ---@param compositeId number
 ---@param outEntities any*
 ---@return number
 function GetHerbCompositeNumEntities(compositeId,outEntities)
-   return Citizen.InvokeNative(0x96C6ED22FB742C3E,compositeId,outEntities)
+    return Citizen.InvokeNative(0x96C6ED22FB742C3E,compositeId,outEntities)
 end
+
 
 
 --- 
@@ -4955,6 +5369,7 @@ function TaskLootEntity(ped,entity)
 end
 
 
+
 --- 
 --- Native 0xBB28D1BC9EA8A6A5 (TASK_BREAK_VEHICLE_DOOR_LOCK)
 ---@param ped number
@@ -4962,6 +5377,7 @@ end
 function TaskBreakVehicleDoorLock(ped,vehicle)
     Citizen.InvokeNative(0xBB28D1BC9EA8A6A5,ped,vehicle)
 end
+
 
 
 --- 
@@ -4977,6 +5393,7 @@ function TaskLootNearestEntity(ped,x,y,z,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xC716EB2BD16370A3 (TASK_LASSO_PED)
 ---@param ped number
@@ -4986,12 +5403,14 @@ function TaskLassoPed(ped,targetPed)
 end
 
 
+
 --- 
 --- Native 0x6AFD8FE0D723328F (TASK_HOGTIEABLE)
 ---@param ped number
 function TaskHogtieable(ped)
     Citizen.InvokeNative(0x6AFD8FE0D723328F,ped)
 end
+
 
 
 --- getupSetHash: see nm_blend_out_sets.meta
@@ -5007,12 +5426,14 @@ function UnhogtiePed(ped,flags,getupSetHash,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x78B4567E18B54480 (_MAKE_OBJECT_CARRIABLE)
 ---@param object object
 function MakeObjectCarriable(object)
     Citizen.InvokeNative(0x78B4567E18B54480,object)
 end
+
 
 
 --- 
@@ -5023,13 +5444,15 @@ function MakeObjectNotCarriable(object)
 end
 
 
+
 --- 
 --- Native 0xE47DD64B9F02677D (_FIND_MODEL_FOR_ITEM)
 ---@param item hash
 ---@return hash
 function FindModelForItem(item)
-   return Citizen.InvokeNative(0xE47DD64B9F02677D,item)
+    return Citizen.InvokeNative(0xE47DD64B9F02677D,item)
 end
+
 
 
 --- 
@@ -5042,14 +5465,16 @@ function SetTeamCarriableEntity(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x559A6F8C5133B4EE (IS_TEAM_CARRIABLE_ENTITY)
 ---@param p0 any
 ---@param p1 any
 ---@return boolean
 function IsTeamCarriableEntity(p0,p1)
-   return Citizen.InvokeNative(0x559A6F8C5133B4EE,p0,p1)
+    return Citizen.InvokeNative(0x559A6F8C5133B4EE,p0,p1)
 end
+
 
 
 --- Returns true while a hat is being picked up
@@ -5058,8 +5483,9 @@ end
 ---@param hatObject object
 ---@return boolean
 function IsHatBeingPickedUp(hatObject)
-   return Citizen.InvokeNative(0x11CD066F54DA0133,hatObject)
+    return Citizen.InvokeNative(0x11CD066F54DA0133,hatObject)
 end
+
 
 
 --- Returns true while a hat is being picked up. Similar to 0x11CD066F54DA0133
@@ -5068,8 +5494,9 @@ end
 ---@param hatObject object
 ---@return boolean
 function IsHatBeingPickedUp2(hatObject)
-   return Citizen.InvokeNative(0x4ECCC2815CA79AE2,hatObject)
+    return Citizen.InvokeNative(0x4ECCC2815CA79AE2,hatObject)
 end
+
 
 
 --- _A*
@@ -5081,6 +5508,7 @@ function TaskEquipHat(hatObject,ped)
 end
 
 
+
 --- clipset: CLIPSET@MECH_HOGTIE@HUMAN@BREAKOUT_MG@GROUND, CLIPSET@MECH_HOGTIE@HUMAN@BREAKOUT_MG@SHOULDER, CLIPSET@MECH_HOGTIE@HUMAN@BREAKOUT_MG@MOUNT
 ---clipset can also be 0
 --- Native 0x1BF9D36A5EAFFBAE (SET_ENHANCED_BREAK_FREE)
@@ -5089,8 +5517,9 @@ end
 ---@param clipset string
 ---@return boolean
 function SetEnhancedBreakFree(ped,p1,clipset)
-   return Citizen.InvokeNative(0x1BF9D36A5EAFFBAE,ped,p1,clipset)
+    return Citizen.InvokeNative(0x1BF9D36A5EAFFBAE,ped,p1,clipset)
 end
+
 
 
 --- 
@@ -5098,8 +5527,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedLeadingHorse(ped)
-   return Citizen.InvokeNative(0xEFC4303DDC6E60D3,ped)
+    return Citizen.InvokeNative(0xEFC4303DDC6E60D3,ped)
 end
+
 
 
 --- 
@@ -5107,8 +5537,9 @@ end
 ---@param ped number
 ---@return number
 function GetLedHorseFromPed(ped)
-   return Citizen.InvokeNative(0xED1F514AF4732258,ped)
+    return Citizen.InvokeNative(0xED1F514AF4732258,ped)
 end
+
 
 
 --- 
@@ -5122,6 +5553,7 @@ function TaskTurnToFaceClosestPed(ped,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x3A2A2071DF5CC569 (TASK_CONFRONT)
 ---@param ped number
@@ -5129,8 +5561,9 @@ end
 ---@param p2 number
 ---@return boolean
 function TaskConfront(ped,targetPed,p2)
-   return Citizen.InvokeNative(0x3A2A2071DF5CC569,ped,targetPed,p2)
+    return Citizen.InvokeNative(0x3A2A2071DF5CC569,ped,targetPed,p2)
 end
+
 
 
 --- 
@@ -5139,8 +5572,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function TaskPolice(ped,p1)
-   return Citizen.InvokeNative(0x87BE56724650408E,ped,p1)
+    return Citizen.InvokeNative(0x87BE56724650408E,ped,p1)
 end
+
 
 
 --- Params: p2: AR_TAKEDOWN_FRONT, AR_EXECUTION_FRONT, 0 in R* Scripts
@@ -5155,8 +5589,9 @@ end
 ---@param p7 float
 ---@return boolean
 function TaskMelee(ped,targetPed,p2,p3,p4,p5,p6,p7)
-   return Citizen.InvokeNative(0x482C99D0B38D1B0A,ped,targetPed,p2,p3,p4,p5,p6,p7)
+    return Citizen.InvokeNative(0x482C99D0B38D1B0A,ped,targetPed,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- grappleStyle: AR_GRAPPLE_MOUNT_STANDING_FROM_FRONT, AR_GRAPPLE_MOUNT_STANDING_FROM_RIGHT, AR_GRAPPLE_MOUNT_STANDING_FROM_BACK, AR_GRAPPLE_MOUNT_STANDING_FROM_LEFT, AR_GRAPPLE_MOUNT_FROM_FRONT, AR_WOLF_EXECUTION_ENTER_FROM_BACK, AR_GRAPPLE_DRAG_FRONT_ON_ASS, AR_GRAPPLE_FRONT_FROM_LEFT_FAR, AR_BEAR_CHALLENGE_FRONT, AR_GRAPPLE_FRONT_FROM_FRONT, AR_GRAPPLE_MOUNT_FACEUP_FROM_FRONT
@@ -5170,8 +5605,9 @@ end
 ---@param p6 number
 ---@return boolean
 function TaskGrapple(ped,targetPed,grappleStyle,p3,p4,p5,p6)
-   return Citizen.InvokeNative(0x779A2FFACEFAEA7B,ped,targetPed,grappleStyle,p3,p4,p5,p6)
+    return Citizen.InvokeNative(0x779A2FFACEFAEA7B,ped,targetPed,grappleStyle,p3,p4,p5,p6)
 end
+
 
 
 --- 
@@ -5183,8 +5619,9 @@ end
 ---@param p4 any
 ---@return boolean
 function TaskIntimidated(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0x648B75D44930D6BD,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0x648B75D44930D6BD,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -5200,8 +5637,9 @@ end
 ---@param flag number
 ---@return boolean
 function TaskIntimidated2(victim,attacker,p2,p3,p4,everyFrame,p6,p7,flag)
-   return Citizen.InvokeNative(0x933ACC1A1771A288,victim,attacker,p2,p3,p4,everyFrame,p6,p7,flag)
+    return Citizen.InvokeNative(0x933ACC1A1771A288,victim,attacker,p2,p3,p4,everyFrame,p6,p7,flag)
 end
+
 
 
 --- 
@@ -5212,6 +5650,7 @@ function TaskPersistentCharacter(ped)
 end
 
 
+
 --- Fishing Research: https://pastebin.com/NmK5ZLVs
 ---Only used in R* Scripts fishing_core and av_fishing_river
 --- Native 0xF3735ACD11ACD500 (_GET_TASK_FISHING)
@@ -5219,8 +5658,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function GetTaskFishing(ped,p1)
-   return Citizen.InvokeNative(0xF3735ACD11ACD500,ped,p1)
+    return Citizen.InvokeNative(0xF3735ACD11ACD500,ped,p1)
 end
+
 
 
 --- Only used in R* Scripts fishing_core and av_fishing_river
@@ -5229,8 +5669,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function SetTaskFishing(ped,p1)
-   return Citizen.InvokeNative(0xF3735ACD11ACD501,ped,p1)
+    return Citizen.InvokeNative(0xF3735ACD11ACD501,ped,p1)
 end
+
 
 
 --- Baits: see 0x9B0C7FA063E67629
@@ -5241,6 +5682,7 @@ end
 function TaskSwapFishingBait(ped,bait,withoutBuoy)
     Citizen.InvokeNative(0x2C28AC30A72722DA,ped,bait,withoutBuoy)
 end
+
 
 
 --- Baits: p_fishHook02x, p_baitBread01x, p_baitCorn01x, p_baitCheese01x, p_baitWorm01x, p_baitCricket01x, p_crawdad01x, p_finisheDragonfly01x, p_finisdFishlure01x, p_finishdCrawd01x, p_finisheDragonflyLegendary01x, p_finisdFishlureLegendary01x, p_finishdCrawdLegendary01x, p_lgoc_spinner_v4
@@ -5254,6 +5696,7 @@ function SetFishingBait(ped,bait,withoutBuoy,instantly)
 end
 
 
+
 --- 
 --- Native 0x1A52076D26E09004 (_PED_FISHINGROD_HOOK_ENTITY)
 ---@param ped number
@@ -5263,6 +5706,7 @@ function PedFishingrodHookEntity(ped,entity)
 end
 
 
+
 --- Used with 'P_BODYPARTARMFLOAT02X' model in fishing_core.c
 --- Native 0xCE71C2F9BAA3F975 (_PED_FISHINGROD_HOOK_OBJECT)
 ---@param ped number
@@ -5270,6 +5714,7 @@ end
 function PedFishingrodHookObject(ped,object)
     Citizen.InvokeNative(0xCE71C2F9BAA3F975,ped,object)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/animations/kit_emotes_list.lua
@@ -5306,6 +5751,7 @@ function TaskPlayEmoteWithHash(ped,emoteType,playbackMode,emote,isSecondaryTask,
 end
 
 
+
 --- Similar to 0xB31A277C1AC7B7FF but checks if the ped's inventory contains the specified emote kit.
 --- Native 0x884E3436CC1F41DD (_TASK_PLAY_EMOTE)
 ---@param ped number
@@ -5322,6 +5768,7 @@ function TaskPlayEmote(ped,emoteType,playbackMode,emote,isSecondaryTask,canBreak
 end
 
 
+
 --- 
 --- Native 0xBDFEEB7600BCD938 (_TASK_EMOTE_OUTRO)
 ---@param ped number
@@ -5330,13 +5777,15 @@ function TaskEmoteOutro(ped)
 end
 
 
+
 --- 
 --- Native 0xCF9B71C0AF824036 (IS_EMOTE_TASK_RUNNING)
 ---@param ped number
 ---@param p1 any
 ---@return boolean
 function IsEmoteTaskRunning(ped,p1)
-   return Citizen.InvokeNative(0xCF9B71C0AF824036,ped,p1)
+    return Citizen.InvokeNative(0xCF9B71C0AF824036,ped,p1)
 end
+
 
 

@@ -7,6 +7,7 @@ function InverseKinematicsRequestLookAt(ped,args)
 end
 
 
+
 --- Seems to disable IK on ped
 --- Native 0x0EABF182FBB63D72 (_INVERSE_KINEMATICS_SET_DISABLED_FOR_PED)
 ---@param ped number
@@ -15,5 +16,6 @@ end
 function InverseKinematicsSetDisabledForPed(ped,p1,p2)
     Citizen.InvokeNative(0x0EABF182FBB63D72,ped,p1,p2)
 end
+
 
 

@@ -7,11 +7,13 @@ function ReplaySystemHasRequestedAScriptCleanup()
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x57C6525034E76EB0 (SET_SCRIPTS_HAVE_CLEANED_UP_FOR_REPLAY_SYSTEM)
 function SetScriptsHaveCleanedUpForReplaySystem()
     Citizen.InvokeNative(0x57C6525034E76EB0)
 end
+
 
 
 --- Hardcoded to return true.
@@ -22,13 +24,15 @@ function OpenVideoEditor()
 end
 
 
+
 --- Hardcoded to return true.
 --- Native 0xCEEC64BD27A59312 (CLOSE_VIDEO_EDITOR)
 ---@param p0 any
 ---@return boolean
 function CloseVideoEditor(p0)
-   return Citizen.InvokeNative(0xCEEC64BD27A59312,p0)
+    return Citizen.InvokeNative(0xCEEC64BD27A59312,p0)
 end
+
 
 
 --- Hardcoded to return false.
@@ -37,5 +41,6 @@ end
 function IsVideoEditorRunning()
    return Citizen.InvokeNative(0x9EEB007317FA3B9C)
 end
+
 
 

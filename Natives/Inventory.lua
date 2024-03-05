@@ -22,8 +22,9 @@
 ---@param ped number
 ---@return number
 function InventoryGetInventoryIdFromPed(ped)
-   return Citizen.InvokeNative(0x13D234A2A3F66E63,ped)
+    return Citizen.InvokeNative(0x13D234A2A3F66E63,ped)
 end
+
 
 
 --- 
@@ -32,8 +33,9 @@ end
 ---@param eRoleMaxLevel hash
 ---@return number
 function GetItemRoleMaxLevelCount(inventoryId,eRoleMaxLevel)
-   return Citizen.InvokeNative(0xADDD1E7C0ECF7D95,inventoryId,eRoleMaxLevel)
+    return Citizen.InvokeNative(0xADDD1E7C0ECF7D95,inventoryId,eRoleMaxLevel)
 end
+
 
 
 --- 
@@ -42,8 +44,9 @@ end
 ---@param slotId hash
 ---@return number
 function GetItemSlotMaxCount(provision,slotId)
-   return Citizen.InvokeNative(0xE80E50BEE276A54A,provision,slotId)
+    return Citizen.InvokeNative(0xE80E50BEE276A54A,provision,slotId)
 end
+
 
 
 --- Only works on CClothingItem
@@ -56,14 +59,16 @@ function InventorySetInventoryItemInUse(inventoryId,guid,inUse)
 end
 
 
+
 --- 
 --- Native 0x70E3A884ED000A01 (_INVENTORY_GET_INVENTORY_ITEM_IN_USE)
 ---@param inventoryId number
 ---@param guid any*
 ---@return boolean
 function InventoryGetInventoryItemInUse(inventoryId,guid)
-   return Citizen.InvokeNative(0x70E3A884ED000A01,inventoryId,guid)
+    return Citizen.InvokeNative(0x70E3A884ED000A01,inventoryId,guid)
 end
+
 
 
 --- Used with CClothingItem
@@ -76,6 +81,7 @@ function InventorySetInventoryItemHidden(inventoryId,guid,hidden)
 end
 
 
+
 --- Used with CSatchelItem, R* Script usage: fisihing_core
 --- Native 0xD740F11FBC8AEF43 (_INVENTORY_SET_INVENTORY_ITEM_HIDDEN_2)
 ---@param inventoryId number
@@ -86,14 +92,16 @@ function InventorySetInventoryItemHidden2(inventoryId,guid,hidden)
 end
 
 
+
 --- 
 --- Native 0xF9933164965533B7 (_INVENTORY_GET_INVENTORY_ITEM_HIDDEN)
 ---@param inventoryId number
 ---@param guid any*
 ---@return boolean
 function InventoryGetInventoryItemHidden(inventoryId,guid)
-   return Citizen.InvokeNative(0xF9933164965533B7,inventoryId,guid)
+    return Citizen.InvokeNative(0xF9933164965533B7,inventoryId,guid)
 end
+
 
 
 --- 
@@ -101,8 +109,9 @@ end
 ---@param item hash
 ---@return boolean
 function InventoryGetInventoryItemIsAnimalPelt(item)
-   return Citizen.InvokeNative(0x4AEF1FB5B9011D75,item)
+    return Citizen.InvokeNative(0x4AEF1FB5B9011D75,item)
 end
+
 
 
 --- 
@@ -110,8 +119,9 @@ end
 ---@param item hash
 ---@return hash
 function InventoryGetInventoryItemDescriptionHash(item)
-   return Citizen.InvokeNative(0xA4550FE9C512E3DD,item)
+    return Citizen.InvokeNative(0xA4550FE9C512E3DD,item)
 end
+
 
 
 --- flag: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ItemDatabaseItemFlags
@@ -121,8 +131,9 @@ end
 ---@param flag number
 ---@return boolean
 function InventoryIsInventoryItemFlagEnabled(item,flag)
-   return Citizen.InvokeNative(0x245D07651B1D183B,item,flag)
+    return Citizen.InvokeNative(0x245D07651B1D183B,item,flag)
 end
+
 
 
 --- soundType: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/CItemInfoSoundsInterface__sSoundsInfo__eSoundType
@@ -131,8 +142,9 @@ end
 ---@param soundType number
 ---@return boolean
 function InventoryGetIsInventoryItemSoundValid(item,soundType)
-   return Citizen.InvokeNative(0x2BAE4880DCDD560B,item,soundType)
+    return Citizen.InvokeNative(0x2BAE4880DCDD560B,item,soundType)
 end
+
 
 
 --- soundType: see 0x2BAE4880DCDD560B
@@ -142,8 +154,9 @@ end
 ---@param soundType number
 ---@return hash
 function InventoryGetInventoryItemSound(item,soundType)
-   return Citizen.InvokeNative(0x2E1CDC1FF3B8473E,item,soundType)
+    return Citizen.InvokeNative(0x2E1CDC1FF3B8473E,item,soundType)
 end
+
 
 
 --- 
@@ -152,8 +165,9 @@ end
 ---@param info any*
 ---@return boolean
 function InventoryGetInventoryItemInspectionInfo(item,info)
-   return Citizen.InvokeNative(0x0C093C1787F18519,item,info)
+    return Citizen.InvokeNative(0x0C093C1787F18519,item,info)
 end
+
 
 
 --- Returns CopyID
@@ -162,8 +176,9 @@ end
 ---@param guid any*
 ---@return number
 function InventoryGetInventoryItemWeaponCopyId(inventoryId,guid)
-   return Citizen.InvokeNative(0xAB5F12746A099A0E,inventoryId,guid)
+    return Citizen.InvokeNative(0xAB5F12746A099A0E,inventoryId,guid)
 end
+
 
 
 --- inventoryId: see _INVENTORY_GET_PED_INVENTORY_ID
@@ -171,8 +186,9 @@ end
 ---@param inventoryId number
 ---@return boolean
 function InventoryAreLocalChangesAllowed(inventoryId)
-   return Citizen.InvokeNative(0x0FBBFFC891A97C81,inventoryId)
+    return Citizen.InvokeNative(0x0FBBFFC891A97C81,inventoryId)
 end
+
 
 
 --- 
@@ -180,8 +196,9 @@ end
 ---@param guid any*
 ---@return boolean
 function InventoryIsGuidValid(guid)
-   return Citizen.InvokeNative(0xB881CA836CC4B6D4,guid)
+    return Citizen.InvokeNative(0xB881CA836CC4B6D4,guid)
 end
+
 
 
 --- 
@@ -190,8 +207,9 @@ end
 ---@param guid2 any*
 ---@return boolean
 function InventoryCompareGuids(guid1,guid2)
-   return Citizen.InvokeNative(0x4C543D5DFCD2DAFD,guid1,guid2)
+    return Citizen.InvokeNative(0x4C543D5DFCD2DAFD,guid1,guid2)
 end
+
 
 
 --- 
@@ -203,8 +221,9 @@ end
 ---@param outGuid any*
 ---@return boolean
 function InventoryGetGuidFromItemid(inventoryId,guid,p2,slotId,outGuid)
-   return Citizen.InvokeNative(0x886DFD3E185C8A89,inventoryId,guid,p2,slotId,outGuid)
+    return Citizen.InvokeNative(0x886DFD3E185C8A89,inventoryId,guid,p2,slotId,outGuid)
 end
+
 
 
 --- 
@@ -215,8 +234,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function InventoryGetInventoryItem(inventoryId,inData,outData,p3)
-   return Citizen.InvokeNative(0x9700E8EFC4AB9089,inventoryId,inData,outData,p3)
+    return Citizen.InvokeNative(0x9700E8EFC4AB9089,inventoryId,inData,outData,p3)
 end
+
 
 
 --- 
@@ -228,8 +248,9 @@ end
 ---@param p4 number
 ---@return boolean
 function InventoryGetFullInventoryItemData(inventoryId,guid,p2,p3,p4)
-   return Citizen.InvokeNative(0x025A1B1FB03FBF61,inventoryId,guid,p2,p3,p4)
+    return Citizen.InvokeNative(0x025A1B1FB03FBF61,inventoryId,guid,p2,p3,p4)
 end
+
 
 
 --- 
@@ -240,8 +261,9 @@ end
 ---@param outInventoryItem any*
 ---@return boolean
 function InventoryGetInventoryItemChild(inventoryId,parentGuid,childIndex,outInventoryItem)
-   return Citizen.InvokeNative(0xCD9A485F2B383B44,inventoryId,parentGuid,childIndex,outInventoryItem)
+    return Citizen.InvokeNative(0xCD9A485F2B383B44,inventoryId,parentGuid,childIndex,outInventoryItem)
 end
+
 
 
 --- inventoryItemSlotHash: https://pastebin.com/P6fyr3vr
@@ -255,8 +277,9 @@ end
 ---@param addReason hash
 ---@return boolean
 function InventoryAddItemWithGuid(inventoryId,guid1,guid2,item,inventoryItemSlot,p5,addReason)
-   return Citizen.InvokeNative(0xCB5D11F9508A928D,inventoryId,guid1,guid2,item,inventoryItemSlot,p5,addReason)
+    return Citizen.InvokeNative(0xCB5D11F9508A928D,inventoryId,guid1,guid2,item,inventoryItemSlot,p5,addReason)
 end
+
 
 
 --- Getter: _INVENTORY_GET_FULL_INVENTORY_ITEM_DATA
@@ -267,8 +290,9 @@ end
 ---@param p3 number
 ---@return boolean
 function InventoryUpdateInventoryItem(inventoryId,guid1,guid2,p3)
-   return Citizen.InvokeNative(0xD80A8854DB5CFBA5,inventoryId,guid1,guid2,p3)
+    return Citizen.InvokeNative(0xD80A8854DB5CFBA5,inventoryId,guid1,guid2,p3)
 end
+
 
 
 --- 
@@ -279,8 +303,9 @@ end
 ---@param removeReason hash
 ---@return boolean
 function InventoryRemoveInventoryItemWithGuid(inventoryId,guid,quantity,removeReason)
-   return Citizen.InvokeNative(0x3E4E811480B3AE79,inventoryId,guid,quantity,removeReason)
+    return Citizen.InvokeNative(0x3E4E811480B3AE79,inventoryId,guid,quantity,removeReason)
 end
+
 
 
 --- 
@@ -291,8 +316,9 @@ end
 ---@param removeReason hash
 ---@return boolean
 function InventoryRemoveInventoryItemWithItemid(inventoryId,item,quantity,removeReason)
-   return Citizen.InvokeNative(0xB4158C8C9A3B5DCE,inventoryId,item,quantity,removeReason)
+    return Citizen.InvokeNative(0xB4158C8C9A3B5DCE,inventoryId,item,quantity,removeReason)
 end
+
 
 
 --- guid1: old parent GUID
@@ -307,8 +333,9 @@ end
 ---@param outGuid any*
 ---@return boolean
 function InventoryMoveInventoryItem(inventoryId,guid1,guid2,slotId,quantity,outGuid)
-   return Citizen.InvokeNative(0xDCCAA7C3BFD88862,inventoryId,guid1,guid2,slotId,quantity,outGuid)
+    return Citizen.InvokeNative(0xDCCAA7C3BFD88862,inventoryId,guid1,guid2,slotId,quantity,outGuid)
 end
+
 
 
 --- 
@@ -318,8 +345,9 @@ end
 ---@param guid2 any*
 ---@return boolean
 function InventorySwapInventoryItem(inventoryId,guid1,guid2)
-   return Citizen.InvokeNative(0xF2753D691BCDA314,inventoryId,guid1,guid2)
+    return Citizen.InvokeNative(0xF2753D691BCDA314,inventoryId,guid1,guid2)
 end
+
 
 
 --- filterName (collections): "ALL", "ALL SATCHEL", "ALL HORSES", "ALL COACHES", "ALL MOUNTS", "ALL CLOTHING", "ALL WEAPONS", "ALL SATCHEL EXCLUDING CLOTHING", "ALL EXCLUDING CLOTHING"
@@ -333,8 +361,9 @@ end
 ---@param size int*
 ---@return number
 function InventoryCreateItemCollection(inventoryId,filterName,slotId,size)
-   return Citizen.InvokeNative(0x80D78BDC9D88EF07,inventoryId,filterName,slotId,size)
+    return Citizen.InvokeNative(0x80D78BDC9D88EF07,inventoryId,filterName,slotId,size)
 end
+
 
 
 --- 
@@ -344,8 +373,9 @@ end
 ---@param numInCollection int*
 ---@return number
 function InventoryCreateItemCollectionWithFilter(inventoryId,filter,numInCollection)
-   return Citizen.InvokeNative(0x640F890C3E5A3FFD,inventoryId,filter,numInCollection)
+    return Citizen.InvokeNative(0x640F890C3E5A3FFD,inventoryId,filter,numInCollection)
 end
+
 
 
 --- collectionId is < outCollectionSize
@@ -355,8 +385,9 @@ end
 ---@param itemData any*
 ---@return boolean
 function InventoryGetItemFromCollectionIndex(collectionId,itemIndex,itemData)
-   return Citizen.InvokeNative(0x82FA24C3D3FCD9B7,collectionId,itemIndex,itemData)
+    return Citizen.InvokeNative(0x82FA24C3D3FCD9B7,collectionId,itemIndex,itemData)
 end
+
 
 
 --- Max num of collections is 5, so release your unused ones.
@@ -364,8 +395,9 @@ end
 ---@param collectionId number
 ---@return boolean
 function InventoryReleaseItemCollection(collectionId)
-   return Citizen.InvokeNative(0x42A2F33A1942E865,collectionId)
+    return Citizen.InvokeNative(0x42A2F33A1942E865,collectionId)
 end
+
 
 
 --- 
@@ -375,8 +407,9 @@ end
 ---@param bEquipped boolean
 ---@return boolean
 function InventoryEquipItemWithGuid(inventoryId,guid,bEquipped)
-   return Citizen.InvokeNative(0x734311E2852760D0,inventoryId,guid,bEquipped)
+    return Citizen.InvokeNative(0x734311E2852760D0,inventoryId,guid,bEquipped)
 end
+
 
 
 --- 
@@ -387,8 +420,9 @@ end
 ---@param outGuid any*
 ---@return boolean
 function InventoryGetInventoryItemEquippedInSlotByRef(inventoryId,guid,slotId,outGuid)
-   return Citizen.InvokeNative(0x22E590F108289A9D,inventoryId,guid,slotId,outGuid)
+    return Citizen.InvokeNative(0x22E590F108289A9D,inventoryId,guid,slotId,outGuid)
 end
+
 
 
 --- 
@@ -398,8 +432,9 @@ end
 ---@param item hash
 ---@return boolean
 function InventoryDoesItemOwnEquipment(inventoryId,guid,item)
-   return Citizen.InvokeNative(0x88B58B83A43A8CAB,inventoryId,guid,item)
+    return Citizen.InvokeNative(0x88B58B83A43A8CAB,inventoryId,guid,item)
 end
+
 
 
 --- OWE_INVALID = -1,
@@ -416,6 +451,7 @@ function InventorySetInventoryItemWeatherEffectiveness(inventoryId,guid,weatherE
 end
 
 
+
 --- Example: (1, WEAPON_REVOLVER_CATTLEMAN, 0) - disables cattleman revolver on weapon wheel
 --- Native 0x766315A564594401 (_INVENTORY_DISABLE_ITEM)
 ---@param inventoryId number
@@ -424,6 +460,7 @@ end
 function InventoryDisableItem(inventoryId,item,gtxReason)
     Citizen.InvokeNative(0x766315A564594401,inventoryId,item,gtxReason)
 end
+
 
 
 --- 
@@ -435,6 +472,7 @@ function InventoryEnableItem(inventoryId,item)
 end
 
 
+
 --- Alternative Name: _INVENTORY_IS_ITEM_DISABLED
 --- Native 0x3D10D7179D7034AF (_INVENTORY_IS_INVENTORY_ITEM_EQUIPPED)
 ---@param inventoryId number
@@ -442,8 +480,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function InventoryIsInventoryItemEquipped(inventoryId,item,p2)
-   return Citizen.InvokeNative(0x3D10D7179D7034AF,inventoryId,item,p2)
+    return Citizen.InvokeNative(0x3D10D7179D7034AF,inventoryId,item,p2)
 end
+
 
 
 --- 
@@ -453,8 +492,9 @@ end
 ---@param enabled boolean
 ---@return boolean
 function InventorySetInventoryItemInspectionEnabled(inventoryId,p1,enabled)
-   return Citizen.InvokeNative(0x227522FD59DDB7E8,inventoryId,p1,enabled)
+    return Citizen.InvokeNative(0x227522FD59DDB7E8,inventoryId,p1,enabled)
 end
+
 
 
 --- 
@@ -462,8 +502,9 @@ end
 ---@param itemGUID any*
 ---@return boolean
 function InventoryIsItemExpired(itemGUID)
-   return Citizen.InvokeNative(0x0137C77A2EC64536,itemGUID)
+    return Citizen.InvokeNative(0x0137C77A2EC64536,itemGUID)
 end
+
 
 
 --- 
@@ -471,8 +512,9 @@ end
 ---@param itemGUID any*
 ---@return number
 function InventoryGetItemExpiryTime(itemGUID)
-   return Citizen.InvokeNative(0x4A606C17276E1BCC,itemGUID)
+    return Citizen.InvokeNative(0x4A606C17276E1BCC,itemGUID)
 end
+
 
 
 --- 
@@ -482,8 +524,9 @@ end
 ---@param p2 boolean
 ---@return number
 function InventoryGetInventoryItemCountWithGuid(inventoryId,guid,p2)
-   return Citizen.InvokeNative(0xC97E0D2302382211,inventoryId,guid,p2)
+    return Citizen.InvokeNative(0xC97E0D2302382211,inventoryId,guid,p2)
 end
+
 
 
 --- 
@@ -493,8 +536,9 @@ end
 ---@param p2 boolean
 ---@return number
 function InventoryGetInventoryItemCountWithItemid(inventoryId,eInventoryItem,p2)
-   return Citizen.InvokeNative(0xE787F05DFC977BDE,inventoryId,eInventoryItem,p2)
+    return Citizen.InvokeNative(0xE787F05DFC977BDE,inventoryId,eInventoryItem,p2)
 end
+
 
 
 --- 
@@ -503,8 +547,9 @@ end
 ---@param parentGuid any*
 ---@return number
 function InventoryGetChildrenCount(inventoryId,parentGuid)
-   return Citizen.InvokeNative(0xE843D21A8E2498AA,inventoryId,parentGuid)
+    return Citizen.InvokeNative(0xE843D21A8E2498AA,inventoryId,parentGuid)
 end
+
 
 
 --- 
@@ -514,8 +559,9 @@ end
 ---@param slotId hash
 ---@return number
 function InventoryGetChildrenInSlotCount(inventoryId,guid,slotId)
-   return Citizen.InvokeNative(0x033EE4B89F3AC545,inventoryId,guid,slotId)
+    return Citizen.InvokeNative(0x033EE4B89F3AC545,inventoryId,guid,slotId)
 end
+
 
 
 --- 
@@ -527,8 +573,9 @@ end
 ---@param p4 any*
 ---@return number
 function InventoryGetInventoryItemEquippedInSlot(inventoryId,guid,slotId,p3,p4)
-   return Citizen.InvokeNative(0xBE012571B25F5ACA,inventoryId,guid,slotId,p3,p4)
+    return Citizen.InvokeNative(0xBE012571B25F5ACA,inventoryId,guid,slotId,p3,p4)
 end
+
 
 
 --- 
@@ -537,8 +584,9 @@ end
 ---@param slotId hash
 ---@return boolean
 function InventoryFitsSlotId(item,slotId)
-   return Citizen.InvokeNative(0x780C5B9AE2819807,item,slotId)
+    return Citizen.InvokeNative(0x780C5B9AE2819807,item,slotId)
 end
+
 
 
 --- p1: WARDROBE, KIT_CAMP, CHARACTER, KIT_MOONSHINER_PROPERTY
@@ -548,8 +596,9 @@ end
 ---@param p1 hash
 ---@return hash
 function GetDefaultItemSlotInfo(item,p1)
-   return Citizen.InvokeNative(0x6452B1D357D81742,item,p1)
+    return Citizen.InvokeNative(0x6452B1D357D81742,item,p1)
 end
+
 
 
 --- 
@@ -559,8 +608,9 @@ end
 ---@param p2 number
 ---@return boolean
 function InventoryGetInventoryItemFitSlot(p0,p1,p2)
-   return Citizen.InvokeNative(0xB991FE166FAF84FD,p0,p1,p2)
+    return Citizen.InvokeNative(0xB991FE166FAF84FD,p0,p1,p2)
 end
+
 
 
 --- This native has no functionality.
@@ -571,11 +621,13 @@ function SetUseMissionInventory(toggle)
 end
 
 
+
 --- 
 --- Native 0xE1F389F03DC83673 (INVENTORY_DISABLE_MISSION_INVENTORY_PICKUPS)
 function InventoryDisableMissionInventoryPickups()
     Citizen.InvokeNative(0xE1F389F03DC83673)
 end
+
 
 
 --- 
@@ -585,6 +637,7 @@ end
 function InventoryUseMissionInventory(enable,mirrorTransactions)
     Citizen.InvokeNative(0xA6AA9F56BC6CFF58,enable,mirrorTransactions)
 end
+
 
 
 --- 
@@ -600,6 +653,7 @@ function InventoryCopyMpInventoryToMissionInventory(p0,p1,bCopySatchelItems,bCop
 end
 
 
+
 --- 
 --- Native 0x3112ADB9D5F3426B (_INVENTORY_COPY_ITEM_TO_MISSION_INVENTORY)
 ---@param guid any*
@@ -607,6 +661,7 @@ end
 function InventoryCopyItemToMissionInventory(guid,p1)
     Citizen.InvokeNative(0x3112ADB9D5F3426B,guid,p1)
 end
+
 
 
 --- 
@@ -617,12 +672,14 @@ function InventoryUseSpBackup()
 end
 
 
+
 --- 
 --- Native 0xFC7563F482781A3D (_INVENTORY_IS_PLAYER_INVENTORY_MIRRORING_TRANSACTIONS)
 ---@return boolean
 function InventoryIsPlayerInventoryMirroringTransactions()
    return Citizen.InvokeNative(0xFC7563F482781A3D)
 end
+
 
 
 --- 
@@ -636,12 +693,14 @@ function InventoryCopyItemToInventory(inventoryId,inventoryIdCloned,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xFD41D1D4350F6413 (_SET_ITEM_PROMPT_INFO_REQUEST)
 ---@param p0 any*
 function SetItemPromptInfoRequest(p0)
     Citizen.InvokeNative(0xFD41D1D4350F6413,p0)
 end
+
 
 
 --- 
@@ -652,12 +711,14 @@ function SetCarriableCarryActionPromptOverride(data)
 end
 
 
+
 --- 
 --- Native 0xD5D72F1624F3BA7C (_INVENTORY_ENABLE_WEAPONS)
 ---@param inventoryId number
 function InventoryEnableWeapons(inventoryId)
     Citizen.InvokeNative(0xD5D72F1624F3BA7C,inventoryId)
 end
+
 
 
 --- Params: p1 = 0
@@ -669,13 +730,15 @@ function InventoryDisableWeapons(inventoryId,p1)
 end
 
 
+
 --- Returns collectionId
 --- Native 0x97A3646645727F42 (_INVENTORY_CREATE_ITEM_COLLECTION_2)
 ---@param collectionSize int*
 ---@return number
 function InventoryCreateItemCollection2(collectionSize)
-   return Citizen.InvokeNative(0x97A3646645727F42,collectionSize)
+    return Citizen.InvokeNative(0x97A3646645727F42,collectionSize)
 end
+
 
 
 --- p1: 32
@@ -686,7 +749,8 @@ end
 ---@param size int*
 ---@return number
 function InventoryCreateSortedCollection(inventoryId,p1,size)
-   return Citizen.InvokeNative(0xBB7F968675B34B0C,inventoryId,p1,size)
+    return Citizen.InvokeNative(0xBB7F968675B34B0C,inventoryId,p1,size)
 end
+
 
 

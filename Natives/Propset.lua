@@ -3,8 +3,9 @@
 ---@param hash hash
 ---@return boolean
 function RequestPropSet(hash)
-   return Citizen.InvokeNative(0xF3DE57A46D5585E9,hash)
+    return Citizen.InvokeNative(0xF3DE57A46D5585E9,hash)
 end
+
 
 
 --- Same as _REQUEST_PROP_SET
@@ -12,8 +13,9 @@ end
 ---@param hash hash
 ---@return boolean
 function RequestPropSet2(hash)
-   return Citizen.InvokeNative(0xE72F591958F3ACAB,hash)
+    return Citizen.InvokeNative(0xE72F591958F3ACAB,hash)
 end
+
 
 
 --- 
@@ -21,8 +23,9 @@ end
 ---@param hash hash
 ---@return boolean
 function HasPropSetLoaded(hash)
-   return Citizen.InvokeNative(0x48A88FC684C55FDC,hash)
+    return Citizen.InvokeNative(0x48A88FC684C55FDC,hash)
 end
+
 
 
 --- Same as _HAS_PROP_SET_LOADED
@@ -30,8 +33,9 @@ end
 ---@param hash hash
 ---@return boolean
 function HasPropSetLoaded2(hash)
-   return Citizen.InvokeNative(0xD090ABEF4D6A7D96,hash)
+    return Citizen.InvokeNative(0xD090ABEF4D6A7D96,hash)
 end
+
 
 
 --- 
@@ -40,6 +44,7 @@ end
 function SetPropSetAsNoLongerNeeded(propSet)
     Citizen.InvokeNative(0x909E3C7FAE539FB1,propSet)
 end
+
 
 
 --- 
@@ -52,13 +57,15 @@ function DeletePropSet(propSet,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xB1964A83B345B4AB (_RELEASE_PROP_SET)
 ---@param hash hash
 ---@return boolean
 function ReleasePropSet(hash)
-   return Citizen.InvokeNative(0xB1964A83B345B4AB,hash)
+    return Citizen.InvokeNative(0xB1964A83B345B4AB,hash)
 end
+
 
 
 --- propsetType: https://github.com/femga/rdr3_discoveries/blob/master/objects/propsets_list.lua
@@ -75,8 +82,9 @@ end
 ---@param useVegMod boolean
 ---@return propset
 function CreatePropSet(propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
-   return Citizen.InvokeNative(0xE65C5CBA95F0E510,propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
+    return Citizen.InvokeNative(0xE65C5CBA95F0E510,propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
 end
+
 
 
 --- Same as _CREATE_PROP_SET
@@ -92,8 +100,9 @@ end
 ---@param useVegMod boolean
 ---@return propset
 function CreatePropSet2(propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
-   return Citizen.InvokeNative(0x899C97A1CCE7D483,propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
+    return Citizen.InvokeNative(0x899C97A1CCE7D483,propsetType,x,y,z,placementType,heading,zProbe,p7,useVegMod)
 end
+
 
 
 --- 
@@ -109,8 +118,9 @@ end
 ---@param p8 boolean
 ---@return propset
 function CreatePropSetInstanceAttachedToEntity(hash,x,y,z,entity,p5,p6,p7,p8)
-   return Citizen.InvokeNative(0x9609DBDDE18FAD8C,hash,x,y,z,entity,p5,p6,p7,p8)
+    return Citizen.InvokeNative(0x9609DBDDE18FAD8C,hash,x,y,z,entity,p5,p6,p7,p8)
 end
+
 
 
 --- Same as CREATE_PROP_SET_INSTANCE_ATTACHED_TO_ENTITY
@@ -126,8 +136,9 @@ end
 ---@param p8 boolean
 ---@return propset
 function CreatePropSetInstanceAttachedToEntity2(hash,x,y,z,entity,p5,p6,p7,p8)
-   return Citizen.InvokeNative(0xACA7FB30269096D4,hash,x,y,z,entity,p5,p6,p7,p8)
+    return Citizen.InvokeNative(0xACA7FB30269096D4,hash,x,y,z,entity,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -135,8 +146,9 @@ end
 ---@param propSet propset
 ---@return boolean
 function DoesPropSetExist(propSet)
-   return Citizen.InvokeNative(0x7DDDCF815E650FF5,propSet)
+    return Citizen.InvokeNative(0x7DDDCF815E650FF5,propSet)
 end
+
 
 
 --- 
@@ -147,8 +159,9 @@ end
 ---@param z float
 ---@return boolean
 function DoesPropSetOfTypeExistNearCoords(propsetHash,x,y,z)
-   return Citizen.InvokeNative(0x72068021F498E6E3,propsetHash,x,y,z)
+    return Citizen.InvokeNative(0x72068021F498E6E3,propsetHash,x,y,z)
 end
+
 
 
 --- 
@@ -156,8 +169,9 @@ end
 ---@param propSet propset
 ---@return boolean
 function IsPropSetFullyLoaded(propSet)
-   return Citizen.InvokeNative(0xF42DB680A8B2A4D9,propSet)
+    return Citizen.InvokeNative(0xF42DB680A8B2A4D9,propSet)
 end
+
 
 
 --- 
@@ -169,13 +183,15 @@ function SetPropSetVisible(propSet,toggle)
 end
 
 
+
 --- 
 --- Native 0x0CE8AAFE9E433A23 (_IS_PROP_SET_VISIBLE)
 ---@param propSet propset
 ---@return boolean
 function IsPropSetVisible(propSet)
-   return Citizen.InvokeNative(0x0CE8AAFE9E433A23,propSet)
+    return Citizen.InvokeNative(0x0CE8AAFE9E433A23,propSet)
 end
+
 
 
 --- 
@@ -183,8 +199,9 @@ end
 ---@param propSet propset
 ---@return hash
 function GetPropSetModel(propSet)
-   return Citizen.InvokeNative(0xA6A9712955F53D9C,propSet)
+    return Citizen.InvokeNative(0xA6A9712955F53D9C,propSet)
 end
+
 
 
 --- 
@@ -192,8 +209,9 @@ end
 ---@param vehicle vehicle
 ---@return hash
 function GetVehiclePropSetHash(vehicle)
-   return Citizen.InvokeNative(0x36F69E7A22655653,vehicle)
+    return Citizen.InvokeNative(0x36F69E7A22655653,vehicle)
 end
+
 
 
 --- 
@@ -205,8 +223,9 @@ end
 ---@param p4 boolean
 ---@return number
 function GetEntitiesFromPropSet(propSet,itemSet,model,p3,p4)
-   return Citizen.InvokeNative(0x738271B660FE0695,propSet,itemSet,model,p3,p4)
+    return Citizen.InvokeNative(0x738271B660FE0695,propSet,itemSet,model,p3,p4)
 end
+
 
 
 --- 
@@ -218,13 +237,15 @@ function SetPropSetFlag(propSet,flag)
 end
 
 
+
 --- 
 --- Native 0xCE2ACD6F602803E5 (_GET_VEHICLE_PROP_SET)
 ---@param vehicle vehicle
 ---@return propset
 function GetVehiclePropSet(vehicle)
-   return Citizen.InvokeNative(0xCE2ACD6F602803E5,vehicle)
+    return Citizen.InvokeNative(0xCE2ACD6F602803E5,vehicle)
 end
+
 
 
 --- 
@@ -232,8 +253,9 @@ end
 ---@param vehicle vehicle
 ---@return boolean
 function DoesVehicleHaveAnyPropSet(vehicle)
-   return Citizen.InvokeNative(0x53784CEA0159439B,vehicle)
+    return Citizen.InvokeNative(0x53784CEA0159439B,vehicle)
 end
+
 
 
 --- List of vehicle propsets (wagons & trains): https://pastebin.com/1CsnvGLu / https://pastebin.com/v7TtqTgE
@@ -245,6 +267,7 @@ function AddPropSetForVehicle(vehicle,propset)
 end
 
 
+
 --- 
 --- Native 0x3BCF32FF37EA9F1D (_REMOVE_VEHICLE_PROP_SETS)
 ---@param vehicle vehicle
@@ -253,13 +276,15 @@ function RemoveVehiclePropSets(vehicle)
 end
 
 
+
 --- 
 --- Native 0x155B2FBE72D7D1D0 (_IS_VEHICLE_PROP_SET_LOADED)
 ---@param vehicle vehicle
 ---@return boolean
 function IsVehiclePropSetLoaded(vehicle)
-   return Citizen.InvokeNative(0x155B2FBE72D7D1D0,vehicle)
+    return Citizen.InvokeNative(0x155B2FBE72D7D1D0,vehicle)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/vehicles/vehicle_modding/vehicle_propsets.lua
@@ -271,13 +296,15 @@ function AddAdditionalPropSetForVehicle(vehicle,propset)
 end
 
 
+
 --- 
 --- Native 0x7264F9CA87A9830B (_IS_VEHICLE_PROP_SET_LOADED_ADDITIONAL)
 ---@param vehicle vehicle
 ---@return boolean
 function IsVehiclePropSetLoadedAdditional(vehicle)
-   return Citizen.InvokeNative(0x7264F9CA87A9830B,vehicle)
+    return Citizen.InvokeNative(0x7264F9CA87A9830B,vehicle)
 end
+
 
 
 --- Returns PropSet handle to be used with _GET_PROP_SET_MODEL
@@ -285,8 +312,9 @@ end
 ---@param vehicle vehicle
 ---@return propset
 function GetVehicleLightPropSet(vehicle)
-   return Citizen.InvokeNative(0xA079300AF757FB1A,vehicle)
+    return Citizen.InvokeNative(0xA079300AF757FB1A,vehicle)
 end
+
 
 
 --- 
@@ -294,8 +322,9 @@ end
 ---@param vehicle vehicle
 ---@return boolean
 function DoesVehicleHaveAnyLightPropSet(vehicle)
-   return Citizen.InvokeNative(0xC9B4B3A36F81FD75,vehicle)
+    return Citizen.InvokeNative(0xC9B4B3A36F81FD75,vehicle)
 end
+
 
 
 --- To remove propsets either parse a zero as hash or call 0xE31C0CB1C3186D40
@@ -309,6 +338,7 @@ function AddLightPropSetToVehicle(vehicle,lightPropset)
 end
 
 
+
 --- 
 --- Native 0xE31C0CB1C3186D40 (_REMOVE_VEHICLE_LIGHT_PROP_SETS)
 ---@param vehicle vehicle
@@ -317,13 +347,15 @@ function RemoveVehicleLightPropSets(vehicle)
 end
 
 
+
 --- 
 --- Native 0x0790473EEE1977D3 (_IS_VEHICLE_LIGHT_PROP_SET_LOADED)
 ---@param vehicle vehicle
 ---@return boolean
 function IsVehicleLightPropSetLoaded(vehicle)
-   return Citizen.InvokeNative(0x0790473EEE1977D3,vehicle)
+    return Citizen.InvokeNative(0x0790473EEE1977D3,vehicle)
 end
+
 
 
 --- Example before/after deleting a train carriage's propset: https://imgur.com/a/qRNrIrK
@@ -331,8 +363,9 @@ end
 ---@param trainCarriage entity
 ---@return propset
 function GetTrainCarriagePropSet(trainCarriage)
-   return Citizen.InvokeNative(0xCFC0BD09BB1B73FF,trainCarriage)
+    return Citizen.InvokeNative(0xCFC0BD09BB1B73FF,trainCarriage)
 end
+
 
 
 --- 
@@ -341,8 +374,9 @@ end
 ---@param wagonIndex number
 ---@return boolean
 function HasVehicleTrailerPropSetLoaded(vehicle,wagonIndex)
-   return Citizen.InvokeNative(0x8F3333F0A6900B3C,vehicle,wagonIndex)
+    return Citizen.InvokeNative(0x8F3333F0A6900B3C,vehicle,wagonIndex)
 end
+
 
 
 --- 
@@ -353,7 +387,8 @@ end
 ---@param z float
 ---@return propset
 function GetPropSetAtCoords(propsetHash,x,y,z)
-   return Citizen.InvokeNative(0xC061E50F8D299F95,propsetHash,x,y,z)
+    return Citizen.InvokeNative(0xC061E50F8D299F95,propsetHash,x,y,z)
 end
+
 
 

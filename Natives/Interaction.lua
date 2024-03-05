@@ -6,6 +6,7 @@ function SetMouseCursorThisFrame()
 end
 
 
+
 --- Changes the mouse cursor's sprite.
 ---spriteId's: https://github.com/femga/rdr3_discoveries/tree/master/graphics/HUD/cursor_sprites#readme
 ---Old name: _SET_MOUSE_CURSOR_SPRITE
@@ -14,6 +15,7 @@ end
 function SetMouseCursorStyle(spriteId)
     Citizen.InvokeNative(0x7F5858AAB5A58CCE,spriteId)
 end
+
 
 
 --- Allows camera to be moved if middle mouse button is held while in first person
@@ -25,6 +27,7 @@ function SetAllowFirstPersonMouseCameraMovement()
 end
 
 
+
 --- Returns true if player is moving mouse while cursor is active
 ---_PI* - _PO*
 --- Native 0x2B8B605F2A9E64BF (_POINTER_IS_BEING_MOVED)
@@ -32,6 +35,7 @@ end
 function PointerIsBeingMoved()
    return Citizen.InvokeNative(0x2B8B605F2A9E64BF)
 end
+
 
 
 --- Returns true if player is holding LMB while cursor is active
@@ -43,6 +47,7 @@ function PointerIsLeftButtonHeld()
 end
 
 
+
 --- Returns true if player releases LMB if cursor is active
 ---_PI* - _PO*
 --- Native 0xF7F51A57349739F2 (_POINTER_IS_LEFT_BUTTON_JUST_RELEASED)
@@ -50,5 +55,6 @@ end
 function PointerIsLeftButtonJustReleased()
    return Citizen.InvokeNative(0xF7F51A57349739F2)
 end
+
 
 

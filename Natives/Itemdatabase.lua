@@ -5,8 +5,9 @@
 ---@param slotId hash
 ---@return boolean
 function ItemdatabaseCanEquipItemOnCategory(p0,p1,slotId)
-   return Citizen.InvokeNative(0x856FF92C57742AE5,p0,p1,slotId)
+    return Citizen.InvokeNative(0x856FF92C57742AE5,p0,p1,slotId)
 end
+
 
 
 --- 
@@ -14,8 +15,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetFitsSlotCount(p0)
-   return Citizen.InvokeNative(0x2970D1D6BFCF9B46,p0)
+    return Citizen.InvokeNative(0x2970D1D6BFCF9B46,p0)
 end
+
 
 
 --- 
@@ -25,8 +27,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetFitsSlotInfo(p0,p1,p2)
-   return Citizen.InvokeNative(0x77210C146CED5261,p0,p1,p2)
+    return Citizen.InvokeNative(0x77210C146CED5261,p0,p1,p2)
 end
+
 
 
 --- 
@@ -34,8 +37,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetHasSlotCount(p0)
-   return Citizen.InvokeNative(0x44915068579D7710,p0)
+    return Citizen.InvokeNative(0x44915068579D7710,p0)
 end
+
 
 
 --- 
@@ -45,8 +49,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetHasSlotInfo(p0,p1,p2)
-   return Citizen.InvokeNative(0x8A9BD0DB7E8376CF,p0,p1,p2)
+    return Citizen.InvokeNative(0x8A9BD0DB7E8376CF,p0,p1,p2)
 end
+
 
 
 --- 
@@ -55,8 +60,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutItemByName(p0,p1)
-   return Citizen.InvokeNative(0x2A610BEE7D341CC4,p0,p1)
+    return Citizen.InvokeNative(0x2A610BEE7D341CC4,p0,p1)
 end
+
 
 
 --- p0 can be a weapon hash, component item
@@ -66,8 +72,9 @@ end
 ---@param p1 any*
 ---@return boolean
 function ItemdatabaseFilloutItemInfo(p0,p1)
-   return Citizen.InvokeNative(0xFE90ABBCBFDC13B2,p0,p1)
+    return Citizen.InvokeNative(0xFE90ABBCBFDC13B2,p0,p1)
 end
+
 
 
 --- 
@@ -77,8 +84,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseFilloutAcquireCost(p0,p1,p2)
-   return Citizen.InvokeNative(0x74F7928816E4E181,p0,p1,p2)
+    return Citizen.InvokeNative(0x74F7928816E4E181,p0,p1,p2)
 end
+
 
 
 --- 
@@ -88,8 +96,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseFilloutSellPrice(p0,p1,p2)
-   return Citizen.InvokeNative(0x7A62A2EEDE1C3766,p0,p1,p2)
+    return Citizen.InvokeNative(0x7A62A2EEDE1C3766,p0,p1,p2)
 end
+
 
 
 --- 
@@ -98,8 +107,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutSatchelData(p0,p1)
-   return Citizen.InvokeNative(0x4776EFD78F75C23F,p0,p1)
+    return Citizen.InvokeNative(0x4776EFD78F75C23F,p0,p1)
 end
+
 
 
 --- 
@@ -108,8 +118,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutUiData(p0,p1)
-   return Citizen.InvokeNative(0xB86F7CC2DC67AC60,p0,p1)
+    return Citizen.InvokeNative(0xB86F7CC2DC67AC60,p0,p1)
 end
+
 
 
 --- 
@@ -118,8 +129,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutItemEffectIds(p0,p1)
-   return Citizen.InvokeNative(0x9379BE60DC55BBE6,p0,p1)
+    return Citizen.InvokeNative(0x9379BE60DC55BBE6,p0,p1)
 end
+
 
 
 --- 
@@ -128,8 +140,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutItemEffectIdInfo(p0,p1)
-   return Citizen.InvokeNative(0xCF2D360D27FD1ABF,p0,p1)
+    return Citizen.InvokeNative(0xCF2D360D27FD1ABF,p0,p1)
 end
+
 
 
 --- 
@@ -140,8 +153,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseFilloutTagData(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x5A11D6EEA17165B0,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x5A11D6EEA17165B0,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -149,8 +163,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetAcquireCostsCount(p0)
-   return Citizen.InvokeNative(0x01FDDAD392D04144,p0)
+    return Citizen.InvokeNative(0x01FDDAD392D04144,p0)
 end
+
 
 
 --- 
@@ -160,8 +175,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetAcquireCost(p0,p1,p2)
-   return Citizen.InvokeNative(0x6772A83C67A25775,p0,p1,p2)
+    return Citizen.InvokeNative(0x6772A83C67A25775,p0,p1,p2)
 end
+
 
 
 --- 
@@ -172,8 +188,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseFilloutItem(p0,costShop,fillOutIndex,p3)
-   return Citizen.InvokeNative(0xAD73B614DF26CF8A,p0,costShop,fillOutIndex,p3)
+    return Citizen.InvokeNative(0xAD73B614DF26CF8A,p0,costShop,fillOutIndex,p3)
 end
+
 
 
 --- _ITEMDATABASE_GET_(A)* - _ITEMDATABASE_GET_(B)*
@@ -181,8 +198,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetAwardAcquireCostType(p0)
-   return Citizen.InvokeNative(0x12DF9C58201DD19A,p0)
+    return Citizen.InvokeNative(0x12DF9C58201DD19A,p0)
 end
+
 
 
 --- Returns collectionId to be used with 0x8750F69A720C2E41 (p0) and 0xCBB7B6EDFA933ADE (p0)
@@ -192,8 +210,9 @@ end
 ---@param comparisonType number
 ---@return number
 function ItemdatabaseCreateItemCollection(p0,size,comparisonType)
-   return Citizen.InvokeNative(0x71EFA7999AE79408,p0,size,comparisonType)
+    return Citizen.InvokeNative(0x71EFA7999AE79408,p0,size,comparisonType)
 end
+
 
 
 --- Returns (collection?) size/index (?)
@@ -202,8 +221,9 @@ end
 ---@param collectionId number
 ---@return number
 function ItemdatabaseGetCollectionSize(collectionId)
-   return Citizen.InvokeNative(0xD389A2549C4EFB30,collectionId)
+    return Citizen.InvokeNative(0xD389A2549C4EFB30,collectionId)
 end
+
 
 
 --- Params: p2 can be a component item hash
@@ -213,8 +233,9 @@ end
 ---@param p2 hash*
 ---@return boolean
 function ItemdatabaseGetComponentItem(collectionId,index,p2)
-   return Citizen.InvokeNative(0x8750F69A720C2E41,collectionId,index,p2)
+    return Citizen.InvokeNative(0x8750F69A720C2E41,collectionId,index,p2)
 end
+
 
 
 --- 
@@ -222,8 +243,9 @@ end
 ---@param collectionId number
 ---@return boolean
 function ItemdatabaseReleaseItemCollection(collectionId)
-   return Citizen.InvokeNative(0xCBB7B6EDFA933ADE,collectionId)
+    return Citizen.InvokeNative(0xCBB7B6EDFA933ADE,collectionId)
 end
+
 
 
 --- 
@@ -231,8 +253,9 @@ end
 ---@param p0 any
 ---@return boolean
 function ItemdatabaseIsIntrinsicItem(p0)
-   return Citizen.InvokeNative(0x337F88E3A063995E,p0)
+    return Citizen.InvokeNative(0x337F88E3A063995E,p0)
 end
+
 
 
 --- 
@@ -240,8 +263,9 @@ end
 ---@param p0 any
 ---@return boolean
 function ItemdatabaseIsOverpoweredItem(p0)
-   return Citizen.InvokeNative(0x337F88E3A063995F,p0)
+    return Citizen.InvokeNative(0x337F88E3A063995F,p0)
 end
+
 
 
 --- 
@@ -250,8 +274,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseIsKeyValid(p0,p1)
-   return Citizen.InvokeNative(0x6D5D51B188333FD1,p0,p1)
+    return Citizen.InvokeNative(0x6D5D51B188333FD1,p0,p1)
 end
+
 
 
 --- 
@@ -259,8 +284,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetBundleId(p0)
-   return Citizen.InvokeNative(0x891A45960B6B768A,p0)
+    return Citizen.InvokeNative(0x891A45960B6B768A,p0)
 end
+
 
 
 --- 
@@ -269,8 +295,9 @@ end
 ---@param p1 any
 ---@return number
 function ItemdatabaseGetBundleItemCount(p0,p1)
-   return Citizen.InvokeNative(0x3332695B01015DF9,p0,p1)
+    return Citizen.InvokeNative(0x3332695B01015DF9,p0,p1)
 end
+
 
 
 --- 
@@ -281,8 +308,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseGetBundleItemInfo(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x5D48A77E4B668B57,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x5D48A77E4B668B57,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -291,8 +319,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseIsBundleValid(p0,p1)
-   return Citizen.InvokeNative(0x4308812A6E9CA62E,p0,p1)
+    return Citizen.InvokeNative(0x4308812A6E9CA62E,p0,p1)
 end
+
 
 
 --- 
@@ -303,8 +332,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseFilloutBundle(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xB542632693D53408,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xB542632693D53408,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -312,8 +342,9 @@ end
 ---@param p0 any
 ---@return boolean
 function ItemdatabaseIsShopKeyValid(p0)
-   return Citizen.InvokeNative(0x00B9507D8E1D8716,p0)
+    return Citizen.InvokeNative(0x00B9507D8E1D8716,p0)
 end
+
 
 
 --- 
@@ -321,8 +352,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetShopInventoriesItemsCount(p0)
-   return Citizen.InvokeNative(0xC568B1A0F17C7025,p0)
+    return Citizen.InvokeNative(0xC568B1A0F17C7025,p0)
 end
+
 
 
 --- 
@@ -332,8 +364,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetShopInventoriesItemInfo(p0,p1,p2)
-   return Citizen.InvokeNative(0x4A79B41B4EB91F4E,p0,p1,p2)
+    return Citizen.InvokeNative(0x4A79B41B4EB91F4E,p0,p1,p2)
 end
+
 
 
 --- Same Native Function as 0x17721003A66C72BF
@@ -343,8 +376,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetShopInventoriesItemInfoByKey(p0,p1,p2)
-   return Citizen.InvokeNative(0xCFB06801F5099B25,p0,p1,p2)
+    return Citizen.InvokeNative(0xCFB06801F5099B25,p0,p1,p2)
 end
+
 
 
 --- 
@@ -355,8 +389,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseGetShopInventoriesRequirementGroupInfo(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x76C752D788A76813,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x76C752D788A76813,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -368,8 +403,9 @@ end
 ---@param p4 any
 ---@return boolean
 function ItemdatabaseGetShopInventoriesRequirementInfo(p0,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0xE0EA5C031AE5539F,p0,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0xE0EA5C031AE5539F,p0,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -377,8 +413,9 @@ end
 ---@param p0 any
 ---@return boolean
 function ItemdatabaseIsShopLayoutKeyValid(p0)
-   return Citizen.InvokeNative(0x3AFE5182C45A84F6,p0)
+    return Citizen.InvokeNative(0x3AFE5182C45A84F6,p0)
 end
+
 
 
 --- 
@@ -387,8 +424,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutInfo(p0,p1)
-   return Citizen.InvokeNative(0x66A6D76B6BB999B4,p0,p1)
+    return Citizen.InvokeNative(0x66A6D76B6BB999B4,p0,p1)
 end
+
 
 
 --- 
@@ -398,8 +436,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutRootMenuInfo(p0,p1,p2)
-   return Citizen.InvokeNative(0x86FCB565CCA0CFA7,p0,p1,p2)
+    return Citizen.InvokeNative(0x86FCB565CCA0CFA7,p0,p1,p2)
 end
+
 
 
 --- 
@@ -409,8 +448,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutMenuInfoById(p0,p1,p2)
-   return Citizen.InvokeNative(0xD66114469978B55B,p0,p1,p2)
+    return Citizen.InvokeNative(0xD66114469978B55B,p0,p1,p2)
 end
+
 
 
 --- 
@@ -421,8 +461,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutMenuInfoByIndex(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xF04247092F193B75,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xF04247092F193B75,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -433,8 +474,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutMenuPageKey(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x9A60570657A7B635,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x9A60570657A7B635,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -444,8 +486,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutPageInfoByKey(p0,p1,p2)
-   return Citizen.InvokeNative(0xB347C100DF0C9B7F,p0,p1,p2)
+    return Citizen.InvokeNative(0xB347C100DF0C9B7F,p0,p1,p2)
 end
+
 
 
 --- 
@@ -458,8 +501,9 @@ end
 ---@param p5 any
 ---@return boolean
 function ItemdatabaseGetShopLayoutPageItemKey(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0xF32BEF578B3DBAE8,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0xF32BEF578B3DBAE8,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -467,8 +511,9 @@ end
 ---@param p0 any
 ---@return boolean
 function ItemdatabaseIsBuyableAwardValid(p0)
-   return Citizen.InvokeNative(0x4CE753203FA42214,p0)
+    return Citizen.InvokeNative(0x4CE753203FA42214,p0)
 end
+
 
 
 --- 
@@ -479,8 +524,9 @@ end
 ---@param p3 any
 ---@return boolean
 function ItemdatabaseFilloutBuyAwardAcquireCosts(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0xB52E20F6767A09A2,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0xB52E20F6767A09A2,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -489,8 +535,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseGetItemPriceModifiers(p0,p1)
-   return Citizen.InvokeNative(0x4EB37AAB79AB0C48,p0,p1)
+    return Citizen.InvokeNative(0x4EB37AAB79AB0C48,p0,p1)
 end
+
 
 
 --- 
@@ -499,8 +546,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseFilloutPriceModifierByKey(p0,p1)
-   return Citizen.InvokeNative(0x40C5D95818823C94,p0,p1)
+    return Citizen.InvokeNative(0x40C5D95818823C94,p0,p1)
 end
+
 
 
 --- 
@@ -508,8 +556,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetNumberOfModifiedPrices(p0)
-   return Citizen.InvokeNative(0x5AAAF40E9B224F5E,p0)
+    return Citizen.InvokeNative(0x5AAAF40E9B224F5E,p0)
 end
+
 
 
 --- Returns an alternative cost hash to COST_SHOP_DEFAULT
@@ -518,8 +567,9 @@ end
 ---@param p1 any
 ---@return hash
 function ItemdatabaseGetModifiedPrice(p0,p1)
-   return Citizen.InvokeNative(0xCB92EC9C004732B4,p0,p1)
+    return Citizen.InvokeNative(0xCB92EC9C004732B4,p0,p1)
 end
+
 
 
 --- 
@@ -527,8 +577,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseGetNumberOfModifiers(p0)
-   return Citizen.InvokeNative(0x1289D8315235856D,p0)
+    return Citizen.InvokeNative(0x1289D8315235856D,p0)
 end
+
 
 
 --- 
@@ -538,8 +589,9 @@ end
 ---@param p2 any
 ---@return boolean
 function ItemdatabaseFilloutModifier(p0,p1,p2)
-   return Citizen.InvokeNative(0x60614A0AB580A2B5,p0,p1,p2)
+    return Citizen.InvokeNative(0x60614A0AB580A2B5,p0,p1,p2)
 end
+
 
 
 --- _ITEMDATABASE_GET_* - _ITEMDATABASE_IS_*
@@ -547,8 +599,9 @@ end
 ---@param award hash
 ---@return boolean
 function ItemdatabaseGetPriorityAccessAward(award)
-   return Citizen.InvokeNative(0xEF254F1A4C08B7E6,award)
+    return Citizen.InvokeNative(0xEF254F1A4C08B7E6,award)
 end
+
 
 
 --- Returns iAwardItemCount
@@ -556,8 +609,9 @@ end
 ---@param award hash
 ---@return number
 function ItemdatabaseGetAwardItemCount(award)
-   return Citizen.InvokeNative(0x3FAA928A79591761,award)
+    return Citizen.InvokeNative(0x3FAA928A79591761,award)
 end
+
 
 
 --- 
@@ -567,8 +621,9 @@ end
 ---@param currency hash*
 ---@return boolean
 function ItemdatabaseFilloutAwardItemInfo(award,index,currency)
-   return Citizen.InvokeNative(0x121D2005DD64496B,award,index,currency)
+    return Citizen.InvokeNative(0x121D2005DD64496B,award,index,currency)
 end
+
 
 
 --- 
@@ -577,8 +632,9 @@ end
 ---@param p1 any
 ---@return boolean
 function ItemdatabaseGetAwardCostModifiers(p0,p1)
-   return Citizen.InvokeNative(0xE81D0378A384E755,p0,p1)
+    return Citizen.InvokeNative(0xE81D0378A384E755,p0,p1)
 end
+
 
 
 --- 
@@ -588,8 +644,9 @@ end
 ---@param tagType hash
 ---@return boolean
 function ItemdatabaseDoesItemHaveTag(item,tag,tagType)
-   return Citizen.InvokeNative(0xFF5FB5605AD56856,item,tag,tagType)
+    return Citizen.InvokeNative(0xFF5FB5605AD56856,item,tag,tagType)
 end
+
 
 
 --- Params: tag = TAG_ITEM_PROPERTY (tagType(?))
@@ -599,8 +656,9 @@ end
 ---@param tagType hash
 ---@return boolean
 function ItemdatabaseDoesBundleHaveTag(bundle,tag,tagType)
-   return Citizen.InvokeNative(0x99C6EA66DFE73757,bundle,tag,tagType)
+    return Citizen.InvokeNative(0x99C6EA66DFE73757,bundle,tag,tagType)
 end
+
 
 
 --- 
@@ -609,8 +667,9 @@ end
 ---@param tag hash
 ---@return hash
 function ItemdatabaseGetItemTagType(item,tag)
-   return Citizen.InvokeNative(0x6111B8F9413F413A,item,tag)
+    return Citizen.InvokeNative(0x6111B8F9413F413A,item,tag)
 end
+
 
 
 --- Returns docData.iNumTotalLabelTypes
@@ -618,8 +677,9 @@ end
 ---@param p0 any
 ---@return number
 function ItemdatabaseLocalizationGetNumLabelTypes(p0)
-   return Citizen.InvokeNative(0xCEC6A41E8910486A,p0)
+    return Citizen.InvokeNative(0xCEC6A41E8910486A,p0)
 end
+
 
 
 --- Returns iNumValuesForType
@@ -628,8 +688,9 @@ end
 ---@param p1 any
 ---@return number
 function ItemdatabaseLocalizationGetNumValues(p0,p1)
-   return Citizen.InvokeNative(0x49885D82A13EEAEA,p0,p1)
+    return Citizen.InvokeNative(0x49885D82A13EEAEA,p0,p1)
 end
+
 
 
 --- Returns LabelType
@@ -638,8 +699,9 @@ end
 ---@param p1 any
 ---@return any
 function ItemdatabaseLocalizationGetType(p0,p1)
-   return Citizen.InvokeNative(0xCABF5D41D0073D4A,p0,p1)
+    return Citizen.InvokeNative(0xCABF5D41D0073D4A,p0,p1)
 end
+
 
 
 --- 
@@ -649,8 +711,9 @@ end
 ---@param p2 any
 ---@return number
 function ItemdatabaseLocalizationGetValue(p0,label,p2)
-   return Citizen.InvokeNative(0x9AE5610FDCED6EA7,p0,label,p2)
+    return Citizen.InvokeNative(0x9AE5610FDCED6EA7,p0,label,p2)
 end
+
 
 
 --- 
@@ -659,7 +722,8 @@ end
 ---@param p1 number
 ---@return number
 function ItemdatabaseGetItemPathset(item,p1)
-   return Citizen.InvokeNative(0xF4452CE83118C738,item,p1)
+    return Citizen.InvokeNative(0xF4452CE83118C738,item,p1)
 end
+
 
 

@@ -3,8 +3,9 @@
 ---@param handle scrhandle
 ---@return boolean
 function DoesCoverPointExist(handle)
-   return Citizen.InvokeNative(0xC276FE69DDA22BAD,handle)
+    return Citizen.InvokeNative(0xC276FE69DDA22BAD,handle)
 end
+
 
 
 --- 1 = In cover while crouched
@@ -14,8 +15,9 @@ end
 ---@param ped number
 ---@return number
 function GetCoverPointStateFromPed(ped)
-   return Citizen.InvokeNative(0x5F5B1B7E8E8F94C6,ped)
+    return Citizen.InvokeNative(0x5F5B1B7E8E8F94C6,ped)
 end
+
 
 
 --- 
@@ -26,12 +28,14 @@ function TaskEnterCover(ped)
 end
 
 
+
 --- 
 --- Native 0x2BC4A6D92D140112 (TASK_EXIT_COVER)
 ---@param ped number
 function TaskExitCover(ped)
     Citizen.InvokeNative(0x2BC4A6D92D140112,ped)
 end
+
 
 
 --- 
@@ -42,6 +46,7 @@ function TaskAiSeekCoverToCoverPoint(args)
 end
 
 
+
 --- Makes ped flinch (if in cover) like they have been shot at
 --- Native 0x2A31D13C5F021D0D (_REQUEST_FLINCH_COVER_ANIM)
 ---@param ped number
@@ -50,13 +55,15 @@ function RequestFlinchCoverAnim(ped)
 end
 
 
+
 --- 
 --- Native 0x8CBE916CFC64AD5C (_ARE_LOAD_COVER_ANIMS_LOADED)
 ---@param ped number
 ---@return boolean
 function AreLoadCoverAnimsLoaded(ped)
-   return Citizen.InvokeNative(0x8CBE916CFC64AD5C,ped)
+    return Citizen.InvokeNative(0x8CBE916CFC64AD5C,ped)
 end
+
 
 
 --- Stops running cover anims and releases them
@@ -68,12 +75,14 @@ function StopRunningCoverAnims(ped)
 end
 
 
+
 --- 
 --- Native 0x975BD6351648935F (_ADD_SCRIPTED_COVER_POINT)
 ---@param data any*
 ---@return scrhandle
 function AddScriptedCoverPoint(data)
-   return Citizen.InvokeNative(0x975BD6351648935F,data)
+    return Citizen.InvokeNative(0x975BD6351648935F,data)
 end
+
 
 

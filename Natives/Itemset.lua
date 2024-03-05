@@ -3,8 +3,9 @@
 ---@param p0 boolean
 ---@return itemset
 function CreateItemset(p0)
-   return Citizen.InvokeNative(0xA1AF16083320065A,p0)
+    return Citizen.InvokeNative(0xA1AF16083320065A,p0)
 end
+
 
 
 --- 
@@ -15,13 +16,15 @@ function DestroyItemset(itemset)
 end
 
 
+
 --- 
 --- Native 0xD30765D153EF5C76 (IS_ITEMSET_VALID)
 ---@param itemset itemset
 ---@return boolean
 function IsItemsetValid(itemset)
-   return Citizen.InvokeNative(0xD30765D153EF5C76,itemset)
+    return Citizen.InvokeNative(0xD30765D153EF5C76,itemset)
 end
+
 
 
 --- 
@@ -30,8 +33,9 @@ end
 ---@param itemset itemset
 ---@return boolean
 function AddToItemset(entity,itemset)
-   return Citizen.InvokeNative(0xABE74510883C7950,entity,itemset)
+    return Citizen.InvokeNative(0xABE74510883C7950,entity,itemset)
 end
+
 
 
 --- 
@@ -43,13 +47,15 @@ function RemoveFromItemset(entity,itemset)
 end
 
 
+
 --- 
 --- Native 0x55F2E375AC6018A9 (GET_ITEMSET_SIZE)
 ---@param itemset itemset
 ---@return number
 function GetItemsetSize(itemset)
-   return Citizen.InvokeNative(0x55F2E375AC6018A9,itemset)
+    return Citizen.InvokeNative(0x55F2E375AC6018A9,itemset)
 end
+
 
 
 --- 
@@ -58,8 +64,9 @@ end
 ---@param itemset itemset
 ---@return scrhandle
 function GetIndexedItemInItemset(index,itemset)
-   return Citizen.InvokeNative(0x275A2E2C0FAB7612,index,itemset)
+    return Citizen.InvokeNative(0x275A2E2C0FAB7612,index,itemset)
 end
+
 
 
 --- 
@@ -68,8 +75,9 @@ end
 ---@param itemset itemset
 ---@return any
 function GetIndexedScenarioPointIndexInItemset(index,itemset)
-   return Citizen.InvokeNative(0x9FC3CDB5CE815901,index,itemset)
+    return Citizen.InvokeNative(0x9FC3CDB5CE815901,index,itemset)
 end
+
 
 
 --- 
@@ -78,8 +86,9 @@ end
 ---@param itemset itemset
 ---@return boolean
 function IsInItemset(entity,itemset)
-   return Citizen.InvokeNative(0xD1503C2EE2FE688C,entity,itemset)
+    return Citizen.InvokeNative(0xD1503C2EE2FE688C,entity,itemset)
 end
+
 
 
 --- 
@@ -90,11 +99,13 @@ function CleanItemset(itemset)
 end
 
 
+
 --- 
 --- Native 0x20A4BF0E09BEE146 (_CLEAR_ITEMSET)
 ---@param itemset itemset
 function ClearItemset(itemset)
     Citizen.InvokeNative(0x20A4BF0E09BEE146,itemset)
 end
+
 
 

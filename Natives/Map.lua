@@ -3,8 +3,9 @@
 ---@param entity entity
 ---@return blip
 function GetBlipFromEntity(entity)
-   return Citizen.InvokeNative(0x6D2C41A8BD6D6FD0,entity)
+    return Citizen.InvokeNative(0x6D2C41A8BD6D6FD0,entity)
 end
+
 
 
 --- 
@@ -15,13 +16,15 @@ function GetMainPlayerBlipId()
 end
 
 
+
 --- 
 --- Native 0x3E593DF9C2962EC6 (_BLIP_ADD_FOR_STYLE)
 ---@param styleHash hash
 ---@return blip
 function BlipAddForStyle(styleHash)
-   return Citizen.InvokeNative(0x3E593DF9C2962EC6,styleHash)
+    return Citizen.InvokeNative(0x3E593DF9C2962EC6,styleHash)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures/blips
@@ -33,8 +36,9 @@ end
 ---@param z float
 ---@return blip
 function BlipAddForCoords(blipHash,x,y,z)
-   return Citizen.InvokeNative(0x554D9D53F696D002,blipHash,x,y,z)
+    return Citizen.InvokeNative(0x554D9D53F696D002,blipHash,x,y,z)
 end
+
 
 
 --- 
@@ -43,8 +47,9 @@ end
 ---@param entity entity
 ---@return blip
 function BlipAddForEntity(blipHash,entity)
-   return Citizen.InvokeNative(0x23F74C2FDA6E7C61,blipHash,entity)
+    return Citizen.InvokeNative(0x23F74C2FDA6E7C61,blipHash,entity)
 end
+
 
 
 --- 
@@ -53,8 +58,9 @@ end
 ---@param pickup pickup
 ---@return blip
 function BlipAddForPickupPlacement(blipHash,pickup)
-   return Citizen.InvokeNative(0xA486008892065FB9,blipHash,pickup)
+    return Citizen.InvokeNative(0xA486008892065FB9,blipHash,pickup)
 end
+
 
 
 --- 
@@ -66,8 +72,9 @@ end
 ---@param radius float
 ---@return blip
 function BlipAddForRadius(blipHash,x,y,z,radius)
-   return Citizen.InvokeNative(0x45F13B7E0A15C880,blipHash,x,y,z,radius)
+    return Citizen.InvokeNative(0x45F13B7E0A15C880,blipHash,x,y,z,radius)
 end
+
 
 
 --- 
@@ -82,8 +89,9 @@ end
 ---@param p7 number
 ---@return blip
 function BlipAddForArea(blipHash,x,y,z,scaleX,scaleY,scaleZ,p7)
-   return Citizen.InvokeNative(0xEC174ADBCB611ECC,blipHash,x,y,z,scaleX,scaleY,scaleZ,p7)
+    return Citizen.InvokeNative(0xEC174ADBCB611ECC,blipHash,x,y,z,scaleX,scaleY,scaleZ,p7)
 end
+
 
 
 --- 
@@ -92,8 +100,9 @@ end
 ---@param volume volume
 ---@return blip
 function BlipAddForVolume(blipHash,volume)
-   return Citizen.InvokeNative(0xA6EF0C54A3443E70,blipHash,volume)
+    return Citizen.InvokeNative(0xA6EF0C54A3443E70,blipHash,volume)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/blip_styles
@@ -103,8 +112,9 @@ end
 ---@param styleHash hash
 ---@return boolean
 function BlipSetStyle(blip,styleHash)
-   return Citizen.InvokeNative(0xEDD964B7984AC291,blip,styleHash)
+    return Citizen.InvokeNative(0xEDD964B7984AC291,blip,styleHash)
 end
+
 
 
 --- 
@@ -113,8 +123,9 @@ end
 ---@param styleHash hash
 ---@return boolean
 function BlipAddStyle(blip,styleHash)
-   return Citizen.InvokeNative(0xBD62D98799A3DAF0,blip,styleHash)
+    return Citizen.InvokeNative(0xBD62D98799A3DAF0,blip,styleHash)
 end
+
 
 
 --- https://alloc8or.re/rdr3/doc/enums/eBlipModifier.txt
@@ -125,8 +136,9 @@ end
 ---@param modifierHash hash
 ---@return boolean
 function BlipAddModifier(blip,modifierHash)
-   return Citizen.InvokeNative(0x662D364ABF16DE2F,blip,modifierHash)
+    return Citizen.InvokeNative(0x662D364ABF16DE2F,blip,modifierHash)
 end
+
 
 
 --- If modifierHash is 0, ALL modifiers will be removed.
@@ -135,8 +147,9 @@ end
 ---@param modifierHash hash
 ---@return boolean
 function BlipRemoveModifier(blip,modifierHash)
-   return Citizen.InvokeNative(0xB059D7BD3D78C16F,blip,modifierHash)
+    return Citizen.InvokeNative(0xB059D7BD3D78C16F,blip,modifierHash)
 end
+
 
 
 --- 
@@ -149,6 +162,7 @@ function SetBlipFlashTimer(blip,blipType,blipHash)
 end
 
 
+
 --- 
 --- Native 0x0DF2B55F717DDB10 (SET_BLIP_FLASHES)
 ---@param blip blip
@@ -156,8 +170,9 @@ end
 ---@param p2 hash*
 ---@return boolean
 function SetBlipFlashes(blip,p1,p2)
-   return Citizen.InvokeNative(0x0DF2B55F717DDB10,blip,p1,p2)
+    return Citizen.InvokeNative(0x0DF2B55F717DDB10,blip,p1,p2)
 end
+
 
 
 --- 
@@ -171,6 +186,7 @@ function TriggerSonarBlip(typeHash,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x0C7A2289A5C4D7C9 (_TRIGGER_SONAR_BLIP_ON_ENTITY)
 ---@param typeHash hash
@@ -180,12 +196,14 @@ function TriggerSonarBlipOnEntity(typeHash,entity)
 end
 
 
+
 --- 
 --- Native 0x6E6E64788C07D2E0 (ALLOW_SONAR_BLIPS)
 ---@param toggle boolean
 function AllowSonarBlips(toggle)
     Citizen.InvokeNative(0x6E6E64788C07D2E0,toggle)
 end
+
 
 
 --- 
@@ -199,13 +217,15 @@ function SetBlipCoords(blip,posX,posY,posZ)
 end
 
 
+
 --- 
 --- Native 0x201C319797BDA603 (GET_BLIP_COORDS)
 ---@param blip blip
 ---@return vector3
 function GetBlipCoords(blip)
-   return Citizen.InvokeNative(0x201C319797BDA603,blip)
+    return Citizen.InvokeNative(0x201C319797BDA603,blip)
 end
+
 
 
 --- 
@@ -218,6 +238,7 @@ function SetBlipSprite(blip,hash,p2)
 end
 
 
+
 --- 
 --- Native 0x0A062D6D7C0B2C2C (SET_BLIP_NAME_FROM_TEXT_FILE)
 ---@param blip blip
@@ -225,6 +246,7 @@ end
 function SetBlipNameFromTextFile(blip,textLabel)
     Citizen.InvokeNative(0x0A062D6D7C0B2C2C,blip,textLabel)
 end
+
 
 
 --- 
@@ -236,6 +258,7 @@ function SetBlipName(blip,name)
 end
 
 
+
 --- 
 --- Native 0x093DD5A31BC2B459 (SET_BLIP_NAME_TO_PLAYER_NAME)
 ---@param blip blip
@@ -243,6 +266,7 @@ end
 function SetBlipNameToPlayerName(blip,player)
     Citizen.InvokeNative(0x093DD5A31BC2B459,blip,player)
 end
+
 
 
 --- 
@@ -254,6 +278,7 @@ function SetBlipRotation(blip,rotation)
 end
 
 
+
 --- 
 --- Native 0xD38744167B2FA257 (SET_BLIP_SCALE)
 ---@param blip blip
@@ -261,6 +286,7 @@ end
 function SetBlipScale(blip,scale)
     Citizen.InvokeNative(0xD38744167B2FA257,blip,scale)
 end
+
 
 
 --- 
@@ -271,13 +297,15 @@ function RemoveBlip(blip)
 end
 
 
+
 --- 
 --- Native 0xCD82FA174080B3B1 (DOES_BLIP_EXIST)
 ---@param blip blip
 ---@return boolean
 function DoesBlipExist(blip)
-   return Citizen.InvokeNative(0xCD82FA174080B3B1,blip)
+    return Citizen.InvokeNative(0xCD82FA174080B3B1,blip)
 end
+
 
 
 --- 
@@ -285,8 +313,9 @@ end
 ---@param entity entity
 ---@return boolean
 function DoesEntityHaveBlip(entity)
-   return Citizen.InvokeNative(0x9FA00E2FC134A9D0,entity)
+    return Citizen.InvokeNative(0x9FA00E2FC134A9D0,entity)
 end
+
 
 
 --- 
@@ -297,6 +326,7 @@ function SetRadarZoom(zoomLevel)
 end
 
 
+
 --- It's unclear what exactly this does, but I assume it marks the blip as "no longer needed"
 --- Native 0xDEEDE7C41742E011 (_ABANDON_BLIP)
 ---@param blip blip
@@ -305,13 +335,15 @@ function AbandonBlip(blip)
 end
 
 
+
 --- 
 --- Native 0xE9F676788F8D5E1E (_IS_BLIP_ATTACHED_TO_ANY_ENTITY)
 ---@param blip blip
 ---@return boolean
 function IsBlipAttachedToAnyEntity(blip)
-   return Citizen.InvokeNative(0xE9F676788F8D5E1E,blip)
+    return Citizen.InvokeNative(0xE9F676788F8D5E1E,blip)
 end
+
 
 
 --- 
@@ -319,8 +351,9 @@ end
 ---@param blip blip
 ---@return boolean
 function IsBlipOnMinimap(blip)
-   return Citizen.InvokeNative(0x46534526B9CD2D17,blip)
+    return Citizen.InvokeNative(0x46534526B9CD2D17,blip)
 end
+
 
 
 --- Doesn't actually return anything.
@@ -329,6 +362,7 @@ end
 function ForceSonarBlipsThisFrame()
    return Citizen.InvokeNative(0xEE1C7BA69BB74B08)
 end
+
 
 
 --- https://alloc8or.re/rdr3/doc/enums/rage__eGpsFlags.txt
@@ -340,11 +374,13 @@ function SetGpsFlags(p0,p1)
 end
 
 
+
 --- Clears the GPS flags.
 --- Native 0x4D3771237C79FF41 (CLEAR_GPS_FLAGS)
 function ClearGpsFlags()
     Citizen.InvokeNative(0x4D3771237C79FF41)
 end
+
 
 
 --- 
@@ -357,11 +393,13 @@ function SetGpsCustomRouteRender(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x1EAA5674B4D181C5 (CLEAR_GPS_CUSTOM_ROUTE)
 function ClearGpsCustomRoute()
     Citizen.InvokeNative(0x1EAA5674B4D181C5)
 end
+
 
 
 --- 
@@ -372,6 +410,7 @@ end
 function StartGpsMultiRoute(colorNameHash,onFoot,inVehicle)
     Citizen.InvokeNative(0x3D3D15AF7BCAAF83,colorNameHash,onFoot,inVehicle)
 end
+
 
 
 --- 
@@ -385,6 +424,7 @@ function AddPointToGpsMultiRoute(x,y,z,p3)
 end
 
 
+
 --- 
 --- Native 0x4426D65E029A4DC0 (SET_GPS_MULTI_ROUTE_RENDER)
 ---@param toggle boolean
@@ -393,11 +433,13 @@ function SetGpsMultiRouteRender(toggle)
 end
 
 
+
 --- Does the same as SET_GPS_MULTI_ROUTE_RENDER(false);
 --- Native 0x9E0AB9AAEE87CE28 (CLEAR_GPS_MULTI_ROUTE)
 function ClearGpsMultiRoute()
     Citizen.InvokeNative(0x9E0AB9AAEE87CE28)
 end
+
 
 
 --- 
@@ -413,6 +455,7 @@ function StartGpsCustomRouteFromWaypointRecordingRoute(waypointRecording,point,n
 end
 
 
+
 --- 
 --- Native 0x08FDC6F796E350D1 (CLEAR_GPS_PLAYER_WAYPOINT)
 function ClearGpsPlayerWaypoint()
@@ -420,11 +463,13 @@ function ClearGpsPlayerWaypoint()
 end
 
 
+
 --- 
 --- Native 0xFA8C41E8020D3439 (SET_WAYPOINT_OFF)
 function SetWaypointOff()
     Citizen.InvokeNative(0xFA8C41E8020D3439)
 end
+
 
 
 --- 
@@ -435,12 +480,14 @@ function IsWaypointActive()
 end
 
 
+
 --- 
 --- Native 0x29B30D07C3F7873B (_GET_WAYPOINT_COORDS)
 ---@return vector3
 function GetWaypointCoords()
    return Citizen.InvokeNative(0x29B30D07C3F7873B)
 end
+
 
 
 --- 
@@ -450,11 +497,13 @@ function HideActivePointsOfInterest()
 end
 
 
+
 --- 
 --- Native 0x3FBB838AEA30C1D8 (_SHOW_ACTIVE_POINTS_OF_INTEREST)
 function ShowActivePointsOfInterest()
     Citizen.InvokeNative(0x3FBB838AEA30C1D8)
 end
+
 
 
 --- 
@@ -465,8 +514,9 @@ end
 ---@param outPosition vector3*
 ---@return boolean
 function FindClosestGpsPosition(x,y,z,outPosition)
-   return Citizen.InvokeNative(0x3FDA2B79AEEE351C,x,y,z,outPosition)
+    return Citizen.InvokeNative(0x3FDA2B79AEEE351C,x,y,z,outPosition)
 end
+
 
 
 --- If Minimap / Radar should be displayed.
@@ -475,6 +525,7 @@ end
 function DisplayRadar(toggle)
     Citizen.InvokeNative(0x1B3DA717B9AFF828,toggle)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/minimap/radar/radar_configs.lua
@@ -486,6 +537,7 @@ end
 function SetRadarConfigType(configHash,p1)
     Citizen.InvokeNative(0x9C113883487FD53C,configHash,p1)
 end
+
 
 
 --- list of minimap props: https://github.com/femga/rdr3_discoveries/tree/master/graphics/minimap/minimapObjects
@@ -500,12 +552,14 @@ function AddPropToMinimap(minimapProp,x,y,rotation,p4)
 end
 
 
+
 --- 
 --- Native 0xE057FEA9A22EB3EE (_REMOVE_PROP_FROM_MINIMAP)
 ---@param minimapProp hash
 function RemovePropFromMinimap(minimapProp)
     Citizen.InvokeNative(0xE057FEA9A22EB3EE,minimapProp)
 end
+
 
 
 --- 
@@ -515,12 +569,14 @@ function SetRadarAsExteriorThisFrame()
 end
 
 
+
 --- Reveals the entire minimap (FOW = Fog of War)
 --- Native 0x4B8F743A4A6D2FF8 (SET_MINIMAP_HIDE_FOW)
 ---@param toggle boolean
 function SetMinimapHideFow(toggle)
     Citizen.InvokeNative(0x4B8F743A4A6D2FF8,toggle)
 end
+
 
 
 --- Used for GUARMA MODE; Enabled: toggle = false, 0; Disabled: toggle = true, 0
@@ -533,6 +589,7 @@ function SetFowUpdatePlayerOverride(toggle,p1)
 end
 
 
+
 --- 
 --- Native 0xE5A7F70B7C0F3271 (_SET_MINIMAP_FOW_OVERRIDE_REVEAL_SCALE)
 ---@param scale float
@@ -542,6 +599,7 @@ function SetMinimapFowOverrideRevealScale(scale,p1)
 end
 
 
+
 --- 
 --- Native 0x632AA10BF7EA53D3 (_SET_MINIMAP_FOW_SHOULD_UPDATE)
 ---@param toggle boolean
@@ -549,6 +607,7 @@ end
 function SetMinimapFowShouldUpdate(toggle,p1)
     Citizen.InvokeNative(0x632AA10BF7EA53D3,toggle,p1)
 end
+
 
 
 --- Up to eight coordinates may be revealed per frame
@@ -562,6 +621,7 @@ function SetMinimapFowRevealCoordinate(x,y,z,p3)
 end
 
 
+
 --- 
 --- Native 0x63CBBD6CA6F321F9 (SET_MINIMAP_FOW_REVEAL_VOLUME)
 ---@param volume volume
@@ -569,6 +629,7 @@ end
 function SetMinimapFowRevealVolume(volume,p1)
     Citizen.InvokeNative(0x63CBBD6CA6F321F9,volume,p1)
 end
+
 
 
 --- 
@@ -579,6 +640,7 @@ function ResetMinimapFow(hash)
 end
 
 
+
 --- 
 --- Native 0xF8096DF9B87246E3 (_REVEAL_MINIMAP_FOW)
 ---@param hash hash
@@ -587,12 +649,14 @@ function RevealMinimapFow(hash)
 end
 
 
+
 --- hash can be the hash of "guarma" or "world".
 --- Native 0xA657EC9DBC6CC900 (_SET_MINIMAP_ZONE)
 ---@param zone hash
 function SetMinimapZone(zone)
     Citizen.InvokeNative(0xA657EC9DBC6CC900,zone)
 end
+
 
 
 --- Locks the minimap to the specified angle in integer degrees.
@@ -604,11 +668,13 @@ function LockMinimapAngle(angle)
 end
 
 
+
 --- 
 --- Native 0x5373DE8E179BC2A0 (UNLOCK_MINIMAP_ANGLE)
 function UnlockMinimapAngle()
     Citizen.InvokeNative(0x5373DE8E179BC2A0)
 end
+
 
 
 --- regionHash: https://github.com/femga/rdr3_discoveries/tree/master/graphics/minimap/wanted_regions
@@ -620,6 +686,7 @@ function MapEnableRegionBlip(regionHash,styleHash)
 end
 
 
+
 --- 
 --- Native 0x6786D7AFAC3162B3 (_MAP_DISABLE_REGION_BLIP)
 ---@param regionHash hash
@@ -628,14 +695,16 @@ function MapDisableRegionBlip(regionHash)
 end
 
 
+
 --- 
 --- Native 0xE38450DBCBC70E3D (_MAP_IS_REGION_HIGHLIGHTED_WITH_STYLE)
 ---@param regionHash hash
 ---@param styleHash hash
 ---@return boolean
 function MapIsRegionHighlightedWithStyle(regionHash,styleHash)
-   return Citizen.InvokeNative(0xE38450DBCBC70E3D,regionHash,styleHash)
+    return Citizen.InvokeNative(0xE38450DBCBC70E3D,regionHash,styleHash)
 end
+
 
 
 --- 
@@ -646,6 +715,7 @@ function MapDiscoverRegion(discoveryHash)
 end
 
 
+
 --- 
 --- Native 0xDA98246C7A3C2189 (_MAP_DISCOVERY_SET_ENABLED)
 ---@param discoveryHash hash
@@ -654,13 +724,15 @@ function MapDiscoverySetEnabled(discoveryHash)
 end
 
 
+
 --- 
 --- Native 0x3F81EA4275D39D6F (_MAP_IS_DISCOVERY_ACTIVE)
 ---@param discoveryHash hash
 ---@return boolean
 function MapIsDiscoveryActive(discoveryHash)
-   return Citizen.InvokeNative(0x3F81EA4275D39D6F,discoveryHash)
+    return Citizen.InvokeNative(0x3F81EA4275D39D6F,discoveryHash)
 end
+
 
 
 --- 
@@ -672,5 +744,6 @@ end
 function SetPausemapCoordsWithRadius(x,y,z,radius)
     Citizen.InvokeNative(0xE0884C184728C75B,x,y,z,radius)
 end
+
 
 

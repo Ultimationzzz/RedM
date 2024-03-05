@@ -6,12 +6,14 @@ function GoogleAnalyticsPushPage(pageName)
 end
 
 
+
 --- 
 --- Native 0xC6DE040378364798 (_GOOGLE_ANALYTICS_POP_PAGE)
 ---@param pageName string
 function GoogleAnalyticsPopPage(pageName)
     Citizen.InvokeNative(0xC6DE040378364798,pageName)
 end
+
 
 
 --- 
@@ -22,8 +24,9 @@ end
 ---@param eventValue number
 ---@return boolean
 function GoogleAnalyticsStartEvent(eventCategory,eventAction,eventLabel,eventValue)
-   return Citizen.InvokeNative(0x1C54F031D7C0F7AC,eventCategory,eventAction,eventLabel,eventValue)
+    return Citizen.InvokeNative(0x1C54F031D7C0F7AC,eventCategory,eventAction,eventLabel,eventValue)
 end
+
 
 
 --- 
@@ -32,5 +35,6 @@ end
 function GoogleAnalyticsEndEvent()
    return Citizen.InvokeNative(0x87BBCC4360A9BDE3)
 end
+
 
 

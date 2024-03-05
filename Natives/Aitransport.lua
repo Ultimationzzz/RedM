@@ -6,12 +6,14 @@ function TaskEnterTransport(args)
 end
 
 
+
 --- 
 --- Native 0xC273A5B8488F7838 (TASK_EXIT_TRANSPORT)
 ---@param args any*
 function TaskExitTransport(args)
     Citizen.InvokeNative(0xC273A5B8488F7838,args)
 end
+
 
 
 --- seat: see CREATE_PED_INSIDE_VEHICLE
@@ -25,6 +27,7 @@ function SetPedOnTransportSeat(ped,transportEntity,seat,flags)
 end
 
 
+
 --- 
 --- Native 0x8886D83A430537FD (SET_PED_OFF_TRANSPORT_SEAT)
 ---@param ped number
@@ -32,6 +35,7 @@ end
 function SetPedOffTransportSeat(ped,flags)
     Citizen.InvokeNative(0x8886D83A430537FD,ped,flags)
 end
+
 
 
 --- flagId:
@@ -68,6 +72,7 @@ function SetTransportConfigFlag(transportEntity,flagId,value)
 end
 
 
+
 --- flagId: see SET_TRANSPORT_CONFIG_FLAG
 --- Native 0xF382C92CCC1CCDBC (GET_TRANSPORT_CONFIG_FLAG)
 ---@param transportEntity entity
@@ -75,8 +80,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function GetTransportConfigFlag(transportEntity,flagId,p2)
-   return Citizen.InvokeNative(0xF382C92CCC1CCDBC,transportEntity,flagId,p2)
+    return Citizen.InvokeNative(0xF382C92CCC1CCDBC,transportEntity,flagId,p2)
 end
+
 
 
 --- See _SET_TRANSPORT_USAGE_FLAGS
@@ -85,8 +91,9 @@ end
 ---@param flags int*
 ---@return any
 function GetTransportUsageFlags(transportEntity,flags)
-   return Citizen.InvokeNative(0xE195C5A82156321D,transportEntity,flags)
+    return Citizen.InvokeNative(0xE195C5A82156321D,transportEntity,flags)
 end
+
 
 
 --- enum eTransportUsageFlags
@@ -112,6 +119,7 @@ function SetTransportUsageFlags(transportEntity,flags)
 end
 
 
+
 --- 
 --- Native 0xDD0660C997DE94FD (SET_TRANSPORT_ACCESSIBLE_SEAT_FLAGS)
 ---@param transportEntity entity
@@ -121,14 +129,16 @@ function SetTransportAccessibleSeatFlags(transportEntity,flags)
 end
 
 
+
 --- Checks if ped is placed on target transportEntity
 --- Native 0x159EF5B6EDCE00E8 (_IS_PED_ON_TRANSPORT_ENTITY)
 ---@param ped number
 ---@param transportEntity entity
 ---@return boolean
 function IsPedOnTransportEntity(ped,transportEntity)
-   return Citizen.InvokeNative(0x159EF5B6EDCE00E8,ped,transportEntity)
+    return Citizen.InvokeNative(0x159EF5B6EDCE00E8,ped,transportEntity)
 end
+
 
 
 --- 
@@ -137,8 +147,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedOnTransportSeat(ped,p1)
-   return Citizen.InvokeNative(0xDC44F405A6B98D03,ped,p1)
+    return Citizen.InvokeNative(0xDC44F405A6B98D03,ped,p1)
 end
+
 
 
 --- 
@@ -147,8 +158,9 @@ end
 ---@param seatIndex number
 ---@return boolean
 function IsTransportSeatOccupied(transportEntity,seatIndex)
-   return Citizen.InvokeNative(0x2E2E06023D07631E,transportEntity,seatIndex)
+    return Citizen.InvokeNative(0x2E2E06023D07631E,transportEntity,seatIndex)
 end
+
 
 
 --- Called together with IS_VEHICLE_SEAT_FREE
@@ -157,8 +169,9 @@ end
 ---@param seatIndex number
 ---@return boolean
 function IsTransportSeatFree(transportEntity,seatIndex)
-   return Citizen.InvokeNative(0x43FF27FC1829C202,transportEntity,seatIndex)
+    return Citizen.InvokeNative(0x43FF27FC1829C202,transportEntity,seatIndex)
 end
+
 
 
 --- seatIndex: see CREATE_PED_INSIDE_VEHICLE
@@ -167,8 +180,9 @@ end
 ---@param seatIndex number
 ---@return number
 function GetPedInTransportSeat(transportEntity,seatIndex)
-   return Citizen.InvokeNative(0xFFEC4B0A1A3ED515,transportEntity,seatIndex)
+    return Citizen.InvokeNative(0xFFEC4B0A1A3ED515,transportEntity,seatIndex)
 end
+
 
 
 --- 
@@ -178,8 +192,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function IsPedEnteringTransport(ped,transportEntity,p2)
-   return Citizen.InvokeNative(0x619E63980BFC0096,ped,transportEntity,p2)
+    return Citizen.InvokeNative(0x619E63980BFC0096,ped,transportEntity,p2)
 end
+
 
 
 --- 
@@ -188,8 +203,9 @@ end
 ---@param transportEntity entity
 ---@return boolean
 function IsPedExitingTransport(ped,transportEntity)
-   return Citizen.InvokeNative(0x660639BC60157048,ped,transportEntity)
+    return Citizen.InvokeNative(0x660639BC60157048,ped,transportEntity)
 end
+
 
 
 --- 
@@ -204,6 +220,7 @@ function SetPedUseTransportSeatPreference(ped,transportEntity,preferenceSlot,p3,
 end
 
 
+
 --- 
 --- Native 0x67F7CEAC2391E114 (_SET_AI_CAN_USE_TRANSPORT)
 ---@param transportEntity entity
@@ -213,6 +230,7 @@ function SetAiCanUseTransport(transportEntity,state)
 end
 
 
+
 --- 
 --- Native 0x13F138225C202F66 (_SET_TRANSPORT_PRIORITY_SEAT)
 ---@param transportEntity entity
@@ -220,5 +238,6 @@ end
 function SetTransportPrioritySeat(transportEntity,seatIndex)
     Citizen.InvokeNative(0x13F138225C202F66,transportEntity,seatIndex)
 end
+
 
 

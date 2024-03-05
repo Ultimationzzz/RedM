@@ -11,8 +11,9 @@
 ---@param p8 boolean
 ---@return number
 function CreatePed(modelHash,x,y,z,heading,isNetwork,bScriptHostPed,p7,p8)
-   return Citizen.InvokeNative(0xD49F9B0955C367DE,modelHash,x,y,z,heading,isNetwork,bScriptHostPed,p7,p8)
+    return Citizen.InvokeNative(0xD49F9B0955C367DE,modelHash,x,y,z,heading,isNetwork,bScriptHostPed,p7,p8)
 end
+
 
 
 --- Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
@@ -23,6 +24,7 @@ function DeletePed(ped)
 end
 
 
+
 --- 
 --- Native 0x39A2FC5AF55A52B1 (_SET_REMOVE_PED_NETWORKED)
 ---@param ped number
@@ -30,6 +32,7 @@ end
 function SetRemovePedNetworked(ped,p1)
     Citizen.InvokeNative(0x39A2FC5AF55A52B1,ped,p1)
 end
+
 
 
 --- 
@@ -44,6 +47,7 @@ function SetPedToBeRemoved(ped,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0xEF29A16337FACADB (CLONE_PED)
 ---@param ped number
@@ -52,8 +56,9 @@ end
 ---@param copyHeadBlendFlag boolean
 ---@return number
 function ClonePed(ped,isNetwork,bScriptHostPed,copyHeadBlendFlag)
-   return Citizen.InvokeNative(0xEF29A16337FACADB,ped,isNetwork,bScriptHostPed,copyHeadBlendFlag)
+    return Citizen.InvokeNative(0xEF29A16337FACADB,ped,isNetwork,bScriptHostPed,copyHeadBlendFlag)
 end
+
 
 
 --- Copies ped's components and props to targetPed.
@@ -66,6 +71,7 @@ function ClonePedToTarget(ped,targetPed)
 end
 
 
+
 --- Gets a value indicating whether the specified ped is in the specified vehicle.
 --- Native 0xA3EE4A07279BB9DB (IS_PED_IN_VEHICLE)
 ---@param ped number
@@ -73,8 +79,9 @@ end
 ---@param atGetIn boolean
 ---@return boolean
 function IsPedInVehicle(ped,vehicle,atGetIn)
-   return Citizen.InvokeNative(0xA3EE4A07279BB9DB,ped,vehicle,atGetIn)
+    return Citizen.InvokeNative(0xA3EE4A07279BB9DB,ped,vehicle,atGetIn)
 end
+
 
 
 --- 
@@ -83,8 +90,9 @@ end
 ---@param modelHash hash
 ---@return boolean
 function IsPedInModel(ped,modelHash)
-   return Citizen.InvokeNative(0x796D90EFB19AA332,ped,modelHash)
+    return Citizen.InvokeNative(0x796D90EFB19AA332,ped,modelHash)
 end
+
 
 
 --- Gets a value indicating whether the specified ped is in any vehicle.
@@ -93,8 +101,9 @@ end
 ---@param atGetIn boolean
 ---@return boolean
 function IsPedInAnyVehicle(ped,atGetIn)
-   return Citizen.InvokeNative(0x997ABD671D25CA0B,ped,atGetIn)
+    return Citizen.InvokeNative(0x997ABD671D25CA0B,ped,atGetIn)
 end
+
 
 
 --- Gets a value indicating whether this ped's health is below its injured threshold.
@@ -103,8 +112,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInjured(ped)
-   return Citizen.InvokeNative(0x84A2DD9AC37C35C1,ped)
+    return Citizen.InvokeNative(0x84A2DD9AC37C35C1,ped)
 end
+
 
 
 --- Gets a value indicating whether this ped's health is below its fatally injured threshold. The default threshold is 100.
@@ -113,8 +123,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedFatallyInjured(ped)
-   return Citizen.InvokeNative(0xD839450756ED5A80,ped)
+    return Citizen.InvokeNative(0xD839450756ED5A80,ped)
 end
+
 
 
 --- 
@@ -123,8 +134,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedDeadOrDying(ped,p1)
-   return Citizen.InvokeNative(0x3317DEDB88C95038,ped,p1)
+    return Citizen.InvokeNative(0x3317DEDB88C95038,ped,p1)
 end
+
 
 
 --- Bleedout profiles:
@@ -142,13 +154,15 @@ function SetPedBleedoutProfile(ped,bleedoutProfile)
 end
 
 
+
 --- 
 --- Native 0x3998B1276A3300E5 (IS_PED_AIMING_FROM_COVER)
 ---@param ped number
 ---@return boolean
 function IsPedAimingFromCover(ped)
-   return Citizen.InvokeNative(0x3998B1276A3300E5,ped)
+    return Citizen.InvokeNative(0x3998B1276A3300E5,ped)
 end
+
 
 
 --- Returns whether the specified ped is reloading.
@@ -156,8 +170,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedReloading(ped)
-   return Citizen.InvokeNative(0x24B100C68C645951,ped)
+    return Citizen.InvokeNative(0x24B100C68C645951,ped)
 end
+
 
 
 --- 
@@ -165,8 +180,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedAPlayer(ped)
-   return Citizen.InvokeNative(0x12534C348C6CB68B,ped)
+    return Citizen.InvokeNative(0x12534C348C6CB68B,ped)
 end
+
 
 
 --- Returns true only if it's a player ped and an animal as well.
@@ -175,8 +191,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsAnimalControlledByAPlayer(ped)
-   return Citizen.InvokeNative(0x0E2F43516F998269,ped)
+    return Citizen.InvokeNative(0x0E2F43516F998269,ped)
 end
+
 
 
 --- seatIndex:
@@ -204,8 +221,9 @@ end
 ---@param p5 boolean
 ---@return number
 function CreatePedInsideVehicle(vehicle,modelHash,seatIndex,p3,p4,p5)
-   return Citizen.InvokeNative(0x7DD959874C1FD534,vehicle,modelHash,seatIndex,p3,p4,p5)
+    return Citizen.InvokeNative(0x7DD959874C1FD534,vehicle,modelHash,seatIndex,p3,p4,p5)
 end
+
 
 
 --- 
@@ -217,12 +235,14 @@ function SetPedDesiredHeading(ped,heading)
 end
 
 
+
 --- Old name: _FREEZE_PED_CAMERA_ROTATION
 --- Native 0xFF287323B0E2C69A (FORCE_ALL_HEADING_VALUES_TO_ALIGN)
 ---@param ped number
 function ForceAllHeadingValuesToAlign(ped)
     Citizen.InvokeNative(0xFF287323B0E2C69A,ped)
 end
+
 
 
 --- angle is ped's view cone
@@ -232,8 +252,9 @@ end
 ---@param angle float
 ---@return boolean
 function IsPedFacingPed(ped,otherPed,angle)
-   return Citizen.InvokeNative(0xD71649DB0A545AA3,ped,otherPed,angle)
+    return Citizen.InvokeNative(0xD71649DB0A545AA3,ped,otherPed,angle)
 end
+
 
 
 --- Notes: The function only returns true while the ped is: 
@@ -245,8 +266,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInMeleeCombat(ped)
-   return Citizen.InvokeNative(0x4E209B2C1EAD5159,ped)
+    return Citizen.InvokeNative(0x4E209B2C1EAD5159,ped)
 end
+
 
 
 --- 
@@ -254,8 +276,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedStopped(ped)
-   return Citizen.InvokeNative(0x530944F6F4B8A214,ped)
+    return Citizen.InvokeNative(0x530944F6F4B8A214,ped)
 end
+
 
 
 --- 
@@ -263,8 +286,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedSitting(ped)
-   return Citizen.InvokeNative(0x84D0BF2B21862059,ped)
+    return Citizen.InvokeNative(0x84D0BF2B21862059,ped)
 end
+
 
 
 --- 
@@ -279,8 +303,9 @@ end
 ---@param p7 boolean
 ---@return boolean
 function IsAnyPedShootingInArea(x1,y1,z1,x2,y2,z2,p6,p7)
-   return Citizen.InvokeNative(0xA0D3D71EA1086C55,x1,y1,z1,x2,y2,z2,p6,p7)
+    return Citizen.InvokeNative(0xA0D3D71EA1086C55,x1,y1,z1,x2,y2,z2,p6,p7)
 end
+
 
 
 --- Returns whether the specified ped is shooting.
@@ -288,8 +313,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedShooting(ped)
-   return Citizen.InvokeNative(0x34616828CD07F1A1,ped)
+    return Citizen.InvokeNative(0x34616828CD07F1A1,ped)
 end
+
 
 
 --- Returns time since the specified ped last shot, in seconds. (fPlayerJustShotTime)
@@ -297,8 +323,9 @@ end
 ---@param ped number
 ---@return float
 function TimeSincePedLastShot(ped)
-   return Citizen.InvokeNative(0x285D36C5C72B0569,ped)
+    return Citizen.InvokeNative(0x285D36C5C72B0569,ped)
 end
+
 
 
 --- accuracy = 0-100, 100 being perfectly accurate
@@ -310,13 +337,15 @@ function SetPedAccuracy(ped,accuracy)
 end
 
 
+
 --- 
 --- Native 0x37F4AD56ECBC0CD6 (GET_PED_ACCURACY)
 ---@param ped number
 ---@return number
 function GetPedAccuracy(ped)
-   return Citizen.InvokeNative(0x37F4AD56ECBC0CD6,ped)
+    return Citizen.InvokeNative(0x37F4AD56ECBC0CD6,ped)
 end
+
 
 
 --- 
@@ -325,8 +354,9 @@ end
 ---@param modelHash hash
 ---@return boolean
 function IsPedModel(ped,modelHash)
-   return Citizen.InvokeNative(0xC9D55B1A358A5BF7,ped,modelHash)
+    return Citizen.InvokeNative(0xC9D55B1A358A5BF7,ped,modelHash)
 end
+
 
 
 --- Forces the ped to fall back and kills it.
@@ -339,6 +369,7 @@ function ExplodePedHead(ped,weaponHash)
 end
 
 
+
 --- Same as SET_PED_ARMOUR, but ADDS 'amount' to the armor the Ped already has.
 --- Native 0x5BA652A0CD14DF2F (ADD_ARMOUR_TO_PED)
 ---@param ped number
@@ -346,6 +377,7 @@ end
 function AddArmourToPed(ped,amount)
     Citizen.InvokeNative(0x5BA652A0CD14DF2F,ped,amount)
 end
+
 
 
 --- Ped: The ped to warp.
@@ -360,6 +392,7 @@ function SetPedIntoVehicle(ped,vehicle,seatIndex)
 end
 
 
+
 --- 
 --- Native 0x9E8C908F41584ECD (SET_PED_MOVE_ANIMS_BLEND_OUT)
 ---@param ped number
@@ -368,13 +401,15 @@ function SetPedMoveAnimsBlendOut(ped)
 end
 
 
+
 --- Returns true/false if the ped is/isn't male.
 --- Native 0x6D9F5FAA7488BA46 (IS_PED_MALE)
 ---@param ped number
 ---@return boolean
 function IsPedMale(ped)
-   return Citizen.InvokeNative(0x6D9F5FAA7488BA46,ped)
+    return Citizen.InvokeNative(0x6D9F5FAA7488BA46,ped)
 end
+
 
 
 --- Returns true/false if the ped is/isn't humanoid.
@@ -382,8 +417,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedHuman(ped)
-   return Citizen.InvokeNative(0xB980061DA992779D,ped)
+    return Citizen.InvokeNative(0xB980061DA992779D,ped)
 end
+
 
 
 --- Gets the vehicle the specified Ped is in.
@@ -393,8 +429,9 @@ end
 ---@param lastVehicle boolean
 ---@return vehicle
 function GetVehiclePedIsIn(ped,lastVehicle)
-   return Citizen.InvokeNative(0x9A9112A0FE9A4713,ped,lastVehicle)
+    return Citizen.InvokeNative(0x9A9112A0FE9A4713,ped,lastVehicle)
 end
+
 
 
 --- Resets the value for the last vehicle driven by the Ped.
@@ -405,12 +442,14 @@ function ResetPedLastVehicle(ped)
 end
 
 
+
 --- 
 --- Native 0x313778EDCA9158E2 (_GET_NUM_FREE_SLOTS_IN_PED_POOL)
 ---@return number
 function GetNumFreeSlotsInPedPool()
    return Citizen.InvokeNative(0x313778EDCA9158E2)
 end
+
 
 
 --- 
@@ -421,12 +460,14 @@ function ReserveAmbientPeds(numPeds)
 end
 
 
+
 --- 
 --- Native 0xF008E0BA1FE1D644 (_RESERVE_AMBIENT_PEDS_TOTAL)
 ---@param numPeds number
 function ReserveAmbientPedsTotal(numPeds)
     Citizen.InvokeNative(0xF008E0BA1FE1D644,numPeds)
 end
+
 
 
 --- 
@@ -437,12 +478,14 @@ function UnreserveAmbientPeds(numPeds)
 end
 
 
+
 --- 
 --- Native 0x62DE46F061CAA468 (_GET_NUM_RESERVED_AMBIENT_PEDS_DESIRED)
 ---@return number
 function GetNumReservedAmbientPedsDesired()
    return Citizen.InvokeNative(0x62DE46F061CAA468)
 end
+
 
 
 --- 
@@ -453,12 +496,14 @@ function GetNumReservedAmbientPedsReady()
 end
 
 
+
 --- 
 --- Native 0x5E420FF293EE5472 (_ARE_ALL_AMBIENT_PED_RESERVATIONS_READY)
 ---@return boolean
 function AreAllAmbientPedReservationsReady()
    return Citizen.InvokeNative(0x5E420FF293EE5472)
 end
+
 
 
 --- 
@@ -469,12 +514,14 @@ function SetScenarioPedRangeMultiplierThisFrame(multiplier)
 end
 
 
+
 --- 
 --- Native 0xAB0D553FE20A6E25 (_SET_AMBIENT_PED_DENSITY_MULTIPLIER_THIS_FRAME)
 ---@param multiplier float
 function SetAmbientPedDensityMultiplierThisFrame(multiplier)
     Citizen.InvokeNative(0xAB0D553FE20A6E25,multiplier)
 end
+
 
 
 --- 
@@ -485,12 +532,14 @@ function SetScenarioPedDensityMultiplierThisFrame(multiplier)
 end
 
 
+
 --- 
 --- Native 0xC0258742B034DFAF (_SET_AMBIENT_ANIMAL_DENSITY_MULTIPLIER_THIS_FRAME)
 ---@param multiplier float
 function SetAmbientAnimalDensityMultiplierThisFrame(multiplier)
     Citizen.InvokeNative(0xC0258742B034DFAF,multiplier)
 end
+
 
 
 --- 
@@ -501,6 +550,7 @@ function SetAmbientHumanDensityMultiplierThisFrame(multiplier)
 end
 
 
+
 --- 
 --- Native 0xDB48E99F8E064E56 (_SET_SCENARIO_ANIMAL_DENSITY_MULTIPLIER_THIS_FRAME)
 ---@param multiplier float
@@ -509,12 +559,14 @@ function SetScenarioAnimalDensityMultiplierThisFrame(multiplier)
 end
 
 
+
 --- 
 --- Native 0x28CB6391ACEDD9DB (_SET_SCENARIO_HUMAN_DENSITY_MULTIPLIER_THIS_FRAME)
 ---@param multiplier float
 function SetScenarioHumanDensityMultiplierThisFrame(multiplier)
     Citizen.InvokeNative(0x28CB6391ACEDD9DB,multiplier)
 end
+
 
 
 --- Sets the scenario ped density to the given config.
@@ -535,11 +587,13 @@ function SetScenarioPedDensityThisFrame(configHash)
 end
 
 
+
 --- 
 --- Native 0x4759CC730F947C81 (INSTANTLY_FILL_PED_POPULATION)
 function InstantlyFillPedPopulation()
     Citizen.InvokeNative(0x4759CC730F947C81)
 end
+
 
 
 --- 
@@ -548,6 +602,7 @@ end
 function IsInstantlyFillPedPopulationFinished()
    return Citizen.InvokeNative(0x0EE3F0D7FECCC54F)
 end
+
 
 
 --- The distance between these points, is the diagonal of a box (remember it's 3D).
@@ -563,11 +618,13 @@ function SetPedNonCreationArea(x1,y1,z1,x2,y2,z2)
 end
 
 
+
 --- 
 --- Native 0x2E05208086BA0651 (CLEAR_PED_NON_CREATION_AREA)
 function ClearPedNonCreationArea()
     Citizen.InvokeNative(0x2E05208086BA0651)
 end
+
 
 
 --- 
@@ -587,6 +644,7 @@ function AttachVolumeToEntity(volume,entity,offsetX,offsetY,offsetZ,rotX,rotY,ro
 end
 
 
+
 --- 
 --- Native 0x19C975B81BE53C28 (_DETACH_VOLUME_FROM_ENTITY)
 ---@param volume volume
@@ -594,6 +652,7 @@ end
 function DetachVolumeFromEntity(volume,entity)
     Citizen.InvokeNative(0x19C975B81BE53C28,volume,entity)
 end
+
 
 
 --- 
@@ -607,6 +666,7 @@ function SetPedOntoMount(ped,mount,seatIndex,p3)
 end
 
 
+
 --- 
 --- Native 0x5337B721C51883A9 (_REMOVE_PED_FROM_MOUNT)
 ---@param ped number
@@ -615,6 +675,7 @@ end
 function RemovePedFromMount(ped,p1,p2)
     Citizen.InvokeNative(0x5337B721C51883A9,ped,p1,p2)
 end
+
 
 
 --- 
@@ -628,8 +689,9 @@ end
 ---@param p6 boolean
 ---@return number
 function CreatePedOnMount(mount,modelHash,index,p3,p4,p5,p6)
-   return Citizen.InvokeNative(0xF89AA2BD01FC06B7,mount,modelHash,index,p3,p4,p5,p6)
+    return Citizen.InvokeNative(0xF89AA2BD01FC06B7,mount,modelHash,index,p3,p4,p5,p6)
 end
+
 
 
 --- 
@@ -638,8 +700,9 @@ end
 ---@param seat number
 ---@return boolean
 function IsMountSeatFree(mount,seat)
-   return Citizen.InvokeNative(0xAAB0FE202E9FC9F0,mount,seat)
+    return Citizen.InvokeNative(0xAAB0FE202E9FC9F0,mount,seat)
 end
+
 
 
 --- 
@@ -647,8 +710,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedOnMount(ped)
-   return Citizen.InvokeNative(0x460BC76A0E10655E,ped)
+    return Citizen.InvokeNative(0x460BC76A0E10655E,ped)
 end
+
 
 
 --- 
@@ -657,8 +721,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedFullyOnMount(ped,p1)
-   return Citizen.InvokeNative(0x95CBC65780DE7EB1,ped,p1)
+    return Citizen.InvokeNative(0x95CBC65780DE7EB1,ped,p1)
 end
+
 
 
 --- 
@@ -666,8 +731,9 @@ end
 ---@param ped number
 ---@return number
 function GetMount(ped)
-   return Citizen.InvokeNative(0xE7E11B8DCBED1058,ped)
+    return Citizen.InvokeNative(0xE7E11B8DCBED1058,ped)
 end
+
 
 
 --- Returns last horse the ped was leading
@@ -675,8 +741,9 @@ end
 ---@param ped number
 ---@return number
 function GetLastLedMount(ped)
-   return Citizen.InvokeNative(0x693126B5D0457D0D,ped)
+    return Citizen.InvokeNative(0x693126B5D0457D0D,ped)
 end
+
 
 
 --- 
@@ -684,8 +751,9 @@ end
 ---@param ped number
 ---@return number
 function GetLastMount(ped)
-   return Citizen.InvokeNative(0x4C8B59171957BCF7,ped)
+    return Citizen.InvokeNative(0x4C8B59171957BCF7,ped)
 end
+
 
 
 --- 
@@ -698,13 +766,15 @@ function SetPedOwnsAnimal(ped,animal,p2)
 end
 
 
+
 --- 
 --- Native 0xF103823FFE72BB49 (_GET_ACTIVE_ANIMAL_OWNER)
 ---@param animal number
 ---@return number
 function GetActiveAnimalOwner(animal)
-   return Citizen.InvokeNative(0xF103823FFE72BB49,animal)
+    return Citizen.InvokeNative(0xF103823FFE72BB49,animal)
 end
+
 
 
 --- Used in Script Functions PLAYER_HORSE_RELEASE_HORSE_TO_AMBIENT_WORLD (p1 = true), HORSE_SETUP_PLAYER_HORSE_ATTRIBUTES (p1 = false)
@@ -715,6 +785,7 @@ end
 function ClearActiveAnimalOwner(horse,clear)
     Citizen.InvokeNative(0xBCC76708E5677E1D,horse,clear)
 end
+
 
 
 --- Returns an int based on enum eTamingState
@@ -735,8 +806,9 @@ end
 ---@param horse number
 ---@return number
 function GetHorseTamingState(horse)
-   return Citizen.InvokeNative(0x454AD4DA6C41B5BD,horse)
+    return Citizen.InvokeNative(0x454AD4DA6C41B5BD,horse)
 end
+
 
 
 --- 
@@ -748,6 +820,7 @@ function SetMountBondingLevel(ped,bondingLevel)
 end
 
 
+
 --- Note: this native was added in build 1232.40
 --- Native 0x11E6B9629C46D6EC (_SET_MOUNT_SECURITY_ENABLED)
 ---@param ped number
@@ -757,14 +830,16 @@ function SetMountSecurityEnabled(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xD543D3A8FDE4F185 (IS_ANIMAL_INTERACTION_POSSIBLE)
 ---@param ped number
 ---@param animal number
 ---@return boolean
 function IsAnimalInteractionPossible(ped,animal)
-   return Citizen.InvokeNative(0xD543D3A8FDE4F185,ped,animal)
+    return Citizen.InvokeNative(0xD543D3A8FDE4F185,ped,animal)
 end
+
 
 
 --- 
@@ -772,8 +847,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsAnimalInteractionRunning(ped)
-   return Citizen.InvokeNative(0x7FC84E85D98F063D,ped)
+    return Citizen.InvokeNative(0x7FC84E85D98F063D,ped)
 end
+
 
 
 --- Gets a value indicating whether the specified ped is on top of any vehicle.
@@ -784,8 +860,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedOnVehicle(ped,p1)
-   return Citizen.InvokeNative(0x67722AEB798E5FAB,ped,p1)
+    return Citizen.InvokeNative(0x67722AEB798E5FAB,ped,p1)
 end
+
 
 
 --- 
@@ -794,8 +871,9 @@ end
 ---@param vehicle vehicle
 ---@return boolean
 function IsPedOnSpecificVehicle(ped,vehicle)
-   return Citizen.InvokeNative(0xEC5F66E459AF3BB2,ped,vehicle)
+    return Citizen.InvokeNative(0xEC5F66E459AF3BB2,ped,vehicle)
 end
+
 
 
 --- 
@@ -804,6 +882,7 @@ end
 function WarpPedOutOfVehicle(ped)
     Citizen.InvokeNative(0xE0B61ED8BB37712F,ped)
 end
+
 
 
 --- 
@@ -815,13 +894,15 @@ function SetPedMoney(ped,amount)
 end
 
 
+
 --- 
 --- Native 0x3F69145BBA87BAE7 (GET_PED_MONEY)
 ---@param ped number
 ---@return number
 function GetPedMoney(ped)
-   return Citizen.InvokeNative(0x3F69145BBA87BAE7,ped)
+    return Citizen.InvokeNative(0x3F69145BBA87BAE7,ped)
 end
+
 
 
 --- 
@@ -832,6 +913,7 @@ function SetBlockingOfNonTemporaryEventsForAmbientPedsThisFrame(p0)
 end
 
 
+
 --- Detect if ped is sitting in the specified vehicle
 ---[True/False]
 --- Native 0xA808AA1D79230FC2 (IS_PED_SITTING_IN_VEHICLE)
@@ -839,8 +921,9 @@ end
 ---@param vehicle vehicle
 ---@return boolean
 function IsPedSittingInVehicle(ped,vehicle)
-   return Citizen.InvokeNative(0xA808AA1D79230FC2,ped,vehicle)
+    return Citizen.InvokeNative(0xA808AA1D79230FC2,ped,vehicle)
 end
+
 
 
 --- Detect if ped is in any vehicle
@@ -849,8 +932,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedSittingInAnyVehicle(ped)
-   return Citizen.InvokeNative(0x826AA586EDB9FEF8,ped)
+    return Citizen.InvokeNative(0x826AA586EDB9FEF8,ped)
 end
+
 
 
 --- 
@@ -858,8 +942,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedOnFoot(ped)
-   return Citizen.InvokeNative(0x01FEE67DB37F59B2,ped)
+    return Citizen.InvokeNative(0x01FEE67DB37F59B2,ped)
 end
+
 
 
 --- 
@@ -867,8 +952,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedPlantingBomb(ped)
-   return Citizen.InvokeNative(0xC70B5FAE151982D8,ped)
+    return Citizen.InvokeNative(0xC70B5FAE151982D8,ped)
 end
+
 
 
 --- 
@@ -878,8 +964,9 @@ end
 ---@param p2 float
 ---@return vector3
 function GetDeadPedPickupCoords(ped,p1,p2)
-   return Citizen.InvokeNative(0xCD5003B097200F36,ped,p1,p2)
+    return Citizen.InvokeNative(0xCD5003B097200F36,ped,p1,p2)
 end
+
 
 
 --- 
@@ -887,8 +974,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInAnyBoat(ped)
-   return Citizen.InvokeNative(0x2E0E1C2B4F6CB339,ped)
+    return Citizen.InvokeNative(0x2E0E1C2B4F6CB339,ped)
 end
+
 
 
 --- 
@@ -896,8 +984,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInAnyHeli(ped)
-   return Citizen.InvokeNative(0x298B91AE825E5705,ped)
+    return Citizen.InvokeNative(0x298B91AE825E5705,ped)
 end
+
 
 
 --- 
@@ -905,8 +994,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInAnyPlane(ped)
-   return Citizen.InvokeNative(0x5FFF4CFC74D8FB80,ped)
+    return Citizen.InvokeNative(0x5FFF4CFC74D8FB80,ped)
 end
+
 
 
 --- 
@@ -914,8 +1004,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInFlyingVehicle(ped)
-   return Citizen.InvokeNative(0x9134873537FA419C,ped)
+    return Citizen.InvokeNative(0x9134873537FA419C,ped)
 end
+
 
 
 --- 
@@ -924,8 +1015,9 @@ end
 ---@param outBone int*
 ---@return boolean
 function GetPedLastDamageBone(ped,outBone)
-   return Citizen.InvokeNative(0xD75960F6BD9EA49C,ped,outBone)
+    return Citizen.InvokeNative(0xD75960F6BD9EA49C,ped,outBone)
 end
+
 
 
 --- 
@@ -934,6 +1026,7 @@ end
 function ClearPedLastDamageBone(ped)
     Citizen.InvokeNative(0x8EF6B7AC68E2F01B,ped)
 end
+
 
 
 --- enum ePedDamageCleanliness
@@ -946,8 +1039,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedDamageCleanliness(ped)
-   return Citizen.InvokeNative(0x88EFFED5FE8B0B4A,ped)
+    return Citizen.InvokeNative(0x88EFFED5FE8B0B4A,ped)
 end
+
 
 
 --- damageCleanliness: see _GET_PED_DAMAGE_CLEANLINESS
@@ -959,13 +1053,15 @@ function SetPedDamageCleanliness(ped,damageCleanliness)
 end
 
 
+
 --- Returns true if _GET_PED_DAMAGE_CLEANLINESS was ever lower than 2
 --- Native 0x6CFC373008A1EDAF (_GET_PED_DAMAGED)
 ---@param ped number
 ---@return boolean
 function GetPedDamaged(ped)
-   return Citizen.InvokeNative(0x6CFC373008A1EDAF,ped)
+    return Citizen.InvokeNative(0x6CFC373008A1EDAF,ped)
 end
+
 
 
 --- 
@@ -977,6 +1073,7 @@ function SetPedDamaged(ped,damaged)
 end
 
 
+
 --- Animal Skin Quality Modifier
 ---Params: p2 = 2, p3 = 3 in R* Scripts
 --- Native 0x9EFF3C91DF38304F (_SET_PLAYER_CURRENT_ANIMAL_DAMAGE_MODIFIER)
@@ -986,8 +1083,9 @@ end
 ---@param p3 number
 ---@return any
 function SetPlayerCurrentAnimalDamageModifier(player,modifier,p2,p3)
-   return Citizen.InvokeNative(0x9EFF3C91DF38304F,player,modifier,p2,p3)
+    return Citizen.InvokeNative(0x9EFF3C91DF38304F,player,modifier,p2,p3)
 end
+
 
 
 --- 
@@ -998,13 +1096,15 @@ function UpdateAnimalDamageModifier(player)
 end
 
 
+
 --- Returns animal skin quality modifier
 --- Native 0xEE2D5C819A65BF26 (_GET_PLAYER_CURRENT_ANIMAL_DAMAGE_MODIFIER)
 ---@param player player
 ---@return float
 function GetPlayerCurrentAnimalDamageModifier(player)
-   return Citizen.InvokeNative(0xEE2D5C819A65BF26,player)
+    return Citizen.InvokeNative(0xEE2D5C819A65BF26,player)
 end
+
 
 
 --- Related to dead animals items/loots
@@ -1016,8 +1116,9 @@ end
 ---@param skinningQuality number
 ---@return number
 function ComputeSatchelItemForPedCarcass(outInventoryItemArray,ped,damageCleanliness,skinningQuality)
-   return Citizen.InvokeNative(0x6B89FAA36FC909A3,outInventoryItemArray,ped,damageCleanliness,skinningQuality)
+    return Citizen.InvokeNative(0x6B89FAA36FC909A3,outInventoryItemArray,ped,damageCleanliness,skinningQuality)
 end
+
 
 
 --- 
@@ -1027,8 +1128,9 @@ end
 ---@param damageCleanliness number
 ---@return boolean
 function ComputeSatchelItemForPedDamage(p0,pedAttached,damageCleanliness)
-   return Citizen.InvokeNative(0x9E7738B291706746,p0,pedAttached,damageCleanliness)
+    return Citizen.InvokeNative(0x9E7738B291706746,p0,pedAttached,damageCleanliness)
 end
+
 
 
 --- 
@@ -1039,11 +1141,13 @@ function SetAiWeaponDamageModifier(value)
 end
 
 
+
 --- 
 --- Native 0xEA16670E7BA4743C (RESET_AI_WEAPON_DAMAGE_MODIFIER)
 function ResetAiWeaponDamageModifier()
     Citizen.InvokeNative(0xEA16670E7BA4743C)
 end
+
 
 
 --- _SET_W(EAPON?)*
@@ -1055,13 +1159,15 @@ function SetTotalPedDamageFromAi(ped,totalDamage)
 end
 
 
+
 --- _GET_WA*
 --- Native 0x92C8EACA29F6BED6 (_GET_TOTAL_PED_DAMAGE_FROM_AI)
 ---@param ped number
 ---@return float
 function GetTotalPedDamageFromAi(ped)
-   return Citizen.InvokeNative(0x92C8EACA29F6BED6,ped)
+    return Citizen.InvokeNative(0x92C8EACA29F6BED6,ped)
 end
+
 
 
 --- Old name: _SET_PED_DAMAGE_MODIFIER
@@ -1073,13 +1179,15 @@ function SetPedToPlayerWeaponDamageModifier(ped,damageModifier)
 end
 
 
+
 --- 
 --- Native 0x936E7CAD0AE2EE14 (GET_PED_TO_PLAYER_WEAPON_DAMAGE_MODIFIER)
 ---@param ped number
 ---@return float
 function GetPedToPlayerWeaponDamageModifier(ped)
-   return Citizen.InvokeNative(0x936E7CAD0AE2EE14,ped)
+    return Citizen.InvokeNative(0x936E7CAD0AE2EE14,ped)
 end
+
 
 
 --- 
@@ -1091,12 +1199,14 @@ function SetCurrentDefenseAgainstPlayersModifier(horse,modifier)
 end
 
 
+
 --- 
 --- Native 0x66460DEDDD417254 (SET_AI_MELEE_WEAPON_DAMAGE_MODIFIER)
 ---@param modifier float
 function SetAiMeleeWeaponDamageModifier(modifier)
     Citizen.InvokeNative(0x66460DEDDD417254,modifier)
 end
+
 
 
 --- 
@@ -1108,13 +1218,15 @@ function SetAccuracyAgainstLocalPlayerModifier(ped,modifier)
 end
 
 
+
 --- 
 --- Native 0xDC9273D95976BA22 (_GET_ACCURACY_AGAINST_LOCAL_PLAYER_MODIFIER)
 ---@param ped number
 ---@return float
 function GetAccuracyAgainstLocalPlayerModifier(ped)
-   return Citizen.InvokeNative(0xDC9273D95976BA22,ped)
+    return Citizen.InvokeNative(0xDC9273D95976BA22,ped)
 end
+
 
 
 --- 
@@ -1126,6 +1238,7 @@ function SetPedHeadshotDamageMultiplier(ped,multiplier)
 end
 
 
+
 --- 
 --- Native 0x9B6808EC46BE849B (_SET_DEFENSE_MODIFIER_FOR_PED)
 ---@param ped number
@@ -1133,6 +1246,7 @@ end
 function SetDefenseModifierForPed(ped,modifier)
     Citizen.InvokeNative(0x9B6808EC46BE849B,ped,modifier)
 end
+
 
 
 --- 
@@ -1144,6 +1258,7 @@ function SetMinPedHealthThreshold(ped,healthAmount)
 end
 
 
+
 --- 
 --- Native 0x63F58F7C80513AAD (SET_PED_CAN_BE_TARGETTED)
 ---@param ped number
@@ -1151,6 +1266,7 @@ end
 function SetPedCanBeTargetted(ped,toggle)
     Citizen.InvokeNative(0x63F58F7C80513AAD,ped,toggle)
 end
+
 
 
 --- 
@@ -1163,6 +1279,7 @@ function SetPedCanBeTargettedByTeam(ped,team,toggle)
 end
 
 
+
 --- 
 --- Native 0x66B57B72E0836A76 (SET_PED_CAN_BE_TARGETTED_BY_PLAYER)
 ---@param ped number
@@ -1171,6 +1288,7 @@ end
 function SetPedCanBeTargettedByPlayer(ped,player,toggle)
     Citizen.InvokeNative(0x66B57B72E0836A76,ped,player,toggle)
 end
+
 
 
 --- 
@@ -1184,13 +1302,15 @@ function SetInteractionLockonFlag(ped,player,flag,enable)
 end
 
 
+
 --- 
 --- Native 0xFB92A102F1C4DFA3 (IS_PED_FALLING)
 ---@param ped number
 ---@return boolean
 function IsPedFalling(ped)
-   return Citizen.InvokeNative(0xFB92A102F1C4DFA3,ped)
+    return Citizen.InvokeNative(0xFB92A102F1C4DFA3,ped)
 end
+
 
 
 --- 
@@ -1198,8 +1318,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedSliding(ped)
-   return Citizen.InvokeNative(0xD6740E14E4CEFC0B,ped)
+    return Citizen.InvokeNative(0xD6740E14E4CEFC0B,ped)
 end
+
 
 
 --- 
@@ -1207,8 +1328,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedJumping(ped)
-   return Citizen.InvokeNative(0xCEDABC5900A0BF97,ped)
+    return Citizen.InvokeNative(0xCEDABC5900A0BF97,ped)
 end
+
 
 
 --- 
@@ -1216,8 +1338,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedClimbing(ped)
-   return Citizen.InvokeNative(0x53E8CB4F48BFE623,ped)
+    return Citizen.InvokeNative(0x53E8CB4F48BFE623,ped)
 end
+
 
 
 --- 
@@ -1225,8 +1348,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedClimbingLadder(ped)
-   return Citizen.InvokeNative(0x59643424B68D52B5,ped)
+    return Citizen.InvokeNative(0x59643424B68D52B5,ped)
 end
+
 
 
 --- 
@@ -1234,8 +1358,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedVaulting(ped)
-   return Citizen.InvokeNative(0x117C70D1F5730B5E,ped)
+    return Citizen.InvokeNative(0x117C70D1F5730B5E,ped)
 end
+
 
 
 --- 
@@ -1243,8 +1368,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedDiving(ped)
-   return Citizen.InvokeNative(0x5527B8246FEF9B11,ped)
+    return Citizen.InvokeNative(0x5527B8246FEF9B11,ped)
 end
+
 
 
 --- Returns true if the ped is currently opening a door (CTaskOpenDoor).
@@ -1253,8 +1379,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedOpeningDoor(ped)
-   return Citizen.InvokeNative(0x26AF0E8E30BD2A2C,ped)
+    return Citizen.InvokeNative(0x26AF0E8E30BD2A2C,ped)
 end
+
 
 
 --- 
@@ -1262,8 +1389,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInAnyTaxi(ped)
-   return Citizen.InvokeNative(0x6E575D6A898AB852,ped)
+    return Citizen.InvokeNative(0x6E575D6A898AB852,ped)
 end
+
 
 
 --- 
@@ -1275,13 +1403,15 @@ function SetPedIdRange(ped,value)
 end
 
 
+
 --- 
 --- Native 0x31167ED4324B758D (_GET_PED_ID_RANGE)
 ---@param ped number
 ---@return float
 function GetPedIdRange(ped)
-   return Citizen.InvokeNative(0x31167ED4324B758D,ped)
+    return Citizen.InvokeNative(0x31167ED4324B758D,ped)
 end
+
 
 
 --- 
@@ -1293,6 +1423,7 @@ function SetPedHighlyPerceptive(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xEC4B4B3B9908052A (SET_PED_INJURED_ON_GROUND_BEHAVIOUR)
 ---@param ped number
@@ -1302,12 +1433,14 @@ function SetPedInjuredOnGroundBehaviour(ped,unk)
 end
 
 
+
 --- 
 --- Native 0x733C87D4CE22BEA2 (DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR)
 ---@param ped number
 function DisablePedInjuredOnGroundBehaviour(ped)
     Citizen.InvokeNative(0x733C87D4CE22BEA2,ped)
 end
+
 
 
 --- 
@@ -1319,6 +1452,7 @@ function SetPedAnimalDetectionModifier(ped,modifier)
 end
 
 
+
 --- 
 --- Native 0xF29CF591C4BF6CEE (SET_PED_SEEING_RANGE)
 ---@param ped number
@@ -1326,6 +1460,7 @@ end
 function SetPedSeeingRange(ped,value)
     Citizen.InvokeNative(0xF29CF591C4BF6CEE,ped,value)
 end
+
 
 
 --- 
@@ -1337,6 +1472,7 @@ function SetPedHearingRange(ped,value)
 end
 
 
+
 --- 
 --- Native 0x2DB492222FB21E26 (SET_PED_VISUAL_FIELD_MIN_ANGLE)
 ---@param ped number
@@ -1344,6 +1480,7 @@ end
 function SetPedVisualFieldMinAngle(ped,value)
     Citizen.InvokeNative(0x2DB492222FB21E26,ped,value)
 end
+
 
 
 --- 
@@ -1355,6 +1492,7 @@ function SetPedVisualFieldMaxAngle(ped,value)
 end
 
 
+
 --- 
 --- Native 0x9C74B0BC831B753A (SET_PED_VISUAL_FIELD_PERIPHERAL_RANGE)
 ---@param ped number
@@ -1364,6 +1502,7 @@ function SetPedVisualFieldPeripheralRange(ped,range)
 end
 
 
+
 --- 
 --- Native 0x3B6405E8AB34A907 (SET_PED_VISUAL_FIELD_CENTER_ANGLE)
 ---@param ped number
@@ -1371,6 +1510,7 @@ end
 function SetPedVisualFieldCenterAngle(ped,angle)
     Citizen.InvokeNative(0x3B6405E8AB34A907,ped,angle)
 end
+
 
 
 --- Not implemented.
@@ -1384,13 +1524,15 @@ function SetPedStealthMovement(ped,toggle,p2,p3)
 end
 
 
+
 --- Returns whether the entity is in stealth mode
 --- Native 0x7C2AC9CA66575FBF (GET_PED_STEALTH_MOVEMENT)
 ---@param ped number
 ---@return boolean
 function GetPedStealthMovement(ped)
-   return Citizen.InvokeNative(0x7C2AC9CA66575FBF,ped)
+    return Citizen.InvokeNative(0x7C2AC9CA66575FBF,ped)
 end
+
 
 
 --- 
@@ -1404,13 +1546,15 @@ function SetPedCrouchMovement(ped,state,p2,immediately)
 end
 
 
+
 --- 
 --- Native 0xD5FE956C70FF370B (GET_PED_CROUCH_MOVEMENT)
 ---@param ped number
 ---@return boolean
 function GetPedCrouchMovement(ped)
-   return Citizen.InvokeNative(0xD5FE956C70FF370B,ped)
+    return Citizen.InvokeNative(0xD5FE956C70FF370B,ped)
 end
+
 
 
 --- 
@@ -1418,8 +1562,9 @@ end
 ---@param ped number
 ---@return boolean
 function GetPedIsDoingCombatRoll(ped)
-   return Citizen.InvokeNative(0xC48A9EB0D499B3E5,ped)
+    return Citizen.InvokeNative(0xC48A9EB0D499B3E5,ped)
 end
+
 
 
 --- Creates a new ped group.
@@ -1430,8 +1575,9 @@ end
 ---@param taskAllocator number
 ---@return number
 function CreateGroup(taskAllocator)
-   return Citizen.InvokeNative(0x90370EBE0FEE1A3D,taskAllocator)
+    return Citizen.InvokeNative(0x90370EBE0FEE1A3D,taskAllocator)
 end
+
 
 
 --- 
@@ -1444,6 +1590,7 @@ function SetPedAsGroupLeader(ped,groupId,p2)
 end
 
 
+
 --- 
 --- Native 0x9F3480FE65DB31B5 (SET_PED_AS_GROUP_MEMBER)
 ---@param ped number
@@ -1451,6 +1598,7 @@ end
 function SetPedAsGroupMember(ped,groupId)
     Citizen.InvokeNative(0x9F3480FE65DB31B5,ped,groupId)
 end
+
 
 
 --- This only will teleport the ped to the group leader if the group leader teleports (sets coords).
@@ -1464,12 +1612,14 @@ function SetPedCanTeleportToGroupLeader(pedHandle,groupId,toggle)
 end
 
 
+
 --- 
 --- Native 0x8EB2F69076AF7053 (REMOVE_GROUP)
 ---@param groupId number
 function RemoveGroup(groupId)
     Citizen.InvokeNative(0x8EB2F69076AF7053,groupId)
 end
+
 
 
 --- 
@@ -1480,6 +1630,7 @@ function RemovePedFromGroup(ped)
 end
 
 
+
 --- 
 --- Native 0x9BB01E3834671191 (IS_PED_GROUP_MEMBER)
 ---@param ped number
@@ -1487,8 +1638,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function IsPedGroupMember(ped,groupId,p2)
-   return Citizen.InvokeNative(0x9BB01E3834671191,ped,groupId,p2)
+    return Citizen.InvokeNative(0x9BB01E3834671191,ped,groupId,p2)
 end
+
 
 
 --- 
@@ -1497,8 +1649,9 @@ end
 ---@param groupId number
 ---@return boolean
 function IsPedGroupLeader(ped,groupId)
-   return Citizen.InvokeNative(0x878B68960C1C2A35,ped,groupId)
+    return Citizen.InvokeNative(0x878B68960C1C2A35,ped,groupId)
 end
+
 
 
 --- 
@@ -1506,8 +1659,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedHangingOnToVehicle(ped)
-   return Citizen.InvokeNative(0x1C86D8AEF8254B78,ped)
+    return Citizen.InvokeNative(0x1C86D8AEF8254B78,ped)
 end
+
 
 
 --- Sets the range at which members will automatically leave the group.
@@ -1519,13 +1673,15 @@ function SetGroupSeparationRange(groupId,separationRange)
 end
 
 
+
 --- 
 --- Native 0xD6A86331A537A7B9 (IS_PED_PRONE)
 ---@param ped number
 ---@return boolean
 function IsPedProne(ped)
-   return Citizen.InvokeNative(0xD6A86331A537A7B9,ped)
+    return Citizen.InvokeNative(0xD6A86331A537A7B9,ped)
 end
+
 
 
 --- _IS_PED_IN*
@@ -1533,8 +1689,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInvestigating(ped)
-   return Citizen.InvokeNative(0x7583A9D35248B83F,ped)
+    return Citizen.InvokeNative(0x7583A9D35248B83F,ped)
 end
+
 
 
 --- 
@@ -1543,8 +1700,9 @@ end
 ---@param target number
 ---@return boolean
 function IsPedInCombat(ped,target)
-   return Citizen.InvokeNative(0x4859F1FC66A6278E,ped,target)
+    return Citizen.InvokeNative(0x4859F1FC66A6278E,ped,target)
 end
+
 
 
 --- 
@@ -1553,8 +1711,9 @@ end
 ---@param target number
 ---@return boolean
 function CanPedInCombatSeeTarget(ped,target)
-   return Citizen.InvokeNative(0xEAD42DE3610D0721,ped,target)
+    return Citizen.InvokeNative(0xEAD42DE3610D0721,ped,target)
 end
+
 
 
 --- 
@@ -1562,8 +1721,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedJacking(ped)
-   return Citizen.InvokeNative(0x4AE4FF911DFB61DA,ped)
+    return Citizen.InvokeNative(0x4AE4FF911DFB61DA,ped)
 end
+
 
 
 --- 
@@ -1571,8 +1731,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedBeingJacked(ped)
-   return Citizen.InvokeNative(0x9A497FE2DF198913,ped)
+    return Citizen.InvokeNative(0x9A497FE2DF198913,ped)
 end
+
 
 
 --- 
@@ -1581,8 +1742,9 @@ end
 ---@param weaponType hash
 ---@return boolean
 function IsPedBeingStunned(ped,weaponType)
-   return Citizen.InvokeNative(0x4FBACCE3B4138EE8,ped,weaponType)
+    return Citizen.InvokeNative(0x4FBACCE3B4138EE8,ped,weaponType)
 end
+
 
 
 --- 
@@ -1590,8 +1752,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedsJacker(ped)
-   return Citizen.InvokeNative(0x9B128DC36C1E04CF,ped)
+    return Citizen.InvokeNative(0x9B128DC36C1E04CF,ped)
 end
+
 
 
 --- 
@@ -1599,8 +1762,9 @@ end
 ---@param ped number
 ---@return number
 function GetJackTarget(ped)
-   return Citizen.InvokeNative(0x5486A79D9FBD342D,ped)
+    return Citizen.InvokeNative(0x5486A79D9FBD342D,ped)
 end
+
 
 
 --- 
@@ -1608,8 +1772,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedFleeing(ped)
-   return Citizen.InvokeNative(0xBBCCE00B381F8482,ped)
+    return Citizen.InvokeNative(0xBBCCE00B381F8482,ped)
 end
+
 
 
 --- 
@@ -1619,8 +1784,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function IsPedInCover(ped,p1,p2)
-   return Citizen.InvokeNative(0x60DFD0691A170B88,ped,p1,p2)
+    return Citizen.InvokeNative(0x60DFD0691A170B88,ped,p1,p2)
 end
+
 
 
 --- 
@@ -1628,8 +1794,9 @@ end
 ---@param ped number
 ---@return boolean
 function PedWasKilledByHeadshot(ped)
-   return Citizen.InvokeNative(0x06FA94C835787C64,ped)
+    return Citizen.InvokeNative(0x06FA94C835787C64,ped)
 end
+
 
 
 --- 
@@ -1637,8 +1804,9 @@ end
 ---@param ped number
 ---@return boolean
 function PedDuelingDidPlayerHeadshotOpponent(ped)
-   return Citizen.InvokeNative(0xBD6B242B8BD5543A,ped)
+    return Citizen.InvokeNative(0xBD6B242B8BD5543A,ped)
 end
+
 
 
 --- 
@@ -1646,8 +1814,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInCoverFacingLeft(ped)
-   return Citizen.InvokeNative(0x845333B3150583AB,ped)
+    return Citizen.InvokeNative(0x845333B3150583AB,ped)
 end
+
 
 
 --- 
@@ -1655,8 +1824,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedGoingIntoCover(ped)
-   return Citizen.InvokeNative(0x9F65DBC537E59AD5,ped)
+    return Citizen.InvokeNative(0x9F65DBC537E59AD5,ped)
 end
+
 
 
 --- 
@@ -1664,8 +1834,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedRespondingToThreat(ped)
-   return Citizen.InvokeNative(0x77525BBF433F2CD6,ped)
+    return Citizen.InvokeNative(0x77525BBF433F2CD6,ped)
 end
+
 
 
 --- Returns kneeling, sitting, squating, and sleeping scenario hashes
@@ -1673,8 +1844,9 @@ end
 ---@param ped number
 ---@return hash
 function GetActiveDynamicScenario2(ped)
-   return Citizen.InvokeNative(0xC22AA08A8ADB87D4,ped)
+    return Citizen.InvokeNative(0xC22AA08A8ADB87D4,ped)
 end
+
 
 
 --- Returns kneeling, sitting, squating, and sleeping scenario hashes
@@ -1682,8 +1854,9 @@ end
 ---@param ped number
 ---@return hash
 function GetActiveDynamicScenario(ped)
-   return Citizen.InvokeNative(0x569F1E1237508DEB,ped)
+    return Citizen.InvokeNative(0x569F1E1237508DEB,ped)
 end
+
 
 
 --- 
@@ -1696,8 +1869,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function GivePedScenarioProp(ped,object,conditionalAnim,p3,p4,p5)
-   return Citizen.InvokeNative(0x3BBDD6143FF16F98,ped,object,conditionalAnim,p3,p4,p5)
+    return Citizen.InvokeNative(0x3BBDD6143FF16F98,ped,object,conditionalAnim,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1710,8 +1884,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function GivePedHashScenarioProp(ped,object,conditionalAnim,scenarioType,p4,p5)
-   return Citizen.InvokeNative(0x2B02DB082258625F,ped,object,conditionalAnim,scenarioType,p4,p5)
+    return Citizen.InvokeNative(0x2B02DB082258625F,ped,object,conditionalAnim,scenarioType,p4,p5)
 end
+
 
 
 --- Only used in SP R* Script rcm_jack2
@@ -1723,8 +1898,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function GivePedScenarioPropDynamic(ped,object,p2,p3,p4)
-   return Citizen.InvokeNative(0xA0774E388CE4A679,ped,object,p2,p3,p4)
+    return Citizen.InvokeNative(0xA0774E388CE4A679,ped,object,p2,p3,p4)
 end
+
 
 
 --- 
@@ -1737,8 +1913,9 @@ end
 ---@param p5 boolean
 ---@return any
 function RequestPropScenarioPed(ped,object,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0xBEC65C6049B3219D,ped,object,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0xBEC65C6049B3219D,ped,object,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -1751,8 +1928,9 @@ end
 ---@param p5 boolean
 ---@return any
 function RequestPedForScenarioType(ped,object,p2,scenarioType,p4,p5)
-   return Citizen.InvokeNative(0xBDED916A9F9B0604,ped,object,p2,scenarioType,p4,p5)
+    return Citizen.InvokeNative(0xBDED916A9F9B0604,ped,object,p2,scenarioType,p4,p5)
 end
+
 
 
 --- Gets a registered/attached prop entity for a particular ped. Second parameter will detach the prop entity from the ped if true. Props primarily appear to come from scenarios, such as a broom or hay bale.
@@ -1763,8 +1941,9 @@ end
 ---@param detachProp boolean
 ---@return entity
 function GetPedRegisterProp(ped,propName,detachProp)
-   return Citizen.InvokeNative(0x4D0D2E3D8BC000EB,ped,propName,detachProp)
+    return Citizen.InvokeNative(0x4D0D2E3D8BC000EB,ped,propName,detachProp)
 end
+
 
 
 --- 
@@ -1772,8 +1951,9 @@ end
 ---@param ped number
 ---@return number
 function GetSeatPedIsTryingToEnter(ped)
-   return Citizen.InvokeNative(0x6F4C85ACD641BCD2,ped)
+    return Citizen.InvokeNative(0x6F4C85ACD641BCD2,ped)
 end
+
 
 
 --- Returns the entity that killed the ped
@@ -1782,8 +1962,9 @@ end
 ---@param ped number
 ---@return entity
 function GetPedSourceOfDeath(ped)
-   return Citizen.InvokeNative(0x93C8B64DEB84728C,ped)
+    return Citizen.InvokeNative(0x93C8B64DEB84728C,ped)
 end
+
 
 
 --- Returns the hash of the weapon/model/object that killed the ped.
@@ -1791,8 +1972,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedCauseOfDeath(ped)
-   return Citizen.InvokeNative(0x16FFE42AB2D2DC59,ped)
+    return Citizen.InvokeNative(0x16FFE42AB2D2DC59,ped)
 end
+
 
 
 --- 
@@ -1800,8 +1982,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedTimeOfDeath(ped)
-   return Citizen.InvokeNative(0x1E98817B311AE98A,ped)
+    return Citizen.InvokeNative(0x1E98817B311AE98A,ped)
 end
+
 
 
 --- 
@@ -1810,8 +1993,9 @@ end
 ---@param flag number
 ---@return number
 function CountPedsInCombatWithTarget(ped,flag)
-   return Citizen.InvokeNative(0x5407B7288D0478B7,ped,flag)
+    return Citizen.InvokeNative(0x5407B7288D0478B7,ped,flag)
 end
+
 
 
 --- 
@@ -1821,8 +2005,9 @@ end
 ---@param flag number
 ---@return number
 function GetPedsInCombatWithTarget(ped,itemset,flag)
-   return Citizen.InvokeNative(0x7BE607DAFF382FD2,ped,itemset,flag)
+    return Citizen.InvokeNative(0x7BE607DAFF382FD2,ped,itemset,flag)
 end
+
 
 
 --- 
@@ -1835,8 +2020,9 @@ end
 ---@param flag number
 ---@return number
 function CountPedsInCombatWithTargetWithinRadius(ped,x,y,z,radius,flag)
-   return Citizen.InvokeNative(0x336B3D200AB007CB,ped,x,y,z,radius,flag)
+    return Citizen.InvokeNative(0x336B3D200AB007CB,ped,x,y,z,radius,flag)
 end
+
 
 
 --- 
@@ -1844,8 +2030,9 @@ end
 ---@param ped number
 ---@return entity
 function GetCurrentTargetForPed(ped)
-   return Citizen.InvokeNative(0xCD66FEA29400A0B5,ped)
+    return Citizen.InvokeNative(0xCD66FEA29400A0B5,ped)
 end
+
 
 
 --- 
@@ -1857,13 +2044,15 @@ function SetPedRelationshipGroupDefaultHash(ped,hash)
 end
 
 
+
 --- 
 --- Native 0x3CC4A718C258BDD0 (_GET_DEFAULT_RELATIONSHIP_GROUP_HASH)
 ---@param modelHash hash
 ---@return hash
 function GetDefaultRelationshipGroupHash(modelHash)
-   return Citizen.InvokeNative(0x3CC4A718C258BDD0,modelHash)
+    return Citizen.InvokeNative(0x3CC4A718C258BDD0,modelHash)
 end
+
 
 
 --- 
@@ -1873,6 +2062,7 @@ end
 function SetPedRelationshipGroupHash(ped,relationshipGroup)
     Citizen.InvokeNative(0xC80A74AC829DDD92,ped,relationshipGroup)
 end
+
 
 
 --- 
@@ -1885,6 +2075,7 @@ function SetRelationshipBetweenGroups(relationship,group1,group2)
 end
 
 
+
 --- 
 --- Native 0x5E29243FB56FC6D4 (CLEAR_RELATIONSHIP_BETWEEN_GROUPS)
 ---@param relationship number
@@ -1895,14 +2086,16 @@ function ClearRelationshipBetweenGroups(relationship,group1,group2)
 end
 
 
+
 --- The hash of the created relationship group is output in the second parameter.
 --- Native 0xF372BC22FCB88606 (ADD_RELATIONSHIP_GROUP)
 ---@param name string
 ---@param groupHash hash*
 ---@return boolean
 function AddRelationshipGroup(name,groupHash)
-   return Citizen.InvokeNative(0xF372BC22FCB88606,name,groupHash)
+    return Citizen.InvokeNative(0xF372BC22FCB88606,name,groupHash)
 end
+
 
 
 --- 
@@ -1913,14 +2106,16 @@ function RemoveRelationshipGroup(groupHash)
 end
 
 
+
 --- 
 --- Native 0xEBA5AD3A0EAF7121 (GET_RELATIONSHIP_BETWEEN_PEDS)
 ---@param ped1 number
 ---@param ped2 number
 ---@return number
 function GetRelationshipBetweenPeds(ped1,ped2)
-   return Citizen.InvokeNative(0xEBA5AD3A0EAF7121,ped1,ped2)
+    return Citizen.InvokeNative(0xEBA5AD3A0EAF7121,ped1,ped2)
 end
+
 
 
 --- 
@@ -1928,8 +2123,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedRelationshipGroupDefaultHash(ped)
-   return Citizen.InvokeNative(0x42FDD0F017B1E38E,ped)
+    return Citizen.InvokeNative(0x42FDD0F017B1E38E,ped)
 end
+
 
 
 --- 
@@ -1937,8 +2133,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedRelationshipGroupHash(ped)
-   return Citizen.InvokeNative(0x7DBDD04862D95F04,ped)
+    return Citizen.InvokeNative(0x7DBDD04862D95F04,ped)
 end
+
 
 
 --- 
@@ -1947,8 +2144,9 @@ end
 ---@param group2 hash
 ---@return number
 function GetRelationshipBetweenGroups(group1,group2)
-   return Citizen.InvokeNative(0x9E6B70061662AE5C,group1,group2)
+    return Citizen.InvokeNative(0x9E6B70061662AE5C,group1,group2)
 end
+
 
 
 --- 
@@ -1961,14 +2159,16 @@ function SetPedToInformRespectedFriends(ped,radius,maxFriends)
 end
 
 
+
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
 --- Native 0x625B774D75C87068 (IS_PED_RESPONDING_TO_EVENT)
 ---@param ped number
 ---@param eventType hash
 ---@return boolean
 function IsPedRespondingToEvent(ped,eventType)
-   return Citizen.InvokeNative(0x625B774D75C87068,ped,eventType)
+    return Citizen.InvokeNative(0x625B774D75C87068,ped,eventType)
 end
+
 
 
 --- Used in various R* MP & SP Scripts
@@ -1980,6 +2180,7 @@ function SetPedFiringPattern(ped,patternHash)
 end
 
 
+
 --- Used in R* MP Script fm_mission_controller and various R* SP Scripts for ambush*
 --- Native 0x20E54854DEF6A54A (_SET_PED_FIRING_PATTERN_2)
 ---@param ped number
@@ -1987,6 +2188,7 @@ end
 function SetPedFiringPattern2(ped,patternHash)
     Citizen.InvokeNative(0x20E54854DEF6A54A,ped,patternHash)
 end
+
 
 
 --- Only used in R* MP Script fm_mission_controller
@@ -1998,6 +2200,7 @@ function SetPedFiringPattern3(ped,patternHash)
 end
 
 
+
 --- Params: shootRate = 0 - 1000
 --- Native 0x614DA022990752DC (SET_PED_SHOOT_RATE)
 ---@param ped number
@@ -2005,6 +2208,7 @@ end
 function SetPedShootRate(ped,shootRate)
     Citizen.InvokeNative(0x614DA022990752DC,ped,shootRate)
 end
+
 
 
 --- combatType can be between 0-14. See GET_COMBAT_FLOAT below for a list of possible parameters.
@@ -2018,14 +2222,16 @@ function SetCombatFloat(ped,combatType,newValue)
 end
 
 
+
 --- 
 --- Native 0x52DFF8A10508090A (GET_COMBAT_FLOAT)
 ---@param ped number
 ---@param combatType number
 ---@return float
 function GetCombatFloat(ped,combatType)
-   return Citizen.InvokeNative(0x52DFF8A10508090A,ped,combatType)
+    return Citizen.InvokeNative(0x52DFF8A10508090A,ped,combatType)
 end
+
 
 
 --- 
@@ -2038,13 +2244,15 @@ function GetGroupSize(groupId,hasLeader,numberOfFollowers)
 end
 
 
+
 --- 
 --- Native 0x7C6B0C22F9F40BBE (DOES_GROUP_EXIST)
 ---@param groupId number
 ---@return boolean
 function DoesGroupExist(groupId)
-   return Citizen.InvokeNative(0x7C6B0C22F9F40BBE,groupId)
+    return Citizen.InvokeNative(0x7C6B0C22F9F40BBE,groupId)
 end
+
 
 
 --- 
@@ -2052,8 +2260,9 @@ end
 ---@param groupId number
 ---@return boolean
 function IsGroupLocallyControlled(groupId)
-   return Citizen.InvokeNative(0x909AD9E9A92A10DF,groupId)
+    return Citizen.InvokeNative(0x909AD9E9A92A10DF,groupId)
 end
+
 
 
 --- Returns the groupId of which the specified ped is a member of.
@@ -2061,8 +2270,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedGroupIndex(ped)
-   return Citizen.InvokeNative(0xF162E133B4E7A675,ped)
+    return Citizen.InvokeNative(0xF162E133B4E7A675,ped)
 end
+
 
 
 --- 
@@ -2070,8 +2280,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedInGroup(ped)
-   return Citizen.InvokeNative(0x5891CAC5D4ACFF74,ped)
+    return Citizen.InvokeNative(0x5891CAC5D4ACFF74,ped)
 end
+
 
 
 --- _IS_PED_L* - _IS_PED_M*
@@ -2079,8 +2290,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedLeadingAnyGroup(ped)
-   return Citizen.InvokeNative(0x917760CFE7A0E0F1,ped)
+    return Citizen.InvokeNative(0x917760CFE7A0E0F1,ped)
 end
+
 
 
 --- 
@@ -2088,8 +2300,9 @@ end
 ---@param ped number
 ---@return player
 function GetPlayerPedIsFollowing(ped)
-   return Citizen.InvokeNative(0x6A3975DEA89F9A17,ped)
+    return Citizen.InvokeNative(0x6A3975DEA89F9A17,ped)
 end
+
 
 
 --- eFormationType
@@ -2105,13 +2318,15 @@ function SetGroupFormation(groupId,formationType)
 end
 
 
+
 --- 
 --- Native 0x13A1B061007C906B (_GET_GROUP_FORMATION)
 ---@param groupId number
 ---@return number
 function GetGroupFormation(groupId)
-   return Citizen.InvokeNative(0x13A1B061007C906B,groupId)
+    return Citizen.InvokeNative(0x13A1B061007C906B,groupId)
 end
+
 
 
 --- 
@@ -2125,12 +2340,14 @@ function SetGroupFormationSpacing(groupId,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x63DAB4CCB3273205 (RESET_GROUP_FORMATION_DEFAULT_SPACING)
 ---@param groupId number
 function ResetGroupFormationDefaultSpacing(groupId)
     Citizen.InvokeNative(0x63DAB4CCB3273205,groupId)
 end
+
 
 
 --- 
@@ -2145,6 +2362,7 @@ function AddCustomFormationLocation(groupId,x,y,z,position)
 end
 
 
+
 --- 
 --- Native 0xB05945C1E9E60D91 (ADD_FORMATION_LOCATION)
 ---@param groupId number
@@ -2153,8 +2371,9 @@ end
 ---@param p3 float
 ---@return boolean
 function AddFormationLocation(groupId,p1,p2,p3)
-   return Citizen.InvokeNative(0xB05945C1E9E60D91,groupId,p1,p2,p3)
+    return Citizen.InvokeNative(0xB05945C1E9E60D91,groupId,p1,p2,p3)
 end
+
 
 
 --- 
@@ -2163,8 +2382,9 @@ end
 ---@param radius float
 ---@return boolean
 function SetFormationPositionsTargetRadius(groupId,radius)
-   return Citizen.InvokeNative(0x7CC7D3B7AF7FB71F,groupId,radius)
+    return Citizen.InvokeNative(0x7CC7D3B7AF7FB71F,groupId,radius)
 end
+
 
 
 --- 
@@ -2174,6 +2394,7 @@ end
 function SetFormationAutoAssignPosition(groupId,toggle)
     Citizen.InvokeNative(0x478F6B9920446CE2,groupId,toggle)
 end
+
 
 
 --- 
@@ -2186,13 +2407,15 @@ function SetPedFormationPosition(ped,position,toggle)
 end
 
 
+
 --- 
 --- Native 0x6094AD011A2EA87D (GET_VEHICLE_PED_IS_USING)
 ---@param ped number
 ---@return vehicle
 function GetVehiclePedIsUsing(ped)
-   return Citizen.InvokeNative(0x6094AD011A2EA87D,ped)
+    return Citizen.InvokeNative(0x6094AD011A2EA87D,ped)
 end
+
 
 
 --- 
@@ -2200,8 +2423,9 @@ end
 ---@param ped number
 ---@return vehicle
 function GetVehiclePedIsEntering(ped)
-   return Citizen.InvokeNative(0xF92691AED837A5FC,ped)
+    return Citizen.InvokeNative(0xF92691AED837A5FC,ped)
 end
+
 
 
 --- 
@@ -2209,8 +2433,9 @@ end
 ---@param horse number
 ---@return vehicle
 function GetVehicleDraftHorseIsAttachedTo(horse)
-   return Citizen.InvokeNative(0xE4770DA1B8FF4FD1,horse)
+    return Citizen.InvokeNative(0xE4770DA1B8FF4FD1,horse)
 end
+
 
 
 --- 
@@ -2218,8 +2443,9 @@ end
 ---@param horse number
 ---@return vehicle
 function GetLastVehicleDraftHorseWasAttachedTo(horse)
-   return Citizen.InvokeNative(0x5064DB5083C29921,horse)
+    return Citizen.InvokeNative(0x5064DB5083C29921,horse)
 end
+
 
 
 --- 
@@ -2227,8 +2453,9 @@ end
 ---@param ped number
 ---@return number
 function GetSeatPedIsUsing(ped)
-   return Citizen.InvokeNative(0x4E76CB57222A00E5,ped)
+    return Citizen.InvokeNative(0x4E76CB57222A00E5,ped)
 end
+
 
 
 --- 
@@ -2236,8 +2463,9 @@ end
 ---@param ped number
 ---@return entity
 function GetTransportPedIsSeatedOn(ped)
-   return Citizen.InvokeNative(0x849BD6C6314793D0,ped)
+    return Citizen.InvokeNative(0x849BD6C6314793D0,ped)
 end
+
 
 
 --- 
@@ -2245,8 +2473,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedEnteringAnyTransport(ped)
-   return Citizen.InvokeNative(0x1D46B417F926D34D,ped)
+    return Citizen.InvokeNative(0x1D46B417F926D34D,ped)
 end
+
 
 
 --- 
@@ -2256,6 +2485,7 @@ end
 function SetPedGravity(ped,toggle)
     Citizen.InvokeNative(0x9FF447B6B6AD960A,ped,toggle)
 end
+
 
 
 --- Only used in R* Script beat_sharp_shooter
@@ -2268,6 +2498,7 @@ function SetPedImmersionFlag(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x8B3CB08158E98481 (_FAKE_SET_PED_LOCO_INJURED)
 ---@param ped number
@@ -2275,6 +2506,7 @@ end
 function FakeSetPedLocoInjured(ped,enabled)
     Citizen.InvokeNative(0x8B3CB08158E98481,ped,enabled)
 end
+
 
 
 --- 
@@ -2285,6 +2517,7 @@ end
 function ForcePedDeath(ped,pedKiller,weapon)
     Citizen.InvokeNative(0x1CE875505D45338A,ped,pedKiller,weapon)
 end
+
 
 
 --- damages a ped with the given amount
@@ -2299,13 +2532,15 @@ function ApplyDamageToPed(ped,damageAmount,damageArmour,boneId,pedKiller)
 end
 
 
+
 --- 
 --- Native 0xFF059E1E4C01E63C (GET_PED_TYPE)
 ---@param ped number
 ---@return number
 function GetPedType(ped)
-   return Citizen.InvokeNative(0xFF059E1E4C01E63C,ped)
+    return Citizen.InvokeNative(0xFF059E1E4C01E63C,ped)
 end
+
 
 
 --- Turns the desired ped into a cop. If you use this on the player ped, you will become almost invisible to cops dispatched for you. You will also report your own crimes, get a generic cop voice, get a cop-vision-cone on the radar, and you will be unable to shoot at other cops. Toggling ped as "false" has no effect; you must change p0's ped model to disable the effect.
@@ -2318,6 +2553,7 @@ function SetPedAsCop(ped,toggle)
 end
 
 
+
 --- personality (script_mp_rel): NONE, AGGRESSIVE, TIMID (non-aggressive), CRIPPS, SCRIPTEDINTIMIDATION, MAGGIE, MARCEL, SCRIPTEDSALOON
 ---personality (script_rel): AVOID, SCRIPTEDOUTLAW, TIMIDGUARDDOG, SCRIPTEDTIMIDROB, AGGRESSIVECAMPER, LAZYDOG, KIERANTIEDUP, SCRIPTEDGALA
 --- Native 0x24C82EF607105FAA (_SET_PED_INTERACTION_PERSONALITY)
@@ -2328,13 +2564,15 @@ function SetPedInteractionPersonality(ped,personality)
 end
 
 
+
 --- 
 --- Native 0xD7AD3C7EBAF88C92 (_GET_PED_INTERACTION_PERSONALITY)
 ---@param ped number
 ---@return hash
 function GetPedInteractionPersonality(ped)
-   return Citizen.InvokeNative(0xD7AD3C7EBAF88C92,ped)
+    return Citizen.InvokeNative(0xD7AD3C7EBAF88C92,ped)
 end
+
 
 
 --- Hashes: STANDARD_PED_AGRO_GUARD, BOUNTY_HUNTER, PLAYER_HORSE, LAW_POLICE, GUARD_DOG, ATTACK_DOG
@@ -2347,14 +2585,16 @@ function SetPedPersonality(ped,personality)
 end
 
 
+
 --- Returns true if ped is in a dispute another ped (pedInDisputeWith can also be 0)
 --- Native 0x331550B212014B92 (_GET_IS_PED_IN_DISPUTE_WITH_PED)
 ---@param ped number
 ---@param pedInDisputeWith number
 ---@return boolean
 function GetIsPedInDisputeWithPed(ped,pedInDisputeWith)
-   return Citizen.InvokeNative(0x331550B212014B92,ped,pedInDisputeWith)
+    return Citizen.InvokeNative(0x331550B212014B92,ped,pedInDisputeWith)
 end
+
 
 
 --- 
@@ -2366,6 +2606,7 @@ function SetPedInteractionPositiveResponse(ped,speech)
 end
 
 
+
 --- 
 --- Native 0xA3C53CDE922BC78B (_SET_PED_INTERACTION_NEGATIVE_RESPONSE)
 ---@param ped number
@@ -2375,14 +2616,16 @@ function SetPedInteractionNegativeResponse(ped,speech)
 end
 
 
+
 --- 
 --- Native 0x9337183FDA2E9035 (GET_IS_PED_RESPONDING_TO_POSITIVE_INTERACTION)
 ---@param ped number
 ---@param player player
 ---@return boolean
 function GetIsPedRespondingToPositiveInteraction(ped,player)
-   return Citizen.InvokeNative(0x9337183FDA2E9035,ped,player)
+    return Citizen.InvokeNative(0x9337183FDA2E9035,ped,player)
 end
+
 
 
 --- 
@@ -2391,8 +2634,9 @@ end
 ---@param player player
 ---@return boolean
 function GetIsPedRespondingToNegativeInteraction(ped,player)
-   return Citizen.InvokeNative(0xA454D234E45BB6E5,ped,player)
+    return Citizen.InvokeNative(0xA454D234E45BB6E5,ped,player)
 end
+
 
 
 --- If p2 is false, then this native will return true until the interaction is complete. If true, the native will return true until player pockets robbery item.
@@ -2403,8 +2647,9 @@ end
 ---@param trueUntilPlayerPocketsItem boolean
 ---@return boolean
 function GetIsPedBeingRobbed(ped,player,trueUntilPlayerPocketsItem)
-   return Citizen.InvokeNative(0xE33F98BD76490ABC,ped,player,trueUntilPlayerPocketsItem)
+    return Citizen.InvokeNative(0xE33F98BD76490ABC,ped,player,trueUntilPlayerPocketsItem)
 end
+
 
 
 --- Sets the maximum health of a ped.
@@ -2416,13 +2661,15 @@ function SetPedMaxHealth(ped,value)
 end
 
 
+
 --- 
 --- Native 0x4700A416E8324EF3 (GET_PED_MAX_HEALTH)
 ---@param ped number
 ---@return number
 function GetPedMaxHealth(ped)
-   return Citizen.InvokeNative(0x4700A416E8324EF3,ped)
+    return Citizen.InvokeNative(0x4700A416E8324EF3,ped)
 end
+
 
 
 --- configHash: see pedhealth.meta
@@ -2434,12 +2681,14 @@ function SetPedHealthConfig(ped,configHash)
 end
 
 
+
 --- 
 --- Native 0x7DD7FB3480D8083E (INIT_PED_DEFAULT_HEALTH)
 ---@param ped number
 function InitPedDefaultHealth(ped)
     Citizen.InvokeNative(0x7DD7FB3480D8083E,ped)
 end
+
 
 
 --- 
@@ -2451,6 +2700,7 @@ function SetPedMaxTimeInWater(ped,value)
 end
 
 
+
 --- 
 --- Native 0x6BA428C528D9E522 (SET_PED_MAX_TIME_UNDERWATER)
 ---@param ped number
@@ -2458,6 +2708,7 @@ end
 function SetPedMaxTimeUnderwater(ped,value)
     Citizen.InvokeNative(0x6BA428C528D9E522,ped,value)
 end
+
 
 
 --- state:
@@ -2476,13 +2727,15 @@ function SetPedCanBeKnockedOffVehicle(ped,state)
 end
 
 
+
 --- 
 --- Native 0x51AC07A44D4F5B8A (CAN_KNOCK_PED_OFF_VEHICLE)
 ---@param ped number
 ---@return boolean
 function CanKnockPedOffVehicle(ped)
-   return Citizen.InvokeNative(0x51AC07A44D4F5B8A,ped)
+    return Citizen.InvokeNative(0x51AC07A44D4F5B8A,ped)
 end
+
 
 
 --- 
@@ -2493,14 +2746,16 @@ function KnockPedOffVehicle(ped)
 end
 
 
+
 --- 
 --- Native 0x51455483CF23ED97 (GET_PED_AS_GROUP_MEMBER)
 ---@param groupID number
 ---@param memberNumber number
 ---@return number
 function GetPedAsGroupMember(groupID,memberNumber)
-   return Citizen.InvokeNative(0x51455483CF23ED97,groupID,memberNumber)
+    return Citizen.InvokeNative(0x51455483CF23ED97,groupID,memberNumber)
 end
+
 
 
 --- 
@@ -2508,8 +2763,9 @@ end
 ---@param groupID number
 ---@return number
 function GetPedAsGroupLeader(groupID)
-   return Citizen.InvokeNative(0x5CCE68DBD5FE93EC,groupID)
+    return Citizen.InvokeNative(0x5CCE68DBD5FE93EC,groupID)
 end
+
 
 
 --- 
@@ -2521,13 +2777,15 @@ function SetPedKeepTask(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x9DE327631295B4C2 (IS_PED_SWIMMING)
 ---@param ped number
 ---@return boolean
 function IsPedSwimming(ped)
-   return Citizen.InvokeNative(0x9DE327631295B4C2,ped)
+    return Citizen.InvokeNative(0x9DE327631295B4C2,ped)
 end
+
 
 
 --- 
@@ -2535,8 +2793,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedSwimmingUnderWater(ped)
-   return Citizen.InvokeNative(0xC024869A53992F34,ped)
+    return Citizen.InvokeNative(0xC024869A53992F34,ped)
 end
+
 
 
 --- 
@@ -2547,13 +2806,15 @@ function SetCreateRandomCops(toggle)
 end
 
 
+
 --- 
 --- Native 0x6F972C1AB75A1ED0 (IS_PED_IN_ANY_TRAIN)
 ---@param ped number
 ---@return boolean
 function IsPedInAnyTrain(ped)
-   return Citizen.InvokeNative(0x6F972C1AB75A1ED0,ped)
+    return Citizen.InvokeNative(0x6F972C1AB75A1ED0,ped)
 end
+
 
 
 --- 
@@ -2561,8 +2822,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedGettingIntoAVehicle(ped)
-   return Citizen.InvokeNative(0xBB062B2B5722478E,ped)
+    return Citizen.InvokeNative(0xBB062B2B5722478E,ped)
 end
+
 
 
 --- Ped can not pull out a weapon when true
@@ -2575,6 +2837,7 @@ function SetEnableHandcuffs(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xC52E0F855C58FC2E (SET_ENABLE_BOUND_ANKLES)
 ---@param ped number
@@ -2584,12 +2847,14 @@ function SetEnableBoundAnkles(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x97B0DB5B4AA74E77 (RESET_PED_WEAPON_MOVEMENT_CLIPSET)
 ---@param ped number
 function ResetPedWeaponMovementClipset(ped)
     Citizen.InvokeNative(0x97B0DB5B4AA74E77,ped)
 end
+
 
 
 --- 
@@ -2602,12 +2867,14 @@ function SetPedGetupAnimation(ped,animName,p2)
 end
 
 
+
 --- 
 --- Native 0x22EF8FF8778030EB (RESET_PED_IN_VEHICLE_CONTEXT)
 ---@param ped number
 function ResetPedInVehicleContext(ped)
     Citizen.InvokeNative(0x22EF8FF8778030EB,ped)
 end
+
 
 
 --- 
@@ -2618,6 +2885,7 @@ end
 function SetPedGestureGroup(ped,gesture,p2)
     Citizen.InvokeNative(0xDDF803377F94AAA8,ped,gesture,p2)
 end
+
 
 
 --- Seems to set the ped's loco type.
@@ -2654,12 +2922,14 @@ function SetPedDesiredLocoForModel(ped,locomotionArchetype)
 end
 
 
+
 --- Clears locomotion archetype
 --- Native 0x4FD80C3DD84B817B (_CLEAR_PED_DESIRED_LOCO_FOR_MODEL)
 ---@param ped number
 function ClearPedDesiredLocoForModel(ped)
     Citizen.InvokeNative(0x4FD80C3DD84B817B,ped)
 end
+
 
 
 --- Sets peds motion type
@@ -2671,12 +2941,14 @@ function SetPedDesiredLocoMotionType(ped,locoMotionType)
 end
 
 
+
 --- 
 --- Native 0x58F7DB5BD8FA2288 (_CLEAR_PED_DESIRED_LOCO_MOTION_TYPE)
 ---@param ped number
 function ClearPedDesiredLocoMotionType(ped)
     Citizen.InvokeNative(0x58F7DB5BD8FA2288,ped)
 end
+
 
 
 --- Known get up animation types: REAR, FRONT
@@ -2688,6 +2960,7 @@ function RequestPedGetupAnimation(ped,getUpType)
 end
 
 
+
 --- 
 --- Native 0xF6E1E9F47A7686F8 (PED_COWER_IN_PLACE)
 ---@param ped number
@@ -2695,6 +2968,7 @@ end
 function PedCowerInPlace(ped,ped2)
     Citizen.InvokeNative(0xF6E1E9F47A7686F8,ped,ped2)
 end
+
 
 
 --- 
@@ -2708,6 +2982,7 @@ end
 function PedCowerMoveToPoint(ped,p1,p2,p3,ped2,p5)
     Citizen.InvokeNative(0x1E4C940233FC0C6F,ped,p1,p2,p3,ped2,p5)
 end
+
 
 
 --- target: 0 affects everyone
@@ -2724,12 +2999,14 @@ function PedEmotionalPresetLocoMotion(ped,presetName,targetPed,duration,flag)
 end
 
 
+
 --- 
 --- Native 0x935CF6E42BAF7F4D (_PED_CLEAR_LOCO_MOTION)
 ---@param ped number
 function PedClearLocoMotion(ped)
     Citizen.InvokeNative(0x935CF6E42BAF7F4D,ped)
 end
+
 
 
 --- SOBER = 0.0f, SLIGHTLY_DRUNK = 0.25f, MODERATELY_DRUNK = 0.5f, VERY_DRUNK = 1.0f
@@ -2742,13 +3019,15 @@ function SetPedDrunkness(ped,enabled,drunknessLevel)
 end
 
 
+
 --- 
 --- Native 0x50F124E6EF188B22 (_IS_PED_DRUNK)
 ---@param ped number
 ---@return boolean
 function IsPedDrunk(ped)
-   return Citizen.InvokeNative(0x50F124E6EF188B22,ped)
+    return Citizen.InvokeNative(0x50F124E6EF188B22,ped)
 end
+
 
 
 --- Returns ped drunk level
@@ -2757,8 +3036,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedDrunkness(ped)
-   return Citizen.InvokeNative(0x6FB76442469ABD68,ped)
+    return Citizen.InvokeNative(0x6FB76442469ABD68,ped)
 end
+
 
 
 --- 
@@ -2775,8 +3055,9 @@ end
 ---@param p9 number
 ---@return vector3
 function GetAnimInitialOffsetPosition(animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
-   return Citizen.InvokeNative(0xBE22B26DD764C040,animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
+    return Citizen.InvokeNative(0xBE22B26DD764C040,animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
 end
+
 
 
 --- 
@@ -2793,8 +3074,9 @@ end
 ---@param p9 number
 ---@return vector3
 function GetAnimInitialOffsetRotation(animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
-   return Citizen.InvokeNative(0x4B805E6046EE9E47,animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
+    return Citizen.InvokeNative(0x4B805E6046EE9E47,animDict,animName,x,y,z,xRot,yRot,zRot,p8,p9)
 end
+
 
 
 --- 
@@ -2804,6 +3086,7 @@ end
 function SetPedRandomComponentVariation(ped,p1)
     Citizen.InvokeNative(0xC8A9481A01E63C28,ped,p1)
 end
+
 
 
 --- 
@@ -2818,6 +3101,7 @@ function KnockOffPedProp(ped,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x9F8AA94D6D97DBF4 (SET_BLOCKING_OF_NON_TEMPORARY_EVENTS)
 ---@param ped number
@@ -2827,13 +3111,15 @@ function SetBlockingOfNonTemporaryEvents(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x268B3AEBF032A88D (_GET_BLOCKING_OF_NON_TEMPORARY_EVENTS)
 ---@param ped number
 ---@return boolean
 function GetBlockingOfNonTemporaryEvents(ped)
-   return Citizen.InvokeNative(0x268B3AEBF032A88D,ped)
+    return Citizen.InvokeNative(0x268B3AEBF032A88D,ped)
 end
+
 
 
 --- 
@@ -2845,13 +3131,15 @@ function SetPedScale(ped,scale)
 end
 
 
+
 --- 
 --- Native 0x1D491CCF7211FB74 (_GET_PED_HEIGHT)
 ---@param ped number
 ---@return float
 function GetPedHeight(ped)
-   return Citizen.InvokeNative(0x1D491CCF7211FB74,ped)
+    return Citizen.InvokeNative(0x1D491CCF7211FB74,ped)
 end
+
 
 
 --- PS_SMALL = 0,
@@ -2863,8 +3151,9 @@ end
 ---@param modelHash hash
 ---@return number
 function GetPedModelSizeFromHash(modelHash)
-   return Citizen.InvokeNative(0xA65AA1ACE81E5A77,modelHash)
+    return Citizen.InvokeNative(0xA65AA1ACE81E5A77,modelHash)
 end
+
 
 
 --- 
@@ -2875,6 +3164,7 @@ end
 function RegisterTarget(ped,targetPed,p2)
     Citizen.InvokeNative(0x2F25D9AEFA34FBA2,ped,targetPed,p2)
 end
+
 
 
 --- 
@@ -2889,6 +3179,7 @@ function RegisterHatedTargetsInArea(ped,x,y,z,radius)
 end
 
 
+
 --- Based on TASK_COMBAT_HATED_TARGETS_AROUND_PED, the parameters are likely similar (PedHandle, and area to attack in).
 --- Native 0x9222F300BF8354FE (REGISTER_HATED_TARGETS_AROUND_PED)
 ---@param ped number
@@ -2898,14 +3189,16 @@ function RegisterHatedTargetsAroundPed(ped,radius)
 end
 
 
+
 --- 
 --- Native 0x6E5CBCB3941D7D08 (_IS_TARGET)
 ---@param ped number
 ---@param targetPed number
 ---@return boolean
 function IsTarget(ped,targetPed)
-   return Citizen.InvokeNative(0x6E5CBCB3941D7D08,ped,targetPed)
+    return Citizen.InvokeNative(0x6E5CBCB3941D7D08,ped,targetPed)
 end
+
 
 
 --- 
@@ -2915,6 +3208,7 @@ end
 function RemoveTarget(ped,targetPed)
     Citizen.InvokeNative(0x4707E9C23D8CA3FE,ped,targetPed)
 end
+
 
 
 --- Gets the closest ped in a radius.
@@ -2932,8 +3226,9 @@ end
 ---@param pedType number
 ---@return boolean
 function GetClosestPed(x,y,z,radius,p4,p5,outPed,p7,p8,p9,pedType)
-   return Citizen.InvokeNative(0xC33AB876A77F8164,x,y,z,radius,p4,p5,outPed,p7,p8,p9,pedType)
+    return Citizen.InvokeNative(0xC33AB876A77F8164,x,y,z,radius,p4,p5,outPed,p7,p8,p9,pedType)
 end
+
 
 
 --- 
@@ -2941,8 +3236,9 @@ end
 ---@param ped number
 ---@return boolean
 function CanPedRagdoll(ped)
-   return Citizen.InvokeNative(0x128F79EDCECE4FD5,ped)
+    return Citizen.InvokeNative(0x128F79EDCECE4FD5,ped)
 end
+
 
 
 --- nmTaskMessageParameterName: See physicstasks.ymt. Search for DraggedByCart or 0xD00820D7 (Used in R* SP Script marston8)
@@ -2956,8 +3252,9 @@ end
 ---@param nmTaskMessageParameterName string
 ---@return boolean
 function SetPedToRagdoll(ped,timeMin,timeMax,ragdollType,abortIfInjured,abortIfDead,nmTaskMessageParameterName)
-   return Citizen.InvokeNative(0xAE99FB955581844A,ped,timeMin,timeMax,ragdollType,abortIfInjured,abortIfDead,nmTaskMessageParameterName)
+    return Citizen.InvokeNative(0xAE99FB955581844A,ped,timeMin,timeMax,ragdollType,abortIfInjured,abortIfDead,nmTaskMessageParameterName)
 end
+
 
 
 --- 
@@ -2978,8 +3275,9 @@ end
 ---@param p13 float
 ---@return boolean
 function SetPedToRagdollWithFall(ped,timeMin,timeMax,ragdollType,falldirX,falldirY,falldirZ,p7,p8,p9,p10,p11,p12,p13)
-   return Citizen.InvokeNative(0xD76632D99E4966C8,ped,timeMin,timeMax,ragdollType,falldirX,falldirY,falldirZ,p7,p8,p9,p10,p11,p12,p13)
+    return Citizen.InvokeNative(0xD76632D99E4966C8,ped,timeMin,timeMax,ragdollType,falldirX,falldirY,falldirZ,p7,p8,p9,p10,p11,p12,p13)
 end
+
 
 
 --- Causes Ped to ragdoll on collision with any object (e.g Running into trashcan). If applied to player you will sometimes trip on the sidewalk.
@@ -2992,6 +3290,7 @@ function SetPedRagdollOnCollision(ped,toggle,p2)
 end
 
 
+
 --- 
 --- Native 0x221F4D9912B7FE86 (_SET_PED_TO_DISABLE_RAGDOLL)
 ---@param ped number
@@ -3001,13 +3300,15 @@ function SetPedToDisableRagdoll(ped,toggle)
 end
 
 
+
 --- If the ped handle passed through the parenthesis is in a ragdoll state this will return true.
 --- Native 0x47E4E977581C5B55 (IS_PED_RAGDOLL)
 ---@param ped number
 ---@return boolean
 function IsPedRagdoll(ped)
-   return Citizen.InvokeNative(0x47E4E977581C5B55,ped)
+    return Citizen.InvokeNative(0x47E4E977581C5B55,ped)
 end
+
 
 
 --- 
@@ -3015,8 +3316,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedRunningRagdollTask(ped)
-   return Citizen.InvokeNative(0xE3B6097CC25AA69E,ped)
+    return Citizen.InvokeNative(0xE3B6097CC25AA69E,ped)
 end
+
 
 
 --- 
@@ -3027,12 +3329,14 @@ function SetPedRagdollForceFall(ped)
 end
 
 
+
 --- 
 --- Native 0x9FA4664CF62E47E8 (RESET_PED_RAGDOLL_TIMER)
 ---@param ped number
 function ResetPedRagdollTimer(ped)
     Citizen.InvokeNative(0x9FA4664CF62E47E8,ped)
 end
+
 
 
 --- 
@@ -3044,13 +3348,15 @@ function SetPedCanRagdoll(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x2AFE52F782F25775 (IS_PED_RUNNING_MOBILE_PHONE_TASK)
 ---@param ped number
 ---@return boolean
 function IsPedRunningMobilePhoneTask(ped)
-   return Citizen.InvokeNative(0x2AFE52F782F25775,ped)
+    return Citizen.InvokeNative(0x2AFE52F782F25775,ped)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/RAGDOLL_BLOCKING_FLAGS
@@ -3086,6 +3392,7 @@ function SetRagdollBlockingFlags(ped,flags)
 end
 
 
+
 --- flags: see SET_RAGDOLL_BLOCKING_FLAGS
 --- Native 0xD86D101FCFD00A4B (CLEAR_RAGDOLL_BLOCKING_FLAGS)
 ---@param ped number
@@ -3093,6 +3400,7 @@ end
 function ClearRagdollBlockingFlags(ped,flags)
     Citizen.InvokeNative(0xD86D101FCFD00A4B,ped,flags)
 end
+
 
 
 --- 
@@ -3105,6 +3413,7 @@ end
 function SetPedDefensiveAreaVolume(ped,volume,p2,p3,p4)
     Citizen.InvokeNative(0xFC3DB99C8144CD81,ped,volume,p2,p3,p4)
 end
+
 
 
 --- 
@@ -3122,6 +3431,7 @@ function SetPedSphereDefensiveArea(ped,x,y,z,radius,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0x1854217C640B39EC (_SET_PED_DEFENSIVE_SPHERE_ATTACHED_TO_ENTITY)
 ---@param ped number
@@ -3135,6 +3445,7 @@ end
 function SetPedDefensiveSphereAttachedToEntity(ped,entity,x,y,z,radius,p6,p7)
     Citizen.InvokeNative(0x1854217C640B39EC,ped,entity,x,y,z,radius,p6,p7)
 end
+
 
 
 --- _SET_PED_(A?)*
@@ -3156,6 +3467,7 @@ function SetPedDefensiveAreaToAngledArea(ped,x1,y1,z1,x2,y2,z2,p7,p8,p9,entity,p
 end
 
 
+
 --- 
 --- Native 0x413C6C763A4AFFAD (SET_PED_DEFENSIVE_AREA_DIRECTION)
 ---@param ped number
@@ -3168,6 +3480,7 @@ function SetPedDefensiveAreaDirection(ped,p1,p2,p3,p4)
 end
 
 
+
 --- Ped will no longer get angry when you stay near him.
 --- Native 0x74D4E028107450A9 (REMOVE_PED_DEFENSIVE_AREA)
 ---@param ped number
@@ -3177,14 +3490,16 @@ function RemovePedDefensiveArea(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x3C06B8786DD94CD1 (GET_PED_DEFENSIVE_AREA_POSITION)
 ---@param ped number
 ---@param p1 boolean
 ---@return vector3
 function GetPedDefensiveAreaPosition(ped,p1)
-   return Citizen.InvokeNative(0x3C06B8786DD94CD1,ped,p1)
+    return Citizen.InvokeNative(0x3C06B8786DD94CD1,ped,p1)
 end
+
 
 
 --- 
@@ -3193,8 +3508,9 @@ end
 ---@param p1 boolean
 ---@return boolean
 function IsPedDefensiveAreaActive(ped,p1)
-   return Citizen.InvokeNative(0xBA63D9FE45412247,ped,p1)
+    return Citizen.InvokeNative(0xBA63D9FE45412247,ped,p1)
 end
+
 
 
 --- 
@@ -3203,8 +3519,9 @@ end
 ---@param p1 any
 ---@return volume
 function GetPedDefensiveVolume(ped,p1)
-   return Citizen.InvokeNative(0xEF2E6F870783369B,ped,p1)
+    return Citizen.InvokeNative(0xEF2E6F870783369B,ped,p1)
 end
+
 
 
 --- 
@@ -3213,6 +3530,7 @@ end
 function ReviveInjuredPed(ped)
     Citizen.InvokeNative(0x8D8ACD8388CD99CE,ped)
 end
+
 
 
 --- This function will simply bring the dead ped back to life.
@@ -3225,6 +3543,7 @@ function ResurrectPed(ped)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x98EFA132A4117BE1 (SET_PED_NAME_DEBUG)
 ---@param ped number
@@ -3234,6 +3553,7 @@ function SetPedNameDebug(ped,name)
 end
 
 
+
 --- 
 --- Native 0xF9ACF4A08098EA25 (SPECIAL_FUNCTION_DO_NOT_USE)
 ---@param ped number
@@ -3241,6 +3561,7 @@ end
 function SpecialFunctionDoNotUse(ped,p1)
     Citizen.InvokeNative(0xF9ACF4A08098EA25,ped,p1)
 end
+
 
 
 --- 
@@ -3257,6 +3578,7 @@ end
 function ApplyPedBloodSpecific(ped,p1,p2,p3,p4,p5,p6,p7,p8)
     Citizen.InvokeNative(0xEF0D582CBF2D9B0F,ped,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- bloodFountainPressure: visible effect from 0.0 till 20.0
@@ -3280,6 +3602,7 @@ function SetPedActivateWoundEffect(ped,p1,boneId,moveWoundLeftRight,bloodFountai
 end
 
 
+
 --- Params: 0.0f to remove wound effects
 --- Native 0x66B1CB778D911F49 (_UPDATE_PED_WOUND_EFFECT)
 ---@param ped number
@@ -3287,6 +3610,7 @@ end
 function UpdatePedWoundEffect(ped,value)
     Citizen.InvokeNative(0x66B1CB778D911F49,ped,value)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/peds_customization/ped_decals.lua
@@ -3300,12 +3624,14 @@ function ApplyPedDamagePack(ped,damagePack,damage,mult)
 end
 
 
+
 --- 
 --- Native 0x8FE22675A5A45817 (CLEAR_PED_BLOOD_DAMAGE)
 ---@param ped number
 function ClearPedBloodDamage(ped)
     Citizen.InvokeNative(0x8FE22675A5A45817,ped)
 end
+
 
 
 --- 
@@ -3315,6 +3641,7 @@ end
 function ClearPedBloodDamageByZone(ped,p1)
     Citizen.InvokeNative(0x56E3B78C5408D9F4,ped,p1)
 end
+
 
 
 --- 
@@ -3327,6 +3654,7 @@ function ClearPedDamageDecalByZone(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x7F5D88333EE8A86F (_CLEAR_PED_BLOOD_DAMAGE_FACIAL)
 ---@param ped number
@@ -3334,6 +3662,7 @@ end
 function ClearPedBloodDamageFacial(ped,p1)
     Citizen.InvokeNative(0x7F5D88333EE8A86F,ped,p1)
 end
+
 
 
 --- 
@@ -3344,13 +3673,15 @@ function FadeAndDestroyPed(ped)
 end
 
 
+
 --- 
 --- Native 0x8D9BFCE3352DE47F (_IS_PED_QUEUED_FOR_DELETION)
 ---@param ped number
 ---@return boolean
 function IsPedQueuedForDeletion(ped)
-   return Citizen.InvokeNative(0x8D9BFCE3352DE47F,ped)
+    return Citizen.InvokeNative(0x8D9BFCE3352DE47F,ped)
 end
+
 
 
 --- It clears the wetness of the selected Ped/Player. Clothes have to be wet to notice the difference.
@@ -3359,6 +3690,7 @@ end
 function ClearPedWetness(ped)
     Citizen.InvokeNative(0x9C720776DAA43E7E,ped)
 end
+
 
 
 --- It adds the wetness level to the player clothing/outfit. As if player just got out from water surface.
@@ -3370,6 +3702,7 @@ function SetPedWetnessHeight(ped,height)
 end
 
 
+
 --- combined with PED::SET_PED_WETNESS_HEIGHT(), this native makes the ped drenched in water up to the height specified in the other function
 --- Native 0xB5485E4907B53019 (SET_PED_WETNESS_ENABLED_THIS_FRAME)
 ---@param ped number
@@ -3378,12 +3711,14 @@ function SetPedWetnessEnabledThisFrame(ped)
 end
 
 
+
 --- 
 --- Native 0x6585D955A68452A5 (CLEAR_PED_ENV_DIRT)
 ---@param ped number
 function ClearPedEnvDirt(ped)
     Citizen.InvokeNative(0x6585D955A68452A5,ped)
 end
+
 
 
 --- 
@@ -3395,6 +3730,7 @@ function SetPedSweat(ped,sweat)
 end
 
 
+
 --- 
 --- Native 0x0E5173C163976E38 (CLEAR_PED_DECORATIONS)
 ---@param ped number
@@ -3403,13 +3739,15 @@ function ClearPedDecorations(ped)
 end
 
 
+
 --- Despite this function's name, it simply returns whether the specified handle is a Ped.
 --- Native 0x11B499C1E0FF8559 (WAS_PED_SKELETON_UPDATED)
 ---@param ped number
 ---@return boolean
 function WasPedSkeletonUpdated(ped)
-   return Citizen.InvokeNative(0x11B499C1E0FF8559,ped)
+    return Citizen.InvokeNative(0x11B499C1E0FF8559,ped)
 end
+
 
 
 --- Gets the position of the specified bone of the specified ped.
@@ -3426,8 +3764,9 @@ end
 ---@param offsetZ float
 ---@return vector3
 function GetPedBoneCoords(ped,boneId,offsetX,offsetY,offsetZ)
-   return Citizen.InvokeNative(0x17C07FC640E86B4E,ped,boneId,offsetX,offsetY,offsetZ)
+    return Citizen.InvokeNative(0x17C07FC640E86B4E,ped,boneId,offsetX,offsetY,offsetZ)
 end
+
 
 
 --- blockingFlags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eScenarioBlockingFlags
@@ -3442,8 +3781,9 @@ end
 ---@param blockingFlags number
 ---@return number
 function AddScenarioBlockingArea(x1,y1,z1,x2,y2,z2,p6,blockingFlags)
-   return Citizen.InvokeNative(0x1B5C85C612E5256E,x1,y1,z1,x2,y2,z2,p6,blockingFlags)
+    return Citizen.InvokeNative(0x1B5C85C612E5256E,x1,y1,z1,x2,y2,z2,p6,blockingFlags)
 end
+
 
 
 --- 
@@ -3451,6 +3791,7 @@ end
 function RemoveScenarioBlockingAreas()
     Citizen.InvokeNative(0xD37401D78A929A49)
 end
+
 
 
 --- 
@@ -3462,6 +3803,7 @@ function RemoveScenarioBlockingArea(p0,p1)
 end
 
 
+
 --- flag: see ADD_SCENARIO_BLOCKING_AREA
 --- Native 0x4C39C95AE5DB1329 (_ADD_SCENARIO_BLOCKING_VOLUME)
 ---@param volume volume
@@ -3469,8 +3811,9 @@ end
 ---@param flag number
 ---@return any
 function AddScenarioBlockingVolume(volume,p1,flag)
-   return Citizen.InvokeNative(0x4C39C95AE5DB1329,volume,p1,flag)
+    return Citizen.InvokeNative(0x4C39C95AE5DB1329,volume,p1,flag)
 end
+
 
 
 --- 
@@ -3478,8 +3821,9 @@ end
 ---@param p0 any
 ---@return boolean
 function IsScenarioBlockingAreaValid(p0)
-   return Citizen.InvokeNative(0x91A5F9CBEBB9D936,p0)
+    return Citizen.InvokeNative(0x91A5F9CBEBB9D936,p0)
 end
+
 
 
 --- Equivalent to IS_PED_USING_SCENARIO from V but takes a hash instead of a string.
@@ -3488,8 +3832,9 @@ end
 ---@param scenarioHash hash
 ---@return boolean
 function IsPedUsingScenarioHash(ped,scenarioHash)
-   return Citizen.InvokeNative(0x34D6AC1157C8226C,ped,scenarioHash)
+    return Citizen.InvokeNative(0x34D6AC1157C8226C,ped,scenarioHash)
 end
+
 
 
 --- 
@@ -3497,8 +3842,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedUsingAnyScenario(ped)
-   return Citizen.InvokeNative(0x57AB4A3080F85143,ped)
+    return Citizen.InvokeNative(0x57AB4A3080F85143,ped)
 end
+
 
 
 --- 
@@ -3507,8 +3853,9 @@ end
 ---@param scenario number
 ---@return boolean
 function IsPedUsingThisScenario(ped,scenario)
-   return Citizen.InvokeNative(0x9C54041BB66BCF9E,ped,scenario)
+    return Citizen.InvokeNative(0x9C54041BB66BCF9E,ped,scenario)
 end
+
 
 
 --- p2 is always 0, p3 is always 0, p4 is always 1
@@ -3520,8 +3867,9 @@ end
 ---@param p4 any
 ---@return boolean
 function CanPedUseScenarioPoint(ped,scenario,p2,p3,p4)
-   return Citizen.InvokeNative(0xAB643407D0B26F07,ped,scenario,p2,p3,p4)
+    return Citizen.InvokeNative(0xAB643407D0B26F07,ped,scenario,p2,p3,p4)
 end
+
 
 
 --- 
@@ -3532,8 +3880,9 @@ end
 ---@param z float
 ---@return boolean
 function SetPedPanicExitScenario(ped,x,y,z)
-   return Citizen.InvokeNative(0xFE07FF6495D52E2A,ped,x,y,z)
+    return Citizen.InvokeNative(0xFE07FF6495D52E2A,ped,x,y,z)
 end
+
 
 
 --- If toggle is true, when the ped is using a scenario he will stop it and become scared
@@ -3547,6 +3896,7 @@ function ToggleScenarioPedCowerInPlace(ped,toggle)
 end
 
 
+
 --- Old name: _SET_PED_SHOULD_PLAY_DIRECTED_SCENARIO_EXIT
 --- Native 0xEC6935EBE0847B90 (SET_PED_SHOULD_PLAY_DIRECTED_NORMAL_SCENARIO_EXIT)
 ---@param ped number
@@ -3555,8 +3905,9 @@ end
 ---@param z float
 ---@return boolean
 function SetPedShouldPlayDirectedNormalScenarioExit(ped,x,y,z)
-   return Citizen.InvokeNative(0xEC6935EBE0847B90,ped,x,y,z)
+    return Citizen.InvokeNative(0xEC6935EBE0847B90,ped,x,y,z)
 end
+
 
 
 --- 
@@ -3567,12 +3918,14 @@ function SetPedShouldPlayNormalScenarioExit(ped)
 end
 
 
+
 --- 
 --- Native 0xF1C03A5352243A30 (SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT)
 ---@param ped number
 function SetPedShouldPlayImmediateScenarioExit(ped)
     Citizen.InvokeNative(0xF1C03A5352243A30,ped)
 end
+
 
 
 --- lookIntensity:
@@ -3588,8 +3941,9 @@ end
 ---@param lookIntensity number
 ---@return boolean
 function SetPedShouldPlayFleeScenarioExit(ped,x,y,z,lookIntensity)
-   return Citizen.InvokeNative(0xEEED8FAFEC331A70,ped,x,y,z,lookIntensity)
+    return Citizen.InvokeNative(0xEEED8FAFEC331A70,ped,x,y,z,lookIntensity)
 end
+
 
 
 --- lookIntensity: see SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT
@@ -3601,8 +3955,9 @@ end
 ---@param lookIntensity number
 ---@return boolean
 function SetPedShouldPlayCombatScenarioExit(ped,x,y,z,lookIntensity)
-   return Citizen.InvokeNative(0x802092B07E3B1EEA,ped,x,y,z,lookIntensity)
+    return Citizen.InvokeNative(0x802092B07E3B1EEA,ped,x,y,z,lookIntensity)
 end
+
 
 
 --- lookIntensity: see SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT
@@ -3615,8 +3970,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function SetPedShouldPlayEmotionalScenarioExit(ped,x,y,z,lookIntensity,p5)
-   return Citizen.InvokeNative(0x62FDAD5E01D2DD47,ped,x,y,z,lookIntensity,p5)
+    return Citizen.InvokeNative(0x62FDAD5E01D2DD47,ped,x,y,z,lookIntensity,p5)
 end
+
 
 
 --- lookIntensity: see SET_PED_SHOULD_PLAY_FLEE_SCENARIO_EXIT
@@ -3629,8 +3985,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function SetPedShouldPlayQuickScenarioExit(ped,x,y,z,lookIntensity,p5)
-   return Citizen.InvokeNative(0x463803429297117C,ped,x,y,z,lookIntensity,p5)
+    return Citizen.InvokeNative(0x463803429297117C,ped,x,y,z,lookIntensity,p5)
 end
+
 
 
 --- 
@@ -3643,12 +4000,14 @@ function SetFacialIdleAnimOverride(ped,animName,animDict)
 end
 
 
+
 --- 
 --- Native 0x726256CC1EEB182F (CLEAR_FACIAL_IDLE_ANIM_OVERRIDE)
 ---@param ped number
 function ClearFacialIdleAnimOverride(ped)
     Citizen.InvokeNative(0x726256CC1EEB182F,ped)
 end
+
 
 
 --- mood: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/fwFacialAnimRequest__Mood
@@ -3662,6 +4021,7 @@ function RequestPedFacialMoodThisFrame(ped,mood,p2)
 end
 
 
+
 --- 
 --- Native 0xBAF20C5432058024 (SET_PED_CAN_PLAY_GESTURE_ANIMS)
 ---@param ped number
@@ -3670,6 +4030,7 @@ end
 function SetPedCanPlayGestureAnims(ped,p1,p2)
     Citizen.InvokeNative(0xBAF20C5432058024,ped,p1,p2)
 end
+
 
 
 --- 
@@ -3681,6 +4042,7 @@ function SetPedCanPlayAmbientAnims(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x0EB0585D15254740 (SET_PED_CAN_PLAY_AMBIENT_BASE_ANIMS)
 ---@param ped number
@@ -3688,6 +4050,7 @@ end
 function SetPedCanPlayAmbientBaseAnims(ped,toggle)
     Citizen.InvokeNative(0x0EB0585D15254740,ped,toggle)
 end
+
 
 
 --- 
@@ -3699,6 +4062,7 @@ function SetPedCanArmIk(ped,toggle)
 end
 
 
+
 --- _SET_PED_CAN_(?)_IK*
 --- Native 0xEE9DF765990E8D1D (_SET_PED_CAN_UNK_BODYPART_IK)
 ---@param ped number
@@ -3706,6 +4070,7 @@ end
 function SetPedCanUnkBodypartIk(ped,toggle)
     Citizen.InvokeNative(0xEE9DF765990E8D1D,ped,toggle)
 end
+
 
 
 --- 
@@ -3717,6 +4082,7 @@ function SetPedCanHeadIk(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x73518ECE2485412B (SET_PED_CAN_LEG_IK)
 ---@param ped number
@@ -3724,6 +4090,7 @@ end
 function SetPedCanLegIk(ped,toggle)
     Citizen.InvokeNative(0x73518ECE2485412B,ped,toggle)
 end
+
 
 
 --- 
@@ -3735,6 +4102,7 @@ function SetPedCanTorsoIk(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xF5846EDB26A98A24 (SET_PED_CAN_TORSO_REACT_IK)
 ---@param ped number
@@ -3742,6 +4110,7 @@ end
 function SetPedCanTorsoReactIk(ped,toggle)
     Citizen.InvokeNative(0xF5846EDB26A98A24,ped,toggle)
 end
+
 
 
 --- 
@@ -3753,6 +4122,7 @@ function SetPedCanTorsoVehicleIk(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xEC4686EC06434678 (SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT)
 ---@param ped number
@@ -3762,14 +4132,16 @@ function SetPedCanUseAutoConversationLookat(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x5CD3CB88A7F8850D (IS_PED_HEADTRACKING_PED)
 ---@param ped1 number
 ---@param ped2 number
 ---@return boolean
 function IsPedHeadtrackingPed(ped1,ped2)
-   return Citizen.InvokeNative(0x5CD3CB88A7F8850D,ped1,ped2)
+    return Citizen.InvokeNative(0x5CD3CB88A7F8850D,ped1,ped2)
 end
+
 
 
 --- 
@@ -3778,8 +4150,9 @@ end
 ---@param entity entity
 ---@return boolean
 function IsPedHeadtrackingEntity(ped,entity)
-   return Citizen.InvokeNative(0x813A0A7C9D2E831F,ped,entity)
+    return Citizen.InvokeNative(0x813A0A7C9D2E831F,ped,entity)
 end
+
 
 
 --- 
@@ -3791,6 +4164,7 @@ function DisableAmbientLookAtRequests(p0,p1)
 end
 
 
+
 --- 
 --- Native 0xE1965A380342BE1F (_DISABLE_ALL_LOOK_AT_REQUESTS)
 ---@param ped number
@@ -3800,6 +4174,7 @@ function DisableAllLookAtRequests(ped,p1)
 end
 
 
+
 --- Old name: SET_PED_CLOTH_PACKAGE_INDEX
 --- Native 0x78C4E9961DB3EB5B (SET_PED_CLOTH_PIN_FRAMES)
 ---@param ped number
@@ -3807,6 +4182,7 @@ end
 function SetPedClothPinFrames(ped,p1)
     Citizen.InvokeNative(0x78C4E9961DB3EB5B,ped,p1)
 end
+
 
 
 --- flagId: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePedScriptConfigFlags
@@ -3821,6 +4197,7 @@ function SetPedConfigFlag(ped,flagId,value)
 end
 
 
+
 --- Needs to be called every frame
 ---flagid:https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePedScriptResetFlags
 ---https://github.com/femga/rdr3_discoveries/tree/master/AI/CPED_RESET_FLAGS
@@ -3833,6 +4210,7 @@ function SetPedResetFlag(ped,flagId,doReset)
 end
 
 
+
 --- flagId: see SET_PED_CONFIG_FLAG
 --- Native 0x7EE53118C892B513 (GET_PED_CONFIG_FLAG)
 ---@param ped number
@@ -3840,8 +4218,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function GetPedConfigFlag(ped,flagId,p2)
-   return Citizen.InvokeNative(0x7EE53118C892B513,ped,flagId,p2)
+    return Citizen.InvokeNative(0x7EE53118C892B513,ped,flagId,p2)
 end
+
 
 
 --- 
@@ -3850,8 +4229,9 @@ end
 ---@param flagId number
 ---@return boolean
 function GetPedResetFlag(ped,flagId)
-   return Citizen.InvokeNative(0xAF9E59B1B1FBF2A0,ped,flagId)
+    return Citizen.InvokeNative(0xAF9E59B1B1FBF2A0,ped,flagId)
 end
+
 
 
 --- 
@@ -3863,14 +4243,16 @@ function SetPedGroupMemberPassengerIndex(ped,index)
 end
 
 
+
 --- Presumably returns the Entity that the Ped is currently diving out of the way of.
 --- Native 0x414641C26E105898 (IS_PED_EVASIVE_DIVING)
 ---@param ped number
 ---@param evadingEntity entity*
 ---@return boolean
 function IsPedEvasiveDiving(ped,evadingEntity)
-   return Citizen.InvokeNative(0x414641C26E105898,ped,evadingEntity)
+    return Citizen.InvokeNative(0x414641C26E105898,ped,evadingEntity)
 end
+
 
 
 --- Triggers a gunshot
@@ -3886,8 +4268,9 @@ end
 ---@param p7 float
 ---@return any
 function ShootTriggerAtCoords(ped,x,y,z,p4,p5,p6,p7)
-   return Citizen.InvokeNative(0x4C57F27D1554E6B0,ped,x,y,z,p4,p5,p6,p7)
+    return Citizen.InvokeNative(0x4C57F27D1554E6B0,ped,x,y,z,p4,p5,p6,p7)
 end
+
 
 
 --- 
@@ -3895,8 +4278,9 @@ end
 ---@param model hash
 ---@return boolean
 function IsThisModelAHorse(model)
-   return Citizen.InvokeNative(0x772A1969F649E902,model)
+    return Citizen.InvokeNative(0x772A1969F649E902,model)
 end
+
 
 
 --- 
@@ -3908,13 +4292,15 @@ function SetPedModelIsSuppressed(model,toggle)
 end
 
 
+
 --- 
 --- Native 0xAA9F048DCF69B6DC (_IS_PED_MODEL_SUPPRESSED)
 ---@param model hash
 ---@return boolean
 function IsPedModelSuppressed(model)
-   return Citizen.InvokeNative(0xAA9F048DCF69B6DC,model)
+    return Citizen.InvokeNative(0xAA9F048DCF69B6DC,model)
 end
+
 
 
 --- Disables being able to kick move ped.
@@ -3926,6 +4312,7 @@ function SetPedDisableKickMove(ped,disable)
 end
 
 
+
 --- 
 --- Native 0xDF993EE5E90ABA25 (SET_PED_CAN_RAGDOLL_FROM_PLAYER_IMPACT)
 ---@param ped number
@@ -3935,6 +4322,7 @@ function SetPedCanRagdollFromPlayerImpact(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xC396F5B86FF9FEBD (SET_PED_LEG_IK_MODE)
 ---@param ped number
@@ -3942,6 +4330,7 @@ end
 function SetPedLegIkMode(ped,mode)
     Citizen.InvokeNative(0xC396F5B86FF9FEBD,ped,mode)
 end
+
 
 
 --- If returned true: There are enemy peds near friendly turn in ped. Going to aggro.
@@ -3956,8 +4345,9 @@ end
 ---@param p5 boolean
 ---@return boolean
 function IsPedInPoint(ped,x,y,z,radius,p5)
-   return Citizen.InvokeNative(0x078076AB50FB117F,ped,x,y,z,radius,p5)
+    return Citizen.InvokeNative(0x078076AB50FB117F,ped,x,y,z,radius,p5)
 end
+
 
 
 --- SET_PED_CAN_*
@@ -3967,6 +4357,7 @@ end
 function SetPedCanBeLassoed(ped,toggle)
     Citizen.InvokeNative(0xFD6943B6DF77E449,ped,toggle)
 end
+
 
 
 --- 0 - Stationary (Will just stand in place)
@@ -3981,13 +4372,15 @@ function SetPedCombatMovement(ped,combatMovement)
 end
 
 
+
 --- 
 --- Native 0xDEA92412FCAEB3F5 (GET_PED_COMBAT_MOVEMENT)
 ---@param ped number
 ---@return number
 function GetPedCombatMovement(ped)
-   return Citizen.InvokeNative(0xDEA92412FCAEB3F5,ped)
+    return Citizen.InvokeNative(0xDEA92412FCAEB3F5,ped)
 end
+
 
 
 --- abilityLevel:
@@ -4003,6 +4396,7 @@ end
 function SetPedCombatAbility(ped,abilityLevel)
     Citizen.InvokeNative(0xC7622C0D36B2FDA8,ped,abilityLevel)
 end
+
 
 
 --- range:
@@ -4021,6 +4415,7 @@ function SetPedCombatRange(ped,range)
 end
 
 
+
 --- attributeIndex: https://alloc8or.re/rdr3/doc/enums/eCombatAttribute.txt
 ---https://github.com/femga/rdr3_discoveries/tree/master/AI/COMBAT_ATTRIBUTES
 --- Native 0x9F7794730795E019 (SET_PED_COMBAT_ATTRIBUTES)
@@ -4032,14 +4427,16 @@ function SetPedCombatAttributes(ped,attributeIndex,enabled)
 end
 
 
+
 --- 
 --- Native 0xCC2B20596E29E4E3 (_GET_PED_COMBAT_ATTRIBUTE)
 ---@param ped number
 ---@param attributeIndex number
 ---@return boolean
 function GetPedCombatAttribute(ped,attributeIndex)
-   return Citizen.InvokeNative(0xCC2B20596E29E4E3,ped,attributeIndex)
+    return Citizen.InvokeNative(0xCC2B20596E29E4E3,ped,attributeIndex)
 end
+
 
 
 --- Hashes: GUARD, COMBAT_ANIMAL, LAW, LAW_SHERIFF
@@ -4052,6 +4449,7 @@ function SetPedCombatAttributeHash(ped,p1)
 end
 
 
+
 --- TLR_ExitTask = 0,
 ---TLR_NeverLoseTarget,
 ---TLR_SearchForTarget
@@ -4061,6 +4459,7 @@ end
 function SetPedTargetLossResponse(ped,responseType)
     Citizen.InvokeNative(0x0703B9079823DA4A,ped,responseType)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/COMBAT_STYLES
@@ -4076,6 +4475,7 @@ function SetPedCombatStyle(ped,combatStyleHash,p2,duration)
 end
 
 
+
 --- Params: p1 = 1 in R* Scripts
 --- Native 0x78815FC52832B690 (_CLEAR_PED_COMBAT_STYLE)
 ---@param ped number
@@ -4083,6 +4483,7 @@ end
 function ClearPedCombatStyle(ped,p1)
     Citizen.InvokeNative(0x78815FC52832B690,ped,p1)
 end
+
 
 
 --- duration in seconds, -1.0 = forever
@@ -4095,6 +4496,7 @@ function SetPedCombatStyleMod(ped,combatStyleModHash,duration)
 end
 
 
+
 --- _CLEAR_PED_COMBAT_*
 --- Native 0x1FA132CBCD7CB239 (_CLEAR_PED_COMBAT_STYLE_MOD)
 ---@param ped number
@@ -4104,6 +4506,7 @@ function ClearPedCombatStyleMod(ped,combatStyleModHash)
 end
 
 
+
 --- 
 --- Native 0xDCCA191DF9980FD7 (IS_PED_PERFORMING_MELEE_ACTION)
 ---@param ped number
@@ -4111,8 +4514,9 @@ end
 ---@param p2 hash
 ---@return boolean
 function IsPedPerformingMeleeAction(ped,p1,p2)
-   return Citizen.InvokeNative(0xDCCA191DF9980FD7,ped,p1,p2)
+    return Citizen.InvokeNative(0xDCCA191DF9980FD7,ped,p1,p2)
 end
+
 
 
 --- 
@@ -4120,8 +4524,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedMeleeActionPhase(ped)
-   return Citizen.InvokeNative(0x6127F25ED21C533C,ped)
+    return Citizen.InvokeNative(0x6127F25ED21C533C,ped)
 end
+
 
 
 --- 
@@ -4129,8 +4534,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedBeingStealthKilled(ped)
-   return Citizen.InvokeNative(0x863B23EFDE9C5DF2,ped)
+    return Citizen.InvokeNative(0x863B23EFDE9C5DF2,ped)
 end
+
 
 
 --- 
@@ -4138,8 +4544,9 @@ end
 ---@param ped number
 ---@return number
 function GetMeleeTargetForPed(ped)
-   return Citizen.InvokeNative(0x18A3E9EE1297FD39,ped)
+    return Citizen.InvokeNative(0x18A3E9EE1297FD39,ped)
 end
+
 
 
 --- 
@@ -4147,8 +4554,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedBrawlingStyle(ped)
-   return Citizen.InvokeNative(0xEC6B59BE445FEC51,ped)
+    return Citizen.InvokeNative(0xEC6B59BE445FEC51,ped)
 end
+
 
 
 --- brawlingStyle:
@@ -4204,6 +4612,7 @@ function SetPedBrawlingStyle(ped,brawlingStyle)
 end
 
 
+
 --- 
 --- Native 0x9238A3D970BBB0A9 (_SET_PED_COMBAT_BEHAVIOUR)
 ---@param ped number
@@ -4211,6 +4620,7 @@ end
 function SetPedCombatBehaviour(ped,behaviour)
     Citizen.InvokeNative(0x9238A3D970BBB0A9,ped,behaviour)
 end
+
 
 
 --- NET_FETCH_CLIENT_UPDATE_PED_FIGHT_PROFICIENCY: Changing parry multiplier for ped
@@ -4222,6 +4632,7 @@ function SetPedBeatMultiplier(ped,p1)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/COMBAT_ACTION_DISABLE_FLAGS
 --- Native 0xB8DE69D9473B7593 (_SET_PED_ACTION_DISABLE_FLAG)
 ---@param ped number
@@ -4229,6 +4640,7 @@ end
 function SetPedActionDisableFlag(ped,actionDisableFlag)
     Citizen.InvokeNative(0xB8DE69D9473B7593,ped,actionDisableFlag)
 end
+
 
 
 --- 
@@ -4240,14 +4652,16 @@ function ClearPedActionDisableFlag(ped,actionDisableFlag)
 end
 
 
+
 --- 
 --- Native 0xB346C85D49CC998E (_IS_PED_ACTION_DISABLE_FLAG_ENABLED)
 ---@param ped number
 ---@param actionDisableFlag number
 ---@return boolean
 function IsPedActionDisableFlagEnabled(ped,actionDisableFlag)
-   return Citizen.InvokeNative(0xB346C85D49CC998E,ped,actionDisableFlag)
+    return Citizen.InvokeNative(0xB346C85D49CC998E,ped,actionDisableFlag)
 end
+
 
 
 --- 
@@ -4259,6 +4673,7 @@ function SetPedTargetActionDisableFlag(ped,actionDisableFlag)
 end
 
 
+
 --- 
 --- Native 0xBBF6D1D07C02D00A (_CLEAR_PED_TARGET_ACTION_DISABLE_FLAG)
 ---@param ped number
@@ -4268,14 +4683,16 @@ function ClearPedTargetActionDisableFlag(ped,actionDisableFlag)
 end
 
 
+
 --- 
 --- Native 0x02AA2096FE00F3E1 (_IS_PED_TARGET_ACTION_DISABLE_FLAG_ENABLED)
 ---@param ped number
 ---@param actionDisableFlag number
 ---@return boolean
 function IsPedTargetActionDisableFlagEnabled(ped,actionDisableFlag)
-   return Citizen.InvokeNative(0x02AA2096FE00F3E1,ped,actionDisableFlag)
+    return Citizen.InvokeNative(0x02AA2096FE00F3E1,ped,actionDisableFlag)
 end
+
 
 
 --- 
@@ -4289,6 +4706,7 @@ function SetPedWrithingDuration(ped,writhingDuration1,writhingDuration2,p3)
 end
 
 
+
 --- normalized / non normalized
 ---0.0        / 1000.0         STARTED IN WRITHE STAGE
 ---1.0        / 0.0            END OF WRITHE, DEAD
@@ -4299,8 +4717,9 @@ end
 ---@param normalized boolean
 ---@return float
 function GetPedRemainingRevivalTime(ped,normalized)
-   return Citizen.InvokeNative(0xEBE89623EB861271,ped,normalized)
+    return Citizen.InvokeNative(0xEBE89623EB861271,ped,normalized)
 end
+
 
 
 --- 
@@ -4312,13 +4731,15 @@ function SetPausePedWritheBleedout(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x0E99E3BF11BB6367 (GET_PED_IS_GRAPPLING)
 ---@param ped number
 ---@return boolean
 function GetPedIsGrappling(ped)
-   return Citizen.InvokeNative(0x0E99E3BF11BB6367,ped)
+    return Citizen.InvokeNative(0x0E99E3BF11BB6367,ped)
 end
+
 
 
 --- 
@@ -4326,8 +4747,9 @@ end
 ---@param ped number
 ---@return boolean
 function GetPedIsBeingGrappled(ped)
-   return Citizen.InvokeNative(0x3BDFCF25B58B0415,ped)
+    return Citizen.InvokeNative(0x3BDFCF25B58B0415,ped)
 end
+
 
 
 --- 
@@ -4335,8 +4757,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedGrappler(ped)
-   return Citizen.InvokeNative(0xD0B7AEB56229D317,ped)
+    return Citizen.InvokeNative(0xD0B7AEB56229D317,ped)
 end
+
 
 
 --- 
@@ -4344,8 +4767,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedGrappleState(ped)
-   return Citizen.InvokeNative(0x2311F15D971AA680,ped)
+    return Citizen.InvokeNative(0x2311F15D971AA680,ped)
 end
+
 
 
 --- 
@@ -4353,8 +4777,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedGrappleStyle(ped)
-   return Citizen.InvokeNative(0x753B15AD0FD6F3E3,ped)
+    return Citizen.InvokeNative(0x753B15AD0FD6F3E3,ped)
 end
+
 
 
 --- Hashes: GS_DRAGGING, GS_FACE_TO_BACK, GS_FACE_TO_FACE, GS_FACE_TO_FACE_WALL, GS_MOUNTED
@@ -4363,8 +4788,9 @@ end
 ---@param style hash
 ---@return any
 function SetPedGrappleStyle(ped,style)
-   return Citizen.InvokeNative(0x630E7B01F091A197,ped,style)
+    return Citizen.InvokeNative(0x630E7B01F091A197,ped,style)
 end
+
 
 
 --- 
@@ -4374,6 +4800,7 @@ end
 function SetPedGrappleSequence(ped,grappleSequence)
     Citizen.InvokeNative(0x604190F0CF0DF158,ped,grappleSequence)
 end
+
 
 
 --- 
@@ -4386,6 +4813,7 @@ function SetPedGrappleFlag(ped,flag,enable)
 end
 
 
+
 --- 
 --- Native 0xEAE3B5B019C8D23F (_CLEAR_PED_GRAPPLE_FLAG)
 ---@param ped number
@@ -4395,13 +4823,15 @@ function ClearPedGrappleFlag(ped,flag)
 end
 
 
+
 --- 
 --- Native 0xF3C873ED0C595109 (_GET_PED_GRAPPLE_FLAG)
 ---@param ped number
 ---@return number
 function GetPedGrappleFlag(ped)
-   return Citizen.InvokeNative(0xF3C873ED0C595109,ped)
+    return Citizen.InvokeNative(0xF3C873ED0C595109,ped)
 end
+
 
 
 --- 
@@ -4413,14 +4843,16 @@ function SetPedGrappleAction(ped,grappleAction)
 end
 
 
+
 --- 
 --- Native 0x99A6E246C315BF60 (_SET_PED_GRAPPLE_EFFECT_MULTIPLIER)
 ---@param ped number
 ---@param multiplier float
 ---@return any
 function SetPedGrappleEffectMultiplier(ped,multiplier)
-   return Citizen.InvokeNative(0x99A6E246C315BF60,ped,multiplier)
+    return Citizen.InvokeNative(0x99A6E246C315BF60,ped,multiplier)
 end
+
 
 
 --- 
@@ -4430,6 +4862,7 @@ end
 function SetPedGrappleAnimation(ped,grappleAnim)
     Citizen.InvokeNative(0x56E9C26CD29D1ED6,ped,grappleAnim)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/FLEE_ATTRIBUTES
@@ -4449,13 +4882,15 @@ function SetPedFleeAttributes(ped,attributeFlags,enable)
 end
 
 
+
 --- 
 --- Native 0xB086C8C0F5701D14 (_IS_PED_COWERING)
 ---@param ped number
 ---@return boolean
 function IsPedCowering(ped)
-   return Citizen.InvokeNative(0xB086C8C0F5701D14,ped)
+    return Citizen.InvokeNative(0xB086C8C0F5701D14,ped)
 end
+
 
 
 --- 
@@ -4466,8 +4901,9 @@ end
 ---@param radius float
 ---@return boolean
 function IsAnyPedNearPoint(x,y,z,radius)
-   return Citizen.InvokeNative(0x083961498679DC9F,x,y,z,radius)
+    return Citizen.InvokeNative(0x083961498679DC9F,x,y,z,radius)
 end
+
 
 
 --- 
@@ -4480,13 +4916,15 @@ function ForcePedAiAndAnimationUpdate(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xC488B8C0E52560D8 (_IS_PED_DOING_SCENARIO_TRANSITION)
 ---@param ped number
 ---@return boolean
 function IsPedDoingScenarioTransition(ped)
-   return Citizen.InvokeNative(0xC488B8C0E52560D8,ped)
+    return Citizen.InvokeNative(0xC488B8C0E52560D8,ped)
 end
+
 
 
 --- Forces transition now, called together with 0xD65FDC686A031C83
@@ -4495,6 +4933,7 @@ end
 function AddScenarioTransition(ped)
     Citizen.InvokeNative(0x6D07B371E9439019,ped)
 end
+
 
 
 --- Ped Command Hash are special commands, that can be activated to change conditional anim variations or trigger transitions between conditional anims.
@@ -4508,14 +4947,16 @@ function GivePedHashCommand(ped,commandHash,activationDuration)
 end
 
 
+
 --- 
 --- Native 0x68821369A2CEADD5 (_GET_IS_PED_COMMAND_HASH_PRESENT)
 ---@param ped number
 ---@param commandHash hash
 ---@return boolean
 function GetIsPedCommandHashPresent(ped,commandHash)
-   return Citizen.InvokeNative(0x68821369A2CEADD5,ped,commandHash)
+    return Citizen.InvokeNative(0x68821369A2CEADD5,ped,commandHash)
 end
+
 
 
 --- 
@@ -4527,8 +4968,9 @@ end
 ---@param p4 float
 ---@return boolean
 function IsPedHeadingTowardsPosition(ped,x,y,z,p4)
-   return Citizen.InvokeNative(0xFCF37A457CB96DC0,ped,x,y,z,p4)
+    return Citizen.InvokeNative(0xFCF37A457CB96DC0,ped,x,y,z,p4)
 end
+
 
 
 --- 
@@ -4539,12 +4981,14 @@ function RequestPedVisibilityTracking(ped)
 end
 
 
+
 --- 
 --- Native 0x3088634CF8C819CF (RELEASE_PED_VISIBILITY_TRACKING)
 ---@param ped number
 function ReleasePedVisibilityTracking(ped)
     Citizen.InvokeNative(0x3088634CF8C819CF,ped)
 end
+
 
 
 --- 
@@ -4556,6 +5000,7 @@ function RequestPedVehicleVisibilityTracking(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x75BA1CB3B7D40CAF (REQUEST_PED_USE_SMALL_BBOX_VISIBILITY_TRACKING)
 ---@param ped number
@@ -4565,13 +5010,15 @@ function RequestPedUseSmallBboxVisibilityTracking(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x511F1A683387C7E2 (GET_TRACKED_PED_PIXELCOUNT)
 ---@param ped number
 ---@return number
 function GetTrackedPedPixelcount(ped)
-   return Citizen.InvokeNative(0x511F1A683387C7E2,ped)
+    return Citizen.InvokeNative(0x511F1A683387C7E2,ped)
 end
+
 
 
 --- Returns whether or not a ped is visible within your FOV, not this check auto's to false after a certain distance.
@@ -4580,8 +5027,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsTrackedPedVisible(ped)
-   return Citizen.InvokeNative(0x91C8E617F64188AC,ped)
+    return Citizen.InvokeNative(0x91C8E617F64188AC,ped)
 end
+
 
 
 --- 
@@ -4590,8 +5038,9 @@ end
 ---@param percent float
 ---@return boolean
 function IsTrackedPedVisibilityPercentageNotLessThan(ped,percent)
-   return Citizen.InvokeNative(0x164CECC59E70DF86,ped,percent)
+    return Citizen.InvokeNative(0x164CECC59E70DF86,ped,percent)
 end
+
 
 
 --- 
@@ -4599,8 +5048,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedVisibilityTracked(ped)
-   return Citizen.InvokeNative(0x5102307CE88798EB,ped)
+    return Citizen.InvokeNative(0x5102307CE88798EB,ped)
 end
+
 
 
 --- 
@@ -4608,8 +5058,9 @@ end
 ---@param ped number
 ---@return boolean
 function CanPedBeMounted(ped)
-   return Citizen.InvokeNative(0x2D64376CF437363E,ped)
+    return Citizen.InvokeNative(0x2D64376CF437363E,ped)
 end
+
 
 
 --- Returns true if given ped is a fish.
@@ -4618,8 +5069,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsMetaPedFish(ped)
-   return Citizen.InvokeNative(0x118D476A6F1A13F1,ped)
+    return Citizen.InvokeNative(0x118D476A6F1A13F1,ped)
 end
+
 
 
 --- 
@@ -4628,8 +5080,9 @@ end
 ---@param eventType hash
 ---@return boolean
 function IsEventInQueue(ped,eventType)
-   return Citizen.InvokeNative(0xC8D523BF5BBD3808,ped,eventType)
+    return Citizen.InvokeNative(0xC8D523BF5BBD3808,ped,eventType)
 end
+
 
 
 --- Returns:
@@ -4643,8 +5096,9 @@ end
 ---@param p3 boolean
 ---@return number
 function CanPedSeeEntity(ped,targetEntity,p2,p3)
-   return Citizen.InvokeNative(0x7F9B9791D4CB71F6,ped,targetEntity,p2,p3)
+    return Citizen.InvokeNative(0x7F9B9791D4CB71F6,ped,targetEntity,p2,p3)
 end
+
 
 
 --- 
@@ -4654,8 +5108,9 @@ end
 ---@param p2 boolean
 ---@return number
 function CanPedSeePedCached(ped,targetPed,p2)
-   return Citizen.InvokeNative(0x9D9473CB82D83A30,ped,targetPed,p2)
+    return Citizen.InvokeNative(0x9D9473CB82D83A30,ped,targetPed,p2)
 end
+
 
 
 --- no bone = -1
@@ -4664,8 +5119,9 @@ end
 ---@param boneId number
 ---@return number
 function GetPedBoneIndex(ped,boneId)
-   return Citizen.InvokeNative(0x3F428D08BE5AAE31,ped,boneId)
+    return Citizen.InvokeNative(0x3F428D08BE5AAE31,ped,boneId)
 end
+
 
 
 --- Params: ped, 0f, -1, true, true in R* MP Scripts
@@ -4681,6 +5137,7 @@ function SetPedDirtCleaned(ped,p1,p2,p3,p4)
 end
 
 
+
 --- motionStateHash: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/FORCE_PED_MOTION_STATE
 --- Native 0xF28965D04F570DCA (FORCE_PED_MOTION_STATE)
 ---@param ped number
@@ -4690,8 +5147,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function ForcePedMotionState(ped,motionStateHash,p2,p3,p4)
-   return Citizen.InvokeNative(0xF28965D04F570DCA,ped,motionStateHash,p2,p3,p4)
+    return Citizen.InvokeNative(0xF28965D04F570DCA,ped,motionStateHash,p2,p3,p4)
 end
+
 
 
 --- Old name: _GET_PED_CURRENT_MOVEMENT_SPEED
@@ -4701,8 +5159,9 @@ end
 ---@param speedY float*
 ---@return boolean
 function GetPedCurrentMoveBlendRatio(ped,speedX,speedY)
-   return Citizen.InvokeNative(0xF60165E1D2C5370B,ped,speedX,speedY)
+    return Citizen.InvokeNative(0xF60165E1D2C5370B,ped,speedX,speedY)
 end
+
 
 
 --- 
@@ -4714,6 +5173,7 @@ function SetPedMaxMoveBlendRatio(ped,value)
 end
 
 
+
 --- 
 --- Native 0x01A898D26E2333DD (SET_PED_MIN_MOVE_BLEND_RATIO)
 ---@param ped number
@@ -4723,6 +5183,7 @@ function SetPedMinMoveBlendRatio(ped,value)
 end
 
 
+
 --- _H* - _I*
 --- Native 0xBAE08F00021BFFB2 (_HORSE_AGITATE)
 ---@param mount number
@@ -4730,6 +5191,7 @@ end
 function HorseAgitate(mount,kickOffRider)
     Citizen.InvokeNative(0xBAE08F00021BFFB2,mount,kickOffRider)
 end
+
 
 
 --- Min: 0.0f
@@ -4742,14 +5204,16 @@ function SetPedMoveRateOverride(ped,value)
 end
 
 
+
 --- 
 --- Native 0xCFF869CBFA210D82 (GET_PED_NEARBY_VEHICLES)
 ---@param ped number
 ---@param sizeAndVehs any*
 ---@return number
 function GetPedNearbyVehicles(ped,sizeAndVehs)
-   return Citizen.InvokeNative(0xCFF869CBFA210D82,ped,sizeAndVehs)
+    return Citizen.InvokeNative(0xCFF869CBFA210D82,ped,sizeAndVehs)
 end
+
 
 
 --- 
@@ -4760,8 +5224,9 @@ end
 ---@param p3 number
 ---@return number
 function GetPedNearbyPeds(ped,sizeAndPeds,ignoredPedType,p3)
-   return Citizen.InvokeNative(0x23F8F5FC7E8C4A6B,ped,sizeAndPeds,ignoredPedType,p3)
+    return Citizen.InvokeNative(0x23F8F5FC7E8C4A6B,ped,sizeAndPeds,ignoredPedType,p3)
 end
+
 
 
 --- 
@@ -4769,8 +5234,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedReadyToRender(ped)
-   return Citizen.InvokeNative(0xA0BC8FAED8CFEB3C,ped)
+    return Citizen.InvokeNative(0xA0BC8FAED8CFEB3C,ped)
 end
+
 
 
 --- 
@@ -4778,8 +5244,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedUsingActionMode(ped)
-   return Citizen.InvokeNative(0x00E73468D085F745,ped)
+    return Citizen.InvokeNative(0x00E73468D085F745,ped)
 end
+
 
 
 --- 
@@ -4787,8 +5254,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedUsingActionMode2(ped)
-   return Citizen.InvokeNative(0xEBB208D6AE712C03,ped)
+    return Citizen.InvokeNative(0xEBB208D6AE712C03,ped)
 end
+
 
 
 --- 
@@ -4802,6 +5270,7 @@ function SetPedUsingActionMode(ped,bActionModeEnabled,p2,action)
 end
 
 
+
 --- Overrides the ped's collision capsule radius for the current tick.
 ---Must be called every tick to be effective.
 ---Setting this to 0.001 will allow warping through some objects.
@@ -4813,14 +5282,16 @@ function SetPedCapsule(ped,value)
 end
 
 
+
 --- 
 --- Native 0xB676EFDA03DADA52 (_GET_RIDER_OF_MOUNT)
 ---@param mount number
 ---@param p1 boolean
 ---@return number
 function GetRiderOfMount(mount,p1)
-   return Citizen.InvokeNative(0xB676EFDA03DADA52,mount,p1)
+    return Citizen.InvokeNative(0xB676EFDA03DADA52,mount,p1)
 end
+
 
 
 --- Params: p4 = 35.f, duration = 5000 in R* Scripts
@@ -4837,6 +5308,7 @@ end
 function SpawnpointsStartSearch(x,y,z,width,p4,spawnpointsFlag,p6,duration,p8)
     Citizen.InvokeNative(0x2DF9038C90AD5264,x,y,z,width,p4,spawnpointsFlag,p6,duration,p8)
 end
+
 
 
 --- Searching area between coords 1 and 2
@@ -4857,6 +5329,7 @@ function SpawnpointsStartSearchInAngledArea(x1,y1,z1,x2,y2,z2,width,spawnpointsF
 end
 
 
+
 --- 
 --- Native 0x83ED1FC9DF3411F5 (_SPAWNPOINTS_START_SEARCH_WITH_VOLUME)
 ---@param volume volume
@@ -4869,11 +5342,13 @@ function SpawnpointsStartSearchWithVolume(volume,spawnpointsFlag,p2,duration,p4)
 end
 
 
+
 --- 
 --- Native 0xFEE4A5459472A9F8 (SPAWNPOINTS_CANCEL_SEARCH)
 function SpawnpointsCancelSearch()
     Citizen.InvokeNative(0xFEE4A5459472A9F8)
 end
+
 
 
 --- 
@@ -4884,12 +5359,14 @@ function SpawnpointsIsSearchActive()
 end
 
 
+
 --- 
 --- Native 0xA586FBEB32A53DBB (SPAWNPOINTS_IS_SEARCH_COMPLETE)
 ---@return boolean
 function SpawnpointsIsSearchComplete()
    return Citizen.InvokeNative(0xA586FBEB32A53DBB)
 end
+
 
 
 --- 
@@ -4900,12 +5377,14 @@ function SpawnpointsIsSearchFailed()
 end
 
 
+
 --- 
 --- Native 0xA635C11B8C44AFC2 (SPAWNPOINTS_GET_NUM_SEARCH_RESULTS)
 ---@return number
 function SpawnpointsGetNumSearchResults()
    return Citizen.InvokeNative(0xA635C11B8C44AFC2)
 end
+
 
 
 --- 
@@ -4919,6 +5398,7 @@ function SpawnpointsGetSearchResult(randomInt,x,y,z)
 end
 
 
+
 --- 
 --- Native 0xB782F8238512BAD5 (SPAWNPOINTS_GET_SEARCH_RESULT_FLAGS)
 ---@param p0 any
@@ -4926,6 +5406,7 @@ end
 function SpawnpointsGetSearchResultFlags(p0,p1)
     Citizen.InvokeNative(0xB782F8238512BAD5,p0,p1)
 end
+
 
 
 --- 
@@ -4945,6 +5426,7 @@ function SetIkTarget(ped,ikIndex,entityLookAt,boneLookAt,offsetX,offsetY,offsetZ
 end
 
 
+
 --- For more information, see common:/data/emotional_presets.meta
 --- Native 0x5C3C55EAAD19915F (_REQUEST_PED_EMOTIONAL_PRESET)
 ---@param ped number
@@ -4954,14 +5436,16 @@ function RequestPedEmotionalPreset(ped,name)
 end
 
 
+
 --- See _REQUEST_PED_EMOTIONAL_PRESET
 --- Native 0xDE3904B22695D9F9 (_HAS_PED_EMOTIONAL_PRESET_LOADED)
 ---@param ped number
 ---@param name string
 ---@return boolean
 function HasPedEmotionalPresetLoaded(ped,name)
-   return Citizen.InvokeNative(0xDE3904B22695D9F9,ped,name)
+    return Citizen.InvokeNative(0xDE3904B22695D9F9,ped,name)
 end
+
 
 
 --- See _REQUEST_PED_EMOTIONAL_PRESET
@@ -4973,6 +5457,7 @@ function RemovePedEmotionalPreset(ped,name)
 end
 
 
+
 --- 
 --- Native 0xF7EA250B9A919E03 (_REQUEST_MOTION_TYPE_ASSET)
 ---@param nameHash hash
@@ -4982,14 +5467,16 @@ function RequestMotionTypeAsset(nameHash,ped)
 end
 
 
+
 --- 
 --- Native 0x854BC9B1A1CCD034 (HAS_MOTION_TYPE_ASSET_LOADED)
 ---@param nameHash hash
 ---@param ped number
 ---@return boolean
 function HasMotionTypeAssetLoaded(nameHash,ped)
-   return Citizen.InvokeNative(0x854BC9B1A1CCD034,nameHash,ped)
+    return Citizen.InvokeNative(0x854BC9B1A1CCD034,nameHash,ped)
 end
+
 
 
 --- 
@@ -5001,6 +5488,7 @@ function RemoveMotionTypeAsset(nameHash,ped)
 end
 
 
+
 --- 
 --- Native 0xDC2C5C242AAC342B (SET_PED_LOD_MULTIPLIER)
 ---@param ped number
@@ -5010,13 +5498,15 @@ function SetPedLodMultiplier(ped,multiplier)
 end
 
 
+
 --- 
 --- Native 0x1B710E6F4AB69341 (_GET_PED_LOD_MULTIPLIER)
 ---@param ped number
 ---@return float
 function GetPedLodMultiplier(ped)
-   return Citizen.InvokeNative(0x1B710E6F4AB69341,ped)
+    return Citizen.InvokeNative(0x1B710E6F4AB69341,ped)
 end
+
 
 
 --- 
@@ -5028,8 +5518,9 @@ end
 ---@param radius float
 ---@return boolean
 function IsAnyHostilePedNearPoint(ped,x,y,z,radius)
-   return Citizen.InvokeNative(0x68772DB2B2526F9F,ped,x,y,z,radius)
+    return Citizen.InvokeNative(0x68772DB2B2526F9F,ped,x,y,z,radius)
 end
+
 
 
 --- Returns true if ped is in perception (focused and looking at target ped)
@@ -5043,8 +5534,9 @@ end
 ---@param p5 float
 ---@return boolean
 function IsTargetPedInPerceptionArea(ped,targetPed,p2,customDistance,p4,p5)
-   return Citizen.InvokeNative(0x06087579E7AA85A9,ped,targetPed,p2,customDistance,p4,p5)
+    return Citizen.InvokeNative(0x06087579E7AA85A9,ped,targetPed,p2,customDistance,p4,p5)
 end
+
 
 
 --- 
@@ -5059,13 +5551,15 @@ function SetPopControlSphereThisFrame(p0,p1,p2,p3,p4)
 end
 
 
+
 --- 
 --- Native 0x3AA24CCC0D451379 (IS_PED_HOGTIED)
 ---@param ped number
 ---@return boolean
 function IsPedHogtied(ped)
-   return Citizen.InvokeNative(0x3AA24CCC0D451379,ped)
+    return Citizen.InvokeNative(0x3AA24CCC0D451379,ped)
 end
+
 
 
 --- 
@@ -5073,8 +5567,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedBeingHogtied(ped)
-   return Citizen.InvokeNative(0xD453BB601D4A606E,ped)
+    return Citizen.InvokeNative(0xD453BB601D4A606E,ped)
 end
+
 
 
 --- 
@@ -5082,8 +5577,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedHogtying(ped)
-   return Citizen.InvokeNative(0x42429C674B61238B,ped)
+    return Citizen.InvokeNative(0x42429C674B61238B,ped)
 end
+
 
 
 --- https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/Lasso%20Hogtie%20Flags
@@ -5093,8 +5589,9 @@ end
 ---@param flagId number
 ---@return boolean
 function GetPedLassoHogtieFlag(ped,flagId)
-   return Citizen.InvokeNative(0x2C76FA0E01681F8D,ped,flagId)
+    return Citizen.InvokeNative(0x2C76FA0E01681F8D,ped,flagId)
 end
+
 
 
 --- 
@@ -5107,13 +5604,15 @@ function SetPedLassoHogtieFlag(ped,flagId,value)
 end
 
 
+
 --- 
 --- Native 0xD806CD2A4F2C2996 (_GET_FIRST_ENTITY_PED_IS_CARRYING)
 ---@param ped number
 ---@return entity
 function GetFirstEntityPedIsCarrying(ped)
-   return Citizen.InvokeNative(0xD806CD2A4F2C2996,ped)
+    return Citizen.InvokeNative(0xD806CD2A4F2C2996,ped)
 end
+
 
 
 --- 
@@ -5121,8 +5620,9 @@ end
 ---@param entity entity
 ---@return number
 function GetCarrierAsPed(entity)
-   return Citizen.InvokeNative(0x09B83E68DE004CD4,entity)
+    return Citizen.InvokeNative(0x09B83E68DE004CD4,entity)
 end
+
 
 
 --- 
@@ -5130,8 +5630,9 @@ end
 ---@param entity entity
 ---@return number
 function GetCarrierAsMount(entity)
-   return Citizen.InvokeNative(0xA033D7E4BBF9844D,entity)
+    return Citizen.InvokeNative(0xA033D7E4BBF9844D,entity)
 end
+
 
 
 --- 
@@ -5139,8 +5640,9 @@ end
 ---@param entity entity
 ---@return number
 function GetCarrierAsHuman(entity)
-   return Citizen.InvokeNative(0x79443D56C8DF45EE,entity)
+    return Citizen.InvokeNative(0x79443D56C8DF45EE,entity)
 end
+
 
 
 --- 
@@ -5151,8 +5653,9 @@ end
 ---@param p3 any
 ---@return any
 function GetCarriedAttachedInfoForSlot(p0,p1,p2,p3)
-   return Citizen.InvokeNative(0x608BC6A6AACD5036,p0,p1,p2,p3)
+    return Citizen.InvokeNative(0x608BC6A6AACD5036,p0,p1,p2,p3)
 end
+
 
 
 --- 
@@ -5165,6 +5668,7 @@ function DetachCarriableEntity(entity,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xB5ACE8B23A438EC0 (FIND_ALL_ATTACHED_CARRIABLE_ENTITIES)
 ---@param ped number
@@ -5174,13 +5678,15 @@ function FindAllAttachedCarriableEntities(ped,itemset)
 end
 
 
+
 --- 
 --- Native 0xA911EE21EDF69DAF (IS_PED_CARRYING_SOMETHING)
 ---@param ped number
 ---@return boolean
 function IsPedCarryingSomething(ped)
-   return Citizen.InvokeNative(0xA911EE21EDF69DAF,ped)
+    return Citizen.InvokeNative(0xA911EE21EDF69DAF,ped)
 end
+
 
 
 --- 
@@ -5188,8 +5694,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedLassoed(ped)
-   return Citizen.InvokeNative(0x9682F850056C9ADE,ped)
+    return Citizen.InvokeNative(0x9682F850056C9ADE,ped)
 end
+
 
 
 --- _IS_PED_S* - _IS_PED_U*
@@ -5197,8 +5704,9 @@ end
 ---@param ped number
 ---@return entity
 function GetLassoerOfPed(ped)
-   return Citizen.InvokeNative(0x833F0053340EF413,ped)
+    return Citizen.InvokeNative(0x833F0053340EF413,ped)
 end
+
 
 
 --- 
@@ -5206,8 +5714,9 @@ end
 ---@param ped number
 ---@return entity
 function GetLassoTarget(ped)
-   return Citizen.InvokeNative(0xB65A4DAB460A19BD,ped)
+    return Citizen.InvokeNative(0xB65A4DAB460A19BD,ped)
 end
+
 
 
 --- 
@@ -5215,8 +5724,9 @@ end
 ---@param ped number
 ---@return number
 function GetLassoedLassoer(ped)
-   return Citizen.InvokeNative(0x0C31C51168E80365,ped)
+    return Citizen.InvokeNative(0x0C31C51168E80365,ped)
 end
+
 
 
 --- https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/CLootingFlags__Flags
@@ -5237,14 +5747,16 @@ function SetLootingFlag(ped,lootFlag,enabled)
 end
 
 
+
 --- lootFlag: see SET_LOOTING_FLAG
 --- Native 0xE4C11F104620DDCE (_GET_LOOTING_FLAG)
 ---@param ped number
 ---@param lootFlag number
 ---@return boolean
 function GetLootingFlag(ped,lootFlag)
-   return Citizen.InvokeNative(0xE4C11F104620DDCE,ped,lootFlag)
+    return Citizen.InvokeNative(0xE4C11F104620DDCE,ped,lootFlag)
 end
+
 
 
 --- Returns loot state
@@ -5269,8 +5781,9 @@ end
 ---@param p4 number
 ---@return number
 function RefreshLootStateForPed(ped,p1,lootTarget,p3,p4)
-   return Citizen.InvokeNative(0x5463C962BC7777C3,ped,p1,lootTarget,p3,p4)
+    return Citizen.InvokeNative(0x5463C962BC7777C3,ped,p1,lootTarget,p3,p4)
 end
+
 
 
 --- enum ePedLootStatus
@@ -5284,8 +5797,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedLootStatusMp(ped)
-   return Citizen.InvokeNative(0xC737697C41628340,ped)
+    return Citizen.InvokeNative(0xC737697C41628340,ped)
 end
+
 
 
 --- 
@@ -5293,8 +5807,9 @@ end
 ---@param ped number
 ---@return entity
 function GetLootingPickupTargetEntity(ped)
-   return Citizen.InvokeNative(0x14169FA823679E41,ped)
+    return Citizen.InvokeNative(0x14169FA823679E41,ped)
 end
+
 
 
 --- 
@@ -5302,8 +5817,9 @@ end
 ---@param ped number
 ---@return boolean
 function AddPedSubscribeToLegendaryBlips(ped)
-   return Citizen.InvokeNative(0xE37287EE358939C3,ped)
+    return Citizen.InvokeNative(0xE37287EE358939C3,ped)
 end
+
 
 
 --- 
@@ -5311,8 +5827,9 @@ end
 ---@param ped number
 ---@return boolean
 function RemovePedSubscribeToLegendaryBlips(ped)
-   return Citizen.InvokeNative(0x011A42FD923D41CA,ped)
+    return Citizen.InvokeNative(0x011A42FD923D41CA,ped)
 end
+
 
 
 --- 
@@ -5320,8 +5837,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedIncapacitated(ped)
-   return Citizen.InvokeNative(0xB655DB7582AEC805,ped)
+    return Citizen.InvokeNative(0xB655DB7582AEC805,ped)
 end
+
 
 
 --- 
@@ -5336,13 +5854,15 @@ function SetPedIncapacitationModifiers(ped,canBeIncapacitated,threshold,bleedout
 end
 
 
+
 --- 
 --- Native 0x7A4E00364B5D727B (_GET_PED_CAN_BE_INCAPACITATED_THIS_FRAME)
 ---@param ped number
 ---@return boolean
 function GetPedCanBeIncapacitatedThisFrame(ped)
-   return Citizen.InvokeNative(0x7A4E00364B5D727B,ped)
+    return Citizen.InvokeNative(0x7A4E00364B5D727B,ped)
 end
+
 
 
 --- When set on a player ped, its just like when you die in RDO
@@ -5354,13 +5874,15 @@ function SetPedCanBeIncapacitated(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x89BFDF6D53145545 (_GET_PED_INCAPACITATION_HEALTH)
 ---@param ped number
 ---@return number
 function GetPedIncapacitationHealth(ped)
-   return Citizen.InvokeNative(0x89BFDF6D53145545,ped)
+    return Citizen.InvokeNative(0x89BFDF6D53145545,ped)
 end
+
 
 
 --- 
@@ -5372,12 +5894,14 @@ function SetPedIncapacitationTotalBleedOutDuration(ped,duration)
 end
 
 
+
 --- 
 --- Native 0x4B9668DB91DC39B8 (_RESET_PED_INCAPACITATION_BLEED_OUT_DURATION)
 ---@param ped number
 function ResetPedIncapacitationBleedOutDuration(ped)
     Citizen.InvokeNative(0x4B9668DB91DC39B8,ped)
 end
+
 
 
 --- 
@@ -5389,6 +5913,7 @@ function SetPedIncapacitationFlags(ped,flags)
 end
 
 
+
 --- 
 --- Native 0xF6262491C7704A63 (_INCAPACITATED_REVIVE)
 ---@param ped number
@@ -5398,13 +5923,15 @@ function IncapacitatedRevive(ped,ped2)
 end
 
 
+
 --- 
 --- Native 0x88D9D76D78065487 (_GET_INCAPACITATION_TIME_REMAINING)
 ---@param ped number
 ---@return number
 function GetIncapacitationTimeRemaining(ped)
-   return Citizen.InvokeNative(0x88D9D76D78065487,ped)
+    return Citizen.InvokeNative(0x88D9D76D78065487,ped)
 end
+
 
 
 --- 
@@ -5414,6 +5941,7 @@ end
 function SetPedKnockedByOneHit(ped,p1)
     Citizen.InvokeNative(0x5BCF0B79D4F5DBA3,ped,p1)
 end
+
 
 
 --- Params: hash - ARTHUR or JOHN
@@ -5426,6 +5954,7 @@ function SetPedActivePlayerType(ped,playerType)
 end
 
 
+
 --- 
 --- Native 0x19173C3F15367B54 (_SET_PLAYER_GREET_DISABLED_FOR_PED)
 ---@param ped number
@@ -5434,6 +5963,7 @@ end
 function SetPlayerGreetDisabledForPed(ped,player,duration)
     Citizen.InvokeNative(0x19173C3F15367B54,ped,player,duration)
 end
+
 
 
 --- 
@@ -5446,6 +5976,7 @@ function SetPlayerAntagonizeDisabledForPed(ped,player,duration)
 end
 
 
+
 --- AI_ATTITUDE_NEUTRAL = 0,
 ---AI_ATTITUDE_FRIENDLY,
 ---AI_ATTITUDE_WARY,
@@ -5456,8 +5987,9 @@ end
 ---@param player player
 ---@return number
 function GetPedAttitude(ped,player)
-   return Citizen.InvokeNative(0x7CC2186C32D3540A,ped,player)
+    return Citizen.InvokeNative(0x7CC2186C32D3540A,ped,player)
 end
+
 
 
 --- If targetPed is set to 0 the ped motivationState affects everyone
@@ -5467,8 +5999,9 @@ end
 ---@param targetPed number
 ---@return float
 function GetPedMotivation(ped,motivationState,targetPed)
-   return Citizen.InvokeNative(0x42688E94E96FD9B4,ped,motivationState,targetPed)
+    return Citizen.InvokeNative(0x42688E94E96FD9B4,ped,motivationState,targetPed)
 end
+
 
 
 --- enum eMotivationState
@@ -5496,14 +6029,16 @@ function SetPedMotivation(ped,motivationState,threshold,targetPed)
 end
 
 
+
 --- motivationState: see _SET_PED_MOTIVATION
 --- Native 0x33FA048675821DA7 (_GET_IS_PED_MOTIVATION_STATE_ENABLED)
 ---@param ped number
 ---@param motivationState number
 ---@return boolean
 function GetIsPedMotivationStateEnabled(ped,motivationState)
-   return Citizen.InvokeNative(0x33FA048675821DA7,ped,motivationState)
+    return Citizen.InvokeNative(0x33FA048675821DA7,ped,motivationState)
 end
+
 
 
 --- motivationState: see _SET_PED_MOTIVATION
@@ -5516,6 +6051,7 @@ function SetPedMotivationStateOverride(ped,motivationState,enabled)
 end
 
 
+
 --- The higher the modifier, the slower the motivationState value will decrease
 --- Native 0xA1EB5D029E0191D3 (_SET_PED_MOTIVATION_MODIFIER)
 ---@param ped number
@@ -5524,6 +6060,7 @@ end
 function SetPedMotivationModifier(ped,motivationState,modifier)
     Citizen.InvokeNative(0xA1EB5D029E0191D3,ped,motivationState,modifier)
 end
+
 
 
 --- 0.0 - 1.0
@@ -5536,6 +6073,7 @@ function SetPedScent(ped,scent)
 end
 
 
+
 --- 
 --- Native 0x05CE6AF4DF071D23 (_SET_PED_LADDER_MOVEMENT_SPEED_MODIFIER)
 ---@param ped number
@@ -5545,12 +6083,14 @@ function SetPedLadderMovementSpeedModifier(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x801917E7D7BCE418 (_RESET_PED_LADDER_MOVEMENT_SPEED_MODIFIER)
 ---@param ped number
 function ResetPedLadderMovementSpeedModifier(ped)
     Citizen.InvokeNative(0x801917E7D7BCE418,ped)
 end
+
 
 
 --- _SET_PED_S* - _SET_PED_T*
@@ -5562,13 +6102,15 @@ function SetPedVoiceVolume(ped,volume)
 end
 
 
+
 --- 
 --- Native 0x226CF9B159E38F42 (_IS_PED_DRAGGING)
 ---@param ped number
 ---@return boolean
 function IsPedDragging(ped)
-   return Citizen.InvokeNative(0x226CF9B159E38F42,ped)
+    return Citizen.InvokeNative(0x226CF9B159E38F42,ped)
 end
+
 
 
 --- 
@@ -5576,8 +6118,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedBeingDragged(ped)
-   return Citizen.InvokeNative(0xEF3A8772F085B4AA,ped)
+    return Citizen.InvokeNative(0xEF3A8772F085B4AA,ped)
 end
+
 
 
 --- 
@@ -5586,8 +6129,9 @@ end
 ---@param volume volume
 ---@return boolean
 function AddPedStayOutVolume(ped,volume)
-   return Citizen.InvokeNative(0xE9B168527B337BF0,ped,volume)
+    return Citizen.InvokeNative(0xE9B168527B337BF0,ped,volume)
 end
+
 
 
 --- 
@@ -5596,8 +6140,9 @@ end
 ---@param volume volume
 ---@return boolean
 function RemovePedStayOutVolume(ped,volume)
-   return Citizen.InvokeNative(0x0CAB404CD2DB41F5,ped,volume)
+    return Citizen.InvokeNative(0x0CAB404CD2DB41F5,ped,volume)
 end
+
 
 
 --- 
@@ -5605,8 +6150,9 @@ end
 ---@param ped number
 ---@return entity
 function GetPedMotionFocusEntity(ped)
-   return Citizen.InvokeNative(0x243E1B4607040057,ped)
+    return Citizen.InvokeNative(0x243E1B4607040057,ped)
 end
+
 
 
 --- Sets MetaPedExpression at index specified. Morphs components, such as changing body size or facial features.
@@ -5626,6 +6172,7 @@ function SetCharExpression(ped,index,value)
 end
 
 
+
 --- Gets MetaPedExpression at index specified
 ---For index, see: _SET_CHAR_EXPRESSION
 ---Old name: _GET_PED_FACE_FEATURE
@@ -5634,8 +6181,9 @@ end
 ---@param index number
 ---@return float
 function GetCharExpression(ped,index)
-   return Citizen.InvokeNative(0xFD1BA1EEF7985BB8,ped,index)
+    return Citizen.InvokeNative(0xFD1BA1EEF7985BB8,ped,index)
 end
+
 
 
 --- 
@@ -5643,8 +6191,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedFallingOver(ped)
-   return Citizen.InvokeNative(0x3E592D0486DEC0F6,ped)
+    return Citizen.InvokeNative(0x3E592D0486DEC0F6,ped)
 end
+
 
 
 --- 
@@ -5653,8 +6202,9 @@ end
 ---@param ms number
 ---@return boolean
 function HasPedBeenShovedRecently(ped,ms)
-   return Citizen.InvokeNative(0x29FCE825613FEFCA,ped,ms)
+    return Citizen.InvokeNative(0x29FCE825613FEFCA,ped,ms)
 end
+
 
 
 --- 
@@ -5662,8 +6212,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedTranquilizer(ped)
-   return Citizen.InvokeNative(0x65C75FDCCAC86464,ped)
+    return Citizen.InvokeNative(0x65C75FDCCAC86464,ped)
 end
+
 
 
 --- The higher the multiplier the less the engine renders culls (https://docs.unity3d.com/Manual/OcclusionCulling.html)
@@ -5674,6 +6225,7 @@ end
 function SetPedCullRange(ped,p1,p2)
     Citizen.InvokeNative(0x8AC1D721B2097B6E,ped,p1,p2)
 end
+
 
 
 --- enum eMetaPedType
@@ -5688,8 +6240,9 @@ end
 ---@param ped number
 ---@return number
 function GetMetaPedType(ped)
-   return Citizen.InvokeNative(0xEC9A1261BF0CE510,ped)
+    return Citizen.InvokeNative(0xEC9A1261BF0CE510,ped)
 end
+
 
 
 --- 
@@ -5698,8 +6251,9 @@ end
 ---@param component hash
 ---@return boolean
 function IsMetaPedUsingComponent(ped,component)
-   return Citizen.InvokeNative(0xFB4891BD7578CDC1,ped,component)
+    return Citizen.InvokeNative(0xFB4891BD7578CDC1,ped,component)
 end
+
 
 
 --- 
@@ -5707,8 +6261,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedChild(ped)
-   return Citizen.InvokeNative(0x137772000DAF42C5,ped)
+    return Citizen.InvokeNative(0x137772000DAF42C5,ped)
 end
+
 
 
 --- Use to apply metaped player components
@@ -5728,6 +6283,7 @@ function SetMetaPedTag(ped,drawable,albedo,normal,material,palette,tint0,tint1,t
 end
 
 
+
 --- 
 --- Native 0xD710A5007C2AC539 (REMOVE_TAG_FROM_META_PED)
 ---@param ped number
@@ -5738,13 +6294,15 @@ function RemoveTagFromMetaPed(ped,component,p2)
 end
 
 
+
 --- Works similar to 0x90403E8107B60E81 (_GET_NUM_COMPONENTS_IN_PED) but is used to get category hashes instead
 --- Native 0xA622E66EEE92A08D (_GET_NUM_COMPONENT_CATEGORIES_IN_PED)
 ---@param ped number
 ---@return number
 function GetNumComponentCategoriesInPed(ped)
-   return Citizen.InvokeNative(0xA622E66EEE92A08D,ped)
+    return Citizen.InvokeNative(0xA622E66EEE92A08D,ped)
 end
+
 
 
 --- Returns category hash that each ped component has. Hash examples: MASKS, HATS, HEADS, HORSE_MANES
@@ -5753,8 +6311,9 @@ end
 ---@param index number
 ---@return hash
 function GetPedComponentCategoryByIndex(ped,index)
-   return Citizen.InvokeNative(0xCCB97B51893C662F,ped,index)
+    return Citizen.InvokeNative(0xCCB97B51893C662F,ped,index)
 end
+
 
 
 --- 
@@ -5762,8 +6321,9 @@ end
 ---@param ped number
 ---@return number
 function GetNumComponentsInPed(ped)
-   return Citizen.InvokeNative(0x90403E8107B60E81,ped)
+    return Citizen.InvokeNative(0x90403E8107B60E81,ped)
 end
+
 
 
 --- Update variation on ped, needed after first creation, or when component or texture/overlay is changed
@@ -5777,6 +6337,7 @@ end
 function UpdatePedVariation(ped,p1,p2,p3,p4,p5)
     Citizen.InvokeNative(0xCC8CA3E88256E58F,ped,p1,p2,p3,p4,p5)
 end
+
 
 
 --- Note: you have to update your ped's variation after calling (using 0xCC8CA3E88256E58F)
@@ -5818,13 +6379,15 @@ function EquipMetaPedOutfit(ped,hash)
 end
 
 
+
 --- 
 --- Native 0x30569F348D126A5A (_GET_PED_META_OUTFIT_HASH)
 ---@param ped number
 ---@return hash
 function GetPedMetaOutfitHash(ped)
-   return Citizen.InvokeNative(0x30569F348D126A5A,ped)
+    return Citizen.InvokeNative(0x30569F348D126A5A,ped)
 end
+
 
 
 --- 
@@ -5837,14 +6400,16 @@ function EquipMetaPedSuboutfit(ped,suboutfit,p2)
 end
 
 
+
 --- 
 --- Native 0xC0E880B7A441164D (_DOES_META_PED_OUTFIT_EXIST_FOR_PED_MODEL)
 ---@param outfit hash
 ---@param model hash
 ---@return boolean
 function DoesMetaPedOutfitExistForPedModel(outfit,model)
-   return Citizen.InvokeNative(0xC0E880B7A441164D,outfit,model)
+    return Citizen.InvokeNative(0xC0E880B7A441164D,outfit,model)
 end
+
 
 
 --- 
@@ -5854,8 +6419,9 @@ end
 ---@param model hash
 ---@return boolean
 function DoesMetaPedSuboutfitExistForPedModel(outfit,suboutfit,model)
-   return Citizen.InvokeNative(0x4FF3C2B4E6A196C1,outfit,suboutfit,model)
+    return Citizen.InvokeNative(0x4FF3C2B4E6A196C1,outfit,suboutfit,model)
 end
+
 
 
 --- 
@@ -5864,6 +6430,7 @@ end
 function ResetPedComponents(ped)
     Citizen.InvokeNative(0x0BFA1BD465CDFEFD,ped)
 end
+
 
 
 --- 
@@ -5875,13 +6442,15 @@ function SetRandomOutfitVariation(ped,p1)
 end
 
 
+
 --- 
 --- Native 0x10C70A515BC03707 (GET_NUM_META_PED_OUTFITS)
 ---@param ped number
 ---@return number
 function GetNumMetaPedOutfits(ped)
-   return Citizen.InvokeNative(0x10C70A515BC03707,ped)
+    return Citizen.InvokeNative(0x10C70A515BC03707,ped)
 end
+
 
 
 --- Sets the outfit preset for the ped. The presetId is an index which determines its preset outfit. p2 is always false in the scripts.
@@ -5894,6 +6463,7 @@ end
 function EquipMetaPedOutfitPreset(ped,presetId,p2)
     Citizen.InvokeNative(0x77FF8D35EEC6BBC4,ped,presetId,p2)
 end
+
 
 
 --- Changes Multiplayer ped face and body type components, they can be stacked
@@ -5911,14 +6481,16 @@ function EquipMetaPedOutfitExtra(ped,component,p2,p3)
 end
 
 
+
 --- Used in script function HORSE_IS_META_PED_OUTFIT_SADDLE_EQUIPPED
 --- Native 0x98082246107A6ACF (_IS_META_PED_OUTFIT_EQUIPPED)
 ---@param ped number
 ---@param outfit hash
 ---@return boolean
 function IsMetaPedOutfitEquipped(ped,outfit)
-   return Citizen.InvokeNative(0x98082246107A6ACF,ped,outfit)
+    return Citizen.InvokeNative(0x98082246107A6ACF,ped,outfit)
 end
+
 
 
 --- Used in script function METAPED_CLOTHING__XML__APPLY_OUTFIT_TINTS_TO_PED
@@ -5934,6 +6506,7 @@ function SetTextureOutfitTints(ped,componentCategory,palette,tint0,tint1,tint2)
 end
 
 
+
 --- Returns requestId
 ---Params: p1 = 1 in R* Scripts (Used in SP only)
 --- Native 0xF97C34C33487D569 (_REQUEST_META_PED)
@@ -5941,8 +6514,9 @@ end
 ---@param p1 number
 ---@return number
 function RequestMetaPed(model,p1)
-   return Citizen.InvokeNative(0xF97C34C33487D569,model,p1)
+    return Citizen.InvokeNative(0xF97C34C33487D569,model,p1)
 end
+
 
 
 --- 
@@ -5950,8 +6524,9 @@ end
 ---@param requestId number
 ---@return boolean
 function HasMetaPedRequestLoaded(requestId)
-   return Citizen.InvokeNative(0xC0940AC858C1E126,requestId)
+    return Citizen.InvokeNative(0xC0940AC858C1E126,requestId)
 end
+
 
 
 --- 
@@ -5959,8 +6534,9 @@ end
 ---@param requestId number
 ---@return boolean
 function IsMetaPedRequestValid(requestId)
-   return Citizen.InvokeNative(0x43E4DA469541A9C9,requestId)
+    return Citizen.InvokeNative(0x43E4DA469541A9C9,requestId)
 end
+
 
 
 --- Only used in SP scripts, for example odriscolls1: BOOLS: true, true, true, false, false
@@ -5977,8 +6553,9 @@ end
 ---@param p9 boolean
 ---@return number
 function CreateMetaPed(requestId,x,y,z,heading,p5,p6,p7,p8,p9)
-   return Citizen.InvokeNative(0x0BCD4091C8EABA42,requestId,x,y,z,heading,p5,p6,p7,p8,p9)
+    return Citizen.InvokeNative(0x0BCD4091C8EABA42,requestId,x,y,z,heading,p5,p6,p7,p8,p9)
 end
+
 
 
 --- 
@@ -5989,6 +6566,7 @@ function ReleaseMetaPedRequest(requestId)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/blob/master/clothes/metaped_outfits.lua
 ---Returns requestId, to be used with 0x74F512E29CB717E2
 --- Native 0x13154A76CE0CF9AB (_REQUEST_META_PED_OUTFIT)
@@ -5996,8 +6574,9 @@ end
 ---@param outfit hash
 ---@return number
 function RequestMetaPedOutfit(model,outfit)
-   return Citizen.InvokeNative(0x13154A76CE0CF9AB,model,outfit)
+    return Citizen.InvokeNative(0x13154A76CE0CF9AB,model,outfit)
 end
+
 
 
 --- 
@@ -6008,6 +6587,7 @@ function ReleaseMetaPedOutfitRequest(requestId)
 end
 
 
+
 --- Returns requestId
 ---Params: p1 = 1 in R* Scripts
 --- Native 0x91FE941F9FCFB702 (_REQUEST_META_PED_ASSET_BUNDLE)
@@ -6015,8 +6595,9 @@ end
 ---@param p1 number
 ---@return number
 function RequestMetaPedAssetBundle(asset,p1)
-   return Citizen.InvokeNative(0x91FE941F9FCFB702,asset,p1)
+    return Citizen.InvokeNative(0x91FE941F9FCFB702,asset,p1)
 end
+
 
 
 --- 
@@ -6028,8 +6609,9 @@ end
 ---@param p4 number
 ---@return any
 function RequestMetaPedComponent(metaPedType,p1,p2,p3,p4)
-   return Citizen.InvokeNative(0xF6D9E1F3560CBF8E,metaPedType,p1,p2,p3,p4)
+    return Citizen.InvokeNative(0xF6D9E1F3560CBF8E,metaPedType,p1,p2,p3,p4)
 end
+
 
 
 --- 
@@ -6040,13 +6622,15 @@ function ReleaseMetaPedAssetRequest(requestId)
 end
 
 
+
 --- 
 --- Native 0xB0B2C6D170B0E8E5 (_HAS_META_PED_ASSET_LOADED)
 ---@param requestId number
 ---@return boolean
 function HasMetaPedAssetLoaded(requestId)
-   return Citizen.InvokeNative(0xB0B2C6D170B0E8E5,requestId)
+    return Citizen.InvokeNative(0xB0B2C6D170B0E8E5,requestId)
 end
+
 
 
 --- 
@@ -6054,8 +6638,9 @@ end
 ---@param requestId number
 ---@return boolean
 function IsMetaPedAssetValid(requestId)
-   return Citizen.InvokeNative(0x93FFD92F05EC32FD,requestId)
+    return Citizen.InvokeNative(0x93FFD92F05EC32FD,requestId)
 end
+
 
 
 --- Creates prop from metaped asset bundle
@@ -6074,8 +6659,9 @@ end
 ---@param p9 boolean
 ---@return entity
 function CreateMetaPedAsset(asset,posX,posY,posZ,rotX,rotY,rotZ,p7,p8,p9)
-   return Citizen.InvokeNative(0x9641A9A20310F6B8,asset,posX,posY,posZ,rotX,rotY,rotZ,p7,p8,p9)
+    return Citizen.InvokeNative(0x9641A9A20310F6B8,asset,posX,posY,posZ,rotX,rotY,rotZ,p7,p8,p9)
 end
+
 
 
 --- 
@@ -6083,8 +6669,9 @@ end
 ---@param requestId number
 ---@return boolean
 function HasMetaPedOutfitLoaded(requestId)
-   return Citizen.InvokeNative(0x610438375E5D1801,requestId)
+    return Citizen.InvokeNative(0x610438375E5D1801,requestId)
 end
+
 
 
 --- 
@@ -6092,8 +6679,9 @@ end
 ---@param requestId number
 ---@return boolean
 function IsMetaPedOutfitRequestValid(requestId)
-   return Citizen.InvokeNative(0xB25E57FC8E37114D,requestId)
+    return Citizen.InvokeNative(0xB25E57FC8E37114D,requestId)
 end
+
 
 
 --- Creates metaped from ped outfit requestId. See _REQUEST_METAPED_OUTFIT
@@ -6109,8 +6697,9 @@ end
 ---@param p8 boolean
 ---@return number
 function CreateMetaPedOutfitPed(requestId,x,y,z,heading,p5,p6,p7,p8)
-   return Citizen.InvokeNative(0xEAF682A14F8E5F53,requestId,x,y,z,heading,p5,p6,p7,p8)
+    return Citizen.InvokeNative(0xEAF682A14F8E5F53,requestId,x,y,z,heading,p5,p6,p7,p8)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/clothes/metaped_outfits.lua
@@ -6121,8 +6710,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function ApplyPedMetaPedOutfit(requestId,ped,p2,p3)
-   return Citizen.InvokeNative(0x74F512E29CB717E2,requestId,ped,p2,p3)
+    return Citizen.InvokeNative(0x74F512E29CB717E2,requestId,ped,p2,p3)
 end
+
 
 
 --- Sets ped eye redness, weariness: 0.f to 1.f
@@ -6134,14 +6724,16 @@ function SetMetaPedWeariness(ped,weariness)
 end
 
 
+
 --- Returns peltId
 --- Native 0x0CEEB6F4780B1F2F (_GET_PELT_FROM_HORSE)
 ---@param horse number
 ---@param index number
 ---@return number
 function GetPeltFromHorse(horse,index)
-   return Citizen.InvokeNative(0x0CEEB6F4780B1F2F,horse,index)
+    return Citizen.InvokeNative(0x0CEEB6F4780B1F2F,horse,index)
 end
+
 
 
 --- 
@@ -6153,6 +6745,7 @@ function SetPeltForHorse(horse,peltId)
 end
 
 
+
 --- 
 --- Native 0x627F7F3A0C4C51FF (_CLEAR_PELT_FROM_HORSE)
 ---@param horse number
@@ -6160,6 +6753,7 @@ end
 function ClearPeltFromHorse(horse,peltId)
     Citizen.InvokeNative(0x627F7F3A0C4C51FF,horse,peltId)
 end
+
 
 
 --- 
@@ -6171,6 +6765,7 @@ function SetPedLights(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xDE1B1907A83A1550 (_SET_HEALTH_RECHARGE_MULTIPLIER)
 ---@param ped number
@@ -6180,13 +6775,15 @@ function SetHealthRechargeMultiplier(ped,multiplier)
 end
 
 
+
 --- 
 --- Native 0x95B8E397B8F4360F (_GET_HEALTH_RECHARGE_MULTIPLIER)
 ---@param ped number
 ---@return float
 function GetHealthRechargeMultiplier(ped)
-   return Citizen.InvokeNative(0x95B8E397B8F4360F,ped)
+    return Citizen.InvokeNative(0x95B8E397B8F4360F,ped)
 end
+
 
 
 --- 
@@ -6198,13 +6795,15 @@ function SetStaminaDepletionMultiplier(ped,multiplier)
 end
 
 
+
 --- 
 --- Native 0x825F6DD559A0895B (_GET_STAMINA_DEPLETION_MULTIPLIER)
 ---@param ped number
 ---@return float
 function GetStaminaDepletionMultiplier(ped)
-   return Citizen.InvokeNative(0x825F6DD559A0895B,ped)
+    return Citizen.InvokeNative(0x825F6DD559A0895B,ped)
 end
+
 
 
 --- 
@@ -6216,13 +6815,15 @@ function SetStaminaRechargeMultiplier(ped,multiplier)
 end
 
 
+
 --- 
 --- Native 0xE7687EB2F634ABF0 (_GET_STAMINA_RECHARGE_MULTIPLIER)
 ---@param ped number
 ---@return float
 function GetStaminaRechargeMultiplier(ped)
-   return Citizen.InvokeNative(0xE7687EB2F634ABF0,ped)
+    return Citizen.InvokeNative(0xE7687EB2F634ABF0,ped)
 end
+
 
 
 --- Alters entity's stamina by 'amount'. Can be negative (to drain stamina). float amount: -1000.0 - 1000.0
@@ -6231,8 +6832,9 @@ end
 ---@param amount float
 ---@return boolean
 function ChangePedStamina(ped,amount)
-   return Citizen.InvokeNative(0xC3D4B754C0E86B9E,ped,amount)
+    return Citizen.InvokeNative(0xC3D4B754C0E86B9E,ped,amount)
 end
+
 
 
 --- 
@@ -6240,8 +6842,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedStamina(ped)
-   return Citizen.InvokeNative(0x775A1CA7893AA8B5,ped)
+    return Citizen.InvokeNative(0x775A1CA7893AA8B5,ped)
 end
+
 
 
 --- Returns stamina normalizedValue / normalizedUnlockedMax
@@ -6249,8 +6852,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedStaminaNormalized(ped)
-   return Citizen.InvokeNative(0x22F2A386D43048A9,ped)
+    return Citizen.InvokeNative(0x22F2A386D43048A9,ped)
 end
+
 
 
 --- 
@@ -6258,8 +6862,9 @@ end
 ---@param ped number
 ---@return float
 function GetPedMaxStamina(ped)
-   return Citizen.InvokeNative(0xCB42AFE2B613EE55,ped)
+    return Citizen.InvokeNative(0xCB42AFE2B613EE55,ped)
 end
+
 
 
 --- 0.0 <= stamina <= 100.0
@@ -6271,13 +6876,15 @@ function RestorePedStamina(ped,stamina)
 end
 
 
+
 --- 
 --- Native 0x16F2C8C084AB2092 (_GET_NUM_RESERVED_HEALTH)
 ---@param ped number
 ---@return any
 function GetNumReservedHealth(ped)
-   return Citizen.InvokeNative(0x16F2C8C084AB2092,ped)
+    return Citizen.InvokeNative(0x16F2C8C084AB2092,ped)
 end
+
 
 
 --- 
@@ -6285,8 +6892,9 @@ end
 ---@param ped number
 ---@return object
 function GetPedLastDroppedHat(ped)
-   return Citizen.InvokeNative(0x1F714E7A9DADFC42,ped)
+    return Citizen.InvokeNative(0x1F714E7A9DADFC42,ped)
 end
+
 
 
 --- Creates a handle to an instance of "CScriptResource_GravityWell", this system forces local ped to target specified position when moving, however player still can interrupt this.
@@ -6305,8 +6913,9 @@ end
 ---@param stopAtDestination boolean
 ---@return number
 function CreateGravityWell(xPos,yPos,zPos,heading,radius,p5,p6,p7,stopAtDestination)
-   return Citizen.InvokeNative(0x4F5EBE70081E5A20,xPos,yPos,zPos,heading,radius,p5,p6,p7,stopAtDestination)
+    return Citizen.InvokeNative(0x4F5EBE70081E5A20,xPos,yPos,zPos,heading,radius,p5,p6,p7,stopAtDestination)
 end
+
 
 
 --- Removes gravity well by handle returned from 0x4F5EBE70081E5A20
@@ -6317,13 +6926,15 @@ function RemoveGravityWell(handle)
 end
 
 
+
 --- 
 --- Native 0x57779B55B83E2BEA (_IS_PED_INTIMIDATED)
 ---@param ped number
 ---@return boolean
 function IsPedIntimidated(ped)
-   return Citizen.InvokeNative(0x57779B55B83E2BEA,ped)
+    return Citizen.InvokeNative(0x57779B55B83E2BEA,ped)
 end
+
 
 
 --- Creates a texture override data for ped and returns it's index.
@@ -6339,8 +6950,9 @@ end
 ---@param materialHash hash
 ---@return number
 function RequestTexture(albedoHash,normalHash,materialHash)
-   return Citizen.InvokeNative(0xC5E7204F322E49EB,albedoHash,normalHash,materialHash)
+    return Citizen.InvokeNative(0xC5E7204F322E49EB,albedoHash,normalHash,materialHash)
 end
+
 
 
 --- 
@@ -6353,12 +6965,14 @@ function ApplyTextureOnPed(ped,componentHash,textureId)
 end
 
 
+
 --- Removes a texture created by 0xC5E7204F322E49EB.
 --- Native 0x6BEFAA907B076859 (_RELEASE_TEXTURE)
 ---@param textureId number
 function ReleaseTexture(textureId)
     Citizen.InvokeNative(0x6BEFAA907B076859,textureId)
 end
+
 
 
 --- Should be called at least once for any new texture override.
@@ -6371,6 +6985,7 @@ function UpdatePedTexture(textureId)
 end
 
 
+
 --- Removes every texture layer but the base layer
 ---Clearing texture's data: setting params to default values, but keep overlays.
 --- Native 0x8472A1789478F82F (_RESET_PED_TEXTURE)
@@ -6380,13 +6995,15 @@ function ResetPedTexture(textureId)
 end
 
 
+
 --- 
 --- Native 0x31DC8D3F216D8509 (_IS_TEXTURE_VALID)
 ---@param textureId number
 ---@return boolean
 function IsTextureValid(textureId)
-   return Citizen.InvokeNative(0x31DC8D3F216D8509,textureId)
+    return Citizen.InvokeNative(0x31DC8D3F216D8509,textureId)
 end
+
 
 
 --- Creates ped overlay in texture override data and returns it's index.
@@ -6403,8 +7020,9 @@ end
 ---@param sheetGridIndex number
 ---@return number
 function AddTextureLayer(textureId,albedoHash,normalHash,materialHash,blendType,texAlpha,sheetGridIndex)
-   return Citizen.InvokeNative(0x86BB5FF45F193A02,textureId,albedoHash,normalHash,materialHash,blendType,texAlpha,sheetGridIndex)
+    return Citizen.InvokeNative(0x86BB5FF45F193A02,textureId,albedoHash,normalHash,materialHash,blendType,texAlpha,sheetGridIndex)
 end
+
 
 
 --- 
@@ -6414,6 +7032,7 @@ end
 function RemovePedOverlay(textureId,overlayId)
     Citizen.InvokeNative(0x96C349DE04C49011,textureId,overlayId)
 end
+
 
 
 --- 
@@ -6426,6 +7045,7 @@ function SetTextureLayerSheetGridIndex(textureId,layerId,sheetGridIndex)
 end
 
 
+
 --- 
 --- Native 0x6C76BC24F8BB709A (_SET_TEXTURE_LAYER_ALPHA)
 ---@param textureId number
@@ -6434,6 +7054,7 @@ end
 function SetTextureLayerAlpha(textureId,layerId,texAlpha)
     Citizen.InvokeNative(0x6C76BC24F8BB709A,textureId,layerId,texAlpha)
 end
+
 
 
 --- 
@@ -6446,6 +7067,7 @@ function SetTextureLayerRoughness(textureId,layerId,texRough)
 end
 
 
+
 --- paletteHash: https://raw.githubusercontent.com/femga/rdr3_discoveries/master/clothes/cloth_color_palletes.lua
 --- Native 0x1ED8588524AC9BE1 (_SET_TEXTURE_LAYER_PALLETE)
 ---@param textureId number
@@ -6454,6 +7076,7 @@ end
 function SetTextureLayerPallete(textureId,layerId,paletteHash)
     Citizen.InvokeNative(0x1ED8588524AC9BE1,textureId,layerId,paletteHash)
 end
+
 
 
 --- Seem color is not RGB or HSV
@@ -6468,6 +7091,7 @@ function SetTextureLayerTint(textureId,layerId,tint0,tint1,tint2)
 end
 
 
+
 --- 
 --- Native 0xF2EA041F1146D75B (_SET_TEXTURE_LAYER_MOD)
 ---@param textureId number
@@ -6478,6 +7102,7 @@ end
 function SetTextureLayerMod(textureId,layerId,modTextureHash,modAlpha,modChannel)
     Citizen.InvokeNative(0xF2EA041F1146D75B,textureId,layerId,modTextureHash,modAlpha,modChannel)
 end
+
 
 
 --- 
@@ -6492,6 +7117,7 @@ function SetTextureLayerTextureMap(textureId,layerId,albedoHash,normalHash,mater
 end
 
 
+
 --- Removes every texture layer
 ---Old Name: _RESET_PED_TEXTURE_2
 --- Native 0xB63B9178D0F58D82 (_CLEAR_PED_TEXTURE)
@@ -6501,14 +7127,16 @@ function ClearPedTexture(textureId)
 end
 
 
+
 --- 
 --- Native 0xFB1E7998B8595825 (IS_LOCATION_SPAWN_SAFE)
 ---@param ped number
 ---@param p1 float
 ---@return boolean
 function IsLocationSpawnSafe(ped,p1)
-   return Citizen.InvokeNative(0xFB1E7998B8595825,ped,p1)
+    return Citizen.InvokeNative(0xFB1E7998B8595825,ped,p1)
 end
+
 
 
 --- -1 - HORSE_ASSIST__NO_CHANGE
@@ -6523,6 +7151,7 @@ function SetHorseAvoidanceLevel(horse,avoidanceLevel)
 end
 
 
+
 --- 
 --- Native 0x2A5AFD2B8381A6E1 (RESET_HORSE_AVOIDANCE_LEVEL_TO_DEFAULT)
 ---@param horse number
@@ -6531,14 +7160,16 @@ function ResetHorseAvoidanceLevelToDefault(horse)
 end
 
 
+
 --- Doesn't actually return anything.
 --- Native 0xEB72453B6F5B45B0 (_SET_PED_USE_HORSE_MAP_COLLISION)
 ---@param ped number
 ---@param toggle boolean
 ---@return any
 function SetPedUseHorseMapCollision(ped,toggle)
-   return Citizen.InvokeNative(0xEB72453B6F5B45B0,ped,toggle)
+    return Citizen.InvokeNative(0xEB72453B6F5B45B0,ped,toggle)
 end
+
 
 
 --- This is a way to get what drawables a ped has equipped
@@ -6553,8 +7184,9 @@ end
 ---@param material hash*
 ---@return boolean
 function GetMetaPedAssetGuids(ped,index,drawable,albedo,normal,material)
-   return Citizen.InvokeNative(0xA9C28516A6DC9D56,ped,index,drawable,albedo,normal,material)
+    return Citizen.InvokeNative(0xA9C28516A6DC9D56,ped,index,drawable,albedo,normal,material)
 end
+
 
 
 --- 
@@ -6567,8 +7199,9 @@ end
 ---@param tint2 int*
 ---@return boolean
 function GetMetaPedAssetTint(ped,index,pallete,tint0,tint1,tint2)
-   return Citizen.InvokeNative(0xE7998FEC53A33BBE,ped,index,pallete,tint0,tint1,tint2)
+    return Citizen.InvokeNative(0xE7998FEC53A33BBE,ped,index,pallete,tint0,tint1,tint2)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/AI/BLACKBOARDS
@@ -6586,6 +7219,7 @@ function SetPedBlackboardInt(ped,variableName,value,removeTimer)
 end
 
 
+
 --- 
 --- Native 0xCB9401F918CB0F75 (_SET_PED_BLACKBOARD_BOOL)
 ---@param ped number
@@ -6597,6 +7231,7 @@ function SetPedBlackboardBool(ped,variableName,value,removeTimer)
 end
 
 
+
 --- 
 --- Native 0x437C08DB4FEBE2BD (_SET_PED_BLACKBOARD_FLOAT)
 ---@param ped number
@@ -6606,6 +7241,7 @@ end
 function SetPedBlackboardFloat(ped,variableName,value,removeTimer)
     Citizen.InvokeNative(0x437C08DB4FEBE2BD,ped,variableName,value,removeTimer)
 end
+
 
 
 --- p1:
@@ -6625,6 +7261,7 @@ function SetPedBlackboardHash(ped,variableName,value,removeTimer)
 end
 
 
+
 --- 
 --- Native 0x81B75428A7813E67 (_REMOVE_PED_BLACKBOARD_INT)
 ---@param ped number
@@ -6632,6 +7269,7 @@ end
 function RemovePedBlackboardInt(ped,variableName)
     Citizen.InvokeNative(0x81B75428A7813E67,ped,variableName)
 end
+
 
 
 --- 
@@ -6643,6 +7281,7 @@ function RemovePedBlackboardBool(ped,variableName)
 end
 
 
+
 --- 
 --- Native 0x411189E51B8020BA (_REMOVE_PED_BLACKBOARD_FLOAT)
 ---@param ped number
@@ -6650,6 +7289,7 @@ end
 function RemovePedBlackboardFloat(ped,variableName)
     Citizen.InvokeNative(0x411189E51B8020BA,ped,variableName)
 end
+
 
 
 --- 
@@ -6661,14 +7301,16 @@ function RemovePedBlackboardHash(ped,variableName)
 end
 
 
+
 --- Can be used to get a peds foliage active status: variableName = FoliageActive
 --- Native 0x498F2E77982D6945 (_GET_PED_BLACKBOARD_BOOL)
 ---@param ped number
 ---@param variableName string
 ---@return boolean
 function GetPedBlackboardBool(ped,variableName)
-   return Citizen.InvokeNative(0x498F2E77982D6945,ped,variableName)
+    return Citizen.InvokeNative(0x498F2E77982D6945,ped,variableName)
 end
+
 
 
 --- Can be used to get a peds foliage raw height: variableName = FoliageHeight
@@ -6677,8 +7319,9 @@ end
 ---@param variableName string
 ---@return float
 function GetPedBlackboardFloat(ped,variableName)
-   return Citizen.InvokeNative(0x56E58D4D118FB45E,ped,variableName)
+    return Citizen.InvokeNative(0x56E58D4D118FB45E,ped,variableName)
 end
+
 
 
 --- 
@@ -6687,8 +7330,9 @@ end
 ---@param variableName string
 ---@return hash
 function GetPedBlackboardHash(ped,variableName)
-   return Citizen.InvokeNative(0xBF5E791BBBF90A3C,ped,variableName)
+    return Citizen.InvokeNative(0xBF5E791BBBF90A3C,ped,variableName)
 end
+
 
 
 --- 
@@ -6697,8 +7341,9 @@ end
 ---@param variableName string
 ---@return number
 function GetPedBlackboardScriptInt(ped,variableName)
-   return Citizen.InvokeNative(0xB71B91B398F8F067,ped,variableName)
+    return Citizen.InvokeNative(0xB71B91B398F8F067,ped,variableName)
 end
+
 
 
 --- 
@@ -6707,8 +7352,9 @@ end
 ---@param variableName string
 ---@return boolean
 function GetPedBlackboardScriptBool(ped,variableName)
-   return Citizen.InvokeNative(0x4912DFE492DB98CD,ped,variableName)
+    return Citizen.InvokeNative(0x4912DFE492DB98CD,ped,variableName)
 end
+
 
 
 --- 
@@ -6717,8 +7363,9 @@ end
 ---@param variableName string
 ---@return float
 function GetPedBlackboardScriptFloat(ped,variableName)
-   return Citizen.InvokeNative(0xA29FD00D45311EB7,ped,variableName)
+    return Citizen.InvokeNative(0xA29FD00D45311EB7,ped,variableName)
 end
+
 
 
 --- Size will be permanent
@@ -6731,13 +7378,15 @@ function SetTankAttributeSize(ped,attributeIndex,size)
 end
 
 
+
 --- _IS_TRACKED_* - IS_V*
 --- Native 0xAF61B3CD8C3B82C3 (_IS_USING_SLIPSTREAM)
 ---@param ped number
 ---@return boolean
 function IsUsingSlipstream(ped)
-   return Citizen.InvokeNative(0xAF61B3CD8C3B82C3,ped)
+    return Citizen.InvokeNative(0xAF61B3CD8C3B82C3,ped)
 end
+
 
 
 --- 
@@ -6752,6 +7401,7 @@ function ApplyShopItemToPed(ped,componentHash,immediately,isMp,p4)
 end
 
 
+
 --- Directly removes a shop item component from a ped
 ---Params: p2 and p3 are always 0
 --- Native 0x0D7FFA1B2F69ED82 (_REMOVE_SHOP_ITEM_FROM_PED)
@@ -6764,6 +7414,7 @@ function RemoveShopItemFromPed(ped,componentHash,p2,p3)
 end
 
 
+
 --- Params: p2, p3 usually 0 in R* Scripts
 --- Native 0xDF631E4BCE1B1FC4 (REMOVE_SHOP_ITEM_FROM_PED_BY_CATEGORY)
 ---@param ped number
@@ -6773,6 +7424,7 @@ end
 function RemoveShopItemFromPedByCategory(ped,componentCategory,p2,p3)
     Citizen.InvokeNative(0xDF631E4BCE1B1FC4,ped,componentCategory,p2,p3)
 end
+
 
 
 --- 
@@ -6788,6 +7440,7 @@ function UpdateShopItemWearableState(ped,componentHash,wearableState,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0x77BA37622E22023B (_GET_SHOP_ITEM_COMPONENT_AT_INDEX)
 ---@param ped number
@@ -6797,8 +7450,9 @@ end
 ---@param argStruct2 any*
 ---@return hash
 function GetShopItemComponentAtIndex(ped,index,p2,argStruct,argStruct2)
-   return Citizen.InvokeNative(0x77BA37622E22023B,ped,index,p2,argStruct,argStruct2)
+    return Citizen.InvokeNative(0x77BA37622E22023B,ped,index,p2,argStruct,argStruct2)
 end
+
 
 
 --- Returns the number of wearable states available for a shop item / component. p2 seems to be true in scripts.
@@ -6809,8 +7463,9 @@ end
 ---@param p2 boolean
 ---@return number
 function GetShopItemNumWearableStates(componentHash,isMpFemale,p2)
-   return Citizen.InvokeNative(0xFFCC2DB2D9953401,componentHash,isMpFemale,p2)
+    return Citizen.InvokeNative(0xFFCC2DB2D9953401,componentHash,isMpFemale,p2)
 end
+
 
 
 --- Gets an available wearable state by index for a shop item / component - it does not retreive what the current state is. p3 seems to be true in scripts.
@@ -6822,8 +7477,9 @@ end
 ---@param p3 boolean
 ---@return hash
 function GetShopItemWearableStateByIndex(componentHash,wearableStateIndex,isMpFemale,p3)
-   return Citizen.InvokeNative(0x6243635AF2F1B826,componentHash,wearableStateIndex,isMpFemale,p3)
+    return Citizen.InvokeNative(0x6243635AF2F1B826,componentHash,wearableStateIndex,isMpFemale,p3)
 end
+
 
 
 --- 
@@ -6833,8 +7489,9 @@ end
 ---@param isMP boolean
 ---@return hash
 function GetShopItemComponentCategory(componentHash,metapedType,isMP)
-   return Citizen.InvokeNative(0x5FF9A878C3D115B8,componentHash,metapedType,isMP)
+    return Citizen.InvokeNative(0x5FF9A878C3D115B8,componentHash,metapedType,isMP)
 end
+
 
 
 --- 
@@ -6854,8 +7511,9 @@ end
 ---@param p12 hash*
 ---@return boolean
 function GetShopItemBaseLayers(shopItem,p1,ped,metapedType,p4,drawable,albedo,normal,material,p9,p10,p11,p12)
-   return Citizen.InvokeNative(0x63342C50EC115CE8,shopItem,p1,ped,metapedType,p4,drawable,albedo,normal,material,p9,p10,p11,p12)
+    return Citizen.InvokeNative(0x63342C50EC115CE8,shopItem,p1,ped,metapedType,p4,drawable,albedo,normal,material,p9,p10,p11,p12)
 end
+
 
 
 --- 
@@ -6865,8 +7523,9 @@ end
 ---@param p2 boolean
 ---@return any
 function GetShopItemHatComponent(ped,metapedType,p2)
-   return Citizen.InvokeNative(0x7E02E4218D916B94,ped,metapedType,p2)
+    return Citizen.InvokeNative(0x7E02E4218D916B94,ped,metapedType,p2)
 end
+
 
 
 --- p1 is always 1
@@ -6878,6 +7537,7 @@ function RefreshMetaPedShopItems(ped,p1)
 end
 
 
+
 --- 
 --- Native 0xFCA8FB9E15FA80D3 (_SET_PED_PROMPT_NAME_FROM_GXT_ENTRY)
 ---@param ped number
@@ -6885,6 +7545,7 @@ end
 function SetPedPromptNameFromGxtEntry(ped,gxtEntryHash)
     Citizen.InvokeNative(0xFCA8FB9E15FA80D3,ped,gxtEntryHash)
 end
+
 
 
 --- 
@@ -6896,6 +7557,7 @@ function SetPedPromptName(ped,name)
 end
 
 
+
 --- 
 --- Native 0xC2745D9261664901 (_SET_PED_PROMPT_NAME_FROM_GXT_ENTRY_2)
 ---@param ped number
@@ -6903,6 +7565,7 @@ end
 function SetPedPromptNameFromGxtEntry2(ped,gxtEntryHash)
     Citizen.InvokeNative(0xC2745D9261664901,ped,gxtEntryHash)
 end
+
 
 
 --- 
@@ -6914,14 +7577,16 @@ function SetPedPromptName2(ped,name)
 end
 
 
+
 --- limb: 3 = Left Hand, 4 = Left Arm, 6 = Right Hand, 7 = Right Arm, 9 = Left Foot, 10 = Left Leg, 12 = Right Foot, 13 = Right Leg, 37 = Head
 --- Native 0xBA208A8D6399A3AC (_HAS_PED_TAKEN_GORE_DAMAGE)
 ---@param ped number
 ---@param limb number
 ---@return boolean
 function HasPedTakenGoreDamage(ped,limb)
-   return Citizen.InvokeNative(0xBA208A8D6399A3AC,ped,limb)
+    return Citizen.InvokeNative(0xBA208A8D6399A3AC,ped,limb)
 end
+
 
 
 --- quality: see _GET_PED_QUALITY
@@ -6931,6 +7596,7 @@ end
 function SetPedQuality(ped,quality)
     Citizen.InvokeNative(0xCE6B874286D640BB,ped,quality)
 end
+
 
 
 --- Returns Ped Quality to be used to calculate Skinning Quality
@@ -6946,8 +7612,9 @@ end
 ---@param ped number
 ---@return number
 function GetPedQuality(ped)
-   return Citizen.InvokeNative(0x7BCC6087D130312A,ped)
+    return Citizen.InvokeNative(0x7BCC6087D130312A,ped)
 end
+
 
 
 --- 
@@ -6959,6 +7626,7 @@ function RemovePedProp(ped,propName)
 end
 
 
+
 --- _SET_W(EAPON?)*
 --- Native 0x932786CE3C76477C (_SET_TOTAL_PED_DAMAGE_FALLOFF_BONUS)
 ---@param ped number
@@ -6968,6 +7636,7 @@ function SetTotalPedDamageFalloffBonus(ped,bonus)
 end
 
 
+
 --- Returns how deep the water is below the ped (if in water)
 ----1.0f = Not in water
 ---10.0f = Max water depth
@@ -6975,8 +7644,9 @@ end
 ---@param ped number
 ---@return float
 function GetPlayerPedWaterDepth(ped)
-   return Citizen.InvokeNative(0x2942457417A5FD24,ped)
+    return Citizen.InvokeNative(0x2942457417A5FD24,ped)
 end
+
 
 
 --- duration in seconds
@@ -6987,5 +7657,6 @@ end
 function SetPedTrailEffect(ped,p1,duration)
     Citizen.InvokeNative(0xA5950E16B8F31052,ped,p1,duration)
 end
+
 
 

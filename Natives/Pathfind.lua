@@ -14,6 +14,7 @@ function SetRoadsInArea(xMin,yMin,zMin,xMax,yMax,zMax,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x1A5AA1208AF5DB59 (SET_ROADS_IN_ANGLED_AREA)
 ---@param p0 any
@@ -32,6 +33,7 @@ function SetRoadsInAngledArea(p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 end
 
 
+
 --- 
 --- Native 0xC1799FAFD2FDF52B (SET_ROADS_IN_VOLUME)
 ---@param volume volume
@@ -43,6 +45,7 @@ function SetRoadsInVolume(volume,p1,p2,p3)
 end
 
 
+
 --- 
 --- Native 0xD17672447692478E (RESET_ROADS_IN_VOLUME)
 ---@param volume volume
@@ -50,6 +53,7 @@ end
 function ResetRoadsInVolume(volume,p1)
     Citizen.InvokeNative(0xD17672447692478E,volume,p1)
 end
+
 
 
 --- 
@@ -65,6 +69,7 @@ end
 function SetRoadsBackToOriginal(xMin,yMin,zMin,xMax,yMax,zMax,p6,p7)
     Citizen.InvokeNative(0x1EE7063B80FFC77C,xMin,yMin,zMin,xMax,yMax,zMax,p6,p7)
 end
+
 
 
 --- 
@@ -83,6 +88,7 @@ function SetRoadsBackToOriginalInAngledArea(p0,p1,p2,p3,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x240A18690AE96513 (GET_CLOSEST_VEHICLE_NODE)
 ---@param x float
@@ -94,8 +100,9 @@ end
 ---@param p6 float
 ---@return boolean
 function GetClosestVehicleNode(x,y,z,outPosition,nodeType,p5,p6)
-   return Citizen.InvokeNative(0x240A18690AE96513,x,y,z,outPosition,nodeType,p5,p6)
+    return Citizen.InvokeNative(0x240A18690AE96513,x,y,z,outPosition,nodeType,p5,p6)
 end
+
 
 
 --- 
@@ -110,8 +117,9 @@ end
 ---@param p7 float
 ---@return boolean
 function GetClosestVehicleNodeWithHeading(x,y,z,outPosition,outHeading,nodeType,p6,p7)
-   return Citizen.InvokeNative(0x23CFFD4CCB243354,x,y,z,outPosition,outHeading,nodeType,p6,p7)
+    return Citizen.InvokeNative(0x23CFFD4CCB243354,x,y,z,outPosition,outHeading,nodeType,p6,p7)
 end
+
 
 
 --- 
@@ -126,8 +134,9 @@ end
 ---@param unknown3 any
 ---@return boolean
 function GetNthClosestVehicleNode(x,y,z,nthClosest,outPosition,unknown1,unknown2,unknown3)
-   return Citizen.InvokeNative(0x5A6D8DF6FBC5D0C4,x,y,z,nthClosest,outPosition,unknown1,unknown2,unknown3)
+    return Citizen.InvokeNative(0x5A6D8DF6FBC5D0C4,x,y,z,nthClosest,outPosition,unknown1,unknown2,unknown3)
 end
+
 
 
 --- 
@@ -141,8 +150,9 @@ end
 ---@param p6 float
 ---@return number
 function GetNthClosestVehicleNodeId(x,y,z,nth,nodetype,p5,p6)
-   return Citizen.InvokeNative(0x116443008E5CEFC3,x,y,z,nth,nodetype,p5,p6)
+    return Citizen.InvokeNative(0x116443008E5CEFC3,x,y,z,nth,nodetype,p5,p6)
 end
+
 
 
 --- 
@@ -159,8 +169,9 @@ end
 ---@param unknown4 float
 ---@return boolean
 function GetNthClosestVehicleNodeWithHeading(x,y,z,nthClosest,outPosition,heading,unknown1,unknown2,unknown3,unknown4)
-   return Citizen.InvokeNative(0x591B40D4390DB54A,x,y,z,nthClosest,outPosition,heading,unknown1,unknown2,unknown3,unknown4)
+    return Citizen.InvokeNative(0x591B40D4390DB54A,x,y,z,nthClosest,outPosition,heading,unknown1,unknown2,unknown3,unknown4)
 end
+
 
 
 --- Returns the nth closest vehicle node with a heading to a coord
@@ -176,8 +187,9 @@ end
 ---@param zTolerance float
 ---@return number
 function GetNthClosestVehicleNodeIdWithHeading(x,y,z,nthClosest,returnHeading,returnNumLanes,nodeFlags,zMeasureMult,zTolerance)
-   return Citizen.InvokeNative(0x4114EAA8A7F7766D,x,y,z,nthClosest,returnHeading,returnNumLanes,nodeFlags,zMeasureMult,zTolerance)
+    return Citizen.InvokeNative(0x4114EAA8A7F7766D,x,y,z,nthClosest,returnHeading,returnNumLanes,nodeFlags,zMeasureMult,zTolerance)
 end
+
 
 
 --- 
@@ -196,8 +208,9 @@ end
 ---@param p11 any
 ---@return boolean
 function GetNthClosestVehicleNodeFavourDirection(x,y,z,desiredX,desiredY,desiredZ,nthClosest,outPosition,outHeading,nodetype,p10,p11)
-   return Citizen.InvokeNative(0x2FAC235A6062F14A,x,y,z,desiredX,desiredY,desiredZ,nthClosest,outPosition,outHeading,nodetype,p10,p11)
+    return Citizen.InvokeNative(0x2FAC235A6062F14A,x,y,z,desiredX,desiredY,desiredZ,nthClosest,outPosition,outHeading,nodetype,p10,p11)
 end
+
 
 
 --- Returns true if the id is non zero.
@@ -205,8 +218,9 @@ end
 ---@param vehicleNodeId number
 ---@return boolean
 function IsVehicleNodeIdValid(vehicleNodeId)
-   return Citizen.InvokeNative(0x5829A02AF4F0B3CB,vehicleNodeId)
+    return Citizen.InvokeNative(0x5829A02AF4F0B3CB,vehicleNodeId)
 end
+
 
 
 --- 
@@ -218,13 +232,15 @@ function GetVehicleNodePosition(nodeId,outPosition)
 end
 
 
+
 --- 
 --- Native 0x28533DBDDF7C2C97 (GET_VEHICLE_NODE_IS_SWITCHED_OFF)
 ---@param nodeID number
 ---@return boolean
 function GetVehicleNodeIsSwitchedOff(nodeID)
-   return Citizen.InvokeNative(0x28533DBDDF7C2C97,nodeID)
+    return Citizen.InvokeNative(0x28533DBDDF7C2C97,nodeID)
 end
+
 
 
 --- 
@@ -242,8 +258,9 @@ end
 ---@param p10 boolean
 ---@return any
 function GetClosestRoad(x,y,z,p3,p4,p5,p6,p7,p8,p9,p10)
-   return Citizen.InvokeNative(0x132F52BBA570FE92,x,y,z,p3,p4,p5,p6,p7,p8,p9,p10)
+    return Citizen.InvokeNative(0x132F52BBA570FE92,x,y,z,p3,p4,p5,p6,p7,p8,p9,p10)
 end
+
 
 
 --- 
@@ -254,8 +271,9 @@ end
 ---@param y2 float
 ---@return boolean
 function AreNodesLoadedForArea(x1,y1,x2,y2)
-   return Citizen.InvokeNative(0xF7B79A50B905A30D,x1,y1,x2,y2)
+    return Citizen.InvokeNative(0xF7B79A50B905A30D,x1,y1,x2,y2)
 end
+
 
 
 --- Old name: REQUEST_PATHS_PREFER_ACCURATE_BOUNDINGSTRUCT
@@ -266,8 +284,9 @@ end
 ---@param y2 float
 ---@return boolean
 function RequestPathNodesInAreaThisFrame(x1,y1,x2,y2)
-   return Citizen.InvokeNative(0x07FB139B592FA687,x1,y1,x2,y2)
+    return Citizen.InvokeNative(0x07FB139B592FA687,x1,y1,x2,y2)
 end
+
 
 
 --- 
@@ -283,8 +302,9 @@ end
 ---@param nodeId int*
 ---@return boolean
 function GetRandomVehicleNode(x,y,z,radius,minLanes,avoidDeadEnds,avoidHighways,outPosition,nodeId)
-   return Citizen.InvokeNative(0x93E0DB8440B73A7D,x,y,z,radius,minLanes,avoidDeadEnds,avoidHighways,outPosition,nodeId)
+    return Citizen.InvokeNative(0x93E0DB8440B73A7D,x,y,z,radius,minLanes,avoidDeadEnds,avoidHighways,outPosition,nodeId)
 end
+
 
 
 --- 
@@ -300,6 +320,7 @@ function GetSpawnDataForRoadNode(nodeId,x,y,z,outCoords,heading)
 end
 
 
+
 --- Gets a value indicating whether the specified position is on a road.
 --- Native 0x125BF4ABFC536B09 (IS_POINT_ON_ROAD)
 ---@param x float
@@ -308,8 +329,9 @@ end
 ---@param vehicle vehicle
 ---@return boolean
 function IsPointOnRoad(x,y,z,vehicle)
-   return Citizen.InvokeNative(0x125BF4ABFC536B09,x,y,z,vehicle)
+    return Citizen.InvokeNative(0x125BF4ABFC536B09,x,y,z,vehicle)
 end
+
 
 
 --- 
@@ -327,6 +349,7 @@ function SetPedPathsInArea(x1,y1,z1,x2,y2,z2,unknown,p7)
 end
 
 
+
 --- 
 --- Native 0xB61C8E878A4199CA (GET_SAFE_COORD_FOR_PED)
 ---@param x float
@@ -337,8 +360,9 @@ end
 ---@param flags number
 ---@return boolean
 function GetSafeCoordForPed(x,y,z,onGround,outPosition,flags)
-   return Citizen.InvokeNative(0xB61C8E878A4199CA,x,y,z,onGround,outPosition,flags)
+    return Citizen.InvokeNative(0xB61C8E878A4199CA,x,y,z,onGround,outPosition,flags)
 end
+
 
 
 --- 
@@ -355,6 +379,7 @@ function SetPedPathsBackToOriginal(p0,p1,p2,p3,p4,p5,p6)
 end
 
 
+
 --- 
 --- Native 0x387EAD7EE42F6685 (ADD_NAVMESH_REQUIRED_REGION)
 ---@param x float
@@ -363,6 +388,7 @@ end
 function AddNavmeshRequiredRegion(x,y,radius)
     Citizen.InvokeNative(0x387EAD7EE42F6685,x,y,radius)
 end
+
 
 
 --- Returns whether navmesh for the region is loaded.
@@ -375,8 +401,9 @@ end
 ---@param z2 float
 ---@return boolean
 function IsNavmeshLoadedInArea(x1,y1,z1,x2,y2,z2)
-   return Citizen.InvokeNative(0xF813C7E63F9062A5,x1,y1,z1,x2,y2,z2)
+    return Citizen.InvokeNative(0xF813C7E63F9062A5,x1,y1,z1,x2,y2,z2)
 end
+
 
 
 --- 
@@ -389,8 +416,9 @@ end
 ---@param p5 float
 ---@return number
 function GetNumNavmeshesExistingInArea(p0,p1,p2,p3,p4,p5)
-   return Citizen.InvokeNative(0x01708E8DD3FF8C65,p0,p1,p2,p3,p4,p5)
+    return Citizen.InvokeNative(0x01708E8DD3FF8C65,p0,p1,p2,p3,p4,p5)
 end
+
 
 
 --- 
@@ -398,8 +426,9 @@ end
 ---@param name string
 ---@return boolean
 function NavmeshActivateSwap(name)
-   return Citizen.InvokeNative(0x7C334FF4D9215912,name)
+    return Citizen.InvokeNative(0x7C334FF4D9215912,name)
 end
+
 
 
 --- 
@@ -407,8 +436,9 @@ end
 ---@param name string
 ---@return boolean
 function NavmeshDeactivateSwap(name)
-   return Citizen.InvokeNative(0x527B97C203BB8606,name)
+    return Citizen.InvokeNative(0x527B97C203BB8606,name)
 end
+
 
 
 --- 
@@ -416,8 +446,9 @@ end
 ---@param name string
 ---@return boolean
 function NavmeshIsSwapActive(name)
-   return Citizen.InvokeNative(0x5AC0944C156E5F44,name)
+    return Citizen.InvokeNative(0x5AC0944C156E5F44,name)
 end
+
 
 
 --- 
@@ -425,8 +456,9 @@ end
 ---@param name string
 ---@return boolean
 function NavmeshDoesSwapExist(name)
-   return Citizen.InvokeNative(0x495CFAB2924237C7,name)
+    return Citizen.InvokeNative(0x495CFAB2924237C7,name)
 end
+
 
 
 --- 
@@ -435,8 +467,9 @@ end
 ---@param navMeshName string
 ---@return boolean
 function NavmeshAssignNavmeshToVehicle(vehicle,navMeshName)
-   return Citizen.InvokeNative(0x44026E3DB3CED602,vehicle,navMeshName)
+    return Citizen.InvokeNative(0x44026E3DB3CED602,vehicle,navMeshName)
 end
+
 
 
 --- 
@@ -452,8 +485,9 @@ end
 ---@param p8 any
 ---@return any
 function AddNavmeshBlockingObject(p0,p1,p2,p3,p4,p5,p6,p7,p8)
-   return Citizen.InvokeNative(0xFCD5C8E06E502F5A,p0,p1,p2,p3,p4,p5,p6,p7,p8)
+    return Citizen.InvokeNative(0xFCD5C8E06E502F5A,p0,p1,p2,p3,p4,p5,p6,p7,p8)
 end
+
 
 
 --- 
@@ -464,13 +498,15 @@ function RemoveNavmeshBlockingObject(p0)
 end
 
 
+
 --- 
 --- Native 0x0EAEB0DB4B132399 (DOES_NAVMESH_BLOCKING_OBJECT_EXIST)
 ---@param p0 any
 ---@return boolean
 function DoesNavmeshBlockingObjectExist(p0)
-   return Citizen.InvokeNative(0x0EAEB0DB4B132399,p0)
+    return Citizen.InvokeNative(0x0EAEB0DB4B132399,p0)
 end
+
 
 
 --- 
@@ -479,8 +515,9 @@ end
 ---@param flags number
 ---@return boolean
 function AddNavmeshBlockingVolume(volume,flags)
-   return Citizen.InvokeNative(0x19C7567D2F2287D6,volume,flags)
+    return Citizen.InvokeNative(0x19C7567D2F2287D6,volume,flags)
 end
+
 
 
 --- 
@@ -491,13 +528,15 @@ function RemoveNavmeshBlockingVolume(volume)
 end
 
 
+
 --- 
 --- Native 0xDE0EA444735C1368 (_DOES_NAVMESH_BLOCKING_VOLUME_EXIST)
 ---@param volume volume
 ---@return boolean
 function DoesNavmeshBlockingVolumeExist(volume)
-   return Citizen.InvokeNative(0xDE0EA444735C1368,volume)
+    return Citizen.InvokeNative(0xDE0EA444735C1368,volume)
 end
+
 
 
 --- Starts a nav mesh query for a path between coordinates with a given ped and returns a handle to be validated by _NAVMESH_REQUESTED_QUERY_STATUS and then _NAVMESH_REQUESTED_PATH_WAYPOINTS_FOUND
@@ -513,8 +552,9 @@ end
 ---@param bitFlag number
 ---@return number
 function NavmeshRequestPath(ped,x1,y1,z1,x2,y2,z2,bitFlag)
-   return Citizen.InvokeNative(0x348F211CA2404039,ped,x1,y1,z1,x2,y2,z2,bitFlag)
+    return Citizen.InvokeNative(0x348F211CA2404039,ped,x1,y1,z1,x2,y2,z2,bitFlag)
 end
+
 
 
 --- Called in scripts after finished with requested pathes. Immediately resets all values connected to the path handle except query status, which changes from 1 to 2 before eventually becoming fully invalidated to 0.
@@ -522,8 +562,9 @@ end
 ---@param path number
 ---@return boolean
 function NavmeshClearRequestedPath(path)
-   return Citizen.InvokeNative(0x661BB1E1FF77742D,path)
+    return Citizen.InvokeNative(0x661BB1E1FF77742D,path)
 end
+
 
 
 --- Returns eNavMeshQueryStatus
@@ -539,8 +580,9 @@ end
 ---@param path number
 ---@return number
 function NavmeshRequestedQueryStatus(path)
-   return Citizen.InvokeNative(0x3A0F82F6EE2291C8,path)
+    return Citizen.InvokeNative(0x3A0F82F6EE2291C8,path)
 end
+
 
 
 --- Returns true if a path of waypoints was found. Waypoints can be retrieved with _NAVMESH_REQUESTED_PATH_NUM_WAYPOINTS and _NAVMESH_REQUESTED_PATH_WAYPOINT_BY_INDEX
@@ -548,8 +590,9 @@ end
 ---@param path number
 ---@return boolean
 function NavmeshRequestedPathWaypointsFound(path)
-   return Citizen.InvokeNative(0x8800776E410EB669,path)
+    return Citizen.InvokeNative(0x8800776E410EB669,path)
 end
+
 
 
 --- Returns a bit flag for seemingly terrain within the waypoints in the path. Checked against bit value 2 to match water in the path, seems to always contain at least 1 though regardless of location/ped.
@@ -557,8 +600,9 @@ end
 ---@param path number
 ---@return number
 function NavmeshRequestedPathWaypointsTerrain(path)
-   return Citizen.InvokeNative(0xF61CFEDEAB627BFA,path)
+    return Citizen.InvokeNative(0xF61CFEDEAB627BFA,path)
 end
+
 
 
 --- Returns the number of waypoints for a requested path (NAVMESH_REQUEST_PATH) if the query is completed (_NAVMESH_REQUESTED_QUERY_STATUS). For use with _NAVMESH_REQUESTED_PATH_WAYPOINT_BY_INDEX
@@ -566,8 +610,9 @@ end
 ---@param path number
 ---@return number
 function NavmeshRequestedPathNumWaypoints(path)
-   return Citizen.InvokeNative(0xD470725E0703D22F,path)
+    return Citizen.InvokeNative(0xD470725E0703D22F,path)
 end
+
 
 
 --- Returns a vector3 waypoint at the specified index for a path. Use _NAVMESH_REQUESTED_PATH_NUM_WAYPOINTS to get available indexes.
@@ -576,8 +621,9 @@ end
 ---@param waypointIndex number
 ---@return vector3
 function NavmeshRequestedPathWaypointByIndex(path,waypointIndex)
-   return Citizen.InvokeNative(0x430F8319AE56C8A9,path,waypointIndex)
+    return Citizen.InvokeNative(0x430F8319AE56C8A9,path,waypointIndex)
 end
+
 
 
 --- Returns CGameWorldHeightMap's minimum Z value at specified point (grid node).
@@ -586,8 +632,9 @@ end
 ---@param y float
 ---@return float
 function GetApproxFloorForPoint(x,y)
-   return Citizen.InvokeNative(0x336511A34F2E5185,x,y)
+    return Citizen.InvokeNative(0x336511A34F2E5185,x,y)
 end
+
 
 
 --- 
@@ -598,12 +645,14 @@ function SetAmbientPedRangeMultiplierThisFrame(multiplier)
 end
 
 
+
 --- nullsub, doesn't do anything
 --- Native 0x72751156E7678833 (SET_IGNORE_NO_GPS_FLAG)
 ---@param toggle boolean
 function SetIgnoreNoGpsFlag(toggle)
     Citizen.InvokeNative(0x72751156E7678833,toggle)
 end
+
 
 
 --- 
@@ -614,12 +663,14 @@ function GetGpsBlipRouteLength()
 end
 
 
+
 --- 
 --- Native 0x869DAACBBE9FA006 (GET_GPS_BLIP_ROUTE_FOUND)
 ---@return boolean
 function GetGpsBlipRouteFound()
    return Citizen.InvokeNative(0x869DAACBBE9FA006)
 end
+
 
 
 --- 
@@ -633,8 +684,9 @@ end
 ---@param p6 number
 ---@return any
 function SimulatedRouteCreate(x1,y1,z1,x2,y2,z2,p6)
-   return Citizen.InvokeNative(0xFD5BB35AAB83FD48,x1,y1,z1,x2,y2,z2,p6)
+    return Citizen.InvokeNative(0xFD5BB35AAB83FD48,x1,y1,z1,x2,y2,z2,p6)
 end
+
 
 
 --- 
@@ -645,13 +697,15 @@ function SimulatedRouteDelete(p0)
 end
 
 
+
 --- 
 --- Native 0x65A8196B8D7F5E0B (_SIMULATED_ROUTE_EXISTS)
 ---@param p0 any
 ---@return boolean
 function SimulatedRouteExists(p0)
-   return Citizen.InvokeNative(0x65A8196B8D7F5E0B,p0)
+    return Citizen.InvokeNative(0x65A8196B8D7F5E0B,p0)
 end
+
 
 
 --- 
@@ -659,8 +713,9 @@ end
 ---@param p0 any
 ---@return boolean
 function SimulatedRouteIsLoaded(p0)
-   return Citizen.InvokeNative(0x240915043CB799D7,p0)
+    return Citizen.InvokeNative(0x240915043CB799D7,p0)
 end
+
 
 
 --- 
@@ -673,12 +728,14 @@ function SimulatedRouteTravelToPoint(p0,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x2DD5F78D73B24172 (SIMULATED_ROUTE_GET_ETA)
 ---@param p0 any
 ---@return float
 function SimulatedRouteGetEta(p0)
-   return Citizen.InvokeNative(0x2DD5F78D73B24172,p0)
+    return Citizen.InvokeNative(0x2DD5F78D73B24172,p0)
 end
+
 
 

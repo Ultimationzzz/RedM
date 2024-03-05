@@ -7,8 +7,9 @@
 ---@param statId any*
 ---@return boolean
 function StatIdIsValid(statId)
-   return Citizen.InvokeNative(0xC48FE1971C9743FF,statId)
+    return Citizen.InvokeNative(0xC48FE1971C9743FF,statId)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -18,8 +19,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetInt(statId,value,p2)
-   return Citizen.InvokeNative(0xA4DDF5DF95E65EEE,statId,value,p2)
+    return Citizen.InvokeNative(0xA4DDF5DF95E65EEE,statId,value,p2)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -29,8 +31,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetFloat(statId,value,p2)
-   return Citizen.InvokeNative(0x481BDF6A10C5EF68,statId,value,p2)
+    return Citizen.InvokeNative(0x481BDF6A10C5EF68,statId,value,p2)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -40,8 +43,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetBool(statId,value,p2)
-   return Citizen.InvokeNative(0x3B5107353267D7A1,statId,value,p2)
+    return Citizen.InvokeNative(0x3B5107353267D7A1,statId,value,p2)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -51,8 +55,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetGxtLabel(statId,label,p2)
-   return Citizen.InvokeNative(0x05060A54834F2382,statId,label,p2)
+    return Citizen.InvokeNative(0x05060A54834F2382,statId,label,p2)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -62,8 +67,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetDate(statId,date,p2)
-   return Citizen.InvokeNative(0x1FAE9B2FAA2DFE06,statId,date,p2)
+    return Citizen.InvokeNative(0x1FAE9B2FAA2DFE06,statId,date,p2)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -72,8 +78,9 @@ end
 ---@param p1 int*
 ---@return boolean
 function StatIdGetInt(statId,p1)
-   return Citizen.InvokeNative(0x767FBC2AC802EF3E,statId,p1)
+    return Citizen.InvokeNative(0x767FBC2AC802EF3E,statId,p1)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -82,8 +89,9 @@ end
 ---@param value float*
 ---@return boolean
 function StatIdGetFloat(statId,value)
-   return Citizen.InvokeNative(0xD7AE6C9C9C6AC54D,statId,value)
+    return Citizen.InvokeNative(0xD7AE6C9C9C6AC54D,statId,value)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -92,8 +100,9 @@ end
 ---@param value bool*
 ---@return boolean
 function StatIdGetBool(statId,value)
-   return Citizen.InvokeNative(0x11B5E6D2AE73F48F,statId,value)
+    return Citizen.InvokeNative(0x11B5E6D2AE73F48F,statId,value)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -102,8 +111,9 @@ end
 ---@param date any*
 ---@return boolean
 function StatIdGetDate(statId,date)
-   return Citizen.InvokeNative(0x8B0FACEFC36C824C,statId,date)
+    return Citizen.InvokeNative(0x8B0FACEFC36C824C,statId,date)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -115,6 +125,7 @@ function StatIdIncrementInt(statId,value)
 end
 
 
+
 --- statId: see STAT_ID_IS_VALID
 --- Native 0x4A47E38EA3D60939 (_STAT_ID_INCREMENT_FLOAT)
 ---@param statId any*
@@ -122,6 +133,7 @@ end
 function StatIdIncrementFloat(statId,value)
     Citizen.InvokeNative(0x4A47E38EA3D60939,statId,value)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -133,6 +145,7 @@ function StatIdDecrementInt(statId,value)
 end
 
 
+
 --- statId: see STAT_ID_IS_VALID
 --- Native 0x34B22DE38477EDB4 (STAT_ID_SET_TO_POSSE_ID)
 ---@param statId any*
@@ -141,13 +154,15 @@ function StatIdSetToPosseId(statId)
 end
 
 
+
 --- Calculation: (value / 1000) / 60 % 60
 --- Native 0x1E7384AB5D4F4581 (_STAT_CALCULATE_COOLDOWN)
 ---@param value number
 ---@return number
 function StatCalculateCooldown(value)
-   return Citizen.InvokeNative(0x1E7384AB5D4F4581,value)
+    return Citizen.InvokeNative(0x1E7384AB5D4F4581,value)
 end
+
 
 
 --- statId: see STAT_ID_IS_VALID
@@ -156,8 +171,9 @@ end
 ---@param statId any*
 ---@return boolean
 function StatPheromoneCooldownLegendaryAnimal(entity,statId)
-   return Citizen.InvokeNative(0x5420D398A42917FC,entity,statId)
+    return Citizen.InvokeNative(0x5420D398A42917FC,entity,statId)
 end
+
 
 
 --- 
@@ -171,12 +187,14 @@ function StatItemFishCaught(fish,weight,category,subcategory)
 end
 
 
+
 --- 
 --- Native 0x831BF01C56149A8A (_STAT_CARRIED_SATCHEL_ITEM_FROM_PED)
 ---@param ped number
 function StatCarriedSatchelItemFromPed(ped)
     Citizen.InvokeNative(0x831BF01C56149A8A,ped)
 end
+
 
 
 --- 
@@ -190,12 +208,14 @@ function StatDonateIncrementItem(item,slot,p2,p3)
 end
 
 
+
 --- Related to animal tagging
 --- Native 0x90E9A5DADBABC918 (_STAT_ADD_ANIMAL_SAMPLE_TARGET)
 ---@param animalType hash
 function StatAddAnimalSampleTarget(animalType)
     Citizen.InvokeNative(0x90E9A5DADBABC918,animalType)
 end
+
 
 
 --- 
@@ -207,12 +227,14 @@ function StatAddBountyTarget(unlockHash,ped)
 end
 
 
+
 --- 
 --- Native 0x262EF7CF49CF1EB9 (STAT_BOUNTY_CAPTURED)
 ---@param entity entity
 function StatBountyCaptured(entity)
     Citizen.InvokeNative(0x262EF7CF49CF1EB9,entity)
 end
+
 
 
 --- 
@@ -223,12 +245,14 @@ function StatBountyEscaped(ped)
 end
 
 
+
 --- 
 --- Native 0x4D31051A4CA83787 (STAT_PHOTOGRAPH_TAKEN)
 ---@param itemset itemset
 function StatPhotographTaken(itemset)
     Citizen.InvokeNative(0x4D31051A4CA83787,itemset)
 end
+
 
 
 --- 
@@ -239,13 +263,15 @@ function StatRegisterLegendaryAnimalDeed(deedHash)
 end
 
 
+
 --- 
 --- Native 0x01F4D242765C6B24 (STATSTRACKER_IS_INITIALIZED)
 ---@param p0 hash
 ---@return boolean
 function StatstrackerIsInitialized(p0)
-   return Citizen.InvokeNative(0x01F4D242765C6B24,p0)
+    return Citizen.InvokeNative(0x01F4D242765C6B24,p0)
 end
+
 
 
 --- 
@@ -255,6 +281,7 @@ end
 function StatstrackerDeedStarted(p0,p1)
     Citizen.InvokeNative(0xB2A38826E5886E83,p0,p1)
 end
+
 
 
 --- 
@@ -268,14 +295,16 @@ function StatstrackerDeedStatus(deedType,deedHash,missionStatus,data)
 end
 
 
+
 --- https://github.com/femga/rdr3_discoveries/blob/master/AI/EVENTS/challenge_goals.lua
 --- Native 0x04DAC3929796EB87 (CHAL_IS_GOAL_ACTIVE)
 ---@param chalHash hash
 ---@param goalHash hash
 ---@return boolean
 function ChalIsGoalActive(chalHash,goalHash)
-   return Citizen.InvokeNative(0x04DAC3929796EB87,chalHash,goalHash)
+    return Citizen.InvokeNative(0x04DAC3929796EB87,chalHash,goalHash)
 end
+
 
 
 --- 
@@ -288,13 +317,15 @@ function ChalSetGoalDisabled(chalHash,goalHash,disabled)
 end
 
 
+
 --- 
 --- Native 0x58CB53DB63F84DE9 (CHAL_GET_NUM_RANKS_COMPLETED)
 ---@param chalHash hash
 ---@return number
 function ChalGetNumRanksCompleted(chalHash)
-   return Citizen.InvokeNative(0x58CB53DB63F84DE9,chalHash)
+    return Citizen.InvokeNative(0x58CB53DB63F84DE9,chalHash)
 end
+
 
 
 --- 
@@ -302,8 +333,9 @@ end
 ---@param chalHash hash
 ---@return number
 function ChalGetMaxRanks(chalHash)
-   return Citizen.InvokeNative(0x58CB53DB63F84DEA,chalHash)
+    return Citizen.InvokeNative(0x58CB53DB63F84DEA,chalHash)
 end
+
 
 
 --- 
@@ -316,6 +348,7 @@ function ChalAddGoalProgressInt(chalHash,goalHash,value)
 end
 
 
+
 --- 
 --- Native 0x86922D8C02FB7703 (CHAL_ADD_GOAL_PROGRESS_FLOAT)
 ---@param chalHash hash
@@ -324,6 +357,7 @@ end
 function ChalAddGoalProgressFloat(chalHash,goalHash,value)
     Citizen.InvokeNative(0x86922D8C02FB7703,chalHash,goalHash,value)
 end
+
 
 
 --- 
@@ -336,6 +370,7 @@ function ChalSetGoalProgressInt(chalHash,goalHash,value)
 end
 
 
+
 --- 
 --- Native 0xDDBD560745B1EE9C (CHAL_ADD_GOAL_PROGRESS_INT_BY_SCORE_ID)
 ---@param p0 hash
@@ -343,6 +378,7 @@ end
 function ChalAddGoalProgressIntByScoreId(p0,value)
     Citizen.InvokeNative(0xDDBD560745B1EE9C,p0,value)
 end
+
 
 
 --- 
@@ -354,14 +390,16 @@ function ChalAddGoalProgressFloatByScoreId(p0,value)
 end
 
 
+
 --- 
 --- Native 0x77B97A827739D434 (CHAL_ACHIEVEMENT_IS_COMPLETE)
 ---@param p0 hash
 ---@param p1 hash
 ---@return boolean
 function ChalAchievementIsComplete(p0,p1)
-   return Citizen.InvokeNative(0x77B97A827739D434,p0,p1)
+    return Citizen.InvokeNative(0x77B97A827739D434,p0,p1)
 end
+
 
 
 --- 
@@ -370,8 +408,9 @@ end
 ---@param p1 hash
 ---@return number
 function ChalAchievementGetProgressInt(p0,p1)
-   return Citizen.InvokeNative(0x808712E428F697B8,p0,p1)
+    return Citizen.InvokeNative(0x808712E428F697B8,p0,p1)
 end
+
 
 
 --- 
@@ -382,12 +421,14 @@ function ChalNetStartChal(chalHash)
 end
 
 
+
 --- 
 --- Native 0x43B0163154A50C86 (CHAL_NET_STOP_CHAL)
 ---@param chalHash hash
 function ChalNetStopChal(chalHash)
     Citizen.InvokeNative(0x43B0163154A50C86,chalHash)
 end
+
 
 
 --- 
@@ -399,6 +440,7 @@ function ChalNetStartGoal(chalHash,goalHash)
 end
 
 
+
 --- 
 --- Native 0x00CE6A93324A590B (CHAL_NET_STOP_GOAL)
 ---@param chalHash hash
@@ -408,13 +450,15 @@ function ChalNetStopGoal(chalHash,goalHash)
 end
 
 
+
 --- 
 --- Native 0x0B0576DD3A75E58D (CHAL_MISSION_GET_NUM_GOALS)
 ---@param missionHash hash
 ---@return number
 function ChalMissionGetNumGoals(missionHash)
-   return Citizen.InvokeNative(0x0B0576DD3A75E58D,missionHash)
+    return Citizen.InvokeNative(0x0B0576DD3A75E58D,missionHash)
 end
+
 
 
 --- 
@@ -422,8 +466,9 @@ end
 ---@param missionHash hash
 ---@return number
 function ChalMissionGetNumGoalsComplete(missionHash)
-   return Citizen.InvokeNative(0xA785A52B59B7E7B2,missionHash)
+    return Citizen.InvokeNative(0xA785A52B59B7E7B2,missionHash)
 end
+
 
 
 --- 
@@ -432,8 +477,9 @@ end
 ---@param goalHash hash
 ---@return boolean
 function ChalMissionIsGoalComplete(missionHash,goalHash)
-   return Citizen.InvokeNative(0xC0BB774787BBF301,missionHash,goalHash)
+    return Citizen.InvokeNative(0xC0BB774787BBF301,missionHash,goalHash)
 end
+
 
 
 --- 
@@ -446,13 +492,15 @@ function ChalMissionAddGoalProgressInt(missionHash,goalHash,value)
 end
 
 
+
 --- 
 --- Native 0x8F5317729F791D10 (WEEKLY_COLLECTIBLE_GET_NUM_SETS)
 ---@param chalHash hash
 ---@return number
 function WeeklyCollectibleGetNumSets(chalHash)
-   return Citizen.InvokeNative(0x8F5317729F791D10,chalHash)
+    return Citizen.InvokeNative(0x8F5317729F791D10,chalHash)
 end
+
 
 
 --- 
@@ -461,8 +509,9 @@ end
 ---@param index number
 ---@return hash
 function WeeklyCollectibleGetItemSetBuyAward(chalHash,index)
-   return Citizen.InvokeNative(0x610783F646894D25,chalHash,index)
+    return Citizen.InvokeNative(0x610783F646894D25,chalHash,index)
 end
+
 
 
 --- 
@@ -471,8 +520,9 @@ end
 ---@param index number
 ---@return hash
 function WeeklyCollectibleGetItemSetLabel(chalHash,index)
-   return Citizen.InvokeNative(0xBFFA88522FF0F730,chalHash,index)
+    return Citizen.InvokeNative(0xBFFA88522FF0F730,chalHash,index)
 end
+
 
 
 --- 
@@ -481,8 +531,9 @@ end
 ---@param index number
 ---@return number
 function WeeklyCollectibleGetNumItemsInSet(chalHash,index)
-   return Citizen.InvokeNative(0x7D675C9DDDB365BE,chalHash,index)
+    return Citizen.InvokeNative(0x7D675C9DDDB365BE,chalHash,index)
 end
+
 
 
 --- 
@@ -494,7 +545,8 @@ end
 ---@param p4 int*
 ---@return boolean
 function WeeklyCollectibleGetItemInSet(chalHash,setIndex,itemIndex,p3,p4)
-   return Citizen.InvokeNative(0xBA61BA6205A3F5A8,chalHash,setIndex,itemIndex,p3,p4)
+    return Citizen.InvokeNative(0xBA61BA6205A3F5A8,chalHash,setIndex,itemIndex,p3,p4)
 end
+
 
 

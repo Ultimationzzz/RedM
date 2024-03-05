@@ -28,8 +28,9 @@
 ---@param type number
 ---@return hash
 function GetMapZoneAtCoords(x,y,z,type)
-   return Citizen.InvokeNative(0x43AD8FC02B429D33,x,y,z,type)
+    return Citizen.InvokeNative(0x43AD8FC02B429D33,x,y,z,type)
 end
+
 
 
 --- Returns the zone's name hash if its type matches one of the following:
@@ -47,7 +48,8 @@ end
 ---@param z float
 ---@return hash
 function GetWaterMapZoneAtCoords(x,y,z)
-   return Citizen.InvokeNative(0x5BA7A68A346A5A91,x,y,z)
+    return Citizen.InvokeNative(0x5BA7A68A346A5A91,x,y,z)
 end
+
 
 

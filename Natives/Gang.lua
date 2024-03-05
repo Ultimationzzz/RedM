@@ -3,8 +3,9 @@
 ---@param gangId any
 ---@return boolean
 function NetworkIsGangIdValid(gangId)
-   return Citizen.InvokeNative(0xD6F6ACF4392187FB,gangId)
+    return Citizen.InvokeNative(0xD6F6ACF4392187FB,gangId)
 end
+
 
 
 --- 
@@ -12,8 +13,9 @@ end
 ---@param gangId any
 ---@return boolean
 function NetworkIsGangInSession(gangId)
-   return Citizen.InvokeNative(0x93A91A351A07360E,gangId)
+    return Citizen.InvokeNative(0x93A91A351A07360E,gangId)
 end
+
 
 
 --- 
@@ -21,8 +23,9 @@ end
 ---@param gangId any
 ---@return boolean
 function NetworkIsGangActive(gangId)
-   return Citizen.InvokeNative(0x0F99F6436528A089,gangId)
+    return Citizen.InvokeNative(0x0F99F6436528A089,gangId)
 end
+
 
 
 --- 
@@ -30,8 +33,9 @@ end
 ---@param gangId any
 ---@return boolean
 function NetworkIsGangOpen(gangId)
-   return Citizen.InvokeNative(0xFCF96CCBD81B24C8,gangId)
+    return Citizen.InvokeNative(0xFCF96CCBD81B24C8,gangId)
 end
+
 
 
 --- 
@@ -40,6 +44,7 @@ end
 function NetworkGetGangPrivacy()
    return Citizen.InvokeNative(0x9970AE8C3D706139)
 end
+
 
 
 --- openStatus = true -> sets privacyType = 2 (PUBLIC_ADVERTISED)
@@ -53,13 +58,15 @@ function NetworkStartGang(openStatus,campSize)
 end
 
 
+
 --- 
 --- Native 0xC5BF29F4035277C2 (_NETWORK_SET_GANG_PRIVACY)
 ---@param privacyType number
 ---@return boolean
 function NetworkSetGangPrivacy(privacyType)
-   return Citizen.InvokeNative(0xC5BF29F4035277C2,privacyType)
+    return Citizen.InvokeNative(0xC5BF29F4035277C2,privacyType)
 end
+
 
 
 --- 
@@ -68,6 +75,7 @@ end
 function NetworkLeaveGang(disband)
     Citizen.InvokeNative(0x0A04A07BC3074EDB,disband)
 end
+
 
 
 --- banTimeSeconds is 120 in R* Scripts
@@ -79,13 +87,15 @@ function NetworkKickGangMember(player,banTimeSeconds)
 end
 
 
+
 --- Returns true if join succeeded, false if failed.
 --- Native 0xC0474C8BCF6787AD (_NETWORK_REQUEST_GANG_JOIN)
 ---@param gangId any
 ---@return boolean
 function NetworkRequestGangJoin(gangId)
-   return Citizen.InvokeNative(0xC0474C8BCF6787AD,gangId)
+    return Citizen.InvokeNative(0xC0474C8BCF6787AD,gangId)
 end
+
 
 
 --- 
@@ -93,8 +103,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsGangLeader(player)
-   return Citizen.InvokeNative(0x424B17A7DC5C90BC,player)
+    return Citizen.InvokeNative(0x424B17A7DC5C90BC,player)
 end
+
 
 
 --- 
@@ -103,8 +114,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsGangMember(gangId,player)
-   return Citizen.InvokeNative(0x9BE7DCB22D32CCBE,gangId,player)
+    return Citizen.InvokeNative(0x9BE7DCB22D32CCBE,gangId,player)
 end
+
 
 
 --- 
@@ -113,8 +125,9 @@ end
 ---@param player2 player
 ---@return boolean
 function NetworkIsInSameGang(player1,player2)
-   return Citizen.InvokeNative(0x3F59FE6F37869576,player1,player2)
+    return Citizen.InvokeNative(0x3F59FE6F37869576,player1,player2)
 end
+
 
 
 --- 
@@ -122,8 +135,9 @@ end
 ---@param player player
 ---@return boolean
 function NetworkIsInMyGang(player)
-   return Citizen.InvokeNative(0x81FB74C83C2ED69F,player)
+    return Citizen.InvokeNative(0x81FB74C83C2ED69F,player)
 end
+
 
 
 --- 
@@ -131,8 +145,9 @@ end
 ---@param gangId any
 ---@return number
 function NetworkGetNumGangMembers(gangId)
-   return Citizen.InvokeNative(0x149A2751AB66AC02,gangId)
+    return Citizen.InvokeNative(0x149A2751AB66AC02,gangId)
 end
+
 
 
 --- 
@@ -140,8 +155,9 @@ end
 ---@param gangId any
 ---@return number
 function NetworkGetGangSize(gangId)
-   return Citizen.InvokeNative(0x853B0FA4D8732C57,gangId)
+    return Citizen.InvokeNative(0x853B0FA4D8732C57,gangId)
 end
+
 
 
 --- 
@@ -149,8 +165,9 @@ end
 ---@param size number
 ---@return boolean
 function NetworkSetGangSize(size)
-   return Citizen.InvokeNative(0x833D8268D51B4522,size)
+    return Citizen.InvokeNative(0x833D8268D51B4522,size)
 end
+
 
 
 --- 
@@ -158,8 +175,9 @@ end
 ---@param player player
 ---@return any
 function NetworkGetGangId(player)
-   return Citizen.InvokeNative(0x901E0DC25080C8B9,player)
+    return Citizen.InvokeNative(0x901E0DC25080C8B9,player)
 end
+
 
 
 --- 
@@ -168,8 +186,9 @@ end
 ---@param memberHandles any*
 ---@return number
 function NetworkGetGangMembers(gangId,memberHandles)
-   return Citizen.InvokeNative(0xD1BF325C8252A982,gangId,memberHandles)
+    return Citizen.InvokeNative(0xD1BF325C8252A982,gangId,memberHandles)
 end
+
 
 
 --- 
@@ -177,8 +196,9 @@ end
 ---@param gangId any
 ---@return player
 function NetworkGetGangLeader(gangId)
-   return Citizen.InvokeNative(0x4BE6C13A45CCA8EC,gangId)
+    return Citizen.InvokeNative(0x4BE6C13A45CCA8EC,gangId)
 end
+
 
 
 --- 
@@ -187,7 +207,8 @@ end
 ---@param gamerHandle any*
 ---@return boolean
 function NetworkGetGangLeaderHandle(gangId,gamerHandle)
-   return Citizen.InvokeNative(0xCE88A261DCBBA0D9,gangId,gamerHandle)
+    return Citizen.InvokeNative(0xCE88A261DCBBA0D9,gangId,gamerHandle)
 end
+
 
 

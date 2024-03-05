@@ -7,6 +7,7 @@ function SetDecisionMaker(ped,name)
 end
 
 
+
 --- 
 --- Native 0x6B9C5C38838FB6E6 (SET_DECISION_MAKER_TO_DEFAULT)
 ---@param ped number
@@ -15,13 +16,15 @@ function SetDecisionMakerToDefault(ped)
 end
 
 
+
 --- 
 --- Native 0xCA1315C33B9A2847 (_CREATE_SHOCKING_EVENT)
 ---@param args any*
 ---@return scrhandle
 function CreateShockingEvent(args)
-   return Citizen.InvokeNative(0xCA1315C33B9A2847,args)
+    return Citizen.InvokeNative(0xCA1315C33B9A2847,args)
 end
+
 
 
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
@@ -40,8 +43,9 @@ end
 ---@param p10 number
 ---@return scrhandle
 function AddShockingEventAtPosition(eventType,x,y,z,p4,p5,p6,p7,p8,p9,p10)
-   return Citizen.InvokeNative(0xD9F8455409B525E9,eventType,x,y,z,p4,p5,p6,p7,p8,p9,p10)
+    return Citizen.InvokeNative(0xD9F8455409B525E9,eventType,x,y,z,p4,p5,p6,p7,p8,p9,p10)
 end
+
 
 
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
@@ -60,8 +64,9 @@ end
 ---@param p11 number
 ---@return scrhandle
 function AddShockingEventForEntity(eventType,entity,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
-   return Citizen.InvokeNative(0x7FD8F3BE76F89422,eventType,entity,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
+    return Citizen.InvokeNative(0x7FD8F3BE76F89422,eventType,entity,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11)
 end
+
 
 
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
@@ -73,8 +78,9 @@ end
 ---@param radius float
 ---@return boolean
 function IsShockingEventInSphere(eventType,x,y,z,radius)
-   return Citizen.InvokeNative(0x9DB47E16060D6354,eventType,x,y,z,radius)
+    return Citizen.InvokeNative(0x9DB47E16060D6354,eventType,x,y,z,radius)
 end
+
 
 
 --- 
@@ -82,8 +88,9 @@ end
 ---@param event scrhandle
 ---@return boolean
 function RemoveShockingEvent(event)
-   return Citizen.InvokeNative(0xE8BB3CC253A34559,event)
+    return Citizen.InvokeNative(0xE8BB3CC253A34559,event)
 end
+
 
 
 --- 
@@ -92,6 +99,7 @@ end
 function RemoveAllShockingEvents(p0)
     Citizen.InvokeNative(0xD47A168C2AB90DC4,p0)
 end
+
 
 
 --- 
@@ -104,6 +112,7 @@ end
 function RemoveAllShockingEventsInArea(x,y,z,radius,p4)
     Citizen.InvokeNative(0xB4C71BA9CAB097BD,x,y,z,radius,p4)
 end
+
 
 
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
@@ -119,6 +128,7 @@ function RemoveAllShockingEventsOfTypeInArea(eventType,x,y,z,radius,p5)
 end
 
 
+
 --- eventType: https://alloc8or.re/rdr3/doc/enums/eEventType.txt
 --- Native 0x118873DD538490B4 (REMOVE_ALL_SHOCKING_EVENTS_OF_TYPE)
 ---@param eventType hash
@@ -128,6 +138,7 @@ function RemoveAllShockingEventsOfType(eventType,p1)
 end
 
 
+
 --- 
 --- Native 0xDB249021652420C5 (REMOVE_SHOCKING_EVENT_SPAWN_BLOCKING_AREAS)
 function RemoveShockingEventSpawnBlockingAreas()
@@ -135,11 +146,13 @@ function RemoveShockingEventSpawnBlockingAreas()
 end
 
 
+
 --- 
 --- Native 0x84994FAD4E4E4E69 (SUPPRESS_SHOCKING_EVENTS_NEXT_FRAME)
 function SuppressShockingEventsNextFrame()
     Citizen.InvokeNative(0x84994FAD4E4E4E69)
 end
+
 
 
 --- Models used in the scripts: P_REGISTER05X, P_REGISTER06X, P_REGISTER03X, PLAYER_ZERO, PLAYER_THREE, A_C_HORSE_MORGAN_FLAXENCHESTNUT
@@ -152,6 +165,7 @@ function AddModelToEventMonitor(model,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xBB1E41DD3D3C6250 (_SET_EVENT_TRACKER_FOR_PED)
 ---@param ped number
@@ -162,6 +176,7 @@ function SetEventTrackerForPed(ped,eventName,p2)
 end
 
 
+
 --- 
 --- Native 0xC6A7DC546E94FED5 (_EVENT_GET_TIME_SINCE_EVENT)
 ---@param entity entity
@@ -170,8 +185,9 @@ end
 ---@param p3 number
 ---@return number
 function EventGetTimeSinceEvent(entity,eventType,p2,p3)
-   return Citizen.InvokeNative(0xC6A7DC546E94FED5,entity,eventType,p2,p3)
+    return Citizen.InvokeNative(0xC6A7DC546E94FED5,entity,eventType,p2,p3)
 end
+
 
 
 --- Returns eventType
@@ -181,8 +197,9 @@ end
 ---@param p2 number
 ---@return hash
 function EventGetRecentEvent(entity,p1,p2)
-   return Citizen.InvokeNative(0x796EECFF0C6D39BE,entity,p1,p2)
+    return Citizen.InvokeNative(0x796EECFF0C6D39BE,entity,p1,p2)
 end
+
 
 
 --- 
@@ -191,8 +208,9 @@ end
 ---@param shockingEvent hash
 ---@return boolean
 function IsEventTrackerActive(eventName,shockingEvent)
-   return Citizen.InvokeNative(0x797B3D4D92E56094,eventName,shockingEvent)
+    return Citizen.InvokeNative(0x797B3D4D92E56094,eventName,shockingEvent)
 end
+
 
 
 --- 
@@ -203,8 +221,9 @@ end
 ---@param p3 number
 ---@return entity
 function EventGetSourceEntityFromEvent(entity,eventType,p2,p3)
-   return Citizen.InvokeNative(0x822A001BCEA5BD81,entity,eventType,p2,p3)
+    return Citizen.InvokeNative(0x822A001BCEA5BD81,entity,eventType,p2,p3)
 end
+
 
 
 --- 
@@ -215,8 +234,9 @@ end
 ---@param p3 number
 ---@return entity
 function EventGetTargetEntityFromEvent(entity,eventType,p2,p3)
-   return Citizen.InvokeNative(0x38497F139981C5C9,entity,eventType,p2,p3)
+    return Citizen.InvokeNative(0x38497F139981C5C9,entity,eventType,p2,p3)
 end
+
 
 
 --- 
@@ -225,5 +245,6 @@ end
 function EventFlushAllEventTrackers(ped)
     Citizen.InvokeNative(0xAD8F2424C6E1E3A8,ped)
 end
+
 
 

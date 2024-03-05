@@ -15,6 +15,7 @@ function RenderScriptCams(render,ease,easeTime,p3,p4,p5)
 end
 
 
+
 --- This native makes the gameplay camera zoom into first person/third person with a special effect.
 ---blendBackSmoothingType: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eBlendBackSmoothing
 --- Native 0x8C7C7FF7CF0E5153 (STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP)
@@ -29,14 +30,16 @@ function StopRenderingScriptCamsUsingCatchUp(render,distance,blendBackSmoothingT
 end
 
 
+
 --- 
 --- Native 0xE72CDBA7F0A02DD6 (CREATE_CAM)
 ---@param camName string
 ---@param p1 boolean
 ---@return cam
 function CreateCam(camName,p1)
-   return Citizen.InvokeNative(0xE72CDBA7F0A02DD6,camName,p1)
+    return Citizen.InvokeNative(0xE72CDBA7F0A02DD6,camName,p1)
 end
+
 
 
 --- 
@@ -53,8 +56,9 @@ end
 ---@param p9 number
 ---@return cam
 function CreateCamWithParams(camName,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
-   return Citizen.InvokeNative(0x40C23491CE83708E,camName,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
+    return Citizen.InvokeNative(0x40C23491CE83708E,camName,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
 end
+
 
 
 --- 
@@ -63,8 +67,9 @@ end
 ---@param p1 boolean
 ---@return cam
 function CreateCamera(camHash,p1)
-   return Citizen.InvokeNative(0x57CDF879EA466C46,camHash,p1)
+    return Citizen.InvokeNative(0x57CDF879EA466C46,camHash,p1)
 end
+
 
 
 --- 
@@ -81,8 +86,9 @@ end
 ---@param p9 any
 ---@return cam
 function CreateCameraWithParams(camHash,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
-   return Citizen.InvokeNative(0x98B99B9F27E2D60B,camHash,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
+    return Citizen.InvokeNative(0x98B99B9F27E2D60B,camHash,posX,posY,posZ,rotX,rotY,rotZ,fov,p8,p9)
 end
+
 
 
 --- BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
@@ -94,6 +100,7 @@ function DestroyCam(cam,p1)
 end
 
 
+
 --- BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
 --- Native 0x163600D6E136C9F8 (DESTROY_ALL_CAMS)
 ---@param p0 boolean
@@ -102,13 +109,15 @@ function DestroyAllCams(p0)
 end
 
 
+
 --- Returns whether or not the passed camera handle exists.
 --- Native 0x153AD457764FD704 (DOES_CAM_EXIST)
 ---@param cam cam
 ---@return boolean
 function DoesCamExist(cam)
-   return Citizen.InvokeNative(0x153AD457764FD704,cam)
+    return Citizen.InvokeNative(0x153AD457764FD704,cam)
 end
+
 
 
 --- Set camera as active/inactive.
@@ -120,13 +129,15 @@ function SetCamActive(cam,active)
 end
 
 
+
 --- Returns whether or not the passed camera handle is active.
 --- Native 0x63EFCC7E1810B8E6 (IS_CAM_ACTIVE)
 ---@param cam cam
 ---@return boolean
 function IsCamActive(cam)
-   return Citizen.InvokeNative(0x63EFCC7E1810B8E6,cam)
+    return Citizen.InvokeNative(0x63EFCC7E1810B8E6,cam)
 end
+
 
 
 --- 
@@ -134,8 +145,9 @@ end
 ---@param cam cam
 ---@return boolean
 function IsCamRendering(cam)
-   return Citizen.InvokeNative(0x4415F8A6C536D39F,cam)
+    return Citizen.InvokeNative(0x4415F8A6C536D39F,cam)
 end
+
 
 
 --- 
@@ -146,13 +158,15 @@ function GetRenderingCam()
 end
 
 
+
 --- 
 --- Native 0x6B12F11C2A9F0344 (GET_CAM_COORD)
 ---@param cam cam
 ---@return vector3
 function GetCamCoord(cam)
-   return Citizen.InvokeNative(0x6B12F11C2A9F0344,cam)
+    return Citizen.InvokeNative(0x6B12F11C2A9F0344,cam)
 end
+
 
 
 --- rotationOrder: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eEulerRotationOrder
@@ -161,8 +175,9 @@ end
 ---@param rotationOrder number
 ---@return vector3
 function GetCamRot(cam,rotationOrder)
-   return Citizen.InvokeNative(0x9BF96B57254E7889,cam,rotationOrder)
+    return Citizen.InvokeNative(0x9BF96B57254E7889,cam,rotationOrder)
 end
+
 
 
 --- 
@@ -170,8 +185,9 @@ end
 ---@param cam cam
 ---@return float
 function GetCamFov(cam)
-   return Citizen.InvokeNative(0x8101D32A0A6B0F60,cam)
+    return Citizen.InvokeNative(0x8101D32A0A6B0F60,cam)
 end
+
 
 
 --- 
@@ -195,6 +211,7 @@ function SetCamParams(cam,posX,posY,posZ,rotX,rotY,rotZ,fieldOfView,p8,p9,p10,p1
 end
 
 
+
 --- Sets the position of the cam.
 --- Native 0xF9EE7D419EE49DE6 (SET_CAM_COORD)
 ---@param cam cam
@@ -204,6 +221,7 @@ end
 function SetCamCoord(cam,posX,posY,posZ)
     Citizen.InvokeNative(0xF9EE7D419EE49DE6,cam,posX,posY,posZ)
 end
+
 
 
 --- Sets the rotation of the cam.
@@ -218,6 +236,7 @@ function SetCamRot(cam,rotX,rotY,rotZ,rotationOrder)
 end
 
 
+
 --- Sets the field of view of the cam.
 ---Min: 1.0f
 ---Max: 130.0f
@@ -229,6 +248,7 @@ function SetCamFov(cam,fieldOfView)
 end
 
 
+
 --- 
 --- Native 0xA924028272A61364 (SET_CAM_NEAR_CLIP)
 ---@param cam cam
@@ -236,6 +256,7 @@ end
 function SetCamNearClip(cam,nearClip)
     Citizen.InvokeNative(0xA924028272A61364,cam,nearClip)
 end
+
 
 
 --- 
@@ -247,6 +268,7 @@ function SetCamFarClip(cam,farClip)
 end
 
 
+
 --- 
 --- Native 0x45FD891364181F9E (SET_CAM_MOTION_BLUR_STRENGTH)
 ---@param cam cam
@@ -254,6 +276,7 @@ end
 function SetCamMotionBlurStrength(cam,strength)
     Citizen.InvokeNative(0x45FD891364181F9E,cam,strength)
 end
+
 
 
 --- Last param determines if its relative to the Entity
@@ -267,6 +290,7 @@ end
 function AttachCamToEntity(cam,entity,xOffset,yOffset,zOffset,isRelative)
     Citizen.InvokeNative(0xFDC0DF7F6FB0A592,cam,entity,xOffset,yOffset,zOffset,isRelative)
 end
+
 
 
 --- boneIndex: https://github.com/femga/rdr3_discoveries/tree/master/boneNames
@@ -283,12 +307,14 @@ function AttachCamToPedBone(cam,ped,boneIndex,x,y,z,heading)
 end
 
 
+
 --- 
 --- Native 0x05B41DDBEB559556 (DETACH_CAM)
 ---@param cam cam
 function DetachCam(cam)
     Citizen.InvokeNative(0x05B41DDBEB559556,cam)
 end
+
 
 
 --- 
@@ -300,6 +326,7 @@ end
 function PointCamAtCoord(cam,x,y,z)
     Citizen.InvokeNative(0x948B39341C3A40C2,cam,x,y,z)
 end
+
 
 
 --- 
@@ -315,12 +342,14 @@ function PointCamAtEntity(cam,entity,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xCA1B30A3357C71F1 (STOP_CAM_POINTING)
 ---@param cam cam
 function StopCamPointing(cam)
     Citizen.InvokeNative(0xCA1B30A3357C71F1,cam)
 end
+
 
 
 --- 
@@ -332,6 +361,7 @@ function SetCamFocusDistance(cam,distance)
 end
 
 
+
 --- 
 --- Native 0x9F97E85EC142255E (_PAUSE_CAMERA_FOCUS)
 ---@param cam cam
@@ -339,6 +369,7 @@ end
 function PauseCameraFocus(cam,pause)
     Citizen.InvokeNative(0x9F97E85EC142255E,cam,pause)
 end
+
 
 
 --- Allows you to aim and shoot at the direction the camera is facing.
@@ -350,6 +381,7 @@ function SetCamAffectsAiming(cam,toggle)
 end
 
 
+
 --- 
 --- Native 0x1B8F3CE5A6001298 (SET_CAM_CONTROLS_MINI_MAP_HEADING)
 ---@param cam cam
@@ -359,6 +391,7 @@ function SetCamControlsMiniMapHeading(cam,p1)
 end
 
 
+
 --- 
 --- Native 0x42ED56B02E05D109 (ALLOW_MOTION_BLUR_DECAY)
 ---@param cam cam
@@ -366,6 +399,7 @@ end
 function AllowMotionBlurDecay(cam,p1)
     Citizen.InvokeNative(0x42ED56B02E05D109,cam,p1)
 end
+
 
 
 --- p7 (length) determines the length of the spline, affects camera path and duration of transition between previous node and this one
@@ -387,6 +421,7 @@ function AddCamSplineNode(camera,x,y,z,xRot,yRot,zRot,length,p8,p9)
 end
 
 
+
 --- 
 --- Native 0xF1898A68E7C15636 (SET_CAM_SPLINE_PHASE)
 ---@param cam cam
@@ -396,14 +431,16 @@ function SetCamSplinePhase(cam,p1)
 end
 
 
+
 --- Can use this with SET_CAM_SPLINE_PHASE to set the float it this native returns.
 ---(returns 1.0f when no nodes has been added, reached end of non existing spline)
 --- Native 0x095EDCD24D90033A (GET_CAM_SPLINE_PHASE)
 ---@param cam cam
 ---@return float
 function GetCamSplinePhase(cam)
-   return Citizen.InvokeNative(0x095EDCD24D90033A,cam)
+    return Citizen.InvokeNative(0x095EDCD24D90033A,cam)
 end
+
 
 
 --- 
@@ -415,6 +452,7 @@ function SetCamSplineDuration(cam,timeDuration)
 end
 
 
+
 --- 
 --- Native 0x84B3645618E726B0 (SET_CAM_SPLINE_SMOOTHING_STYLE)
 ---@param cam cam
@@ -422,6 +460,7 @@ end
 function SetCamSplineSmoothingStyle(cam,smoothingStyle)
     Citizen.InvokeNative(0x84B3645618E726B0,cam,smoothingStyle)
 end
+
 
 
 --- 
@@ -436,13 +475,15 @@ function SetCamActiveWithInterp(camTo,camFrom,duration,easeLocation,easeRotation
 end
 
 
+
 --- 
 --- Native 0x578F8F1CAA17BD2B (IS_CAM_INTERPOLATING)
 ---@param cam cam
 ---@return boolean
 function IsCamInterpolating(cam)
-   return Citizen.InvokeNative(0x578F8F1CAA17BD2B,cam)
+    return Citizen.InvokeNative(0x578F8F1CAA17BD2B,cam)
 end
+
 
 
 --- 
@@ -455,13 +496,15 @@ function ShakeCam(cam,type,amplitude)
 end
 
 
+
 --- 
 --- Native 0x2EEB402BD7320159 (IS_CAM_SHAKING)
 ---@param cam cam
 ---@return boolean
 function IsCamShaking(cam)
-   return Citizen.InvokeNative(0x2EEB402BD7320159,cam)
+    return Citizen.InvokeNative(0x2EEB402BD7320159,cam)
 end
+
 
 
 --- 
@@ -471,6 +514,7 @@ end
 function StopCamShaking(cam,p1)
     Citizen.InvokeNative(0xB78CC4B4706614B0,cam,p1)
 end
+
 
 
 --- 
@@ -488,8 +532,9 @@ end
 ---@param rotOrder number
 ---@return boolean
 function PlayCamAnim(cam,animName,animDictionary,x,y,z,xRot,yRot,zRot,animFlags,rotOrder)
-   return Citizen.InvokeNative(0xA263DDF694D563F6,cam,animName,animDictionary,x,y,z,xRot,yRot,zRot,animFlags,rotOrder)
+    return Citizen.InvokeNative(0xA263DDF694D563F6,cam,animName,animDictionary,x,y,z,xRot,yRot,zRot,animFlags,rotOrder)
 end
+
 
 
 --- Only used in R* Script camera_photomode
@@ -500,12 +545,14 @@ function IsAnimSceneCamActive()
 end
 
 
+
 --- 
 --- Native 0xF5472C80DF2FF847 (IS_SCREEN_FADED_OUT)
 ---@return boolean
 function IsScreenFadedOut()
    return Citizen.InvokeNative(0xF5472C80DF2FF847)
 end
+
 
 
 --- 
@@ -516,6 +563,7 @@ function IsScreenFadedIn()
 end
 
 
+
 --- 
 --- Native 0x02F39BEFE7B88D00 (IS_SCREEN_FADING_OUT)
 ---@return boolean
@@ -524,12 +572,14 @@ function IsScreenFadingOut()
 end
 
 
+
 --- 
 --- Native 0x0CECCC63FFA2EF24 (IS_SCREEN_FADING_IN)
 ---@return boolean
 function IsScreenFadingIn()
    return Citizen.InvokeNative(0x0CECCC63FFA2EF24)
 end
+
 
 
 --- Fades the screen in.
@@ -541,6 +591,7 @@ function DoScreenFadeIn(duration)
 end
 
 
+
 --- Fades the screen out.
 ---duration: The time the fade should take, in milliseconds.
 --- Native 0x40C719A5E410B9E4 (DO_SCREEN_FADE_OUT)
@@ -548,6 +599,7 @@ end
 function DoScreenFadeOut(duration)
     Citizen.InvokeNative(0x40C719A5E410B9E4,duration)
 end
+
 
 
 --- More info: https://en.wikipedia.org/wiki/Letterboxing_(filming)
@@ -558,6 +610,7 @@ function HasLetterBox()
 end
 
 
+
 --- Creates Cinematic Black Bars (at top and bottom)
 ---Disable instantly: false/false, Enable instantly: true/true
 --- Native 0x69D65E89FFD72313 (_REQUEST_LETTER_BOX_NOW)
@@ -566,6 +619,7 @@ end
 function RequestLetterBoxNow(p0,p1)
     Citizen.InvokeNative(0x69D65E89FFD72313,p0,p1)
 end
+
 
 
 --- 
@@ -581,11 +635,13 @@ function RequestLetterBoxOvertime(p0,p1,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xC64ABC0676AF262B (_FORCE_LETTER_BOX_THIS_UPDATE)
 function ForceLetterBoxThisUpdate()
     Citizen.InvokeNative(0xC64ABC0676AF262B)
 end
+
 
 
 --- More info: see HAS_LETTER_BOX
@@ -594,6 +650,7 @@ end
 function GetLetterBoxRatio()
    return Citizen.InvokeNative(0xA2B1C7EF759A63CE)
 end
+
 
 
 --- 
@@ -605,6 +662,7 @@ function SetWidescreenBorders(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x595320200B98596E (GET_GAMEPLAY_CAM_COORD)
 ---@return vector3
@@ -613,13 +671,15 @@ function GetGameplayCamCoord()
 end
 
 
+
 --- 
 --- Native 0x0252D2B5582957A6 (GET_GAMEPLAY_CAM_ROT)
 ---@param rotationOrder number
 ---@return vector3
 function GetGameplayCamRot(rotationOrder)
-   return Citizen.InvokeNative(0x0252D2B5582957A6,rotationOrder)
+    return Citizen.InvokeNative(0x0252D2B5582957A6,rotationOrder)
 end
+
 
 
 --- 
@@ -630,6 +690,7 @@ function GetGameplayCamFov()
 end
 
 
+
 --- 
 --- Native 0x8459B3E64257B21D (SET_GAMEPLAY_CAM_MAX_MOTION_BLUR_STRENGTH_THIS_UPDATE)
 ---@param p0 float
@@ -638,12 +699,14 @@ function SetGameplayCamMaxMotionBlurStrengthThisUpdate(p0)
 end
 
 
+
 --- 
 --- Native 0xC4ABF536048998AA (GET_GAMEPLAY_CAM_RELATIVE_HEADING)
 ---@return float
 function GetGameplayCamRelativeHeading()
    return Citizen.InvokeNative(0xC4ABF536048998AA)
 end
+
 
 
 --- Sets the camera position relative to heading in float from -360 to +360.
@@ -656,12 +719,14 @@ function SetGameplayCamRelativeHeading(heading,p1)
 end
 
 
+
 --- 
 --- Native 0x99AADEBBA803F827 (GET_GAMEPLAY_CAM_RELATIVE_PITCH)
 ---@return float
 function GetGameplayCamRelativePitch()
    return Citizen.InvokeNative(0x99AADEBBA803F827)
 end
+
 
 
 --- Sets the camera pitch.
@@ -676,6 +741,7 @@ function SetGameplayCamRelativePitch(x,Value2)
 end
 
 
+
 --- 
 --- Native 0x1DD95A8D6B24A0C9 (SET_SCRIPTED_CAMERA_IS_FIRST_PERSON_THIS_FRAME)
 ---@param p0 boolean
@@ -684,12 +750,14 @@ function SetScriptedCameraIsFirstPersonThisFrame(p0)
 end
 
 
+
 --- Returns true if player is in first person
 --- Native 0xD1BA66940E94C547 (_IS_IN_FULL_FIRST_PERSON_MODE)
 ---@return boolean
 function IsInFullFirstPersonMode()
    return Citizen.InvokeNative(0xD1BA66940E94C547)
 end
+
 
 
 --- 
@@ -701,12 +769,14 @@ function ShakeGameplayCam(shakeName,intensity)
 end
 
 
+
 --- 
 --- Native 0xEA4C5F4AA0A4DBEF (IS_GAMEPLAY_CAM_SHAKING)
 ---@return boolean
 function IsGameplayCamShaking()
    return Citizen.InvokeNative(0xEA4C5F4AA0A4DBEF)
 end
+
 
 
 --- Sets the amplitude for the gameplay (i.e. 3rd or 1st) camera to shake.
@@ -717,12 +787,14 @@ function SetGameplayCamShakeAmplitude(amplitude)
 end
 
 
+
 --- 
 --- Native 0xE0DE43D290FB65F9 (STOP_GAMEPLAY_CAM_SHAKING)
 ---@param p0 boolean
 function StopGameplayCamShaking(p0)
     Citizen.InvokeNative(0xE0DE43D290FB65F9,p0)
 end
+
 
 
 --- script_rel: DRUNK_SHAKE, REINFORCED_LASSO_STRUGGLE_SHAKE, CORRECTOR_SHAKE, MINIGAME_BOUNTY_SHAKE, HAND_SHAKE, MINIGAME_TRAIN_SHAKE
@@ -736,12 +808,14 @@ function StopGameplayCamShakingWithName(shakeName,p1)
 end
 
 
+
 --- Forces gameplay cam to specified ped as if you were the ped or spectating it
 --- Native 0x82E41D6ADE924FCA (SET_GAMEPLAY_CAM_FOLLOW_PED_THIS_UPDATE)
 ---@param ped number
 function SetGameplayCamFollowPedThisUpdate(ped)
     Citizen.InvokeNative(0x82E41D6ADE924FCA,ped)
 end
+
 
 
 --- 
@@ -752,12 +826,14 @@ function IsGameplayCamRendering()
 end
 
 
+
 --- 
 --- Native 0x251241CAEC707106 (IS_INTERPOLATING_FROM_SCRIPT_CAMS)
 ---@return boolean
 function IsInterpolatingFromScriptCams()
    return Citizen.InvokeNative(0x251241CAEC707106)
 end
+
 
 
 --- 
@@ -768,12 +844,14 @@ function IsInterpolatingToScriptCams()
 end
 
 
+
 --- 
 --- Native 0x8FE0D24FFD04D5A2 (IS_GAMEPLAY_CAM_LOOKING_BEHIND)
 ---@return boolean
 function IsGameplayCamLookingBehind()
    return Citizen.InvokeNative(0x8FE0D24FFD04D5A2)
 end
+
 
 
 --- Old name: _DISABLE_CAM_COLLISION_FOR_ENTITY
@@ -784,12 +862,14 @@ function SetGameplayCamIgnoreEntityCollisionThisUpdate(entity)
 end
 
 
+
 --- 
 --- Native 0x7E3F546ACFE6C8D9 (DISABLE_CAM_COLLISION_FOR_OBJECT)
 ---@param entity entity
 function DisableCamCollisionForObject(entity)
     Citizen.InvokeNative(0x7E3F546ACFE6C8D9,entity)
 end
+
 
 
 --- 
@@ -800,8 +880,9 @@ end
 ---@param radius float
 ---@return boolean
 function IsSphereVisible(x,y,z,radius)
-   return Citizen.InvokeNative(0x2E941B5FFA2989C6,x,y,z,radius)
+    return Citizen.InvokeNative(0x2E941B5FFA2989C6,x,y,z,radius)
 end
+
 
 
 --- Used in Script Function SHOP_CAMERA_SUPPORT_START_NEW_ORBIT
@@ -812,6 +893,7 @@ function SetGameplayCamInitialZoom(camInitialZoom)
 end
 
 
+
 --- 
 --- Native 0x6C1053C433A573CF (_SET_GAMEPLAY_CAM_INITIAL_HEADING)
 ---@param camInitialHeading float
@@ -820,12 +902,14 @@ function SetGameplayCamInitialHeading(camInitialHeading)
 end
 
 
+
 --- 
 --- Native 0x449995EA846D3FC2 (_SET_GAMEPLAY_CAM_INITIAL_PITCH)
 ---@param camInitialPitch float
 function SetGameplayCamInitialPitch(camInitialPitch)
     Citizen.InvokeNative(0x449995EA846D3FC2,camInitialPitch)
 end
+
 
 
 --- minimum: Degrees between -180f and 180f.
@@ -841,6 +925,7 @@ function SetThirdPersonCamRelativeHeadingLimitsThisUpdate(minimum,maximum)
 end
 
 
+
 --- minimum: Degrees between -90f and 90f.
 ---maximum: Degrees between -90f and 90f.
 ---Clamps the gameplay camera's current pitch.
@@ -854,6 +939,7 @@ function SetThirdPersonCamRelativePitchLimitsThisUpdate(minimum,maximum)
 end
 
 
+
 --- Old name: _ANIMATE_GAMEPLAY_CAM_ZOOM
 --- Native 0x2126C740A4AC370B (SET_THIRD_PERSON_CAM_ORBIT_DISTANCE_LIMITS_THIS_UPDATE)
 ---@param p0 float
@@ -861,6 +947,7 @@ end
 function SetThirdPersonCamOrbitDistanceLimitsThisUpdate(p0,distance)
     Citizen.InvokeNative(0x2126C740A4AC370B,p0,distance)
 end
+
 
 
 --- Forces gameplay cam to specified vehicle as if you were in it
@@ -872,11 +959,13 @@ function SetInVehicleCamStateThisUpdate(vehicle,p1)
 end
 
 
+
 --- Old name: _DISABLE_FIRST_PERSON_CAM_THIS_FRAME
 --- Native 0x9C473089A934C930 (DISABLE_ON_FOOT_FIRST_PERSON_VIEW_THIS_UPDATE)
 function DisableOnFootFirstPersonViewThisUpdate()
     Citizen.InvokeNative(0x9C473089A934C930)
 end
+
 
 
 --- nullsub, doesn't do anything
@@ -886,11 +975,13 @@ function DisableFirstPersonFlashEffectThisUpdate()
 end
 
 
+
 --- 
 --- Native 0x8910C24B7E0046EC (_DISABLE_CINEMATIC_MODE_THIS_FRAME)
 function DisableCinematicModeThisFrame()
     Citizen.InvokeNative(0x8910C24B7E0046EC)
 end
+
 
 
 --- 
@@ -901,6 +992,7 @@ function IsInCinematicMode()
 end
 
 
+
 --- Forces camera position to second furthest 3rd person
 --- Native 0x8370D34BD2E60B73 (_FORCE_THIRD_PERSON_CAM_THIS_FRAME)
 function ForceThirdPersonCamThisFrame()
@@ -908,11 +1000,13 @@ function ForceThirdPersonCamThisFrame()
 end
 
 
+
 --- Forces camera position to furthest 3rd person
 --- Native 0x1CFB749AD4317BDE (_FORCE_THIRD_PERSON_CAM_FAR_THIS_FRAME)
 function ForceThirdPersonCamFarThisFrame()
     Citizen.InvokeNative(0x1CFB749AD4317BDE)
 end
+
 
 
 --- Returns true if first person camera is active in saloon1.ysc
@@ -923,11 +1017,13 @@ function ForceFirstPersonCamThisFrame()
 end
 
 
+
 --- Does the same as 0x9C473089A934C930 (DISABLE_ON_FOOT_FIRST_PERSON_VIEW_THIS_UPDATE)
 --- Native 0x05AB44D906738426 (_DISABLE_ON_FOOT_FIRST_PERSON_VIEW_THIS_UPDATE_2)
 function DisableOnFootFirstPersonViewThisUpdate2()
     Citizen.InvokeNative(0x05AB44D906738426)
 end
+
 
 
 --- 
@@ -938,12 +1034,14 @@ function IsFollowVehicleCamActive()
 end
 
 
+
 --- 
 --- Native 0x698F456FB909E077 (IS_AIM_CAM_ACTIVE)
 ---@return boolean
 function IsAimCamActive()
    return Citizen.InvokeNative(0x698F456FB909E077)
 end
+
 
 
 --- 
@@ -954,6 +1052,7 @@ function IsFirstPersonAimCamActive()
 end
 
 
+
 --- 
 --- Native 0xA24C1D341C6E0D53 (IS_FIRST_PERSON_CAMERA_ACTIVE)
 ---@param p0 any
@@ -961,8 +1060,9 @@ end
 ---@param p2 any
 ---@return boolean
 function IsFirstPersonCameraActive(p0,p1,p2)
-   return Citizen.InvokeNative(0xA24C1D341C6E0D53,p0,p1,p2)
+    return Citizen.InvokeNative(0xA24C1D341C6E0D53,p0,p1,p2)
 end
+
 
 
 --- 
@@ -971,6 +1071,7 @@ end
 function GetFirstPersonAimCamZoomFactor()
    return Citizen.InvokeNative(0xB4132CA1B0EE1365)
 end
+
 
 
 --- 
@@ -982,6 +1083,7 @@ function SetFirstPersonAimCamRelativeHeadingLimitsThisUpdate(p0,p1)
 end
 
 
+
 --- Old name: _SET_FIRST_PERSON_CAM_PITCH_RANGE
 --- Native 0x715B7F5E8BED32A2 (SET_FIRST_PERSON_AIM_CAM_RELATIVE_PITCH_LIMITS_THIS_UPDATE)
 ---@param p0 float
@@ -989,6 +1091,7 @@ end
 function SetFirstPersonAimCamRelativePitchLimitsThisUpdate(p0,p1)
     Citizen.InvokeNative(0x715B7F5E8BED32A2,p0,p1)
 end
+
 
 
 --- 
@@ -999,13 +1102,15 @@ function GetFinalRenderedCamCoord()
 end
 
 
+
 --- 
 --- Native 0x602685BD85DD26CA (GET_FINAL_RENDERED_CAM_ROT)
 ---@param rotationOrder number
 ---@return vector3
 function GetFinalRenderedCamRot(rotationOrder)
-   return Citizen.InvokeNative(0x602685BD85DD26CA,rotationOrder)
+    return Citizen.InvokeNative(0x602685BD85DD26CA,rotationOrder)
 end
+
 
 
 --- 
@@ -1014,6 +1119,7 @@ end
 function GetFinalRenderedCamFov()
    return Citizen.InvokeNative(0x04AF77971E508F6A)
 end
+
 
 
 --- Hash used in finale1.ysc: 1726668277
@@ -1028,6 +1134,7 @@ end
 function SetGameplayCoordHint(x,y,z,duration,blendOutDuration,blendInDuration,p6)
     Citizen.InvokeNative(0xFA33B8C69A4A6A0F,x,y,z,duration,blendOutDuration,blendInDuration,p6)
 end
+
 
 
 --- 
@@ -1045,6 +1152,7 @@ function SetGameplayPedHint(p0,x1,y1,z1,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0xE2B2BB7DAC280515 (SET_GAMEPLAY_VEHICLE_HINT)
 ---@param p0 any
@@ -1060,6 +1168,7 @@ function SetGameplayVehicleHint(p0,p1,p2,p3,p4,p5,p6,p7)
 end
 
 
+
 --- 
 --- Native 0xC40551D65F2BF297 (SET_GAMEPLAY_OBJECT_HINT)
 ---@param p0 any
@@ -1073,6 +1182,7 @@ end
 function SetGameplayObjectHint(p0,p1,p2,p3,p4,p5,p6,p7)
     Citizen.InvokeNative(0xC40551D65F2BF297,p0,p1,p2,p3,p4,p5,p6,p7)
 end
+
 
 
 --- p6 & p7 - possibly length or time
@@ -1091,12 +1201,14 @@ function SetGameplayEntityHint(entity,xOffset,yOffset,zOffset,p4,p5,p6,p7,p8)
 end
 
 
+
 --- 
 --- Native 0x2E04AB5FEE042D4A (IS_GAMEPLAY_HINT_ACTIVE)
 ---@return boolean
 function IsGameplayHintActive()
    return Citizen.InvokeNative(0x2E04AB5FEE042D4A)
 end
+
 
 
 --- 
@@ -1107,12 +1219,14 @@ function StopGameplayHint(p0)
 end
 
 
+
 --- 
 --- Native 0x93759A83D0D844E7 (STOP_CODE_GAMEPLAY_HINT)
 ---@param p0 boolean
 function StopCodeGameplayHint(p0)
     Citizen.InvokeNative(0x93759A83D0D844E7,p0)
 end
+
 
 
 --- 
@@ -1123,12 +1237,14 @@ function SetGameplayHintFov(FOV)
 end
 
 
+
 --- 
 --- Native 0xDDDC54181868F81F (SET_GAMEPLAY_HINT_FOLLOW_DISTANCE_SCALAR)
 ---@param p0 float
 function SetGameplayHintFollowDistanceScalar(p0)
     Citizen.InvokeNative(0xDDDC54181868F81F,p0)
 end
+
 
 
 --- 
@@ -1139,6 +1255,7 @@ function SetGameplayHintBaseOrbitPitchOffset(p0)
 end
 
 
+
 --- Old name: _SET_GAMEPLAY_HINT_ANIM_OFFSETX
 --- Native 0xF86B6F93727C59C9 (SET_GAMEPLAY_HINT_CAMERA_RELATIVE_SIDE_OFFSET)
 ---@param p0 float
@@ -1147,12 +1264,14 @@ function SetGameplayHintCameraRelativeSideOffset(p0)
 end
 
 
+
 --- Old name: _SET_GAMEPLAY_HINT_ANIM_OFFSETY
 --- Native 0x29E74F819150CC32 (SET_GAMEPLAY_HINT_CAMERA_RELATIVE_VERTICAL_OFFSET)
 ---@param p0 float
 function SetGameplayHintCameraRelativeVerticalOffset(p0)
     Citizen.InvokeNative(0x29E74F819150CC32,p0)
 end
+
 
 
 --- [SHOP_CAMERA_SUPPORT_START_NEW_ORBIT]
@@ -1164,11 +1283,13 @@ function StartCameraOrbit(p0)
 end
 
 
+
 --- 
 --- Native 0x027CAB2C3AF27010 (_FREEZE_GAMEPLAY_CAM_THIS_FRAME)
 function FreezeGameplayCamThisFrame()
     Citizen.InvokeNative(0x027CAB2C3AF27010)
 end
+
 
 
 --- 
@@ -1179,12 +1300,14 @@ function SetCinematicButtonActive(p0)
 end
 
 
+
 --- 
 --- Native 0xBF7C780731AADBF8 (IS_CINEMATIC_CAM_RENDERING)
 ---@return boolean
 function IsCinematicCamRendering()
    return Citizen.InvokeNative(0xBF7C780731AADBF8)
 end
+
 
 
 --- Old name: _DISABLE_VEHICLE_FIRST_PERSON_CAM_THIS_FRAME
@@ -1194,11 +1317,13 @@ function DisableCinematicBonnetCameraThisUpdate()
 end
 
 
+
 --- Old name: _INVALIDATE_VEHICLE_IDLE_CAM
 --- Native 0x634F4A0562CF19B8 (INVALIDATE_CINEMATIC_VEHICLE_IDLE_MODE)
 function InvalidateCinematicVehicleIdleMode()
     Citizen.InvokeNative(0x634F4A0562CF19B8)
 end
+
 
 
 --- 
@@ -1209,12 +1334,14 @@ function ForceCinematicRenderingThisUpdate(p0)
 end
 
 
+
 --- 
 --- Native 0xCE7A90B160F75046 (SET_CINEMATIC_MODE_ACTIVE)
 ---@param p0 boolean
 function SetCinematicModeActive(p0)
     Citizen.InvokeNative(0xCE7A90B160F75046,p0)
 end
+
 
 
 --- Used for DUELING_MANAGE_DEATH_CAMERA - Initializing death camera
@@ -1224,6 +1351,7 @@ end
 function ForceCinematicDeathCamOnPed(targetPed)
     Citizen.InvokeNative(0xE3639DB78B3B5400,targetPed)
 end
+
 
 
 --- Used to enable headshot kill replay when you headshot set ped.
@@ -1236,6 +1364,7 @@ function ReactivatePedHeadshotExecuteSlowcam(ped,p1)
 end
 
 
+
 --- Used for DUELING_MANAGE_DEATH_CAMERA - Initializing death camera
 ---_SET_P* - _SET_S*
 --- Native 0x6E969927CF632608 (_SET_START_CINEMATIC_DEATH_CAM)
@@ -1243,6 +1372,7 @@ end
 function SetStartCinematicDeathCam(p0)
     Citizen.InvokeNative(0x6E969927CF632608,p0)
 end
+
 
 
 --- Creates Kill Cam for specified Ped Handle
@@ -1253,6 +1383,7 @@ function CreateKillCam(ped)
 end
 
 
+
 --- 
 --- Native 0xA14D5FE82BCB1D9E (_IS_CAM_PHOTOFX_RUNNING)
 ---@return boolean
@@ -1261,11 +1392,13 @@ function IsCamPhotofxRunning()
 end
 
 
+
 --- 
 --- Native 0x9A92C06ACBAF9731 (_TRIGGER_MISSION_FAILED_CAM)
 function TriggerMissionFailedCam()
     Citizen.InvokeNative(0x9A92C06ACBAF9731)
 end
+
 
 
 --- 
@@ -1276,12 +1409,14 @@ function IsDeathFailCameraRunning()
 end
 
 
+
 --- 
 --- Native 0x1B3C2D961F5FC0E1 (_LOAD_CINEMATIC_CAM_LOCATION)
 ---@param locationDictName string
 function LoadCinematicCamLocation(locationDictName)
     Citizen.InvokeNative(0x1B3C2D961F5FC0E1,locationDictName)
 end
+
 
 
 --- 
@@ -1292,13 +1427,15 @@ function UnloadCinematicCameraLocation(dictionaryName)
 end
 
 
+
 --- 
 --- Native 0xAA235E2F2C09E952 (_IS_CINEMATIC_CAM_LOCATION_LOADED)
 ---@param sLocationDictName string
 ---@return boolean
 function IsCinematicCamLocationLoaded(sLocationDictName)
-   return Citizen.InvokeNative(0xAA235E2F2C09E952,sLocationDictName)
+    return Citizen.InvokeNative(0xAA235E2F2C09E952,sLocationDictName)
 end
+
 
 
 --- Checks data related to Cinematic Cam Locations, if the check fails, the location is being loaded using 0x1B3C2D961F5FC0E1.
@@ -1306,8 +1443,9 @@ end
 ---@param locationDictName string
 ---@return boolean
 function IsCinematicCamLocationLoaded2(locationDictName)
-   return Citizen.InvokeNative(0x595550376B7EA230,locationDictName)
+    return Citizen.InvokeNative(0x595550376B7EA230,locationDictName)
 end
+
 
 
 --- 
@@ -1318,6 +1456,7 @@ end
 function CinematicLocationTriggerScriptedShotEvent2(dictionary,shotName,duration)
     Citizen.InvokeNative(0xBC016635D6A73B31,dictionary,shotName,duration)
 end
+
 
 
 --- 
@@ -1331,6 +1470,7 @@ function CinematicLocationTriggerScriptedShotEvent(dictionary,shotName,cameraNam
 end
 
 
+
 --- 
 --- Native 0x6D4D25C2137FF511 (CINEMATIC_LOCATION_STOP_SCRIPTED_SHOT_EVENT)
 ---@param p0 any
@@ -1339,6 +1479,7 @@ end
 function CinematicLocationStopScriptedShotEvent(p0,p1,p2)
     Citizen.InvokeNative(0x6D4D25C2137FF511,p0,p1,p2)
 end
+
 
 
 --- 
@@ -1355,6 +1496,7 @@ function CinematicLocationSetLocationAndRotation(name,x,y,z,rotX,rotY,rotZ)
 end
 
 
+
 --- Only used in R* Script fm_mission_controller
 --- Native 0x0B0F914459731F60 (CINEMATIC_LOCATION_OVERRIDE_TARGET_ENTITY_THIS_UPDATE)
 ---@param name string
@@ -1362,6 +1504,7 @@ end
 function CinematicLocationOverrideTargetEntityThisUpdate(name,entity)
     Citizen.InvokeNative(0x0B0F914459731F60,name,entity)
 end
+
 
 
 --- 
@@ -1372,6 +1515,7 @@ function LoadCameraDataDict(cameraDictionary)
 end
 
 
+
 --- 
 --- Native 0x798BE43C9393632B (_UNLOAD_CAMERA_DATA_DICT)
 ---@param cameraDictionary string
@@ -1380,13 +1524,15 @@ function UnloadCameraDataDict(cameraDictionary)
 end
 
 
+
 --- 
 --- Native 0xDD0B7C5AE58F721D (_IS_CAM_DATA_DICT_LOADED)
 ---@param cameraDictionary string
 ---@return boolean
 function IsCamDataDictLoaded(cameraDictionary)
-   return Citizen.InvokeNative(0xDD0B7C5AE58F721D,cameraDictionary)
+    return Citizen.InvokeNative(0xDD0B7C5AE58F721D,cameraDictionary)
 end
+
 
 
 --- 
@@ -1397,6 +1543,7 @@ function CamCreate(cameraDictionary)
 end
 
 
+
 --- 
 --- Native 0x0A5A4F1979ABB40E (_CAM_DESTROY)
 ---@param cameraDictionary string
@@ -1405,13 +1552,15 @@ function CamDestroy(cameraDictionary)
 end
 
 
+
 --- 
 --- Native 0x927B810E43E99932 (_IS_CAMERA_AVAILABLE)
 ---@param cameraDictionary string
 ---@return boolean
 function IsCameraAvailable(cameraDictionary)
-   return Citizen.InvokeNative(0x927B810E43E99932,cameraDictionary)
+    return Citizen.InvokeNative(0x927B810E43E99932,cameraDictionary)
 end
+
 
 
 --- 
@@ -1422,12 +1571,14 @@ function CamCreate2(cameraDictionary)
 end
 
 
+
 --- 
 --- Native 0x2533BAFFBE737E54 (_GET_PHOTO_MODE_FOCAL_LENGTH)
 ---@return float
 function GetPhotoModeFocalLength()
    return Citizen.InvokeNative(0x2533BAFFBE737E54)
 end
+
 
 
 --- 
@@ -1438,11 +1589,13 @@ function GetPhotoModeFocusDistance()
 end
 
 
+
 --- 
 --- Native 0x4653A741D17F2CD0 (_GET_PHOTO_MODE_DOF)
 ---@return float
 function GetPhotoModeDof()
    return Citizen.InvokeNative(0x4653A741D17F2CD0)
 end
+
 
 

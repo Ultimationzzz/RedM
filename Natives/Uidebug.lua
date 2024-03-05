@@ -8,6 +8,7 @@ function BgDisplayText(text,x,y)
 end
 
 
+
 --- 
 --- Native 0xA1253A3C870B6843 (_BG_SET_TEXT_SCALE)
 ---@param scaleX float
@@ -15,6 +16,7 @@ end
 function BgSetTextScale(scaleX,scaleY)
     Citizen.InvokeNative(0xA1253A3C870B6843,scaleX,scaleY)
 end
+
 
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/colours
@@ -26,5 +28,6 @@ end
 function BgSetTextColor(red,green,blue,alpha)
     Citizen.InvokeNative(0x16FA5CE47F184F1E,red,green,blue,alpha)
 end
+
 
 

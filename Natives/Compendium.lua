@@ -3,8 +3,9 @@
 ---@param category hash
 ---@return number
 function CompendiumGetNumOfEntriesInCategory(category)
-   return Citizen.InvokeNative(0x729D52F61A5A9E22,category)
+    return Citizen.InvokeNative(0x729D52F61A5A9E22,category)
 end
+
 
 
 --- 
@@ -12,8 +13,9 @@ end
 ---@param ped number
 ---@return hash
 function CompendiumGetShortDescriptionFromPed(ped)
-   return Citizen.InvokeNative(0x6C5E5D48E48B4C65,ped)
+    return Citizen.InvokeNative(0x6C5E5D48E48B4C65,ped)
 end
+
 
 
 --- 
@@ -22,8 +24,9 @@ end
 ---@param ped number
 ---@return hash
 function CompendiumGetSubcategoryPedIsIn(category,ped)
-   return Citizen.InvokeNative(0x9B657550DF55EC96,category,ped)
+    return Citizen.InvokeNative(0x9B657550DF55EC96,category,ped)
 end
+
 
 
 --- 
@@ -32,8 +35,9 @@ end
 ---@param animalType hash
 ---@return hash
 function CompendiumGetSubcategoryHashFromAnimalType(category,animalType)
-   return Citizen.InvokeNative(0xCD278B6BFBDBDC22,category,animalType)
+    return Citizen.InvokeNative(0xCD278B6BFBDBDC22,category,animalType)
 end
+
 
 
 --- 
@@ -42,8 +46,9 @@ end
 ---@param subcategory hash
 ---@return number
 function CompendiumGetNumEntriesInSubcategory(category,subcategory)
-   return Citizen.InvokeNative(0xF58A0C0E086E8E36,category,subcategory)
+    return Citizen.InvokeNative(0xF58A0C0E086E8E36,category,subcategory)
 end
+
 
 
 --- 
@@ -53,8 +58,9 @@ end
 ---@param count number
 ---@return number
 function CompendiumGetEntryByIndexInSubcategory(category,subcategory,count)
-   return Citizen.InvokeNative(0x5CEB63B2E3D9895F,category,subcategory,count)
+    return Citizen.InvokeNative(0x5CEB63B2E3D9895F,category,subcategory,count)
 end
+
 
 
 --- 
@@ -63,8 +69,9 @@ end
 ---@param ped number
 ---@return number
 function CompendiumGetEntryByPedIndex(category,ped)
-   return Citizen.InvokeNative(0x1CFA0219D8E1CF25,category,ped)
+    return Citizen.InvokeNative(0x1CFA0219D8E1CF25,category,ped)
 end
+
 
 
 --- 
@@ -73,8 +80,9 @@ end
 ---@param animalType hash
 ---@return number
 function CompendiumGetEntryByStatItem(category,animalType)
-   return Citizen.InvokeNative(0x66EC938394D76C85,category,animalType)
+    return Citizen.InvokeNative(0x66EC938394D76C85,category,animalType)
 end
+
 
 
 --- 
@@ -83,8 +91,9 @@ end
 ---@param subcategory hash
 ---@return any
 function CompendiumGetSubcategoryToastAppId(category,subcategory)
-   return Citizen.InvokeNative(0x2BF30D9D4D680112,category,subcategory)
+    return Citizen.InvokeNative(0x2BF30D9D4D680112,category,subcategory)
 end
+
 
 
 --- 
@@ -95,8 +104,9 @@ end
 ---@param z float
 ---@return hash
 function CompendiumGetMapDiscoverableFromStatItem(animalStatItem,x,y,z)
-   return Citizen.InvokeNative(0x729D54121A5E9E20,animalStatItem,x,y,z)
+    return Citizen.InvokeNative(0x729D54121A5E9E20,animalStatItem,x,y,z)
 end
+
 
 
 --- 
@@ -108,13 +118,15 @@ function CompendiumAnimalObservedByStatName(animalType,disableCompendiumToast)
 end
 
 
+
 --- 
 --- Native 0x23B5E9C5160BC04F (COMPENDIUM_WAS_ANIMAL_OBSERVED)
 ---@param ped number
 ---@return boolean
 function CompendiumWasAnimalObserved(ped)
-   return Citizen.InvokeNative(0x23B5E9C5160BC04F,ped)
+    return Citizen.InvokeNative(0x23B5E9C5160BC04F,ped)
 end
+
 
 
 --- 
@@ -125,13 +137,15 @@ function CompendiumAnimalSetDiscovered(compendiumEntry)
 end
 
 
+
 --- 
 --- Native 0x9F678782720349E4 (COMPENDIUM_GET_STUDY_AWARD_ID)
 ---@param ped number
 ---@return any
 function CompendiumGetStudyAwardId(ped)
-   return Citizen.InvokeNative(0x9F678782720349E4,ped)
+    return Citizen.InvokeNative(0x9F678782720349E4,ped)
 end
+
 
 
 --- 
@@ -139,8 +153,9 @@ end
 ---@param compendiumEntry number
 ---@return any
 function CompendiumAnimalGetSampleInventoryItem(compendiumEntry)
-   return Citizen.InvokeNative(0x4E4ACAE1C671A9DA,compendiumEntry)
+    return Citizen.InvokeNative(0x4E4ACAE1C671A9DA,compendiumEntry)
 end
+
 
 
 --- 
@@ -148,8 +163,9 @@ end
 ---@param compendiumEntry number
 ---@return boolean
 function CompendiumAnimalHasSample(compendiumEntry)
-   return Citizen.InvokeNative(0x6FC24625E4FCAC27,compendiumEntry)
+    return Citizen.InvokeNative(0x6FC24625E4FCAC27,compendiumEntry)
 end
+
 
 
 --- 
@@ -157,8 +173,9 @@ end
 ---@param compendiumEntry number
 ---@return boolean
 function CompendiumAnimalHasStamp(compendiumEntry)
-   return Citizen.InvokeNative(0xBCF569FC32FFF456,compendiumEntry)
+    return Citizen.InvokeNative(0xBCF569FC32FFF456,compendiumEntry)
 end
+
 
 
 --- 
@@ -167,8 +184,9 @@ end
 ---@param subcategory hash
 ---@return string
 function CompendiumGetSubcategorySampleToastTitle(category,subcategory)
-   return Citizen.InvokeNative(0x5E50C67EB60951E6,category,subcategory)
+    return Citizen.InvokeNative(0x5E50C67EB60951E6,category,subcategory)
 end
+
 
 
 --- 
@@ -177,8 +195,9 @@ end
 ---@param subcategory hash
 ---@return string
 function CompendiumGetSubcategorySampleToastDescProgress(category,subcategory)
-   return Citizen.InvokeNative(0x82BFB5B367957699,category,subcategory)
+    return Citizen.InvokeNative(0x82BFB5B367957699,category,subcategory)
 end
+
 
 
 --- 
@@ -187,8 +206,9 @@ end
 ---@param subcategory hash
 ---@return string
 function CompendiumGetSubcategorySampleToastDescComplete(category,subcategory)
-   return Citizen.InvokeNative(0x59D4D68CDB82427C,category,subcategory)
+    return Citizen.InvokeNative(0x59D4D68CDB82427C,category,subcategory)
 end
+
 
 
 --- 
@@ -200,14 +220,16 @@ function CompendiumFishCaught(ped,category)
 end
 
 
+
 --- 
 --- Native 0x725D52F21A5E9E81 (COMPENDIUM_FISH_GET_LURE_SUITABILITY_BY_STAT_ITEM)
 ---@param animalType hash
 ---@param baitType hash
 ---@return number
 function CompendiumFishGetLureSuitabilityByStatItem(animalType,baitType)
-   return Citizen.InvokeNative(0x725D52F21A5E9E81,animalType,baitType)
+    return Citizen.InvokeNative(0x725D52F21A5E9E81,animalType,baitType)
 end
+
 
 
 --- 
@@ -219,12 +241,14 @@ function CompendiumGangCampFound(p0,p1)
 end
 
 
+
 --- 
 --- Native 0x725D52F21A5E9E04 (COMPENDIUM_GANG_AMBUSH_SURVIVED)
 ---@param p0 any
 function CompendiumGangAmbushSurvived(p0)
     Citizen.InvokeNative(0x725D52F21A5E9E04,p0)
 end
+
 
 
 --- 
@@ -235,12 +259,14 @@ function CompendiumGangEncountered(p0)
 end
 
 
+
 --- 
 --- Native 0x725D52F21A5E9E06 (COMPENDIUM_GANG_BOUNTY_CAPTURED)
 ---@param p0 any
 function CompendiumGangBountyCaptured(p0)
     Citizen.InvokeNative(0x725D52F21A5E9E06,p0)
 end
+
 
 
 --- 
@@ -251,6 +277,7 @@ function CompendiumGangMemberKilled(p0)
 end
 
 
+
 --- 
 --- Native 0x725D52F21A5E9E08 (COMPENDIUM_GANG_HIDEOUT_FOUND)
 ---@param p0 any
@@ -258,6 +285,7 @@ end
 function CompendiumGangHideoutFound(p0,p1)
     Citizen.InvokeNative(0x725D52F21A5E9E08,p0,p1)
 end
+
 
 
 --- herbType: https://alloc8or.re/rdr3/doc/enums/eHerbType.txt
@@ -272,6 +300,7 @@ function CompendiumHerbPicked(herbType,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x725D52F21A5E9E50 (COMPENDIUM_HORSE_BONDING)
 ---@param ped number
@@ -279,6 +308,7 @@ end
 function CompendiumHorseBonding(ped,bondingLevel)
     Citizen.InvokeNative(0x725D52F21A5E9E50,ped,bondingLevel)
 end
+
 
 
 --- NET_PLAYER_HORSE_PROCESS_EVENT_HORSE_BREAKING
@@ -289,6 +319,7 @@ function CompendiumHorseWildBroken(ped)
 end
 
 
+
 --- Only gets called if bSetObserved is true and animalType is matching
 --- Native 0x725D58F2125E5E50 (COMPENDIUM_HORSE_OBSERVED)
 ---@param ped number
@@ -296,5 +327,6 @@ end
 function CompendiumHorseObserved(ped,disableCompendiumToast)
     Citizen.InvokeNative(0x725D58F2125E5E50,ped,disableCompendiumToast)
 end
+
 
 

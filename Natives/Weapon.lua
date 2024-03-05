@@ -3,8 +3,9 @@
 ---@param weaponHash hash
 ---@return hash
 function GetWeaponUnlock(weaponHash)
-   return Citizen.InvokeNative(0x865F36299079FB75,weaponHash)
+    return Citizen.InvokeNative(0x865F36299079FB75,weaponHash)
 end
+
 
 
 --- addReason:
@@ -38,6 +39,7 @@ function AddAmmoToPed(ped,weaponHash,amount,addReason)
 end
 
 
+
 --- addReason: see _ADD_AMMO_TO_PED
 --- Native 0x106A811C6D3035F3 (_ADD_AMMO_TO_PED_BY_TYPE)
 ---@param ped number
@@ -47,6 +49,7 @@ end
 function AddAmmoToPedByType(ped,ammoType,amount,addReason)
     Citizen.InvokeNative(0x106A811C6D3035F3,ped,ammoType,amount,addReason)
 end
+
 
 
 --- removeReason must be REMOVE_REASON_USED, REMOVE_REASON_GIVEN, REMOVE_REASON_DROPPED or REMOVE_REASON_DEBUG, unless amount is -1
@@ -61,6 +64,7 @@ function RemoveAmmoFromPed(ped,weaponHash,amount,removeReason)
 end
 
 
+
 --- removeReason must be REMOVE_REASON_USED, REMOVE_REASON_GIVEN, REMOVE_REASON_DROPPED or REMOVE_REASON_DEBUG, unless amount is -1
 ---removeReason: see REMOVE_WEAPON_FROM_PED
 --- Native 0xB6CFEC32E3742779 (_REMOVE_AMMO_FROM_PED_BY_TYPE)
@@ -73,12 +77,14 @@ function RemoveAmmoFromPedByType(ped,ammoHash,amount,removeReason)
 end
 
 
+
 --- 
 --- Native 0x1B83C0DEEBCBB214 (_REMOVE_ALL_PED_AMMO)
 ---@param ped number
 function RemoveAllPedAmmo(ped)
     Citizen.InvokeNative(0x1B83C0DEEBCBB214,ped)
 end
+
 
 
 --- 
@@ -89,6 +95,7 @@ end
 function SetPedAmmo(ped,weaponHash,ammo)
     Citizen.InvokeNative(0x14E56BC5B5DB6A19,ped,weaponHash,ammo)
 end
+
 
 
 --- 
@@ -102,6 +109,7 @@ function SetVehicleWeaponHeadingLimits(vehicle,p1,minHeading,maxHeading)
 end
 
 
+
 --- 
 --- Native 0xBF5987E1CDE63501 (_SET_VEHICLE_WEAPON_HEADING_LIMITS_2)
 ---@param vehicle vehicle
@@ -110,8 +118,9 @@ end
 ---@param maxHeading float
 ---@return any
 function SetVehicleWeaponHeadingLimits2(vehicle,p1,minHeading,maxHeading)
-   return Citizen.InvokeNative(0xBF5987E1CDE63501,vehicle,p1,minHeading,maxHeading)
+    return Citizen.InvokeNative(0xBF5987E1CDE63501,vehicle,p1,minHeading,maxHeading)
 end
+
 
 
 --- 
@@ -125,6 +134,7 @@ function SetVehicleWeaponHeading(vehicle,seatIndex,heading,p3)
 end
 
 
+
 --- 
 --- Native 0x3EDCB0505123623B (SET_PED_INFINITE_AMMO)
 ---@param ped number
@@ -133,6 +143,7 @@ end
 function SetPedInfiniteAmmo(ped,toggle,weaponHash)
     Citizen.InvokeNative(0x3EDCB0505123623B,ped,toggle,weaponHash)
 end
+
 
 
 --- 
@@ -144,14 +155,16 @@ function SetPedInfiniteAmmoClip(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x015A522136D7F951 (GET_AMMO_IN_PED_WEAPON)
 ---@param ped number
 ---@param weaponHash hash
 ---@return number
 function GetAmmoInPedWeapon(ped,weaponHash)
-   return Citizen.InvokeNative(0x015A522136D7F951,ped,weaponHash)
+    return Citizen.InvokeNative(0x015A522136D7F951,ped,weaponHash)
 end
+
 
 
 --- 
@@ -161,8 +174,9 @@ end
 ---@param p2 boolean
 ---@return number
 function GetMaxAmmoInClip(ped,weaponHash,p2)
-   return Citizen.InvokeNative(0xA38DCFFCEA8962FA,ped,weaponHash,p2)
+    return Citizen.InvokeNative(0xA38DCFFCEA8962FA,ped,weaponHash,p2)
 end
+
 
 
 --- 
@@ -172,8 +186,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function GetAmmoInClip(ped,ammo,weaponHash)
-   return Citizen.InvokeNative(0x2E1202248937775C,ped,ammo,weaponHash)
+    return Citizen.InvokeNative(0x2E1202248937775C,ped,ammo,weaponHash)
 end
+
 
 
 --- 
@@ -183,8 +198,9 @@ end
 ---@param inventoryUid any*
 ---@return boolean
 function GetAmmoInClipByInventoryUid(ped,ammo,inventoryUid)
-   return Citizen.InvokeNative(0x678F00858980F516,ped,ammo,inventoryUid)
+    return Citizen.InvokeNative(0x678F00858980F516,ped,ammo,inventoryUid)
 end
+
 
 
 --- 
@@ -194,8 +210,9 @@ end
 ---@param ammo number
 ---@return boolean
 function SetAmmoInClip(ped,weaponHash,ammo)
-   return Citizen.InvokeNative(0xDCD2A934D65CB497,ped,weaponHash,ammo)
+    return Citizen.InvokeNative(0xDCD2A934D65CB497,ped,weaponHash,ammo)
 end
+
 
 
 --- 
@@ -205,8 +222,9 @@ end
 ---@param p2 number
 ---@return any
 function RefillAmmoInClip(ped,clipInventoryUid,p2)
-   return Citizen.InvokeNative(0xDF4A3404D022ADDE,ped,clipInventoryUid,p2)
+    return Citizen.InvokeNative(0xDF4A3404D022ADDE,ped,clipInventoryUid,p2)
 end
+
 
 
 --- 
@@ -216,8 +234,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function GetMaxAmmo(ped,ammo,weaponHash)
-   return Citizen.InvokeNative(0xDC16122C7A20C933,ped,ammo,weaponHash)
+    return Citizen.InvokeNative(0xDC16122C7A20C933,ped,ammo,weaponHash)
 end
+
 
 
 --- 
@@ -230,14 +249,16 @@ function SetPedAmmoByType(ped,ammoType,ammo)
 end
 
 
+
 --- 
 --- Native 0x39D22031557946C1 (GET_PED_AMMO_BY_TYPE)
 ---@param ped number
 ---@param ammoType hash
 ---@return number
 function GetPedAmmoByType(ped,ammoType)
-   return Citizen.InvokeNative(0x39D22031557946C1,ped,ammoType)
+    return Citizen.InvokeNative(0x39D22031557946C1,ped,ammoType)
 end
+
 
 
 --- 
@@ -250,13 +271,15 @@ function SetPedAmmoToDrop(ped,p1,p2)
 end
 
 
+
 --- 
 --- Native 0x5C2EA6C44F515F34 (_GET_AMMO_TYPE_FOR_WEAPON)
 ---@param weaponHash hash
 ---@return hash
 function GetAmmoTypeForWeapon(weaponHash)
-   return Citizen.InvokeNative(0x5C2EA6C44F515F34,weaponHash)
+    return Citizen.InvokeNative(0x5C2EA6C44F515F34,weaponHash)
 end
+
 
 
 --- Returns the current ammo type of the specified ped's specified weapon.
@@ -265,8 +288,9 @@ end
 ---@param weaponHash hash
 ---@return hash
 function GetPedAmmoTypeFromWeapon(ped,weaponHash)
-   return Citizen.InvokeNative(0x7FEAD38B326B9F74,ped,weaponHash)
+    return Citizen.InvokeNative(0x7FEAD38B326B9F74,ped,weaponHash)
 end
+
 
 
 --- 
@@ -274,8 +298,9 @@ end
 ---@param ammoType hash
 ---@return hash
 function GetWeaponTypeFromAmmoType(ammoType)
-   return Citizen.InvokeNative(0x7AA043F6C41D151E,ammoType)
+    return Citizen.InvokeNative(0x7AA043F6C41D151E,ammoType)
 end
+
 
 
 --- 
@@ -283,8 +308,9 @@ end
 ---@param componentHash hash
 ---@return hash
 function GetWeaponComponentTypeModel(componentHash)
-   return Citizen.InvokeNative(0x59DE03442B6C9598,componentHash)
+    return Citizen.InvokeNative(0x59DE03442B6C9598,componentHash)
 end
+
 
 
 --- Gets the model hash from the weapon hash.
@@ -292,8 +318,9 @@ end
 ---@param weaponHash hash
 ---@return hash
 function GetWeapontypeModel(weaponHash)
-   return Citizen.InvokeNative(0xF70825EB340E7D15,weaponHash)
+    return Citizen.InvokeNative(0xF70825EB340E7D15,weaponHash)
 end
+
 
 
 --- Returns hash where WEAPON_ is replaced with SLOT_
@@ -301,8 +328,9 @@ end
 ---@param weaponHash hash
 ---@return hash
 function GetWeapontypeSlot(weaponHash)
-   return Citizen.InvokeNative(0x46F032B8DDF46CDE,weaponHash)
+    return Citizen.InvokeNative(0x46F032B8DDF46CDE,weaponHash)
 end
+
 
 
 --- 
@@ -310,8 +338,9 @@ end
 ---@param weaponHash hash
 ---@return hash
 function GetWeapontypeGroup(weaponHash)
-   return Citizen.InvokeNative(0xEDCA14CA5199FF25,weaponHash)
+    return Citizen.InvokeNative(0xEDCA14CA5199FF25,weaponHash)
 end
+
 
 
 --- Returns true when the weapon passed is either a lasso, the camera or the binoculars
@@ -320,8 +349,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponKit(weaponHash)
-   return Citizen.InvokeNative(0x6ABAD7B0A854F8FB,weaponHash)
+    return Citizen.InvokeNative(0x6ABAD7B0A854F8FB,weaponHash)
 end
+
 
 
 --- Returns true when the weapon passed is either the fishingrod, a lasso, the camera or the binoculars
@@ -330,8 +360,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponKit2(weaponHash)
-   return Citizen.InvokeNative(0x49E40483948AF062,weaponHash)
+    return Citizen.InvokeNative(0x49E40483948AF062,weaponHash)
 end
+
 
 
 --- 
@@ -339,8 +370,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponBow(weaponHash)
-   return Citizen.InvokeNative(0xC4DEC3CA8C365A5D,weaponHash)
+    return Citizen.InvokeNative(0xC4DEC3CA8C365A5D,weaponHash)
 end
+
 
 
 --- 
@@ -348,8 +380,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponLantern(weaponHash)
-   return Citizen.InvokeNative(0x79407D33328286C6,weaponHash)
+    return Citizen.InvokeNative(0x79407D33328286C6,weaponHash)
 end
+
 
 
 --- 
@@ -357,8 +390,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponTorch(weaponHash)
-   return Citizen.InvokeNative(0x506F1DE1BFC75304,weaponHash)
+    return Citizen.InvokeNative(0x506F1DE1BFC75304,weaponHash)
 end
+
 
 
 --- 
@@ -368,8 +402,9 @@ end
 ---@param outData any*
 ---@return boolean
 function GiveWeaponToPedWithOptions(ped,data,outData)
-   return Citizen.InvokeNative(0xBE7E42B07FD317AC,ped,data,outData)
+    return Citizen.InvokeNative(0xBE7E42B07FD317AC,ped,data,outData)
 end
+
 
 
 --- Gives the ped the weapon.
@@ -394,8 +429,9 @@ end
 ---@param p12 boolean
 ---@return hash
 function GiveWeaponToPed(ped,weaponHash,ammoCount,bForceInHand,bForceInHolster,attachPoint,bAllowMultipleCopies,p7,p8,addReason,bIgnoreUnlocks,permanentDegradation,p12)
-   return Citizen.InvokeNative(0x5E3BDDBCB83F3D84,ped,weaponHash,ammoCount,bForceInHand,bForceInHolster,attachPoint,bAllowMultipleCopies,p7,p8,addReason,bIgnoreUnlocks,permanentDegradation,p12)
+    return Citizen.InvokeNative(0x5E3BDDBCB83F3D84,ped,weaponHash,ammoCount,bForceInHand,bForceInHolster,attachPoint,bAllowMultipleCopies,p7,p8,addReason,bIgnoreUnlocks,permanentDegradation,p12)
 end
+
 
 
 --- 
@@ -405,6 +441,7 @@ end
 function SetForceCurrentWeaponIntoCockedState(ped,attachPoint)
     Citizen.InvokeNative(0x5230D3F6EE56CFE6,ped,attachPoint)
 end
+
 
 
 --- 
@@ -419,6 +456,7 @@ function HolsterPedWeapons(ped,p1,p2,p3,immediately)
 end
 
 
+
 --- Unequip current weapon and set current weapon to WEAPON_UNARMED.
 ---p0 usually 2 in R* scripts. Doesn't seem to have any effect if changed....
 ---immediately: if true it will instantly switch to unarmed
@@ -429,6 +467,7 @@ end
 function HidePedWeapons(ped,p0,immediately)
     Citizen.InvokeNative(0xFCCC886EDE3C63EC,ped,p0,immediately)
 end
+
 
 
 --- attachPoint:
@@ -480,6 +519,7 @@ function SetCurrentPedWeapon(ped,weaponHash,equipNow,attachPoint,p4,p5)
 end
 
 
+
 --- attachPoint: see SET_CURRENT_PED_WEAPON
 --- Native 0x3A87E44BB9A01D54 (GET_CURRENT_PED_WEAPON)
 ---@param ped number
@@ -489,8 +529,9 @@ end
 ---@param p4 boolean
 ---@return boolean
 function GetCurrentPedWeapon(ped,weaponHash,p2,attachPoint,p4)
-   return Citizen.InvokeNative(0x3A87E44BB9A01D54,ped,weaponHash,p2,attachPoint,p4)
+    return Citizen.InvokeNative(0x3A87E44BB9A01D54,ped,weaponHash,p2,attachPoint,p4)
 end
+
 
 
 --- Returns weaponObject, attachPoint: see SET_CURRENT_PED_WEAPON
@@ -499,8 +540,9 @@ end
 ---@param attachPoint number
 ---@return entity
 function GetCurrentPedWeaponEntityIndex(ped,attachPoint)
-   return Citizen.InvokeNative(0x3B390A939AF0B5FC,ped,attachPoint)
+    return Citizen.InvokeNative(0x3B390A939AF0B5FC,ped,attachPoint)
 end
+
 
 
 --- 
@@ -508,8 +550,9 @@ end
 ---@param ped number
 ---@return boolean
 function EnableWeaponRestore(ped)
-   return Citizen.InvokeNative(0xC395355843BE134B,ped)
+    return Citizen.InvokeNative(0xC395355843BE134B,ped)
 end
+
 
 
 --- 
@@ -518,8 +561,9 @@ end
 ---@param p1 boolean
 ---@return hash
 function GetPedBackupWeapon(ped,p1)
-   return Citizen.InvokeNative(0xC71FE230A513C30F,ped,p1)
+    return Citizen.InvokeNative(0xC71FE230A513C30F,ped,p1)
 end
+
 
 
 --- 
@@ -530,8 +574,9 @@ end
 ---@param p3 boolean
 ---@return hash
 function GetPedWorstWeapon(ped,p1,p2,p3)
-   return Citizen.InvokeNative(0xDA37A053C1522F5D,ped,p1,p2,p3)
+    return Citizen.InvokeNative(0xDA37A053C1522F5D,ped,p1,p2,p3)
 end
+
 
 
 --- 
@@ -541,8 +586,9 @@ end
 ---@param p2 boolean
 ---@return hash
 function GetBestPedWeapon(ped,p1,p2)
-   return Citizen.InvokeNative(0x8483E98E8B888AE2,ped,p1,p2)
+    return Citizen.InvokeNative(0x8483E98E8B888AE2,ped,p1,p2)
 end
+
 
 
 --- 
@@ -552,8 +598,9 @@ end
 ---@param guidPrimary any*
 ---@return any
 function GetBestPedWeaponInInventory(ped,p1,guidPrimary)
-   return Citizen.InvokeNative(0x7B98500614C8E8B8,ped,p1,guidPrimary)
+    return Citizen.InvokeNative(0x7B98500614C8E8B8,ped,p1,guidPrimary)
 end
+
 
 
 --- 
@@ -567,6 +614,7 @@ function GetBestPedShortarmGuid(ped,outGUID,p2,p3)
 end
 
 
+
 --- 
 --- Native 0x6929E22158E52265 (GET_PED_WEAPON_GUID_AT_ATTACH_POINT)
 ---@param ped number
@@ -574,8 +622,9 @@ end
 ---@param weaponGuid any*
 ---@return boolean
 function GetPedWeaponGuidAtAttachPoint(ped,attachPoint,weaponGuid)
-   return Citizen.InvokeNative(0x6929E22158E52265,ped,attachPoint,weaponGuid)
+    return Citizen.InvokeNative(0x6929E22158E52265,ped,attachPoint,weaponGuid)
 end
+
 
 
 --- If near your horse when called, weapons stored on your horse will be considered
@@ -587,8 +636,9 @@ end
 ---@param p3 boolean
 ---@return hash
 function GetBestPedWeaponInGroup(ped,weaponGroup,p2,p3)
-   return Citizen.InvokeNative(0x9F67929D98E7C6E8,ped,weaponGroup,p2,p3)
+    return Citizen.InvokeNative(0x9F67929D98E7C6E8,ped,weaponGroup,p2,p3)
 end
+
 
 
 --- Returns the ped's default unarmed weapon hash as defined in CPedModelInfo (DefaultUnarmedWeapon).
@@ -597,8 +647,9 @@ end
 ---@param ped number
 ---@return hash
 function GetDefaultUnarmedWeaponHash(ped)
-   return Citizen.InvokeNative(0x08FF1099ED2E6E21,ped)
+    return Citizen.InvokeNative(0x08FF1099ED2E6E21,ped)
 end
+
 
 
 --- turretHash: WEAPON_TURRET_MAXIUM, WEAPON_TURRET_GATLING, WEAPON_TURRET_CANNON, WEAPON_TURRET_REVOLVING_CANNON
@@ -611,14 +662,16 @@ function SetAmmoInTurret(vehicle,turretHash,ammo)
 end
 
 
+
 --- 
 --- Native 0x75C55983C2C39DAA (SET_CURRENT_PED_VEHICLE_WEAPON)
 ---@param ped number
 ---@param weaponHash hash
 ---@return boolean
 function SetCurrentPedVehicleWeapon(ped,weaponHash)
-   return Citizen.InvokeNative(0x75C55983C2C39DAA,ped,weaponHash)
+    return Citizen.InvokeNative(0x75C55983C2C39DAA,ped,weaponHash)
 end
+
 
 
 --- 
@@ -627,8 +680,9 @@ end
 ---@param weaponHash hash*
 ---@return boolean
 function GetCurrentPedVehicleWeapon(ped,weaponHash)
-   return Citizen.InvokeNative(0x1017582BCD3832DC,ped,weaponHash)
+    return Citizen.InvokeNative(0x1017582BCD3832DC,ped,weaponHash)
 end
+
 
 
 --- 
@@ -637,8 +691,9 @@ end
 ---@param flags number
 ---@return boolean
 function IsPedArmed(ped,flags)
-   return Citizen.InvokeNative(0xCB690F680A3EA971,ped,flags)
+    return Citizen.InvokeNative(0xCB690F680A3EA971,ped,flags)
 end
+
 
 
 --- Returns true if the ped is currently holstering or unholstering a weapon
@@ -646,8 +701,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsWeaponHolsterStateChanging(ped)
-   return Citizen.InvokeNative(0x2387D6E9C6B478AA,ped)
+    return Citizen.InvokeNative(0x2387D6E9C6B478AA,ped)
 end
+
 
 
 --- 
@@ -655,8 +711,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponValid(weaponHash)
-   return Citizen.InvokeNative(0x937C71165CF334B3,weaponHash)
+    return Citizen.InvokeNative(0x937C71165CF334B3,weaponHash)
 end
+
 
 
 --- 
@@ -664,8 +721,9 @@ end
 ---@param ammoHash hash
 ---@return boolean
 function IsAmmoValid(ammoHash)
-   return Citizen.InvokeNative(0x1F7977C9101F807F,ammoHash)
+    return Citizen.InvokeNative(0x1F7977C9101F807F,ammoHash)
 end
+
 
 
 --- 
@@ -674,8 +732,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsPedCarryingWeapon(ped,weaponHash)
-   return Citizen.InvokeNative(0xF29A186ED428B552,ped,weaponHash)
+    return Citizen.InvokeNative(0xF29A186ED428B552,ped,weaponHash)
 end
+
 
 
 --- 
@@ -686,8 +745,9 @@ end
 ---@param p3 boolean
 ---@return boolean
 function HasPedGotWeapon(ped,weaponHash,p2,p3)
-   return Citizen.InvokeNative(0x8DECB02F88F428BC,ped,weaponHash,p2,p3)
+    return Citizen.InvokeNative(0x8DECB02F88F428BC,ped,weaponHash,p2,p3)
 end
+
 
 
 --- 
@@ -695,8 +755,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedWeaponReadyToShoot(ped)
-   return Citizen.InvokeNative(0xB80CA294F2F26749,ped)
+    return Citizen.InvokeNative(0xB80CA294F2F26749,ped)
 end
+
 
 
 --- slotHash is usually just the weaponHash name, but WEAPON_* is replaced with SLOT_*
@@ -705,8 +766,9 @@ end
 ---@param slotHash hash
 ---@return hash
 function GetPedWeaponInSlot(ped,slotHash)
-   return Citizen.InvokeNative(0xDBC4B552B2AE9A83,ped,slotHash)
+    return Citizen.InvokeNative(0xDBC4B552B2AE9A83,ped,slotHash)
 end
+
 
 
 --- addReason: see _ADD_AMMO_TO_PED
@@ -721,6 +783,7 @@ function GiveDelayedWeaponToPed(ped,weaponHash,ammoCount,p3,addReason)
 end
 
 
+
 --- 
 --- Native 0xF25DF915FA38C5F3 (REMOVE_ALL_PED_WEAPONS)
 ---@param ped number
@@ -729,6 +792,7 @@ end
 function RemoveAllPedWeapons(ped,p1,p2)
     Citizen.InvokeNative(0xF25DF915FA38C5F3,ped,p1,p2)
 end
+
 
 
 --- removeReason:
@@ -761,6 +825,7 @@ function RemoveWeaponFromPed(ped,weaponHash,p2,removeReason)
 end
 
 
+
 --- 
 --- Native 0x51C3B71591811485 (_REMOVE_WEAPON_FROM_PED_BY_GUID)
 ---@param ped number
@@ -771,6 +836,7 @@ function RemoveWeaponFromPedByGuid(ped,weaponGuid,removeReason)
 end
 
 
+
 --- Hides the ped's weapon during a cutscene.
 --- Native 0x6F6981D2253C208F (HIDE_PED_WEAPON_FOR_SCRIPTED_CUTSCENE)
 ---@param ped number
@@ -778,6 +844,7 @@ end
 function HidePedWeaponForScriptedCutscene(ped,toggle)
     Citizen.InvokeNative(0x6F6981D2253C208F,ped,toggle)
 end
+
 
 
 --- 
@@ -792,6 +859,7 @@ function SetPedCurrentWeaponVisible(ped,visible,deselectWeapon,p3,p4)
 end
 
 
+
 --- attachPoint: see SET_CURRENT_PED_WEAPON
 --- Native 0x67E21ACC5C0C970C (_SET_PED_WEAPON_ATTACH_POINT_VISIBILITY)
 ---@param ped number
@@ -800,6 +868,7 @@ end
 function SetPedWeaponAttachPointVisibility(ped,attachPoint,visible)
     Citizen.InvokeNative(0x67E21ACC5C0C970C,ped,attachPoint,visible)
 end
+
 
 
 --- 
@@ -811,6 +880,7 @@ function SetPedAllWeaponsVisibility(ped,visible)
 end
 
 
+
 --- 
 --- Native 0x476AE72C1D19D1A8 (SET_PED_DROPS_WEAPONS_WHEN_DEAD)
 ---@param ped number
@@ -820,14 +890,16 @@ function SetPedDropsWeaponsWhenDead(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x6C4D0409BA1A2BC2 (GET_PED_LAST_WEAPON_IMPACT_COORD)
 ---@param ped number
 ---@param coords vector3*
 ---@return boolean
 function GetPedLastWeaponImpactCoord(ped,coords)
-   return Citizen.InvokeNative(0x6C4D0409BA1A2BC2,ped,coords)
+    return Citizen.InvokeNative(0x6C4D0409BA1A2BC2,ped,coords)
 end
+
 
 
 --- 
@@ -838,6 +910,7 @@ function ClearPedLastWeaponDamage(ped)
 end
 
 
+
 --- 
 --- Native 0xDCF06D0CDFF68424 (_HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON)
 ---@param entity entity
@@ -845,8 +918,9 @@ end
 ---@param weaponType number
 ---@return boolean
 function HasEntityBeenDamagedByWeapon(entity,weaponName,weaponType)
-   return Citizen.InvokeNative(0xDCF06D0CDFF68424,entity,weaponName,weaponType)
+    return Citizen.InvokeNative(0xDCF06D0CDFF68424,entity,weaponName,weaponType)
 end
+
 
 
 --- 
@@ -862,13 +936,15 @@ function SetPedDropsInventoryWeapon(ped,weaponHash,xOffset,yOffset,zOffset,ammoC
 end
 
 
+
 --- 
 --- Native 0x79E1E511FF7EFB13 (_MAKE_PED_RELOAD)
 ---@param ped number
 ---@return any
 function MakePedReload(ped)
-   return Citizen.InvokeNative(0x79E1E511FF7EFB13,ped)
+    return Citizen.InvokeNative(0x79E1E511FF7EFB13,ped)
 end
+
 
 
 --- 
@@ -876,8 +952,9 @@ end
 ---@param ped number
 ---@return any
 function RefillAmmoInCurrentPedWeapon(ped)
-   return Citizen.InvokeNative(0x0A2AB7B7ABC055F4,ped)
+    return Citizen.InvokeNative(0x0A2AB7B7ABC055F4,ped)
 end
+
 
 
 --- Old name: _DROP_CURRENT_PED_WEAPON
@@ -889,8 +966,9 @@ end
 ---@param p4 boolean
 ---@return entity
 function MakePedDropWeapon(ped,p1,attachPoint,p3,p4)
-   return Citizen.InvokeNative(0xCEF4C65DE502D367,ped,p1,attachPoint,p3,p4)
+    return Citizen.InvokeNative(0xCEF4C65DE502D367,ped,p1,attachPoint,p3,p4)
 end
+
 
 
 --- Returns eCurrentHeldWeapon
@@ -899,8 +977,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedCurrentHeldWeapon(ped)
-   return Citizen.InvokeNative(0x8425C5F057012DAB,ped)
+    return Citizen.InvokeNative(0x8425C5F057012DAB,ped)
 end
+
 
 
 --- 
@@ -912,13 +991,15 @@ function SetAllowAnyWeaponDrop(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0x79B1A6E780266DB0 (_GET_MAX_LOCKON_DISTANCE_OF_CURRENT_PED_WEAPON)
 ---@param ped number
 ---@return float
 function GetMaxLockonDistanceOfCurrentPedWeapon(ped)
-   return Citizen.InvokeNative(0x79B1A6E780266DB0,ped)
+    return Citizen.InvokeNative(0x79B1A6E780266DB0,ped)
 end
+
 
 
 --- 
@@ -931,6 +1012,7 @@ function RemoveWeaponComponentFromPed(ped,componentHash,weaponHash)
 end
 
 
+
 --- 
 --- Native 0xBBC67A6F965C688A (_HAS_PED_GOT_WEAPON_COMPONENT)
 ---@param ped number
@@ -938,8 +1020,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function HasPedGotWeaponComponent(ped,componentHash,weaponHash)
-   return Citizen.InvokeNative(0xBBC67A6F965C688A,ped,componentHash,weaponHash)
+    return Citizen.InvokeNative(0xBBC67A6F965C688A,ped,componentHash,weaponHash)
 end
+
 
 
 --- 
@@ -947,8 +1030,9 @@ end
 ---@param ped number
 ---@return boolean
 function IsPedCurrentWeaponHolstered(ped)
-   return Citizen.InvokeNative(0xBDD9C235D8D1052E,ped)
+    return Citizen.InvokeNative(0xBDD9C235D8D1052E,ped)
 end
+
 
 
 --- 
@@ -961,13 +1045,15 @@ function RequestWeaponAsset(weaponHash,p1,p2)
 end
 
 
+
 --- 
 --- Native 0xFF07CF465F48B830 (_HAS_WEAPON_ASSET_LOADED)
 ---@param weaponHash hash
 ---@return boolean
 function HasWeaponAssetLoaded(weaponHash)
-   return Citizen.InvokeNative(0xFF07CF465F48B830,weaponHash)
+    return Citizen.InvokeNative(0xFF07CF465F48B830,weaponHash)
 end
+
 
 
 --- 
@@ -978,13 +1064,15 @@ function RemoveWeaponAsset(weaponHash)
 end
 
 
+
 --- 
 --- Native 0x6D3AC61694A791C5 (_GET_WEAPON_NAME_2)
 ---@param weaponHash hash
 ---@return string
 function GetWeaponName2(weaponHash)
-   return Citizen.InvokeNative(0x6D3AC61694A791C5,weaponHash)
+    return Citizen.InvokeNative(0x6D3AC61694A791C5,weaponHash)
 end
+
 
 
 --- Returns "WNS_INVALID" if the weapon is invalid/doesn't exist.
@@ -992,8 +1080,9 @@ end
 ---@param weaponHash hash
 ---@return string
 function GetWeaponName(weaponHash)
-   return Citizen.InvokeNative(0x89CF5FF3D363311E,weaponHash)
+    return Citizen.InvokeNative(0x89CF5FF3D363311E,weaponHash)
 end
+
 
 
 --- 
@@ -1002,8 +1091,9 @@ end
 ---@param permanentDegradationLevel float
 ---@return string
 function GetWeaponNameWithPermanentDegradation(weaponHash,permanentDegradationLevel)
-   return Citizen.InvokeNative(0x7A56D66C78D8EF8E,weaponHash,permanentDegradationLevel)
+    return Citizen.InvokeNative(0x7A56D66C78D8EF8E,weaponHash,permanentDegradationLevel)
 end
+
 
 
 --- 
@@ -1015,6 +1105,7 @@ function SetInstantlyEquipWeaponPickups(ped,toggle)
 end
 
 
+
 --- 
 --- Native 0xBE711B14A159E84F (_SET_FORCE_AUTO_EQUIP)
 ---@param ped number
@@ -1022,6 +1113,7 @@ end
 function SetForceAutoEquip(ped,toggle)
     Citizen.InvokeNative(0xBE711B14A159E84F,ped,toggle)
 end
+
 
 
 --- Appears to just send specified weapon to your horse holster without having to be close
@@ -1034,13 +1126,15 @@ function SendWeaponToInventory(ped,weaponHash)
 end
 
 
+
 --- 
 --- Native 0x8EC44AE8DECFF841 (_GET_WEAPON_STAT_ID)
 ---@param weaponHash hash
 ---@return hash
 function GetWeaponStatId(weaponHash)
-   return Citizen.InvokeNative(0x8EC44AE8DECFF841,weaponHash)
+    return Citizen.InvokeNative(0x8EC44AE8DECFF841,weaponHash)
 end
+
 
 
 --- 
@@ -1050,8 +1144,9 @@ end
 ---@param ms number
 ---@return boolean
 function HasEntityBeenDamagedByWeaponRecently(entity,weaponHash,ms)
-   return Citizen.InvokeNative(0x9E2D5D6BC97A5F1E,entity,weaponHash,ms)
+    return Citizen.InvokeNative(0x9E2D5D6BC97A5F1E,entity,weaponHash,ms)
 end
+
 
 
 --- 
@@ -1059,8 +1154,9 @@ end
 ---@param ped number
 ---@return hash
 function GetPedHogtieWeapon(ped)
-   return Citizen.InvokeNative(0x90EB1CB189923587,ped)
+    return Citizen.InvokeNative(0x90EB1CB189923587,ped)
 end
+
 
 
 --- 
@@ -1074,8 +1170,9 @@ end
 ---@param scale float
 ---@return object
 function CreateWeaponObject(weaponHash,ammoCount,x,y,z,showWorldModel,scale)
-   return Citizen.InvokeNative(0x9888652B8BA77F73,weaponHash,ammoCount,x,y,z,showWorldModel,scale)
+    return Citizen.InvokeNative(0x9888652B8BA77F73,weaponHash,ammoCount,x,y,z,showWorldModel,scale)
 end
+
 
 
 --- 
@@ -1087,14 +1184,16 @@ function RemoveWeaponComponentFromWeaponObject(weaponObject,component)
 end
 
 
+
 --- 
 --- Native 0x76A18844E743BF91 (HAS_WEAPON_GOT_WEAPON_COMPONENT)
 ---@param weapon object
 ---@param addonHash hash
 ---@return boolean
 function HasWeaponGotWeaponComponent(weapon,addonHash)
-   return Citizen.InvokeNative(0x76A18844E743BF91,weapon,addonHash)
+    return Citizen.InvokeNative(0x76A18844E743BF91,weapon,addonHash)
 end
+
 
 
 --- 
@@ -1108,14 +1207,16 @@ function GiveWeaponComponentToWeaponObject(weaponObject,ped,componentHash,p3)
 end
 
 
+
 --- Detaches the weapon from the ped and actually removes the ped's weapon
 --- Native 0xC6A6789BB405D11C (_GET_WEAPON_OBJECT_FROM_PED)
 ---@param ped number
 ---@param p1 boolean
 ---@return object
 function GetWeaponObjectFromPed(ped,p1)
-   return Citizen.InvokeNative(0xC6A6789BB405D11C,ped,p1)
+    return Citizen.InvokeNative(0xC6A6789BB405D11C,ped,p1)
 end
+
 
 
 --- _GET_M* - _GET_PED_A*
@@ -1124,8 +1225,9 @@ end
 ---@param p1 boolean
 ---@return object
 function GetPedWeaponObject(ped,p1)
-   return Citizen.InvokeNative(0x6CA484C9A7377E4F,ped,p1)
+    return Citizen.InvokeNative(0x6CA484C9A7377E4F,ped,p1)
 end
+
 
 
 --- entity can be a ped or weapon object.
@@ -1139,14 +1241,16 @@ function GiveWeaponComponentToEntity(entity,componentHash,weaponHash,p3)
 end
 
 
+
 --- Returns iSpinHash
 --- Native 0xF4601C1203B1A78D (_GET_WEAPON_GUN_SPINNING_WEAPON_EMOTE_TRICK_TYPE_HASH)
 ---@param emote hash
 ---@param weaponEmoteTrickType number
 ---@return hash
 function GetWeaponGunSpinningWeaponEmoteTrickTypeHash(emote,weaponEmoteTrickType)
-   return Citizen.InvokeNative(0xF4601C1203B1A78D,emote,weaponEmoteTrickType)
+    return Citizen.InvokeNative(0xF4601C1203B1A78D,emote,weaponEmoteTrickType)
 end
+
 
 
 --- emote hashes: KIT_EMOTE_TWIRL_GUN, KIT_EMOTE_TWIRL_GUN_LEFT_HOLSTER, KIT_EMOTE_TWIRL_GUN_DUAL, 0 (to unequip)
@@ -1158,13 +1262,15 @@ function SetActiveGunSpinningEquipKitEmoteTwirl(ped,emote)
 end
 
 
+
 --- Returns emote Hash
 --- Native 0x2C4FEC3D0EFA9FC0 (_GET_PED_GUN_SPINNING_EQUIPPED_KIT_EMOTE_TWIRL)
 ---@param ped number
 ---@return hash
 function GetPedGunSpinningEquippedKitEmoteTwirl(ped)
-   return Citizen.InvokeNative(0x2C4FEC3D0EFA9FC0,ped)
+    return Citizen.InvokeNative(0x2C4FEC3D0EFA9FC0,ped)
 end
+
 
 
 --- spinHash can be -1, 0 to disable
@@ -1177,14 +1283,16 @@ function SetActiveGunSpinningKitEmoteTwirl(ped,weaponEmoteTrickType,spin)
 end
 
 
+
 --- Returns iSpinHash / iVariationSpin
 --- Native 0xF3B1620B920D1708 (_GET_PED_GUN_SPINNING_HASH_FROM_WEAPON_EMOTE_VARIATION)
 ---@param ped number
 ---@param weaponEmoteVariation number
 ---@return hash
 function GetPedGunSpinningHashFromWeaponEmoteVariation(ped,weaponEmoteVariation)
-   return Citizen.InvokeNative(0xF3B1620B920D1708,ped,weaponEmoteVariation)
+    return Citizen.InvokeNative(0xF3B1620B920D1708,ped,weaponEmoteVariation)
 end
+
 
 
 --- Returns weaponEmoteVariation
@@ -1201,8 +1309,9 @@ end
 ---@param variation number
 ---@return number
 function GetWeaponEmoteVariation(ped,variation)
-   return Citizen.InvokeNative(0x86147D05FA831D3A,ped,variation)
+    return Citizen.InvokeNative(0x86147D05FA831D3A,ped,variation)
 end
+
 
 
 --- _STOP_* - _TEST_*
@@ -1214,13 +1323,15 @@ function SetGunSpinningInventorySlotIdActivate(ped,emoteType)
 end
 
 
+
 --- 
 --- Native 0x6554ECCE226F2A2A (_GET_CAN_TWIRL_WEAPON)
 ---@param weaponHash hash
 ---@return boolean
 function GetCanTwirlWeapon(weaponHash)
-   return Citizen.InvokeNative(0x6554ECCE226F2A2A,weaponHash)
+    return Citizen.InvokeNative(0x6554ECCE226F2A2A,weaponHash)
 end
+
 
 
 --- _GET_BEST_* - _GET_CLOSEST_*
@@ -1229,8 +1340,9 @@ end
 ---@param weaponGuid any*
 ---@return boolean
 function GetCorrectKitEmoteTwirlGun(ped,weaponGuid)
-   return Citizen.InvokeNative(0xCD356B42C57BFE01,ped,weaponGuid)
+    return Citizen.InvokeNative(0xCD356B42C57BFE01,ped,weaponGuid)
 end
+
 
 
 --- Returns weaponCollection Hash
@@ -1239,8 +1351,9 @@ end
 ---@param pedModel hash
 ---@return hash
 function GetDefaultPedWeaponCollection(pedModel)
-   return Citizen.InvokeNative(0xD42514C182121C23,pedModel)
+    return Citizen.InvokeNative(0xD42514C182121C23,pedModel)
 end
+
 
 
 --- 
@@ -1252,13 +1365,15 @@ function GiveWeaponCollectionToPed(ped,weaponCollection)
 end
 
 
+
 --- 
 --- Native 0xD3750CCC00635FC2 (GET_WEAPON_CLIP_SIZE)
 ---@param weaponHash hash
 ---@return number
 function GetWeaponClipSize(weaponHash)
-   return Citizen.InvokeNative(0xD3750CCC00635FC2,weaponHash)
+    return Citizen.InvokeNative(0xD3750CCC00635FC2,weaponHash)
 end
+
 
 
 --- 
@@ -1266,8 +1381,9 @@ end
 ---@param ped number
 ---@return boolean
 function GetAllowDualWield(ped)
-   return Citizen.InvokeNative(0x918990BD9CE08582,ped)
+    return Citizen.InvokeNative(0x918990BD9CE08582,ped)
 end
+
 
 
 --- 
@@ -1279,13 +1395,15 @@ function SetAllowDualWield(ped,allow)
 end
 
 
+
 --- 
 --- Native 0x792E3EF76C911959 (_IS_WEAPON_KNIFE)
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponKnife(weaponHash)
-   return Citizen.InvokeNative(0x792E3EF76C911959,weaponHash)
+    return Citizen.InvokeNative(0x792E3EF76C911959,weaponHash)
 end
+
 
 
 --- 
@@ -1293,8 +1411,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponRevolver(weaponHash)
-   return Citizen.InvokeNative(0xC212F1D05A8232BB,weaponHash)
+    return Citizen.InvokeNative(0xC212F1D05A8232BB,weaponHash)
 end
+
 
 
 --- 
@@ -1302,8 +1421,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponPistol(weaponHash)
-   return Citizen.InvokeNative(0xDDC64F5E31EEDAB6,weaponHash)
+    return Citizen.InvokeNative(0xDDC64F5E31EEDAB6,weaponHash)
 end
+
 
 
 --- 
@@ -1311,8 +1431,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponRepeater(weaponHash)
-   return Citizen.InvokeNative(0xDDB2578E95EF7138,weaponHash)
+    return Citizen.InvokeNative(0xDDB2578E95EF7138,weaponHash)
 end
+
 
 
 --- 
@@ -1320,8 +1441,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponRifle(weaponHash)
-   return Citizen.InvokeNative(0x0A82317B7EBFC420,weaponHash)
+    return Citizen.InvokeNative(0x0A82317B7EBFC420,weaponHash)
 end
+
 
 
 --- 
@@ -1329,8 +1451,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponShotgun(weaponHash)
-   return Citizen.InvokeNative(0xC75386174ECE95D5,weaponHash)
+    return Citizen.InvokeNative(0xC75386174ECE95D5,weaponHash)
 end
+
 
 
 --- 
@@ -1338,8 +1461,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponSniper(weaponHash)
-   return Citizen.InvokeNative(0x6AD66548840472E5,weaponHash)
+    return Citizen.InvokeNative(0x6AD66548840472E5,weaponHash)
 end
+
 
 
 --- 
@@ -1347,8 +1471,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponMeleeWeapon(weaponHash)
-   return Citizen.InvokeNative(0x959383DCD42040DA,weaponHash)
+    return Citizen.InvokeNative(0x959383DCD42040DA,weaponHash)
 end
+
 
 
 --- 
@@ -1356,8 +1481,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponThrowable(weaponHash)
-   return Citizen.InvokeNative(0x30E7C16B12DA8211,weaponHash)
+    return Citizen.InvokeNative(0x30E7C16B12DA8211,weaponHash)
 end
+
 
 
 --- 
@@ -1365,8 +1491,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponLasso(weaponHash)
-   return Citizen.InvokeNative(0x6E4E1A82081EABED,weaponHash)
+    return Citizen.InvokeNative(0x6E4E1A82081EABED,weaponHash)
 end
+
 
 
 --- 
@@ -1374,8 +1501,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponBinoculars(weaponHash)
-   return Citizen.InvokeNative(0xC853230E76A152DF,weaponHash)
+    return Citizen.InvokeNative(0xC853230E76A152DF,weaponHash)
 end
+
 
 
 --- Returns true if CWeaponInfoFlags::Flags::Gun is set.
@@ -1383,8 +1511,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponAGun(weaponHash)
-   return Citizen.InvokeNative(0x705BE297EEBDB95D,weaponHash)
+    return Citizen.InvokeNative(0x705BE297EEBDB95D,weaponHash)
 end
+
 
 
 --- 
@@ -1392,8 +1521,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponTwoHanded(weaponHash)
-   return Citizen.InvokeNative(0x0556E9D2ECF39D01,weaponHash)
+    return Citizen.InvokeNative(0x0556E9D2ECF39D01,weaponHash)
 end
+
 
 
 --- 
@@ -1401,8 +1531,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponOneHanded(weaponHash)
-   return Citizen.InvokeNative(0xD955FEE4B87AFA07,weaponHash)
+    return Citizen.InvokeNative(0xD955FEE4B87AFA07,weaponHash)
 end
+
 
 
 --- 
@@ -1410,8 +1541,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function IsWeaponSilent(weaponHash)
-   return Citizen.InvokeNative(0x5809DBCA0A37C82B,weaponHash)
+    return Citizen.InvokeNative(0x5809DBCA0A37C82B,weaponHash)
 end
+
 
 
 --- 
@@ -1419,8 +1551,9 @@ end
 ---@param ammoHash hash
 ---@return boolean
 function IsAmmoSilent(ammoHash)
-   return Citizen.InvokeNative(0xD2866CBA797E872E,ammoHash)
+    return Citizen.InvokeNative(0xD2866CBA797E872E,ammoHash)
 end
+
 
 
 --- 
@@ -1428,8 +1561,9 @@ end
 ---@param ammoHash hash
 ---@return boolean
 function IsAmmoSilent2(ammoHash)
-   return Citizen.InvokeNative(0x7EFACC589B98C488,ammoHash)
+    return Citizen.InvokeNative(0x7EFACC589B98C488,ammoHash)
 end
+
 
 
 --- 
@@ -1437,8 +1571,9 @@ end
 ---@param weaponHash hash
 ---@return boolean
 function ShouldWeaponBeDiscardedWhenSwapped(weaponHash)
-   return Citizen.InvokeNative(0x2C83212A7AA51D3D,weaponHash)
+    return Citizen.InvokeNative(0x2C83212A7AA51D3D,weaponHash)
 end
+
 
 
 --- Related to weapon visual damage, not actual damage.
@@ -1446,8 +1581,9 @@ end
 ---@param weaponObject object
 ---@return float
 function GetWeaponDamage(weaponObject)
-   return Citizen.InvokeNative(0x904103D5D2333977,weaponObject)
+    return Citizen.InvokeNative(0x904103D5D2333977,weaponObject)
 end
+
 
 
 --- Related to weapon visual damage, not actual damage.
@@ -1460,13 +1596,15 @@ function SetWeaponDamage(weaponObject,level,p2)
 end
 
 
+
 --- 
 --- Native 0x810E8AE9AFEA7E54 (_GET_WEAPON_DIRT)
 ---@param weaponObject object
 ---@return float
 function GetWeaponDirt(weaponObject)
-   return Citizen.InvokeNative(0x810E8AE9AFEA7E54,weaponObject)
+    return Citizen.InvokeNative(0x810E8AE9AFEA7E54,weaponObject)
 end
+
 
 
 --- 
@@ -1479,13 +1617,15 @@ function SetWeaponDirt(weaponObject,level,p2)
 end
 
 
+
 --- 
 --- Native 0x4BF66F8878F67663 (_GET_WEAPON_SOOT)
 ---@param weaponObject object
 ---@return float
 function GetWeaponSoot(weaponObject)
-   return Citizen.InvokeNative(0x4BF66F8878F67663,weaponObject)
+    return Citizen.InvokeNative(0x4BF66F8878F67663,weaponObject)
 end
+
 
 
 --- 
@@ -1498,6 +1638,7 @@ function SetWeaponSoot(weaponObject,level,p2)
 end
 
 
+
 --- every other level will have the max value of (brokeLevel - threshold)
 --- Native 0xD4071EFC83794B2F (_SET_WEAPON_LEVEL_THRESHOLD)
 ---@param weaponObject object
@@ -1507,13 +1648,15 @@ function SetWeaponLevelThreshold(weaponObject,threshold)
 end
 
 
+
 --- 0.0: good condition, 1.0: poor condition
 --- Native 0x0D78E1097F89E637 (GET_WEAPON_DEGRADATION)
 ---@param weaponObject object
 ---@return float
 function GetWeaponDegradation(weaponObject)
-   return Citizen.InvokeNative(0x0D78E1097F89E637,weaponObject)
+    return Citizen.InvokeNative(0x0D78E1097F89E637,weaponObject)
 end
+
 
 
 --- Related to rust of weapons
@@ -1521,8 +1664,9 @@ end
 ---@param weaponObject object
 ---@return float
 function GetWeaponPermanentDegradation(weaponObject)
-   return Citizen.InvokeNative(0xD56E5F336C675EFA,weaponObject)
+    return Citizen.InvokeNative(0xD56E5F336C675EFA,weaponObject)
 end
+
 
 
 --- 
@@ -1534,6 +1678,7 @@ function SetWeaponDegradation(weaponObject,level)
 end
 
 
+
 --- 
 --- Native 0xDA5D3F2C6DD5B5D4 (_LISTEN_PROJECTILE_HIT_EVENTS)
 ---@param listen boolean
@@ -1542,13 +1687,15 @@ function ListenProjectileHitEvents(listen)
 end
 
 
+
 --- 
 --- Native 0x22084CA699219624 (_GET_WEAPON_SCALE)
 ---@param weaponObject object
 ---@return float
 function GetWeaponScale(weaponObject)
-   return Citizen.InvokeNative(0x22084CA699219624,weaponObject)
+    return Citizen.InvokeNative(0x22084CA699219624,weaponObject)
 end
+
 
 
 --- 
@@ -1560,14 +1707,16 @@ function SetWeaponScale(weaponObject,scale)
 end
 
 
+
 --- Returns ammoHash from weaponObject (Returned by 0x6CA484C9A7377E4F)
 --- Native 0x7E7B19A4355FEE13 (_GET_CURRENT_PED_WEAPON_AMMO_TYPE)
 ---@param ped number
 ---@param weaponObject object
 ---@return hash
 function GetCurrentPedWeaponAmmoType(ped,weaponObject)
-   return Citizen.InvokeNative(0x7E7B19A4355FEE13,ped,weaponObject)
+    return Citizen.InvokeNative(0x7E7B19A4355FEE13,ped,weaponObject)
 end
+
 
 
 --- Returns ammoHash
@@ -1576,8 +1725,9 @@ end
 ---@param weaponGuid any*
 ---@return hash
 function GetCurrentAmmoTypeFromGuid(ped,weaponGuid)
-   return Citizen.InvokeNative(0xAF9D167A5656D6A6,ped,weaponGuid)
+    return Citizen.InvokeNative(0xAF9D167A5656D6A6,ped,weaponGuid)
 end
+
 
 
 --- 
@@ -1586,8 +1736,9 @@ end
 ---@param ammoHash hash
 ---@return boolean
 function IsAmmoTypeValidForWeapon(weaponHash,ammoHash)
-   return Citizen.InvokeNative(0xC570B881754DF609,weaponHash,ammoHash)
+    return Citizen.InvokeNative(0xC570B881754DF609,weaponHash,ammoHash)
 end
+
 
 
 --- 
@@ -1600,6 +1751,7 @@ function SetAmmoTypeForPedWeapon(ped,weaponHash,ammoHash)
 end
 
 
+
 --- 
 --- Native 0xEBE46B501BC3FBCF (_SET_AMMO_TYPE_FOR_PED_WEAPON_INVENTORY)
 ---@param ped number
@@ -1608,6 +1760,7 @@ end
 function SetAmmoTypeForPedWeaponInventory(ped,weaponInventoryUid,ammoHash)
     Citizen.InvokeNative(0xEBE46B501BC3FBCF,ped,weaponInventoryUid,ammoHash)
 end
+
 
 
 --- 
@@ -1620,6 +1773,7 @@ function DisableAmmoTypeForPedWeapon(ped,weaponHash,ammoHash)
 end
 
 
+
 --- 
 --- Native 0xAA5A52204E077883 (_DISABLE_AMMO_TYPE_FOR_PED)
 ---@param ped number
@@ -1627,6 +1781,7 @@ end
 function DisableAmmoTypeForPed(ped,ammoHash)
     Citizen.InvokeNative(0xAA5A52204E077883,ped,ammoHash)
 end
+
 
 
 --- 
@@ -1639,6 +1794,7 @@ function EnableAmmoTypeForPedWeapon(ped,weaponHash,ammoHash)
 end
 
 
+
 --- 
 --- Native 0x3B7B7908B7ADFB4B (_ENABLE_AMMO_TYPE_FOR_PED)
 ---@param ped number
@@ -1648,14 +1804,16 @@ function EnableAmmoTypeForPed(ped,weaponHash)
 end
 
 
+
 --- Returns WeaponAttachPoint
 --- Native 0xCAD4FE9398820D24 (_GET_WEAPON_ATTACH_POINT)
 ---@param ped number
 ---@param attachPoint number
 ---@return number
 function GetWeaponAttachPoint(ped,attachPoint)
-   return Citizen.InvokeNative(0xCAD4FE9398820D24,ped,attachPoint)
+    return Citizen.InvokeNative(0xCAD4FE9398820D24,ped,attachPoint)
 end
+
 
 
 --- Equips a weapon from a weaponItem, similar to GIVE_WEAPON_TO_PED
@@ -1671,6 +1829,7 @@ function SetCurrentPedWeaponByGuid(ped,weaponUid,p2,p3,p4,p5)
 end
 
 
+
 --- 
 --- Native 0xEC1F85DA51D3D6C4 (SET_PLAYER_PED_QUICK_SWAP_WEAPON_BY_GUID)
 ---@param ped number
@@ -1679,6 +1838,7 @@ end
 function SetPlayerPedQuickSwapWeaponByGuid(ped,guidPrimary,guidSecondary)
     Citizen.InvokeNative(0xEC1F85DA51D3D6C4,ped,guidPrimary,guidSecondary)
 end
+
 
 
 --- Outputs cached guids
@@ -1691,13 +1851,15 @@ function GetPlayerPedQuickSwapWeaponByGuid(ped,guidPrimary,guidSecondary)
 end
 
 
+
 --- 
 --- Native 0x8D50F43298AB9545 (_IS_TARGET_PED_CONSTRAINED_BY_PED_USING_BOLAS)
 ---@param ped number
 ---@param targetPed number
 ---@return boolean
 function IsTargetPedConstrainedByPedUsingBolas(ped,targetPed)
-   return Citizen.InvokeNative(0x8D50F43298AB9545,ped,targetPed)
+    return Citizen.InvokeNative(0x8D50F43298AB9545,ped,targetPed)
 end
+
 
 

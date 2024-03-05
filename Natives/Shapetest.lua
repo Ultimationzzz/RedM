@@ -13,8 +13,9 @@
 ---@param p8 number
 ---@return scrhandle
 function StartShapeTestLosProbe(x1,y1,z1,x2,y2,z2,flags,entity,p8)
-   return Citizen.InvokeNative(0x7EE9F5D83DD4F90E,x1,y1,z1,x2,y2,z2,flags,entity,p8)
+    return Citizen.InvokeNative(0x7EE9F5D83DD4F90E,x1,y1,z1,x2,y2,z2,flags,entity,p8)
 end
+
 
 
 --- Does the same as 0x7EE9F5D83DD4F90E, except blocking until the shape test completes.
@@ -30,8 +31,9 @@ end
 ---@param p8 number
 ---@return scrhandle
 function StartExpensiveSynchronousShapeTestLosProbe(x1,y1,z1,x2,y2,z2,flags,entityToIgnore,p8)
-   return Citizen.InvokeNative(0x377906D8A31E5586,x1,y1,z1,x2,y2,z2,flags,entityToIgnore,p8)
+    return Citizen.InvokeNative(0x377906D8A31E5586,x1,y1,z1,x2,y2,z2,flags,entityToIgnore,p8)
 end
+
 
 
 --- 
@@ -51,8 +53,9 @@ end
 ---@param options number
 ---@return scrhandle
 function StartShapeTestBox(posX,posY,posZ,dimensionsX,dimensionsY,dimensionsZ,rotX,rotY,rotZ,rotationOrder,flags,entityToIgnore,options)
-   return Citizen.InvokeNative(0xFE466162C4401D18,posX,posY,posZ,dimensionsX,dimensionsY,dimensionsZ,rotX,rotY,rotZ,rotationOrder,flags,entityToIgnore,options)
+    return Citizen.InvokeNative(0xFE466162C4401D18,posX,posY,posZ,dimensionsX,dimensionsY,dimensionsZ,rotX,rotY,rotZ,rotationOrder,flags,entityToIgnore,options)
 end
+
 
 
 --- 
@@ -69,8 +72,9 @@ end
 ---@param p9 number
 ---@return scrhandle
 function StartShapeTestCapsule(x1,y1,z1,x2,y2,z2,radius,flags,entityToIgnore,p9)
-   return Citizen.InvokeNative(0x28579D1B8F8AAC80,x1,y1,z1,x2,y2,z2,radius,flags,entityToIgnore,p9)
+    return Citizen.InvokeNative(0x28579D1B8F8AAC80,x1,y1,z1,x2,y2,z2,radius,flags,entityToIgnore,p9)
 end
+
 
 
 --- 
@@ -87,8 +91,9 @@ end
 ---@param p9 any
 ---@return scrhandle
 function StartShapeTestSweptSphere(x1,y1,z1,x2,y2,z2,radius,flags,entity,p9)
-   return Citizen.InvokeNative(0xAA5B7C8309F73230,x1,y1,z1,x2,y2,z2,radius,flags,entity,p9)
+    return Citizen.InvokeNative(0xAA5B7C8309F73230,x1,y1,z1,x2,y2,z2,radius,flags,entity,p9)
 end
+
 
 
 --- Old name: _START_SHAPE_TEST_SURROUNDING_COORDS
@@ -100,8 +105,9 @@ end
 ---@param flag2 number
 ---@return scrhandle
 function StartShapeTestMouseCursorLosProbe(pVec1,pVec2,flag,entity,flag2)
-   return Citizen.InvokeNative(0x9839013D8B6014F1,pVec1,pVec2,flag,entity,flag2)
+    return Citizen.InvokeNative(0x9839013D8B6014F1,pVec1,pVec2,flag,entity,flag2)
 end
+
 
 
 --- Returns the result of a shape test: 0 if the handle is invalid, 1 if the shape test is still pending, or 2 if the shape test has completed, and the handle should be invalidated.
@@ -120,7 +126,8 @@ end
 ---@param entityHit entity*
 ---@return number
 function GetShapeTestResult(shapeTestHandle,hit,endCoords,surfaceNormal,entityHit)
-   return Citizen.InvokeNative(0xEDE8AC7C5108FB1D,shapeTestHandle,hit,endCoords,surfaceNormal,entityHit)
+    return Citizen.InvokeNative(0xEDE8AC7C5108FB1D,shapeTestHandle,hit,endCoords,surfaceNormal,entityHit)
 end
+
 
 

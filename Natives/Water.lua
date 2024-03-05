@@ -5,11 +5,13 @@ function DisableWaterLookup()
 end
 
 
+
 --- 
 --- Native 0x754616EC6965D1BF (ENABLE_WATER_LOOKUP)
 function EnableWaterLookup()
     Citizen.InvokeNative(0x754616EC6965D1BF)
 end
+
 
 
 --- Checks against a global variable that is set by _SET_WORLD_WATER_TYPE. If that is set to one it will fail. Likely not the only issue but part of it.
@@ -20,8 +22,9 @@ end
 ---@param height float*
 ---@return boolean
 function GetWaterHeight(x,y,z,height)
-   return Citizen.InvokeNative(0xFCA8B23F28813F69,x,y,z,height)
+    return Citizen.InvokeNative(0xFCA8B23F28813F69,x,y,z,height)
 end
+
 
 
 --- 
@@ -32,8 +35,9 @@ end
 ---@param height float*
 ---@return boolean
 function GetWaterHeightNoWaves(x,y,z,height)
-   return Citizen.InvokeNative(0xDCF3690AA262C03F,x,y,z,height)
+    return Citizen.InvokeNative(0xDCF3690AA262C03F,x,y,z,height)
 end
+
 
 
 --- enum eScriptWaterTestResult
@@ -53,8 +57,9 @@ end
 ---@param intersectionPos vector3*
 ---@return number
 function TestProbeAgainstAllWater(x1,y1,z1,x2,y2,z2,flags,intersectionPos)
-   return Citizen.InvokeNative(0x8974647ED222EA5F,x1,y1,z1,x2,y2,z2,flags,intersectionPos)
+    return Citizen.InvokeNative(0x8974647ED222EA5F,x1,y1,z1,x2,y2,z2,flags,intersectionPos)
 end
+
 
 
 --- Checks against a global variable that is set by _SET_WORLD_WATER_TYPE. If it's set to 1 (Guarma) it will fail.
@@ -67,8 +72,9 @@ end
 ---@param waterHeight float*
 ---@return number
 function TestVerticalProbeAgainstAllWater(x,y,z,flags,waterHeight)
-   return Citizen.InvokeNative(0x2B3451FA1E3142E2,x,y,z,flags,waterHeight)
+    return Citizen.InvokeNative(0x2B3451FA1E3142E2,x,y,z,flags,waterHeight)
 end
+
 
 
 --- Only used in rcm_crackpot1 R* Script: p0 = 0
@@ -77,6 +83,7 @@ end
 function RemoveExtraCalmingQuad(index)
     Citizen.InvokeNative(0x4BEF8DD75AF6C71C,index)
 end
+
 
 
 --- Only used in R* Script guama1
@@ -95,12 +102,14 @@ function SetOceanGuarmaWaterQuadrant(wavesHeight,p1,p2,p3,p4,p5,p6,wavesStrength
 end
 
 
+
 --- Only used in guama1 / guama3 R* Script
 ---_REQUEST_* or _RESET_*
 --- Native 0xC63540AEF8384769 (_RESET_GUARMA_WATER_STATE)
 function ResetGuarmaWaterState()
     Citizen.InvokeNative(0xC63540AEF8384769)
 end
+
 
 
 --- 0 = World
@@ -112,11 +121,13 @@ function SetWorldWaterType(waterType)
 end
 
 
+
 --- 
 --- Native 0x189739A7631C1867 (_GET_WORLD_WATER_TYPE)
 ---@return number
 function GetWorldWaterType()
    return Citizen.InvokeNative(0x189739A7631C1867)
 end
+
 
 

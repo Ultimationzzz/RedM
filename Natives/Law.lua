@@ -71,6 +71,7 @@ function ReportCrime(player,crimeType,bounty,entity,isKnownSuspect)
 end
 
 
+
 --- crimeType: see _REPORT_CRIME
 --- Native 0x785177E4D57D7389 (SUPPRESS_CRIME_THIS_FRAME)
 ---@param player player
@@ -83,14 +84,16 @@ function SuppressCrimeThisFrame(player,crimeType,p2,p3,p4)
 end
 
 
+
 --- Returns amount of suppressed crimes to be used later in the function MPINTRO_CRIME_MONITOR_MAINTAIN
 --- Native 0xC08E804C91F47C80 (NUM_CRIMES_SUPPRESSED)
 ---@param player player
 ---@param crimeType hash
 ---@return number
 function NumCrimesSuppressed(player,crimeType)
-   return Citizen.InvokeNative(0xC08E804C91F47C80,player,crimeType)
+    return Citizen.InvokeNative(0xC08E804C91F47C80,player,crimeType)
 end
+
 
 
 --- 
@@ -98,8 +101,9 @@ end
 ---@param player player
 ---@return number
 function GetBounty(player)
-   return Citizen.InvokeNative(0x54310AAB97B92816,player)
+    return Citizen.InvokeNative(0x54310AAB97B92816,player)
 end
+
 
 
 --- 
@@ -111,6 +115,7 @@ function AddBounty(player,itemValueAmount)
 end
 
 
+
 --- 
 --- Native 0x093A9D1F72DF0D19 (SET_BOUNTY)
 ---@param player player
@@ -118,6 +123,7 @@ end
 function SetBounty(player,amount)
     Citizen.InvokeNative(0x093A9D1F72DF0D19,player,amount)
 end
+
 
 
 --- 
@@ -128,13 +134,15 @@ function ClearBounty(player)
 end
 
 
+
 --- 
 --- Native 0xDD5FD601481F648B (GET_WANTED_SCORE)
 ---@param player player
 ---@return number
 function GetWantedScore(player)
-   return Citizen.InvokeNative(0xDD5FD601481F648B,player)
+    return Citizen.InvokeNative(0xDD5FD601481F648B,player)
 end
+
 
 
 --- 
@@ -146,12 +154,14 @@ function SetWantedScore(player,intensity)
 end
 
 
+
 --- 
 --- Native 0x062B4A4A3396351D (CLEAR_WANTED_SCORE)
 ---@param player player
 function ClearWantedScore(player)
     Citizen.InvokeNative(0x062B4A4A3396351D,player)
 end
+
 
 
 --- 
@@ -163,6 +173,7 @@ function ReportPlayerLawDispatchResponseOverride(player,dispatchResponseHash)
 end
 
 
+
 --- 
 --- Native 0x8DE82BC774F3B862 (_SET_LAW_DISABLED)
 ---@param toggle boolean
@@ -171,11 +182,13 @@ function SetLawDisabled(toggle)
 end
 
 
+
 --- 
 --- Native 0x956510F8C36B5C64 (_FORCE_LAW_ON_LOCAL_PLAYER_IMMEDIATELY)
 function ForceLawOnLocalPlayerImmediately()
     Citizen.InvokeNative(0x956510F8C36B5C64)
 end
+
 
 
 --- enum eLawRegion : Hash
@@ -240,6 +253,7 @@ function SetLawRegion(player,lawRegionHash,stateHash)
 end
 
 
+
 --- 
 --- Native 0x9BBDCB8DF789EBC1 (_SET_LAW_RBS_VOLUME)
 ---@param player player
@@ -249,13 +263,15 @@ function SetLawRbsVolume(player,p1)
 end
 
 
+
 --- 
 --- Native 0xAD401C63158ACBAA (IS_LAW_INCIDENT_ACTIVE)
 ---@param player player
 ---@return boolean
 function IsLawIncidentActive(player)
-   return Citizen.InvokeNative(0xAD401C63158ACBAA,player)
+    return Citizen.InvokeNative(0xAD401C63158ACBAA,player)
 end
+
 
 
 --- 
@@ -269,8 +285,9 @@ end
 ---@param crimeType hash
 ---@return boolean
 function LawWitnessResponseTask(pedGroup1,ped,pedGroup2,x,y,z,crimeType)
-   return Citizen.InvokeNative(0xF0B67BAD53C35BD9,pedGroup1,ped,pedGroup2,x,y,z,crimeType)
+    return Citizen.InvokeNative(0xF0B67BAD53C35BD9,pedGroup1,ped,pedGroup2,x,y,z,crimeType)
 end
+
 
 
 --- 
@@ -283,13 +300,15 @@ function AddWitnessResponse(player,crimeType,pedGroup)
 end
 
 
+
 --- 
 --- Native 0x69E181772886F48B (ARE_WITNESSES_ACTIVE)
 ---@param player player
 ---@return boolean
 function AreWitnessesActive(player)
-   return Citizen.InvokeNative(0x69E181772886F48B,player)
+    return Citizen.InvokeNative(0x69E181772886F48B,player)
 end
+
 
 
 --- 
@@ -297,8 +316,9 @@ end
 ---@param player player
 ---@return boolean
 function AreWitnessesPending(player)
-   return Citizen.InvokeNative(0x0BB6DE7D23C60626,player)
+    return Citizen.InvokeNative(0x0BB6DE7D23C60626,player)
 end
+
 
 
 --- 
@@ -308,8 +328,9 @@ end
 ---@param p2 any
 ---@return boolean
 function AreInvestigatorsActive(player,areInvestigatorsActive,p2)
-   return Citizen.InvokeNative(0xF0FBFB9AB15F7734,player,areInvestigatorsActive,p2)
+    return Citizen.InvokeNative(0xF0FBFB9AB15F7734,player,areInvestigatorsActive,p2)
 end
+
 
 
 --- 
@@ -320,12 +341,14 @@ function EnableDispatchLaw(toggle)
 end
 
 
+
 --- 
 --- Native 0x710448D44A64C213 (_ENABLE_DISPATCH_LAW_2)
 ---@param toggle boolean
 function EnableDispatchLaw2(toggle)
     Citizen.InvokeNative(0x710448D44A64C213,toggle)
 end
+
 
 
 --- Only used in rcm_homerob00 R* Script
@@ -336,6 +359,7 @@ function AreAnyLawPedsInvestigating()
 end
 
 
+
 --- Only used in trainrobbery_ambient R* Script
 --- Native 0xA22C46F16359471C (_ARE_LAW_PEDS_ENABLED_FOR_TRAIN)
 ---@return boolean
@@ -344,13 +368,15 @@ function AreLawPedsEnabledForTrain()
 end
 
 
+
 --- Returns bounty (increment) value
 --- Native 0x35E5E21F9159849C (_GET_CRIME_BOUNTY_AMOUNT_BY_TYPE)
 ---@param crimeType hash
 ---@return number
 function GetCrimeBountyAmountByType(crimeType)
-   return Citizen.InvokeNative(0x35E5E21F9159849C,crimeType)
+    return Citizen.InvokeNative(0x35E5E21F9159849C,crimeType)
 end
+
 
 
 --- See _REPORT_CRIME
@@ -358,8 +384,9 @@ end
 ---@param player player
 ---@return hash
 function GetHudPlayerCrimeType(player)
-   return Citizen.InvokeNative(0x259CE340A8738814,player)
+    return Citizen.InvokeNative(0x259CE340A8738814,player)
 end
+
 
 
 --- Note: This native is only used in multiplayer scripts
@@ -371,6 +398,7 @@ function SetCustomLawDispatchResponse(dispatchResponseHash)
 end
 
 
+
 --- dispatchResponseHash: see common/data/dispatchresponses/..
 --- Native 0x75CBF20BA47E4F89 (_CREATE_LAW_DISPATCH_RESPONSE_FOR_COORDS)
 ---@param x float
@@ -379,8 +407,9 @@ end
 ---@param dispatchResponseHash hash
 ---@return any
 function CreateLawDispatchResponseForCoords(x,y,z,dispatchResponseHash)
-   return Citizen.InvokeNative(0x75CBF20BA47E4F89,x,y,z,dispatchResponseHash)
+    return Citizen.InvokeNative(0x75CBF20BA47E4F89,x,y,z,dispatchResponseHash)
 end
+
 
 
 --- Force clears local player's wanted level
@@ -390,13 +419,15 @@ function SetBountyHunterPursuitCleared()
 end
 
 
+
 --- Returns the amount of time (probably in game minutes) since last seen by the law / left the wanted radius
 --- Native 0x717DA2281DF90855 (_GET_TIME_SINCE_LAST_SEEN_BY_LAW)
 ---@param player player
 ---@return float
 function GetTimeSinceLastSeenByLaw(player)
-   return Citizen.InvokeNative(0x717DA2281DF90855,player)
+    return Citizen.InvokeNative(0x717DA2281DF90855,player)
 end
+
 
 
 --- 
@@ -407,6 +438,7 @@ function SetAllowDisabledLawResponses(toggle)
 end
 
 
+
 --- 
 --- Native 0x2728C77FBC4B9796 (RESET_WANTED_FOR_NEW_INCIDENT)
 ---@param player player
@@ -415,13 +447,15 @@ function ResetWantedForNewIncident(player)
 end
 
 
+
 --- p0 is always BOUNTYHUNTERSGLOBALCOOLDOWN in R* scripts
 --- Native 0x76CF93D4B416B288 (_GET_BOUNTY_HUNTER_GLOBAL_COOLDOWN)
 ---@param p0 hash
 ---@return number
 function GetBountyHunterGlobalCooldown(p0)
-   return Citizen.InvokeNative(0x76CF93D4B416B288,p0)
+    return Citizen.InvokeNative(0x76CF93D4B416B288,p0)
 end
+
 
 
 --- p0 is always BOUNTYHUNTERSGLOBALCOOLDOWN in R* scripts
@@ -431,6 +465,7 @@ end
 function SetBountyHunterGlobalCooldown(p0,p1)
     Citizen.InvokeNative(0xF19706B1F8FFA88F,p0,p1)
 end
+
 
 
 --- p0 is always BOUNTYHUNTERSGLOBALCOOLDOWN in R* scripts
@@ -443,6 +478,7 @@ function PauseBountyHunterCooldown(p0,p1,p2)
 end
 
 
+
 --- behaviour: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/CLawBehavior__Flags
 --- Native 0x819ADD5EF1742F47 (_SET_PED_LAW_BEHAVIOUR)
 ---@param ped number
@@ -450,6 +486,7 @@ end
 function SetPedLawBehaviour(ped,behaviour)
     Citizen.InvokeNative(0x819ADD5EF1742F47,ped,behaviour)
 end
+
 
 
 --- 
@@ -460,6 +497,7 @@ function SetDispatchMultiplierOverride(multiplier)
 end
 
 
+
 --- 
 --- Native 0x532C5FDDB986EE5C (GET_PLAYER_REGISTERED_CRIME)
 ---@param player player
@@ -467,8 +505,9 @@ end
 ---@param crimeType hash*
 ---@return boolean
 function GetPlayerRegisteredCrime(player,p1,crimeType)
-   return Citizen.InvokeNative(0x532C5FDDB986EE5C,player,p1,crimeType)
+    return Citizen.InvokeNative(0x532C5FDDB986EE5C,player,p1,crimeType)
 end
+
 
 
 --- 
@@ -477,6 +516,7 @@ end
 function ClearPlayerPastCrimes(player)
     Citizen.InvokeNative(0xBCC6DC59E32A2BDC,player)
 end
+
 
 
 --- 
@@ -488,6 +528,7 @@ function SetPlayerArrestedInRegion(player,lawRegionHash)
 end
 
 
+
 --- 
 --- Native 0x73BAD7B2F2DB50DE (SET_PLAYER_TURNED_IN_BOUNTY_IN_REGION)
 ---@param player player
@@ -495,6 +536,7 @@ end
 function SetPlayerTurnedInBountyInRegion(player,lawRegionHash)
     Citizen.InvokeNative(0x73BAD7B2F2DB50DE,player,lawRegionHash)
 end
+
 
 
 --- Default range is 1.0f
@@ -506,6 +548,7 @@ function SetLawSenseRangeModifier(player,range)
 end
 
 
+
 --- 
 --- Native 0xDE5FAA741A781F73 (SET_DISABLE_DISTURBANCE_CRIMES)
 ---@param player player
@@ -513,6 +556,7 @@ end
 function SetDisableDisturbanceCrimes(player,p1)
     Citizen.InvokeNative(0xDE5FAA741A781F73,player,p1)
 end
+
 
 
 --- 
@@ -524,12 +568,14 @@ function SetPostponeDisturbanceCrimesDuringCombat(player,p1)
 end
 
 
+
 --- 
 --- Native 0x8F9DE75680275C9F (_CREATE_GUARD_ZONE)
 ---@param name string
 function CreateGuardZone(name)
     Citizen.InvokeNative(0x8F9DE75680275C9F,name)
 end
+
 
 
 --- 
@@ -540,6 +586,7 @@ function RemoveGuardZone(name)
 end
 
 
+
 --- 
 --- Native 0x26D558692B25DD95 (_DISABLE_GUARD_ZONE)
 ---@param name string
@@ -548,13 +595,15 @@ function DisableGuardZone(name)
 end
 
 
+
 --- 
 --- Native 0xD743C4293F47AFAD (_IS_GUARD_PED_INVESTIGATING)
 ---@param ped number
 ---@return boolean
 function IsGuardPedInvestigating(ped)
-   return Citizen.InvokeNative(0xD743C4293F47AFAD,ped)
+    return Citizen.InvokeNative(0xD743C4293F47AFAD,ped)
 end
+
 
 
 --- Returns true when investigation creation was successful
@@ -566,8 +615,9 @@ end
 ---@param z float
 ---@return boolean
 function CreateGuardZoneForEntity(guardZoneName,entity,x,y,z)
-   return Citizen.InvokeNative(0x0D4B77E862475ED3,guardZoneName,entity,x,y,z)
+    return Citizen.InvokeNative(0x0D4B77E862475ED3,guardZoneName,entity,x,y,z)
 end
+
 
 
 --- 
@@ -579,6 +629,7 @@ function SetGuardZoneVolumeRegistrationStart(name,volume)
 end
 
 
+
 --- 
 --- Native 0x35815F372D43E1E5 (_SET_GUARD_ZONE_VOLUME_RESTRICTED)
 ---@param name string
@@ -586,6 +637,7 @@ end
 function SetGuardZoneVolumeRestricted(name,volume)
     Citizen.InvokeNative(0x35815F372D43E1E5,name,volume)
 end
+
 
 
 --- 
@@ -597,6 +649,7 @@ function SetGuardZoneVolumeThreat(name,volume)
 end
 
 
+
 --- 
 --- Native 0xAD3E07C37A7C1ADC (_SET_GUARD_ZONE_VOLUME_WARNING)
 ---@param name string
@@ -606,6 +659,7 @@ function SetGuardZoneVolumeWarning(name,volume)
 end
 
 
+
 --- 
 --- Native 0xA8A74AA79FB67159 (_SET_GUARD_ZONE_VOLUME_REGISTRATION_END)
 ---@param name string
@@ -613,6 +667,7 @@ end
 function SetGuardZoneVolumeRegistrationEnd(name,volume)
     Citizen.InvokeNative(0xA8A74AA79FB67159,name,volume)
 end
+
 
 
 --- 
@@ -626,6 +681,7 @@ function SetGuardZonePosition(name,x,y,z)
 end
 
 
+
 --- 
 --- Native 0x2F9005E2EA4E5EE4 (_SET_GUARD_ZONE_POSITION_2)
 ---@param name string
@@ -635,5 +691,6 @@ end
 function SetGuardZonePosition2(name,x,y,z)
     Citizen.InvokeNative(0x2F9005E2EA4E5EE4,name,x,y,z)
 end
+
 
 

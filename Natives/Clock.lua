@@ -8,6 +8,7 @@ function SetClockTime(hour,minute,second)
 end
 
 
+
 --- 
 --- Native 0x4D1A590C92BF377E (PAUSE_CLOCK)
 ---@param toggle boolean
@@ -17,12 +18,14 @@ function PauseClock(toggle,unused)
 end
 
 
+
 --- 
 --- Native 0x568D998A9FF96774 (_PAUSE_CLOCK_THIS_FRAME)
 ---@param toggle boolean
 function PauseClockThisFrame(toggle)
     Citizen.InvokeNative(0x568D998A9FF96774,toggle)
 end
+
 
 
 --- 
@@ -35,6 +38,7 @@ function AdvanceClockTimeTo(hour,minute,second)
 end
 
 
+
 --- 
 --- Native 0xAB7C251C7701D336 (ADD_TO_CLOCK_TIME)
 ---@param hours number
@@ -45,12 +49,14 @@ function AddToClockTime(hours,minutes,seconds)
 end
 
 
+
 --- Gets the current ingame hour, expressed without zeros. (09:34 will be represented as 9)
 --- Native 0xC82CF208C2B19199 (GET_CLOCK_HOURS)
 ---@return number
 function GetClockHours()
    return Citizen.InvokeNative(0xC82CF208C2B19199)
 end
+
 
 
 --- Gets the current ingame clock minute.
@@ -61,12 +67,14 @@ function GetClockMinutes()
 end
 
 
+
 --- Gets the current ingame clock second. Note that ingame clock seconds change really fast since a day in RDR is only 48 minutes in real life.
 --- Native 0xB6101ABE62B5F080 (GET_CLOCK_SECONDS)
 ---@return number
 function GetClockSeconds()
    return Citizen.InvokeNative(0xB6101ABE62B5F080)
 end
+
 
 
 --- 
@@ -77,12 +85,14 @@ function SetMillisecondsPerGameMinute(ms)
 end
 
 
+
 --- Base year is 1898.
 --- Native 0x78FD8BE812E436B2 (_GET_SECONDS_SINCE_BASE_YEAR)
 ---@return number
 function GetSecondsSinceBaseYear()
    return Citizen.InvokeNative(0x78FD8BE812E436B2)
 end
+
 
 
 --- 
@@ -93,6 +103,7 @@ end
 function SetClockDate(day,month,year)
     Citizen.InvokeNative(0x02AD3092562941E2,day,month,year)
 end
+
 
 
 --- Gets the current day of the week.
@@ -110,12 +121,14 @@ function GetClockDayOfWeek()
 end
 
 
+
 --- 
 --- Native 0xDF2FD796C54480A5 (GET_CLOCK_DAY_OF_MONTH)
 ---@return number
 function GetClockDayOfMonth()
    return Citizen.InvokeNative(0xDF2FD796C54480A5)
 end
+
 
 
 --- 
@@ -126,6 +139,7 @@ function GetClockMonth()
 end
 
 
+
 --- 
 --- Native 0xE136DCA28C4A48BA (GET_CLOCK_YEAR)
 ---@return number
@@ -134,12 +148,14 @@ function GetClockYear()
 end
 
 
+
 --- 
 --- Native 0xE4CB8D126501EC52 (GET_MILLISECONDS_PER_GAME_MINUTE)
 ---@return number
 function GetMillisecondsPerGameMinute()
    return Citizen.InvokeNative(0xE4CB8D126501EC52)
 end
+
 
 
 --- 
@@ -155,12 +171,14 @@ function GetPosixTime(year,month,day,hour,minute,second)
 end
 
 
+
 --- Same as GET_POSIX_TIME except that it takes a single pointer to a struct.
 --- Native 0x86A68E84E5884951 (_GET_POSIX_TIME_STRUCT)
 ---@param outTime any*
 function GetPosixTimeStruct(outTime)
     Citizen.InvokeNative(0x86A68E84E5884951,outTime)
 end
+
 
 
 --- 
@@ -171,5 +189,6 @@ end
 function AddTimeToDateTime(inDateTime,timeToAdd,outDateTime)
     Citizen.InvokeNative(0x28EEACE9B43D9597,inDateTime,timeToAdd,outDateTime)
 end
+
 
 

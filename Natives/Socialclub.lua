@@ -6,13 +6,15 @@ function ScInboxGetTotalNumMessages()
 end
 
 
+
 --- 
 --- Native 0xFF92537C4DDC1241 (SC_INBOX_GET_MESSAGE_TYPE_AT_INDEX)
 ---@param msgIndex number
 ---@return hash
 function ScInboxGetMessageTypeAtIndex(msgIndex)
-   return Citizen.InvokeNative(0xFF92537C4DDC1241,msgIndex)
+    return Citizen.InvokeNative(0xFF92537C4DDC1241,msgIndex)
 end
+
 
 
 --- 
@@ -20,8 +22,9 @@ end
 ---@param msgIndex number
 ---@return boolean
 function ScInboxGetMessageIsReadAtIndex(msgIndex)
-   return Citizen.InvokeNative(0x74CF39E030A382C4,msgIndex)
+    return Citizen.InvokeNative(0x74CF39E030A382C4,msgIndex)
 end
+
 
 
 --- 
@@ -29,8 +32,9 @@ end
 ---@param msgIndex number
 ---@return boolean
 function ScInboxSetMessageAsReadAtIndex(msgIndex)
-   return Citizen.InvokeNative(0x63CAC501FFF66DC4,msgIndex)
+    return Citizen.InvokeNative(0x63CAC501FFF66DC4,msgIndex)
 end
+
 
 
 --- 
@@ -40,8 +44,9 @@ end
 ---@param out int*
 ---@return boolean
 function ScInboxMessageGetDataInt(p0,context,out)
-   return Citizen.InvokeNative(0x95BB39C4DA99F348,p0,context,out)
+    return Citizen.InvokeNative(0x95BB39C4DA99F348,p0,context,out)
 end
+
 
 
 --- 
@@ -51,8 +56,9 @@ end
 ---@param out string
 ---@return boolean
 function ScInboxMessageGetDataString(p0,context,out)
-   return Citizen.InvokeNative(0x66F77FD58506FF6B,p0,context,out)
+    return Citizen.InvokeNative(0x66F77FD58506FF6B,p0,context,out)
 end
+
 
 
 --- 
@@ -60,8 +66,9 @@ end
 ---@param p0 number
 ---@return string
 function ScInboxMessageGetRawTypeAtIndex(p0)
-   return Citizen.InvokeNative(0x176D077685CD83E4,p0)
+    return Citizen.InvokeNative(0x176D077685CD83E4,p0)
 end
+
 
 
 --- 
@@ -70,8 +77,9 @@ end
 ---@param value float
 ---@return boolean
 function ScPresenceAttrSetFloat(attrHash,value)
-   return Citizen.InvokeNative(0xA31DAFCDC33775E9,attrHash,value)
+    return Citizen.InvokeNative(0xA31DAFCDC33775E9,attrHash,value)
 end
+
 
 
 --- 
@@ -81,8 +89,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function ScPresenceAttrSetIntEx(attrName,value,p2)
-   return Citizen.InvokeNative(0x0000000085488C49,attrName,value,p2)
+    return Citizen.InvokeNative(0x0000000085488C49,attrName,value,p2)
 end
+
 
 
 --- 
@@ -92,8 +101,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function ScPresenceAttrSetFloatEx(attrName,value,p2)
-   return Citizen.InvokeNative(0x00000000467F4CAA,attrName,value,p2)
+    return Citizen.InvokeNative(0x00000000467F4CAA,attrName,value,p2)
 end
+
 
 
 --- 
@@ -103,8 +113,9 @@ end
 ---@param p2 boolean
 ---@return boolean
 function ScPresenceAttrSetStringEx(attrName,value,p2)
-   return Citizen.InvokeNative(0x00000000EB2D93B3,attrName,value,p2)
+    return Citizen.InvokeNative(0x00000000EB2D93B3,attrName,value,p2)
 end
+
 
 
 --- Starts a task to check an entered string for profanity on the ROS/Social Club services.
@@ -113,8 +124,9 @@ end
 ---@param token int*
 ---@return boolean
 function ScProfanityCheckString(string,token)
-   return Citizen.InvokeNative(0x9C74AC9D87B3FFF4,string,token)
+    return Citizen.InvokeNative(0x9C74AC9D87B3FFF4,string,token)
 end
+
 
 
 --- 
@@ -122,8 +134,9 @@ end
 ---@param token number
 ---@return boolean
 function ScProfanityGetCheckIsValid(token)
-   return Citizen.InvokeNative(0x08C8052AF40C4247,token)
+    return Citizen.InvokeNative(0x08C8052AF40C4247,token)
 end
+
 
 
 --- 
@@ -131,8 +144,9 @@ end
 ---@param token number
 ---@return boolean
 function ScProfanityGetCheckIsPending(token)
-   return Citizen.InvokeNative(0x3A10BCD0C8AA0B82,token)
+    return Citizen.InvokeNative(0x3A10BCD0C8AA0B82,token)
 end
+
 
 
 --- 
@@ -140,8 +154,9 @@ end
 ---@param token number
 ---@return boolean
 function ScProfanityGetStringPassed(token)
-   return Citizen.InvokeNative(0xF302973BB8BE70E6,token)
+    return Citizen.InvokeNative(0xF302973BB8BE70E6,token)
 end
+
 
 
 --- 
@@ -149,8 +164,9 @@ end
 ---@param token number
 ---@return number
 function ScProfanityGetStringStatus(token)
-   return Citizen.InvokeNative(0x0CF3BFB99EBBE5B1,token)
+    return Citizen.InvokeNative(0x0CF3BFB99EBBE5B1,token)
 end
+
 
 
 --- 
@@ -161,6 +177,7 @@ function ScCommunityEventIsActive()
 end
 
 
+
 --- 
 --- Native 0xD635DF6BAA5A6017 (SC_COMMUNITY_EVENT_GET_EVENT_ID)
 ---@return number
@@ -169,14 +186,16 @@ function ScCommunityEventGetEventId()
 end
 
 
+
 --- 
 --- Native 0xB4411D4D6B81438E (SC_COMMUNITY_EVENT_GET_EXTRA_DATA_INT)
 ---@param p0 string
 ---@param p1 int*
 ---@return boolean
 function ScCommunityEventGetExtraDataInt(p0,p1)
-   return Citizen.InvokeNative(0xB4411D4D6B81438E,p0,p1)
+    return Citizen.InvokeNative(0xB4411D4D6B81438E,p0,p1)
 end
+
 
 
 --- 
@@ -185,8 +204,9 @@ end
 ---@param p1 float*
 ---@return boolean
 function ScCommunityEventGetExtraDataFloat(p0,p1)
-   return Citizen.InvokeNative(0x060BBAD634C2B44B,p0,p1)
+    return Citizen.InvokeNative(0x060BBAD634C2B44B,p0,p1)
 end
+
 
 
 --- 
@@ -195,8 +215,9 @@ end
 ---@param p1 string
 ---@return boolean
 function ScCommunityEventGetExtraDataString(p0,p1)
-   return Citizen.InvokeNative(0x9F6DCD0C939C71E9,p0,p1)
+    return Citizen.InvokeNative(0x9F6DCD0C939C71E9,p0,p1)
 end
+
 
 
 --- 
@@ -204,8 +225,9 @@ end
 ---@param p0 string
 ---@return boolean
 function ScCommunityEventGetDisplayName(p0)
-   return Citizen.InvokeNative(0x89D9BDE7334B110F,p0)
+    return Citizen.InvokeNative(0x89D9BDE7334B110F,p0)
 end
+
 
 
 --- 
@@ -213,8 +235,9 @@ end
 ---@param p0 string
 ---@return boolean
 function ScCommunityEventIsActiveForType(p0)
-   return Citizen.InvokeNative(0x09937EB0CEBC2F9F,p0)
+    return Citizen.InvokeNative(0x09937EB0CEBC2F9F,p0)
 end
+
 
 
 --- 
@@ -222,8 +245,9 @@ end
 ---@param p0 string
 ---@return number
 function ScCommunityEventGetEventIdForType(p0)
-   return Citizen.InvokeNative(0x03C03ABBABBEF752,p0)
+    return Citizen.InvokeNative(0x03C03ABBABBEF752,p0)
 end
+
 
 
 --- 
@@ -233,8 +257,9 @@ end
 ---@param p2 string
 ---@return boolean
 function ScCommunityEventGetExtraDataIntForType(p0,p1,p2)
-   return Citizen.InvokeNative(0x3519CC3525319A96,p0,p1,p2)
+    return Citizen.InvokeNative(0x3519CC3525319A96,p0,p1,p2)
 end
+
 
 
 --- 
@@ -244,8 +269,9 @@ end
 ---@param p2 string
 ---@return boolean
 function ScCommunityEventGetExtraDataFloatForType(p0,p1,p2)
-   return Citizen.InvokeNative(0x1BDB56DB258F052D,p0,p1,p2)
+    return Citizen.InvokeNative(0x1BDB56DB258F052D,p0,p1,p2)
 end
+
 
 
 --- 
@@ -255,8 +281,9 @@ end
 ---@param p2 string
 ---@return boolean
 function ScCommunityEventGetExtraDataStringForType(p0,p1,p2)
-   return Citizen.InvokeNative(0xC8FC3B2432E8229D,p0,p1,p2)
+    return Citizen.InvokeNative(0xC8FC3B2432E8229D,p0,p1,p2)
 end
+
 
 
 --- 
@@ -265,8 +292,9 @@ end
 ---@param p1 string
 ---@return boolean
 function ScCommunityEventGetDisplayNameForType(p0,p1)
-   return Citizen.InvokeNative(0x85EA0BEC7B1F7622,p0,p1)
+    return Citizen.InvokeNative(0x85EA0BEC7B1F7622,p0,p1)
 end
+
 
 
 --- 
@@ -274,8 +302,9 @@ end
 ---@param p0 number
 ---@return boolean
 function ScCommunityEventIsActiveById(p0)
-   return Citizen.InvokeNative(0x62B384FEFDE06817,p0)
+    return Citizen.InvokeNative(0x62B384FEFDE06817,p0)
 end
+
 
 
 --- 
@@ -285,8 +314,9 @@ end
 ---@param p2 int*
 ---@return boolean
 function ScCommunityEventGetExtraDataIntById(p0,p1,p2)
-   return Citizen.InvokeNative(0x7C981DE05A7403A0,p0,p1,p2)
+    return Citizen.InvokeNative(0x7C981DE05A7403A0,p0,p1,p2)
 end
+
 
 
 --- 
@@ -296,8 +326,9 @@ end
 ---@param p2 float*
 ---@return boolean
 function ScCommunityEventGetExtraDataFloatById(p0,p1,p2)
-   return Citizen.InvokeNative(0x91C9E2A0F9DD6DD4,p0,p1,p2)
+    return Citizen.InvokeNative(0x91C9E2A0F9DD6DD4,p0,p1,p2)
 end
+
 
 
 --- 
@@ -307,8 +338,9 @@ end
 ---@param p2 string
 ---@return boolean
 function ScCommunityEventGetExtraDataStringById(p0,p1,p2)
-   return Citizen.InvokeNative(0x049D2196D9D11184,p0,p1,p2)
+    return Citizen.InvokeNative(0x049D2196D9D11184,p0,p1,p2)
 end
+
 
 
 --- 
@@ -317,7 +349,8 @@ end
 ---@param p1 string
 ---@return boolean
 function ScCommunityEventGetDisplayNameById(p0,p1)
-   return Citizen.InvokeNative(0x11EA52CAD1B55910,p0,p1)
+    return Citizen.InvokeNative(0x11EA52CAD1B55910,p0,p1)
 end
+
 
 
