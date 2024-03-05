@@ -143,8 +143,8 @@ end
 ---@param length float
 ---@param alwaysZero1 number
 ---@param alwaysZero2 number
----@param boneName1 const char*
----@param boneName2 const char*
+---@param boneName1 string
+---@param boneName2 string
 ---@param p14 boolean
 ---@param boneId1 number
 ---@param boneId2 number
@@ -168,8 +168,8 @@ end
 ---@param ent2X float
 ---@param ent2Y float
 ---@param ent2Z float
----@param boneName1 const char*
----@param boneName2 const char*
+---@param boneName1 string
+---@param boneName2 string
 function AttachEntitiesToRope2(ropeId,entity1,entity2,ent1X,ent1Y,ent1Z,ent2X,ent2Y,ent2Z,boneName1,boneName2)
     Citizen.InvokeNative(0x462FF2A432733A44,ropeId,entity1,entity2,ent1X,ent1Y,ent1Z,ent2X,ent2Y,ent2Z,boneName1,boneName2)
 end
@@ -246,8 +246,8 @@ end
 ---_CREATE_*
 --- Native 0x3C6490D940FF5D0B (_CREATE_ROPE_WINDING_ABILITY)
 ---@param ropeId number
----@param p1 const char*
----@param ropeModelType const char*
+---@param p1 string
+---@param ropeModelType string
 ---@param length float
 ---@param p4 boolean
 function CreateRopeWindingAbility(ropeId,p1,ropeModelType,length,p4)

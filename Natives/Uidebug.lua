@@ -1,6 +1,6 @@
 --- Note: you must use VAR_STRING
 --- Native 0x16794E044C9EFB58 (_BG_DISPLAY_TEXT)
----@param text const char*
+---@param text string
 ---@param x float
 ---@param y float
 function BgDisplayText(text,x,y)

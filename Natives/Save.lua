@@ -43,7 +43,7 @@ end
 ---Commonly used with time/timestamps
 --- Native 0x529B9CCD0972AF4D (_SAVEGAME_GET_INT_2)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetInt2(p0,variableName)
     Citizen.InvokeNative(0x529B9CCD0972AF4D,p0,variableName)
 end
@@ -52,7 +52,7 @@ end
 --- 
 --- Native 0x529B9CCD0972AF4E (_SAVEGAME_GET_INT)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetInt(p0,variableName)
     Citizen.InvokeNative(0x529B9CCD0972AF4E,p0,variableName)
 end
@@ -62,7 +62,7 @@ end
 ---Commonly used with enums and flags
 --- Native 0xB25B5A375BE5BE26 (_SAVEGAME_GET_INT_3)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetInt3(p0,variableName)
     Citizen.InvokeNative(0xB25B5A375BE5BE26,p0,variableName)
 end
@@ -71,7 +71,7 @@ end
 --- 
 --- Native 0x35DEFECAE36D4FAE (_SAVEGAME_GET_FLOAT)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetFloat(p0,variableName)
     Citizen.InvokeNative(0x35DEFECAE36D4FAE,p0,variableName)
 end
@@ -80,7 +80,7 @@ end
 --- Does the exact same as 0x529B9CCD0972AF4E
 --- Native 0xBB7F4273C186BC4B (_SAVEGAME_GET_BOOL)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetBool(p0,variableName)
     Citizen.InvokeNative(0xBB7F4273C186BC4B,p0,variableName)
 end
@@ -89,7 +89,7 @@ end
 --- 
 --- Native 0x5A10D6506B2F2C63 (_SAVEGAME_GET_TEXT_LABEL_23)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetTextLabel23(p0,variableName)
     Citizen.InvokeNative(0x5A10D6506B2F2C63,p0,variableName)
 end
@@ -98,7 +98,7 @@ end
 --- 
 --- Native 0x4845E7E7643A908C (_SAVEGAME_GET_TEXT_LABEL_31)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetTextLabel31(p0,variableName)
     Citizen.InvokeNative(0x4845E7E7643A908C,p0,variableName)
 end
@@ -107,7 +107,7 @@ end
 --- 
 --- Native 0x186608A2AC6F9E88 (_SAVEGAME_GET_TEXT_LABEL_63)
 ---@param p0 any*
----@param variableName const char*
+---@param variableName string
 function SavegameGetTextLabel63(p0,variableName)
     Citizen.InvokeNative(0x186608A2AC6F9E88,p0,variableName)
 end

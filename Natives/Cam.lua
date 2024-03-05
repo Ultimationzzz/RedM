@@ -31,7 +31,7 @@ end
 
 --- 
 --- Native 0xE72CDBA7F0A02DD6 (CREATE_CAM)
----@param camName const char*
+---@param camName string
 ---@param p1 boolean
 ---@return cam
 function CreateCam(camName,p1)
@@ -41,7 +41,7 @@ end
 
 --- 
 --- Native 0x40C23491CE83708E (CREATE_CAM_WITH_PARAMS)
----@param camName const char*
+---@param camName string
 ---@param posX float
 ---@param posY float
 ---@param posZ float
@@ -448,7 +448,7 @@ end
 --- 
 --- Native 0xF9A7BCF5D050D4E7 (SHAKE_CAM)
 ---@param cam cam
----@param type const char*
+---@param type string
 ---@param amplitude float
 function ShakeCam(cam,type,amplitude)
     Citizen.InvokeNative(0xF9A7BCF5D050D4E7,cam,type,amplitude)
@@ -476,8 +476,8 @@ end
 --- 
 --- Native 0xA263DDF694D563F6 (PLAY_CAM_ANIM)
 ---@param cam cam
----@param animName const char*
----@param animDictionary const char*
+---@param animName string
+---@param animDictionary string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -694,7 +694,7 @@ end
 
 --- 
 --- Native 0xD9B31B4650520529 (SHAKE_GAMEPLAY_CAM)
----@param shakeName const char*
+---@param shakeName string
 ---@param intensity float
 function ShakeGameplayCam(shakeName,intensity)
     Citizen.InvokeNative(0xD9B31B4650520529,shakeName,intensity)
@@ -729,7 +729,7 @@ end
 ---script_mp_rel: DRUNK_SHAKE, REINFORCED_LASSO_STRUGGLE_SHAKE
 ---_STOP_GAMEPLAY_CAM* - _STOP_I*
 --- Native 0x4285804FD65D8066 (_STOP_GAMEPLAY_CAM_SHAKING_WITH_NAME)
----@param shakeName const char*
+---@param shakeName string
 ---@param p1 boolean
 function StopGameplayCamShakingWithName(shakeName,p1)
     Citizen.InvokeNative(0x4285804FD65D8066,shakeName,p1)
@@ -1278,7 +1278,7 @@ end
 
 --- 
 --- Native 0x1B3C2D961F5FC0E1 (_LOAD_CINEMATIC_CAM_LOCATION)
----@param locationDictName const char*
+---@param locationDictName string
 function LoadCinematicCamLocation(locationDictName)
     Citizen.InvokeNative(0x1B3C2D961F5FC0E1,locationDictName)
 end
@@ -1286,7 +1286,7 @@ end
 
 --- 
 --- Native 0x2412216FCC7B4E3E (_UNLOAD_CINEMATIC_CAMERA_LOCATION)
----@param dictionaryName const char*
+---@param dictionaryName string
 function UnloadCinematicCameraLocation(dictionaryName)
     Citizen.InvokeNative(0x2412216FCC7B4E3E,dictionaryName)
 end
@@ -1294,7 +1294,7 @@ end
 
 --- 
 --- Native 0xAA235E2F2C09E952 (_IS_CINEMATIC_CAM_LOCATION_LOADED)
----@param sLocationDictName const char*
+---@param sLocationDictName string
 ---@return boolean
 function IsCinematicCamLocationLoaded(sLocationDictName)
    return Citizen.InvokeNative(0xAA235E2F2C09E952,sLocationDictName)
@@ -1303,7 +1303,7 @@ end
 
 --- Checks data related to Cinematic Cam Locations, if the check fails, the location is being loaded using 0x1B3C2D961F5FC0E1.
 --- Native 0x595550376B7EA230 (_IS_CINEMATIC_CAM_LOCATION_LOADED_2)
----@param locationDictName const char*
+---@param locationDictName string
 ---@return boolean
 function IsCinematicCamLocationLoaded2(locationDictName)
    return Citizen.InvokeNative(0x595550376B7EA230,locationDictName)
@@ -1312,8 +1312,8 @@ end
 
 --- 
 --- Native 0xBC016635D6A73B31 (_CINEMATIC_LOCATION_TRIGGER_SCRIPTED_SHOT_EVENT_2)
----@param dictionary const char*
----@param shotName const char*
+---@param dictionary string
+---@param shotName string
 ---@param duration number
 function CinematicLocationTriggerScriptedShotEvent2(dictionary,shotName,duration)
     Citizen.InvokeNative(0xBC016635D6A73B31,dictionary,shotName,duration)
@@ -1322,9 +1322,9 @@ end
 
 --- 
 --- Native 0x02389579A53C3276 (CINEMATIC_LOCATION_TRIGGER_SCRIPTED_SHOT_EVENT)
----@param dictionary const char*
----@param shotName const char*
----@param cameraName const char*
+---@param dictionary string
+---@param shotName string
+---@param cameraName string
 ---@param p3 any
 function CinematicLocationTriggerScriptedShotEvent(dictionary,shotName,cameraName,p3)
     Citizen.InvokeNative(0x02389579A53C3276,dictionary,shotName,cameraName,p3)
@@ -1343,7 +1343,7 @@ end
 
 --- 
 --- Native 0x0E94C95EC3185FA9 (_CINEMATIC_LOCATION_SET_LOCATION_AND_ROTATION)
----@param name const char*
+---@param name string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -1357,7 +1357,7 @@ end
 
 --- Only used in R* Script fm_mission_controller
 --- Native 0x0B0F914459731F60 (CINEMATIC_LOCATION_OVERRIDE_TARGET_ENTITY_THIS_UPDATE)
----@param name const char*
+---@param name string
 ---@param entity entity
 function CinematicLocationOverrideTargetEntityThisUpdate(name,entity)
     Citizen.InvokeNative(0x0B0F914459731F60,name,entity)
@@ -1366,7 +1366,7 @@ end
 
 --- 
 --- Native 0x6A4D224FC7643941 (_LOAD_CAMERA_DATA_DICT)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 function LoadCameraDataDict(cameraDictionary)
     Citizen.InvokeNative(0x6A4D224FC7643941,cameraDictionary)
 end
@@ -1374,7 +1374,7 @@ end
 
 --- 
 --- Native 0x798BE43C9393632B (_UNLOAD_CAMERA_DATA_DICT)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 function UnloadCameraDataDict(cameraDictionary)
     Citizen.InvokeNative(0x798BE43C9393632B,cameraDictionary)
 end
@@ -1382,7 +1382,7 @@ end
 
 --- 
 --- Native 0xDD0B7C5AE58F721D (_IS_CAM_DATA_DICT_LOADED)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 ---@return boolean
 function IsCamDataDictLoaded(cameraDictionary)
    return Citizen.InvokeNative(0xDD0B7C5AE58F721D,cameraDictionary)
@@ -1391,7 +1391,7 @@ end
 
 --- 
 --- Native 0xB8B207C34285E978 (_CAM_CREATE)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 function CamCreate(cameraDictionary)
     Citizen.InvokeNative(0xB8B207C34285E978,cameraDictionary)
 end
@@ -1399,7 +1399,7 @@ end
 
 --- 
 --- Native 0x0A5A4F1979ABB40E (_CAM_DESTROY)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 function CamDestroy(cameraDictionary)
     Citizen.InvokeNative(0x0A5A4F1979ABB40E,cameraDictionary)
 end
@@ -1407,7 +1407,7 @@ end
 
 --- 
 --- Native 0x927B810E43E99932 (_IS_CAMERA_AVAILABLE)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 ---@return boolean
 function IsCameraAvailable(cameraDictionary)
    return Citizen.InvokeNative(0x927B810E43E99932,cameraDictionary)
@@ -1416,7 +1416,7 @@ end
 
 --- 
 --- Native 0x7B0279170961A73F (_CAM_CREATE_2)
----@param cameraDictionary const char*
+---@param cameraDictionary string
 function CamCreate2(cameraDictionary)
     Citizen.InvokeNative(0x7B0279170961A73F,cameraDictionary)
 end

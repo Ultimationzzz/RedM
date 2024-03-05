@@ -91,7 +91,7 @@ end
 
 --- 
 --- Native 0x46ED607DDD40D7FE (REQUEST_SCRIPT)
----@param scriptName const char*
+---@param scriptName string
 function RequestScript(scriptName)
     Citizen.InvokeNative(0x46ED607DDD40D7FE,scriptName)
 end
@@ -99,7 +99,7 @@ end
 
 --- 
 --- Native 0x0086D3067E1CFD1C (SET_SCRIPT_AS_NO_LONGER_NEEDED)
----@param scriptName const char*
+---@param scriptName string
 function SetScriptAsNoLongerNeeded(scriptName)
     Citizen.InvokeNative(0x0086D3067E1CFD1C,scriptName)
 end
@@ -107,7 +107,7 @@ end
 
 --- Returns if a script has been loaded into the game. Used to see if a script was loaded after requesting.
 --- Native 0xE97BD36574F8B0A6 (HAS_SCRIPT_LOADED)
----@param scriptName const char*
+---@param scriptName string
 ---@return boolean
 function HasScriptLoaded(scriptName)
    return Citizen.InvokeNative(0xE97BD36574F8B0A6,scriptName)
@@ -116,7 +116,7 @@ end
 
 --- 
 --- Native 0x552B171E3F69E5AE (DOES_SCRIPT_EXIST)
----@param scriptName const char*
+---@param scriptName string
 ---@return boolean
 function DoesScriptExist(scriptName)
    return Citizen.InvokeNative(0x552B171E3F69E5AE,scriptName)
@@ -420,9 +420,9 @@ end
 ---@param p0 hash
 ---@param p1 hash
 ---@param p2 hash
----@param gamemodeName const char*
----@param title const char*
----@param subtitle const char*
+---@param gamemodeName string
+---@param title string
+---@param subtitle string
 function DisplayLoadingScreens(p0,p1,p2,gamemodeName,title,subtitle)
     Citizen.InvokeNative(0x1E5B70E53DB661E5,p0,p1,p2,gamemodeName,title,subtitle)
 end
@@ -454,7 +454,7 @@ end
 
 --- 
 --- Native 0xE98204D3C25AE14C (BAIL_WITH_PASS_THROUGH_PARAMS)
----@param params const char*
+---@param params string
 function BailWithPassThroughParams(params)
     Citizen.InvokeNative(0xE98204D3C25AE14C,params)
 end
@@ -494,7 +494,7 @@ end
 
 --- Inserts the given context into the background scripts context map.
 --- Native 0x49BA5678BA040CA7 (BG_START_CONTEXT)
----@param contextName const char*
+---@param contextName string
 function BgStartContext(contextName)
     Citizen.InvokeNative(0x49BA5678BA040CA7,contextName)
 end
@@ -502,7 +502,7 @@ end
 
 --- Deletes the given context from the background scripts context map.
 --- Native 0x3ABF7BA1C3E2C8CF (BG_END_CONTEXT)
----@param contextName const char*
+---@param contextName string
 function BgEndContext(contextName)
     Citizen.InvokeNative(0x3ABF7BA1C3E2C8CF,contextName)
 end
@@ -511,7 +511,7 @@ end
 --- 
 --- Native 0x4AE1DFF337A86FDE (BG_DOES_LAUNCH_PARAM_EXIST)
 ---@param scriptIndex number
----@param p1 const char*
+---@param p1 string
 ---@return boolean
 function BgDoesLaunchParamExist(scriptIndex,p1)
    return Citizen.InvokeNative(0x4AE1DFF337A86FDE,scriptIndex,p1)
@@ -521,7 +521,7 @@ end
 --- 
 --- Native 0x55C40B7592BAD213 (BG_GET_LAUNCH_PARAM_VALUE)
 ---@param scriptIndex number
----@param p1 const char*
+---@param p1 string
 ---@return number
 function BgGetLaunchParamValue(scriptIndex,p1)
    return Citizen.InvokeNative(0x55C40B7592BAD213,scriptIndex,p1)
@@ -572,7 +572,7 @@ end
 --- Returns "INVALID_NET_RPC_GUID" if netRpcGuid is invalid.
 --- Native 0xAC9FF854BD4BA9B5 (_NET_RPC_GUID_TO_STRING)
 ---@param netRpcGuid any*
----@return const char*
+---@return string
 function NetRpcGuidToString(netRpcGuid)
    return Citizen.InvokeNative(0xAC9FF854BD4BA9B5,netRpcGuid)
 end
@@ -688,7 +688,7 @@ end
 
 --- 
 --- Native 0xE81651AD79516E48 (START_NEW_SCRIPT)
----@param scriptName const char*
+---@param scriptName string
 ---@param stackSize number
 ---@return number
 function StartNewScript(scriptName,stackSize)
@@ -699,7 +699,7 @@ end
 --- return : script thread id, 0 if failed
 ---Pass pointer to struct of args in p1, size of struct goes into p2
 --- Native 0xB8BA7F44DF1575E1 (START_NEW_SCRIPT_WITH_ARGS)
----@param scriptName const char*
+---@param scriptName string
 ---@param args any*
 ---@param argCount number
 ---@param stackSize number

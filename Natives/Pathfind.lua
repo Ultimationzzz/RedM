@@ -395,7 +395,7 @@ end
 
 --- 
 --- Native 0x7C334FF4D9215912 (_NAVMESH_ACTIVATE_SWAP)
----@param name const char*
+---@param name string
 ---@return boolean
 function NavmeshActivateSwap(name)
    return Citizen.InvokeNative(0x7C334FF4D9215912,name)
@@ -404,7 +404,7 @@ end
 
 --- 
 --- Native 0x527B97C203BB8606 (_NAVMESH_DEACTIVATE_SWAP)
----@param name const char*
+---@param name string
 ---@return boolean
 function NavmeshDeactivateSwap(name)
    return Citizen.InvokeNative(0x527B97C203BB8606,name)
@@ -413,7 +413,7 @@ end
 
 --- 
 --- Native 0x5AC0944C156E5F44 (_NAVMESH_IS_SWAP_ACTIVE)
----@param name const char*
+---@param name string
 ---@return boolean
 function NavmeshIsSwapActive(name)
    return Citizen.InvokeNative(0x5AC0944C156E5F44,name)
@@ -422,7 +422,7 @@ end
 
 --- 
 --- Native 0x495CFAB2924237C7 (_NAVMESH_DOES_SWAP_EXIST)
----@param name const char*
+---@param name string
 ---@return boolean
 function NavmeshDoesSwapExist(name)
    return Citizen.InvokeNative(0x495CFAB2924237C7,name)
@@ -432,7 +432,7 @@ end
 --- 
 --- Native 0x44026E3DB3CED602 (_NAVMESH_ASSIGN_NAVMESH_TO_VEHICLE)
 ---@param vehicle vehicle
----@param navMeshName const char*
+---@param navMeshName string
 ---@return boolean
 function NavmeshAssignNavmeshToVehicle(vehicle,navMeshName)
    return Citizen.InvokeNative(0x44026E3DB3CED602,vehicle,navMeshName)

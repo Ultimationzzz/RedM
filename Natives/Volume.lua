@@ -87,7 +87,7 @@ end
 ---@param scaleX float
 ---@param scaleY float
 ---@param scaleZ float
----@param name const char*
+---@param name string
 ---@return volume
 function CreateVolumeByHashWithCustomName(volumeType,x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
    return Citizen.InvokeNative(0x1F85E4AC774A201E,volumeType,x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
@@ -185,7 +185,7 @@ end
 ---@param scaleX float
 ---@param scaleY float
 ---@param scaleZ float
----@param name const char*
+---@param name string
 ---@return volume
 function CreateVolumeBoxWithCustomName(x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
    return Citizen.InvokeNative(0xF68485C7495D848E,x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
@@ -203,7 +203,7 @@ end
 ---@param scaleX float
 ---@param scaleY float
 ---@param scaleZ float
----@param name const char*
+---@param name string
 ---@return volume
 function CreateVolumeCylinderWithCustomName(x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
    return Citizen.InvokeNative(0xDF1E350EDDF06E59,x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
@@ -221,7 +221,7 @@ end
 ---@param scaleX float
 ---@param scaleY float
 ---@param scaleZ float
----@param name const char*
+---@param name string
 ---@return volume
 function CreateVolumeSphereWithCustomName(x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
    return Citizen.InvokeNative(0x10157BC3247FF3BA,x,y,z,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,name)
@@ -230,7 +230,7 @@ end
 
 --- 
 --- Native 0x5D580DE6398BB162 (_CREATE_VOLUME_AGGREGATE_WITH_CUSTOM_NAME)
----@param name const char*
+---@param name string
 ---@return volume
 function CreateVolumeAggregateWithCustomName(name)
    return Citizen.InvokeNative(0x5D580DE6398BB162,name)

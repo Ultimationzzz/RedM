@@ -522,7 +522,7 @@ end
 ---@param y float
 ---@param z float
 ---@param radius float
----@param name const char*
+---@param name string
 ---@return object
 function GetRayfireMapObject(x,y,z,radius,name)
    return Citizen.InvokeNative(0xB48FCED898292E52,x,y,z,radius,name)

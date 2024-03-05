@@ -155,7 +155,7 @@ end
 --- 
 --- Native 0xBB1E41DD3D3C6250 (_SET_EVENT_TRACKER_FOR_PED)
 ---@param ped number
----@param eventName const char*
+---@param eventName string
 ---@param p2 number
 function SetEventTrackerForPed(ped,eventName,p2)
     Citizen.InvokeNative(0xBB1E41DD3D3C6250,ped,eventName,p2)
@@ -187,7 +187,7 @@ end
 
 --- 
 --- Native 0x797B3D4D92E56094 (_IS_EVENT_TRACKER_ACTIVE)
----@param eventName const char*
+---@param eventName string
 ---@param shockingEvent hash
 ---@return boolean
 function IsEventTrackerActive(eventName,shockingEvent)

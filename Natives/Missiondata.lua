@@ -142,7 +142,7 @@ end
 
 --- 
 --- Native 0x25855B1574BF8CD5 (_MISSIONDATA_TIMECYCLE_BOX_SET_MODIFIER)
----@param timecycleName const char*
+---@param timecycleName string
 function MissiondataTimecycleBoxSetModifier(timecycleName)
     Citizen.InvokeNative(0x25855B1574BF8CD5,timecycleName)
 end

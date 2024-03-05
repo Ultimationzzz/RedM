@@ -64,7 +64,7 @@ end
 --- Native 0x80D6524190258C3E (_UILOG_UPDATE_ENTRY_SUBHEADER)
 ---@param p0 number
 ---@param p1 hash
----@param p2 const char*
+---@param p2 string
 function UilogUpdateEntrySubheader(p0,p1,p2)
     Citizen.InvokeNative(0x80D6524190258C3E,p0,p1,p2)
 end
@@ -93,7 +93,7 @@ end
 ---@param p0 number
 ---@param p1 hash
 ---@param p2 number
----@param p3 const char*
+---@param p3 string
 function UilogMarkEntryAvailability(p0,p1,p2,p3)
     Citizen.InvokeNative(0x13E8D7DD08543482,p0,p1,p2,p3)
 end
@@ -102,7 +102,7 @@ end
 --- 
 --- Native 0x3920574CF0A2B7B6 (_UILOG_MARK_ALL_ENTRIES_AVAILABILITY)
 ---@param p0 number
----@param p1 const char*
+---@param p1 string
 function UilogMarkAllEntriesAvailability(p0,p1)
     Citizen.InvokeNative(0x3920574CF0A2B7B6,p0,p1)
 end
@@ -139,7 +139,7 @@ end
 ---@param p0 number
 ---@param p1 hash
 ---@param p2 hash
----@param p3 const char*
+---@param p3 string
 ---@param p4 boolean
 ---@param p5 boolean
 ---@param p6 boolean
@@ -150,7 +150,7 @@ end
 
 --- 
 --- Native 0xFA233F8FE190514C (_UILOG_SET_CACHED_OBJECTIVE)
----@param p0 const char*
+---@param p0 string
 function UilogSetCachedObjective(p0)
     Citizen.InvokeNative(0xFA233F8FE190514C,p0)
 end
@@ -187,7 +187,7 @@ end
 
 --- 
 --- Native 0x15A4461BEB788096 (_UILOG_GET_CACHED_OBJECTIVE)
----@return const char*
+---@return string
 function UilogGetCachedObjective()
    return Citizen.InvokeNative(0x15A4461BEB788096)
 end
@@ -214,8 +214,8 @@ end
 --- Native 0x60C59968E8E87E6B (_UILOG_ADD_TOTAL_TAKE_ENTRY)
 ---@param p0 hash
 ---@param p1 hash
----@param p2 const char*
----@param p3 const char*
+---@param p2 string
+---@param p3 string
 ---@param p4 hash
 function UilogAddTotalTakeEntry(p0,p1,p2,p3,p4)
     Citizen.InvokeNative(0x60C59968E8E87E6B,p0,p1,p2,p3,p4)
@@ -224,8 +224,8 @@ end
 
 --- 
 --- Native 0xD106B211EF1B8F04 (_UILOG_SET_TOTAL_TAKE_SUMMARY)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 function UilogSetTotalTakeSummary(p0,p1)
     Citizen.InvokeNative(0xD106B211EF1B8F04,p0,p1)
 end

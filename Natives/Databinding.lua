@@ -1,6 +1,6 @@
 --- 
 --- Native 0x0C827D175F1292F2 (_DATABINDING_GET_DATA_CONTAINER_FROM_PATH)
----@param p0 const char*
+---@param p0 string
 ---@return any
 function DatabindingGetDataContainerFromPath(p0)
    return Citizen.InvokeNative(0x0C827D175F1292F2,p0)
@@ -19,8 +19,8 @@ end
 
 --- 
 --- Native 0x0C827D175F1292F4 (_DATABINDING_ADD_DATA_CONTAINER_FROM_PATH)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 ---@return any
 function DatabindingAddDataContainerFromPath(p0,p1)
    return Citizen.InvokeNative(0x0C827D175F1292F4,p0,p1)
@@ -40,7 +40,7 @@ end
 --- Returns entryId Hash
 --- Native 0xEB4F9A3537EEABCD (_DATABINDING_ADD_DATA_CONTAINER)
 ---@param entryId hash
----@param p1 const char*
+---@param p1 string
 ---@return hash
 function DatabindingAddDataContainer(entryId,p1)
    return Citizen.InvokeNative(0xEB4F9A3537EEABCD,entryId,p1)
@@ -49,8 +49,8 @@ end
 
 --- 
 --- Native 0x37BB86A751148A6A (_DATABINDING_ADD_DATA_BOOL_FROM_PATH)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 ---@param p2 boolean
 ---@return any
 function DatabindingAddDataBoolFromPath(p0,p1,p2)
@@ -72,7 +72,7 @@ end
 --- 
 --- Native 0x58BAA5F635DA2FF4 (_DATABINDING_ADD_DATA_BOOL)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 boolean
 ---@return any
 function DatabindingAddDataBool(p0,p1,p2)
@@ -94,7 +94,7 @@ end
 --- 
 --- Native 0x307A3247C5457BDE (_DATABINDING_ADD_DATA_INT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 hash
 ---@return any
 function DatabindingAddDataInt(p0,p1,p2)
@@ -105,7 +105,7 @@ end
 --- 
 --- Native 0x5154228273ADB9A6 (_DATABINDING_ADD_DATA_FLOAT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 float
 ---@return any
 function DatabindingAddDataFloat(p0,p1,p2)
@@ -127,7 +127,7 @@ end
 --- 
 --- Native 0x8538F1205D60ECA6 (_DATABINDING_ADD_DATA_HASH)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 hash
 ---@return any
 function DatabindingAddDataHash(p0,p1,p2)
@@ -137,9 +137,9 @@ end
 
 --- 
 --- Native 0xA381DE86EE170C4A (_DATABINDING_ADD_DATA_STRING_FROM_PATH)
----@param p0 const char*
----@param p1 const char*
----@param p2 const char*
+---@param p0 string
+---@param p1 string
+---@param p2 string
 ---@return any
 function DatabindingAddDataStringFromPath(p0,p1,p2)
    return Citizen.InvokeNative(0xA381DE86EE170C4A,p0,p1,p2)
@@ -150,7 +150,7 @@ end
 --- Native 0xEAD09E76E22630C3 (_DATABINDING_ADD_DATA_STRING_BY_HASH)
 ---@param p0 any
 ---@param p1 hash
----@param p2 const char*
+---@param p2 string
 ---@return any
 function DatabindingAddDataStringByHash(p0,p1,p2)
    return Citizen.InvokeNative(0xEAD09E76E22630C3,p0,p1,p2)
@@ -160,8 +160,8 @@ end
 --- 
 --- Native 0x617FCA1C5652BBAD (_DATABINDING_ADD_DATA_STRING)
 ---@param p0 any
----@param p1 const char*
----@param p2 const char*
+---@param p1 string
+---@param p2 string
 ---@return any
 function DatabindingAddDataString(p0,p1,p2)
    return Citizen.InvokeNative(0x617FCA1C5652BBAD,p0,p1,p2)
@@ -171,7 +171,7 @@ end
 --- 
 --- Native 0x7D0F2014DB28DD00 (_DATABINDING_ADD_DATA_GANG_ID)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param gangId any
 ---@return any
 function DatabindingAddDataGangId(p0,p1,gangId)
@@ -182,7 +182,7 @@ end
 --- 
 --- Native 0x7D0F2014DB28DD01 (_DATABINDING_ADD_DATA_POSSE_ID)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param posseId any
 ---@return any
 function DatabindingAddDataPosseId(p0,p1,posseId)
@@ -192,8 +192,8 @@ end
 
 --- 
 --- Native 0xDB5B9A474148F699 (_DATABINDING_ADD_UI_ITEM_LIST_FROM_PATH)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 ---@return any
 function DatabindingAddUiItemListFromPath(p0,p1)
    return Citizen.InvokeNative(0xDB5B9A474148F699,p0,p1)
@@ -213,7 +213,7 @@ end
 --- 
 --- Native 0xFE74FA57E0CE6824 (_DATABINDING_ADD_UI_ITEM_LIST)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingAddUiItemList(p0,p1)
    return Citizen.InvokeNative(0xFE74FA57E0CE6824,p0,p1)
@@ -224,7 +224,7 @@ end
 --- Native 0x5859E970794D92F3 (_DATABINDING_INSERT_UI_ITEM_TO_LIST_FROM_CONTEXT_STRING_ALIAS)
 ---@param p0 any
 ---@param index number
----@param p2 const char*
+---@param p2 string
 ---@param p3 any
 function DatabindingInsertUiItemToListFromContextStringAlias(p0,index,p2,p3)
     Citizen.InvokeNative(0x5859E970794D92F3,p0,index,p2,p3)
@@ -246,7 +246,7 @@ end
 --- Native 0x5740774F608E4FC8 (_DATABINDING_INSERT_UI_ITEM_TO_LIST_FROM_PATH_STRING_ALIAS)
 ---@param p0 any
 ---@param p1 any
----@param p2 const char*
+---@param p2 string
 ---@param p3 any
 function DatabindingInsertUiItemToListFromPathStringAlias(p0,p1,p2,p3)
     Citizen.InvokeNative(0x5740774F608E4FC8,p0,p1,p2,p3)
@@ -302,7 +302,7 @@ end
 --- 
 --- Native 0x52F5F08278EA5D75 (_DATABINDING_ADD_HASH_ARRAY)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingAddHashArray(p0,p1)
    return Citizen.InvokeNative(0x52F5F08278EA5D75,p0,p1)
@@ -312,7 +312,7 @@ end
 --- 
 --- Native 0x1B23E0627BDBFE85 (_DATABINDING_ADD_STRING_ARRAY)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingAddStringArray(p0,p1)
    return Citizen.InvokeNative(0x1B23E0627BDBFE85,p0,p1)
@@ -350,7 +350,7 @@ end
 --- 
 --- Native 0xBDFE546E4C2D0E21 (_DATABINDING_WRITE_DATA_BOOL_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 boolean
 function DatabindingWriteDataBoolFromParent(p0,p1,p2)
     Citizen.InvokeNative(0xBDFE546E4C2D0E21,p0,p1,p2)
@@ -369,7 +369,7 @@ end
 --- 
 --- Native 0x9EFA98238BA08FC4 (_DATABINDING_WRITE_DATA_INT_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 number
 function DatabindingWriteDataIntFromParent(p0,p1,p2)
     Citizen.InvokeNative(0x9EFA98238BA08FC4,p0,p1,p2)
@@ -407,7 +407,7 @@ end
 --- 
 --- Native 0x0971F04E1EAA7AE8 (_DATABINDING_WRITE_DATA_HASH_STRING_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param p2 hash
 function DatabindingWriteDataHashStringFromParent(p0,p1,p2)
     Citizen.InvokeNative(0x0971F04E1EAA7AE8,p0,p1,p2)
@@ -427,7 +427,7 @@ end
 --- 
 --- Native 0xE1BD342F2872AEE9 (_DATABINDING_WRITE_DATA_STRING)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 function DatabindingWriteDataString(p0,p1)
     Citizen.InvokeNative(0xE1BD342F2872AEE9,p0,p1)
 end
@@ -436,8 +436,8 @@ end
 --- 
 --- Native 0x4FF713B2F17A391E (DATABINDING_WRITE_STRING_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
----@param p2 const char*
+---@param p1 string
+---@param p2 string
 function DatabindingWriteStringFromParent(p0,p1,p2)
     Citizen.InvokeNative(0x4FF713B2F17A391E,p0,p1,p2)
 end
@@ -447,7 +447,7 @@ end
 --- Native 0xA3BD6FF95E713EE5 (_DATABINDING_WRITE_STRING_FROM_HASH)
 ---@param p0 any
 ---@param p1 hash
----@param p2 const char*
+---@param p2 string
 function DatabindingWriteStringFromHash(p0,p1,p2)
     Citizen.InvokeNative(0xA3BD6FF95E713EE5,p0,p1,p2)
 end
@@ -456,7 +456,7 @@ end
 --- 
 --- Native 0xC70041408E16BE2D (_DATABINDING_WRITE_DATA_GANG_ID)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param gangId any
 function DatabindingWriteDataGangId(p0,p1,gangId)
     Citizen.InvokeNative(0xC70041408E16BE2D,p0,p1,gangId)
@@ -466,7 +466,7 @@ end
 --- 
 --- Native 0xC70041408E16BE2E (_DATABINDING_WRITE_DATA_POSSE_ID)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@param posseId any
 function DatabindingWriteDataPosseId(p0,p1,posseId)
     Citizen.InvokeNative(0xC70041408E16BE2E,p0,p1,posseId)
@@ -485,7 +485,7 @@ end
 --- 
 --- Native 0xA8EDE09FE07BD77F (_DATABINDING_READ_DATA_BOOL_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingReadDataBoolFromParent(p0,p1)
    return Citizen.InvokeNative(0xA8EDE09FE07BD77F,p0,p1)
@@ -514,7 +514,7 @@ end
 --- 
 --- Native 0xFFC566A4801F6B40 (_DATABINDING_READ_DATA_INT_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingReadDataIntFromParent(p0,p1)
    return Citizen.InvokeNative(0xFFC566A4801F6B40,p0,p1)
@@ -552,7 +552,7 @@ end
 --- 
 --- Native 0x9B535990B01B62DE (_DATABINDING_READ_DATA_HASH_STRING_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingReadDataHashStringFromParent(p0,p1)
    return Citizen.InvokeNative(0x9B535990B01B62DE,p0,p1)
@@ -581,7 +581,7 @@ end
 --- 
 --- Native 0x6323AD277C4A2AFB (_DATABINDING_READ_DATA_STRING_FROM_PARENT)
 ---@param p0 any
----@param p1 const char*
+---@param p1 string
 ---@return any
 function DatabindingReadDataStringFromParent(p0,p1)
    return Citizen.InvokeNative(0x6323AD277C4A2AFB,p0,p1)

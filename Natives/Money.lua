@@ -27,7 +27,7 @@ end
 
 --- 
 --- Native 0x282D36FF103D78DF (_NETWORK_GET_STRING_CASH_BALANCE)
----@return const char*
+---@return string
 function NetworkGetStringCashBalance()
    return Citizen.InvokeNative(0x282D36FF103D78DF)
 end

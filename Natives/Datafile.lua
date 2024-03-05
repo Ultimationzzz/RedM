@@ -112,7 +112,7 @@ end
 --- 
 --- Native 0x26FDF5E99AA2F3E9 (DATADICT_SET_INT)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@param value number
 function DatadictSetInt(objectData,key,value)
     Citizen.InvokeNative(0x26FDF5E99AA2F3E9,objectData,key,value)
@@ -122,7 +122,7 @@ end
 --- 
 --- Native 0x175E915A486EE548 (DATADICT_GET_BOOL)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return boolean
 function DatadictGetBool(objectData,key)
    return Citizen.InvokeNative(0x175E915A486EE548,objectData,key)
@@ -132,7 +132,7 @@ end
 --- 
 --- Native 0x9D896A3B87D96E2B (DATADICT_GET_INT)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return number
 function DatadictGetInt(objectData,key)
    return Citizen.InvokeNative(0x9D896A3B87D96E2B,objectData,key)
@@ -142,7 +142,7 @@ end
 --- 
 --- Native 0x814643ECA258ADF5 (DATADICT_GET_FLOAT)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return float
 function DatadictGetFloat(objectData,key)
    return Citizen.InvokeNative(0x814643ECA258ADF5,objectData,key)
@@ -152,8 +152,8 @@ end
 --- 
 --- Native 0xE37B38C0B4E95DFA (DATADICT_GET_STRING)
 ---@param objectData any*
----@param key const char*
----@return const char*
+---@param key string
+---@return string
 function DatadictGetString(objectData,key)
    return Citizen.InvokeNative(0xE37B38C0B4E95DFA,objectData,key)
 end
@@ -162,7 +162,7 @@ end
 --- 
 --- Native 0xE459C941431E0FFA (DATADICT_GET_VECTOR)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return vector3
 function DatadictGetVector(objectData,key)
    return Citizen.InvokeNative(0xE459C941431E0FFA,objectData,key)
@@ -172,7 +172,7 @@ end
 --- 
 --- Native 0x4D7A30130F46AC9C (DATADICT_GET_DICT)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return any*
 function DatadictGetDict(objectData,key)
    return Citizen.InvokeNative(0x4D7A30130F46AC9C,objectData,key)
@@ -182,7 +182,7 @@ end
 --- 
 --- Native 0x1B5447CF18544B18 (DATADICT_GET_ARRAY)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return any*
 function DatadictGetArray(objectData,key)
    return Citizen.InvokeNative(0x1B5447CF18544B18,objectData,key)
@@ -199,7 +199,7 @@ end
 ---7 = Array
 --- Native 0x92E11E3CA4C7CDF0 (DATADICT_GET_TYPE)
 ---@param objectData any*
----@param key const char*
+---@param key string
 ---@return number
 function DatadictGetType(objectData,key)
    return Citizen.InvokeNative(0x92E11E3CA4C7CDF0,objectData,key)
@@ -240,7 +240,7 @@ end
 --- Native 0xB6790A8FF80F889F (DATAARRAY_GET_STRING)
 ---@param arrayData any*
 ---@param arrayIndex number
----@return const char*
+---@return string
 function DataarrayGetString(arrayData,arrayIndex)
    return Citizen.InvokeNative(0xB6790A8FF80F889F,arrayData,arrayIndex)
 end
@@ -380,7 +380,7 @@ end
 
 --- Old name: _DATAFILE_GET_STRING
 --- Native 0x08EAF8E9F2EB7B2E (_PARSEDDATA_RQ_FILLOUT_STRING_63)
----@param p0 char*
+---@param p0 string
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutString63(p0,p1)
@@ -390,7 +390,7 @@ end
 
 --- 
 --- Native 0x951327435DC5164B (PARSEDDATA_RQ_FILLOUT_STRING_127)
----@param p0 char*
+---@param p0 string
 ---@param p1 any*
 ---@return boolean
 function ParseddataRqFilloutString127(p0,p1)

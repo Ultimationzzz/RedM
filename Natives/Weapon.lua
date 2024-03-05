@@ -981,7 +981,7 @@ end
 --- 
 --- Native 0x6D3AC61694A791C5 (_GET_WEAPON_NAME_2)
 ---@param weaponHash hash
----@return const char*
+---@return string
 function GetWeaponName2(weaponHash)
    return Citizen.InvokeNative(0x6D3AC61694A791C5,weaponHash)
 end
@@ -990,7 +990,7 @@ end
 --- Returns "WNS_INVALID" if the weapon is invalid/doesn't exist.
 --- Native 0x89CF5FF3D363311E (_GET_WEAPON_NAME)
 ---@param weaponHash hash
----@return const char*
+---@return string
 function GetWeaponName(weaponHash)
    return Citizen.InvokeNative(0x89CF5FF3D363311E,weaponHash)
 end
@@ -1000,7 +1000,7 @@ end
 --- Native 0x7A56D66C78D8EF8E (_GET_WEAPON_NAME_WITH_PERMANENT_DEGRADATION)
 ---@param weaponHash hash
 ---@param permanentDegradationLevel float
----@return const char*
+---@return string
 function GetWeaponNameWithPermanentDegradation(weaponHash,permanentDegradationLevel)
    return Citizen.InvokeNative(0x7A56D66C78D8EF8E,weaponHash,permanentDegradationLevel)
 end

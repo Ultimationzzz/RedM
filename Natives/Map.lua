@@ -221,7 +221,7 @@ end
 --- 
 --- Native 0x0A062D6D7C0B2C2C (SET_BLIP_NAME_FROM_TEXT_FILE)
 ---@param blip blip
----@param textLabel const char*
+---@param textLabel string
 function SetBlipNameFromTextFile(blip,textLabel)
     Citizen.InvokeNative(0x0A062D6D7C0B2C2C,blip,textLabel)
 end
@@ -230,7 +230,7 @@ end
 --- 
 --- Native 0x9CB1A1623062F402 (_SET_BLIP_NAME)
 ---@param blip blip
----@param name const char*
+---@param name string
 function SetBlipName(blip,name)
     Citizen.InvokeNative(0x9CB1A1623062F402,blip,name)
 end
@@ -402,7 +402,7 @@ end
 
 --- 
 --- Native 0x6B44F13D888F770D (_START_GPS_CUSTOM_ROUTE_FROM_WAYPOINT_RECORDING_ROUTE)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param point number
 ---@param numPoints number
 ---@param colorNameHash hash

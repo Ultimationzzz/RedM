@@ -1690,9 +1690,9 @@ end
 --- Native 0x3BBDD6143FF16F98 (_GIVE_PED_SCENARIO_PROP)
 ---@param ped number
 ---@param object object
----@param conditionalAnim const char*
----@param p3 const char*
----@param p4 const char*
+---@param conditionalAnim string
+---@param p3 string
+---@param p4 string
 ---@param p5 boolean
 ---@return boolean
 function GivePedScenarioProp(ped,object,conditionalAnim,p3,p4,p5)
@@ -1704,7 +1704,7 @@ end
 --- Native 0x2B02DB082258625F (GIVE_PED_HASH_SCENARIO_PROP)
 ---@param ped number
 ---@param object object
----@param conditionalAnim const char*
+---@param conditionalAnim string
 ---@param scenarioType hash
 ---@param p4 hash
 ---@param p5 boolean
@@ -1718,8 +1718,8 @@ end
 --- Native 0xA0774E388CE4A679 (_GIVE_PED_SCENARIO_PROP_DYNAMIC)
 ---@param ped number
 ---@param object object
----@param p2 const char*
----@param p3 const char*
+---@param p2 string
+---@param p3 string
 ---@param p4 boolean
 ---@return boolean
 function GivePedScenarioPropDynamic(ped,object,p2,p3,p4)
@@ -1731,9 +1731,9 @@ end
 --- Native 0xBEC65C6049B3219D (_REQUEST_PROP_SCENARIO_PED)
 ---@param ped number
 ---@param object object
----@param p2 const char*
----@param p3 const char*
----@param p4 const char*
+---@param p2 string
+---@param p3 string
+---@param p4 string
 ---@param p5 boolean
 ---@return any
 function RequestPropScenarioPed(ped,object,p2,p3,p4,p5)
@@ -1745,9 +1745,9 @@ end
 --- Native 0xBDED916A9F9B0604 (_REQUEST_PED_FOR_SCENARIO_TYPE)
 ---@param ped number
 ---@param object object
----@param p2 const char*
+---@param p2 string
 ---@param scenarioType hash
----@param p4 const char*
+---@param p4 string
 ---@param p5 boolean
 ---@return any
 function RequestPedForScenarioType(ped,object,p2,scenarioType,p4,p5)
@@ -1759,7 +1759,7 @@ end
 ---Known props: https://pastebin.com/ap2NEJqB
 --- Native 0x4D0D2E3D8BC000EB (_GET_PED_REGISTER_PROP)
 ---@param ped number
----@param propName const char*
+---@param propName string
 ---@param detachProp boolean
 ---@return entity
 function GetPedRegisterProp(ped,propName,detachProp)
@@ -1897,7 +1897,7 @@ end
 
 --- The hash of the created relationship group is output in the second parameter.
 --- Native 0xF372BC22FCB88606 (ADD_RELATIONSHIP_GROUP)
----@param name const char*
+---@param name string
 ---@param groupHash hash*
 ---@return boolean
 function AddRelationshipGroup(name,groupHash)
@@ -2360,7 +2360,7 @@ end
 --- 
 --- Native 0x20C5459379D75C1C (_SET_PED_INTERACTION_POSITIVE_RESPONSE)
 ---@param ped number
----@param speech const char*
+---@param speech string
 function SetPedInteractionPositiveResponse(ped,speech)
     Citizen.InvokeNative(0x20C5459379D75C1C,ped,speech)
 end
@@ -2369,7 +2369,7 @@ end
 --- 
 --- Native 0xA3C53CDE922BC78B (_SET_PED_INTERACTION_NEGATIVE_RESPONSE)
 ---@param ped number
----@param speech const char*
+---@param speech string
 function SetPedInteractionNegativeResponse(ped,speech)
     Citizen.InvokeNative(0xA3C53CDE922BC78B,ped,speech)
 end
@@ -2595,7 +2595,7 @@ end
 --- 
 --- Native 0x3AE3552E7C207CC5 (_SET_PED_GETUP_ANIMATION)
 ---@param ped number
----@param animName const char*
+---@param animName string
 ---@param p2 boolean
 function SetPedGetupAnimation(ped,animName,p2)
     Citizen.InvokeNative(0x3AE3552E7C207CC5,ped,animName,p2)
@@ -2613,7 +2613,7 @@ end
 --- 
 --- Native 0xDDF803377F94AAA8 (SET_PED_GESTURE_GROUP)
 ---@param ped number
----@param gesture const char*
+---@param gesture string
 ---@param p2 number
 function SetPedGestureGroup(ped,gesture,p2)
     Citizen.InvokeNative(0xDDF803377F94AAA8,ped,gesture,p2)
@@ -2648,7 +2648,7 @@ end
 ---war_veteran
 --- Native 0x923583741DC87BCE (_SET_PED_DESIRED_LOCO_FOR_MODEL)
 ---@param ped number
----@param locomotionArchetype const char*
+---@param locomotionArchetype string
 function SetPedDesiredLocoForModel(ped,locomotionArchetype)
     Citizen.InvokeNative(0x923583741DC87BCE,ped,locomotionArchetype)
 end
@@ -2665,7 +2665,7 @@ end
 --- Sets peds motion type
 --- Native 0x89F5E7ADECCCB49C (_SET_PED_DESIRED_LOCO_MOTION_TYPE)
 ---@param ped number
----@param locoMotionType const char*
+---@param locoMotionType string
 function SetPedDesiredLocoMotionType(ped,locoMotionType)
     Citizen.InvokeNative(0x89F5E7ADECCCB49C,ped,locoMotionType)
 end
@@ -2682,7 +2682,7 @@ end
 --- Known get up animation types: REAR, FRONT
 --- Native 0xEAA8242C8479C27D (_REQUEST_PED_GETUP_ANIMATION)
 ---@param ped number
----@param getUpType const char*
+---@param getUpType string
 function RequestPedGetupAnimation(ped,getUpType)
     Citizen.InvokeNative(0xEAA8242C8479C27D,ped,getUpType)
 end
@@ -2715,7 +2715,7 @@ end
 ---flag: always 4 in R* Scripts
 --- Native 0xAAB050DA48B57978 (_PED_EMOTIONAL_PRESET_LOCO_MOTION)
 ---@param ped number
----@param presetName const char*
+---@param presetName string
 ---@param targetPed number
 ---@param duration number
 ---@param flag number
@@ -2763,8 +2763,8 @@ end
 
 --- 
 --- Native 0xBE22B26DD764C040 (GET_ANIM_INITIAL_OFFSET_POSITION)
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -2781,8 +2781,8 @@ end
 
 --- 
 --- Native 0x4B805E6046EE9E47 (GET_ANIM_INITIAL_OFFSET_ROTATION)
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -2953,7 +2953,7 @@ end
 ---@param ragdollType number
 ---@param abortIfInjured boolean
 ---@param abortIfDead boolean
----@param nmTaskMessageParameterName const char*
+---@param nmTaskMessageParameterName string
 ---@return boolean
 function SetPedToRagdoll(ped,timeMin,timeMax,ragdollType,abortIfInjured,abortIfDead,nmTaskMessageParameterName)
    return Citizen.InvokeNative(0xAE99FB955581844A,ped,timeMin,timeMax,ragdollType,abortIfInjured,abortIfDead,nmTaskMessageParameterName)
@@ -3228,7 +3228,7 @@ end
 --- nullsub, doesn't do anything
 --- Native 0x98EFA132A4117BE1 (SET_PED_NAME_DEBUG)
 ---@param ped number
----@param name const char*
+---@param name string
 function SetPedNameDebug(ped,name)
     Citizen.InvokeNative(0x98EFA132A4117BE1,ped,name)
 end
@@ -3292,7 +3292,7 @@ end
 --- https://github.com/femga/rdr3_discoveries/blob/master/peds_customization/ped_decals.lua
 --- Native 0x46DF918788CB093F (APPLY_PED_DAMAGE_PACK)
 ---@param ped number
----@param damagePack const char*
+---@param damagePack string
 ---@param damage float
 ---@param mult float
 function ApplyPedDamagePack(ped,damagePack,damage,mult)
@@ -3321,7 +3321,7 @@ end
 --- Native 0x523C79AEEFCC4A2A (CLEAR_PED_DAMAGE_DECAL_BY_ZONE)
 ---@param ped number
 ---@param p1 number
----@param p2 const char*
+---@param p2 string
 function ClearPedDamageDecalByZone(ped,p1,p2)
     Citizen.InvokeNative(0x523C79AEEFCC4A2A,ped,p1,p2)
 end
@@ -3636,8 +3636,8 @@ end
 --- 
 --- Native 0xFFC24B988B938B38 (SET_FACIAL_IDLE_ANIM_OVERRIDE)
 ---@param ped number
----@param animName const char*
----@param animDict const char*
+---@param animName string
+---@param animDict string
 function SetFacialIdleAnimOverride(ped,animName,animDict)
     Citizen.InvokeNative(0xFFC24B988B938B38,ped,animName,animDict)
 end
@@ -4370,7 +4370,7 @@ end
 --- 
 --- Native 0x604190F0CF0DF158 (_SET_PED_GRAPPLE_SEQUENCE)
 ---@param ped number
----@param grappleSequence const char*
+---@param grappleSequence string
 function SetPedGrappleSequence(ped,grappleSequence)
     Citizen.InvokeNative(0x604190F0CF0DF158,ped,grappleSequence)
 end
@@ -4796,7 +4796,7 @@ end
 ---@param ped number
 ---@param bActionModeEnabled boolean
 ---@param p2 number
----@param action const char*
+---@param action string
 function SetPedUsingActionMode(ped,bActionModeEnabled,p2,action)
     Citizen.InvokeNative(0xD75ACCF5E0FB5367,ped,bActionModeEnabled,p2,action)
 end
@@ -4948,7 +4948,7 @@ end
 --- For more information, see common:/data/emotional_presets.meta
 --- Native 0x5C3C55EAAD19915F (_REQUEST_PED_EMOTIONAL_PRESET)
 ---@param ped number
----@param name const char*
+---@param name string
 function RequestPedEmotionalPreset(ped,name)
     Citizen.InvokeNative(0x5C3C55EAAD19915F,ped,name)
 end
@@ -4957,7 +4957,7 @@ end
 --- See _REQUEST_PED_EMOTIONAL_PRESET
 --- Native 0xDE3904B22695D9F9 (_HAS_PED_EMOTIONAL_PRESET_LOADED)
 ---@param ped number
----@param name const char*
+---@param name string
 ---@return boolean
 function HasPedEmotionalPresetLoaded(ped,name)
    return Citizen.InvokeNative(0xDE3904B22695D9F9,ped,name)
@@ -4967,7 +4967,7 @@ end
 --- See _REQUEST_PED_EMOTIONAL_PRESET
 --- Native 0xFC3BAB1801A8255A (_REMOVE_PED_EMOTIONAL_PRESET)
 ---@param ped number
----@param name const char*
+---@param name string
 function RemovePedEmotionalPreset(ped,name)
     Citizen.InvokeNative(0xFC3BAB1801A8255A,ped,name)
 end
@@ -6578,7 +6578,7 @@ end
 ---"removeTimer" is self-removal timer, can be "-1" so your data will not be removed by the game (forever); 100 = 1 second
 --- Native 0x5F53010C4C3F6BAF (_SET_PED_BLACKBOARD_INT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@param value number
 ---@param removeTimer number
 function SetPedBlackboardInt(ped,variableName,value,removeTimer)
@@ -6589,7 +6589,7 @@ end
 --- 
 --- Native 0xCB9401F918CB0F75 (_SET_PED_BLACKBOARD_BOOL)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@param value boolean
 ---@param removeTimer number
 function SetPedBlackboardBool(ped,variableName,value,removeTimer)
@@ -6600,7 +6600,7 @@ end
 --- 
 --- Native 0x437C08DB4FEBE2BD (_SET_PED_BLACKBOARD_FLOAT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@param value float
 ---@param removeTimer number
 function SetPedBlackboardFloat(ped,variableName,value,removeTimer)
@@ -6617,8 +6617,8 @@ end
 ---RightArm
 --- Native 0xA762C9D6CF165E0D (_SET_PED_BLACKBOARD_HASH)
 ---@param ped number
----@param variableName const char*
----@param value const char*
+---@param variableName string
+---@param value string
 ---@param removeTimer number
 function SetPedBlackboardHash(ped,variableName,value,removeTimer)
     Citizen.InvokeNative(0xA762C9D6CF165E0D,ped,variableName,value,removeTimer)
@@ -6628,7 +6628,7 @@ end
 --- 
 --- Native 0x81B75428A7813E67 (_REMOVE_PED_BLACKBOARD_INT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 function RemovePedBlackboardInt(ped,variableName)
     Citizen.InvokeNative(0x81B75428A7813E67,ped,variableName)
 end
@@ -6637,7 +6637,7 @@ end
 --- 
 --- Native 0xA6F67BEC53379A32 (_REMOVE_PED_BLACKBOARD_BOOL)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 function RemovePedBlackboardBool(ped,variableName)
     Citizen.InvokeNative(0xA6F67BEC53379A32,ped,variableName)
 end
@@ -6646,7 +6646,7 @@ end
 --- 
 --- Native 0x411189E51B8020BA (_REMOVE_PED_BLACKBOARD_FLOAT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 function RemovePedBlackboardFloat(ped,variableName)
     Citizen.InvokeNative(0x411189E51B8020BA,ped,variableName)
 end
@@ -6655,7 +6655,7 @@ end
 --- 
 --- Native 0x0E17378642156790 (_REMOVE_PED_BLACKBOARD_HASH)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 function RemovePedBlackboardHash(ped,variableName)
     Citizen.InvokeNative(0x0E17378642156790,ped,variableName)
 end
@@ -6664,7 +6664,7 @@ end
 --- Can be used to get a peds foliage active status: variableName = FoliageActive
 --- Native 0x498F2E77982D6945 (_GET_PED_BLACKBOARD_BOOL)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return boolean
 function GetPedBlackboardBool(ped,variableName)
    return Citizen.InvokeNative(0x498F2E77982D6945,ped,variableName)
@@ -6674,7 +6674,7 @@ end
 --- Can be used to get a peds foliage raw height: variableName = FoliageHeight
 --- Native 0x56E58D4D118FB45E (_GET_PED_BLACKBOARD_FLOAT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return float
 function GetPedBlackboardFloat(ped,variableName)
    return Citizen.InvokeNative(0x56E58D4D118FB45E,ped,variableName)
@@ -6684,7 +6684,7 @@ end
 --- 
 --- Native 0xBF5E791BBBF90A3C (_GET_PED_BLACKBOARD_HASH)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return hash
 function GetPedBlackboardHash(ped,variableName)
    return Citizen.InvokeNative(0xBF5E791BBBF90A3C,ped,variableName)
@@ -6694,7 +6694,7 @@ end
 --- 
 --- Native 0xB71B91B398F8F067 (GET_PED_BLACKBOARD_SCRIPT_INT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return number
 function GetPedBlackboardScriptInt(ped,variableName)
    return Citizen.InvokeNative(0xB71B91B398F8F067,ped,variableName)
@@ -6704,7 +6704,7 @@ end
 --- 
 --- Native 0x4912DFE492DB98CD (GET_PED_BLACKBOARD_SCRIPT_BOOL)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return boolean
 function GetPedBlackboardScriptBool(ped,variableName)
    return Citizen.InvokeNative(0x4912DFE492DB98CD,ped,variableName)
@@ -6714,7 +6714,7 @@ end
 --- 
 --- Native 0xA29FD00D45311EB7 (GET_PED_BLACKBOARD_SCRIPT_FLOAT)
 ---@param ped number
----@param variableName const char*
+---@param variableName string
 ---@return float
 function GetPedBlackboardScriptFloat(ped,variableName)
    return Citizen.InvokeNative(0xA29FD00D45311EB7,ped,variableName)
@@ -6890,7 +6890,7 @@ end
 --- 
 --- Native 0x4A48B6E03BABB4AC (_SET_PED_PROMPT_NAME)
 ---@param ped number
----@param name const char*
+---@param name string
 function SetPedPromptName(ped,name)
     Citizen.InvokeNative(0x4A48B6E03BABB4AC,ped,name)
 end
@@ -6908,7 +6908,7 @@ end
 --- 
 --- Native 0x19B14E04B009E28B (_SET_PED_PROMPT_NAME_2)
 ---@param ped number
----@param name const char*
+---@param name string
 function SetPedPromptName2(ped,name)
     Citizen.InvokeNative(0x19B14E04B009E28B,ped,name)
 end
@@ -6953,7 +6953,7 @@ end
 --- 
 --- Native 0x3A50753042B6891B (_REMOVE_PED_PROP)
 ---@param ped number
----@param propName const char*
+---@param propName string
 function RemovePedProp(ped,propName)
     Citizen.InvokeNative(0x3A50753042B6891B,ped,propName)
 end

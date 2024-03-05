@@ -742,7 +742,7 @@ end
 --- 
 --- Native 0xE47001B7CB8B98AE (_NETWORK_SEND_SESSION_INVITE)
 ---@param gamerHandle any*
----@param contentId const char*
+---@param contentId string
 ---@param data any*
 ---@param dataSize number
 ---@param p4 number
@@ -1044,7 +1044,7 @@ end
 
 --- 
 --- Native 0x1D6A14F1F9A736FC (NETWORK_GET_HOST_OF_SCRIPT)
----@param scriptName const char*
+---@param scriptName string
 ---@param p1 number
 ---@param p2 number
 ---@return player
@@ -1071,7 +1071,7 @@ end
 
 --- 
 --- Native 0x9D40DF90FAD26098 (NETWORK_IS_SCRIPT_ACTIVE)
----@param scriptName const char*
+---@param scriptName string
 ---@param p1 number
 ---@param p2 boolean
 ---@param p3 number
@@ -1113,7 +1113,7 @@ end
 
 --- 
 --- Native 0x3658E8CD94FC121A (NETWORK_GET_NUM_SCRIPT_PARTICIPANTS)
----@param scriptName const char*
+---@param scriptName string
 ---@param instanceId number
 ---@param position hash
 ---@return number
@@ -1515,7 +1515,7 @@ end
 --- Always returns a null string.
 --- Native 0x426141162EBE5CDB (NETWORK_GET_GAMERTAG_FROM_HANDLE)
 ---@param gamerHandle any*
----@return const char*
+---@return string
 function NetworkGetGamertagFromHandle(gamerHandle)
    return Citizen.InvokeNative(0x426141162EBE5CDB,gamerHandle)
 end
@@ -1550,7 +1550,7 @@ end
 ---}
 --- Native 0x7FEE4F07C54B6B3C (_NETWORK_GET_DISPLAY_NAME_FROM_HANDLE)
 ---@param gamerHandle any*
----@param displayName char*
+---@param displayName string
 ---@return boolean
 function NetworkGetDisplayNameFromHandle(gamerHandle,displayName)
    return Citizen.InvokeNative(0x7FEE4F07C54B6B3C,gamerHandle,displayName)
@@ -1656,7 +1656,7 @@ end
 --- 
 --- Native 0x5659D87BE674AB17 (_NETWORK_GET_GAMERTAG_FROM_FRIEND)
 ---@param gamerHandle any*
----@return const char*
+---@return string
 function NetworkGetGamertagFromFriend(gamerHandle)
    return Citizen.InvokeNative(0x5659D87BE674AB17,gamerHandle)
 end
@@ -1683,7 +1683,7 @@ end
 --- 
 --- Native 0x8E02D73914064223 (NETWORK_ADD_FRIEND)
 ---@param gamerHandle any*
----@param message const char*
+---@param message string
 ---@return boolean
 function NetworkAddFriend(gamerHandle,message)
    return Citizen.InvokeNative(0x8E02D73914064223,gamerHandle,message)
@@ -2755,7 +2755,7 @@ end
 
 --- 
 --- Native 0x02E97CE283648CD9 (_GET_LAUNCH_PARAM_EXISTS)
----@param paramName const char*
+---@param paramName string
 ---@return boolean
 function GetLaunchParamExists(paramName)
    return Citizen.InvokeNative(0x02E97CE283648CD9,paramName)
@@ -2764,8 +2764,8 @@ end
 
 --- 
 --- Native 0x65E65CA6A0FE59D4 (GET_LAUNCH_PARAM_VALUE)
----@param paramName const char*
----@return const char*
+---@param paramName string
+---@return string
 function GetLaunchParamValue(paramName)
    return Citizen.InvokeNative(0x65E65CA6A0FE59D4,paramName)
 end
@@ -2773,8 +2773,8 @@ end
 
 --- 
 --- Native 0x668AF6E4933AC13F (_SET_LAUNCH_PARAM_VALUE)
----@param paramName const char*
----@param value const char*
+---@param paramName string
+---@param value string
 function SetLaunchParamValue(paramName,value)
     Citizen.InvokeNative(0x668AF6E4933AC13F,paramName,value)
 end
@@ -2782,7 +2782,7 @@ end
 
 --- 
 --- Native 0x782C94DB6469634D (_CLEAR_LAUNCH_PARAM)
----@param paramName const char*
+---@param paramName string
 function ClearLaunchParam(paramName)
     Citizen.InvokeNative(0x782C94DB6469634D,paramName)
 end
@@ -2790,7 +2790,7 @@ end
 
 --- 
 --- Native 0xC59AB6A04333C502 (_GET_LAUNCH_PARAM_STRING)
----@return const char*
+---@return string
 function GetLaunchParamString()
    return Citizen.InvokeNative(0xC59AB6A04333C502)
 end
@@ -2798,7 +2798,7 @@ end
 
 --- 
 --- Native 0xDFFC15AA63D04AAB (_SET_LAUNCH_PARAM_STRING)
----@param params const char*
+---@param params string
 function SetLaunchParamString(params)
     Citizen.InvokeNative(0xDFFC15AA63D04AAB,params)
 end
@@ -2842,7 +2842,7 @@ end
 --- Native 0xF40EF49B3099E98E (_UGC_QUERY_BY_CONTENT_TYPE)
 ---@param p0 number
 ---@param maxGet number
----@param contentTypeName const char*
+---@param contentTypeName string
 ---@param p3 number
 ---@param p4 number
 ---@param p5 number
@@ -2857,7 +2857,7 @@ end
 ---@param categoryType number
 ---@param p1 number
 ---@param maxGet number
----@param contentTypeName const char*
+---@param contentTypeName string
 ---@param p4 number
 ---@param p5 boolean
 ---@return number
@@ -2868,9 +2868,9 @@ end
 
 --- Returns ugcRequestId
 --- Native 0x69D22E183580113F (_UGC_QUERY_BY_CONTENT_ID)
----@param contentId const char*
+---@param contentId string
 ---@param latestVersion boolean
----@param contentTypeName const char*
+---@param contentTypeName string
 ---@return number
 function UgcQueryByContentId(contentId,latestVersion,contentTypeName)
    return Citizen.InvokeNative(0x69D22E183580113F,contentId,latestVersion,contentTypeName)
@@ -2879,7 +2879,7 @@ end
 
 --- 
 --- Native 0xE42D1042F09865FE (_UGC_IS_BOOK_MARKED)
----@param contentId const char*
+---@param contentId string
 ---@return boolean
 function UgcIsBookMarked(contentId)
    return Citizen.InvokeNative(0xE42D1042F09865FE,contentId)
@@ -2927,7 +2927,7 @@ end
 --- Native 0xF9F0B3028431967B (_UGC_QUERY_GET_OWNER_ID)
 ---@param p0 any
 ---@param index number
----@return const char*
+---@return string
 function UgcQueryGetOwnerId(p0,index)
    return Citizen.InvokeNative(0xF9F0B3028431967B,p0,index)
 end
@@ -2937,7 +2937,7 @@ end
 --- Native 0x2D053EA815702DD1 (_UGC_QUERY_GET_NAME)
 ---@param p0 any
 ---@param index number
----@return const char*
+---@return string
 function UgcQueryGetName(p0,index)
    return Citizen.InvokeNative(0x2D053EA815702DD1,p0,index)
 end
@@ -2947,7 +2947,7 @@ end
 --- Native 0x566CEB0542EF5ECF (_UGC_QUERY_GET_ROOT_CONTENT_ID)
 ---@param p0 any
 ---@param index number
----@return const char*
+---@return string
 function UgcQueryGetRootContentId(p0,index)
    return Citizen.InvokeNative(0x566CEB0542EF5ECF,p0,index)
 end
@@ -2957,7 +2957,7 @@ end
 --- Native 0xCAF50048C8D0FBA0 (_UGC_QUERY_GET_PLAYLIST_NAME)
 ---@param p0 any
 ---@param index number
----@return const char*
+---@return string
 function UgcQueryGetPlaylistName(p0,index)
    return Citizen.InvokeNative(0xCAF50048C8D0FBA0,p0,index)
 end
@@ -2978,7 +2978,7 @@ end
 ---@param p0 any
 ---@param p1 number
 ---@param p2 any
----@return const char*
+---@return string
 function UgcQueryGetCreatorPhoto(p0,p1,p2)
    return Citizen.InvokeNative(0x409FE0CA6A4D1D49,p0,p1,p2)
 end
@@ -3086,8 +3086,8 @@ end
 
 --- 
 --- Native 0x7FD2990AF016795E (UGC_REQUEST_CONTENT_DATA_FROM_PARAMS)
----@param contentTypeName const char*
----@param contentId const char*
+---@param contentTypeName string
+---@param contentId string
 ---@param fileId number
 ---@param fileVersion number
 ---@param languageId number
@@ -3137,7 +3137,7 @@ end
 --- Native 0x40F7E66472DF3E5C (UGC_GET_CACHED_DESCRIPTION)
 ---@param description hash
 ---@param length number
----@return const char*
+---@return string
 function UgcGetCachedDescription(description,length)
    return Citizen.InvokeNative(0x40F7E66472DF3E5C,description,length)
 end
@@ -3178,7 +3178,7 @@ end
 
 --- Returns false if pedshot push failed
 --- Native 0xB72999D3120599DF (_NETWORK_PERSONA_PHOTO_WRITE_SC_PROFILE)
----@param texture const char*
+---@param texture string
 ---@param personaPhotoType number
 ---@param formatIndex number
 ---@return boolean
@@ -3189,7 +3189,7 @@ end
 
 --- Returns false if pedshot push failed
 --- Native 0x2A48D9567940598F (_NETWORK_PERSONA_PHOTO_WRITE_LOCAL)
----@param texture const char*
+---@param texture string
 ---@param playerSlot number
 ---@param p2 number
 ---@param personaPhotoLocalCacheType number
@@ -3211,7 +3211,7 @@ end
 --- Native 0x356F9FB0698C1FEB (_REQUEST_PEDSHOT_TEXTURE_LOCAL_BACKUP_DOWNLOAD)
 ---@param player number
 ---@param personaPhotoLocalCacheType number
----@return const char*
+---@return string
 function RequestPedshotTextureLocalBackupDownload(player,personaPhotoLocalCacheType)
    return Citizen.InvokeNative(0x356F9FB0698C1FEB,player,personaPhotoLocalCacheType)
 end
@@ -3221,7 +3221,7 @@ end
 --- Native 0xCAF4CA2F87779F8F (_REQUEST_PEDSHOT_TEXTURE_LOCAL_DOWNLOAD)
 ---@param gamerHandle any*
 ---@param p1 number
----@return const char*
+---@return string
 function RequestPedshotTextureLocalDownload(gamerHandle,p1)
    return Citizen.InvokeNative(0xCAF4CA2F87779F8F,gamerHandle,p1)
 end
@@ -3231,7 +3231,7 @@ end
 --- Native 0xB5C4B18B12A2AF23 (_REQUEST_PEDSHOT_TEXTURE_MULTIPLAYER_DOWNLOAD)
 ---@param gamerHandle any*
 ---@param p1 number
----@return const char*
+---@return string
 function RequestPedshotTextureMultiplayerDownload(gamerHandle,p1)
    return Citizen.InvokeNative(0xB5C4B18B12A2AF23,gamerHandle,p1)
 end
@@ -3239,7 +3239,7 @@ end
 
 --- 
 --- Native 0xE2C3CEC3C0903A00 (_TEXTURE_DOWNLOAD_TEXTURE_NAME_IS_VALID)
----@param name const char*
+---@param name string
 ---@return boolean
 function TextureDownloadTextureNameIsValid(name)
    return Citizen.InvokeNative(0xE2C3CEC3C0903A00,name)
@@ -3249,8 +3249,8 @@ end
 --- Returns textureDownloadId
 --- Native 0x16160DA74A8E74A2 (TEXTURE_DOWNLOAD_REQUEST)
 ---@param gamerHandle any*
----@param filePath const char*
----@param name const char*
+---@param filePath string
+---@param name string
 ---@param p3 boolean
 ---@return number
 function TextureDownloadRequest(gamerHandle,filePath,name,p3)
@@ -3262,7 +3262,7 @@ end
 --- Native 0x9B5DB6CEAFAA10BB (_MUGSHOT_TEXTURE_DOWNLOAD_REQUEST)
 ---@param gamerHandle any*
 ---@param p1 number
----@param name const char*
+---@param name string
 ---@param p3 boolean
 ---@return number
 function MugshotTextureDownloadRequest(gamerHandle,p1,name,p3)
@@ -3304,7 +3304,7 @@ end
 
 --- 
 --- Native 0x7A17B7981560FFA5 (_TEXTURE_DOWNLOAD_RELEASE_BY_NAME)
----@param name const char*
+---@param name string
 function TextureDownloadReleaseByName(name)
     Citizen.InvokeNative(0x7A17B7981560FFA5,name)
 end
@@ -3313,7 +3313,7 @@ end
 --- 
 --- Native 0x3448505B6E35262D (TEXTURE_DOWNLOAD_GET_NAME)
 ---@param textureDownloadId number
----@return const char*
+---@return string
 function TextureDownloadGetName(textureDownloadId)
    return Citizen.InvokeNative(0x3448505B6E35262D,textureDownloadId)
 end
@@ -3806,7 +3806,7 @@ end
 
 --- Returns CGameConfig->ConfigOnlineServices->RosTitleName (see gameconfig.xml)
 --- Native 0xAC6153A0722F524C (_NETWORK_GET_ROS_TITLE_NAME)
----@return const char*
+---@return string
 function NetworkGetRosTitleName()
    return Citizen.InvokeNative(0xAC6153A0722F524C)
 end
@@ -3816,8 +3816,8 @@ end
 --- Native 0xA197C35F73AC0F12 (_REPORT_PLAYER)
 ---@param player player
 ---@param reportType number
----@param description const char*
----@param horseName const char*
+---@param description string
+---@param horseName string
 function ReportPlayer(player,reportType,description,horseName)
     Citizen.InvokeNative(0xA197C35F73AC0F12,player,reportType,description,horseName)
 end

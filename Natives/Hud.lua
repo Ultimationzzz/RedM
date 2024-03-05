@@ -39,7 +39,7 @@ end
 
 --- 
 --- Native 0x7F78CD75CC4539E4 (_BUSYSPINNER_SET_TEXT)
----@param text const char*
+---@param text string
 function BusyspinnerSetText(text)
     Citizen.InvokeNative(0x7F78CD75CC4539E4,text)
 end
@@ -63,10 +63,10 @@ end
 --- Note: you must use VAR_STRING. Byte code very similar to TEXT_COMMAND_DISPLAY_TEXT in V
 ---Old name: _GET_TEXT_SUBSTRING
 --- Native 0x9D7E12EC6A1EE4E5 (GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME)
----@param text const char*
+---@param text string
 ---@param position number
 ---@param length number
----@return const char*
+---@return string
 function GetCharacterFromAudioConversationFilename(text,position,length)
    return Citizen.InvokeNative(0x9D7E12EC6A1EE4E5,text,position,length)
 end
@@ -75,8 +75,8 @@ end
 --- Gets a string literal from a label name.
 ---Old name: _GET_LABEL_TEXT
 --- Native 0xCFEDCCAD3C5BA90D (GET_FILENAME_FOR_AUDIO_CONVERSATION)
----@param labelName const char*
----@return const char*
+---@param labelName string
+---@return string
 function GetFilenameForAudioConversation(labelName)
    return Citizen.InvokeNative(0xCFEDCCAD3C5BA90D,labelName)
 end
@@ -91,7 +91,7 @@ end
 
 --- 
 --- Native 0xD0976CC34002DB57 (TEXT_BLOCK_IS_LOADED)
----@param textBlock const char*
+---@param textBlock string
 ---@return boolean
 function TextBlockIsLoaded(textBlock)
    return Citizen.InvokeNative(0xD0976CC34002DB57,textBlock)
@@ -100,7 +100,7 @@ end
 
 --- 
 --- Native 0x3CF96E16265B7DC8 (_TEXT_BLOCK_IS_STREAMED)
----@param textBlock const char*
+---@param textBlock string
 ---@return boolean
 function TextBlockIsStreamed(textBlock)
    return Citizen.InvokeNative(0x3CF96E16265B7DC8,textBlock)
@@ -109,7 +109,7 @@ end
 
 --- 
 --- Native 0xF66090013DE648D5 (TEXT_BLOCK_REQUEST)
----@param textBlock const char*
+---@param textBlock string
 function TextBlockRequest(textBlock)
     Citizen.InvokeNative(0xF66090013DE648D5,textBlock)
 end
@@ -117,7 +117,7 @@ end
 
 --- 
 --- Native 0xAA03F130A637D923 (_TEXT_BLOCK_DELETE)
----@param textBlock const char*
+---@param textBlock string
 function TextBlockDelete(textBlock)
     Citizen.InvokeNative(0xAA03F130A637D923,textBlock)
 end
@@ -125,7 +125,7 @@ end
 
 --- 
 --- Native 0x2C729F2B94CEA911 (_DOES_TEXT_BLOCK_EXIST)
----@param textDatabase const char*
+---@param textDatabase string
 ---@return boolean
 function DoesTextBlockExist(textDatabase)
    return Citizen.InvokeNative(0x2C729F2B94CEA911,textDatabase)
@@ -134,7 +134,7 @@ end
 
 --- Checks if the passed gxt name exists in the game files.
 --- Native 0x73C258C68D6F55B6 (DOES_TEXT_LABEL_EXIST)
----@param label const char*
+---@param label string
 ---@return boolean
 function DoesTextLabelExist(label)
    return Citizen.InvokeNative(0x73C258C68D6F55B6,label)
@@ -143,8 +143,8 @@ end
 
 --- 
 --- Native 0x3429670F9B9EF2D3 (_GET_LABEL_TEXT_2)
----@param label const char*
----@return const char*
+---@param label string
+---@return string
 function GetLabelText2(label)
    return Citizen.InvokeNative(0x3429670F9B9EF2D3,label)
 end
@@ -152,9 +152,9 @@ end
 
 --- Similar to 0x9D7E12EC6A1EE4E5(GET_TEXT_SUBSTRING) but starts at the beginning of the string
 --- Native 0xD8402B858F4DDD88 (_GET_TEXT_SUBSTRING_2)
----@param text const char*
+---@param text string
 ---@param length number
----@return const char*
+---@return string
 function GetTextSubstring2(text,length)
    return Citizen.InvokeNative(0xD8402B858F4DDD88,text,length)
 end
@@ -162,7 +162,7 @@ end
 
 --- Returns the length of the string passed (much like strlen).
 --- Native 0x481FBF588B0B76DB (GET_LENGTH_OF_LITERAL_STRING)
----@param string const char*
+---@param string string
 ---@return number
 function GetLengthOfLiteralString(string)
    return Citizen.InvokeNative(0x481FBF588B0B76DB,string)
@@ -171,7 +171,7 @@ end
 
 --- 
 --- Native 0xDC5AD6B7AB8184F5 (GET_LENGTH_OF_LITERAL_STRING_IN_BYTES)
----@param string const char*
+---@param string string
 ---@return number
 function GetLengthOfLiteralStringInBytes(string)
    return Citizen.InvokeNative(0xDC5AD6B7AB8184F5,string)
@@ -182,7 +182,7 @@ end
 ---Old name: _GET_LABEL_TEXT_BY_HASH
 --- Native 0xBD5DD5EAE2B6CE14 (GET_STRING_FROM_HASH_KEY)
 ---@param labelHash hash
----@return const char*
+---@return string
 function GetStringFromHashKey(labelHash)
    return Citizen.InvokeNative(0xBD5DD5EAE2B6CE14,labelHash)
 end
@@ -250,7 +250,7 @@ end
 
 --- nullsub, this native does nothing since build 1436, use _BG_DISPLAY_TEXT (0x16794E044C9EFB58) instead.
 --- Native 0xD79334A4BB99BAD1 (_DISPLAY_TEXT)
----@param text const char*
+---@param text string
 ---@param xPos float
 ---@param yPos float
 function DisplayText(text,xPos,yPos)
@@ -279,7 +279,7 @@ end
 
 --- 
 --- Native 0x98AF2BB6F62BD588 (REGISTER_NAMED_RENDERTARGET)
----@param name const char*
+---@param name string
 ---@param p1 boolean
 ---@return boolean
 function RegisterNamedRendertarget(name,p1)
@@ -289,7 +289,7 @@ end
 
 --- 
 --- Native 0x3EE32F7964C40FE6 (IS_NAMED_RENDERTARGET_REGISTERED)
----@param name const char*
+---@param name string
 ---@return boolean
 function IsNamedRendertargetRegistered(name)
    return Citizen.InvokeNative(0x3EE32F7964C40FE6,name)
@@ -298,7 +298,7 @@ end
 
 --- 
 --- Native 0x0E692EE61761361F (RELEASE_NAMED_RENDERTARGET)
----@param name const char*
+---@param name string
 ---@return boolean
 function ReleaseNamedRendertarget(name)
    return Citizen.InvokeNative(0x0E692EE61761361F,name)
@@ -315,7 +315,7 @@ end
 
 --- 
 --- Native 0xB6762A85EE29AA60 (GET_NAMED_RENDERTARGET_RENDER_ID)
----@param name const char*
+---@param name string
 ---@return number
 function GetNamedRendertargetRenderId(name)
    return Citizen.InvokeNative(0xB6762A85EE29AA60,name)
@@ -348,7 +348,7 @@ end
 --- 
 --- Native 0x402669A4BDAA72DA (SET_MISSION_NAME)
 ---@param p0 boolean
----@param name const char*
+---@param name string
 function SetMissionName(p0,name)
     Citizen.InvokeNative(0x402669A4BDAA72DA,p0,name)
 end
@@ -357,7 +357,7 @@ end
 --- 
 --- Native 0xD98630CE73C61E98 (SET_MISSION_NAME_FOR_UGC_MISSION)
 ---@param p0 boolean
----@param name const char*
+---@param name string
 function SetMissionNameForUgcMission(p0,name)
     Citizen.InvokeNative(0xD98630CE73C61E98,p0,name)
 end
@@ -539,7 +539,7 @@ end
 --- 
 --- Native 0x29FA7910726C3889 (_UI_PROMPT_CREATE)
 ---@param inputHash hash
----@param labelName const char*
+---@param labelName string
 ---@param p2 any
 ---@param p3 any
 ---@param p4 any
@@ -1044,7 +1044,7 @@ end
 ---p3 if is set > 3 you can no longer press Q to change tab if there are more than one tab set in tabAmount
 --- Native 0xC65A45D4453C2627 (_UI_PROMPT_SET_ACTIVE_GROUP_THIS_FRAME)
 ---@param hash hash
----@param name const char*
+---@param name string
 ---@param tabAmount number
 ---@param tabDefaultIndex number
 ---@param p4 number
@@ -1071,7 +1071,7 @@ end
 ---@param p2 number
 ---@param p3 number
 ---@param p4 hash
----@param name const char*
+---@param name string
 ---@param p6 number
 ---@return any
 function UiPromptSetAmbientGroupThisFrame(entity,p1,p2,p3,p4,name,p6)
@@ -1172,7 +1172,7 @@ end
 --- 
 --- Native 0x5DD02A8318420DD7 (_UI_PROMPT_SET_TEXT)
 ---@param prompt prompt
----@param text const char*
+---@param text string
 function UiPromptSetText(prompt,text)
     Citizen.InvokeNative(0x5DD02A8318420DD7,prompt,text)
 end
@@ -1355,10 +1355,10 @@ end
 --- 
 --- Native 0xD877AF112AD2B41B (_CREATE_MP_GAMER_TAG)
 ---@param player player
----@param username const char*
+---@param username string
 ---@param pointedClanTag boolean
 ---@param isRockstarClan boolean
----@param clanTag const char*
+---@param clanTag string
 ---@param clanFlag number
 ---@return number
 function CreateMpGamerTag(player,username,pointedClanTag,isRockstarClan,clanTag,clanFlag)
@@ -1369,10 +1369,10 @@ end
 --- 
 --- Native 0x53CB4B502E1C57EA (CREATE_FAKE_MP_GAMER_TAG)
 ---@param ped number
----@param username const char*
+---@param username string
 ---@param pointedClanTag boolean
 ---@param isRockstarClan boolean
----@param clanTag const char*
+---@param clanTag string
 ---@param clanFlag number
 ---@return number
 function CreateFakeMpGamerTag(ped,username,pointedClanTag,isRockstarClan,clanTag,clanFlag)
@@ -1383,7 +1383,7 @@ end
 --- 
 --- Native 0xE961BF23EAB76B12 (_CREATE_MP_GAMER_TAG_ON_ENTITY)
 ---@param entity entity
----@param text const char*
+---@param text string
 ---@return number
 function CreateMpGamerTagOnEntity(entity,text)
    return Citizen.InvokeNative(0xE961BF23EAB76B12,entity,text)
@@ -1463,7 +1463,7 @@ end
 --- 
 --- Native 0xEA6F4B8D4B4B5B3E (SET_MP_GAMER_TAG_NAME)
 ---@param gamerTagId number
----@param string const char*
+---@param string string
 function SetMpGamerTagName(gamerTagId,string)
     Citizen.InvokeNative(0xEA6F4B8D4B4B5B3E,gamerTagId,string)
 end
@@ -1472,7 +1472,7 @@ end
 --- 
 --- Native 0x1EA716E0628A6F44 (_SET_MP_GAMER_TAG_NAME_POSSE)
 ---@param gamerTagId number
----@param text const char*
+---@param text string
 function SetMpGamerTagNamePosse(gamerTagId,text)
     Citizen.InvokeNative(0x1EA716E0628A6F44,gamerTagId,text)
 end
@@ -1481,7 +1481,7 @@ end
 --- 
 --- Native 0xA0D7CE5F83259663 (SET_MP_GAMER_TAG_BIG_TEXT)
 ---@param gamerTagId number
----@param string const char*
+---@param string string
 function SetMpGamerTagBigText(gamerTagId,string)
     Citizen.InvokeNative(0xA0D7CE5F83259663,gamerTagId,string)
 end

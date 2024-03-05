@@ -26,7 +26,7 @@ end
 
 --- 
 --- Native 0xDE4A9B35D028979F (IS_UIAPP_RUNNING)
----@param appName const char*
+---@param appName string
 ---@return boolean
 function IsUiappRunning(appName)
    return Citizen.InvokeNative(0xDE4A9B35D028979F,appName)
@@ -68,7 +68,7 @@ end
 
 --- 
 --- Native 0x818C6CA9B659E8EC (_CLOSE_UIAPP)
----@param appName const char*
+---@param appName string
 function CloseUiapp(appName)
     Citizen.InvokeNative(0x818C6CA9B659E8EC,appName)
 end
@@ -76,7 +76,7 @@ end
 
 --- 
 --- Native 0x3015635426D1B17C (_CLOSE_UIAPP_IMMEDIATE)
----@param appName const char*
+---@param appName string
 function CloseUiappImmediate(appName)
     Citizen.InvokeNative(0x3015635426D1B17C,appName)
 end
@@ -117,8 +117,8 @@ end
 
 --- 
 --- Native 0x7B2027BAC5C8EC89 (LAUNCH_UIAPP_WITH_ENTRY)
----@param appName const char*
----@param entry const char*
+---@param appName string
+---@param entry string
 ---@return number
 function LaunchUiappWithEntry(appName,entry)
    return Citizen.InvokeNative(0x7B2027BAC5C8EC89,appName,entry)

@@ -1,6 +1,6 @@
 --- Registers a script for any object with a specific model hash.
 --- Native 0x16AF9B4EEAC3B305 (REGISTER_OBJECT_SCRIPT_BRAIN)
----@param scriptName const char*
+---@param scriptName string
 ---@param modelHash hash
 ---@param p2 number
 ---@param activationRange float
@@ -14,7 +14,7 @@ end
 --- Returns threadId
 --- Native 0x4E4507CC5E4DB869 (_START_PRELOADED_SCRIPT_BRAIN)
 ---@param entity entity
----@param scriptName const char*
+---@param scriptName string
 ---@param scriptStackSize number
 ---@param p3 boolean
 ---@return number
@@ -26,7 +26,7 @@ end
 --- Returns threadId
 --- Native 0x6F62FAE266DCFC81 (_START_SCRIPT_BRAIN)
 ---@param entity entity
----@param scriptName const char*
+---@param scriptName string
 ---@param p2 number
 ---@param p3 any*
 ---@param p4 number
@@ -80,7 +80,7 @@ end
 
 --- 
 --- Native 0x74C333E34DF74E8A (REACTIVATE_NAMED_OBJECT_BRAINS_WAITING_TILL_OUT_OF_RANGE)
----@param scriptName const char*
+---@param scriptName string
 function ReactivateNamedObjectBrainsWaitingTillOutOfRange(scriptName)
     Citizen.InvokeNative(0x74C333E34DF74E8A,scriptName)
 end

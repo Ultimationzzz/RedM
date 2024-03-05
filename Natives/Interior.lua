@@ -172,7 +172,7 @@ end
 ---@param x float
 ---@param y float
 ---@param z float
----@param interiorType const char*
+---@param interiorType string
 ---@return interior
 function GetInteriorAtCoordsWithType(x,y,z,interiorType)
    return Citizen.InvokeNative(0xAAD6170AA33B13C0,x,y,z,interiorType)
@@ -216,7 +216,7 @@ end
 --- https://github.com/femga/rdr3_discoveries/tree/master/interiors/interior_sets
 --- Native 0x174D0AAB11CED739 (ACTIVATE_INTERIOR_ENTITY_SET)
 ---@param interior interior
----@param entitySetName const char*
+---@param entitySetName string
 ---@param p2 number
 function ActivateInteriorEntitySet(interior,entitySetName,p2)
     Citizen.InvokeNative(0x174D0AAB11CED739,interior,entitySetName,p2)
@@ -226,7 +226,7 @@ end
 --- 
 --- Native 0x33B81A2C07A51FFF (DEACTIVATE_INTERIOR_ENTITY_SET)
 ---@param interior interior
----@param entitySetName const char*
+---@param entitySetName string
 ---@param p2 boolean
 function DeactivateInteriorEntitySet(interior,entitySetName,p2)
     Citizen.InvokeNative(0x33B81A2C07A51FFF,interior,entitySetName,p2)
@@ -236,7 +236,7 @@ end
 --- 
 --- Native 0x32810CA2125F5842 (IS_INTERIOR_ENTITY_SET_ACTIVE)
 ---@param interior interior
----@param entitySetName const char*
+---@param entitySetName string
 ---@return boolean
 function IsInteriorEntitySetActive(interior,entitySetName)
    return Citizen.InvokeNative(0x32810CA2125F5842,interior,entitySetName)
@@ -246,7 +246,7 @@ end
 --- 
 --- Native 0xD56FF170710FC826 (_IS_INTERIOR_ENTITY_SET_VALID)
 ---@param interior interior
----@param entitySetName const char*
+---@param entitySetName string
 ---@return boolean
 function IsInteriorEntitySetValid(interior,entitySetName)
    return Citizen.InvokeNative(0xD56FF170710FC826,interior,entitySetName)

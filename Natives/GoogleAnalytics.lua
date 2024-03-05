@@ -1,6 +1,6 @@
 --- 
 --- Native 0xD43A616AE3AC4EF6 (_GOOGLE_ANALYTICS_PUSH_PAGE)
----@param pageName const char*
+---@param pageName string
 function GoogleAnalyticsPushPage(pageName)
     Citizen.InvokeNative(0xD43A616AE3AC4EF6,pageName)
 end
@@ -8,7 +8,7 @@ end
 
 --- 
 --- Native 0xC6DE040378364798 (_GOOGLE_ANALYTICS_POP_PAGE)
----@param pageName const char*
+---@param pageName string
 function GoogleAnalyticsPopPage(pageName)
     Citizen.InvokeNative(0xC6DE040378364798,pageName)
 end
@@ -16,9 +16,9 @@ end
 
 --- 
 --- Native 0x1C54F031D7C0F7AC (_GOOGLE_ANALYTICS_START_EVENT)
----@param eventCategory const char*
----@param eventAction const char*
----@param eventLabel const char*
+---@param eventCategory string
+---@param eventAction string
+---@param eventLabel string
 ---@param eventValue number
 ---@return boolean
 function GoogleAnalyticsStartEvent(eventCategory,eventAction,eventLabel,eventValue)

@@ -19,7 +19,7 @@ end
 
 --- contentId: returned by NETWORK::_UGC_QUERY_GET_CREATOR_PHOTO(uVar0, 0, sParam3)
 --- Native 0xC71B50AE58D07369 (GET_STATUS_OF_LOAD_MISSION_CREATOR_PHOTO)
----@param contentId const char*
+---@param contentId string
 ---@return number
 function GetStatusOfLoadMissionCreatorPhoto(contentId)
    return Citizen.InvokeNative(0xC71B50AE58D07369,contentId)
@@ -107,7 +107,7 @@ end
 
 --- 
 --- Native 0xD1031B83AC093BC7 (_SET_REGION_PHOTO_TAKEN_STAT)
----@param p0 const char*
+---@param p0 string
 function SetRegionPhotoTakenStat(p0)
     Citizen.InvokeNative(0xD1031B83AC093BC7,p0)
 end
@@ -115,7 +115,7 @@ end
 
 --- 
 --- Native 0x9937FACBBF267244 (_SET_DISTRICT_PHOTO_TAKEN_STAT)
----@param p0 const char*
+---@param p0 string
 function SetDistrictPhotoTakenStat(p0)
     Citizen.InvokeNative(0x9937FACBBF267244,p0)
 end
@@ -123,7 +123,7 @@ end
 
 --- 
 --- Native 0x8952E857696B8A79 (_SET_STATE_PHOTO_TAKEN_STAT)
----@param p0 const char*
+---@param p0 string
 function SetStatePhotoTakenStat(p0)
     Citizen.InvokeNative(0x8952E857696B8A79,p0)
 end
@@ -291,8 +291,8 @@ end
 ---@param faceCamera boolean
 ---@param p19 number
 ---@param rotate boolean
----@param textureDict const char*
----@param textureName const char*
+---@param textureDict string
+---@param textureName string
 ---@param drawOnEnts boolean
 function DrawMarker(type,posX,posY,posZ,dirX,dirY,dirZ,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,red,green,blue,alpha,bobUpAndDown,faceCamera,p19,rotate,textureDict,textureName,drawOnEnts)
     Citizen.InvokeNative(0x2A32FAA57B937173,type,posX,posY,posZ,dirX,dirY,dirZ,rotX,rotY,rotZ,scaleX,scaleY,scaleZ,red,green,blue,alpha,bobUpAndDown,faceCamera,p19,rotate,textureDict,textureName,drawOnEnts)
@@ -413,8 +413,8 @@ end
 ---alpha - opacity level
 ---https://github.com/femga/rdr3_discoveries/tree/master/useful_info_from_rpfs/textures
 --- Native 0xC9884ECADE94CB34 (DRAW_SPRITE)
----@param textureDict const char*
----@param textureName const char*
+---@param textureDict string
+---@param textureName string
 ---@param screenX float
 ---@param screenY float
 ---@param width float
@@ -703,7 +703,7 @@ end
 ---"CSM_ST_HIGHRES_BOX4x4"
 ---"CSM_ST_ESM"
 --- Native 0xCE4774E0F9AD48D1 (CASCADE_SHADOWS_SET_SHADOW_SAMPLE_TYPE)
----@param type const char*
+---@param type string
 function CascadeShadowsSetShadowSampleType(type)
     Citizen.InvokeNative(0xCE4774E0F9AD48D1,type)
 end
@@ -778,7 +778,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/ptfx/ptfx_assets_non_looped.lua
 --- Native 0x2E80BF72EF7C87AC (START_PARTICLE_FX_NON_LOOPED_AT_COORD)
----@param effectName const char*
+---@param effectName string
 ---@param xPos float
 ---@param yPos float
 ---@param zPos float
@@ -797,7 +797,7 @@ end
 
 --- 
 --- Native 0xFB97618457994A62 (START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD)
----@param effectName const char*
+---@param effectName string
 ---@param xPos float
 ---@param yPos float
 ---@param zPos float
@@ -816,7 +816,7 @@ end
 
 --- 
 --- Native 0x3FAA72BD940C3AC0 (START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE)
----@param effectName const char*
+---@param effectName string
 ---@param ped number
 ---@param offsetX float
 ---@param offsetY float
@@ -837,7 +837,7 @@ end
 
 --- 
 --- Native 0xFF4C64C513388C12 (START_PARTICLE_FX_NON_LOOPED_ON_ENTITY)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param offsetX float
 ---@param offsetY float
@@ -857,7 +857,7 @@ end
 
 --- 
 --- Native 0xE6CFE43937061143 (START_NETWORKED_PARTICLE_FX_NON_LOOPED_ON_ENTITY)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param offsetX float
 ---@param offsetY float
@@ -877,7 +877,7 @@ end
 
 --- 
 --- Native 0xC695870B8A149B96 (_START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE_2)
----@param effectName const char*
+---@param effectName string
 ---@param ped number
 ---@param offsetX float
 ---@param offsetY float
@@ -926,7 +926,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/ptfx/ptfx_assets_looped.lua
 --- Native 0xBA32867E86125D3A (START_PARTICLE_FX_LOOPED_AT_COORD)
----@param effectName const char*
+---@param effectName string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -946,7 +946,7 @@ end
 
 --- 
 --- Native 0xE689C1B1432BB8AF (START_PARTICLE_FX_LOOPED_ON_PED_BONE)
----@param effectName const char*
+---@param effectName string
 ---@param ped number
 ---@param xOffset float
 ---@param yOffset float
@@ -967,7 +967,7 @@ end
 
 --- 
 --- Native 0xBD41E1440CE39800 (START_PARTICLE_FX_LOOPED_ON_ENTITY)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param xOffset float
 ---@param yOffset float
@@ -987,7 +987,7 @@ end
 
 --- 
 --- Native 0xD3BA6EC7F2FBD5E9 (START_PARTICLE_FX_LOOPED_ON_ENTITY_BONE)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param xOffset float
 ---@param yOffset float
@@ -1008,7 +1008,7 @@ end
 
 --- 
 --- Native 0x8F90AB32E1944BDE (START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param xOffset float
 ---@param yOffset float
@@ -1028,7 +1028,7 @@ end
 
 --- 
 --- Native 0x9C56621462FFE7A6 (START_NETWORKED_PARTICLE_FX_LOOPED_ON_ENTITY_BONE)
----@param effectName const char*
+---@param effectName string
 ---@param entity entity
 ---@param xOffset float
 ---@param yOffset float
@@ -1082,7 +1082,7 @@ end
 --- 
 --- Native 0x3674F389B0FACD80 (SET_PARTICLE_FX_LOOPED_EVOLUTION)
 ---@param ptfxHandle number
----@param propertyName const char*
+---@param propertyName string
 ---@param amount float
 ---@param noNetwork boolean
 function SetParticleFxLoopedEvolution(ptfxHandle,propertyName,amount,noNetwork)
@@ -1168,7 +1168,7 @@ end
 
 --- fxName: see data_0/data/effects/ptfx/fxlists/
 --- Native 0xA10DB07FC234DD12 (USE_PARTICLE_FX_ASSET)
----@param fxName const char*
+---@param fxName string
 function UseParticleFxAsset(fxName)
     Citizen.InvokeNative(0xA10DB07FC234DD12,fxName)
 end
@@ -1176,8 +1176,8 @@ end
 
 --- 
 --- Native 0xBE711A169E9C7E95 (SET_PARTICLE_FX_OVERRIDE)
----@param oldAsset const char*
----@param newAsset const char*
+---@param oldAsset string
+---@param newAsset string
 function SetParticleFxOverride(oldAsset,newAsset)
     Citizen.InvokeNative(0xBE711A169E9C7E95,oldAsset,newAsset)
 end
@@ -1185,7 +1185,7 @@ end
 
 --- Resets the effect of SET_PARTICLE_FX_OVERRIDE
 --- Native 0x274B3DABF7E72DEF (RESET_PARTICLE_FX_OVERRIDE)
----@param name const char*
+---@param name string
 function ResetParticleFxOverride(name)
     Citizen.InvokeNative(0x274B3DABF7E72DEF,name)
 end
@@ -1195,7 +1195,7 @@ end
 ---p1: AMB_BONFIRE_MP, AMB_CAMPFIRE_LRG_MP
 --- Native 0x3C61B52B00848C26 (SET_PARTICLE_FX_AMBIENT_COLOUR)
 ---@param entity entity
----@param p1 const char*
+---@param p1 string
 ---@param r float
 ---@param g float
 ---@param b float
@@ -1432,7 +1432,7 @@ end
 
 --- p1: 0.3f in R* Scripts
 --- Native 0xB9C92616929CC25D (_BLOOD_TRAIL_FOR_WAYPOINT)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p1 float
 function BloodTrailForWaypoint(waypointRecording,p1)
     Citizen.InvokeNative(0xB9C92616929CC25D,waypointRecording,p1)
@@ -1470,7 +1470,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/timecycles
 --- Native 0xFA08722A5EA82DA7 (SET_TIMECYCLE_MODIFIER)
----@param modifierName const char*
+---@param modifierName string
 function SetTimecycleModifier(modifierName)
     Citizen.InvokeNative(0xFA08722A5EA82DA7,modifierName)
 end
@@ -1486,7 +1486,7 @@ end
 
 --- 
 --- Native 0xFF927A09F481D80C (SET_TRANSITION_TIMECYCLE_MODIFIER)
----@param modifierName const char*
+---@param modifierName string
 ---@param transitionBlend float
 function SetTransitionTimecycleModifier(modifierName,transitionBlend)
     Citizen.InvokeNative(0xFF927A09F481D80C,modifierName,transitionBlend)
@@ -1583,7 +1583,7 @@ end
 --- 
 --- Native 0xDEC6B25F5DC8925B (SET_TV_CHANNEL_PLAYLIST)
 ---@param tvChannel number
----@param playlistName const char*
+---@param playlistName string
 ---@param restart boolean
 function SetTvChannelPlaylist(tvChannel,playlistName,restart)
     Citizen.InvokeNative(0xDEC6B25F5DC8925B,tvChannel,playlistName,restart)
@@ -1609,7 +1609,7 @@ end
 
 --- 
 --- Native 0x5199405EABFBD7F0 (_ANIMPOSTFX_PRELOAD_POSTFX)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxPreloadPostfx(effectName)
     Citizen.InvokeNative(0x5199405EABFBD7F0,effectName)
 end
@@ -1617,7 +1617,7 @@ end
 
 --- 
 --- Native 0xBF2DD155B2ADCD0A (_ANIMPOSTFX_HAS_LOADED)
----@param effectName const char*
+---@param effectName string
 ---@return boolean
 function AnimpostfxHasLoaded(effectName)
    return Citizen.InvokeNative(0xBF2DD155B2ADCD0A,effectName)
@@ -1626,7 +1626,7 @@ end
 
 --- 
 --- Native 0x37D7BDBA89F13959 (_ANIMPOSTFX_SET_TO_UNLOAD)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxSetToUnload(effectName)
     Citizen.InvokeNative(0x37D7BDBA89F13959,effectName)
 end
@@ -1634,7 +1634,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/graphics/animpostfx
 --- Native 0x4102732DF6B4005F (ANIMPOSTFX_PLAY)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxPlay(effectName)
     Citizen.InvokeNative(0x4102732DF6B4005F,effectName)
 end
@@ -1642,7 +1642,7 @@ end
 
 --- 
 --- Native 0x3A9A281FF71249E9 (_ANIMPOSTFX_PLAY_TIMED)
----@param effectName const char*
+---@param effectName string
 ---@param duration number
 function AnimpostfxPlayTimed(effectName,duration)
     Citizen.InvokeNative(0x3A9A281FF71249E9,effectName,duration)
@@ -1651,7 +1651,7 @@ end
 
 --- 
 --- Native 0xB4FD7446BAB2F394 (ANIMPOSTFX_STOP)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxStop(effectName)
     Citizen.InvokeNative(0xB4FD7446BAB2F394,effectName)
 end
@@ -1659,7 +1659,7 @@ end
 
 --- 
 --- Native 0xC5CB91D65852ED7E (_ANIMPOSTFX_CLEAR_EFFECT)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxClearEffect(effectName)
     Citizen.InvokeNative(0xC5CB91D65852ED7E,effectName)
 end
@@ -1667,7 +1667,7 @@ end
 
 --- 
 --- Native 0x4A123E85D7C4CA0B (ANIMPOSTFX_IS_RUNNING)
----@param effectName const char*
+---@param effectName string
 ---@return boolean
 function AnimpostfxIsRunning(effectName)
    return Citizen.InvokeNative(0x4A123E85D7C4CA0B,effectName)
@@ -1676,7 +1676,7 @@ end
 
 --- 
 --- Native 0x2D4F9C852CE8A253 (_ANIMPOSTFX_IS_TAG_PLAYING)
----@param effectName const char*
+---@param effectName string
 ---@return boolean
 function AnimpostfxIsTagPlaying(effectName)
    return Citizen.InvokeNative(0x2D4F9C852CE8A253,effectName)
@@ -1692,7 +1692,7 @@ end
 
 --- 
 --- Native 0xAD74C22A541AB987 (_ANIMPOSTFX_STOP_TAG)
----@param effectName const char*
+---@param effectName string
 function AnimpostfxStopTag(effectName)
     Citizen.InvokeNative(0xAD74C22A541AB987,effectName)
 end
@@ -1700,7 +1700,7 @@ end
 
 --- must be called after ANIMPOSTFX_PLAY, strength 0.0f - 1.0f
 --- Native 0xCAB4DD2D5B2B7246 (_ANIMPOSTFX_SET_STRENGTH)
----@param effectName const char*
+---@param effectName string
 ---@param strength float
 function AnimpostfxSetStrength(effectName,strength)
     Citizen.InvokeNative(0xCAB4DD2D5B2B7246,effectName,strength)
@@ -1711,7 +1711,7 @@ end
 ---Stamina Core Effect Filter Potency: p1 = 2
 ---Multiple Core Effect Filter Potency: p1 = 3
 --- Native 0xF972F0AB16DC5260 (_ANIMPOSTFX_SET_POTENCY)
----@param effectName const char*
+---@param effectName string
 ---@param p1 number
 ---@param potency float
 function AnimpostfxSetPotency(effectName,p1,potency)
@@ -1721,7 +1721,7 @@ end
 
 --- 
 --- Native 0x63011D0C7C6519E0 (_ANIMPOSTFX_SET_POSTFX_COLOR)
----@param effectName const char*
+---@param effectName string
 ---@param p1 number
 ---@param red number
 ---@param green number
@@ -1739,7 +1739,7 @@ end
 ---MP_Trans_PhotoToScene
 ---InterrogationHit
 --- Native 0x842CCC9491FFCD9B (_ANIMPOSTFX_GET_STACKHASH)
----@param effectName const char*
+---@param effectName string
 ---@return hash
 function AnimpostfxGetStackhash(effectName)
    return Citizen.InvokeNative(0x842CCC9491FFCD9B,effectName)
@@ -1841,7 +1841,7 @@ end
 
 --- 
 --- Native 0xD9C24F53631F2372 (_PEDSHOT_GENERATE_PERSONA_PHOTO)
----@param texture const char*
+---@param texture string
 ---@param ped number
 ---@param playerSlot number
 ---@return boolean

@@ -165,7 +165,7 @@ end
 --- Native 0x5E50C67EB60951E6 (COMPENDIUM_GET_SUBCATEGORY_SAMPLE_TOAST_TITLE)
 ---@param category hash
 ---@param subcategory hash
----@return const char*
+---@return string
 function CompendiumGetSubcategorySampleToastTitle(category,subcategory)
    return Citizen.InvokeNative(0x5E50C67EB60951E6,category,subcategory)
 end
@@ -175,7 +175,7 @@ end
 --- Native 0x82BFB5B367957699 (COMPENDIUM_GET_SUBCATEGORY_SAMPLE_TOAST_DESC_PROGRESS)
 ---@param category hash
 ---@param subcategory hash
----@return const char*
+---@return string
 function CompendiumGetSubcategorySampleToastDescProgress(category,subcategory)
    return Citizen.InvokeNative(0x82BFB5B367957699,category,subcategory)
 end
@@ -185,7 +185,7 @@ end
 --- Native 0x59D4D68CDB82427C (COMPENDIUM_GET_SUBCATEGORY_SAMPLE_TOAST_DESC_COMPLETE)
 ---@param category hash
 ---@param subcategory hash
----@return const char*
+---@return string
 function CompendiumGetSubcategorySampleToastDescComplete(category,subcategory)
    return Citizen.InvokeNative(0x59D4D68CDB82427C,category,subcategory)
 end

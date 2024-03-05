@@ -35,7 +35,7 @@ end
 
 --- 
 --- Native 0x7332461FC59EB7EC (DOES_STREAMED_TEXTURE_DICT_EXIST)
----@param textureDict const char*
+---@param textureDict string
 ---@return boolean
 function DoesStreamedTextureDictExist(textureDict)
    return Citizen.InvokeNative(0x7332461FC59EB7EC,textureDict)
@@ -44,7 +44,7 @@ end
 
 --- 
 --- Native 0xC1BA29DF5631B0F8 (REQUEST_STREAMED_TEXTURE_DICT)
----@param textureDict const char*
+---@param textureDict string
 ---@param p1 boolean
 function RequestStreamedTextureDict(textureDict,p1)
     Citizen.InvokeNative(0xC1BA29DF5631B0F8,textureDict,p1)
@@ -53,7 +53,7 @@ end
 
 --- 
 --- Native 0x54D6900929CCF162 (HAS_STREAMED_TEXTURE_DICT_LOADED)
----@param textureDict const char*
+---@param textureDict string
 ---@return boolean
 function HasStreamedTextureDictLoaded(textureDict)
    return Citizen.InvokeNative(0x54D6900929CCF162,textureDict)
@@ -62,7 +62,7 @@ end
 
 --- 
 --- Native 0x4ACA10A91F66F1E2 (SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED)
----@param textureDict const char*
+---@param textureDict string
 function SetStreamedTextureDictAsNoLongerNeeded(textureDict)
     Citizen.InvokeNative(0x4ACA10A91F66F1E2,textureDict)
 end

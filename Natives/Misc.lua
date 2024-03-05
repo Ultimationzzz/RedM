@@ -84,8 +84,8 @@ end
 
 --- nullsub, doesn't do anything
 --- Native 0xCC7FC854B956A128 (ACTIVITY_FEED_CREATE)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 function ActivityFeedCreate(p0,p1)
     Citizen.InvokeNative(0xCC7FC854B956A128,p0,p1)
 end
@@ -93,7 +93,7 @@ end
 
 --- nullsub, doesn't do anything
 --- Native 0x9935F76407C32539 (ACTIVITY_FEED_ADD_SUBSTRING_TO_CAPTION)
----@param p0 const char*
+---@param p0 string
 function ActivityFeedAddSubstringToCaption(p0)
     Citizen.InvokeNative(0x9935F76407C32539,p0)
 end
@@ -101,8 +101,8 @@ end
 
 --- nullsub, doesn't do anything
 --- Native 0x91D657230BC208D2 (ACTIVITY_FEED_ACTION_START_WITH_COMMAND_LINE)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 function ActivityFeedActionStartWithCommandLine(p0,p1)
     Citizen.InvokeNative(0x91D657230BC208D2,p0,p1)
 end
@@ -110,7 +110,7 @@ end
 
 --- nullsub, doesn't do anything
 --- Native 0x1694A053DFB61A34 (ACTIVITY_FEED_ACTION_START_WITH_COMMAND_LINE_ADD)
----@param p0 const char*
+---@param p0 string
 function ActivityFeedActionStartWithCommandLineAdd(p0)
     Citizen.InvokeNative(0x1694A053DFB61A34,p0)
 end
@@ -125,7 +125,7 @@ end
 
 --- 
 --- Native 0x708DF841B8F27AA2 (INFORM_CODE_OF_CONTENT_ID_OF_CURRENT_UGC_MISSION)
----@param p0 const char*
+---@param p0 string
 function InformCodeOfContentIdOfCurrentUgcMission(p0)
     Citizen.InvokeNative(0x708DF841B8F27AA2,p0)
 end
@@ -269,8 +269,8 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/weather/weather_variations.lua
 --- Native 0x3373779BAF7CAF48 (_SET_WEATHER_VARIATION)
----@param weatherType const char*
----@param variation const char*
+---@param weatherType string
+---@param variation string
 function SetWeatherVariation(weatherType,variation)
     Citizen.InvokeNative(0x3373779BAF7CAF48,weatherType,variation)
 end
@@ -278,7 +278,7 @@ end
 
 --- 
 --- Native 0x0E71C80FA4EC8147 (_CLEAR_WEATHER_VARIATION)
----@param weatherType const char*
+---@param weatherType string
 ---@param p1 boolean
 function ClearWeatherVariation(weatherType,p1)
     Citizen.InvokeNative(0x0E71C80FA4EC8147,weatherType,p1)
@@ -722,7 +722,7 @@ end
 --- Computes a hash for the given string. It is hashed using Jenkins' One-at-a-Time hash algorithm (https://en.wikipedia.org/wiki/Jenkins_hash_function)
 ---Note: this implementation is case-insensitive.
 --- Native 0xFD340785ADF8CFB7 (GET_HASH_KEY)
----@param string const char*
+---@param string string
 ---@return hash
 function GetHashKey(string)
    return Citizen.InvokeNative(0xFD340785ADF8CFB7,string)
@@ -988,8 +988,8 @@ end
 
 --- 
 --- Native 0xBFBB74A15EFC149B (COMPARE_STRINGS)
----@param str1 const char*
----@param str2 const char*
+---@param str1 string
+---@param str2 string
 ---@param matchCase boolean
 ---@param maxLength number
 ---@return number
@@ -1218,7 +1218,7 @@ end
 
 --- 
 --- Native 0x602102324604D96B (IS_STRING_NULL)
----@param string const char*
+---@param string string
 ---@return boolean
 function IsStringNull(string)
    return Citizen.InvokeNative(0x602102324604D96B,string)
@@ -1227,7 +1227,7 @@ end
 
 --- 
 --- Native 0x2CF12F9ACF18F048 (IS_STRING_NULL_OR_EMPTY)
----@param string const char*
+---@param string string
 ---@return boolean
 function IsStringNullOrEmpty(string)
    return Citizen.InvokeNative(0x2CF12F9ACF18F048,string)
@@ -1236,7 +1236,7 @@ end
 
 --- Returns true if the entire string consists only of space characters.
 --- Native 0x375F5870A7B8BEC1 (IS_STRING_NULL_OR_EMPTY_OR_SPACES)
----@param string const char*
+---@param string string
 ---@return boolean
 function IsStringNullOrEmptyOrSpaces(string)
    return Citizen.InvokeNative(0x375F5870A7B8BEC1,string)
@@ -1245,8 +1245,8 @@ end
 
 --- 
 --- Native 0xD3852F22AB713A1F (ARE_STRINGS_EQUAL)
----@param string1 const char*
----@param string2 const char*
+---@param string1 string
+---@param string2 string
 ---@return boolean
 function AreStringsEqual(string1,string2)
    return Citizen.InvokeNative(0xD3852F22AB713A1F,string1,string2)
@@ -1255,8 +1255,8 @@ end
 
 --- 
 --- Native 0x9382D5D43D2AA6FF (_DOES_STRING_EXIST_IN_STRING)
----@param string1 const char*
----@param string2 const char*
+---@param string1 string
+---@param string2 string
 ---@return boolean
 function DoesStringExistInString(string1,string2)
    return Citizen.InvokeNative(0x9382D5D43D2AA6FF,string1,string2)
@@ -1265,7 +1265,7 @@ end
 
 --- Returns false if it's a null or empty string or if the string is too long. outInteger will be set to -999 in that case.
 --- Native 0xF2DD2298B3AF23E2 (STRING_TO_INT)
----@param string const char*
+---@param string string
 ---@param outInteger int*
 ---@return boolean
 function StringToInt(string,outInteger)
@@ -1276,8 +1276,8 @@ end
 --- Note: the buffer should be exactly 32 bytes long
 --- Native 0xCF11C0CEB40C401B (_INT_TO_STRING)
 ---@param value number
----@param format const char*
----@param buffer char*
+---@param format string
+---@param buffer string
 function IntToString(value,format,buffer)
     Citizen.InvokeNative(0xCF11C0CEB40C401B,value,format,buffer)
 end
@@ -1287,7 +1287,7 @@ end
 --- Native 0x2B6846401D68E563 (_GET_STRING_FROM_FLOAT)
 ---@param value float
 ---@param digits number
----@return const char*
+---@return string
 function GetStringFromFloat(value,digits)
    return Citizen.InvokeNative(0x2B6846401D68E563,value,digits)
 end
@@ -1298,7 +1298,7 @@ end
 ---@param x float
 ---@param y float
 ---@param z float
----@return const char*
+---@return string
 function GetStringFromVector(x,y,z)
    return Citizen.InvokeNative(0x6C4DBF553885F9EB,x,y,z)
 end
@@ -1307,7 +1307,7 @@ end
 --- 
 --- Native 0xF216F74101968DB0 (_GET_STRING_FROM_BOOL)
 ---@param value boolean
----@return const char*
+---@return string
 function GetStringFromBool(value)
    return Citizen.InvokeNative(0xF216F74101968DB0,value)
 end
@@ -1319,7 +1319,7 @@ end
 --- Native 0xFA925AC00EB830B9 (VAR_STRING)
 ---@param flags number
 ---@param ... 
----@return const char*
+---@return string
 function VarString(flags,...)
    return Citizen.InvokeNative(0xFA925AC00EB830B9,flags,...)
 end
@@ -1328,7 +1328,7 @@ end
 --- Returns a formatted string (0x%x)
 --- Native 0xBCC2CFADEA1AEA6C (_CREATE_COLOR_STRING)
 ---@param rgb number
----@return const char*
+---@return string
 function CreateColorString(rgb)
    return Citizen.InvokeNative(0xBCC2CFADEA1AEA6C,rgb)
 end
@@ -1712,12 +1712,12 @@ end
 ---};
 --- Native 0x044131118D8DB3CD (DISPLAY_ONSCREEN_KEYBOARD)
 ---@param textType number
----@param windowTitle const char*
----@param p2 const char*
----@param defaultText const char*
----@param defaultConcat1 const char*
----@param defaultConcat2 const char*
----@param defaultConcat3 const char*
+---@param windowTitle string
+---@param p2 string
+---@param defaultText string
+---@param defaultConcat1 string
+---@param defaultConcat2 string
+---@param defaultConcat3 string
 ---@param maxInputLength number
 function DisplayOnscreenKeyboard(textType,windowTitle,p2,defaultText,defaultConcat1,defaultConcat2,defaultConcat3,maxInputLength)
     Citizen.InvokeNative(0x044131118D8DB3CD,textType,windowTitle,p2,defaultText,defaultConcat1,defaultConcat2,defaultConcat3,maxInputLength)
@@ -1739,7 +1739,7 @@ end
 
 --- Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.
 --- Native 0xAFB4CF58A4A292B1 (GET_ONSCREEN_KEYBOARD_RESULT)
----@return const char*
+---@return string
 function GetOnscreenKeyboardResult()
    return Citizen.InvokeNative(0xAFB4CF58A4A292B1)
 end
@@ -1992,7 +1992,7 @@ end
 ---p8 determines whether the ILO prompt is a lock on prompt with RMB
 --- Native 0x870708A6E147A9AD (REGISTER_INTERACTION_LOCKON_PROMPT)
 ---@param entity entity
----@param text const char*
+---@param text string
 ---@param radius float
 ---@param p3 float
 ---@param flag number
@@ -2094,7 +2094,7 @@ end
 --- Event names in the scripts: MGBegin, MGEnd, ReadyForCut
 --- Native 0xF9B91C5129EABC08 (_GET_LOOTING_EVENT_HAS_FIRED)
 ---@param ped number
----@param eventName const char*
+---@param eventName string
 ---@return boolean
 function GetLootingEventHasFired(ped,eventName)
    return Citizen.InvokeNative(0xF9B91C5129EABC08,ped,eventName)

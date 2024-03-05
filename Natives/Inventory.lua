@@ -328,7 +328,7 @@ end
 ---Returns collectionId
 --- Native 0x80D78BDC9D88EF07 (_INVENTORY_CREATE_ITEM_COLLECTION)
 ---@param inventoryId number
----@param filterName const char*
+---@param filterName string
 ---@param slotId hash
 ---@param size int*
 ---@return number

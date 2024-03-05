@@ -129,7 +129,7 @@ end
 
 --- 
 --- Native 0x537F44CB0D7F150D (DOES_ANIM_DICT_EXIST)
----@param animDict const char*
+---@param animDict string
 ---@return boolean
 function DoesAnimDictExist(animDict)
    return Citizen.InvokeNative(0x537F44CB0D7F150D,animDict)
@@ -138,7 +138,7 @@ end
 
 --- 
 --- Native 0xA862A2AD321F94B4 (REQUEST_ANIM_DICT)
----@param animDict const char*
+---@param animDict string
 function RequestAnimDict(animDict)
     Citizen.InvokeNative(0xA862A2AD321F94B4,animDict)
 end
@@ -146,7 +146,7 @@ end
 
 --- 
 --- Native 0x27FF6FE8009B40CA (HAS_ANIM_DICT_LOADED)
----@param animDict const char*
+---@param animDict string
 ---@return boolean
 function HasAnimDictLoaded(animDict)
    return Citizen.InvokeNative(0x27FF6FE8009B40CA,animDict)
@@ -155,7 +155,7 @@ end
 
 --- 
 --- Native 0x4763145053A33D46 (REMOVE_ANIM_DICT)
----@param animDict const char*
+---@param animDict string
 function RemoveAnimDict(animDict)
     Citizen.InvokeNative(0x4763145053A33D46,animDict)
 end
@@ -163,7 +163,7 @@ end
 
 --- 
 --- Native 0x2B6529C54D29037A (REQUEST_MOVE_NETWORK_DEF)
----@param name const char*
+---@param name string
 function RequestMoveNetworkDef(name)
     Citizen.InvokeNative(0x2B6529C54D29037A,name)
 end
@@ -171,7 +171,7 @@ end
 
 --- 
 --- Native 0x2C04D89A0FB4E244 (HAS_MOVE_NETWORK_DEF_LOADED)
----@param name const char*
+---@param name string
 ---@return boolean
 function HasMoveNetworkDefLoaded(name)
    return Citizen.InvokeNative(0x2C04D89A0FB4E244,name)
@@ -180,7 +180,7 @@ end
 
 --- 
 --- Native 0x57A197AD83F66BBF (REMOVE_MOVE_NETWORK_DEF)
----@param name const char*
+---@param name string
 function RemoveMoveNetworkDef(name)
     Citizen.InvokeNative(0x57A197AD83F66BBF,name)
 end
@@ -188,7 +188,7 @@ end
 
 --- 
 --- Native 0xEF7611B57A820126 (REQUEST_CLIP_SET)
----@param clipSet const char*
+---@param clipSet string
 function RequestClipSet(clipSet)
     Citizen.InvokeNative(0xEF7611B57A820126,clipSet)
 end
@@ -196,7 +196,7 @@ end
 
 --- Alias for HAS_ANIM_SET_LOADED.
 --- Native 0x1F23D6B6DA1CC3B2 (HAS_CLIP_SET_LOADED)
----@param clipSet const char*
+---@param clipSet string
 ---@return boolean
 function HasClipSetLoaded(clipSet)
    return Citizen.InvokeNative(0x1F23D6B6DA1CC3B2,clipSet)
@@ -205,7 +205,7 @@ end
 
 --- Alias for REMOVE_ANIM_SET.
 --- Native 0x817FA1B1EE7CD6F0 (REMOVE_CLIP_SET)
----@param clipSet const char*
+---@param clipSet string
 function RemoveClipSet(clipSet)
     Citizen.InvokeNative(0x817FA1B1EE7CD6F0,clipSet)
 end
@@ -442,7 +442,7 @@ end
 
 --- 
 --- Native 0x3CACC83F6FED837C (SET_MAPDATACULLBOX_ENABLED)
----@param name const char*
+---@param name string
 ---@param toggle boolean
 function SetMapdatacullboxEnabled(name,toggle)
     Citizen.InvokeNative(0x3CACC83F6FED837C,name,toggle)
@@ -534,8 +534,8 @@ end
 
 --- 
 --- Native 0x20D504994FDC4412 (IPL_GROUP_SWAP_START)
----@param iplName1 const char*
----@param iplName2 const char*
+---@param iplName1 string
+---@param iplName2 string
 function IplGroupSwapStart(iplName1,iplName2)
     Citizen.InvokeNative(0x20D504994FDC4412,iplName1,iplName2)
 end
@@ -573,7 +573,7 @@ end
 
 --- 
 --- Native 0x354837E5A5BAA5AF (PREFETCH_SRL)
----@param srl const char*
+---@param srl string
 function PrefetchSrl(srl)
     Citizen.InvokeNative(0x354837E5A5BAA5AF,srl)
 end

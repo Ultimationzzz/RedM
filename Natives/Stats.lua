@@ -47,7 +47,7 @@ end
 --- statId: see STAT_ID_IS_VALID
 --- Native 0x05060A54834F2382 (STAT_ID_SET_GXT_LABEL)
 ---@param statId any*
----@param label const char*
+---@param label string
 ---@param p2 boolean
 ---@return boolean
 function StatIdSetGxtLabel(statId,label,p2)

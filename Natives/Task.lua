@@ -43,7 +43,7 @@ end
 ---@param ped number
 ---@param duration number
 ---@param pedToCowerFrom number
----@param p3 const char*
+---@param p3 string
 function TaskCower(ped,duration,pedToCowerFrom,p3)
     Citizen.InvokeNative(0x3EB1FE9E8E908E15,ped,duration,pedToCowerFrom,p3)
 end
@@ -438,8 +438,8 @@ end
 --- Native 0xC2329B0206426644 (TASK_ENTER_ANIM_SCENE)
 ---@param ped number
 ---@param animScene animscene
----@param entityName const char*
----@param playbackListName const char*
+---@param entityName string
+---@param playbackListName string
 ---@param enterSpeed float
 ---@param bAutoStart boolean
 ---@param flag number
@@ -793,7 +793,7 @@ end
 ---@param x float
 ---@param y float
 ---@param z float
----@param reactionName const char*
+---@param reactionName string
 ---@param p6 float
 ---@param p7 float
 ---@param p8 number
@@ -1207,8 +1207,8 @@ end
 ---ikFlags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eIkControlFlags 
 --- Native 0xEA47FE3719165B94 (TASK_PLAY_ANIM)
 ---@param ped number
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param speed float
 ---@param speedMultiplier float
 ---@param duration number
@@ -1217,7 +1217,7 @@ end
 ---@param p8 boolean
 ---@param ikFlags number
 ---@param p10 boolean
----@param taskFilter const char*
+---@param taskFilter string
 ---@param p12 boolean
 function TaskPlayAnim(ped,animDict,animName,speed,speedMultiplier,duration,flags,playbackRate,p8,ikFlags,p10,taskFilter,p12)
     Citizen.InvokeNative(0xEA47FE3719165B94,ped,animDict,animName,speed,speedMultiplier,duration,flags,playbackRate,p8,ikFlags,p10,taskFilter,p12)
@@ -1228,8 +1228,8 @@ end
 ---ikFlags: see TASK_PLAY_ANIM
 --- Native 0x83CDB10EA29B370B (TASK_PLAY_ANIM_ADVANCED)
 ---@param ped number
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param posX float
 ---@param posY float
 ---@param posZ float
@@ -1252,8 +1252,8 @@ end
 --- 
 --- Native 0xAD67214236AB1CFE (TASK_PLAY_UPPER_ANIM_FACING_ENTITY)
 ---@param ped number
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param entity entity
 ---@param p4 number
 ---@param p5 float
@@ -1263,7 +1263,7 @@ end
 ---@param p9 boolean
 ---@param p10 boolean
 ---@param p11 float
----@param p12 const char*
+---@param p12 string
 ---@param p13 number
 ---@param p14 float
 function TaskPlayUpperAnimFacingEntity(ped,animDict,animName,entity,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14)
@@ -1274,8 +1274,8 @@ end
 --- 
 --- Native 0x97FF36A1D40EA00A (STOP_ANIM_TASK)
 ---@param ped number
----@param animDictionary const char*
----@param animationName const char*
+---@param animDictionary string
+---@param animationName string
 ---@param p3 float
 function StopAnimTask(ped,animDictionary,animationName,p3)
     Citizen.InvokeNative(0x97FF36A1D40EA00A,ped,animDictionary,animationName,p3)
@@ -2604,7 +2604,7 @@ end
 ---@param y float
 ---@param z float
 ---@param heading float
----@param scenarioName const char*
+---@param scenarioName string
 function TaskStandGuard(ped,x,y,z,heading,scenarioName)
     Citizen.InvokeNative(0xAE032F8BBA959E90,ped,x,y,z,heading,scenarioName)
 end
@@ -2721,7 +2721,7 @@ end
 --- Old name: _GET_SCENARIO_POINT_ENTITY
 --- Native 0x295514F198EFD0CA (GET_PROP_FOR_SCENARIO_POINT)
 ---@param scenarioPoint number
----@param name const char*
+---@param name string
 ---@return entity
 function GetPropForScenarioPoint(scenarioPoint,name)
    return Citizen.InvokeNative(0x295514F198EFD0CA,scenarioPoint,name)
@@ -2732,7 +2732,7 @@ end
 --- Native 0x8360C47380B6F351 (_ASSOCIATE_PROP_WITH_SCENARIO)
 ---@param scenario number
 ---@param entity entity
----@param propName const char*
+---@param propName string
 ---@param p3 boolean
 ---@return boolean
 function AssociatePropWithScenario(scenario,entity,propName,p3)
@@ -2763,7 +2763,7 @@ end
 --- 
 --- Native 0x6EF4E31B4D5D2DA0 (_DISASSOCIATE_PROP_FROM_SCENARIO)
 ---@param scenario number
----@param propName const char*
+---@param propName string
 ---@return boolean
 function DisassociatePropFromScenario(scenario,propName)
    return Citizen.InvokeNative(0x6EF4E31B4D5D2DA0,scenario,propName)
@@ -2930,7 +2930,7 @@ end
 --- Native 0xCCDAE6324B6A821C (TASK_USE_SCENARIO_POINT)
 ---@param ped number
 ---@param scenario number
----@param conditionalAnim const char*
+---@param conditionalAnim string
 ---@param p3 number
 ---@param p4 boolean
 ---@param p5 boolean
@@ -2948,7 +2948,7 @@ end
 ---@param ped number
 ---@param ped2 number
 ---@param p2 any
----@param p3 const char*
+---@param p3 string
 ---@param p4 number
 ---@param p5 hash
 ---@param p6 float
@@ -2982,7 +2982,7 @@ end
 --- Native 0xA917E39F2CEFD215 (_TASK_START_SCENARIO_IN_PLACE_2)
 ---@param ped number
 ---@param p1 any
----@param p2 const char*
+---@param p2 string
 ---@param p3 number
 ---@param p4 boolean
 ---@param p5 float
@@ -3003,7 +3003,7 @@ end
 ---@param duration number
 ---@param sittingScenario boolean
 ---@param teleport boolean
----@param p9 const char*
+---@param p9 string
 ---@param p10 float
 ---@param p11 boolean
 function TaskStartScenarioAtPosition(ped,scenarioHash,x,y,z,heading,duration,sittingScenario,teleport,p9,p10,p11)
@@ -3178,8 +3178,8 @@ end
 --- 
 --- Native 0x748040460F8DF5DC (PLAY_ANIM_ON_RUNNING_SCENARIO)
 ---@param ped number
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 function PlayAnimOnRunningScenario(ped,animDict,animName)
     Citizen.InvokeNative(0x748040460F8DF5DC,ped,animDict,animName)
 end
@@ -3187,7 +3187,7 @@ end
 
 --- 
 --- Native 0xF9034C136C9E00D3 (DOES_SCENARIO_GROUP_EXIST)
----@param scenarioGroup const char*
+---@param scenarioGroup string
 ---@return boolean
 function DoesScenarioGroupExist(scenarioGroup)
    return Citizen.InvokeNative(0xF9034C136C9E00D3,scenarioGroup)
@@ -3205,7 +3205,7 @@ end
 
 --- 
 --- Native 0x367A09DED4E05B99 (IS_SCENARIO_GROUP_ENABLED)
----@param scenarioGroup const char*
+---@param scenarioGroup string
 ---@return boolean
 function IsScenarioGroupEnabled(scenarioGroup)
    return Citizen.InvokeNative(0x367A09DED4E05B99,scenarioGroup)
@@ -3223,7 +3223,7 @@ end
 
 --- 
 --- Native 0x02C8E5B49848664E (SET_SCENARIO_GROUP_ENABLED)
----@param scenarioGroup const char*
+---@param scenarioGroup string
 ---@param toggle boolean
 function SetScenarioGroupEnabled(scenarioGroup,toggle)
     Citizen.InvokeNative(0x02C8E5B49848664E,scenarioGroup,toggle)
@@ -3283,7 +3283,7 @@ end
 
 --- 
 --- Native 0x3A815DB3EA088722 (IS_SCENARIO_TYPE_ENABLED)
----@param scenarioType const char*
+---@param scenarioType string
 ---@return boolean
 function IsScenarioTypeEnabled(scenarioType)
    return Citizen.InvokeNative(0x3A815DB3EA088722,scenarioType)
@@ -3292,7 +3292,7 @@ end
 
 --- 
 --- Native 0xEB47EC4E34FB7EE1 (SET_SCENARIO_TYPE_ENABLED)
----@param scenarioType const char*
+---@param scenarioType string
 ---@param toggle boolean
 function SetScenarioTypeEnabled(scenarioType,toggle)
     Citizen.InvokeNative(0xEB47EC4E34FB7EE1,scenarioType,toggle)
@@ -3523,7 +3523,7 @@ end
 
 --- Note: patrolRoute must be prefixed with 'miss_' for it to be valid
 --- Native 0xA36BFB5EE89F3D82 (OPEN_PATROL_ROUTE)
----@param patrolRoute const char*
+---@param patrolRoute string
 function OpenPatrolRoute(patrolRoute)
     Citizen.InvokeNative(0xA36BFB5EE89F3D82,patrolRoute)
 end
@@ -3539,7 +3539,7 @@ end
 --- 
 --- Native 0x8EDF950167586B7C (ADD_PATROL_ROUTE_NODE)
 ---@param nodeId number
----@param scenarioName const char*
+---@param scenarioName string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -3571,7 +3571,7 @@ end
 
 --- 
 --- Native 0x7767DD9D65E91319 (DELETE_PATROL_ROUTE)
----@param patrolRoute const char*
+---@param patrolRoute string
 function DeletePatrolRoute(patrolRoute)
     Citizen.InvokeNative(0x7767DD9D65E91319,patrolRoute)
 end
@@ -3580,7 +3580,7 @@ end
 --- 
 --- Native 0xBDA5DF49D080FE4E (TASK_PATROL)
 ---@param ped number
----@param patrolRoute const char*
+---@param patrolRoute string
 ---@param p2 any
 ---@param p3 boolean
 ---@param p4 boolean
@@ -3854,7 +3854,7 @@ end
 
 --- 
 --- Native 0x9EEFB62EB27B5792 (REQUEST_WAYPOINT_RECORDING)
----@param waypointRecording const char*
+---@param waypointRecording string
 function RequestWaypointRecording(waypointRecording)
     Citizen.InvokeNative(0x9EEFB62EB27B5792,waypointRecording)
 end
@@ -3862,7 +3862,7 @@ end
 
 --- 
 --- Native 0xCB4E8BE8A0063C5D (GET_IS_WAYPOINT_RECORDING_LOADED)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@return boolean
 function GetIsWaypointRecordingLoaded(waypointRecording)
    return Citizen.InvokeNative(0xCB4E8BE8A0063C5D,waypointRecording)
@@ -3871,7 +3871,7 @@ end
 
 --- 
 --- Native 0xFF1B8B4AA1C25DC8 (REMOVE_WAYPOINT_RECORDING)
----@param waypointRecording const char*
+---@param waypointRecording string
 function RemoveWaypointRecording(waypointRecording)
     Citizen.InvokeNative(0xFF1B8B4AA1C25DC8,waypointRecording)
 end
@@ -3879,7 +3879,7 @@ end
 
 --- 
 --- Native 0x5343532C01A07234 (WAYPOINT_RECORDING_GET_NUM_POINTS)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param points int*
 ---@return boolean
 function WaypointRecordingGetNumPoints(waypointRecording,points)
@@ -3889,7 +3889,7 @@ end
 
 --- 
 --- Native 0x2FB897405C90B361 (WAYPOINT_RECORDING_GET_COORD)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param point number
 ---@param coord vector3*
 ---@return boolean
@@ -3900,7 +3900,7 @@ end
 
 --- 
 --- Native 0x005622AEBC33ACA9 (WAYPOINT_RECORDING_GET_SPEED_AT_POINT)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param point number
 ---@return float
 function WaypointRecordingGetSpeedAtPoint(waypointRecording,point)
@@ -3910,7 +3910,7 @@ end
 
 --- 
 --- Native 0xB629A298081F876F (WAYPOINT_RECORDING_GET_CLOSEST_WAYPOINT)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -3933,7 +3933,7 @@ end
 --- 
 --- Native 0x0759591819534F7B (TASK_FOLLOW_WAYPOINT_RECORDING)
 ---@param ped number
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p2 number
 ---@param flag number
 ---@param p4 number
@@ -3948,7 +3948,7 @@ end
 --- 
 --- Native 0xBE9B0520BD7C445B (TASK_FOLLOW_WAYPOINT_RECORDING_AT_OFFSET)
 ---@param ped number
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p2 float
 ---@param p3 number
 ---@param p4 number
@@ -3963,7 +3963,7 @@ end
 --- Native 0x4D2B787BAE9AB760 (TASK_FOLLOW_ENTITY_ALONG_WAYPOINT_RECORDING_AT_OFFSET)
 ---@param ped0 number
 ---@param ped1 number
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p3 float
 ---@param p4 float
 ---@param p5 number
@@ -3978,7 +3978,7 @@ end
 --- 
 --- Native 0xE03B3F2D3DC59B64 (IS_WAYPOINT_PLAYBACK_GOING_ON_FOR_PED)
 ---@param ped number
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@return boolean
 function IsWaypointPlaybackGoingOnForPed(ped,waypointRecording)
    return Citizen.InvokeNative(0xE03B3F2D3DC59B64,ped,waypointRecording)
@@ -4017,7 +4017,7 @@ end
 
 --- 
 --- Native 0xA5B769058763E497 (GET_WAYPOINT_DISTANCE_ALONG_ROUTE)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p1 number
 ---@return float
 function GetWaypointDistanceAlongRoute(waypointRecording,p1)
@@ -4105,7 +4105,7 @@ end
 
 --- 
 --- Native 0x5A353B8E6B1095B5 (USE_WAYPOINT_RECORDING_AS_ASSISTED_MOVEMENT_ROUTE)
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param p1 boolean
 ---@param p2 float
 ---@param p3 float
@@ -4198,7 +4198,7 @@ end
 
 --- 
 --- Native 0x3548536485DD792B (ASSISTED_MOVEMENT_REMOVE_ROUTE)
----@param route const char*
+---@param route string
 function AssistedMovementRemoveRoute(route)
     Citizen.InvokeNative(0x3548536485DD792B,route)
 end
@@ -4206,7 +4206,7 @@ end
 
 --- 
 --- Native 0x5C885E0978B6AD60 (_CREATE_WAYPOINT_PATH)
----@param pathName const char*
+---@param pathName string
 ---@param p1 any*
 ---@param nodes number
 ---@param p3 number
@@ -4218,7 +4218,7 @@ end
 
 --- 
 --- Native 0x60F9A4393A21F741 (ASSISTED_MOVEMENT_IS_ROUTE_LOADED)
----@param route const char*
+---@param route string
 ---@return boolean
 function AssistedMovementIsRouteLoaded(route)
    return Citizen.InvokeNative(0x60F9A4393A21F741,route)
@@ -4227,7 +4227,7 @@ end
 
 --- 
 --- Native 0xD5002D78B7162E1B (ASSISTED_MOVEMENT_SET_ROUTE_PROPERTIES)
----@param route const char*
+---@param route string
 ---@param props number
 function AssistedMovementSetRouteProperties(route,props)
     Citizen.InvokeNative(0xD5002D78B7162E1B,route,props)
@@ -4263,7 +4263,7 @@ end
 --- Native 0x3123FAA6DB1CF7ED (TASK_VEHICLE_FOLLOW_WAYPOINT_RECORDING)
 ---@param ped number
 ---@param vehicle vehicle
----@param waypointRecording const char*
+---@param waypointRecording string
 ---@param drivingMode number
 ---@param p4 any
 ---@param eWaypoint number
@@ -4417,10 +4417,10 @@ end
 --- 
 --- Native 0x2D537BA194896636 (TASK_MOVE_NETWORK_BY_NAME)
 ---@param ped number
----@param task const char*
+---@param task string
 ---@param multiplier float
 ---@param p3 boolean
----@param animDict const char*
+---@param animDict string
 ---@param flags number
 function TaskMoveNetworkByName(ped,task,multiplier,p3,animDict,flags)
     Citizen.InvokeNative(0x2D537BA194896636,ped,task,multiplier,p3,animDict,flags)
@@ -4430,11 +4430,11 @@ end
 --- 
 --- Native 0x139805C2A67C4795 (TASK_MOVE_NETWORK_BY_NAME_WITH_INIT_PARAMS)
 ---@param ped number
----@param moveNetworkDefName const char*
+---@param moveNetworkDefName string
 ---@param taskData any*
 ---@param p3 float
 ---@param p4 boolean
----@param animDict const char*
+---@param animDict string
 ---@param flags number
 function TaskMoveNetworkByNameWithInitParams(ped,moveNetworkDefName,taskData,p3,p4,animDict,flags)
     Citizen.InvokeNative(0x139805C2A67C4795,ped,moveNetworkDefName,taskData,p3,p4,animDict,flags)
@@ -4444,7 +4444,7 @@ end
 --- 
 --- Native 0x7B6A04F98BBAFB2C (TASK_MOVE_NETWORK_ADVANCED_BY_NAME_WITH_INIT_PARAMS)
 ---@param ped number
----@param moveNetworkDefName const char*
+---@param moveNetworkDefName string
 ---@param taskData any*
 ---@param xPos float
 ---@param yPos float
@@ -4519,7 +4519,7 @@ end
 --- 
 --- Native 0xD01015C7316AE176 (REQUEST_TASK_MOVE_NETWORK_STATE_TRANSITION)
 ---@param ped number
----@param name const char*
+---@param name string
 function RequestTaskMoveNetworkStateTransition(ped,name)
     Citizen.InvokeNative(0xD01015C7316AE176,ped,name)
 end
@@ -4528,7 +4528,7 @@ end
 --- 
 --- Native 0x717E4D1F2048376D (GET_TASK_MOVE_NETWORK_STATE)
 ---@param ped number
----@return const char*
+---@return string
 function GetTaskMoveNetworkState(ped)
    return Citizen.InvokeNative(0x717E4D1F2048376D,ped)
 end
@@ -4537,7 +4537,7 @@ end
 --- 
 --- Native 0xD5BB4025AE449A4E (SET_TASK_MOVE_NETWORK_SIGNAL_FLOAT)
 ---@param ped number
----@param signalName const char*
+---@param signalName string
 ---@param value float
 function SetTaskMoveNetworkSignalFloat(ped,signalName,value)
     Citizen.InvokeNative(0xD5BB4025AE449A4E,ped,signalName,value)
@@ -4547,7 +4547,7 @@ end
 --- 
 --- Native 0x099D4A855D53B03B (_SET_TASK_MOVE_NETWORK_SIGNAL_FLOAT_2)
 ---@param ped number
----@param signalName const char*
+---@param signalName string
 ---@param value float
 function SetTaskMoveNetworkSignalFloat2(ped,signalName,value)
     Citizen.InvokeNative(0x099D4A855D53B03B,ped,signalName,value)
@@ -4557,7 +4557,7 @@ end
 --- 
 --- Native 0xB0A6CFD2C69C1088 (SET_TASK_MOVE_NETWORK_SIGNAL_BOOL)
 ---@param ped number
----@param signalName const char*
+---@param signalName string
 ---@param value boolean
 function SetTaskMoveNetworkSignalBool(ped,signalName,value)
     Citizen.InvokeNative(0xB0A6CFD2C69C1088,ped,signalName,value)
@@ -4567,7 +4567,7 @@ end
 --- 
 --- Native 0x4662BFE01938D98D (_SET_TASK_MOVE_NETWORK_SIGNAL_VECTOR)
 ---@param ped number
----@param signalName const char*
+---@param signalName string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -4579,7 +4579,7 @@ end
 --- 
 --- Native 0x844CEEE428EA35B0 (_GET_TASK_MOVE_NETWORK_PHASE_FLOAT)
 ---@param ped number
----@param phaseName const char*
+---@param phaseName string
 ---@return float
 function GetTaskMoveNetworkPhaseFloat(ped,phaseName)
    return Citizen.InvokeNative(0x844CEEE428EA35B0,ped,phaseName)
@@ -4589,7 +4589,7 @@ end
 --- 
 --- Native 0xB4F47213DF45A64C (GET_TASK_MOVE_NETWORK_EVENT)
 ---@param ped number
----@param eventName const char*
+---@param eventName string
 ---@return boolean
 function GetTaskMoveNetworkEvent(ped,eventName)
    return Citizen.InvokeNative(0xB4F47213DF45A64C,ped,eventName)
@@ -4999,8 +4999,8 @@ end
 ---@param ped number
 ---@param flags number
 ---@param getupSetHash hash
----@param p3 const char*
----@param p4 const char*
+---@param p3 string
+---@param p4 string
 ---@param p5 float
 function UnhogtiePed(ped,flags,getupSetHash,p3,p4,p5)
     Citizen.InvokeNative(0x79559BAD83CCD038,ped,flags,getupSetHash,p3,p4,p5)
@@ -5086,7 +5086,7 @@ end
 --- Native 0x1BF9D36A5EAFFBAE (SET_ENHANCED_BREAK_FREE)
 ---@param ped number
 ---@param p1 boolean
----@param clipset const char*
+---@param clipset string
 ---@return boolean
 function SetEnhancedBreakFree(ped,p1,clipset)
    return Citizen.InvokeNative(0x1BF9D36A5EAFFBAE,ped,p1,clipset)
@@ -5236,7 +5236,7 @@ end
 --- Baits: see 0x9B0C7FA063E67629
 --- Native 0x2C28AC30A72722DA (TASK_SWAP_FISHING_BAIT)
 ---@param ped number
----@param bait const char*
+---@param bait string
 ---@param withoutBuoy boolean
 function TaskSwapFishingBait(ped,bait,withoutBuoy)
     Citizen.InvokeNative(0x2C28AC30A72722DA,ped,bait,withoutBuoy)
@@ -5246,7 +5246,7 @@ end
 --- Baits: p_fishHook02x, p_baitBread01x, p_baitCorn01x, p_baitCheese01x, p_baitWorm01x, p_baitCricket01x, p_crawdad01x, p_finisheDragonfly01x, p_finisdFishlure01x, p_finishdCrawd01x, p_finisheDragonflyLegendary01x, p_finisdFishlureLegendary01x, p_finishdCrawdLegendary01x, p_lgoc_spinner_v4
 --- Native 0x9B0C7FA063E67629 (_SET_FISHING_BAIT)
 ---@param ped number
----@param bait const char*
+---@param bait string
 ---@param withoutBuoy boolean
 ---@param instantly boolean
 function SetFishingBait(ped,bait,withoutBuoy,instantly)

@@ -120,8 +120,8 @@ end
 
 --- 
 --- Native 0x9FFAF4940A54CC09 (GET_ANIM_DURATION)
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@return float
 function GetAnimDuration(animDict,animName)
    return Citizen.InvokeNative(0x9FFAF4940A54CC09,animDict,animName)
@@ -793,8 +793,8 @@ end
 --- 
 --- Native 0xDEE49D5CA6C49148 (IS_ENTITY_PLAYING_ANIM)
 ---@param entity entity
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param animType number
 ---@return boolean
 function IsEntityPlayingAnim(entity,animDict,animName,animType)
@@ -1217,7 +1217,7 @@ end
 --- 
 --- Native 0xBACA8FE9C76C124E (GET_ENTITY_BONE_INDEX_BY_NAME)
 ---@param entity entity
----@param boneName const char*
+---@param boneName string
 ---@return number
 function GetEntityBoneIndexByName(entity,boneName)
    return Citizen.InvokeNative(0xBACA8FE9C76C124E,entity,boneName)
@@ -1889,7 +1889,7 @@ end
 ---@param entityType number
 ---@param p3 any
 ---@param p4 hash
----@param p5 const char*
+---@param p5 string
 ---@return number
 function GetMatchingEntities(volume,itemSet,entityType,p3,p4,p5)
    return Citizen.InvokeNative(0x84CCF9A12942C83D,volume,itemSet,entityType,p3,p4,p5)
@@ -1929,9 +1929,9 @@ end
 
 --- 
 --- Native 0x42718CC559BD7776 (FIND_ANIM_EVENT_PHASE)
----@param animDictionary const char*
----@param animName const char*
----@param p2 const char*
+---@param animDictionary string
+---@param animName string
+---@param p2 string
 ---@param p3 any*
 ---@param p4 any*
 ---@return boolean
@@ -1952,8 +1952,8 @@ end
 --- 
 --- Native 0x627520389E288A73 (_GET_ENTITY_ANIM_CURRENT_TIME)
 ---@param entity entity
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@return float
 function GetEntityAnimCurrentTime(entity,animDict,animName)
    return Citizen.InvokeNative(0x627520389E288A73,entity,animDict,animName)
@@ -1973,8 +1973,8 @@ end
 --- 
 --- Native 0xAEB40615337EF1E3 (HAS_ENTITY_ANIM_FINISHED)
 ---@param entity entity
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param p3 number
 ---@return boolean
 function HasEntityAnimFinished(entity,animDict,animName,p3)
@@ -1985,8 +1985,8 @@ end
 --- https://github.com/femga/rdr3_discoveries/tree/master/animations
 --- Native 0xDC6D22FAB76D4874 (PLAY_ENTITY_ANIM)
 ---@param entity entity
----@param animName const char*
----@param animDict const char*
+---@param animName string
+---@param animDict string
 ---@param p3 float
 ---@param loop boolean
 ---@param stayInAnim boolean
@@ -2002,8 +2002,8 @@ end
 --- https://gfycat.com/amazingmiserlyamericanquarterhorse
 --- Native 0x11CDABDC7783B2BC (_SET_ENTITY_ANIM_CURRENT_TIME)
 ---@param entity entity
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param time float
 function SetEntityAnimCurrentTime(entity,animDict,animName,time)
     Citizen.InvokeNative(0x11CDABDC7783B2BC,entity,animDict,animName,time)
@@ -2013,8 +2013,8 @@ end
 --- 
 --- Native 0xEAA885BA3CEA4E4A (_SET_ENTITY_ANIM_SPEED)
 ---@param entity entity
----@param animDict const char*
----@param animName const char*
+---@param animDict string
+---@param animName string
 ---@param speedMultiplier float
 function SetEntityAnimSpeed(entity,animDict,animName,speedMultiplier)
     Citizen.InvokeNative(0xEAA885BA3CEA4E4A,entity,animDict,animName,speedMultiplier)
@@ -2024,8 +2024,8 @@ end
 --- 
 --- Native 0x786591D986DE9159 (STOP_ENTITY_ANIM)
 ---@param entity entity
----@param animation const char*
----@param animGroup const char*
+---@param animation string
+---@param animGroup string
 ---@param p3 float
 ---@return any
 function StopEntityAnim(entity,animation,animGroup,p3)
@@ -2053,7 +2053,7 @@ end
 --- 
 --- Native 0x29BA9F78321E5A6C (_CREATE_FOOTPATH_TRAIL)
 ---@param p0 any
----@param waypointRecord const char*
+---@param waypointRecord string
 ---@param bUseSnowOffset boolean
 ---@param p3 float
 ---@param p4 float

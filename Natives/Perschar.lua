@@ -10,7 +10,7 @@ end
 --- 
 --- Native 0x187D65F3AEC5D679 (_SET_PERSCHAR_SCHEDULE)
 ---@param persCharHash hash
----@param schedule const char*
+---@param schedule string
 function SetPerscharSchedule(persCharHash,schedule)
     Citizen.InvokeNative(0x187D65F3AEC5D679,persCharHash,schedule)
 end

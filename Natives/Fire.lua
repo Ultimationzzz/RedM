@@ -9,7 +9,7 @@
 ---@param p3 number
 ---@param p4 float
 ---@param p5 boolean
----@param soundsetName const char*
+---@param soundsetName string
 ---@param p7 float
 ---@param p8 number
 ---@return fireid

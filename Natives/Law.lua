@@ -526,7 +526,7 @@ end
 
 --- 
 --- Native 0x8F9DE75680275C9F (_CREATE_GUARD_ZONE)
----@param name const char*
+---@param name string
 function CreateGuardZone(name)
     Citizen.InvokeNative(0x8F9DE75680275C9F,name)
 end
@@ -534,7 +534,7 @@ end
 
 --- 
 --- Native 0x67EBDD958835956C (_REMOVE_GUARD_ZONE)
----@param name const char*
+---@param name string
 function RemoveGuardZone(name)
     Citizen.InvokeNative(0x67EBDD958835956C,name)
 end
@@ -542,7 +542,7 @@ end
 
 --- 
 --- Native 0x26D558692B25DD95 (_DISABLE_GUARD_ZONE)
----@param name const char*
+---@param name string
 function DisableGuardZone(name)
     Citizen.InvokeNative(0x26D558692B25DD95,name)
 end
@@ -559,7 +559,7 @@ end
 
 --- Returns true when investigation creation was successful
 --- Native 0x0D4B77E862475ED3 (_CREATE_GUARD_ZONE_FOR_ENTITY)
----@param guardZoneName const char*
+---@param guardZoneName string
 ---@param entity entity
 ---@param x float
 ---@param y float
@@ -572,7 +572,7 @@ end
 
 --- 
 --- Native 0x8C598A930F471938 (_SET_GUARD_ZONE_VOLUME_REGISTRATION_START)
----@param name const char*
+---@param name string
 ---@param volume volume
 function SetGuardZoneVolumeRegistrationStart(name,volume)
     Citizen.InvokeNative(0x8C598A930F471938,name,volume)
@@ -581,7 +581,7 @@ end
 
 --- 
 --- Native 0x35815F372D43E1E5 (_SET_GUARD_ZONE_VOLUME_RESTRICTED)
----@param name const char*
+---@param name string
 ---@param volume volume
 function SetGuardZoneVolumeRestricted(name,volume)
     Citizen.InvokeNative(0x35815F372D43E1E5,name,volume)
@@ -590,7 +590,7 @@ end
 
 --- 
 --- Native 0xA1B0E6301E2E02A6 (_SET_GUARD_ZONE_VOLUME_THREAT)
----@param name const char*
+---@param name string
 ---@param volume volume
 function SetGuardZoneVolumeThreat(name,volume)
     Citizen.InvokeNative(0xA1B0E6301E2E02A6,name,volume)
@@ -599,7 +599,7 @@ end
 
 --- 
 --- Native 0xAD3E07C37A7C1ADC (_SET_GUARD_ZONE_VOLUME_WARNING)
----@param name const char*
+---@param name string
 ---@param volume volume
 function SetGuardZoneVolumeWarning(name,volume)
     Citizen.InvokeNative(0xAD3E07C37A7C1ADC,name,volume)
@@ -608,7 +608,7 @@ end
 
 --- 
 --- Native 0xA8A74AA79FB67159 (_SET_GUARD_ZONE_VOLUME_REGISTRATION_END)
----@param name const char*
+---@param name string
 ---@param volume volume
 function SetGuardZoneVolumeRegistrationEnd(name,volume)
     Citizen.InvokeNative(0xA8A74AA79FB67159,name,volume)
@@ -617,7 +617,7 @@ end
 
 --- 
 --- Native 0x7E7BF59F89FC6C6D (_SET_GUARD_ZONE_POSITION)
----@param name const char*
+---@param name string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -628,7 +628,7 @@ end
 
 --- 
 --- Native 0x2F9005E2EA4E5EE4 (_SET_GUARD_ZONE_POSITION_2)
----@param name const char*
+---@param name string
 ---@param x float
 ---@param y float
 ---@param z float

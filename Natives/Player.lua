@@ -67,7 +67,7 @@ end
 --- 
 --- Native 0x7124FD9AC0E01BA0 (GET_PLAYER_NAME)
 ---@param player player
----@return const char*
+---@return string
 function GetPlayerName(player)
    return Citizen.InvokeNative(0x7124FD9AC0E01BA0,player)
 end
@@ -75,8 +75,8 @@ end
 
 --- 
 --- Native 0x5B6193813E03E4E9 (_FORMAT_PLAYER_NAME_STRING)
----@param string const char*
----@return const char*
+---@param string string
+---@return string
 function FormatPlayerNameString(string)
    return Citizen.InvokeNative(0x5B6193813E03E4E9,string)
 end
@@ -714,7 +714,7 @@ end
 
 --- 
 --- Native 0xDAACAF8B687F2353 (FORCE_CLEANUP_FOR_ALL_THREADS_WITH_THIS_NAME)
----@param name const char*
+---@param name string
 ---@param cleanupFlags number
 function ForceCleanupForAllThreadsWithThisName(name,cleanupFlags)
     Citizen.InvokeNative(0xDAACAF8B687F2353,name,cleanupFlags)
@@ -879,7 +879,7 @@ end
 --- damageInfo: STANDARD_PED_DAMAGE, STANDARD_FEMALE_PED_DAMAGE, STANDARD_PLAYER_PED_DAMAGE_MP, STANDARD_FEMALE_PLAYER_PED_DAMAGE_MP
 --- Native 0x78B3D19AF6391A55 (_SET_PLAYER_DAMAGE_INFO_OVERRIDE)
 ---@param player player
----@param damageInfo const char*
+---@param damageInfo string
 function SetPlayerDamageInfoOverride(player,damageInfo)
     Citizen.InvokeNative(0x78B3D19AF6391A55,player,damageInfo)
 end
@@ -1803,7 +1803,7 @@ end
 --- 
 --- Native 0x40AB73092C95B5F5 (_EAGLE_EYE_DISABLE_TRACKING_TRAIL)
 ---@param entity entity
----@param trail const char*
+---@param trail string
 ---@param p2 any
 ---@param p3 any
 function EagleEyeDisableTrackingTrail(entity,trail,p2,p3)
@@ -2016,7 +2016,7 @@ end
 --- 
 --- Native 0xC6366A585659D15C (_SET_PLAYER_INTERACTION_POSITIVE_RESPONSE)
 ---@param player player
----@param speech const char*
+---@param speech string
 function SetPlayerInteractionPositiveResponse(player,speech)
     Citizen.InvokeNative(0xC6366A585659D15C,player,speech)
 end
@@ -2025,7 +2025,7 @@ end
 --- 
 --- Native 0x98CD760DE43B612E (_SET_PLAYER_INTERACTION_NEGATIVE_RESPONSE)
 ---@param player player
----@param speech const char*
+---@param speech string
 function SetPlayerInteractionNegativeResponse(player,speech)
     Citizen.InvokeNative(0x98CD760DE43B612E,player,speech)
 end
@@ -2157,7 +2157,7 @@ end
 --- 
 --- Native 0x755E08680F21EF30 (GET_TARGET_CHARACTER_NAME_SCRIPT_OVERRIDE_RAW_STRING)
 ---@param ped number
----@return const char*
+---@return string
 function GetTargetCharacterNameScriptOverrideRawString(ped)
    return Citizen.InvokeNative(0x755E08680F21EF30,ped)
 end
@@ -2230,7 +2230,7 @@ end
 --- Focus Fire VFX start for player: p1 = focusfire
 --- Native 0x5F8E0303C229C84B (_SET_LOCKON_FOCUS_FIRE_VFX)
 ---@param player player
----@param p1 const char*
+---@param p1 string
 function SetLockonFocusFireVfx(player,p1)
     Citizen.InvokeNative(0x5F8E0303C229C84B,player,p1)
 end

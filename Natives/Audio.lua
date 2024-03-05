@@ -7,7 +7,7 @@ end
 
 --- 
 --- Native 0xEF51242E35242B47 (_CLEAR_CONVERSATION_HISTORY_FOR_SCRIPTED_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 function ClearConversationHistoryForScriptedConversation(convoRoot)
     Citizen.InvokeNative(0xEF51242E35242B47,convoRoot)
 end
@@ -15,7 +15,7 @@ end
 
 --- 
 --- Native 0xD2C91A0B572AAE56 (CREATE_NEW_SCRIPTED_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 ---@return boolean
 function CreateNewScriptedConversation(convoRoot)
    return Citizen.InvokeNative(0xD2C91A0B572AAE56,convoRoot)
@@ -24,9 +24,9 @@ end
 
 --- 
 --- Native 0x95D9F4BC443956E7 (ADD_PED_TO_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 ---@param ped number
----@param characterName const char*
+---@param characterName string
 function AddPedToConversation(convoRoot,ped,characterName)
     Citizen.InvokeNative(0x95D9F4BC443956E7,convoRoot,ped,characterName)
 end
@@ -34,7 +34,7 @@ end
 
 --- 
 --- Native 0x6B17C62C9635D2DC (START_SCRIPT_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 ---@param p1 boolean
 ---@param p2 boolean
 ---@param clone boolean
@@ -45,7 +45,7 @@ end
 
 --- 
 --- Native 0x3B3CAD6166916D87 (PRELOAD_SCRIPT_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 ---@param p1 boolean
 ---@param p2 boolean
 ---@param clone boolean
@@ -56,7 +56,7 @@ end
 
 --- 
 --- Native 0x23641AFE870AF385 (START_PRELOADED_CONVERSATION)
----@param convoRoot const char*
+---@param convoRoot string
 function StartPreloadedConversation(convoRoot)
     Citizen.InvokeNative(0x23641AFE870AF385,convoRoot)
 end
@@ -64,7 +64,7 @@ end
 
 --- 
 --- Native 0xD89504D9D7D5057D (_IS_SCRIPTED_CONVERSATION_CREATED)
----@param convoRoot const char*
+---@param convoRoot string
 ---@return boolean
 function IsScriptedConversationCreated(convoRoot)
    return Citizen.InvokeNative(0xD89504D9D7D5057D,convoRoot)
@@ -73,7 +73,7 @@ end
 
 --- 
 --- Native 0xDF0D54BE7A776737 (IS_SCRIPTED_CONVERSATION_LOADED)
----@param convoRoot const char*
+---@param convoRoot string
 ---@return boolean
 function IsScriptedConversationLoaded(convoRoot)
    return Citizen.InvokeNative(0xDF0D54BE7A776737,convoRoot)
@@ -91,7 +91,7 @@ end
 
 --- 
 --- Native 0x1ECC76792F661CF5 (IS_SCRIPTED_CONVERSATION_PLAYING)
----@param p0 const char*
+---@param p0 string
 ---@return boolean
 function IsScriptedConversationPlaying(p0)
    return Citizen.InvokeNative(0x1ECC76792F661CF5,p0)
@@ -100,7 +100,7 @@ end
 
 --- 
 --- Native 0xF01C570E0A0A1E67 (_IS_SCRIPTED_CONVERSION_ONGOING)
----@param p0 const char*
+---@param p0 string
 ---@return boolean
 function IsScriptedConversionOngoing(p0)
    return Citizen.InvokeNative(0xF01C570E0A0A1E67,p0)
@@ -109,7 +109,7 @@ end
 
 --- 
 --- Native 0x480357EE890C295A (GET_CURRENT_SCRIPTED_CONVERSATION_LINE)
----@param p0 const char*
+---@param p0 string
 ---@return number
 function GetCurrentScriptedConversationLine(p0)
    return Citizen.InvokeNative(0x480357EE890C295A,p0)
@@ -118,7 +118,7 @@ end
 
 --- 
 --- Native 0x8530AD776CD72B12 (PAUSE_SCRIPTED_CONVERSATION)
----@param p0 const char*
+---@param p0 string
 ---@param p1 boolean
 ---@param p2 boolean
 ---@param p3 boolean
@@ -130,7 +130,7 @@ end
 
 --- 
 --- Native 0x9AEB285D1818C9AC (RESTART_SCRIPTED_CONVERSATION)
----@param p0 const char*
+---@param p0 string
 function RestartScriptedConversation(p0)
     Citizen.InvokeNative(0x9AEB285D1818C9AC,p0)
 end
@@ -148,7 +148,7 @@ end
 
 --- 
 --- Native 0xD79DEEFB53455EBA (STOP_SCRIPTED_CONVERSATION)
----@param p0 const char*
+---@param p0 string
 ---@param p1 boolean
 ---@param p2 boolean
 ---@return number
@@ -159,7 +159,7 @@ end
 
 --- 
 --- Native 0x9663FE6B7A61EB00 (SKIP_TO_NEXT_SCRIPTED_CONVERSATION_LINE)
----@param p0 const char*
+---@param p0 string
 function SkipToNextScriptedConversationLine(p0)
     Citizen.InvokeNative(0x9663FE6B7A61EB00,p0)
 end
@@ -182,7 +182,7 @@ end
 
 --- 
 --- Native 0x2F844A8B08D76685 (REQUEST_SCRIPT_AUDIO_BANK)
----@param audioBank const char*
+---@param audioBank string
 ---@return boolean
 function RequestScriptAudioBank(audioBank)
    return Citizen.InvokeNative(0x2F844A8B08D76685,audioBank)
@@ -191,7 +191,7 @@ end
 
 --- 
 --- Native 0x77ED170667F50170 (RELEASE_NAMED_SCRIPT_AUDIO_BANK)
----@param audioBank const char*
+---@param audioBank string
 function ReleaseNamedScriptAudioBank(audioBank)
     Citizen.InvokeNative(0x77ED170667F50170,audioBank)
 end
@@ -222,8 +222,8 @@ end
 
 --- 
 --- Native 0x7FF4944CC209192D (PLAY_SOUND)
----@param audioName const char*
----@param audioRef const char*
+---@param audioName string
+---@param audioRef string
 ---@param p2 boolean
 ---@param p3 any
 ---@param p4 boolean
@@ -235,8 +235,8 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/audio/frontend_soundsets
 --- Native 0x67C540AA08E4A6F5 (PLAY_SOUND_FRONTEND)
----@param audioName const char*
----@param audioRef const char*
+---@param audioName string
+---@param audioRef string
 ---@param p2 boolean
 ---@param p3 any
 function PlaySoundFrontend(audioName,audioRef,p2,p3)
@@ -257,9 +257,9 @@ end
 
 --- 
 --- Native 0x6FB1DA3CA9DA7D90 (PLAY_SOUND_FROM_ENTITY)
----@param audioName const char*
+---@param audioName string
 ---@param entity entity
----@param audioRef const char*
+---@param audioRef string
 ---@param isNetwork boolean
 ---@param p4 any
 ---@param p5 any
@@ -270,11 +270,11 @@ end
 
 --- 
 --- Native 0xCCE219C922737BFA (_PLAY_SOUND_FROM_POSITION)
----@param audioName const char*
+---@param audioName string
 ---@param x float
 ---@param y float
 ---@param z float
----@param audioRef const char*
+---@param audioRef string
 ---@param isNetwork boolean
 ---@param p6 any
 ---@param p7 boolean
@@ -286,8 +286,8 @@ end
 
 --- 
 --- Native 0x0F2A2175734926D8 (_STOP_SOUND_WITH_NAME)
----@param audioName const char*
----@param audioRef const char*
+---@param audioName string
+---@param audioRef string
 function StopSoundWithName(audioName,audioRef)
     Citizen.InvokeNative(0x0F2A2175734926D8,audioName,audioRef)
 end
@@ -306,10 +306,10 @@ end
 
 --- 
 --- Native 0x9821B68CD3E05F2B (_SET_VARIABLE_ON_SOUND_WITH_NAME)
----@param variableName const char*
+---@param variableName string
 ---@param variableValue float
----@param audioName const char*
----@param audioRef const char*
+---@param audioName string
+---@param audioRef string
 function SetVariableOnSoundWithName(variableName,variableValue,audioName,audioRef)
     Citizen.InvokeNative(0x9821B68CD3E05F2B,variableName,variableValue,audioName,audioRef)
 end
@@ -318,7 +318,7 @@ end
 --- whistleConfig: Ped.WhistlePitch (0.0 - 1.0), Ped.WhistleClarity (0.0 - 1.0), Ped.WhistleShape (0.0 - 10.0)
 --- Native 0x9963681A8BC69BF3 (_SET_WHISTLE_CONFIG_FOR_PED)
 ---@param ped number
----@param whistleConfig const char*
+---@param whistleConfig string
 ---@param value float
 function SetWhistleConfigForPed(ped,whistleConfig,value)
     Citizen.InvokeNative(0x9963681A8BC69BF3,ped,whistleConfig,value)
@@ -329,8 +329,8 @@ end
 ---p2: Player, Enemy, Teammate, Neutral
 --- Native 0x2E31ACA7477CF00F (_SET_SOUND_RELATIONSHIP_ON_PED)
 ---@param ped number
----@param p1 const char*
----@param p2 const char*
+---@param p1 string
+---@param p2 string
 function SetSoundRelationshipOnPed(ped,p1,p2)
     Citizen.InvokeNative(0x2E31ACA7477CF00F,ped,p1,p2)
 end
@@ -339,8 +339,8 @@ end
 --- 
 --- Native 0xCE5D0FFE83939AF1 (_PLAY_SOUND_FRONTEND_WITH_SOUND_ID)
 ---@param soundId number
----@param name const char*
----@param soundSet const char*
+---@param name string
+---@param soundSet string
 ---@param p3 boolean
 function PlaySoundFrontendWithSoundId(soundId,name,soundSet,p3)
     Citizen.InvokeNative(0xCE5D0FFE83939AF1,soundId,name,soundSet,p3)
@@ -350,9 +350,9 @@ end
 --- Params: p5 seems to be always 0
 --- Native 0xF1C5310FEAA36B48 (_PLAY_SOUND_FROM_ENTITY_WITH_SET)
 ---@param soundId number
----@param soundName const char*
+---@param soundName string
 ---@param entity entity
----@param soundsetName const char*
+---@param soundsetName string
 ---@param p4 boolean
 ---@param p5 any
 function PlaySoundFromEntityWithSet(soundId,soundName,entity,soundsetName,p4,p5)
@@ -364,11 +364,11 @@ end
 ---_PLAY_SOUND_FROM_ENTITY* - _PLAY_SOUND_FRONTEND*
 --- Native 0xDCF5BA95BBF0FABA (_PLAY_SOUND_FROM_POSITION_WITH_ID)
 ---@param soundId number
----@param soundName const char*
+---@param soundName string
 ---@param x float
 ---@param y float
 ---@param z float
----@param soundsetName const char*
+---@param soundsetName string
 ---@param p6 boolean
 ---@param p7 number
 ---@param p8 boolean
@@ -399,7 +399,7 @@ end
 --- 
 --- Native 0x503703EC1781B7D6 (_SET_VARIABLE_ON_SOUND_WITH_ID)
 ---@param soundId number
----@param variableName const char*
+---@param variableName string
 ---@param variableValue float
 function SetVariableOnSoundWithId(soundId,variableName,variableValue)
     Citizen.InvokeNative(0x503703EC1781B7D6,soundId,variableName,variableValue)
@@ -408,8 +408,8 @@ end
 
 --- 
 --- Native 0xE368E8422C860BA7 (PREPARE_SOUND)
----@param soundName const char*
----@param soundsetName const char*
+---@param soundName string
+---@param soundsetName string
 ---@param soundId number
 ---@return boolean
 function PrepareSound(soundName,soundsetName,soundId)
@@ -419,8 +419,8 @@ end
 
 --- 
 --- Native 0x9D746964E0CF2C5F (_RELEASE_SHARD_SOUNDS)
----@param soundName const char*
----@param soundsetName const char*
+---@param soundName string
+---@param soundsetName string
 function ReleaseShardSounds(soundName,soundsetName)
     Citizen.InvokeNative(0x9D746964E0CF2C5F,soundName,soundsetName)
 end
@@ -428,7 +428,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/audio/soundsets
 --- Native 0xD9130842D7226045 (PREPARE_SOUNDSET)
----@param soundsetName const char*
+---@param soundsetName string
 ---@param p1 boolean
 ---@return boolean
 function PrepareSoundset(soundsetName,p1)
@@ -438,7 +438,7 @@ end
 
 --- 
 --- Native 0x531A78D6BF27014B (_RELEASE_SOUNDSET)
----@param soundsetName const char*
+---@param soundsetName string
 function ReleaseSoundset(soundsetName)
     Citizen.InvokeNative(0x531A78D6BF27014B,soundsetName)
 end
@@ -446,9 +446,9 @@ end
 
 --- 
 --- Native 0x4AD019591E94C064 (PREPARE_SOUND_WITH_ENTITY)
----@param soundName const char*
+---@param soundName string
 ---@param entity entity
----@param soundsetName const char*
+---@param soundsetName string
 ---@param soundId number
 ---@return boolean
 function PrepareSoundWithEntity(soundName,entity,soundsetName,soundId)
@@ -458,8 +458,8 @@ end
 
 --- 
 --- Native 0x714A0EA7DE1167BE (_HAS_SOUND_AUDIO_NAME_FINISHED)
----@param audioName const char*
----@param soundsetName const char*
+---@param audioName string
+---@param soundsetName string
 ---@return boolean
 function HasSoundAudioNameFinished(audioName,soundsetName)
    return Citizen.InvokeNative(0x714A0EA7DE1167BE,audioName,soundsetName)
@@ -528,7 +528,7 @@ end
 --- 
 --- Native 0x6C8065A3B780185B (SET_AMBIENT_VOICE_NAME)
 ---@param ped number
----@param name const char*
+---@param name string
 function SetAmbientVoiceName(ped,name)
     Citizen.InvokeNative(0x6C8065A3B780185B,ped,name)
 end
@@ -591,7 +591,7 @@ end
 --- Checks if the ped can play the speech or has the speech file, last parameter is usually false.
 --- Native 0x49B99BF3FDA89A7A (DOES_CONTEXT_EXIST_FOR_THIS_PED)
 ---@param ped number
----@param speechName const char*
+---@param speechName string
 ---@param unk boolean
 ---@return boolean
 function DoesContextExistForThisPed(ped,speechName,unk)
@@ -601,7 +601,7 @@ end
 
 --- 
 --- Native 0x049E937F18F4020C (IS_PED_IN_CURRENT_CONVERSATION)
----@param p0 const char*
+---@param p0 string
 ---@param ped number
 ---@param p2 any
 ---@return boolean
@@ -632,7 +632,7 @@ end
 --- 
 --- Native 0xEE066C7006C49C0A (PLAY_ANIMAL_VOCALIZATION)
 ---@param ped number
----@param vocalizationName const char*
+---@param vocalizationName string
 ---@param p2 boolean
 function PlayAnimalVocalization(ped,vocalizationName,p2)
     Citizen.InvokeNative(0xEE066C7006C49C0A,ped,vocalizationName,p2)
@@ -669,7 +669,7 @@ end
 
 --- 
 --- Native 0x399D2D3B33F1B8EB (SET_STATIC_EMITTER_ENABLED)
----@param emitterName const char*
+---@param emitterName string
 ---@param toggle boolean
 function SetStaticEmitterEnabled(emitterName,toggle)
     Citizen.InvokeNative(0x399D2D3B33F1B8EB,emitterName,toggle)
@@ -686,7 +686,7 @@ end
 
 --- 
 --- Native 0xBDA07E5950085E46 (SET_AMBIENT_ZONE_STATE)
----@param zoneName const char*
+---@param zoneName string
 ---@param isEnabled boolean
 ---@param p2 boolean
 function SetAmbientZoneState(zoneName,isEnabled,p2)
@@ -696,7 +696,7 @@ end
 
 --- 
 --- Native 0x218DD44AAAC964FF (CLEAR_AMBIENT_ZONE_STATE)
----@param zoneName const char*
+---@param zoneName string
 ---@param p1 boolean
 function ClearAmbientZoneState(zoneName,p1)
     Citizen.InvokeNative(0x218DD44AAAC964FF,zoneName,p1)
@@ -705,7 +705,7 @@ end
 
 --- 
 --- Native 0x9748FA4DE50CCE3E (SET_AMBIENT_ZONE_LIST_STATE)
----@param ambientZone const char*
+---@param ambientZone string
 ---@param p1 boolean
 ---@param p2 boolean
 function SetAmbientZoneListState(ambientZone,p1,p2)
@@ -715,7 +715,7 @@ end
 
 --- 
 --- Native 0x120C48C614909FA4 (CLEAR_AMBIENT_ZONE_LIST_STATE)
----@param ambientZone const char*
+---@param ambientZone string
 ---@param p1 boolean
 function ClearAmbientZoneListState(ambientZone,p1)
     Citizen.InvokeNative(0x120C48C614909FA4,ambientZone,p1)
@@ -724,7 +724,7 @@ end
 
 --- 
 --- Native 0x1D6650420CEC9D3B (SET_AMBIENT_ZONE_STATE_PERSISTENT)
----@param ambientZone const char*
+---@param ambientZone string
 ---@param p1 boolean
 ---@param p2 boolean
 function SetAmbientZoneStatePersistent(ambientZone,p1,p2)
@@ -734,7 +734,7 @@ end
 
 --- 
 --- Native 0xF3638DAE8C4045E1 (SET_AMBIENT_ZONE_LIST_STATE_PERSISTENT)
----@param ambientZone const char*
+---@param ambientZone string
 ---@param p1 boolean
 ---@param p2 boolean
 function SetAmbientZoneListStatePersistent(ambientZone,p1,p2)
@@ -744,7 +744,7 @@ end
 
 --- 
 --- Native 0x3743CE6948194349 (_SET_AMBIENT_ZONE_POSITION)
----@param ambientZone const char*
+---@param ambientZone string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -774,8 +774,8 @@ end
 
 --- 
 --- Native 0x1F1F957154EC51DF (LOAD_STREAM)
----@param streamName const char*
----@param soundSet const char*
+---@param streamName string
+---@param soundSet string
 ---@return boolean
 function LoadStream(streamName,soundSet)
    return Citizen.InvokeNative(0x1F1F957154EC51DF,streamName,soundSet)
@@ -857,7 +857,7 @@ end
 
 --- 
 --- Native 0x6378A235374B852F (_BLOCK_SPEECH_CONTEXT)
----@param context const char*
+---@param context string
 ---@param block boolean
 function BlockSpeechContext(context,block)
     Citizen.InvokeNative(0x6378A235374B852F,context,block)
@@ -866,7 +866,7 @@ end
 
 --- _UNLOAD_[A-C]* - USE_*
 --- Native 0x87E6302FC61208CC (_UNLOAD_SPEECH_CONTEXT)
----@param speechContext const char*
+---@param speechContext string
 function UnloadSpeechContext(speechContext)
     Citizen.InvokeNative(0x87E6302FC61208CC,speechContext)
 end
@@ -893,7 +893,7 @@ end
 --- Old name: _FORCE_VEHICLE_ENGINE_AUDIO
 --- Native 0x4F0C413926060B38 (FORCE_USE_AUDIO_GAME_OBJECT)
 ---@param vehicle vehicle
----@param audioName const char*
+---@param audioName string
 function ForceUseAudioGameObject(vehicle,audioName)
     Citizen.InvokeNative(0x4F0C413926060B38,vehicle,audioName)
 end
@@ -909,8 +909,8 @@ end
 
 --- 
 --- Native 0x6339C1EA3979B5F7 (_START_AUDIO_SCENESET)
----@param audioName const char*
----@param sceneset const char*
+---@param audioName string
+---@param sceneset string
 ---@return boolean
 function StartAudioSceneset(audioName,sceneset)
    return Citizen.InvokeNative(0x6339C1EA3979B5F7,audioName,sceneset)
@@ -919,7 +919,7 @@ end
 
 --- 
 --- Native 0x9428447DED71FC7E (_STOP_AUDIO_SCENESET)
----@param sceneset const char*
+---@param sceneset string
 function StopAudioSceneset(sceneset)
     Citizen.InvokeNative(0x9428447DED71FC7E,sceneset)
 end
@@ -927,8 +927,8 @@ end
 
 --- 
 --- Native 0xAC84686C06184B0D (_SET_AUDIO_SCENESET)
----@param audioName const char*
----@param sceneset const char*
+---@param audioName string
+---@param sceneset string
 ---@return boolean
 function SetAudioSceneset(audioName,sceneset)
    return Citizen.InvokeNative(0xAC84686C06184B0D,audioName,sceneset)
@@ -937,7 +937,7 @@ end
 
 --- 
 --- Native 0x013A80FC08F6E4F2 (START_AUDIO_SCENE)
----@param scene const char*
+---@param scene string
 ---@return boolean
 function StartAudioScene(scene)
    return Citizen.InvokeNative(0x013A80FC08F6E4F2,scene)
@@ -946,7 +946,7 @@ end
 
 --- 
 --- Native 0xDFE8422B3B94E688 (STOP_AUDIO_SCENE)
----@param scene const char*
+---@param scene string
 function StopAudioScene(scene)
     Citizen.InvokeNative(0xDFE8422B3B94E688,scene)
 end
@@ -961,7 +961,7 @@ end
 
 --- 
 --- Native 0xB65B60556E2A9225 (IS_AUDIO_SCENE_ACTIVE)
----@param scene const char*
+---@param scene string
 ---@return boolean
 function IsAudioSceneActive(scene)
    return Citizen.InvokeNative(0xB65B60556E2A9225,scene)
@@ -970,8 +970,8 @@ end
 
 --- 
 --- Native 0xEF21A9EF089A2668 (SET_AUDIO_SCENE_VARIABLE)
----@param scene const char*
----@param variable const char*
+---@param scene string
+---@param variable string
 ---@param value float
 function SetAudioSceneVariable(scene,variable,value)
     Citizen.InvokeNative(0xEF21A9EF089A2668,scene,variable,value)
@@ -990,7 +990,7 @@ end
 --- 
 --- Native 0x153973AB99FE8980 (ADD_ENTITY_TO_AUDIO_MIX_GROUP)
 ---@param entity entity
----@param groupName const char*
+---@param groupName string
 ---@param p2 float
 function AddEntityToAudioMixGroup(entity,groupName,p2)
     Citizen.InvokeNative(0x153973AB99FE8980,entity,groupName,p2)
@@ -1025,7 +1025,7 @@ end
 
 --- 
 --- Native 0x1E5185B72EF5158A (PREPARE_MUSIC_EVENT)
----@param eventName const char*
+---@param eventName string
 ---@return boolean
 function PrepareMusicEvent(eventName)
    return Citizen.InvokeNative(0x1E5185B72EF5158A,eventName)
@@ -1034,7 +1034,7 @@ end
 
 --- 
 --- Native 0x5B17A90291133DA5 (CANCEL_MUSIC_EVENT)
----@param eventName const char*
+---@param eventName string
 ---@return boolean
 function CancelMusicEvent(eventName)
    return Citizen.InvokeNative(0x5B17A90291133DA5,eventName)
@@ -1043,7 +1043,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/blob/master/audio/music_events/music_events.lua
 --- Native 0x706D57B0F50DA710 (TRIGGER_MUSIC_EVENT)
----@param eventName const char*
+---@param eventName string
 ---@return boolean
 function TriggerMusicEvent(eventName)
    return Citizen.InvokeNative(0x706D57B0F50DA710,eventName)
@@ -1104,7 +1104,7 @@ end
 
 --- https://github.com/femga/rdr3_discoveries/tree/master/audio/audio_flags
 --- Native 0xB9EFD5C25018725A (SET_AUDIO_FLAG)
----@param flagName const char*
+---@param flagName string
 ---@param toggle boolean
 function SetAudioFlag(flagName,toggle)
     Citizen.InvokeNative(0xB9EFD5C25018725A,flagName,toggle)
@@ -1113,8 +1113,8 @@ end
 
 --- 
 --- Native 0x044DBAD7A7FA2BE5 (SET_PORTAL_SETTINGS_OVERRIDE)
----@param p0 const char*
----@param p1 const char*
+---@param p0 string
+---@param p1 string
 function SetPortalSettingsOverride(p0,p1)
     Citizen.InvokeNative(0x044DBAD7A7FA2BE5,p0,p1)
 end
@@ -1122,7 +1122,7 @@ end
 
 --- 
 --- Native 0xB4BBFD9CD8B3922B (REMOVE_PORTAL_SETTINGS_OVERRIDE)
----@param p0 const char*
+---@param p0 string
 function RemovePortalSettingsOverride(p0)
     Citizen.InvokeNative(0xB4BBFD9CD8B3922B,p0)
 end
@@ -1131,8 +1131,8 @@ end
 --- Creates stream and returns streamId handle to be used with PLAY_STREAM_* natives
 ---https://github.com/femga/rdr3_discoveries/tree/master/audio/create_stream
 --- Native 0x0556C784FA056628 (_GET_LOADED_STREAM_ID_FROM_CREATION)
----@param streamName const char*
----@param soundSet const char*
+---@param streamName string
+---@param soundSet string
 ---@return number
 function GetLoadedStreamIdFromCreation(streamName,soundSet)
    return Citizen.InvokeNative(0x0556C784FA056628,streamName,soundSet)
@@ -1141,7 +1141,7 @@ end
 
 --- 
 --- Native 0x374F0E716BFCDE82 (AUDIO_TRIGGER_EXPLOSION)
----@param name const char*
+---@param name string
 ---@param x float
 ---@param y float
 ---@param z float
@@ -1152,7 +1152,7 @@ end
 
 --- 
 --- Native 0x9B1FC259187C97C0 (SET_AUDIO_ONLINE_TRANSITION_STAGE)
----@param p0 const char*
+---@param p0 string
 function SetAudioOnlineTransitionStage(p0)
     Citizen.InvokeNative(0x9B1FC259187C97C0,p0)
 end

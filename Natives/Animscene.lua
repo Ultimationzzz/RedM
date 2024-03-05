@@ -1,8 +1,8 @@
 --- flags: https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eAnimSceneFlag
 --- Native 0x1FCA98E33C1437B3 (_CREATE_ANIM_SCENE)
----@param animDict const char*
+---@param animDict string
 ---@param flags number
----@param playbackListName const char*
+---@param playbackListName string
 ---@param p3 boolean
 ---@param p4 boolean
 ---@return animscene
@@ -47,7 +47,7 @@ end
 --- 
 --- Native 0x6F1F0B17109309DA (_DOES_ENTITY_WITH_ID_EXIST_IN_ANIM_SCENE)
 ---@param animScene animscene
----@param entityId const char*
+---@param entityId string
 ---@return boolean
 function DoesEntityWithIdExistInAnimScene(animScene,entityId)
    return Citizen.InvokeNative(0x6F1F0B17109309DA,animScene,entityId)
@@ -57,7 +57,7 @@ end
 --- 
 --- Native 0x9D1ECA9337BE9FC3 (_DOES_ANIM_SCENE_OWNERSHIP_OF_ENTITY_EXIST)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@return boolean
 function DoesAnimSceneOwnershipOfEntityExist(animScene,entityName)
    return Citizen.InvokeNative(0x9D1ECA9337BE9FC3,animScene,entityName)
@@ -116,7 +116,7 @@ end
 --- 
 --- Native 0x9E036D5204FFBBC8 (_GET_ANIM_SCENE_PLAYBACK_LIST_PHASE_AUDIO_LOAD_STRESS)
 ---@param animScene animscene
----@param phaseName const char*
+---@param phaseName string
 ---@return number
 function GetAnimScenePlaybackListPhaseAudioLoadStress(animScene,phaseName)
    return Citizen.InvokeNative(0x9E036D5204FFBBC8,animScene,phaseName)
@@ -134,7 +134,7 @@ end
 --- 
 --- Native 0x8FDF221F13537936 (RESET_ANIM_SCENE)
 ---@param animScene animscene
----@param playbackListName const char*
+---@param playbackListName string
 function ResetAnimScene(animScene,playbackListName)
     Citizen.InvokeNative(0x8FDF221F13537936,animScene,playbackListName)
 end
@@ -199,7 +199,7 @@ end
 --- 
 --- Native 0x8D81E7824B7753F7 (IS_ANIM_SCENE_IN_SECTION)
 ---@param animScene animscene
----@param sectionName const char*
+---@param sectionName string
 ---@param p2 boolean
 ---@return boolean
 function IsAnimSceneInSection(animScene,sectionName,p2)
@@ -344,7 +344,7 @@ end
 --- 
 --- Native 0x8B720AD451CA2AB3 (SET_ANIM_SCENE_ENTITY)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@param entity entity
 ---@param flags number
 function SetAnimSceneEntity(animScene,entityName,entity,flags)
@@ -355,7 +355,7 @@ end
 --- 
 --- Native 0x2BF96692C67F3E53 (REMOVE_ANIM_SCENE_ENTITY)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@param entity entity
 function RemoveAnimSceneEntity(animScene,entityName,entity)
     Citizen.InvokeNative(0x2BF96692C67F3E53,animScene,entityName,entity)
@@ -365,7 +365,7 @@ end
 --- 
 --- Native 0x005E6F28DD7ED58D (IS_ENTITY_EXITING_ANIM_SCENE_THIS_FRAME)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@return boolean
 function IsEntityExitingAnimSceneThisFrame(animScene,entityName)
    return Citizen.InvokeNative(0x005E6F28DD7ED58D,animScene,entityName)
@@ -375,7 +375,7 @@ end
 --- 
 --- Native 0x73616E64696C616E (COULD_ANIM_SCENE_ENTITY_REACH_EXIT_NEXT_FRAME)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@param p2 any
 ---@param p3 any
 ---@return boolean
@@ -387,7 +387,7 @@ end
 --- 
 --- Native 0xB89FCFF19DAFFF28 (HAS_ENTITY_EXITED_ANIM_SCENE)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@return boolean
 function HasEntityExitedAnimScene(animScene,entityName)
    return Citizen.InvokeNative(0xB89FCFF19DAFFF28,animScene,entityName)
@@ -397,7 +397,7 @@ end
 --- _HAS_L* (?)
 --- Native 0x337F1CC8EE895601 (_HAS_ENTITY_ENTERED_ANIM_SCENE)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@return boolean
 function HasEntityEnteredAnimScene(animScene,entityName)
    return Citizen.InvokeNative(0x337F1CC8EE895601,animScene,entityName)
@@ -407,7 +407,7 @@ end
 --- 
 --- Native 0xE5822422197BBBA3 (_GET_ANIM_SCENE_PED)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param isNetwork boolean
 ---@return number
 function GetAnimScenePed(animScene,name,isNetwork)
@@ -418,7 +418,7 @@ end
 --- 
 --- Native 0xFB5674687A1B2814 (_GET_ANIM_SCENE_OBJECT)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param isNetwork boolean
 ---@return object
 function GetAnimSceneObject(animScene,name,isNetwork)
@@ -429,7 +429,7 @@ end
 --- 
 --- Native 0x430EE0A19BC5A287 (_GET_ANIM_SCENE_VEHICLE)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param isNetwork boolean
 ---@return vehicle
 function GetAnimSceneVehicle(animScene,name,isNetwork)
@@ -440,7 +440,7 @@ end
 --- 
 --- Native 0x519E96C2C68B404B (SET_ANIM_SCENE_BOOL)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param value boolean
 ---@param p3 boolean
 function SetAnimSceneBool(animScene,name,value,p3)
@@ -451,7 +451,7 @@ end
 --- 
 --- Native 0x07A6F6447ECA9B64 (GET_ANIM_SCENE_BOOL)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@return boolean
 function GetAnimSceneBool(animScene,name)
    return Citizen.InvokeNative(0x07A6F6447ECA9B64,animScene,name)
@@ -461,7 +461,7 @@ end
 --- 
 --- Native 0x6BC5104E68CBEFE8 (SET_ANIM_SCENE_FLOAT)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param value float
 ---@param p3 boolean
 ---@param p4 boolean
@@ -473,7 +473,7 @@ end
 --- 
 --- Native 0xCC24CB07F60B496E (GET_ANIM_SCENE_FLOAT)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@return float
 function GetAnimSceneFloat(animScene,name)
    return Citizen.InvokeNative(0xCC24CB07F60B496E,animScene,name)
@@ -483,7 +483,7 @@ end
 --- 
 --- Native 0x3A379D2166CF5B92 (SET_ANIM_SCENE_INT)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@param value number
 ---@param p3 boolean
 function SetAnimSceneInt(animScene,name,value,p3)
@@ -494,7 +494,7 @@ end
 --- 
 --- Native 0x2B7277484CC095FD (GET_ANIM_SCENE_INT)
 ---@param animScene animscene
----@param name const char*
+---@param name string
 ---@return number
 function GetAnimSceneInt(animScene,name)
    return Citizen.InvokeNative(0x2B7277484CC095FD,animScene,name)
@@ -504,10 +504,10 @@ end
 --- 
 --- Native 0x8398438D8F14F56D (GET_ANIM_SCENE_ENTITY_LOCATION_DATA)
 ---@param animScene animscene
----@param entityName const char*
+---@param entityName string
 ---@param matrix vector3*
 ---@param p3 boolean
----@param playbackListName const char*
+---@param playbackListName string
 ---@param p5 number
 ---@return boolean
 function GetAnimSceneEntityLocationData(animScene,entityName,matrix,p3,playbackListName,p5)
@@ -581,7 +581,7 @@ end
 --- 
 --- Native 0xAB5E7CAB074D6B84 (SET_ANIM_SCENE_PLAYBACK_LIST)
 ---@param animScene animscene
----@param playbackListName const char*
+---@param playbackListName string
 function SetAnimScenePlaybackList(animScene,playbackListName)
     Citizen.InvokeNative(0xAB5E7CAB074D6B84,animScene,playbackListName)
 end
@@ -590,7 +590,7 @@ end
 --- 
 --- Native 0xA9016536015DE29D (_DOES_ANIM_SCENE_PLAY_LIST_EXIST)
 ---@param animScene animscene
----@param playbackListName const char*
+---@param playbackListName string
 ---@return boolean
 function DoesAnimScenePlayListExist(animScene,playbackListName)
    return Citizen.InvokeNative(0xA9016536015DE29D,animScene,playbackListName)
@@ -600,7 +600,7 @@ end
 --- 
 --- Native 0x15598CFB25F3DC7E (SET_ANIM_SCENE_PLAY_LIST)
 ---@param animScene animscene
----@param playlistName const char*
+---@param playlistName string
 ---@param p2 boolean
 function SetAnimScenePlayList(animScene,playlistName,p2)
     Citizen.InvokeNative(0x15598CFB25F3DC7E,animScene,playlistName,p2)
@@ -610,7 +610,7 @@ end
 --- 
 --- Native 0x1F0E401031E20146 (_IS_ANIM_SCENE_PLAYBACK_LIST_PHASE_ACTIVE)
 ---@param animScene animscene
----@param phaseName const char*
+---@param phaseName string
 ---@return boolean
 function IsAnimScenePlaybackListPhaseActive(animScene,phaseName)
    return Citizen.InvokeNative(0x1F0E401031E20146,animScene,phaseName)
@@ -620,7 +620,7 @@ end
 --- 
 --- Native 0xDF7B5144E25CD3FE (REQUEST_ANIM_SCENE_PLAY_LIST)
 ---@param animScene animscene
----@param playlistName const char*
+---@param playlistName string
 ---@return boolean
 function RequestAnimScenePlayList(animScene,playlistName)
    return Citizen.InvokeNative(0xDF7B5144E25CD3FE,animScene,playlistName)
@@ -630,7 +630,7 @@ end
 --- 
 --- Native 0xAE6ADA8FE7E84ACC (_RELEASE_ANIM_SCENE_PLAY_LIST)
 ---@param animScene animscene
----@param playlistName const char*
+---@param playlistName string
 ---@return boolean
 function ReleaseAnimScenePlayList(animScene,playlistName)
    return Citizen.InvokeNative(0xAE6ADA8FE7E84ACC,animScene,playlistName)
@@ -649,7 +649,7 @@ end
 --- 
 --- Native 0x23E33CB9F4A3F547 (_IS_ANIM_SCENE_PLAYBACK_LIST_PHASE_LOADED)
 ---@param animScene animscene
----@param phaseName const char*
+---@param phaseName string
 ---@return boolean
 function IsAnimScenePlaybackListPhaseLoaded(animScene,phaseName)
    return Citizen.InvokeNative(0x23E33CB9F4A3F547,animScene,phaseName)
@@ -659,7 +659,7 @@ end
 --- 
 --- Native 0x0DF57F86FE71DBE5 (_IS_ANIM_SCENE_PLAYBACK_LIST_PHASE_LOADING)
 ---@param animScene animscene
----@param phaseName const char*
+---@param phaseName string
 ---@return boolean
 function IsAnimScenePlaybackListPhaseLoading(animScene,phaseName)
    return Citizen.InvokeNative(0x0DF57F86FE71DBE5,animScene,phaseName)
@@ -677,7 +677,7 @@ end
 
 --- MGM stands for MiniGameMoments.
 --- Native 0xFDFC14799373283F (_IS_MGM_SYSTEM_LOADED)
----@param mgmFilename const char*
+---@param mgmFilename string
 ---@return boolean
 function IsMgmSystemLoaded(mgmFilename)
    return Citizen.InvokeNative(0xFDFC14799373283F,mgmFilename)
@@ -692,7 +692,7 @@ end
 ---PokerJohn
 ---PokerJohnCamp
 --- Native 0xB727A847862CB00A (_LOAD_MGM_ASSETS)
----@param mgmFilename const char*
+---@param mgmFilename string
 ---@return boolean
 function LoadMgmAssets(mgmFilename)
    return Citizen.InvokeNative(0xB727A847862CB00A,mgmFilename)
@@ -701,7 +701,7 @@ end
 
 --- Returns mgmHandle
 --- Native 0xA1300DE03E5D1973 (_CREATE_MGM_SYSTEM)
----@param mgmFilename const char*
+---@param mgmFilename string
 ---@return number
 function CreateMgmSystem(mgmFilename)
    return Citizen.InvokeNative(0xA1300DE03E5D1973,mgmFilename)
@@ -719,7 +719,7 @@ end
 --- 
 --- Native 0x07706C4CC9C6CC9E (_SET_MGM_EVENT)
 ---@param mgmEventHandle number
----@param p1 const char*
+---@param p1 string
 ---@param seatId any
 ---@param p3 number
 ---@param p4 float
@@ -731,7 +731,7 @@ end
 --- 
 --- Native 0x99B2A2E3655DEAF1 (_SET_BREAKOUT_ARCHETYPE)
 ---@param ped number
----@param archetype const char*
+---@param archetype string
 function SetBreakoutArchetype(ped,archetype)
     Citizen.InvokeNative(0x99B2A2E3655DEAF1,ped,archetype)
 end

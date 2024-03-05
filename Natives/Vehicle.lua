@@ -775,7 +775,7 @@ end
 ---(GTA) Note that only 24 recordings (hardcoded in multiple places) can ever active at a given time before clobbering begins.
 --- Native 0xC474CF16EDA45DC9 (REQUEST_VEHICLE_RECORDING)
 ---@param recording number
----@param script const char*
+---@param script string
 function RequestVehicleRecording(recording,script)
     Citizen.InvokeNative(0xC474CF16EDA45DC9,recording,script)
 end
@@ -784,7 +784,7 @@ end
 --- See REQUEST_VEHICLE_RECORDING
 --- Native 0xBA9325BE372AB6EA (HAS_VEHICLE_RECORDING_BEEN_LOADED)
 ---@param recording number
----@param script const char*
+---@param script string
 ---@return boolean
 function HasVehicleRecordingBeenLoaded(recording,script)
    return Citizen.InvokeNative(0xBA9325BE372AB6EA,recording,script)
@@ -805,7 +805,7 @@ end
 --- Native 0x1A00961A1BE94E5E (GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME)
 ---@param recording number
 ---@param time float
----@param script const char*
+---@param script string
 ---@return vector3
 function GetPositionOfVehicleRecordingAtTime(recording,time,script)
    return Citizen.InvokeNative(0x1A00961A1BE94E5E,recording,time,script)
@@ -817,7 +817,7 @@ end
 --- Native 0x61787DD28B8CC0D5 (GET_ROTATION_OF_VEHICLE_RECORDING_AT_TIME)
 ---@param recording number
 ---@param time float
----@param script const char*
+---@param script string
 ---@return vector3
 function GetRotationOfVehicleRecordingAtTime(recording,time,script)
    return Citizen.InvokeNative(0x61787DD28B8CC0D5,recording,time,script)
@@ -838,7 +838,7 @@ end
 --- Native 0x4932B84E3276508E (START_PLAYBACK_RECORDED_VEHICLE)
 ---@param vehicle vehicle
 ---@param recording number
----@param script const char*
+---@param script string
 ---@param p3 boolean
 function StartPlaybackRecordedVehicle(vehicle,recording,script,p3)
     Citizen.InvokeNative(0x4932B84E3276508E,vehicle,recording,script,p3)
@@ -1317,7 +1317,7 @@ end
 ---p2 = true seems to mute the sound
 --- Native 0xCFE122EC635CC2B2 (_TRIGGER_TRAIN_WHISTLE)
 ---@param train vehicle
----@param whistleSequence const char*
+---@param whistleSequence string
 ---@param p2 boolean
 ---@param p3 boolean
 function TriggerTrainWhistle(train,whistleSequence,p2,p3)
