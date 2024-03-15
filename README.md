@@ -15,3 +15,4 @@ Contains a list of generated natives for RedM, we all know Citizen.InvokeNative 
 
 - Adapted version of polyzone with the missing natives for the zone creation visual stuff.
 - Adapted the controls to be identical in RedM as they are in FiveM
+- All Credits go to mkafrin

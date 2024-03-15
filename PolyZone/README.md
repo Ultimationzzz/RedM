@@ -48,4 +48,5 @@ For help troubleshooting issues you've encountered (that aren't in the FAQ), or 
 **Please see the LICENSE file. That file will always overrule anything mentioned in the README.md or wiki**
 
 
-## Modified by Ultimation to support RedM
+Modified by Ultimation to support RedM, All Credits go to the original author mkafrin
+https://github.com/Ultimationzzz/RedM
